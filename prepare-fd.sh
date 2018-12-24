@@ -2,7 +2,7 @@
 DIR=`dirname $0`
 pushd ..
 DOWNWARD_COIN_ROOT64=`pwd`/coin64 
-FD_ROOT = `pwd`/fast-downward
+FD_ROOT=`pwd`/fast-downward
 if [[ ! -d "$DOWNWARD_COIN_ROOT64" ]]; then
 	if [[ `uname` == "Darwin" ]]
 	then
