@@ -1,0 +1,511 @@
+diff --git a/.hgignore b/.hgignore
+--- a/.hgignore
++++ b/.hgignore
+@@ -7,3 +7,16 @@
+ ^misc/autodoc/downward-xmlrpc\.secret$
+ ^builds/
+ ^src/CMakeLists.txt.user$
++# Generated files
++.yy.cc
++# IDE files
++.idea
++.vscode
++# Object files
++.obj
++.o
++# Binaries and outputs
++output.sas
++sas_plan
++src/validate
++src/VAL/validate
+diff --git a/src/search/DownwardFiles.cmake b/src/search/DownwardFiles.cmake
+--- a/src/search/DownwardFiles.cmake
++++ b/src/search/DownwardFiles.cmake
+@@ -698,6 +698,18 @@
+ )
+ 
+ fast_downward_plugin(
++    NAME OC_SINGLESHOT
++    HELP "Plugin containing the code for operator counting single shot"
++    SOURCES
++        operator_counting/constraint_generator
++        operator_counting/lm_cut_constraints
++        operator_counting/oc_single_shot_heuristic
++        operator_counting/pho_constraints
++        operator_counting/state_equation_constraints
++    DEPENDS LP_SOLVER LANDMARK_CUT_HEURISTIC PDBS TASK_PROPERTIES
++)
++
++fast_downward_plugin(
+     NAME PDBS
+     HELP "Plugin containing the code for PDBs"
+     SOURCES
+diff --git a/src/search/lp/lp_solver.cc b/src/search/lp/lp_solver.cc
+--- a/src/search/lp/lp_solver.cc
++++ b/src/search/lp/lp_solver.cc
+@@ -3,7 +3,7 @@
+ #include "lp_internals.h"
+ 
+ #include "../option_parser.h"
+-
++#include "../utils/logging.h"
+ #include "../utils/system.h"
+ 
+ #ifdef USE_LP
+@@ -67,10 +67,11 @@
+ }
+ 
+ LPVariable::LPVariable(double lower_bound, double upper_bound,
+-                       double objective_coefficient)
++                       double objective_coefficient, bool is_integer)
+     : lower_bound(lower_bound),
+       upper_bound(upper_bound),
+-      objective_coefficient(objective_coefficient) {
++      objective_coefficient(objective_coefficient),
++      is_integer(is_integer){
+ }
+ 
+ LPSolver::~LPSolver() {
+@@ -105,6 +106,10 @@
+     is_initialized = false;
+     num_permanent_constraints = constraints.size();
+ 
++    ///////////////////////////////////////////////////////////////////
++    all_constraints = constraints;
++    ///////////////////////////////////////////////////////////////////
++
+     for (const LPVariable &var : variables) {
+         col_lb.push_back(var.lower_bound);
+         col_ub.push_back(var.upper_bound);
+@@ -156,6 +161,14 @@
+                                objective.data(),
+                                row_lb.data(),
+                                row_ub.data());
++        int num_vars = variables.size();
++        for (int i = 0; i < num_vars; ++i) {
++            if (variables[i].is_integer) {
++                lp_solver->setInteger(i);
++            }
++        }
++        //cout << "Integer tolerance: " << lp_solver->getIntegerTolerance() << endl;
++        //cout << "Number of integer variables: " << lp_solver->getNumIntegers() << endl;
+     } catch (CoinError &error) {
+         handle_coin_error(error);
+     }
+@@ -176,7 +189,6 @@
+                                constraint.get_coefficients().data(),
+                                false));
+         }
+-
+         try {
+             lp_solver->addRows(num_rows,
+                                rows.data(), row_lb.data(), row_ub.data());
+@@ -192,6 +204,36 @@
+     }
+ }
+ 
++///////////////////////////////////////////////////////////////////
++void LPSolver::add_new_constraints(const vector<LPConstraint> &constraints) {
++    if (!constraints.empty()) {
++        clear_temporary_data();
++        int num_rows = constraints.size();
++        for (const LPConstraint &constraint : constraints) {
++            row_lb.push_back(constraint.get_lower_bound());
++            row_ub.push_back(constraint.get_upper_bound());
++            rows.push_back(new CoinShallowPackedVector(
++                               constraint.get_variables().size(),
++                               constraint.get_variables().data(),
++                               constraint.get_coefficients().data(),
++                               false));
++        }
++        try {
++            lp_solver->addRows(num_rows,
++                               rows.data(), row_lb.data(), row_ub.data());
++        } catch (CoinError &error) {
++            handle_coin_error(error);
++        }
++        for (CoinPackedVectorBase *row : rows) {
++            delete row;
++        }
++        clear_temporary_data();
++        //has_temporary_constraints_ = false;
++        //is_solved = false;
++    }
++}
++///////////////////////////////////////////////////////////////////
++
+ void LPSolver::clear_temporary_constraints() {
+     if (has_temporary_constraints_) {
+         try {
+@@ -297,6 +339,20 @@
+     }
+ }
+ 
++void LPSolver::solve_mip() {
++    try {
++        lp_solver->branchAndBound();
++        if (lp_solver->isAbandoned()) {
++            cerr << "Abandoned LP. "
++                 << "Reasons include \"numerical difficulties\" and running out of memory." << endl;
++            utils::exit_with(ExitCode::SEARCH_CRITICAL_ERROR);
++        }
++        is_solved = true;
++    } catch (CoinError &error) {
++        handle_coin_error(error);
++    }
++}
++
+ bool LPSolver::has_optimal_solution() const {
+     assert(is_solved);
+     try {
+diff --git a/src/search/lp/lp_solver.h b/src/search/lp/lp_solver.h
+--- a/src/search/lp/lp_solver.h
++++ b/src/search/lp/lp_solver.h
+@@ -67,10 +67,12 @@
+     double lower_bound;
+     double upper_bound;
+     double objective_coefficient;
++    bool is_integer;
+ 
+     LPVariable(double lower_bound,
+                double upper_bound,
+-               double objective_coefficient);
++               double objective_coefficient,
++               bool is_integer = false);
+ };
+ 
+ #ifdef __GNUG__
+@@ -85,7 +87,6 @@
+ #ifdef USE_LP
+     std::unique_ptr<OsiSolverInterface> lp_solver;
+ #endif
+-
+     /*
+       Temporary data for assigning a new problem. We keep the vectors
+       around to avoid recreating them in every assignment.
+@@ -101,6 +102,11 @@
+     std::vector<CoinPackedVectorBase *> rows;
+     void clear_temporary_data();
+ public:
++
++    ///////////////////////////////////////////////////////////////////
++    std::vector<LPConstraint> all_constraints;
++    ///////////////////////////////////////////////////////////////////
++
+     LP_METHOD(explicit LPSolver(LPSolverType solver_type))
+     /*
+       Note that the destructor does not use LP_METHOD because it should not
+@@ -115,6 +121,11 @@
+                   const std::vector<LPVariable> &variables,
+                   const std::vector<LPConstraint> &constraints))
+     LP_METHOD(void add_temporary_constraints(const std::vector<LPConstraint> &constraints))
++
++    ///////////////////////////////////////////////////////////////////
++    LP_METHOD(void add_new_constraints(const std::vector<LPConstraint> &constraints))
++    ///////////////////////////////////////////////////////////////////
++
+     LP_METHOD(void clear_temporary_constraints())
+     LP_METHOD(double get_infinity() const)
+ 
+@@ -126,6 +137,7 @@
+     LP_METHOD(void set_variable_upper_bound(int index, double bound))
+ 
+     LP_METHOD(void solve())
++    LP_METHOD(void solve_mip())
+ 
+     /*
+       Return true if the solving the LP showed that it is bounded feasible and
+diff --git a/src/search/operator_counting/lm_cut_constraints.cc b/src/search/operator_counting/lm_cut_constraints.cc
+--- a/src/search/operator_counting/lm_cut_constraints.cc
++++ b/src/search/operator_counting/lm_cut_constraints.cc
+@@ -44,6 +44,28 @@
+         return true;
+     } else {
+         lp_solver.add_temporary_constraints(constraints);
++
++        ///////////////////////////////////////////////////////////////////
++        cout << endl << string(80, '*') << endl;
++        cout << "# LM-Cut Constraints(" << constraints.size() << "): " << endl;
++        for (int i = 0; i < (int) constraints.size(); ++i) {
++            lp::LPConstraint constraint = constraints[i];
++
++            cout << "constraints.append(Constraint(";
++            for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
++                int var = constraint.get_variables()[j];
++                double coe = constraint.get_coefficients()[j];
++                cout << coe << "*X[" << var << "]";
++                if (j < (int) constraint.get_variables().size() - 1) {
++                    cout << " + ";
++                }
++            }
++            cout << ", lb=" << constraint.get_lower_bound();
++            cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
++        }
++        cout << string(80, '*') << endl << endl;
++        ///////////////////////////////////////////////////////////////////
++
+         return false;
+     }
+ }
+diff --git a/src/search/operator_counting/operator_counting_heuristic.cc b/src/search/operator_counting/operator_counting_heuristic.cc
+--- a/src/search/operator_counting/operator_counting_heuristic.cc
++++ b/src/search/operator_counting/operator_counting_heuristic.cc
+@@ -8,6 +8,7 @@
+ #include "../utils/markup.h"
+ 
+ #include <cmath>
++#include <fstream>
+ 
+ using namespace std;
+ 
+@@ -27,6 +28,44 @@
+     for (const auto &generator : constraint_generators) {
+         generator->initialize_constraints(task, constraints, infinity);
+     }
++    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
++    cout << "# Mapping X -> op: " << endl;
++    int i = 0;
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        cout << "# X[" << i << "] = " << op.get_name() << endl;
++        i++;
++    }
++    cout << string(80, '*') << endl << endl;
++    ///////////////////////////////////////////////////////////////////
++
++    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
++    cout << "# Variables(" << variables.size() << "): " << endl;
++    for (int i = 0; i < (int) variables.size(); ++i) {
++        cout << "X[" << i << "] = Variable('X_" << i << "'";
++        cout << ", lb=" << variables[i].lower_bound;
++        cout << ", ub=" << variables[i].upper_bound;
++        cout << ", type='integer')";
++        cout << ", cost[" << i << "] = 1" << endl;
++    }
++    cout << string(80, '*') << endl << endl;
++    ///////////////////////////////////////////////////////////////////
++
++    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
++    cout << "# Objective function: " << endl;
++    cout << "obj = Objective(";
++    for (int i = 0; i < (int) variables.size(); ++i) {
++        cout << "cost[" << i << "] * X[" << i << "]";
++        if (i < (int) variables.size() - 1) {
++            cout << " + ";
++        }
++    }
++    cout << ", direction='min')" << endl;
++    cout << string(80, '*') << endl << endl;
++    ///////////////////////////////////////////////////////////////////
++
+     lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
+ }
+ 
+@@ -47,6 +86,61 @@
+             return DEAD_END;
+         }
+     }
++
++    ///////////////////////////////////////////////////////////////////
++    ifstream file;
++    file.open("new_constraint.txt");
++    if (file.is_open()) {
++        double lb, ub;
++        file >> lb >> ub;
++
++        file.get();
++
++        string indexes;
++        getline(file, indexes);
++        istringstream indexes_iss(indexes);
++        vector<string> indexes_str((istream_iterator<string>(indexes_iss)), istream_iterator<string>());
++        vector<int> indexes_int;
++        transform(indexes_str.begin(), indexes_str.end(), back_inserter(indexes_int), [](string i){
++            return atoi(i.c_str());
++        });
++
++        string coeffs;
++        getline(file, coeffs);
++        istringstream coeffs_iss(coeffs);
++        vector<string> coeffs_str((istream_iterator<string>(coeffs_iss)), istream_iterator<string>());
++        vector<double> coeffs_double;
++        transform(coeffs_str.begin(), coeffs_str.end(), back_inserter(coeffs_double), [](string i){
++            return atof(i.c_str());
++        });
++
++        file.close();
++
++        vector<lp::LPConstraint> new_constraints;
++        lp::LPConstraint constraint(lb, ub);
++        for (size_t i = 0; i < indexes_int.size(); ++i) {
++            int index = indexes_int[i];
++            double coeff = coeffs_double[i];
++            constraint.insert(index, coeff);
++        }
++        new_constraints.push_back(constraint);
++        lp_solver.add_new_constraints(new_constraints);
++
++        cout << "# Adding constraint from file:" << endl;
++        cout << "constraints.append(Constraint(";
++        for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
++            int var = constraint.get_variables()[j];
++            double coe = constraint.get_coefficients()[j];
++            cout << coe << "*X[" << var << "]";
++            if (j < (int) constraint.get_variables().size() - 1) {
++                cout << " + ";
++            }
++        }
++        cout << ", lb=" << constraint.get_lower_bound();
++        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
++    }
++    ///////////////////////////////////////////////////////////////////
++
+     int result;
+     lp_solver.solve();
+     if (lp_solver.has_optimal_solution()) {
+@@ -56,6 +150,20 @@
+     } else {
+         result = DEAD_END;
+     }
++
++    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
++    cout << "# Objective value: " << result << endl;
++    cout << "# Solution: " << endl;
++    vector<double> solution = lp_solver.extract_solution();
++    for (int i = 0; i < (int) solution.size(); ++i) {
++        cout << "X[" << i << "] = " << solution[i] << endl;
++    }
++    cout << string(80, '*') << endl;
++
++    exit(100);
++    ///////////////////////////////////////////////////////////////////
++
+     lp_solver.clear_temporary_constraints();
+     return result;
+ }
+diff --git a/src/search/operator_counting/pho_constraints.cc b/src/search/operator_counting/pho_constraints.cc
+--- a/src/search/operator_counting/pho_constraints.cc
++++ b/src/search/operator_counting/pho_constraints.cc
+@@ -53,6 +53,12 @@
+ 
+ bool PhOConstraints::update_constraints(const State &state,
+                                         lp::LPSolver &lp_solver) {
++
++    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
++    cout << "# Posthoc Constraints(" << pdbs->size() << "): " << endl;
++    ///////////////////////////////////////////////////////////////////
++
+     for (size_t i = 0; i < pdbs->size(); ++i) {
+         int constraint_id = constraint_offset + i;
+         shared_ptr<pdbs::PatternDatabase> pdb = (*pdbs)[i];
+@@ -61,7 +67,29 @@
+             return true;
+         }
+         lp_solver.set_constraint_lower_bound(constraint_id, h);
++
++        ///////////////////////////////////////////////////////////////////
++        lp_solver.all_constraints[constraint_id].set_lower_bound(h);
++        lp::LPConstraint constraint = lp_solver.all_constraints[constraint_id];
++        cout << "constraints.append(Constraint(";
++        for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
++            int var = constraint.get_variables()[j];
++            double coe = constraint.get_coefficients()[j];
++            cout << coe << "*X[" << var << "]";
++            if (j < (int) constraint.get_variables().size() - 1) {
++                cout << " + ";
++            }
++        }
++        cout << ", lb=" << constraint.get_lower_bound();
++        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
++        ///////////////////////////////////////////////////////////////////
++
+     }
++
++    ///////////////////////////////////////////////////////////////////
++    cout << string(80, '*') << endl << endl;
++    ///////////////////////////////////////////////////////////////////
++
+     return false;
+ }
+ 
+diff --git a/src/search/operator_counting/pho_constraints.h b/src/search/operator_counting/pho_constraints.h
+--- a/src/search/operator_counting/pho_constraints.h
++++ b/src/search/operator_counting/pho_constraints.h
+@@ -23,6 +23,7 @@
+     std::shared_ptr<pdbs::PDBCollection> pdbs;
+ public:
+     explicit PhOConstraints(const options::Options &opts);
++    ~PhOConstraints() = default;
+ 
+     virtual void initialize_constraints(
+         const std::shared_ptr<AbstractTask> &task,
+diff --git a/src/search/operator_counting/state_equation_constraints.cc b/src/search/operator_counting/state_equation_constraints.cc
+--- a/src/search/operator_counting/state_equation_constraints.cc
++++ b/src/search/operator_counting/state_equation_constraints.cc
+@@ -86,6 +86,24 @@
+ 
+ bool StateEquationConstraints::update_constraints(const State &state,
+                                                   lp::LPSolver &lp_solver) {
++
++    int size = 0;
++    for (size_t var = 0; var < propositions.size(); ++var) {
++        int num_values = propositions[var].size();
++        for (int value = 0; value < num_values; ++value) {
++            const Proposition &prop = propositions[var][value];
++            if (prop.constraint_index >= 0) {
++                size++;
++            }
++        }
++    }
++
++    ///////////////////////////////////////////////////////////////////
++    cout << endl;
++    cout << string(80, '*') << endl;
++    cout << "# StateEquation Constraints(" << size << "): " << endl;
++    ///////////////////////////////////////////////////////////////////
++
+     // Compute the bounds for the rows in the LP.
+     for (size_t var = 0; var < propositions.size(); ++var) {
+         int num_values = propositions[var].size();
+@@ -106,9 +124,31 @@
+                 }
+                 lp_solver.set_constraint_lower_bound(
+                     prop.constraint_index, lower_bound);
++
++                ///////////////////////////////////////////////////////////////////
++                lp_solver.all_constraints[prop.constraint_index].set_lower_bound(lower_bound);
++                lp::LPConstraint constraint = lp_solver.all_constraints[prop.constraint_index];
++                cout << "constraints.append(Constraint(";
++                for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
++                    int var = constraint.get_variables()[j];
++                    double coe = constraint.get_coefficients()[j];
++                    cout << coe << "*X[" << var << "]";
++                    if (j < (int) constraint.get_variables().size() - 1) {
++                        cout << " + ";
++                    }
++                }
++                cout << ", lb=" << constraint.get_lower_bound();
++                cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
++                ///////////////////////////////////////////////////////////////////
++
+             }
+         }
+     }
++
++    ///////////////////////////////////////////////////////////////////
++    cout << string(80, '*') << endl << endl;
++    ///////////////////////////////////////////////////////////////////
++
+     return false;
+ }
+ 
+@@ -151,4 +191,5 @@
+ }
+ 
+ static Plugin<ConstraintGenerator> _plugin("state_equation_constraints", _parse);
++
+ }
