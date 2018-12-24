@@ -23,7 +23,7 @@ if [[ ! -d "$DOWNWARD_COIN_ROOT64" ]]; then
 else
 	echo "OSI Present"
 fi
-
+pushd ..
 if [[ ! -d "$FD_ROOT" ]]; then
 	echo "Downloading Fast Downward"
 	hg clone http://hg.fast-downward.org fast-downward
