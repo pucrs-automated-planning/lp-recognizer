@@ -30,7 +30,8 @@ if [[ ! -d "$FD_ROOT" ]]; then
 else
 	echo "Fast Downward Present"
 fi
-pushd fast-downward
 echo "Patching Fast Downward"
-patch -s -p0 < ${DIR}/fd-patch.diff 
+cp ${DIR}/fd-patch.diff .
+patch -s -p0 < fd-patch.diff 
+pushd fast-downward
 ./build.py release64
