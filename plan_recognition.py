@@ -31,7 +31,7 @@ class PR_Command:
         self.num_accounted_obs = 'n/a'
         #
         self.h_value = 'n/a'
-        self.planner_string = fd_path + '/fast-downward.py --build=release64 %s %s --search \"astar(operatorcounting([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))\"'  # TODO Generalize this to work with fd
+        self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))\"'
 
     def execute(self):
         cmd_string = self.planner_string % (self.domain, self.problem)
@@ -48,6 +48,7 @@ class PR_Command:
                 if not '--' in line:
                     # self.num_obs_accounted = int(line)
                     self.h_value = int(line)
+                    print("h_value for %s is %d"%(self.problem,self.h_value))
             instream.close()
 
     def write_result(self, filename):
@@ -63,13 +64,13 @@ class Hypothesis:
         self.Delta = 0.0
         self.plan = []
         self.is_true = True
+        self.test_failed = False
 
-    def evaluate(self, index, do_simple, do_bfs):
+    def evaluate(self, index):
         # generate the problem with G=H
         hyp_problem = 'hyp_%d_problem.pddl' % index
         self.generate_pddl_for_hyp_plan(hyp_problem)
-        plan_for_H_cmd = PR_Command('pr-domain-hyp-%d.pddl' % index, 'pr-problem-hyp-%d.pddl' % index, do_simple,
-                                    do_bfs)
+        plan_for_H_cmd = PR_Command('domain.pddl', 'hyp_%d_problem.pddl' % index)
         plan_for_H_cmd.execute()
         self.plan_time = plan_for_H_cmd.time
         self.total_time = plan_for_H_cmd.time
@@ -94,7 +95,6 @@ class Hypothesis:
             self.plan.append(op.strip().upper())
         instream.close()
 
-
     def generate_pddl_for_hyp_plan(self, out_name):
         instream = open('template.pddl')
         outstream = open(out_name, 'w')
@@ -109,7 +109,6 @@ class Hypothesis:
 
         outstream.close()
         instream.close()
-
 
     def check_if_actual(self):
         real_hyp_atoms = []
@@ -174,7 +173,7 @@ def main():
     hyps = load_hypotheses()
 
     for i in range(0, len(hyps)):
-        hyps[i].evaluate(i, options.simple_pr, options.bfs)
+        hyps[i].evaluate(i)
 
     # write_report(options.exp_file, hyps)
 
@@ -184,7 +183,7 @@ def main():
     hyp = None
     for h in hyps:
         if not h.test_failed:
-            if not hyp or h.score > hyp.score:
+            if not hyp or h.score < hyp.score:
                 hyp = h
 
     realHyp = None
