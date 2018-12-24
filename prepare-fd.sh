@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 DIR=`dirname $0`
-DOWNWARD_COIN_ROOT64=`pwd`/../coin64 
+pushd ..
+DOWNWARD_COIN_ROOT64=`pwd`/coin64 
+FD_ROOT = `pwd`/fast-downward
 if [[ ! -d "$DOWNWARD_COIN_ROOT64"]]; then
 	if [[ `uname` == "Darwin" ]]
 	then
@@ -14,11 +16,15 @@ if [[ ! -d "$DOWNWARD_COIN_ROOT64"]]; then
 		echo "Install OSI Manually for Windows"
 	fi
 else
-	echo "OSI Installed"
+	echo "OSI Present"
 fi
-pushd ..
-echo "Downloading Fast Downward"
-hg clone http://hg.fast-downward.org fast-downward
+
+if [[ ! -d "$FD_ROOT" ]]; then
+	echo "Downloading Fast Downward"
+	hg clone http://hg.fast-downward.org fast-downward
+else
+	echo "Fast Downward Present"
+fi
 pushd fast-downward
 echo "Patching Fast Downward"
 patch -s -p0 < ${DIR}/fd-patch.diff 
