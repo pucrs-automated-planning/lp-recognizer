@@ -35,3 +35,4 @@ cp ${DIR}/fd-patch.diff .
 patch -s -p0 < fd-patch.diff 
 pushd fast-downward
 ./build.py release64
+chmod u+x fast-downward
