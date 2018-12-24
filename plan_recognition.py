@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # Code originally developed by Miquel Ramirez
 
@@ -159,7 +159,7 @@ def write_report(experiment, hyps):
         print >> outstream, "Hyp_Is_True=%s" % hyp.is_true
 
     outstream.close()
-    print max(hyps)
+    print(max(hyps))
 
 
 def main():
@@ -167,7 +167,7 @@ def main():
     os.system(cmdClean)
 
     startTime = time.time()
-    print sys.argv
+    print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
     hyps = load_hypotheses()
@@ -193,9 +193,9 @@ def main():
             break
 
     if hyp and realHyp and hyp.score == realHyp.score:
-        print 'TRUE!'
+        print('TRUE!')
     else:
-        print 'FALSE!'
+        print('FALSE!')
 
     print("--- %s seconds ---" % (time.time() - startTime))
 
