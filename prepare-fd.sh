@@ -4,11 +4,11 @@ DIR=`dirname $0`
 if [[ `uname` == "Darwin" ]]
 then
 	echo "Installing OSI for Mac"
-	source install-osi-max.sh
+	source install-osi-mac.sh
 elif [[ `uname` == "Linux" ]]
 then
 	echo "Installing OSI for Linux"
-	source install-linux-max.sh
+	source install-linux-linux.sh
 else
 	echo "Install OSI Manually for Windows"
 fi
