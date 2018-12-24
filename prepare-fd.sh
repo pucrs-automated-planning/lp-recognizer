@@ -8,7 +8,7 @@ then
 elif [[ `uname` == "Linux" ]]
 then
 	echo "Installing OSI for Linux"
-	source install-linux-linux.sh
+	source install-osi-linux.sh
 else
 	echo "Install OSI Manually for Windows"
 fi
