@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 DIR=`dirname $0`
-
-if [[ `uname` == "Darwin" ]]
-then
-	echo "Installing OSI for Mac"
-	source install-osi-mac.sh
-elif [[ `uname` == "Linux" ]]
-then
-	echo "Installing OSI for Linux"
-	source install-osi-linux.sh
+DOWNWARD_COIN_ROOT64=`pwd`/../coin64 
+if [[ ! -d "$DOWNWARD_COIN_ROOT64"]]; then
+	if [[ `uname` == "Darwin" ]]
+	then
+		echo "Installing OSI for Mac"
+		source install-osi-mac.sh
+	elif [[ `uname` == "Linux" ]]
+	then
+		echo "Installing OSI for Linux"
+		source install-osi-linux.sh
+	else
+		echo "Install OSI Manually for Windows"
+	fi
 else
-	echo "Install OSI Manually for Windows"
+	echo "OSI Installed"
 fi
 pushd ..
 echo "Downloading Fast Downward"
