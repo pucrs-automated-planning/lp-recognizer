@@ -16,5 +16,6 @@ pushd ..
 echo "Downloading Fast Downward"
 hg clone http://hg.fast-downward.org fast-downward
 pushd fast-downward
+echo "Patching Fast Downward"
 patch -s -p0 < ${DIR}/fd-patch.diff 
 ./build.py release64
