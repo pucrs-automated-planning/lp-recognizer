@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 DIR=`dirname $0`
+echo "Running from ${DIR}"
 pushd ..
 DOWNWARD_COIN_ROOT64=`pwd`/coin64 
 FD_ROOT=`pwd`/fast-downward
