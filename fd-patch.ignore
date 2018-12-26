@@ -1,0 +1,29 @@
+# Mac Stuff
+.DS_Store
+*.pyc
+driver/.cache/v/cache/lastfailed
+experiments/issue[0-9]*/data/
+experiments/issue[0-9]*/.*.-microbenchmark/\.obj
+experiments/issue[0-9]*/.*.-microbenchmark/benchmark
+experiments/issue[0-9]*/.*.-microbenchmark/Makefile\.depend
+misc/autodoc/downward-xmlrpc\.secret
+builds/
+src/CMakeLists.txt.user
+# Generated files
+*.yy.cc
+# IDE files
+.idea
+.vscode
+# Object files
+*.obj
+*.o
+# Binaries and outputs
+output.sas
+sas_plan
+src/validate
+src/VAL/validate
+*.log
+.hg*
+builds
+h_result.txt
+Makefile.depend

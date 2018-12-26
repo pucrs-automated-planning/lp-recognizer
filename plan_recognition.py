@@ -31,6 +31,7 @@ class PR_Command:
         self.num_accounted_obs = 'n/a'
         #
         self.h_value = 'n/a'
+        self.op_counts = {}
         self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))\"'
 
     def execute(self):
@@ -46,9 +47,14 @@ class PR_Command:
             for line in instream:
                 line = line.strip()
                 if not '--' in line:
-                    # self.num_obs_accounted = int(line)
-                    self.h_value = int(line)
-                    print("h_value for %s is %d"%(self.problem,self.h_value))
+                    if self.h_value == 'n/a':
+                        # self.num_obs_accounted = int(line)
+                        self.h_value = float(line)
+                        print("h_value for %s is %d"%(self.problem,self.h_value))
+                    else: # Gather operator counts
+                        operator,count = line.split('=')
+                        self.op_counts[operator.strip()] = float(count.strip())
+            # print("Opcounts: ",self.op_counts)
             instream.close()
 
     def write_result(self, filename):
@@ -66,19 +72,22 @@ class Hypothesis:
         self.is_true = True
         self.test_failed = False
 
-    def evaluate(self, index):
+    def evaluate(self, index, observations):
         # generate the problem with G=H
         hyp_problem = 'hyp_%d_problem.pddl' % index
         self.generate_pddl_for_hyp_plan(hyp_problem)
-        plan_for_H_cmd = PR_Command('domain.pddl', 'hyp_%d_problem.pddl' % index)
-        plan_for_H_cmd.execute()
-        self.plan_time = plan_for_H_cmd.time
-        self.total_time = plan_for_H_cmd.time
-        plan_for_H_cmd.write_result('hyp_%d_planning_H.csv' % index)
-        if plan_for_H_cmd.signal == 0:
+        pr_cmd = PR_Command('domain.pddl', 'hyp_%d_problem.pddl' % index)
+        pr_cmd.execute()
+        self.plan_time = pr_cmd.time
+        self.total_time = pr_cmd.time
+        pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
+
+        if pr_cmd.signal == 0:
             # self.score = float( plan_for_H_cmd.num_obs_accounted)
             # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
-            self.score = float(plan_for_H_cmd.h_value)
+            self.score = float(pr_cmd.h_value)
+            hits, misses = observations.compute_count_intersection(pr_cmd.op_counts)
+            print("Opcounts: hits=%d misses=%d"%(hits,misses))
         else:
             self.test_failed = True
 
@@ -123,6 +132,31 @@ class Hypothesis:
                 break
 
 
+class Observations:
+
+    def __init__(self, obs):
+        self.observations = []
+        instream = open(obs)
+        for line in instream:
+            self.observations.append(line.strip().lower())
+
+    def compute_count_intersection(self, opcounts):
+        counts = dict(opcounts)
+        hitcount = 0
+        misscount = 0
+        for obs in self.observations:
+            if obs in counts.keys():
+                if counts[obs] > 0:
+                    hitcount +=1
+                    counts[obs]-=1
+                else:
+                    misscount +=1
+            else:
+                misscount+=1
+        misscount += sum([v for v in counts.values()])
+        return hitcount,misscount
+
+
 def load_hypotheses():
     hyps = []
 
@@ -163,17 +197,18 @@ def write_report(experiment, hyps):
 
 
 def main():
-    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt results.tar.bz2'
+    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
     os.system(cmdClean)
 
     startTime = time.time()
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
+    observations = Observations('obs.dat')
     hyps = load_hypotheses()
 
     for i in range(0, len(hyps)):
-        hyps[i].evaluate(i)
+        hyps[i].evaluate(i,observations)
 
     # write_report(options.exp_file, hyps)
 

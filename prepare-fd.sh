@@ -23,12 +23,14 @@ if [[ ! -d "$DOWNWARD_COIN_ROOT64" ]]; then
 else
 	echo "OSI Present"
 fi
+FD_REV=`cat fd-patch-rev.txt`
 pushd ..
 if [[ ! -d "$FD_ROOT" ]]; then
 	echo "Downloading Fast Downward"
-	hg clone http://hg.fast-downward.org fast-downward
+	hg clone -r $FD_REV http://hg.fast-downward.org fast-downward
 else
 	echo "Fast Downward Present"
+	hg update -r $FD_REV
 fi
 echo "Patching Fast Downward"
 cp ${DIR}/fd-patch.diff .
