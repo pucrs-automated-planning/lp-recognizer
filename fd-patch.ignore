@@ -11,6 +11,7 @@ builds/
 src/CMakeLists.txt.user
 # Generated files
 *.yy.cc
+*.temp0-e
 # IDE files
 .idea
 .vscode
@@ -20,8 +21,9 @@ src/CMakeLists.txt.user
 # Binaries and outputs
 output.sas
 sas_plan
-src/validate
-src/VAL/validate
+*/src/validate
+*/src/VAL/validate
+*/src/preprocess/preprocess
 *.log
 .hg*
 builds

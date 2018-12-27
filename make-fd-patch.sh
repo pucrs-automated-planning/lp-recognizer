@@ -30,7 +30,7 @@ hg update -r $FD_REV
 popd
 # Generate the patch in the current directory
 # diff -x builds -X fast-downward/.hgignore -x .hg* -ruN fast-downward-original/ fast-downward > fd-patch.diff
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/ fast-downward > fd-patch.diff
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/ fast-downward/ > fd-patch.diff
 
 mv fd-patch.diff $DIR/
 

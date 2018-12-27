@@ -97,12 +97,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/new_constraint
 +0 4
 +1 1
 Binary files fast-downward-original/src/VAL/validate and fast-downward/src/VAL/validate differ
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/preprocess/Makefile.temp0-e fast-downward/src/preprocess/Makefile.temp0-e
---- fast-downward-original/src/preprocess/Makefile.temp0-e	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/preprocess/Makefile.temp0-e	2015-04-05 22:06:43.000000000 -0300
-@@ -0,0 +1,2 @@
-+variable.o: variable.cc variable.h helper_functions.h state.h \
-+  successor_generator.h causal_graph.h
 Binary files fast-downward-original/src/preprocess/preprocess and fast-downward/src/preprocess/preprocess differ
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
 --- fast-downward-original/src/search/DownwardFiles.cmake	2018-12-24 16:48:31.000000000 -0200
@@ -126,92 +120,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
      NAME PDBS
      HELP "Plugin containing the code for PDBs"
      SOURCES
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Makefile.temp0-e fast-downward/src/search/Makefile.temp0-e
---- fast-downward-original/src/search/Makefile.temp0-e	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/Makefile.temp0-e	2015-04-05 22:07:03.000000000 -0300
-@@ -0,0 +1,82 @@
-+zero_one_pdbs_heuristic.o: pdbs/zero_one_pdbs_heuristic.cc \
-+  pdbs/zero_one_pdbs_heuristic.h pdbs/../heuristic.h \
-+  pdbs/../operator_cost.h pdbs/../scalar_evaluator.h pdbs/../evaluator.h \
-+  pdbs/../task_proxy.h pdbs/../abstract_task.h pdbs/pdb_heuristic.h \
-+  pdbs/util.h pdbs/../global_operator.h pdbs/../global_state.h \
-+  pdbs/../int_packer.h pdbs/../state_id.h pdbs/../globals.h \
-+  pdbs/../option_parser.h pdbs/../option_parser_util.h \
-+  pdbs/../utilities.h ext/tree.hh ext/tree_util.hh ext/boost/any.hpp \
-+  ext/boost/config.hpp ext/boost/config/user.hpp \
-+  ext/boost/config/select_compiler_config.hpp \
-+  ext/boost/config/compiler/clang.hpp \
-+  ext/boost/config/select_stdlib_config.hpp \
-+  ext/boost/config/no_tr1/utility.hpp \
-+  ext/boost/config/select_platform_config.hpp \
-+  ext/boost/config/platform/macos.hpp \
-+  ext/boost/config/posix_features.hpp ext/boost/config/suffix.hpp \
-+  ext/boost/type_traits/remove_reference.hpp \
-+  ext/boost/type_traits/broken_compiler_spec.hpp \
-+  ext/boost/mpl/aux_/lambda_support.hpp \
-+  ext/boost/mpl/aux_/config/lambda.hpp ext/boost/mpl/aux_/config/ttp.hpp \
-+  ext/boost/mpl/aux_/config/msvc.hpp ext/boost/mpl/aux_/config/gcc.hpp \
-+  ext/boost/mpl/aux_/config/workaround.hpp \
-+  ext/boost/detail/workaround.hpp ext/boost/mpl/aux_/config/ctps.hpp \
-+  ext/boost/type_traits/detail/type_trait_def.hpp \
-+  ext/boost/type_traits/detail/template_arity_spec.hpp \
-+  ext/boost/mpl/int.hpp ext/boost/mpl/int_fwd.hpp \
-+  ext/boost/mpl/aux_/adl_barrier.hpp ext/boost/mpl/aux_/config/adl.hpp \
-+  ext/boost/mpl/aux_/config/intel.hpp ext/boost/mpl/aux_/nttp_decl.hpp \
-+  ext/boost/mpl/aux_/config/nttp.hpp \
-+  ext/boost/mpl/aux_/integral_wrapper.hpp \
-+  ext/boost/mpl/integral_c_tag.hpp \
-+  ext/boost/mpl/aux_/config/static_constant.hpp \
-+  ext/boost/mpl/aux_/static_cast.hpp ext/boost/preprocessor/cat.hpp \
-+  ext/boost/preprocessor/config/config.hpp \
-+  ext/boost/mpl/aux_/template_arity_fwd.hpp \
-+  ext/boost/mpl/aux_/preprocessor/params.hpp \
-+  ext/boost/mpl/aux_/config/preprocessor.hpp \
-+  ext/boost/preprocessor/comma_if.hpp \
-+  ext/boost/preprocessor/punctuation/comma_if.hpp \
-+  ext/boost/preprocessor/control/if.hpp \
-+  ext/boost/preprocessor/control/iif.hpp \
-+  ext/boost/preprocessor/logical/bool.hpp \
-+  ext/boost/preprocessor/facilities/empty.hpp \
-+  ext/boost/preprocessor/punctuation/comma.hpp \
-+  ext/boost/preprocessor/repeat.hpp \
-+  ext/boost/preprocessor/repetition/repeat.hpp \
-+  ext/boost/preprocessor/debug/error.hpp \
-+  ext/boost/preprocessor/detail/auto_rec.hpp \
-+  ext/boost/preprocessor/tuple/eat.hpp ext/boost/preprocessor/inc.hpp \
-+  ext/boost/preprocessor/arithmetic/inc.hpp \
-+  ext/boost/mpl/aux_/config/overload_resolution.hpp \
-+  ext/boost/type_traits/detail/type_trait_undef.hpp \
-+  ext/boost/type_traits/is_reference.hpp \
-+  ext/boost/type_traits/config.hpp \
-+  ext/boost/type_traits/is_lvalue_reference.hpp \
-+  ext/boost/type_traits/detail/bool_trait_def.hpp \
-+  ext/boost/type_traits/integral_constant.hpp ext/boost/mpl/bool.hpp \
-+  ext/boost/mpl/bool_fwd.hpp ext/boost/mpl/integral_c.hpp \
-+  ext/boost/mpl/integral_c_fwd.hpp \
-+  ext/boost/type_traits/detail/bool_trait_undef.hpp \
-+  ext/boost/type_traits/is_rvalue_reference.hpp \
-+  ext/boost/type_traits/ice.hpp \
-+  ext/boost/type_traits/detail/yes_no_type.hpp \
-+  ext/boost/type_traits/detail/ice_or.hpp \
-+  ext/boost/type_traits/detail/ice_and.hpp \
-+  ext/boost/type_traits/detail/ice_not.hpp \
-+  ext/boost/type_traits/detail/ice_eq.hpp ext/boost/throw_exception.hpp \
-+  ext/boost/exception/detail/attribute_noreturn.hpp \
-+  ext/boost/exception/exception.hpp ext/boost/current_function.hpp \
-+  ext/boost/static_assert.hpp pdbs/../plugin.h \
-+  pdbs/../open_lists/standard_scalar_open_list.h \
-+  pdbs/../open_lists/open_list.h \
-+  pdbs/../open_lists/standard_scalar_open_list.cc \
-+  pdbs/../open_lists/open_list_buckets.h \
-+  pdbs/../open_lists/open_list_buckets.cc \
-+  pdbs/../open_lists/tiebreaking_open_list.h \
-+  pdbs/../open_lists/tiebreaking_open_list.cc \
-+  pdbs/../open_lists/alternation_open_list.h \
-+  pdbs/../open_lists/alternation_open_list.cc \
-+  pdbs/../open_lists/pareto_open_list.h \
-+  pdbs/../open_lists/../utilities_hash.h \
-+  pdbs/../open_lists/pareto_open_list.cc pdbs/../open_lists/../rng.h
 Binary files fast-downward-original/src/search/downward-release and fast-downward/src/search/downward-release differ
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.cc fast-downward/src/search/lp/lp_solver.cc
 --- fast-downward-original/src/search/lp/lp_solver.cc	2018-12-24 16:48:31.000000000 -0200
