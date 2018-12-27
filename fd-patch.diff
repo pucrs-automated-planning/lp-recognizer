@@ -1,6 +1,6 @@
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward fast-downward/fast-downward
 --- fast-downward-original/fast-downward	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fast-downward	2018-12-24 15:16:39.000000000 -0200
++++ fast-downward/fast-downward	2018-12-26 11:08:34.000000000 -0200
 @@ -0,0 +1,13 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -12,13 +12,13 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward 
 +# ${DIR}/fast-downward.py $DOMAIN $PROBLEM --search "astar(seq())" "$@"
 +# ${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints()], lpsolver=CPLEX, transform=no_transform(), cache_estimates=true))" "$@"
 +# ${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))" "$@"
-+${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM "$@"
++${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))" "$@"
 +
 +# ${DIR}/fast-downward.py $DOMAIN $PROBLEM --alias seq-opt-lmcut "$@"
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints fast-downward/fd-constraints
 --- fast-downward-original/fd-constraints	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fd-constraints	2018-12-24 18:50:59.000000000 -0200
++++ fast-downward/fd-constraints	2018-12-26 11:08:20.000000000 -0200
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -390,13 +390,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
        Return true if the solving the LP showed that it is bounded feasible and
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2018-11-06 18:46:33.000000000 -0200
-@@ -44,6 +44,28 @@
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2018-12-27 18:43:57.000000000 -0200
+@@ -44,6 +44,30 @@
          return true;
      } else {
          lp_solver.add_temporary_constraints(constraints);
 +
 +        ///////////////////////////////////////////////////////////////////
++        /*
 +        cout << endl << string(80, '*') << endl;
 +        cout << "# LM-Cut Constraints(" << constraints.size() << "): " << endl;
 +        for (int i = 0; i < (int) constraints.size(); ++i) {
@@ -415,6 +416,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
 +        }
 +        cout << string(80, '*') << endl << endl;
++        */
 +        ///////////////////////////////////////////////////////////////////
 +
          return false;
@@ -422,8 +424,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2018-12-25 18:26:40.000000000 -0200
-@@ -0,0 +1,253 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2018-12-27 18:41:58.000000000 -0200
+@@ -0,0 +1,255 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -605,7 +607,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    vector<double> counts = lp_solver.extract_solution();
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        // cout << "(" << op.get_name() << ") = " << counts[var_i] << endl;
-+        h_result << "(" << op.get_name() << ") = " << counts[var_i] << endl;
++        if (counts[var_i] > 0 ) {
++            h_result << "(" << op.get_name() << ") = " << counts[var_i] << endl;
++        }
 +        var_i++;
 +    }
 +
@@ -711,21 +715,40 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 +
 +#endif
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc fast-downward/src/search/operator_counting/operator_counting_heuristic.cc
---- fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc	2018-12-21 20:15:05.000000000 -0200
-@@ -8,6 +8,7 @@
- #include "../utils/markup.h"
- 
- #include <cmath>
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc.orig fast-downward/src/search/operator_counting/operator_counting_heuristic.cc.orig
+--- fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc.orig	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc.orig	2018-12-21 20:15:05.000000000 -0200
+@@ -0,0 +1,225 @@
++#include "operator_counting_heuristic.h"
++
++#include "constraint_generator.h"
++
++#include "../option_parser.h"
++#include "../plugin.h"
++
++#include "../utils/markup.h"
++
++#include <cmath>
 +#include <fstream>
- 
- using namespace std;
- 
-@@ -27,6 +28,44 @@
-     for (const auto &generator : constraint_generators) {
-         generator->initialize_constraints(task, constraints, infinity);
-     }
++
++using namespace std;
++
++namespace operator_counting {
++OperatorCountingHeuristic::OperatorCountingHeuristic(const Options &opts)
++    : Heuristic(opts),
++      constraint_generators(
++          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
++      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))) {
++    vector<lp::LPVariable> variables;
++    double infinity = lp_solver.get_infinity();
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        int op_cost = op.get_cost();
++        variables.push_back(lp::LPVariable(0, infinity, op_cost));
++    }
++    vector<lp::LPConstraint> constraints;
++    for (const auto &generator : constraint_generators) {
++        generator->initialize_constraints(task, constraints, infinity);
++    }
 +    ///////////////////////////////////////////////////////////////////
 +    cout << endl << string(80, '*') << endl;
 +    cout << "# Mapping X -> op: " << endl;
@@ -764,13 +787,26 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << string(80, '*') << endl << endl;
 +    ///////////////////////////////////////////////////////////////////
 +
-     lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
- }
- 
-@@ -47,6 +86,61 @@
-             return DEAD_END;
-         }
-     }
++    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++}
++
++OperatorCountingHeuristic::~OperatorCountingHeuristic() {
++}
++
++int OperatorCountingHeuristic::compute_heuristic(const GlobalState &global_state) {
++    State state = convert_global_state(global_state);
++    return compute_heuristic(state);
++}
++
++int OperatorCountingHeuristic::compute_heuristic(const State &state) {
++    assert(!lp_solver.has_temporary_constraints());
++    for (const auto &generator : constraint_generators) {
++        bool dead_end = generator->update_constraints(state, lp_solver);
++        if (dead_end) {
++            lp_solver.clear_temporary_constraints();
++            return DEAD_END;
++        }
++    }
 +
 +    ///////////////////////////////////////////////////////////////////
 +    ifstream file;
@@ -826,13 +862,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    }
 +    ///////////////////////////////////////////////////////////////////
 +
-     int result;
-     lp_solver.solve();
-     if (lp_solver.has_optimal_solution()) {
-@@ -56,6 +150,20 @@
-     } else {
-         result = DEAD_END;
-     }
++    int result;
++    lp_solver.solve();
++    if (lp_solver.has_optimal_solution()) {
++        double epsilon = 0.01;
++        double objective_value = lp_solver.get_objective_value();
++        result = ceil(objective_value - epsilon);
++    } else {
++        result = DEAD_END;
++    }
 +
 +    ///////////////////////////////////////////////////////////////////
 +    cout << endl << string(80, '*') << endl;
@@ -847,31 +885,90 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    exit(100);
 +    ///////////////////////////////////////////////////////////////////
 +
-     lp_solver.clear_temporary_constraints();
-     return result;
- }
++    lp_solver.clear_temporary_constraints();
++    return result;
++}
++
++static shared_ptr<Heuristic> _parse(OptionParser &parser) {
++    parser.document_synopsis(
++        "Operator counting heuristic",
++        "An operator counting heuristic computes a linear program (LP) in each "
++        "state. The LP has one variable Count_o for each operator o that "
++        "represents how often the operator is used in a plan. Operator "
++        "counting constraints are linear constraints over these varaibles that "
++        "are guaranteed to have a solution with Count_o = occurrences(o, pi) "
++        "for every plan pi. Minimizing the total cost of operators subject to "
++        "some operator counting constraints is an admissible heuristic. "
++        "For details, see" + utils::format_paper_reference(
++            {"Florian Pommerening", "Gabriele Roeger", "Malte Helmert",
++             "Blai Bonet"},
++            "LP-based Heuristics for Cost-optimal Planning",
++            "http://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/7892/8031",
++            "Proceedings of the Twenty-Fourth International Conference"
++            " on Automated Planning and Scheduling (ICAPS 2014)",
++            "226-234",
++            "AAAI Press 2014"));
++
++    parser.document_language_support("action costs", "supported");
++    parser.document_language_support(
++        "conditional effects",
++        "not supported (the heuristic supports them in theory, but none of "
++        "the currently implemented constraint generators do)");
++    parser.document_language_support(
++        "axioms",
++        "not supported (the heuristic supports them in theory, but none of "
++        "the currently implemented constraint generators do)");
++    parser.document_property("admissible", "yes");
++    parser.document_property(
++        "consistent",
++        "yes, if all constraint generators represent consistent heuristics");
++    parser.document_property("safe", "yes");
++    // TODO: prefer operators that are non-zero in the solution.
++    parser.document_property("preferred operators", "no");
++
++
++    parser.add_list_option<shared_ptr<ConstraintGenerator>>(
++        "constraint_generators",
++        "methods that generate constraints over operator counting variables");
++    lp::add_lp_solver_option_to_parser(parser);
++    Heuristic::add_options_to_parser(parser);
++    Options opts = parser.parse();
++    if (parser.help_mode())
++        return nullptr;
++    opts.verify_list_non_empty<shared_ptr<ConstraintGenerator>>(
++        "constraint_generators");
++    if (parser.dry_run())
++        return nullptr;
++    return make_shared<OperatorCountingHeuristic>(opts);
++}
++
++static Plugin<Evaluator> _plugin("operatorcounting", _parse);
++}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.cc fast-downward/src/search/operator_counting/pho_constraints.cc
 --- fast-downward-original/src/search/operator_counting/pho_constraints.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/pho_constraints.cc	2018-11-06 19:15:32.000000000 -0200
-@@ -53,6 +53,12 @@
++++ fast-downward/src/search/operator_counting/pho_constraints.cc	2018-12-27 18:46:07.000000000 -0200
+@@ -53,6 +53,14 @@
  
  bool PhOConstraints::update_constraints(const State &state,
                                          lp::LPSolver &lp_solver) {
 +
 +    ///////////////////////////////////////////////////////////////////
++    /*
 +    cout << endl << string(80, '*') << endl;
 +    cout << "# Posthoc Constraints(" << pdbs->size() << "): " << endl;
++    */
 +    ///////////////////////////////////////////////////////////////////
 +
      for (size_t i = 0; i < pdbs->size(); ++i) {
          int constraint_id = constraint_offset + i;
          shared_ptr<pdbs::PatternDatabase> pdb = (*pdbs)[i];
-@@ -61,7 +67,29 @@
+@@ -61,7 +69,31 @@
              return true;
          }
          lp_solver.set_constraint_lower_bound(constraint_id, h);
 +
 +        ///////////////////////////////////////////////////////////////////
++        /*
 +        lp_solver.all_constraints[constraint_id].set_lower_bound(h);
 +        lp::LPConstraint constraint = lp_solver.all_constraints[constraint_id];
 +        cout << "constraints.append(Constraint(";
@@ -885,6 +982,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +        cout << ", lb=" << constraint.get_lower_bound();
 +        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
++        */
 +        ///////////////////////////////////////////////////////////////////
 +
      }

@@ -87,10 +87,10 @@ class Hypothesis:
             hits, misses = observations.compute_count_intersection(pr_cmd.op_counts)
             # self.score = float(pr_cmd.h_value)
             # self.score = int(pr_cmd.h_value)
-            # self.score = hits
+            self.score = hits
             self.hits = hits
             self.misses = misses
-            self.score = float(hits)/float(hits+misses)
+            # self.score = float(hits)/float(hits+misses)
             print("Opcounts: hits=%d misses=%d"%(hits,misses))
         else:
             self.test_failed = True
