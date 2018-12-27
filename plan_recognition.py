@@ -1,7 +1,6 @@
 #!/usr/bin/env python2
 
 # Code originally developed by Miquel Ramirez
-
 import sys, os, csv, time
 from options import Program_Options
 import benchmark
@@ -85,8 +84,13 @@ class Hypothesis:
         if pr_cmd.signal == 0:
             # self.score = float( plan_for_H_cmd.num_obs_accounted)
             # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
-            self.score = float(pr_cmd.h_value)
             hits, misses = observations.compute_count_intersection(pr_cmd.op_counts)
+            # self.score = float(pr_cmd.h_value)
+            # self.score = int(pr_cmd.h_value)
+            # self.score = hits
+            self.hits = hits
+            self.misses = misses
+            self.score = float(hits)/float(hits+misses)
             print("Opcounts: hits=%d misses=%d"%(hits,misses))
         else:
             self.test_failed = True
@@ -156,45 +160,85 @@ class Observations:
         misscount += sum([v for v in counts.values()])
         return hitcount,misscount
 
+class PlanRecognizer:
+    
+    def __init__(self, options):
+        self.options = options
+        self.observations = Observations('obs.dat')
+        self.hyps = self.load_hypotheses()
 
-def load_hypotheses():
-    hyps = []
+    def load_hypotheses(self):
+        hyps = []
 
-    instream = open('hyps.dat')
+        instream = open('hyps.dat')
 
-    for line in instream:
-        line = line.strip()
-        H = Hypothesis()
-        H.atoms = [tok.strip() for tok in line.split(',')]
-        H.check_if_actual()
-        hyps.append(H)
+        for line in instream:
+            line = line.strip()
+            H = Hypothesis()
+            H.atoms = [tok.strip() for tok in line.split(',')]
+            H.check_if_actual()
+            hyps.append(H)
 
-    instream.close()
+        instream.close()
 
-    return hyps
+        return hyps
+
+    def get_real_hypothesis(self):
+        for h in self.hyps:
+            if h.is_true:
+                realHyp = h
+                return realHyp
+
+    def write_report(self, experiment, hyps):
+        outstream = open('report.txt', 'w')
+
+        print >> outstream, "Experiment=%s" % experiment
+        print >> outstream, "Num_Hyp=%d" % len(hyps)
+        for hyp in hyps:
+            print >> outstream, "Hyp_Atoms=%s" % ",".join(hyp.atoms)
+            if hyp.test_failed:
+                print >> outstream, "Hyp_Score=unknown"
+                print >> outstream, "Hyp_Plan_Len=unknown"
+            else:
+                print >> outstream, "Hyp_Score=%f" % hyp.score
+                print >> outstream, "Hyp_Plan_Len=%d" % len(hyp.plan)
+            print >> outstream, "Hyp_Trans_Time=%f" % hyp.trans_time
+            print >> outstream, "Hyp_Plan_Time=%f" % hyp.plan_time
+            print >> outstream, "Hyp_Test_Time=%f" % hyp.total_time
+            print >> outstream, "Hyp_Is_True=%s" % hyp.is_true
+
+        outstream.close()
+        print(max(hyps))
+
+    def run_recognizer(self):
+        return None
 
 
-def write_report(experiment, hyps):
-    outstream = open('report.txt', 'w')
+class LPRecognizer(PlanRecognizer):
 
-    print >> outstream, "Experiment=%s" % experiment
-    print >> outstream, "Num_Hyp=%d" % len(hyps)
-    for hyp in hyps:
-        print >> outstream, "Hyp_Atoms=%s" % ",".join(hyp.atoms)
-        if hyp.test_failed:
-            print >> outstream, "Hyp_Score=unknown"
-            print >> outstream, "Hyp_Plan_Len=unknown"
-        else:
-            print >> outstream, "Hyp_Score=%f" % hyp.score
-            print >> outstream, "Hyp_Plan_Len=%d" % len(hyp.plan)
-        print >> outstream, "Hyp_Trans_Time=%f" % hyp.trans_time
-        print >> outstream, "Hyp_Plan_Time=%f" % hyp.plan_time
-        print >> outstream, "Hyp_Test_Time=%f" % hyp.total_time
-        print >> outstream, "Hyp_Is_True=%s" % hyp.is_true
+    def __init__(self, options):
+        PlanRecognizer.__init__(self,options)
 
-    outstream.close()
-    print(max(hyps))
+    def run_recognizer(self):
+        for i in range(0, len(self.hyps)):
+            self.hyps[i].evaluate(i, self.observations)
 
+        hyp = None
+        for h in self.hyps:
+            if not h.test_failed:
+                if not hyp or h.score > hyp.score:
+                    hyp = h
+                    
+        return hyp
+        
+    def print_scores(self):
+        i = 0
+        for h in self.hyps:
+            if not h.test_failed:
+                print("h_%s=%f%s"%(i,h.score,"*" if h.is_true else ""))
+            else:
+                print("h_%s=failed"%(i))
+            i+=1
 
 def main():
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
@@ -204,29 +248,17 @@ def main():
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
-    observations = Observations('obs.dat')
-    hyps = load_hypotheses()
-
-    for i in range(0, len(hyps)):
-        hyps[i].evaluate(i,observations)
+    recognizer = LPRecognizer(options)
+    hyp = recognizer.run_recognizer()
 
     # write_report(options.exp_file, hyps)
 
     # cmd = 'tar jcvf results.tar.bz2 *.log *.csv *.pddl *.soln report.txt'
     # os.system( cmd )
 
-    hyp = None
-    for h in hyps:
-        if not h.test_failed:
-            if not hyp or h.score < hyp.score:
-                hyp = h
+    realHyp = recognizer.get_real_hypothesis()
 
-    realHyp = None
-    for h in hyps:
-        if h.is_true:
-            realHyp = h
-            break
-
+    # recognizer.print_scores()
     if hyp and realHyp and hyp.score == realHyp.score:
         print('TRUE!')
     else:
