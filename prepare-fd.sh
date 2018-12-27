@@ -34,7 +34,7 @@ else
 	hg update -r $FD_REV
 	popd
 fi
-echo "Patching Fast Downward"
+echo "Patching Fast Downward at `pwd`"
 cp ${DIR}/fd-patch.diff .
 patch -s -p0 < fd-patch.diff 
 pushd fast-downward
