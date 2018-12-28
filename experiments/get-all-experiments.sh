@@ -42,7 +42,7 @@ popd
 
 pushd experiments
 
-for $domain in domains; do
+for domain in "${domains[@]}"; do
 	cp "../../plan-recognition-experiments/experiments/$domain/*.tar.bz2" .
 	bash prepare-domain.sh $domain
 done

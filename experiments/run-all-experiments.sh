@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-declare -a domains=("blocks-world"
-					"blocks-world-aaai"
-					"campus"
+declare -a domains=("blocks-world" 
+					"blocks-world-aaai" 
+					"campus" 
 					"campus-noisy"
 					"depots"
 					"driverlog"
@@ -29,9 +29,10 @@ declare -a domains=("blocks-world"
 					"satellite"
 					"sokoban"
 					# "spider"
-					"zeno-travel"
-					)
+				"zeno-travel")
 pushd ..
-for $domain in domains; do
-	python2 run_experiments.py $domain
+# echo "$domains"
+for domain in "${domains[@]}"; do
+	echo "Running domain ${domain}"
+	# python2 run_experiments.py $domain
 done
