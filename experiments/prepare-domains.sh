@@ -11,3 +11,4 @@ for obs in 10 30 50 70 100; do
 	fi
 	mv *$suffix* ./${obs}
 done 
+echo "Done"
