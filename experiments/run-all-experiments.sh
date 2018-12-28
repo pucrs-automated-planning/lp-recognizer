@@ -34,5 +34,5 @@ pushd ..
 # echo "$domains"
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	# python2 run_experiments.py $domain
+	python2 run_experiments.py $domain
 done
