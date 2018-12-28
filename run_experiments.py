@@ -48,40 +48,40 @@ def doExperiments(domainName, observability):
                 counterTruePositiveProblems = counterTruePositiveProblems + 1
                 counterFalsePositiveProblems = counterFalsePositiveProblems + (len(goals))
 
-    totalCandidateGoals = float(candidateGoals / counterProblems)
-    counterProblems = float(counterProblems)
-    counterTruePositiveProblems = float(counterTruePositiveProblems)
-    trueNegativeCounter = float((counterProblems * (candidateGoals / counterProblems)) - counterFalsePositiveProblems)
-    trueNegativeCounter = float(trueNegativeCounter)
-    falseNegativeCounter = float(counterProblems - counterTruePositiveProblems)
-    accuracy = float(counterTruePositiveProblems / counterProblems)
-    precision = float(counterTruePositiveProblems / (counterTruePositiveProblems + counterFalsePositiveProblems))
-    recall = float(counterTruePositiveProblems / (counterTruePositiveProblems + falseNegativeCounter))
-    if ((precision + recall) == 0):
-        f1score = 0
-    else:
-        f1score = 2 * ((precision * recall) / (precision + recall))
-    fallout = counterFalsePositiveProblems / (trueNegativeCounter + counterFalsePositiveProblems)
-    missrate = float(falseNegativeCounter / (falseNegativeCounter + counterTruePositiveProblems))
-    totalT = (time.time() - startTime)
-    totalTime = float(totalT / counterProblems)
-    avgRecognizedGoals = float((counterFalsePositiveProblems + counterTruePositiveProblems) / counterProblems)
-    obsPrint = obs
-    if obs == 'full':
-        obsPrint = '100'
+        totalCandidateGoals = float(candidateGoals / counterProblems)
+        counterProblems = float(counterProblems)
+        counterTruePositiveProblems = float(counterTruePositiveProblems)
+        trueNegativeCounter = float((counterProblems * (candidateGoals / counterProblems)) - counterFalsePositiveProblems)
+        trueNegativeCounter = float(trueNegativeCounter)
+        falseNegativeCounter = float(counterProblems - counterTruePositiveProblems)
+        accuracy = float(counterTruePositiveProblems / counterProblems)
+        precision = float(counterTruePositiveProblems / (counterTruePositiveProblems + counterFalsePositiveProblems))
+        recall = float(counterTruePositiveProblems / (counterTruePositiveProblems + falseNegativeCounter))
+        if ((precision + recall) == 0):
+            f1score = 0
+        else:
+            f1score = 2 * ((precision * recall) / (precision + recall))
+        fallout = counterFalsePositiveProblems / (trueNegativeCounter + counterFalsePositiveProblems)
+        missrate = float(falseNegativeCounter / (falseNegativeCounter + counterTruePositiveProblems))
+        totalT = (time.time() - startTime)
+        totalTime = float(totalT / counterProblems)
+        avgRecognizedGoals = float((counterFalsePositiveProblems + counterTruePositiveProblems) / counterProblems)
+        obsPrint = obs
+        if obs == 'full':
+            obsPrint = '100'
 
-    result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(
-        f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(
-        totalTime) + '\n';
-    experimentsResult = experimentsResult + result
-    totalProblems = totalProblems + counterProblems
+        result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(
+            f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(
+            totalTime) + '\n';
+        experimentsResult = experimentsResult + result
+        totalProblems = totalProblems + counterProblems
 
-    fileResult = open(str(domainName) + '-goal_recognition-yolanda.txt', 'w')
-    print str(domainName) + '-goal_recognition-yolanda.txt'
-    print experimentsResult
-    print '$> Total Problems: ' + str(totalProblems)
-    fileResult.write(experimentsResult)
-    fileResult.close()
+        fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
+        print str(domainName) + '-goal_recognition-lp.txt'
+        print experimentsResult
+        print '$> Total Problems: ' + str(totalProblems)
+        fileResult.write(experimentsResult)
+        fileResult.close()
 
 
 def main():
