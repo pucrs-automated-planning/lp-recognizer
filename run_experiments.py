@@ -12,6 +12,10 @@ def doExperiments(domainName, observability):
 
     startTime = time.time()
     experimentsResult = ''
+    
+    fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
+    header = "Obs \t Accuracy \t Precision \t Recall  \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"%(obsPrint,accuracy,precision,recall,f1score,fallout,missrate,avgRecognizedGoals,totalTime)
+    fileResult.write(header)
 
     for obs in observability:
         startTime = time.time()
@@ -69,17 +73,16 @@ def doExperiments(domainName, observability):
         obsPrint = obs
         if obs == 'full':
             obsPrint = '100'
-
-        result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(
-            f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(
-            totalTime) + '\n';
+        
+        result = "%d \t %2.4f  \t  %2.4f  \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %6.4f\n"%(obsPrint,accuracy,precision,recall,f1score,fallout,missrate,avgRecognizedGoals,totalTime)
+        result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(totalTime) + '\n';
         experimentsResult = experimentsResult + result
         totalProblems = totalProblems + counterProblems
 
         fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
-        print str(domainName) + '-goal_recognition-lp.txt'
-        print experimentsResult
-        print '$> Total Problems: ' + str(totalProblems)
+        print(str(domainName) + '-goal_recognition-lp.txt')
+        print(experimentsResult)
+        print( '$> Total Problems: ' + str(totalProblems))
         fileResult.write(experimentsResult)
         fileResult.close()
 
