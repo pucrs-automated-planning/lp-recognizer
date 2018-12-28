@@ -14,7 +14,7 @@ def doExperiments(domainName, observability):
     experimentsResult = ''
     
     fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
-    header = "Obs \t Accuracy \t Precision \t Recall  \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"%(obsPrint,accuracy,precision,recall,f1score,fallout,missrate,avgRecognizedGoals,totalTime)
+    header = "Obs \t Accuracy \t Precision \t Recall  \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"
     fileResult.write(header)
 
     for obs in observability:
