@@ -74,7 +74,7 @@ def doExperiments(domainName, observability):
         if obs == 'full':
             obsPrint = '100'
         
-        result = "%d \t %2.4f  \t  %2.4f  \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %6.4f\n"%(obsPrint,accuracy,precision,recall,f1score,fallout,missrate,avgRecognizedGoals,totalTime)
+        result = "%s \t %2.4f  \t  %2.4f  \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %2.4f \t %6.4f\n"%(obsPrint,accuracy,precision,recall,f1score,fallout,missrate,avgRecognizedGoals,totalTime)
         result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(totalTime) + '\n';
         experimentsResult = experimentsResult + result
         totalProblems = totalProblems + counterProblems
