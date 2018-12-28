@@ -11,12 +11,7 @@ def doExperiments(domainName, observability):
     candidateGoals = 0
 
     startTime = time.time()
-    experimentsResult = ''
-    
-    fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
-    header = "Obs \t Accuracy \t Precision \t Recall  \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"
-    fileResult.write(header)
-    fileResult.close()
+    experimentsResult = "Obs \t Accuracy \t Precision \t Recall \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"
 
     for obs in observability:
         startTime = time.time()
