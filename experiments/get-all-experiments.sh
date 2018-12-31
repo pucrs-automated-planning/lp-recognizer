@@ -47,6 +47,8 @@ pushd experiments
 echo "Preparing regular experiments"
 
 for domain in "${domains[@]}"; do
+	echo $domain
+	rm -rf $domain
 	cp "../../plan-recognition-experiments/experiments/$domain/*.tar.bz2" .
 	if [ $domain = "blocks-world" ] || [ $domain = "blocks-world-aaai" ]; then
 		pushd $domain
@@ -59,5 +61,7 @@ done
 echo "Preparing noisy experiments"
 
 for domain in "${noisy_domains[@]}"; do
+	echo $domain
+	rm -rf $domain
 	cp -R "../../plan-recognition-experiments/experiments/$domain" .
 done
