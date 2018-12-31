@@ -35,4 +35,10 @@ pushd ..
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
 	python2 run_experiments.py $domain
+	slack_message "Finished running $domain at `hostname`"
 done
+
+if [[ ! -d results ]]; then
+	mkdir results
+fi
+mv *.txt ./results
