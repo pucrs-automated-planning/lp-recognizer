@@ -5,20 +5,16 @@ EXPERIMENTS_REPO="https://github.com/pucrs-automated-planning/Planning-PlanRecog
 declare -a domains=("blocks-world"
 					"blocks-world-aaai"
 					"campus"
-					"campus-noisy"
 					"depots"
 					"driverlog"
 					"dwr"
 					"dwr"
 					"easy-ipc-grid"
-					"easy-ipc-grid-noisy"
 					"ferry"
 					"hanoi"
 					# "hanoi_handmade"
 					"intrusion-detection"
-					"intrusion-detection-noisy"
 					"kitchen"
-					"kitchen-noisy"
 					# "lo_handmade"
 					# "lodigital"
 					"logistics"
@@ -34,6 +30,12 @@ declare -a domains=("blocks-world"
 					"zeno-travel"
 					)
 
+declare -a noisy_domains=("campus-noisy"
+					"easy-ipc-grid-noisy"
+					"intrusion-detection-noisy"
+					"kitchen-noisy"
+					)
+
 pushd ../../
 
 git clone --depth=1 $EXPERIMENTS_REPO plan-recognition-experiments
@@ -42,7 +44,20 @@ popd
 
 pushd experiments
 
+echo "Preparing regular experiments"
+
 for domain in "${domains[@]}"; do
 	cp "../../plan-recognition-experiments/experiments/$domain/*.tar.bz2" .
+	if [ $domain = "blocks-world" ] || [ $domain = "blocks-world-aaai" ]; then
+		pushd $domain
+		bash ../patch-blocks-world.sh
+		popd
+	fi
 	bash prepare-domain.sh $domain
+done
+
+echo "Preparing noisy experiments"
+
+for domain in "${noisy_domains[@]}"; do
+	cp -R "../../plan-recognition-experiments/experiments/$domain" .
 done

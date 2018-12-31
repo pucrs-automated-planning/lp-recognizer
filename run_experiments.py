@@ -85,11 +85,17 @@ def doExperiments(domainName, observability):
 
 def main():
     domainName = sys.argv[1]
-    # observability = ['25', '50', '75', '100']
-    observability = ['10', '30', '50', '70', '100']
+    #Totally unacceptable hack to have this script work with noisy domains
+    if domainName.endswith("noisy"):
+        observability = ['25', '50', '75', '100']
+    else:
+        observability = ['10', '30', '50', '70', '100']
 
     doExperiments(domainName, observability)
 
+    # Get rid of the temp files
+    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
+    os.system(cmdClean)
 
 if __name__ == '__main__':
     main()
