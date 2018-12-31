@@ -23,7 +23,7 @@ for FILE in *.tar.bz2; do
 		rm domain.pddl.orig
 	elif [[ `uname` == "Linux" ]]
 	then
-		sed 's/-block/- block/g' domain.pddl
+		sed -i 's/-block/- block/g' domain.pddl
 	fi
 	tar -jcf ../$FILE .
  	popd
