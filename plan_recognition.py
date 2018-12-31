@@ -31,7 +31,7 @@ class PR_Command:
         #
         self.h_value = 'n/a'
         self.op_counts = {}
-        self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))\"'
+        self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false))\"'
 
     def execute(self):
         cmd_string = self.planner_string % (self.domain, self.problem)

@@ -18,7 +18,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward 
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints fast-downward/fd-constraints
 --- fast-downward-original/fd-constraints	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fd-constraints	2018-12-26 11:08:20.000000000 -0200
++++ fast-downward/fd-constraints	2018-12-31 17:11:07.000000000 -0200
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -33,7 +33,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints
 +
 +# ${DIR}/builds/debug64/bin/downward --search "astar(ocsingleshot([lmcut_constraints()], lpsolver=CPLEX, transform=no_transform(), cache_estimates=true))" --internal-plan-file ${DIR}/sas_plan < output.sas
 +
-+${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))" "$@"
++${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false))" "$@"
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-linux.sh fast-downward/install-osi-linux.sh
 --- fast-downward-original/install-osi-linux.sh	1969-12-31 21:00:00.000000000 -0300
@@ -332,8 +332,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2018-12-27 18:41:58.000000000 -0200
-@@ -0,0 +1,255 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2018-12-31 17:10:09.000000000 -0200
+@@ -0,0 +1,354 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -346,6 +346,30 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#include <cmath>
 +#include <fstream>
 +
++#include <algorithm> 
++#include <cctype>
++#include <locale>
++
++// trim from start (in place)
++static inline void ltrim(std::string &s) {
++    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch) {
++        return !std::isspace(ch);
++    }));
++}
++
++// trim from end (in place)
++static inline void rtrim(std::string &s) {
++    s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) {
++        return !std::isspace(ch);
++    }).base(), s.end());
++}
++
++// trim from both ends (in place)
++static inline void trim(std::string &s) {
++    ltrim(s);
++    rtrim(s);
++}
++
 +using namespace std;
 +
 +namespace operator_counting {
@@ -354,6 +378,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +      constraint_generators(
 +          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
 +      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))) {
++    
++    enforce_observations = opts.get("enforce_observations",false);
++
 +    vector<lp::LPVariable> variables;
 +    double infinity = lp_solver.get_infinity();
 +    for (OperatorProxy op : task_proxy.get_operators()) {
@@ -413,18 +440,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    return compute_heuristic(state);
 +}
 +
-+int OCSingleShotHeuristic::compute_heuristic(const State &state) {
-+    assert(!lp_solver.has_temporary_constraints());
-+    for (const auto &generator : constraint_generators) {
-+        bool dead_end = generator->update_constraints(state, lp_solver);
-+        if (dead_end) {
-+            lp_solver.clear_temporary_constraints();
-+            return DEAD_END;
-+        }
-+    }
-+
-+    ///////////////////////////////////////////////////////////////////
-+    ifstream file;
++///////////////////////////////////////////////////////////////////
++void OCSingleShotHeuristic::load_extra_constraints() {
++ifstream file;
 +    file.open("new_constraint.txt");
 +    if (file.is_open()) {
 +        double lb, ub;
@@ -475,29 +493,58 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        cout << ", lb=" << constraint.get_lower_bound();
 +        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
 +    }
-+    ///////////////////////////////////////////////////////////////////
++}
++///////////////////////////////////////////////////////////////////
 +
-+    int result;
-+    lp_solver.solve();
-+    if (lp_solver.has_optimal_solution()) {
-+        double epsilon = 0.01;
-+        double objective_value = lp_solver.get_objective_value();
-+        result = ceil(objective_value - epsilon);
++///////////////////////////////////////////////////////////////////
++void OCSingleShotHeuristic::enforce_observation_constraints() {
++    // Since we are going to need to access operators a couple of times, we hash their names to indexes
++    unordered_map<string,int> op_indexes;
++    int op_i=0;
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        op_indexes[op.get_name()] = op_i;
++        op_i++;
++    }
++
++    // Read observations from file
++    ifstream obs_file;
++    obs_file.open("obs.dat");
++    if(obs_file.is_open()){
++        vector<string> observations;
++        while(!obs_file.eof()) {
++            string obs;
++            getline(obs_file, obs);
++            trim(obs);
++            if(!obs.empty() && obs[0]!=';') {
++                obs = obs.substr(1,obs.length()-2);
++                cout << "Observation: " << obs << endl;
++                // istringstream obs_iss(obs);
++                // vector<string> indexes_str((istream_iterator<string>(indexes_iss)), istream_iterator<string>());
++                observations.push_back(obs);
++            }
++        }
++
++        cout << "Adding Constraints on Observations" << endl;
++        // Adding constraints
++        vector<lp::LPConstraint> new_constraints;
++        double infinity = lp_solver.get_infinity();
++        for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
++            lp::LPConstraint constraint(1, infinity);
++            cout << "Adding constraint on (" << (*it) << "), index " << std::to_string(op_indexes[*it]) << endl;
++            constraint.insert(op_indexes[*it], 1);
++            new_constraints.push_back(constraint);
++        }
 +        
-+    } else {
-+        result = DEAD_END;
++        
++        lp_solver.add_new_constraints(new_constraints);
 +    }
 +
-+    ///////////////////////////////////////////////////////////////////
-+    cout << endl << string(80, '*') << endl;
-+    cout << "# Objective value: " << result << endl;
-+    cout << "# Solution: " << endl;
-+    vector<double> solution = lp_solver.extract_solution();
-+    for (int i = 0; i < (int) solution.size(); ++i) {
-+        cout << "X[" << i << "] = " << solution[i] << endl;
-+    }
-+    cout << string(80, '*') << endl;
++    obs_file.close();
++}
++///////////////////////////////////////////////////////////////////
 +
++///////////////////////////////////////////////////////////////////
++void OCSingleShotHeuristic::output_counts(const State &state, int result) {
 +    ofstream h_result;
 +    cout << "Writing objective result in h_result.txt" << endl;
 +    h_result.open("h_result.txt");
@@ -523,6 +570,58 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +    h_result.flush();
 +    h_result.close();
++}
++///////////////////////////////////////////////////////////////////
++
++///////////////////////////////////////////////////////////////////
++void OCSingleShotHeuristic::output_constraints(int result) {
++    cout << endl << string(80, '*') << endl;
++    cout << "# Objective value: " << result << endl;
++    cout << "# Solution: " << endl;
++    vector<double> solution = lp_solver.extract_solution();
++    for (int i = 0; i < (int) solution.size(); ++i) {
++        cout << "X[" << i << "] = " << solution[i] << endl;
++    }
++    cout << string(80, '*') << endl;
++}
++///////////////////////////////////////////////////////////////////
++
++int OCSingleShotHeuristic::compute_heuristic(const State &state) {
++    assert(!lp_solver.has_temporary_constraints());
++    for (const auto &generator : constraint_generators) {
++        bool dead_end = generator->update_constraints(state, lp_solver);
++        if (dead_end) {
++            lp_solver.clear_temporary_constraints();
++            return DEAD_END;
++        }
++    }
++    ///////////////////////////////////////////////////////////////////
++    load_extra_constraints();
++    ///////////////////////////////////////////////////////////////////
++    /* ******** */
++    if(enforce_observations) {
++        cout << "Enforcing Observation Constraints" << endl;
++        enforce_observation_constraints();
++    } else {
++        cout << "Ignoring Observation Constraints" << endl;
++    }
++    /* ******** */
++
++    int result;
++    lp_solver.solve();
++    if (lp_solver.has_optimal_solution()) {
++        double epsilon = 0.01;
++        double objective_value = lp_solver.get_objective_value();
++        result = ceil(objective_value - epsilon);
++        
++    } else {
++        result = DEAD_END;
++    }
++
++    ///////////////////////////////////////////////////////////////////
++    output_constraints(result);
++
++    output_counts(state,result);
 +
 +    if(result == DEAD_END)
 +        exit(EXIT_FAILURE);
@@ -571,10 +670,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // TODO: prefer operators that are non-zero in the solution.
 +    parser.document_property("preferred operators", "no");
 +
-+
 +    parser.add_list_option<shared_ptr<ConstraintGenerator>>(
 +        "constraint_generators",
 +        "methods that generate constraints over operator counting variables");
++    parser.add_option<bool>("enforce_observations", "whether or not to enforce constraints on observations");
 +    lp::add_lp_solver_option_to_parser(parser);
 +    Heuristic::add_options_to_parser(parser);
 +    Options opts = parser.parse();
@@ -591,8 +690,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2018-12-23 10:50:46.000000000 -0200
-@@ -0,0 +1,30 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2018-12-31 17:05:58.000000000 -0200
+@@ -0,0 +1,35 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +
@@ -613,9 +712,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +class OCSingleShotHeuristic : public Heuristic {
 +    std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
 +    lp::LPSolver lp_solver;
++    bool enforce_observations;
 +protected:
 +    virtual int compute_heuristic(const GlobalState &global_state) override;
 +    int compute_heuristic(const State &state);
++    void load_extra_constraints();
++    void enforce_observation_constraints();
++    void output_constraints(int result);
++    void output_counts(const State &state, int result);
 +public:
 +    explicit OCSingleShotHeuristic(const options::Options &opts);
 +    ~OCSingleShotHeuristic();
