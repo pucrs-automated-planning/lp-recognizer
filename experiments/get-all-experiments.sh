@@ -49,7 +49,7 @@ echo "Preparing regular experiments"
 for domain in "${domains[@]}"; do
 	echo $domain
 	rm -rf $domain
-	cp "../../plan-recognition-experiments/experiments/$domain/*.tar.bz2" .
+	cp -R "../../plan-recognition-experiments/experiments/$domain" .
 	if [ $domain = "blocks-world" ] || [ $domain = "blocks-world-aaai" ]; then
 		pushd $domain
 		bash ../patch-blocks-world.sh
