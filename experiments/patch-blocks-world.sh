@@ -20,11 +20,11 @@ for FILE in *.tar.bz2; do
 	if [[ `uname` == "Darwin" ]]
 	then
 		sed -i .orig 's/-block/- block/g' domain.pddl
+		rm domain.pddl.orig
 	elif [[ `uname` == "Linux" ]]
 	then
 		sed 's/-block/- block/g' domain.pddl
 	fi
-	rm domain.pddl.orig
 	tar -jcf ../$FILE .
  	popd
 	rm -rf $FOLDER
