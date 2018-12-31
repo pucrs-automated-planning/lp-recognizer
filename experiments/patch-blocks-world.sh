@@ -17,7 +17,13 @@ for FILE in *.tar.bz2; do
 	tar -jxf $FILE -C $FOLDER
 	pushd $FOLDER
 	# echo "Editing $FOLDER"
-	sed -i .orig 's/-block/- block/g' domain.pddl
+	if [[ `uname` == "Darwin" ]]
+	then
+		sed -i .orig 's/-block/- block/g' domain.pddl
+	elif [[ `uname` == "Linux" ]]
+	then
+		sed 's/-block/- block/g' domain.pddl
+	fi
 	rm domain.pddl.orig
 	tar -jcf ../$FILE .
  	popd
