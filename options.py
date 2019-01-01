@@ -7,22 +7,19 @@ def usage():
     print >> sys.stderr, "-h  --help                       Get Help"
     print >> sys.stderr, "-t  --max-time <time>            Maximum allowed execution time (defaults to 1800 secs)"
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
-    print >> sys.stderr, "-s  --simple                     Simple inference (max. #obs accounted in relaxed plan)"
-    print >> sys.stderr, "-B  --bfs                        Bypass EHC search and solve the problem by Greedy Best First Search"
-
+    print >> sys.stderr, "-c  --constraints                Enforce constraints derived from the observations"
 
 class Program_Options:
 
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:sB",
+                                       "e:ht:m:c",
                                        ["experiment=",
                                         "help",
                                         "max-time=",
                                         "max-memory=",
-                                        "simple",
-                                        "bfs"])
+                                        "constraints"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -34,8 +31,7 @@ class Program_Options:
         self.goal_file = None
         self.max_time = 1800
         self.max_memory = 1024
-        self.simple_pr = False
-        self.bfs = False
+        self.constraints = False
         for opcode, oparg in opts:
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
@@ -65,10 +61,8 @@ class Program_Options:
                 except ValueError:
                     print >> sys.stderr, "Memory amount must be an integer"
                     sys.exit(1)
-            if opcode in ('-s', '--simple'):
-                self.simple_pr = True
-            if opcode in ('-B', '--bfs'):
-                self.bfs = True
+            if opcode in ('-c', '--constraints'):
+                self.constraints = True
 
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"

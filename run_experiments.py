@@ -3,7 +3,7 @@
 from plan_recognition import *
 
 
-def doExperiments(domainName, observability):
+def doExperiments(domainName, observability, constraints):
     totalProblems = 0
     counterProblems = 0
     counterTruePositiveProblems = 0
@@ -11,7 +11,7 @@ def doExperiments(domainName, observability):
     candidateGoals = 0
 
     startTime = time.time()
-    experimentsResult = "Obs \t Accuracy \t Precision \t Recall \t F1score \t Fallout \t Missrate \t AvgRecG \t Total Time\n"
+    experimentsResult = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG \t Total Time\n"
 
     for obs in observability:
         startTime = time.time()
@@ -36,7 +36,7 @@ def doExperiments(domainName, observability):
                 options = Program_Options(args)
                 recognizer = LPRecognizer(options)
                 goals = recognizer.hyps
-                recognizedGoals = [recognizer.run_recognizer()]
+                recognizedGoals = recognizer.run_recognizer()
                 realGoal = recognizer.get_real_hypothesis()
 
                 candidateGoals = candidateGoals + len(goals)
@@ -85,13 +85,17 @@ def doExperiments(domainName, observability):
 
 def main():
     domainName = sys.argv[1]
+    if len(sys.argv) > 2:
+        constraints = (sys.argv[2]=="-c")
+    else:
+        constraints = False
     #Totally unacceptable hack to have this script work with noisy domains
     if domainName.endswith("noisy"):
         observability = ['25', '50', '75', '100']
     else:
         observability = ['10', '30', '50', '70', '100']
 
-    doExperiments(domainName, observability)
+    doExperiments(domainName, observability, constraints)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
