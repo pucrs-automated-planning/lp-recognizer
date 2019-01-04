@@ -97,6 +97,18 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/new_constraint
 +0 4
 +1 1
 Binary files fast-downward-original/src/VAL/validate and fast-downward/src/VAL/validate differ
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modules/FastDownwardMacros.cmake fast-downward/src/cmake_modules/FastDownwardMacros.cmake
+--- fast-downward-original/src/cmake_modules/FastDownwardMacros.cmake	2018-12-24 16:48:31.000000000 -0200
++++ fast-downward/src/cmake_modules/FastDownwardMacros.cmake	2019-01-03 18:18:47.000000000 -0200
+@@ -18,7 +18,7 @@
+ 
+         ## Configuration-specific flags
+         set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -fomit-frame-pointer")
+-        set(CMAKE_CXX_FLAGS_DEBUG "-O3 -D_GLIBCXX_DEBUG")
++        set(CMAKE_CXX_FLAGS_DEBUG "-O0 -D_GLIBCXX_DEBUG")
+         set(CMAKE_CXX_FLAGS_PROFILE "-O3 -pg")
+     elseif(MSVC)
+         # We force linking to be static on Windows because this makes compiling OSI simpler
 Binary files fast-downward-original/src/preprocess/preprocess and fast-downward/src/preprocess/preprocess differ
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
 --- fast-downward-original/src/search/DownwardFiles.cmake	2018-12-24 16:48:31.000000000 -0200
@@ -332,8 +344,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2018-12-31 17:10:09.000000000 -0200
-@@ -0,0 +1,354 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-01-03 22:26:44.000000000 -0200
+@@ -0,0 +1,363 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -377,7 +389,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    : Heuristic(opts),
 +      constraint_generators(
 +          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
-+      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))) {
++      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
++      op_indexes() {
 +    
 +    enforce_observations = opts.get("enforce_observations",false);
 +
@@ -396,6 +409,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << "# Mapping X -> op: " << endl;
 +    int i = 0;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
++        // Caching operator variable indexes
++        if(!op_indexes.emplace(op.get_name(),i).second){
++            cout << "Failed inserting op " << op.get_name() << endl;
++        } else {
++            cout << "Inserted op " << op.get_name() << " at position " << op_indexes[op.get_name()] << endl;
++        }
 +        cout << "# X[" << i << "] = " << op.get_name() << endl;
 +        i++;
 +    }
@@ -499,18 +518,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +///////////////////////////////////////////////////////////////////
 +void OCSingleShotHeuristic::enforce_observation_constraints() {
 +    // Since we are going to need to access operators a couple of times, we hash their names to indexes
++    /* Thanks to the wonders of C++, this did not work
 +    unordered_map<string,int> op_indexes;
 +    int op_i=0;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        op_indexes[op.get_name()] = op_i;
 +        op_i++;
 +    }
++    */
 +
 +    // Read observations from file
 +    ifstream obs_file;
 +    obs_file.open("obs.dat");
++    vector<string> observations;
 +    if(obs_file.is_open()){
-+        vector<string> observations;
 +        while(!obs_file.eof()) {
 +            string obs;
 +            getline(obs_file, obs);
@@ -690,8 +711,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2018-12-31 17:05:58.000000000 -0200
-@@ -0,0 +1,35 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-03 22:09:57.000000000 -0200
+@@ -0,0 +1,37 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +
@@ -701,6 +722,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +#include <memory>
 +#include <vector>
++#include <string>
 +
 +namespace options {
 +class Options;
@@ -713,6 +735,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
 +    lp::LPSolver lp_solver;
 +    bool enforce_observations;
++    std::unordered_map<std::string,int> op_indexes;
 +protected:
 +    virtual int compute_heuristic(const GlobalState &global_state) override;
 +    int compute_heuristic(const State &state);

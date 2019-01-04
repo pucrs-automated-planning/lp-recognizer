@@ -33,8 +33,13 @@ def doExperiments(domainName, observability, constraints):
                 counterProblems = counterProblems + 1
 
                 args = ['-e', problems_path + problem_file]
+
                 options = Program_Options(args)
-                recognizer = LPRecognizer(options)
+                if constraints:
+                    recognizer = LPRecognizerConstraints(options)
+                else:
+                    recognizer = LPRecognizer(options)
+
                 goals = recognizer.hyps
                 recognizedGoals = recognizer.run_recognizer()
                 realGoal = recognizer.get_real_hypothesis()
