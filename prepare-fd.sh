@@ -28,10 +28,12 @@ pushd ..
 if [[ ! -d "$FD_ROOT" ]]; then
 	echo "Downloading Fast Downward"
 	hg clone -r $FD_REV http://hg.fast-downward.org fast-downward
+	if [[ ! $? ]]; then echo "Failed to clone fast-downward. Exiting."; exit; fi
 else
 	pushd $FD_ROOT
 	echo "Fast Downward Present"
 	hg update -r $FD_REV
+	if [[ ! $? ]]; then echo "Failed to update fast-downward. Exiting."; exit; fi
 	popd
 fi
 echo "Patching Fast Downward at `pwd`"
