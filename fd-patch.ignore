@@ -21,9 +21,9 @@ src/CMakeLists.txt.user
 # Binaries and outputs
 output.sas
 sas_plan
-*/src/validate
-*/src/VAL/validate
-*/src/preprocess/preprocess
+src/validate
+src/VAL/validate
+src/preprocess/preprocess
 *.log
 .hg*
 builds
