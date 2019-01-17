@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 # Code originally developed by Miquel Ramirez
-import sys, os, csv, time
+import sys, os, csv, time, math
 from options import Program_Options
 import benchmark
 from operator import attrgetter
@@ -31,29 +31,26 @@ class PRCommand:
         #
         self.h_value = 'n/a'
         self.op_counts = {}
-        self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false))\"'
+        self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false, soft_constraints=false))\"'
 
     def execute(self):
         cmd_string = self.planner_string % (self.domain, self.problem)
         self.log = benchmark.Log('%s.log' % self.noext_problem)
-        self.signal, self.time = benchmark.run(cmd_string, self.max_time, self.max_mem, self.log)
+        self.signal, self.time = benchmark.run(cmd_string, self.max_time, self.max_mem, self.log, False)
         self.gather_data()
 
     def gather_data(self):
-
-        if self.signal == 0 and os.path.exists('h_result.txt'):
-            instream = open('h_result.txt')
+        if self.signal == 0 and os.path.exists('ocsingleshot_heuristic_result.dat'):
+            instream = open('ocsingleshot_heuristic_result.dat')
             for line in instream:
                 line = line.strip()
                 if not '--' in line:
                     if self.h_value == 'n/a':
-                        # self.num_obs_accounted = int(line)
                         self.h_value = float(line)
-                        print("h_value for %s is %d"%(self.problem,self.h_value))
+                        #print("value for %s is %d\n"%(self.problem,self.h_value))
                     else: # Gather operator counts
                         operator,count = line.split('=')
                         self.op_counts[operator.strip()] = float(count.strip())
-            # print("Opcounts: ",self.op_counts)
             instream.close()
 
     def write_result(self, filename):
@@ -66,12 +63,18 @@ class PRCommandConstraints(PRCommand):
 
     def __init__(self, domain, problem, max_time=120, max_mem=2048):
         PRCommand.__init__(self,domain,problem,max_time,max_mem)
-        self.planner_string = fd_path + '/fast-downward %s %s --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=true))\"'
+        self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=true, soft_constraints=false))\"'
 
+
+class PRCommandSoft(PRCommand):
+
+    def __init__(self, domain, problem, max_time=120, max_mem=2048):
+        PRCommand.__init__(self,domain,problem,max_time,max_mem)
+        self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false, soft_constraints=true))\"'
 
 class Hypothesis:
 
-    def __init__(self, constraints = False):
+    def __init__(self, constraints = False, soft_constraints = False):
         self.atoms = []
         self.Delta = 0.0
         self.plan = []
@@ -85,6 +88,8 @@ class Hypothesis:
         self.obs_hits = None
         self.obs_misses = None
         self.enforce_constraints = constraints
+        self.soft_constraints = soft_constraints
+
 
     def evaluate(self, index, observations):
         # generate the problem with G=H
@@ -92,6 +97,8 @@ class Hypothesis:
         self.generate_pddl_for_hyp_plan(hyp_problem)
         if self.enforce_constraints:
             pr_cmd = PRCommandConstraints('domain.pddl', 'hyp_%d_problem.pddl' % index)
+        elif self.soft_constraints:
+            pr_cmd = PRCommandSoft('domain.pddl', 'hyp_%d_problem.pddl' % index)
         else:
             pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index)
         pr_cmd.execute()
@@ -106,7 +113,6 @@ class Hypothesis:
             self.score = float(pr_cmd.h_value)
 
             # self.score = float(hits)/float(hits+misses)
-            print("Opcounts: hits=%d misses=%d"%(self.obs_hits,self.obs_misses))
         else:
             self.test_failed = True
 
@@ -183,7 +189,6 @@ class Observations:
         misscount += sum([v for v in counts.values()])
         return hitcount,misscount
 
-
 class PlanRecognizer:
     
     def __init__(self, options):
@@ -243,6 +248,16 @@ class LPRecognizer(PlanRecognizer):
         PlanRecognizer.__init__(self,options)
 
     def run_recognizer(self):
+        #for i in range(0, len(self.hyps)):
+        #    self.hyps[i].evaluate(i, self.observations)
+
+        #hyp = None
+        #for h in self.hyps:
+        #    if not h.test_failed:
+        #        if not hyp or h.score < hyp.score:
+        #            hyp = h
+
+        #return hyp
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
 
@@ -251,22 +266,10 @@ class LPRecognizer(PlanRecognizer):
             if not h.test_failed:
                 if not hyp or h.obs_hits > hyp.obs_hits:
                     hyp = h
-
-        if hyp is not None:
-            return [h for h in self.hyps if h.obs_hits==hyp.obs_hits]
-        else:
-            return None
+                elif h.obs_hits == hyp.obs_hits and h.score < hyp.score:
+                    hyp = h
+        return hyp   
         
-    def print_scores(self):
-        i = 0
-        for h in self.hyps:
-            if not h.test_failed:
-                print("h_%s=%f%s"%(i,h.score,"*" if h.is_true else ""))
-            else:
-                print("h_%s=failed"%(i))
-            i+=1
-
-
 class LPRecognizerConstraints(LPRecognizer):
 
     def __init__(self, options):
@@ -278,7 +281,7 @@ class LPRecognizerConstraints(LPRecognizer):
 
         for line in instream:
             line = line.strip()
-            H = Hypothesis(True)
+            H = Hypothesis(True, False)
             H.atoms = [tok.strip() for tok in line.split(',')]
             H.check_if_actual()
             hyps.append(H)
@@ -297,47 +300,102 @@ class LPRecognizerConstraints(LPRecognizer):
                 if not hyp or h.score < hyp.score:
                     hyp = h
 
-        if hyp is not None:
-            return [h for h in self.hyps if h.score==hyp.score]
-        else:
-            return None
+        return hyp
 
+class LPRecognizerSoft(LPRecognizer):
+
+    def __init__(self, options):
+        LPRecognizer.__init__(self,options)
+
+    def load_hypotheses(self):
+        hyps = []
+        instream = open('hyps.dat')
+
+        for line in instream:
+            line = line.strip()
+            H = Hypothesis(False, True)
+            H.atoms = [tok.strip() for tok in line.split(',')]
+            H.check_if_actual()
+            hyps.append(H)
+
+        instream.close()
+
+        return hyps
+
+    def run_recognizer(self):
+        for i in range(0, len(self.hyps)):
+            self.hyps[i].evaluate(i, self.observations)
+
+        hyp = None
+        for h in self.hyps:
+            if not h.test_failed:
+                if not hyp or h.obs_hits > hyp.obs_hits:
+                    hyp = h
+                elif h.obs_hits == hyp.obs_hits and h.score < hyp.score:
+                    hyp = h
+        return hyp        
+
+class LPRecognizerRG:
+    def __init__(self, options):
+        self.hvalue_recognizer = LPRecognizer(options)
+        self.constraints_recognizer = LPRecognizerConstraints(options)
+
+    def get_real_hypothesis(self):
+        return self.constraints_recognizer.get_real_hypothesis()
+
+    def run_recognizer(self):
+        self.hvalue_recognizer.run_recognizer()
+        self.constraints_recognizer.run_recognizer()
+
+        hyp = None
+        hyp_diff = float("inf")
+        i = 0
+        for hv, hc in  zip(self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):
+            if not hv.test_failed and not hc.test_failed:
+                print('{0} - c: {1}, h: {2}, diff-current: {3}, obs-hits-by-C: {4}'.format(i, hc.score, hv.score, hyp_diff, hv.obs_hits))
+                if not hyp or (hc.score - hv.score) < hyp_diff:
+                    hyp = hc
+                    hyp_diff = hc.score - hv.score
+                elif hc.score - hv.score == hyp_diff:
+                    if hc.score < hyp.score:
+                        hyp = hc    
+            i = i + 1
+        return hyp
+
+def run_recognizer(recognizer):
+    recognizedGoals = recognizer.run_recognizer()
+    realHyp = recognizer.get_real_hypothesis()
+    print("Real Goal is: %s\n\nRecognized: %s"%(str(realHyp),str(recognizedGoals)))
+    if recognizedGoals is not None and realHyp == recognizedGoals:
+        print('TRUE!')
+    else:
+        print('FALSE!')
 
 def main():
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
     os.system(cmdClean)
 
-    startTime = time.time()
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
+    if options.hvalue:       
+        recognizer = LPRecognizer(options)       
+        run_recognizer(recognizer)     
+        print("h-value")
     if options.constraints:
         recognizer = LPRecognizerConstraints(options)
-    else:
-        recognizer = LPRecognizer(options)
-
-    recognizedGoals = recognizer.run_recognizer()
-
-    # write_report(options.exp_file, hyps)
-
-    # cmd = 'tar jcvf results.tar.bz2 *.log *.csv *.pddl *.soln report.txt'
-    # os.system( cmd )
-
-    realHyp = recognizer.get_real_hypothesis()
-
-    # recognizer.print_scores()
-    # if hyps and realHyp and hyps[0].score == realHyp.score:
-    #     print('TRUE!')
-    # else:
-    #     print('FALSE!')
-    print("Real Goal is: %s\n Recognized: %s"%(str(realHyp),str(recognizedGoals)))
-    if recognizedGoals is not None and realHyp in recognizedGoals:
-        print('TRUE!')
-    else:
-        print('FALSE!')
-
-    print("--- %s seconds ---" % (time.time() - startTime))
-
+        run_recognizer(recognizer)
+        print("constraints")
+    if options.rg:
+        recognizer = LPRecognizerRG(options)
+        run_recognizer(recognizer)
+        print("rg")
+    if options.soft:
+        recognizer = LPRecognizerSoft(options)
+        run_recognizer(recognizer)
+        print("soft")        
+    
+    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
 
 if __name__ == '__main__':
     main()

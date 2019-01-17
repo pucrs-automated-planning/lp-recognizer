@@ -7,19 +7,24 @@ def usage():
     print >> sys.stderr, "-h  --help                       Get Help"
     print >> sys.stderr, "-t  --max-time <time>            Maximum allowed execution time (defaults to 1800 secs)"
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
-    print >> sys.stderr, "-c  --constraints                Enforce constraints derived from the observations"
+    print >> sys.stderr, "-v  --hvalue                     Plan recognition by h-value"
+    print >> sys.stderr, "-c  --constraints                Plan recognition by h-value with enforced constraints derived from the observations"
+    print >> sys.stderr, "-r  --rg                         Plan recognition that approximates the method from Ramirez and Geffner"
 
 class Program_Options:
 
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:c",
+                                       "e:ht:m:v:c:r:s",
                                        ["experiment=",
                                         "help",
                                         "max-time=",
                                         "max-memory=",
-                                        "constraints"])
+                                        "hvalue",
+                                        "constraints",
+                                        "rg",
+                                        "soft"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -31,7 +36,10 @@ class Program_Options:
         self.goal_file = None
         self.max_time = 1800
         self.max_memory = 1024
+        self.hvalue = False
         self.constraints = False
+        self.rg = False        
+        self.soft = False    
         for opcode, oparg in opts:
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
@@ -61,8 +69,14 @@ class Program_Options:
                 except ValueError:
                     print >> sys.stderr, "Memory amount must be an integer"
                     sys.exit(1)
+            if opcode in ('-v', '--hvalue'):
+                self.hvalue = True
             if opcode in ('-c', '--constraints'):
                 self.constraints = True
+            if opcode in ('-r', '--rg'):
+                self.rg = True                
+            if opcode in ('-s', '--soft'):
+                self.soft = True   
 
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"
