@@ -8,8 +8,9 @@ def usage():
     print >> sys.stderr, "-t  --max-time <time>            Maximum allowed execution time (defaults to 1800 secs)"
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
     print >> sys.stderr, "-v  --hvalue                     Plan recognition by h-value"
-    print >> sys.stderr, "-c  --constraints                Plan recognition by h-value with enforced constraints derived from the observations"
-    print >> sys.stderr, "-r  --rg                         Plan recognition that approximates the method from Ramirez and Geffner"
+    print >> sys.stderr, "-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations"
+    print >> sys.stderr, "-d  --diff-h-value-c             Plan recognition by difference between h-value-c and h-value"
+    print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"    
 
 class Program_Options:
 
@@ -21,10 +22,10 @@ class Program_Options:
                                         "help",
                                         "max-time=",
                                         "max-memory=",
-                                        "hvalue",
-                                        "constraints",
-                                        "rg",
-                                        "soft"])
+                                        "h-value",
+                                        "h-value-c",
+                                        "diff-h-value-c",
+                                        "soft-c"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -36,10 +37,10 @@ class Program_Options:
         self.goal_file = None
         self.max_time = 1800
         self.max_memory = 1024
-        self.hvalue = False
-        self.constraints = False
-        self.rg = False        
-        self.soft = False    
+        self.h_value = False
+        self.h_value_c = False
+        self.diff_h_value_c  = False        
+        self.soft_c = False    
         for opcode, oparg in opts:
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
@@ -70,13 +71,13 @@ class Program_Options:
                     print >> sys.stderr, "Memory amount must be an integer"
                     sys.exit(1)
             if opcode in ('-v', '--hvalue'):
-                self.hvalue = True
-            if opcode in ('-c', '--constraints'):
-                self.constraints = True
-            if opcode in ('-r', '--rg'):
-                self.rg = True                
-            if opcode in ('-s', '--soft'):
-                self.soft = True   
+                self.h_value = True
+            if opcode in ('-c', '--h-value-c'):
+                self.h_value_c = True
+            if opcode in ('-d', '--diff-h-value-c'):
+                self.diff_h_value_c  = True                
+            if opcode in ('-s', '--soft-c '):
+                self.soft_c = True   
 
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"

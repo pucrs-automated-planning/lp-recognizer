@@ -2,97 +2,137 @@
 
 from plan_recognition import *
 
-def doExperiments(domainName, observability, hvalue, constraints, rg, soft):
-    totalProblems = 0
-    counterProblems = 0
-    experimentTime = time.time()
+class Experiment:
+    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c):
+        self.unique_correct = 0        
+        self.multi_tie_breaking_correct = 0
+        self.multi_tie_breaking_spread = 0
+        self.multi_correct = 0
+        self.multi_spread  = 0
+        self.h_value = h_value
+        self.h_value_c = h_value_c
+        self.soft_c = soft_c
+        self.diff_h_value_c = diff_h_value_c
 
-    fileExperiment = open("experiment.txt",'a')
-    fileExperiment.write(domainName+"\n")
+    def reset(self):
+        self.unique_correct = 0        
+        self.multi_tie_breaking_correct = 0
+        self.multi_tie_breaking_spread = 0
+        self.multi_correct = 0
+        self.multi_spread  = 0
 
-    experimentsResult = "Obs  Problems"
-    if hvalue:       
-        experimentsResult = experimentsResult  + " hvale"
-    if constraints:
-        experimentsResult = experimentsResult  + " constraints"
-    if rg:
-        experimentsResult = experimentsResult  + " rg"
-    if soft:
-        experimentsResult = experimentsResult  + " soft"        
-    experimentsResult = experimentsResult + " Time\n"
+    def run_experiment(self, options):
+        if self.h_value:
+            recognizer = LPRecognizerHValue(options)       
+        if self.h_value_c:
+            recognizer = LPRecognizerHValueC(options)   
+        if self.soft_c:  
+            recognizer = LPRecognizerSoftC(options)                   
+        if self.diff_h_value_c:
+            recognizer = LPRecognizerDiffHValueC(options) 
+        recognizer.run_recognizer()                   
+                    
+        if recognizer.unique_goal is not None and recognizer.get_real_hypothesis() == recognizer.unique_goal:
+            self.unique_correct = self.unique_correct + 1
+        if recognizer.get_real_hypothesis() in recognizer.multi_goal_tie_breaking:
+            self.multi_tie_breaking_correct = self.multi_tie_breaking_correct + 1              
+        if recognizer.get_real_hypothesis() in recognizer.multi_goal_no_tie_breaking:
+            self.multi_correct = self.multi_correct + 1  
+        self.multi_tie_breaking_spread = self.multi_tie_breaking_spread + len(recognizer.multi_goal_tie_breaking)            
+        self.multi_spread = self.multi_spread  + len(recognizer.multi_goal_no_tie_breaking)
+
+def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c):
+    experiment_time = time.time()
+
+    file_experiment = open("experiment.txt",'a')
+    file_experiment.write(domainName+"\n")
+
+    print_text = "obs problems"
+    experiments_result = "obs,problems"
+    experiments = []    
+    if h_value:       
+        print_text = print_text + " h-value"
+        experiments_result = experiments_result  + ",h-value"        
+        experiments.append(Experiment(True, False, False, False))        
+    if h_value_c:
+        print_text = print_text  + " h-value-c"          
+        experiments_result = experiments_result  + ",h-value-c"          
+        experiments.append(Experiment(False, True, False, False))        
+    if soft_c:
+        print_text = print_text  + " soft-c"     
+        experiments_result = experiments_result  + ",soft-c"     
+        experiments.append(Experiment(False, False, True, False))                
+    if diff_h_value_c:
+        print_text = print_text  + " diff-h-value-c"           
+        experiments_result = experiments_result  + ",diff-h-value-c"           
+        experiments.append(Experiment(False, False, False, True))
+    print_text = print_text + "\n"
+    experiments_result = experiments_result + "\n"
+
+    if h_value:       
+        experiments_result = experiments_result + ",,U,UA,MY,MYA,MYS,MN,MNA,MNS"    
+    if h_value_c:
+        experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
+    if soft_c:
+        experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
+    if diff_h_value_c:
+        experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
+    print_text = print_text + "\n"
+    experiments_result = experiments_result + "\n"
+
+
     for obs in observability:
-        startTime = time.time()
-        counterProblems = 0
-        hvalue_countRecognition = 0
-        constraints_countRecognition = 0
-        rg_countRecognition = 0
-        soft_countRecognition = 0
+        problems = 0   
+        for experiment in experiments:
+            experiment.reset()       
         
         problems_path = 'experiments/' + domainName + '/' + obs + '/'
         for problem_file in os.listdir(problems_path):
             if problem_file.endswith(".tar.bz2"):
-                cmdClean = 'rm -rf *.pddl *.dat *.log'
-                os.system(cmdClean)
+                cmd_clean = 'rm -rf *.pddl *.dat *.log'
+                os.system(cmd_clean)
 
                 print problems_path + problem_file
-                cmdUntar = 'tar xvjf ' + problems_path + problem_file
-                os.system(cmdUntar)
+                cmd_untar = 'tar xvjf ' + problems_path + problem_file
+                os.system(cmd_untar)
 
-                counterProblems = counterProblems + 1
+                problems = problems + 1
 
                 args = ['-e', problems_path + problem_file]
 
                 options = Program_Options(args)
-                if hvalue:       
-                    recognizer = LPRecognizer(options)       
-                    recognizedGoals = recognizer.run_recognizer()                    
-                    if recognizedGoals is not None and recognizer.get_real_hypothesis() == recognizedGoals:
-                        hvalue_countRecognition = hvalue_countRecognition + 1    
-                if constraints:
-                    recognizer = LPRecognizerConstraints(options)
-                    recognizedGoals = recognizer.run_recognizer()                    
-                    if recognizedGoals is not None and recognizer.get_real_hypothesis() == recognizedGoals:
-                        constraints_countRecognition = constraints_countRecognition + 1   
-                if rg:
-                    recognizer = LPRecognizerRG(options)
-                    recognizedGoals = recognizer.run_recognizer()                    
-                    if recognizedGoals is not None and recognizer.get_real_hypothesis() == recognizedGoals:
-                        rg_countRecognition = rg_countRecognition + 1      
-                if soft:  
-                    recognizer = LPRecognizerSoft(options)
-                    recognizedGoals = recognizer.run_recognizer()                    
-                    if recognizedGoals is not None and recognizer.get_real_hypothesis() == recognizedGoals:
-                        soft_countRecognition = soft_countRecognition + 1                          
+                for experiment in experiments:
+                    experiment.run_experiment(options)                         
 
-        counterProblems = float(counterProblems)
-        totalT = (time.time() - startTime)
-        totalTime = float(totalT / counterProblems)                
+        print_text_result = "%s %d "%(obs,problems)             
+        result = "%s,%d"%(obs,problems) 
+        for experiment in experiments:
+            print_text_result = print_text_result + "%d "%(experiment.unique_correct)   
+            
+            result = result + ",%2.4f"%(experiment.unique_correct)    
+            result = result + ",%2.4f"%(float(experiment.unique_correct)/float(problems))                
+            result = result + ",%2.4f"%(experiment.multi_tie_breaking_correct)    
+            result = result + ",%2.4f"%(float(experiment.multi_tie_breaking_correct)/float(problems))                
+            result = result + ",%2.4f"%(float(experiment.multi_tie_breaking_spread)/float(problems))    
+            result = result + ",%2.4f"%(experiment.multi_correct)    
+            result = result + ",%2.4f"%(float(experiment.multi_correct)/float(problems))                
+            result = result + ",%2.4f"%(float(experiment.multi_spread)/float(problems))                             
 
-    
-        result = "%s \t %d \t "%(obs,counterProblems)    
-        if hvalue:       
-            result = result + "%d \t "%(hvalue_countRecognition)    
-        if constraints:
-            result = result + "%d \t "%(constraints_countRecognition)  
-        if rg:
-            result = result + "%d \t "%(rg_countRecognition)  
-        if soft:
-            result = result + "%d \t "%(soft_countRecognition)              
-        result = result + "%2.4f\n"%(totalTime)    
+        print_text_result = print_text_result + "\n"
+        result = result + "\n"    
         
-        # result = obsPrint + '\t' + str(accuracy) + '\t' + str(precision) + '\t' + str(recall) + '\t' + str(f1score) + '\t' + str(fallout) + '\t' + str(missrate) + '\t' + str(avgRecognizedGoals) + '\t' + str(totalTime) + '\n';
-        experimentsResult = experimentsResult + result
-        totalProblems = totalProblems + counterProblems
+        print_text = print_text + print_text_result
+        experiments_result = experiments_result + result
 
-        fileResult = open(str(domainName) + '-goal_recognition-lp.txt', 'w')
-        print(str(domainName) + '-goal_recognition-lp.txt')
-        print(experimentsResult)
-        fileResult.write(experimentsResult)
-        fileResult.close()
-        fileExperiment.write(result)
-    finalTime = time.time() - experimentTime
-    fileExperiment.close()
-    print('Experiment Time: {0:3f}'.format(finalTime))
+        file_result = open(str(domainName) + '-goal_recognition.txt', 'w')
+        print(str(domainName))
+        print(print_text)
+        file_result.write(experiments_result)
+        file_result.close()
+    file_experiment.write(experiments_result)
+    final_time = time.time() - experiment_time
+    file_experiment.close()
+    print('Experiment Time: {0:3f}'.format(final_time))
 
 def main():
     domainName = sys.argv[1]
@@ -102,20 +142,20 @@ def main():
     else:
         observability = ['10', '30', '50', '70', '100']
 
-    hvalue = False
-    constraints = False
-    rg = False
-    soft = False
+    h_value = False
+    h_value_c = False
+    diff_h_value_c = False
+    soft_c = False
     if "-v" in sys.argv:
-        hvalue= True
+        h_value = True
     if "-c" in sys.argv:
-        constraints= True
-    if "-r" in sys.argv:
-        rg= True
+        h_value_c = True
     if "-s" in sys.argv:
-        soft= True
+        soft_c = True        
+    if "-d" in sys.argv:
+        diff_h_value_c = True
 
-    doExperiments(domainName, observability, hvalue, constraints, rg, soft)
+    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'

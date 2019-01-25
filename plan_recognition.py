@@ -8,7 +8,6 @@ from operator import attrgetter
 
 fd_path = "../fast-downward/"
 
-
 def custom_partition(s, sep):
     i = 0
     while i < len(s):
@@ -17,7 +16,6 @@ def custom_partition(s, sep):
     if i == len(s): return (None, None, None)
     if i == 0: return (None, s[i], s[i + 1:])
     return (s[:i - 1], s[i], s[i + 1:])
-
 
 class PRCommand:
 
@@ -58,13 +56,11 @@ class PRCommand:
         res.writerow([os.path.basename(self.domain), os.path.basename(self.problem), self.signal, self.time,
                       self.num_accounted_obs])
 
-
 class PRCommandConstraints(PRCommand):
 
     def __init__(self, domain, problem, max_time=120, max_mem=2048):
         PRCommand.__init__(self,domain,problem,max_time,max_mem)
         self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=true, soft_constraints=false))\"'
-
 
 class PRCommandSoft(PRCommand):
 
@@ -195,6 +191,10 @@ class PlanRecognizer:
         self.options = options
         self.observations = Observations('obs.dat')
         self.hyps = self.load_hypotheses()
+        self.unique_goal = None
+        self.multi_goal_tie_breaking = []
+        self.multi_goal_no_tie_breaking = []
+        self.name = None
 
     def load_hypotheses(self):
         hyps = []
@@ -242,38 +242,41 @@ class PlanRecognizer:
         return None
 
 
-class LPRecognizer(PlanRecognizer):
+class LPRecognizerHValue(PlanRecognizer):
 
     def __init__(self, options):
         PlanRecognizer.__init__(self,options)
+        self.name = "h-value"
 
     def run_recognizer(self):
-        #for i in range(0, len(self.hyps)):
-        #    self.hyps[i].evaluate(i, self.observations)
-
-        #hyp = None
-        #for h in self.hyps:
-        #    if not h.test_failed:
-        #        if not hyp or h.score < hyp.score:
-        #            hyp = h
-
-        #return hyp
         for i in range(0, len(self.hyps)):
-            self.hyps[i].evaluate(i, self.observations)
+           self.hyps[i].evaluate(i, self.observations)
 
-        hyp = None
+        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
-                if not hyp or h.obs_hits > hyp.obs_hits:
-                    hyp = h
-                elif h.obs_hits == hyp.obs_hits and h.score < hyp.score:
-                    hyp = h
-        return hyp   
+                if not self.unique_goal or h.score < self.unique_goal.score:
+                   self.unique_goal = h
+                elif h.score == self.unique_goal.score and h.obs_hits > self.unique_goal.obs_hits:
+                    self.unique_goal = h
+
+        # Select multi goal with tie-breaking
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_tie_breaking.append(h)
+
+        # Select multi goal
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.score == self.unique_goal.score:
+                    self.multi_goal_no_tie_breaking.append(h)                    
         
-class LPRecognizerConstraints(LPRecognizer):
+class LPRecognizerHValueC(LPRecognizerHValue):
 
     def __init__(self, options):
-        LPRecognizer.__init__(self,options)
+        LPRecognizerHValue.__init__(self,options)
+        self.name = "h-value-c"
 
     def load_hypotheses(self):
         hyps = []
@@ -294,18 +297,29 @@ class LPRecognizerConstraints(LPRecognizer):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
 
-        hyp = None
+        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
-                if not hyp or h.score < hyp.score:
-                    hyp = h
+                if not self.unique_goal or h.score < self.unique_goal.score:
+                   self.unique_goal = h
 
-        return hyp
+        # Select multi goal with tie-breaking
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.score == self.unique_goal.score:
+                    self.multi_goal_tie_breaking.append(h)
 
-class LPRecognizerSoft(LPRecognizer):
+        # Select multi goal
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.score == self.unique_goal.score:
+                    self.multi_goal_no_tie_breaking.append(h) 
+
+class LPRecognizerSoftC(LPRecognizerHValue):
 
     def __init__(self, options):
-        LPRecognizer.__init__(self,options)
+        LPRecognizerHValue.__init__(self,options)
+        self.name = "soft-c"
 
     def load_hypotheses(self):
         hyps = []
@@ -325,20 +339,33 @@ class LPRecognizerSoft(LPRecognizer):
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
-
-        hyp = None
+        
+        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
-                if not hyp or h.obs_hits > hyp.obs_hits:
-                    hyp = h
-                elif h.obs_hits == hyp.obs_hits and h.score < hyp.score:
-                    hyp = h
-        return hyp        
+                if not self.unique_goal or h.obs_hits > self.unique_goal.obs_hits:
+                    self.unique_goal  = h
+                elif h.obs_hits == self.unique_goal.obs_hits and h.score < self.unique_goal.score:
+                    self.unique_goal  = h
 
-class LPRecognizerRG:
+        # Select multi goal with tie-breaking
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_tie_breaking.append(h)
+        
+        # Select multi goal
+        for h in self.hyps:
+            if not h.test_failed:
+                if h.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_no_tie_breaking.append(h)        
+
+class LPRecognizerDiffHValueC(LPRecognizerHValue):
     def __init__(self, options):
-        self.hvalue_recognizer = LPRecognizer(options)
-        self.constraints_recognizer = LPRecognizerConstraints(options)
+        LPRecognizerHValue.__init__(self,options)
+        self.hvalue_recognizer = LPRecognizerHValue(options)
+        self.constraints_recognizer = LPRecognizerHValueC(options)
+        self.name = "diff-h-value-c"
 
     def get_real_hypothesis(self):
         return self.constraints_recognizer.get_real_hypothesis()
@@ -347,29 +374,42 @@ class LPRecognizerRG:
         self.hvalue_recognizer.run_recognizer()
         self.constraints_recognizer.run_recognizer()
 
-        hyp = None
         hyp_diff = float("inf")
         i = 0
+        # Select unique goal
         for hv, hc in  zip(self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):
             if not hv.test_failed and not hc.test_failed:
-                print('{0} - c: {1}, h: {2}, diff-current: {3}, obs-hits-by-C: {4}'.format(i, hc.score, hv.score, hyp_diff, hv.obs_hits))
-                if not hyp or (hc.score - hv.score) < hyp_diff:
-                    hyp = hc
+                #print('{0} - c: {1}, h: {2}, diff-current: {3}, obs-hits-by: {4}'.format(i, hc.score, hv.score, hyp_diff, hv.obs_hits))
+                if not self.unique_goal or (hc.score - hv.score) < hyp_diff:
+                    self.unique_goal = hc
                     hyp_diff = hc.score - hv.score
                 elif hc.score - hv.score == hyp_diff:
-                    if hc.score < hyp.score:
-                        hyp = hc    
+                    if hc.score < self.unique_goal.score:
+                        self.unique_goal = hc    
             i = i + 1
-        return hyp
+
+        # Select multi goal with tie-breaking
+        for hv, hc in  zip(self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):
+            if not hv.test_failed and not hc.test_failed:
+                if (hc.score - hv.score) == hyp_diff and hc.score == self.unique_goal.score:
+                    self.multi_goal_tie_breaking.append(hc)    
+
+        # Select multi goal
+        for hv, hc in  zip(self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):
+            if not hv.test_failed and not hc.test_failed:
+                if (hc.score - hv.score) == hyp_diff:
+                    self.multi_goal_no_tie_breaking.append(hc)    
+
 
 def run_recognizer(recognizer):
-    recognizedGoals = recognizer.run_recognizer()
+    recognizer.run_recognizer()
     realHyp = recognizer.get_real_hypothesis()
-    print("Real Goal is: %s\n\nRecognized: %s"%(str(realHyp),str(recognizedGoals)))
-    if recognizedGoals is not None and realHyp == recognizedGoals:
-        print('TRUE!')
+    print("Real Goal is: %s\n\nRecognized: %s"%(str(realHyp),str(recognizer.unique_goal)))
+    if recognizer.unique_goal is not None and realHyp == recognizer.unique_goal:
+        print('True!')
     else:
-        print('FALSE!')
+        print('False!')
+    print(recognizer.name)        
 
 def main():
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
@@ -378,24 +418,20 @@ def main():
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
-    if options.hvalue:       
-        recognizer = LPRecognizer(options)       
+    if options.h_value:       
+        recognizer = LPRecognizerHValue(options)       
         run_recognizer(recognizer)     
-        print("h-value")
-    if options.constraints:
-        recognizer = LPRecognizerConstraints(options)
+    if options.h_value_c:
+        recognizer = LPRecognizerHValueC(options)
         run_recognizer(recognizer)
-        print("constraints")
-    if options.rg:
-        recognizer = LPRecognizerRG(options)
+    if options.diff_h_value_c:
+        recognizer = LPRecognizerDiffHValueC(options)
         run_recognizer(recognizer)
-        print("rg")
-    if options.soft:
-        recognizer = LPRecognizerSoft(options)
+    if options.soft_c:
+        recognizer = LPRecognizerSoftC(options)
         run_recognizer(recognizer)
-        print("soft")        
-    
-    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
+   
+    #cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
 
 if __name__ == '__main__':
     main()
