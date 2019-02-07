@@ -10,7 +10,7 @@
 #
 
 echo -n "Fixing domain.pddl in all experiments. Please wait. "
-pushd blocks-world
+pushd kitchen
 for FILE in *.tar.bz2; do
 	FOLDER=${FILE::-8}
 	# echo $FOLDER
@@ -20,11 +20,13 @@ for FILE in *.tar.bz2; do
 	# echo "Editing $FOLDER"
 	if [[ `uname` == "Darwin" ]]
 	then
-		sed -i .orig 's/-block/- block/g' domain.pddl
+		sed -i .orig 's/water_jug keetle cloth tea_bag cup sugar bowl milk/water_jug keetle cloth tea_bag bowl milk/g' domain.pddl
+		sed -i .orig 's/bread toaster butter knife peanut_butter spoon/butter knife peanut_butter spoon/g' domain.pddl
 		rm domain.pddl.orig
 	elif [[ `uname` == "Linux" ]]
 	then
-		sed -i 's/-block/- block/g' domain.pddl
+		sed -i 's/water_jug keetle cloth tea_bag cup sugar bowl milk/water_jug keetle cloth tea_bag bowl milk/g' domain.pddl
+		sed -i 's/bread toaster butter knife peanut_butter spoon/butter knife peanut_butter spoon/g' domain.pddl
 	fi
 	tar -jcf ../$FILE .
  	popd
