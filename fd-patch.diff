@@ -1,864 +1,6 @@
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/bitbucket-pipelines.yml fast-downward/bitbucket-pipelines.yml
---- fast-downward-original/bitbucket-pipelines.yml	2019-01-17 20:45:41.226854642 -0200
-+++ fast-downward/bitbucket-pipelines.yml	2019-01-15 11:05:11.734522678 -0200
-@@ -1,46 +1,47 @@
- image: ubuntu:16.04
- pipelines:
--  default:
--    - step:
--        script:
--          - apt-get update
--          - apt-get -y upgrade
--
--          # Install Fast Downward dependencies.
--          - apt-get -y install cmake g++ g++-multilib make mercurial python
--
--          # Install dependencies for running code tests.
--          - apt-get -y install clang-5.0 clang-tidy-5.0 python3 python-pip wget
--          - pip install -U pyflakes pytest
--
--          # Print information about environment.
--          - g++ --version
--          - python --version
--          - python -c "import multiprocessing; print 'CPUs:', multiprocessing.cpu_count()"
--
--          # Set up uncrustify.
--          - wget https://github.com/uncrustify/uncrustify/archive/uncrustify-0.67.tar.gz
--          - tar -xzvf uncrustify-0.67.tar.gz
--          - cd uncrustify-uncrustify-0.67
--          - mkdir build
--          - cd build
--          - cmake ../
--          - make -j8
--          - mv uncrustify ../../
--          - cd ../../
--          - rm -rf uncrustify-0.67.tar.gz uncrustify-uncrustify-0.67
--
--          # Set up VAL.
--          - apt-get -y install g++ git make flex bison
--          - git clone https://github.com/KCL-Planning/VAL.git
--          - cd VAL
--          - git checkout a5565396007eee73ac36527fbf904142b3077c74
--          - make clean  # Remove old build artifacts and binaries.
--          - make -j8
--          - mv validate ../
--          - cd ../
--          - rm -rf VAL
-+  pull-requests:
-+    '**':
-+      - step:
-+          script:
-+            - apt-get update
-+            - apt-get -y upgrade
-+
-+            # Install Fast Downward dependencies.
-+            - apt-get -y install cmake g++ g++-multilib make mercurial python
-+
-+            # Install dependencies for running code tests.
-+            - apt-get -y install clang-5.0 clang-tidy-5.0 python3 python-pip wget
-+            - pip install -U pyflakes pytest
-+
-+            # Print information about environment.
-+            - g++ --version
-+            - python --version
-+            - python -c "import multiprocessing; print 'CPUs:', multiprocessing.cpu_count()"
-+
-+            # Set up uncrustify.
-+            - wget https://github.com/uncrustify/uncrustify/archive/uncrustify-0.67.tar.gz
-+            - tar -xzvf uncrustify-0.67.tar.gz
-+            - cd uncrustify-uncrustify-0.67
-+            - mkdir build
-+            - cd build
-+            - cmake ../
-+            - make -j8
-+            - mv uncrustify ../../
-+            - cd ../../
-+            - rm -rf uncrustify-0.67.tar.gz uncrustify-uncrustify-0.67
-+
-+            # Set up VAL.
-+            - apt-get -y install g++ git make flex bison
-+            - git clone https://github.com/KCL-Planning/VAL.git
-+            - cd VAL
-+            - git checkout a5565396007eee73ac36527fbf904142b3077c74
-+            - make clean  # Remove old build artifacts and binaries.
-+            - make -j8
-+            - mv validate ../
-+            - cd ../
-+            - rm -rf VAL
- 
--          - export PATH="$(pwd):$PATH"  # Add uncrustify and VAL to PATH.
-+            - export PATH="$(pwd):$PATH"  # Add uncrustify and VAL to PATH.
- 
--          - ./misc/run-all-tests
-+            - ./misc/run-all-tests
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/build_configs.py fast-downward/build_configs.py
---- fast-downward-original/build_configs.py	2019-01-17 20:45:39.530845485 -0200
-+++ fast-downward/build_configs.py	2019-01-15 11:09:44.929707476 -0200
-@@ -2,7 +2,7 @@
- debug32 = ["-DCMAKE_BUILD_TYPE=Debug"]
- release32nolp = ["-DCMAKE_BUILD_TYPE=Release", "-DUSE_LP=NO"]
- debug32nolp = ["-DCMAKE_BUILD_TYPE=Debug", "-DUSE_LP=NO"]
--release64 = ["-DCMAKE_BUILD_TYPE=Release", "-DALLOW_64_BIT=True", "-DCMAKE_CXX_FLAGS='-m64'"]
-+release64 = ["-DCMAKE_BUILD_TYPE=Release", "-DALLOW_64_BIT=True", "-DCMAKE_CXX_FLAGS='-m64'", "-DCMAKE_CXX_STANDARD_LIBRARIES='-ldl'"]
- debug64 = ["-DCMAKE_BUILD_TYPE=Debug",   "-DALLOW_64_BIT=True", "-DCMAKE_CXX_FLAGS='-m64'"]
- release64nolp = ["-DCMAKE_BUILD_TYPE=Release", "-DALLOW_64_BIT=True", "-DCMAKE_CXX_FLAGS='-m64'", "-DUSE_LP=NO"]
- debug64nolp = ["-DCMAKE_BUILD_TYPE=Debug",   "-DALLOW_64_BIT=True", "-DCMAKE_CXX_FLAGS='-m64'", "-DUSE_LP=NO"]
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/domain.pddl fast-downward/domain.pddl
---- fast-downward-original/domain.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/domain.pddl	2019-01-15 11:24:12.000000000 -0200
-@@ -0,0 +1,49 @@
-+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-+;;; 4 Op- blocks world
-+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-+
-+(define (domain BLOCKS)
-+  (:requirements :strips :typing :equality)
-+  (:types block)
-+  (:predicates (on ?x ?y - block)
-+	       (ontable ?x - block)
-+	       (clear ?x - block)
-+	       (handempty)
-+	       (holding ?x - block)
-+	       )
-+
-+  (:action pick-up
-+	     :parameters (?x - block)
-+	     :precondition (and (clear ?x) (ontable ?x) (handempty))
-+	     :effect
-+	     (and (not (ontable ?x))
-+		   (not (clear ?x))
-+		   (not (handempty))
-+		   (holding ?x)))
-+
-+  (:action put-down
-+	     :parameters (?x - block)
-+	     :precondition (holding ?x)
-+	     :effect
-+	     (and (not (holding ?x))
-+		   (clear ?x)
-+		   (handempty)
-+		   (ontable ?x)))
-+  (:action stack
-+	     :parameters (?x ?y - block)
-+	     :precondition (and (holding ?x) (clear ?y) (not (= ?x ?y)))
-+	     :effect
-+	     (and (not (holding ?x))
-+		   (not (clear ?y))
-+		   (clear ?x)
-+		   (handempty)
-+		   (on ?x ?y)))
-+  (:action unstack
-+	     :parameters (?x ?y - block)
-+	     :precondition (and (on ?x ?y) (clear ?x) (handempty) (not (= ?x ?y)))
-+	     :effect
-+	     (and (holding ?x)
-+		   (clear ?y)
-+		   (not (clear ?x))
-+		   (not (handempty))
-+		   (not (on ?x ?y)))))
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue883/common_setup.py fast-downward/experiments/issue883/common_setup.py
---- fast-downward-original/experiments/issue883/common_setup.py	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/experiments/issue883/common_setup.py	2019-01-15 11:05:11.766522618 -0200
-@@ -0,0 +1,394 @@
-+# -*- coding: utf-8 -*-
-+
-+import itertools
-+import os
-+import platform
-+import subprocess
-+import sys
-+
-+from lab.experiment import ARGPARSER
-+from lab import tools
-+
-+from downward.experiment import FastDownwardExperiment
-+from downward.reports.absolute import AbsoluteReport
-+from downward.reports.compare import ComparativeReport
-+from downward.reports.scatter import ScatterPlotReport
-+
-+from relativescatter import RelativeScatterPlotReport
-+
-+
-+def parse_args():
-+    ARGPARSER.add_argument(
-+        "--test",
-+        choices=["yes", "no", "auto"],
-+        default="auto",
-+        dest="test_run",
-+        help="test experiment locally on a small suite if --test=yes or "
-+             "--test=auto and we are not on a cluster")
-+    return ARGPARSER.parse_args()
-+
-+ARGS = parse_args()
-+
-+
-+DEFAULT_OPTIMAL_SUITE = [
-+    'agricola-opt18-strips', 'airport', 'barman-opt11-strips',
-+    'barman-opt14-strips', 'blocks', 'childsnack-opt14-strips',
-+    'data-network-opt18-strips', 'depot', 'driverlog',
-+    'elevators-opt08-strips', 'elevators-opt11-strips',
-+    'floortile-opt11-strips', 'floortile-opt14-strips', 'freecell',
-+    'ged-opt14-strips', 'grid', 'gripper', 'hiking-opt14-strips',
-+    'logistics00', 'logistics98', 'miconic', 'movie', 'mprime',
-+    'mystery', 'nomystery-opt11-strips', 'openstacks-opt08-strips',
-+    'openstacks-opt11-strips', 'openstacks-opt14-strips',
-+    'openstacks-strips', 'organic-synthesis-opt18-strips',
-+    'organic-synthesis-split-opt18-strips', 'parcprinter-08-strips',
-+    'parcprinter-opt11-strips', 'parking-opt11-strips',
-+    'parking-opt14-strips', 'pathways-noneg', 'pegsol-08-strips',
-+    'pegsol-opt11-strips', 'petri-net-alignment-opt18-strips',
-+    'pipesworld-notankage', 'pipesworld-tankage', 'psr-small', 'rovers',
-+    'satellite', 'scanalyzer-08-strips', 'scanalyzer-opt11-strips',
-+    'snake-opt18-strips', 'sokoban-opt08-strips',
-+    'sokoban-opt11-strips', 'spider-opt18-strips', 'storage',
-+    'termes-opt18-strips', 'tetris-opt14-strips',
-+    'tidybot-opt11-strips', 'tidybot-opt14-strips', 'tpp',
-+    'transport-opt08-strips', 'transport-opt11-strips',
-+    'transport-opt14-strips', 'trucks-strips', 'visitall-opt11-strips',
-+    'visitall-opt14-strips', 'woodworking-opt08-strips',
-+    'woodworking-opt11-strips', 'zenotravel']
-+
-+DEFAULT_SATISFICING_SUITE = [
-+    'agricola-sat18-strips', 'airport', 'assembly',
-+    'barman-sat11-strips', 'barman-sat14-strips', 'blocks',
-+    'caldera-sat18-adl', 'caldera-split-sat18-adl', 'cavediving-14-adl',
-+    'childsnack-sat14-strips', 'citycar-sat14-adl',
-+    'data-network-sat18-strips', 'depot', 'driverlog',
-+    'elevators-sat08-strips', 'elevators-sat11-strips',
-+    'flashfill-sat18-adl', 'floortile-sat11-strips',
-+    'floortile-sat14-strips', 'freecell', 'ged-sat14-strips', 'grid',
-+    'gripper', 'hiking-sat14-strips', 'logistics00', 'logistics98',
-+    'maintenance-sat14-adl', 'miconic', 'miconic-fulladl',
-+    'miconic-simpleadl', 'movie', 'mprime', 'mystery',
-+    'nomystery-sat11-strips', 'nurikabe-sat18-adl', 'openstacks',
-+    'openstacks-sat08-adl', 'openstacks-sat08-strips',
-+    'openstacks-sat11-strips', 'openstacks-sat14-strips',
-+    'openstacks-strips', 'optical-telegraphs',
-+    'organic-synthesis-sat18-strips',
-+    'organic-synthesis-split-sat18-strips', 'parcprinter-08-strips',
-+    'parcprinter-sat11-strips', 'parking-sat11-strips',
-+    'parking-sat14-strips', 'pathways', 'pathways-noneg',
-+    'pegsol-08-strips', 'pegsol-sat11-strips', 'philosophers',
-+    'pipesworld-notankage', 'pipesworld-tankage', 'psr-large',
-+    'psr-middle', 'psr-small', 'rovers', 'satellite',
-+    'scanalyzer-08-strips', 'scanalyzer-sat11-strips', 'schedule',
-+    'settlers-sat18-adl', 'snake-sat18-strips', 'sokoban-sat08-strips',
-+    'sokoban-sat11-strips', 'spider-sat18-strips', 'storage',
-+    'termes-sat18-strips', 'tetris-sat14-strips',
-+    'thoughtful-sat14-strips', 'tidybot-sat11-strips', 'tpp',
-+    'transport-sat08-strips', 'transport-sat11-strips',
-+    'transport-sat14-strips', 'trucks', 'trucks-strips',
-+    'visitall-sat11-strips', 'visitall-sat14-strips',
-+    'woodworking-sat08-strips', 'woodworking-sat11-strips',
-+    'zenotravel']
-+
-+
-+def get_script():
-+    """Get file name of main script."""
-+    return tools.get_script_path()
-+
-+
-+def get_script_dir():
-+    """Get directory of main script.
-+
-+    Usually a relative directory (depends on how it was called by the user.)"""
-+    return os.path.dirname(get_script())
-+
-+
-+def get_experiment_name():
-+    """Get name for experiment.
-+
-+    Derived from the absolute filename of the main script, e.g.
-+    "/ham/spam/eggs.py" => "spam-eggs"."""
-+    script = os.path.abspath(get_script())
-+    script_dir = os.path.basename(os.path.dirname(script))
-+    script_base = os.path.splitext(os.path.basename(script))[0]
-+    return "%s-%s" % (script_dir, script_base)
-+
-+
-+def get_data_dir():
-+    """Get data dir for the experiment.
-+
-+    This is the subdirectory "data" of the directory containing
-+    the main script."""
-+    return os.path.join(get_script_dir(), "data", get_experiment_name())
-+
-+
-+def get_repo_base():
-+    """Get base directory of the repository, as an absolute path.
-+
-+    Search upwards in the directory tree from the main script until a
-+    directory with a subdirectory named ".hg" is found.
-+
-+    Abort if the repo base cannot be found."""
-+    path = os.path.abspath(get_script_dir())
-+    while os.path.dirname(path) != path:
-+        if os.path.exists(os.path.join(path, ".hg")):
-+            return path
-+        path = os.path.dirname(path)
-+    sys.exit("repo base could not be found")
-+
-+
-+def is_running_on_cluster():
-+    node = platform.node()
-+    return node.endswith(".scicore.unibas.ch") or node.endswith(".cluster.bc2.ch")
-+
-+
-+def is_test_run():
-+    return ARGS.test_run == "yes" or (
-+        ARGS.test_run == "auto" and not is_running_on_cluster())
-+
-+
-+def get_algo_nick(revision, config_nick):
-+    return "{revision}-{config_nick}".format(**locals())
-+
-+
-+class IssueConfig(object):
-+    """Hold information about a planner configuration.
-+
-+    See FastDownwardExperiment.add_algorithm() for documentation of the
-+    constructor's options.
-+
-+    """
-+    def __init__(self, nick, component_options,
-+                 build_options=None, driver_options=None):
-+        self.nick = nick
-+        self.component_options = component_options
-+        self.build_options = build_options
-+        self.driver_options = driver_options
-+
-+
-+class IssueExperiment(FastDownwardExperiment):
-+    """Subclass of FastDownwardExperiment with some convenience features."""
-+
-+    DEFAULT_TEST_SUITE = ["depot:p01.pddl", "gripper:prob01.pddl"]
-+
-+    DEFAULT_TABLE_ATTRIBUTES = [
-+        "cost",
-+        "coverage",
-+        "error",
-+        "evaluations",
-+        "expansions",
-+        "expansions_until_last_jump",
-+        "generated",
-+        "memory",
-+        "planner_memory",
-+        "planner_time",
-+        "quality",
-+        "run_dir",
-+        "score_evaluations",
-+        "score_expansions",
-+        "score_generated",
-+        "score_memory",
-+        "score_search_time",
-+        "score_total_time",
-+        "search_time",
-+        "total_time",
-+        ]
-+
-+    DEFAULT_SCATTER_PLOT_ATTRIBUTES = [
-+        "evaluations",
-+        "expansions",
-+        "expansions_until_last_jump",
-+        "initial_h_value",
-+        "memory",
-+        "search_time",
-+        "total_time",
-+        ]
-+
-+    PORTFOLIO_ATTRIBUTES = [
-+        "cost",
-+        "coverage",
-+        "error",
-+        "plan_length",
-+        "run_dir",
-+        ]
-+
-+    def __init__(self, revisions=None, configs=None, path=None, **kwargs):
-+        """
-+
-+        You can either specify both *revisions* and *configs* or none
-+        of them. If they are omitted, you will need to call
-+        exp.add_algorithm() manually.
-+
-+        If *revisions* is given, it must be a non-empty list of
-+        revision identifiers, which specify which planner versions to
-+        use in the experiment. The same versions are used for
-+        translator, preprocessor and search. ::
-+
-+            IssueExperiment(revisions=["issue123", "4b3d581643"], ...)
-+
-+        If *configs* is given, it must be a non-empty list of
-+        IssueConfig objects. ::
-+
-+            IssueExperiment(..., configs=[
-+                IssueConfig("ff", ["--search", "eager_greedy(ff())"]),
-+                IssueConfig(
-+                    "lama", [],
-+                    driver_options=["--alias", "seq-sat-lama-2011"]),
-+            ])
-+
-+        If *path* is specified, it must be the path to where the
-+        experiment should be built (e.g.
-+        /home/john/experiments/issue123/exp01/). If omitted, the
-+        experiment path is derived automatically from the main
-+        script's filename. Example::
-+
-+            script = experiments/issue123/exp01.py -->
-+            path = experiments/issue123/data/issue123-exp01/
-+
-+        """
-+
-+        path = path or get_data_dir()
-+
-+        FastDownwardExperiment.__init__(self, path=path, **kwargs)
-+
-+        if (revisions and not configs) or (not revisions and configs):
-+            raise ValueError(
-+                "please provide either both or none of revisions and configs")
-+
-+        for rev in revisions:
-+            for config in configs:
-+                self.add_algorithm(
-+                    get_algo_nick(rev, config.nick),
-+                    get_repo_base(),
-+                    rev,
-+                    config.component_options,
-+                    build_options=config.build_options,
-+                    driver_options=config.driver_options)
-+
-+        self._revisions = revisions
-+        self._configs = configs
-+
-+    @classmethod
-+    def _is_portfolio(cls, config_nick):
-+        return "fdss" in config_nick
-+
-+    @classmethod
-+    def get_supported_attributes(cls, config_nick, attributes):
-+        if cls._is_portfolio(config_nick):
-+            return [attr for attr in attributes
-+                    if attr in cls.PORTFOLIO_ATTRIBUTES]
-+        return attributes
-+
-+    def add_absolute_report_step(self, **kwargs):
-+        """Add step that makes an absolute report.
-+
-+        Absolute reports are useful for experiments that don't compare
-+        revisions.
-+
-+        The report is written to the experiment evaluation directory.
-+
-+        All *kwargs* will be passed to the AbsoluteReport class. If the
-+        keyword argument *attributes* is not specified, a default list
-+        of attributes is used. ::
-+
-+            exp.add_absolute_report_step(attributes=["coverage"])
-+
-+        """
-+        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
-+        report = AbsoluteReport(**kwargs)
-+        outfile = os.path.join(
-+            self.eval_dir,
-+            get_experiment_name() + "." + report.output_format)
-+        self.add_report(report, outfile=outfile)
-+        self.add_step(
-+            'publish-absolute-report', subprocess.call, ['publish', outfile])
-+
-+    def add_comparison_table_step(self, **kwargs):
-+        """Add a step that makes pairwise revision comparisons.
-+
-+        Create comparative reports for all pairs of Fast Downward
-+        revisions. Each report pairs up the runs of the same config and
-+        lists the two absolute attribute values and their difference
-+        for all attributes in kwargs["attributes"].
-+
-+        All *kwargs* will be passed to the CompareConfigsReport class.
-+        If the keyword argument *attributes* is not specified, a
-+        default list of attributes is used. ::
-+
-+            exp.add_comparison_table_step(attributes=["coverage"])
-+
-+        """
-+        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
-+
-+        def make_comparison_tables():
-+            for rev1, rev2 in itertools.combinations(self._revisions, 2):
-+                compared_configs = []
-+                for config in self._configs:
-+                    config_nick = config.nick
-+                    compared_configs.append(
-+                        ("%s-%s" % (rev1, config_nick),
-+                         "%s-%s" % (rev2, config_nick),
-+                         "Diff (%s)" % config_nick))
-+                report = ComparativeReport(compared_configs, **kwargs)
-+                outfile = os.path.join(
-+                    self.eval_dir,
-+                    "%s-%s-%s-compare.%s" % (
-+                        self.name, rev1, rev2, report.output_format))
-+                report(self.eval_dir, outfile)
-+
-+        def publish_comparison_tables():
-+            for rev1, rev2 in itertools.combinations(self._revisions, 2):
-+                outfile = os.path.join(
-+                    self.eval_dir,
-+                    "%s-%s-%s-compare.html" % (self.name, rev1, rev2))
-+                subprocess.call(["publish", outfile])
-+
-+        self.add_step("make-comparison-tables", make_comparison_tables)
-+        self.add_step(
-+            "publish-comparison-tables", publish_comparison_tables)
-+
-+    def add_scatter_plot_step(self, relative=False, attributes=None):
-+        """Add step creating (relative) scatter plots for all revision pairs.
-+
-+        Create a scatter plot for each combination of attribute,
-+        configuration and revisions pair. If *attributes* is not
-+        specified, a list of common scatter plot attributes is used.
-+        For portfolios all attributes except "cost", "coverage" and
-+        "plan_length" will be ignored. ::
-+
-+            exp.add_scatter_plot_step(attributes=["expansions"])
-+
-+        """
-+        if relative:
-+            report_class = RelativeScatterPlotReport
-+            scatter_dir = os.path.join(self.eval_dir, "scatter-relative")
-+            step_name = "make-relative-scatter-plots"
-+        else:
-+            report_class = ScatterPlotReport
-+            scatter_dir = os.path.join(self.eval_dir, "scatter-absolute")
-+            step_name = "make-absolute-scatter-plots"
-+        if attributes is None:
-+            attributes = self.DEFAULT_SCATTER_PLOT_ATTRIBUTES
-+
-+        def make_scatter_plot(config_nick, rev1, rev2, attribute):
-+            name = "-".join([self.name, rev1, rev2, attribute, config_nick])
-+            print "Make scatter plot for", name
-+            algo1 = "{}-{}".format(rev1, config_nick)
-+            algo2 = "{}-{}".format(rev2, config_nick)
-+            report = report_class(
-+                filter_config=[algo1, algo2],
-+                attributes=[attribute],
-+                get_category=lambda run1, run2: run1["domain"],
-+                legend_location=(1.3, 0.5))
-+            report(
-+                self.eval_dir,
-+                os.path.join(scatter_dir, rev1 + "-" + rev2, name))
-+
-+        def make_scatter_plots():
-+            for config in self._configs:
-+                for rev1, rev2 in itertools.combinations(self._revisions, 2):
-+                    for attribute in self.get_supported_attributes(
-+                            config.nick, attributes):
-+                        make_scatter_plot(config.nick, rev1, rev2, attribute)
-+
-+        self.add_step(step_name, make_scatter_plots)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue883/parser.py fast-downward/experiments/issue883/parser.py
---- fast-downward-original/experiments/issue883/parser.py	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/experiments/issue883/parser.py	2019-01-15 11:05:11.766522618 -0200
-@@ -0,0 +1,104 @@
-+#! /usr/bin/env python
-+
-+import logging
-+import re
-+
-+from lab.parser import Parser
-+
-+
-+class CommonParser(Parser):
-+    def add_difference(self, diff, val1, val2):
-+        def diff_func(content, props):
-+            if props.get(val1) is None or props.get(val2) is None:
-+                diff_val = None
-+            else:
-+                diff_val = props.get(val1) - props.get(val2)
-+            props[diff] = diff_val
-+        self.add_function(diff_func)
-+
-+    def _get_flags(self, flags_string):
-+        flags = 0
-+        for char in flags_string:
-+            flags |= getattr(re, char)
-+        return flags
-+
-+    def add_repeated_pattern(
-+            self, name, regex, file="run.log", required=False, type=int,
-+            flags=""):
-+        def find_all_occurences(content, props):
-+            matches = re.findall(regex, content, flags=self._get_flags(flags))
-+            if required and not matches:
-+                logging.error("Pattern {0} not found in file {1}".format(regex, file))
-+            props[name] = [type(m) for m in matches]
-+
-+        self.add_function(find_all_occurences, file=file)
-+
-+    def add_pattern(self, name, regex, file="run.log", required=False, type=int, flags=""):
-+        Parser.add_pattern(self, name, regex, file=file, required=required, type=type, flags=flags)
-+
-+    def add_bottom_up_pattern(self, name, regex, file="run.log", required=True, type=int, flags=""):
-+
-+        def search_from_bottom(content, props):
-+            reversed_content = "\n".join(reversed(content.splitlines()))
-+            match = re.search(regex, reversed_content, flags=self._get_flags(flags))
-+            if required and not match:
-+                logging.error("Pattern {0} not found in file {1}".format(regex, file))
-+            if match:
-+                props[name] = type(match.group(1))
-+
-+        self.add_function(search_from_bottom, file=file)
-+
-+
-+def no_search(content, props):
-+    if "search_start_time" not in props:
-+        error = props.get("error")
-+        if error is not None and error != "incomplete-search-found-no-plan":
-+            props["error"] = "no-search-due-to-" + error
-+
-+
-+REFINEMENT_ATTRIBUTES = [
-+    ("time_for_finding_traces", r"Time for finding abstract traces: (.+)s"),
-+    ("time_for_finding_flaws", r"Time for finding flaws: (.+)s"),
-+    ("time_for_splitting_states", r"Time for splitting states: (.+)s"),
-+]
-+
-+
-+def compute_total_times(content, props):
-+    for attribute, pattern in REFINEMENT_ATTRIBUTES:
-+        props["total_" + attribute] = sum(props[attribute])
-+
-+
-+def add_time_analysis(content, props):
-+    init_time = props.get("init_time")
-+    if not init_time:
-+        return
-+    parts = []
-+    parts.append("{init_time:.2f}:".format(**props))
-+    for attribute, pattern in REFINEMENT_ATTRIBUTES:
-+        time = props["total_" + attribute]
-+        relative_time = time / init_time
-+        print time, type(time)
-+        parts.append("{:.2f} ({:.2f})".format(time, relative_time))
-+
-+    props["time_analysis"] = " ".join(parts)
-+
-+
-+def main():
-+    parser = CommonParser()
-+    parser.add_pattern("search_start_time", r"\[g=0, 1 evaluated, 0 expanded, t=(.+)s, \d+ KB\]", type=float)
-+    parser.add_pattern("search_start_memory", r"\[g=0, 1 evaluated, 0 expanded, t=.+s, (\d+) KB\]", type=int)
-+    parser.add_pattern("init_time", r"Time for initializing additive Cartesian heuristic: (.+)s", type=float)
-+    parser.add_pattern("cartesian_states", r"^Cartesian states: (\d+)\n", type=int)
-+
-+    for attribute, pattern in REFINEMENT_ATTRIBUTES:
-+        parser.add_repeated_pattern(attribute, pattern, type=float, required=False)
-+
-+    parser.add_function(no_search)
-+    parser.add_function(compute_total_times)
-+    parser.add_function(add_time_analysis)
-+
-+    parser.parse()
-+
-+
-+if __name__ == "__main__":
-+    main()
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue883/relativescatter.py fast-downward/experiments/issue883/relativescatter.py
---- fast-downward-original/experiments/issue883/relativescatter.py	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/experiments/issue883/relativescatter.py	2019-01-15 11:05:11.766522618 -0200
-@@ -0,0 +1,105 @@
-+# -*- coding: utf-8 -*-
-+
-+from collections import defaultdict
-+
-+from matplotlib import ticker
-+
-+from downward.reports.scatter import ScatterPlotReport
-+from downward.reports.plot import PlotReport, Matplotlib, MatplotlibPlot
-+
-+
-+# TODO: handle outliers
-+
-+# TODO: this is mostly copied from ScatterMatplotlib (scatter.py)
-+class RelativeScatterMatplotlib(Matplotlib):
-+    @classmethod
-+    def _plot(cls, report, axes, categories, styles):
-+        # Display grid
-+        axes.grid(b=True, linestyle='-', color='0.75')
-+
-+        has_points = False
-+        # Generate the scatter plots
-+        for category, coords in sorted(categories.items()):
-+            X, Y = zip(*coords)
-+            axes.scatter(X, Y, s=42, label=category, **styles[category])
-+            if X and Y:
-+                has_points = True
-+
-+        if report.xscale == 'linear' or report.yscale == 'linear':
-+            plot_size = report.missing_val * 1.01
-+        else:
-+            plot_size = report.missing_val * 1.25
-+
-+        # make 5 ticks above and below 1
-+        yticks = []
-+        tick_step = report.ylim_top**(1/5.0)
-+        for i in xrange(-5, 6):
-+            yticks.append(tick_step**i)
-+        axes.set_yticks(yticks)
-+        axes.get_yaxis().set_major_formatter(ticker.ScalarFormatter())
-+
-+        axes.set_xlim(report.xlim_left or -1, report.xlim_right or plot_size)
-+        axes.set_ylim(report.ylim_bottom or -1, report.ylim_top or plot_size)
-+
-+        for axis in [axes.xaxis, axes.yaxis]:
-+            MatplotlibPlot.change_axis_formatter(
-+                axis,
-+                report.missing_val if report.show_missing else None)
-+        return has_points
-+
-+
-+class RelativeScatterPlotReport(ScatterPlotReport):
-+    """
-+    Generate a scatter plot that shows a relative comparison of two
-+    algorithms with regard to the given attribute. The attribute value
-+    of algorithm 1 is shown on the x-axis and the relation to the value
-+    of algorithm 2 on the y-axis.
-+    """
-+
-+    def __init__(self, show_missing=True, get_category=None, **kwargs):
-+        ScatterPlotReport.__init__(self, show_missing, get_category, **kwargs)
-+        if self.output_format == 'tex':
-+            raise "not supported"
-+        else:
-+            self.writer = RelativeScatterMatplotlib
-+
-+    def _fill_categories(self, runs):
-+        # We discard the *runs* parameter.
-+        # Map category names to value tuples
-+        categories = defaultdict(list)
-+        self.ylim_bottom = 2
-+        self.ylim_top = 0.5
-+        self.xlim_left = float("inf")
-+        for (domain, problem), runs in self.problem_runs.items():
-+            if len(runs) != 2:
-+                continue
-+            run1, run2 = runs
-+            assert (run1['algorithm'] == self.algorithms[0] and
-+                    run2['algorithm'] == self.algorithms[1])
-+            val1 = run1.get(self.attribute)
-+            val2 = run2.get(self.attribute)
-+            if not val1 or not val2:
-+                continue
-+            category = self.get_category(run1, run2)
-+            assert val1 > 0, (domain, problem, self.algorithms[0], val1)
-+            assert val2 > 0, (domain, problem, self.algorithms[1], val2)
-+            x = val1
-+            y = val2 / float(val1)
-+
-+            categories[category].append((x, y))
-+
-+            self.ylim_top = max(self.ylim_top, y)
-+            self.ylim_bottom = min(self.ylim_bottom, y)
-+            self.xlim_left = min(self.xlim_left, x)
-+
-+        # center around 1
-+        if self.ylim_bottom < 1:
-+            self.ylim_top = max(self.ylim_top, 1 / float(self.ylim_bottom))
-+        if self.ylim_top > 1:
-+            self.ylim_bottom = min(self.ylim_bottom, 1 / float(self.ylim_top))
-+        return categories
-+
-+    def _set_scales(self, xscale, yscale):
-+        # ScatterPlot uses log-scaling on the x-axis by default.
-+        PlotReport._set_scales(
-+            self, xscale or self.attribute.scale or 'log', 'log')
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue883/v1.py fast-downward/experiments/issue883/v1.py
---- fast-downward-original/experiments/issue883/v1.py	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/experiments/issue883/v1.py	2019-01-15 11:05:11.762522625 -0200
-@@ -0,0 +1,81 @@
-+#! /usr/bin/env python
-+# -*- coding: utf-8 -*-
-+
-+import os
-+
-+from lab.environments import LocalEnvironment, BaselSlurmEnvironment
-+
-+import common_setup
-+from common_setup import IssueConfig, IssueExperiment
-+from relativescatter import RelativeScatterPlotReport
-+
-+DIR = os.path.dirname(os.path.abspath(__file__))
-+BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
-+BUILD = "release64"
-+REVISIONS = ["issue883-base", "issue883-v1"]
-+DRIVER_OPTIONS = ["--build", BUILD]
-+CONFIGS = [
-+    IssueConfig(
-+        nick + "-" + max_transitions_nick,
-+        config,
-+        build_options=[BUILD],
-+        driver_options=DRIVER_OPTIONS)
-+    for max_transitions_nick, max_transitions in [("1M", 1000000), ("2M", 2000000)]
-+    for nick, config in [
-+        ("cegar-original", ["--search", "astar(cegar(subtasks=[original()], max_transitions={max_transitions}))".format(**locals())]),
-+        ("cegar-landmarks-goals", ["--search", "astar(cegar(max_transitions={max_transitions}))".format(**locals())]),
-+        ]
-+]
-+SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
-+ENVIRONMENT = BaselSlurmEnvironment(
-+    partition="infai_2",
-+    email="jendrik.seipp@unibas.ch",
-+    export=["PATH", "DOWNWARD_BENCHMARKS"])
-+
-+if common_setup.is_test_run():
-+    SUITE = [
-+        #"depot:p02.pddl",
-+        "gripper:prob01.pddl"]
-+    ENVIRONMENT = LocalEnvironment(processes=1)
-+
-+exp = IssueExperiment(
-+    revisions=REVISIONS,
-+    configs=CONFIGS,
-+    environment=ENVIRONMENT,
-+)
-+exp.add_suite(BENCHMARKS_DIR, SUITE)
-+
-+exp.add_parser(exp.EXITCODE_PARSER)
-+#exp.add_parser(exp.TRANSLATOR_PARSER)
-+exp.add_parser(exp.SINGLE_SEARCH_PARSER)
-+exp.add_parser(exp.PLANNER_PARSER)
-+exp.add_parser(os.path.join(DIR, "parser.py"))
-+
-+exp.add_step('build', exp.build)
-+exp.add_step('start', exp.start_runs)
-+exp.add_fetcher(name='fetch')
-+
-+REFINEMENT_ATTRIBUTES = [
-+    "time_for_finding_traces",
-+    "time_for_finding_flaws",
-+    "time_for_splitting_states",
-+]
-+attributes = (
-+    IssueExperiment.DEFAULT_TABLE_ATTRIBUTES +
-+    ["search_start_memory", "init_time", "time_analysis"] +
-+    REFINEMENT_ATTRIBUTES +
-+    ["total_" + attr for attr in REFINEMENT_ATTRIBUTES])
-+#exp.add_absolute_report_step(attributes=attributes)
-+exp.add_comparison_table_step(attributes=attributes)
-+
-+if len(REVISIONS) == 2:
-+    for attribute in ["init_time", "expansions_until_last_jump", "total_time_for_splitting_states", "total_time_for_finding_traces"]:
-+        for config in CONFIGS:
-+            exp.add_report(
-+                RelativeScatterPlotReport(
-+                    attributes=[attribute],
-+                    filter_algorithm=["{}-{}".format(rev, config.nick) for rev in REVISIONS],
-+                    get_category=lambda run1, run2: run1.get("domain")),
-+                outfile="{}-{}-{}-{}-{}.png".format(exp.name, attribute, config.nick, *REVISIONS))
-+
-+exp.run_steps()
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward fast-downward/fast-downward
 --- fast-downward-original/fast-downward	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fast-downward	2019-01-15 11:05:11.830522498 -0200
++++ fast-downward/fast-downward	2018-12-26 11:08:34.000000000 -0200
 @@ -0,0 +1,13 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -876,7 +18,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward 
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints fast-downward/fd-constraints
 --- fast-downward-original/fd-constraints	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fd-constraints	2019-01-15 11:05:11.830522498 -0200
++++ fast-downward/fd-constraints	2018-12-31 17:11:07.000000000 -0200
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -893,706 +35,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints
 +
 +${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false))" "$@"
 \ No newline at end of file
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_0_problem.pddl fast-downward/hyp_0_problem.pddl
---- fast-downward-original/hyp_0_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_0_problem.pddl	2019-01-17 16:47:49.131986000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR D)
-+(ONTABLE W)
-+(ON D R)
-+(ON R A)
-+(ON A W)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_10_problem.pddl fast-downward/hyp_10_problem.pddl
---- fast-downward-original/hyp_10_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_10_problem.pddl	2019-01-17 16:47:49.819983000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR D)
-+(ONTABLE E)
-+(ON D O)
-+(ON O P)
-+(ON P E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_11_problem.pddl fast-downward/hyp_11_problem.pddl
---- fast-downward-original/hyp_11_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_11_problem.pddl	2019-01-17 16:47:49.887982000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR D)
-+(ONTABLE R)
-+(ON D E)
-+(ON E A)
-+(ON A R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_12_problem.pddl fast-downward/hyp_12_problem.pddl
---- fast-downward-original/hyp_12_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_12_problem.pddl	2019-01-17 16:47:49.955982000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR W)
-+(ONTABLE E)
-+(ON W O)
-+(ON O R)
-+(ON R E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_13_problem.pddl fast-downward/hyp_13_problem.pddl
---- fast-downward-original/hyp_13_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_13_problem.pddl	2019-01-17 16:47:50.023982000 -0200
-@@ -0,0 +1,32 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR P)
-+(ONTABLE R)
-+(ON P O)
-+(ON O W)
-+(ON W E)
-+(ON E R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_14_problem.pddl fast-downward/hyp_14_problem.pddl
---- fast-downward-original/hyp_14_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_14_problem.pddl	2019-01-17 16:47:50.091981000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR R)
-+(ONTABLE P)
-+(ON R E)
-+(ON E A)
-+(ON A P)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_15_problem.pddl fast-downward/hyp_15_problem.pddl
---- fast-downward-original/hyp_15_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_15_problem.pddl	2019-01-17 16:47:50.159981000 -0200
-@@ -0,0 +1,32 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR C)
-+(ONTABLE R)
-+(ON C O)
-+(ON O W)
-+(ON W E)
-+(ON E R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_16_problem.pddl fast-downward/hyp_16_problem.pddl
---- fast-downward-original/hyp_16_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_16_problem.pddl	2019-01-17 16:47:50.227981000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR C)
-+(ONTABLE E)
-+(ON C O)
-+(ON O R)
-+(ON R E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_17_problem.pddl fast-downward/hyp_17_problem.pddl
---- fast-downward-original/hyp_17_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_17_problem.pddl	2019-01-17 16:47:50.295980000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR P)
-+(ONTABLE E)
-+(ON P O)
-+(ON O R)
-+(ON R E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_18_problem.pddl fast-downward/hyp_18_problem.pddl
---- fast-downward-original/hyp_18_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_18_problem.pddl	2019-01-17 16:47:50.363980000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR W)
-+(ONTABLE E)
-+(ON W A)
-+(ON A D)
-+(ON D E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_19_problem.pddl fast-downward/hyp_19_problem.pddl
---- fast-downward-original/hyp_19_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_19_problem.pddl	2019-01-17 16:47:50.431980000 -0200
-@@ -0,0 +1,30 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR P)
-+(ONTABLE W)
-+(ON P A)
-+(ON A W)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_1_problem.pddl fast-downward/hyp_1_problem.pddl
---- fast-downward-original/hyp_1_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_1_problem.pddl	2019-01-17 16:47:49.203985000 -0200
-@@ -0,0 +1,30 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR W)
-+(ONTABLE R)
-+(ON W A)
-+(ON A R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_20_problem.pddl fast-downward/hyp_20_problem.pddl
---- fast-downward-original/hyp_20_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_20_problem.pddl	2019-01-17 16:47:50.503979000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR R)
-+(ONTABLE E)
-+(ON R A)
-+(ON A P)
-+(ON P E)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_3_problem.pddl fast-downward/hyp_3_problem.pddl
---- fast-downward-original/hyp_3_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_3_problem.pddl	2019-01-17 16:47:49.335985000 -0200
-@@ -0,0 +1,30 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR W)
-+(ONTABLE D)
-+(ON W A)
-+(ON A D)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_4_problem.pddl fast-downward/hyp_4_problem.pddl
---- fast-downward-original/hyp_4_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_4_problem.pddl	2019-01-17 16:47:49.403984000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR C)
-+(ONTABLE W)
-+(ON C R)
-+(ON R O)
-+(ON O W)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_5_problem.pddl fast-downward/hyp_5_problem.pddl
---- fast-downward-original/hyp_5_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_5_problem.pddl	2019-01-17 16:47:49.471984000 -0200
-@@ -0,0 +1,30 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR R)
-+(ONTABLE W)
-+(ON R O)
-+(ON O W)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_6_problem.pddl fast-downward/hyp_6_problem.pddl
---- fast-downward-original/hyp_6_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_6_problem.pddl	2019-01-17 16:47:49.543984000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR W)
-+(ONTABLE R)
-+(ON W E)
-+(ON E A)
-+(ON A R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_7_problem.pddl fast-downward/hyp_7_problem.pddl
---- fast-downward-original/hyp_7_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_7_problem.pddl	2019-01-17 16:47:49.615983000 -0200
-@@ -0,0 +1,30 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR E)
-+(ONTABLE R)
-+(ON E A)
-+(ON A R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_8_problem.pddl fast-downward/hyp_8_problem.pddl
---- fast-downward-original/hyp_8_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_8_problem.pddl	2019-01-17 16:47:49.683983000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR P)
-+(ONTABLE R)
-+(ON P E)
-+(ON E A)
-+(ON A R)
-+))
-+)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/hyp_9_problem.pddl fast-downward/hyp_9_problem.pddl
---- fast-downward-original/hyp_9_problem.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/hyp_9_problem.pddl	2019-01-17 16:47:49.751983000 -0200
-@@ -0,0 +1,31 @@
-+
-+(define (problem blocks_words)
-+(:domain blocks)
-+(:objects
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+(CLEAR R)
-+(ONTABLE E)
-+(ON R O)
-+(ON O P)
-+(ON P E)
-+))
-+)
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-linux.sh fast-downward/install-osi-linux.sh
 --- fast-downward-original/install-osi-linux.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-linux.sh	2019-01-15 11:05:11.830522498 -0200
++++ fast-downward/install-osi-linux.sh	2018-11-02 06:52:17.000000000 -0300
 @@ -0,0 +1,21 @@
 +#!/usr/bin/env bash
 +export DOWNWARD_CPLEX_ROOT64=/opt/ibm/ILOG/CPLEX_Studio_Community128/cplex
@@ -1618,7 +63,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-li
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-mac.sh fast-downward/install-osi-mac.sh
 --- fast-downward-original/install-osi-mac.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-mac.sh	2019-01-15 11:05:11.830522498 -0200
++++ fast-downward/install-osi-mac.sh	2018-11-06 19:17:41.000000000 -0200
 @@ -0,0 +1,23 @@
 +#!/usr/bin/env bash
 +pushd ..
@@ -1644,435 +89,17 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-ma
 +# rm Osi-0.107.9.tgz
 +popd
 \ No newline at end of file
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/misc/tests/test-translator.py fast-downward/misc/tests/test-translator.py
---- fast-downward-original/misc/tests/test-translator.py	2019-01-17 20:45:41.226854642 -0200
-+++ fast-downward/misc/tests/test-translator.py	2019-01-15 11:05:11.766522618 -0200
-@@ -70,8 +70,10 @@
- 
- def _get_all_tasks_by_domain(benchmarks_dir):
-     # Ignore domains where translating the first task takes too much time or memory.
-+    # We also ignore city
-     blacklisted_domains = [
-         "agricola-sat18-strips",
-+        "citycar-sat14-adl", # cf. issue875
-         "organic-synthesis-sat18-strips",
-         "organic-synthesis-split-opt18-strips",
-         "organic-synthesis-split-sat18-strips"]
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/obs.dat fast-downward/obs.dat
---- fast-downward-original/obs.dat	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/obs.dat	2009-01-08 21:45:09.000000000 -0200
-@@ -0,0 +1,10 @@
-+(UNSTACK R P)
-+(STACK R E)
-+(PICK-UP O)
-+(STACK O R)
-+(UNSTACK D A)
-+(STACK D W)
-+(UNSTACK A C)
-+(PUT-DOWN A)
-+(PICK-UP C)
-+(STACK C O)
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/ocsingleshot_heuristic_result.dat fast-downward/ocsingleshot_heuristic_result.dat
---- fast-downward-original/ocsingleshot_heuristic_result.dat	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/ocsingleshot_heuristic_result.dat	2019-01-17 17:33:04.761766914 -0200
-@@ -0,0 +1,10 @@
-+(pick-up c) = 1
-+(pick-up o) = 1
-+(put-down a) = 1
-+(stack c o) = 1
-+(stack d w) = 1
-+(stack o r) = 1
-+(stack r e) = 1
-+(unstack a c) = 1
-+(unstack d a) = 1
-+(unstack r p) = 1
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/CMakeLists.txt.user fast-downward/src/CMakeLists.txt.user
---- fast-downward-original/src/CMakeLists.txt.user	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/CMakeLists.txt.user	2019-01-17 20:43:25.538051949 -0200
-@@ -0,0 +1,380 @@
-+<?xml version="1.0" encoding="UTF-8"?>
-+<!DOCTYPE QtCreatorProject>
-+<!-- Written by QtCreator 4.7.1, 2019-01-17T20:43:25. -->
-+<qtcreator>
-+ <data>
-+  <variable>EnvironmentId</variable>
-+  <value type="QByteArray">{a073dff3-0f4e-4bd3-9892-156410675575}</value>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.ActiveTarget</variable>
-+  <value type="int">0</value>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.EditorSettings</variable>
-+  <valuemap type="QVariantMap">
-+   <value type="bool" key="EditorConfiguration.AutoIndent">true</value>
-+   <value type="bool" key="EditorConfiguration.AutoSpacesForTabs">false</value>
-+   <value type="bool" key="EditorConfiguration.CamelCaseNavigation">true</value>
-+   <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.0">
-+    <value type="QString" key="language">Cpp</value>
-+    <valuemap type="QVariantMap" key="value">
-+     <value type="QByteArray" key="CurrentPreferences">CppGlobal</value>
-+    </valuemap>
-+   </valuemap>
-+   <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.1">
-+    <value type="QString" key="language">QmlJS</value>
-+    <valuemap type="QVariantMap" key="value">
-+     <value type="QByteArray" key="CurrentPreferences">QmlJSGlobal</value>
-+    </valuemap>
-+   </valuemap>
-+   <value type="int" key="EditorConfiguration.CodeStyle.Count">2</value>
-+   <value type="QByteArray" key="EditorConfiguration.Codec">UTF-8</value>
-+   <value type="bool" key="EditorConfiguration.ConstrainTooltips">false</value>
-+   <value type="int" key="EditorConfiguration.IndentSize">4</value>
-+   <value type="bool" key="EditorConfiguration.KeyboardTooltips">false</value>
-+   <value type="int" key="EditorConfiguration.MarginColumn">80</value>
-+   <value type="bool" key="EditorConfiguration.MouseHiding">true</value>
-+   <value type="bool" key="EditorConfiguration.MouseNavigation">true</value>
-+   <value type="int" key="EditorConfiguration.PaddingMode">1</value>
-+   <value type="bool" key="EditorConfiguration.ScrollWheelZooming">true</value>
-+   <value type="bool" key="EditorConfiguration.ShowMargin">false</value>
-+   <value type="int" key="EditorConfiguration.SmartBackspaceBehavior">0</value>
-+   <value type="bool" key="EditorConfiguration.SmartSelectionChanging">true</value>
-+   <value type="bool" key="EditorConfiguration.SpacesForTabs">true</value>
-+   <value type="int" key="EditorConfiguration.TabKeyBehavior">0</value>
-+   <value type="int" key="EditorConfiguration.TabSize">8</value>
-+   <value type="bool" key="EditorConfiguration.UseGlobal">true</value>
-+   <value type="int" key="EditorConfiguration.Utf8BomBehavior">1</value>
-+   <value type="bool" key="EditorConfiguration.addFinalNewLine">true</value>
-+   <value type="bool" key="EditorConfiguration.cleanIndentation">true</value>
-+   <value type="bool" key="EditorConfiguration.cleanWhitespace">true</value>
-+   <value type="bool" key="EditorConfiguration.inEntireDocument">false</value>
-+  </valuemap>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.PluginSettings</variable>
-+  <valuemap type="QVariantMap">
-+   <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>
-+   <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
-+   <value type="bool" key="ClangTools.BuildBeforeAnalysis">false</value>
-+   <valuelist type="QVariantList" key="ClangTools.SelectedDirs"/>
-+   <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
-+   <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
-+   <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
-+  </valuemap>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.Target.0</variable>
-+  <valuemap type="QVariantMap">
-+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.11.1 GCC 64bit</value>
-+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.11.1 GCC 64bit</value>
-+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5111.gcc_64_kit</value>
-+   <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
-+   <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
-+   <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-+    <valuelist type="QVariantList" key="CMake.Configuration"/>
-+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pereira/Desktop/goal_recognition/fast-downward/build-src-Desktop_Qt_5_11_1_GCC_64bit-Default</value>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">all</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
-+    </valuemap>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">clean</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clean</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
-+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Default</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Default</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeBuildConfiguration</value>
-+   </valuemap>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-+    <valuelist type="QVariantList" key="CMake.Configuration">
-+     <value type="QString">CMAKE_BUILD_TYPE:STRING=Debug</value>
-+    </valuelist>
-+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pereira/Desktop/goal_recognition/fast-downward/build-src-Desktop_Qt_5_11_1_GCC_64bit-Debug</value>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">all</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
-+    </valuemap>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">clean</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clean</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
-+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Debug</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Debug</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeBuildConfiguration</value>
-+   </valuemap>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
-+    <valuelist type="QVariantList" key="CMake.Configuration">
-+     <value type="QString">CMAKE_BUILD_TYPE:STRING=Release</value>
-+    </valuelist>
-+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pereira/Desktop/goal_recognition/fast-downward/build-src-Desktop_Qt_5_11_1_GCC_64bit-Release</value>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">all</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
-+    </valuemap>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">clean</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clean</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
-+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Release</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeBuildConfiguration</value>
-+   </valuemap>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.3">
-+    <valuelist type="QVariantList" key="CMake.Configuration">
-+     <value type="QString">CMAKE_BUILD_TYPE:STRING=RelWithDebInfo</value>
-+    </valuelist>
-+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pereira/Desktop/goal_recognition/fast-downward/build-src-Desktop_Qt_5_11_1_GCC_64bit-Release with Debug Information</value>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">all</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
-+    </valuemap>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">clean</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clean</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
-+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Release with Debug Information</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Release with Debug Information</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeBuildConfiguration</value>
-+   </valuemap>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.4">
-+    <valuelist type="QVariantList" key="CMake.Configuration">
-+     <value type="QString">CMAKE_BUILD_TYPE:STRING=MinSizeRel</value>
-+    </valuelist>
-+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pereira/Desktop/goal_recognition/fast-downward/build-src-Desktop_Qt_5_11_1_GCC_64bit-Minimum Size Release</value>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">all</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>
-+    </valuemap>
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">
-+     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
-+      <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
-+       <value type="QString">clean</value>
-+      </valuelist>
-+      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">CMake Build</value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.MakeStep</value>
-+     </valuemap>
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Clean</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
-+    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Minimum Size Release</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Minimum Size Release</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeBuildConfiguration</value>
-+   </valuemap>
-+   <value type="int" key="ProjectExplorer.Target.BuildConfigurationCount">5</value>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.DeployConfiguration.0">
-+    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
-+     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">0</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Deploy</value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Deploy</value>
-+    </valuemap>
-+    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">1</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Deploy Configuration</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.DefaultDeployConfiguration</value>
-+   </valuemap>
-+   <value type="int" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.PluginSettings"/>
-+   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
-+    <value type="bool" key="Analyzer.QmlProfiler.AggregateTraces">false</value>
-+    <value type="bool" key="Analyzer.QmlProfiler.FlushEnabled">false</value>
-+    <value type="uint" key="Analyzer.QmlProfiler.FlushInterval">1000</value>
-+    <value type="QString" key="Analyzer.QmlProfiler.LastTraceFile"></value>
-+    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
-+    <valuelist type="QVariantList" key="Analyzer.Valgrind.AddedSuppressionFiles"/>
-+    <value type="bool" key="Analyzer.Valgrind.Callgrind.CollectBusEvents">false</value>
-+    <value type="bool" key="Analyzer.Valgrind.Callgrind.CollectSystime">false</value>
-+    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableBranchSim">false</value>
-+    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableCacheSim">false</value>
-+    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableEventToolTips">true</value>
-+    <value type="double" key="Analyzer.Valgrind.Callgrind.MinimumCostRatio">0.01</value>
-+    <value type="double" key="Analyzer.Valgrind.Callgrind.VisualisationMinimumCostRatio">10</value>
-+    <value type="bool" key="Analyzer.Valgrind.FilterExternalIssues">true</value>
-+    <value type="int" key="Analyzer.Valgrind.LeakCheckOnFinish">1</value>
-+    <value type="int" key="Analyzer.Valgrind.NumCallers">25</value>
-+    <valuelist type="QVariantList" key="Analyzer.Valgrind.RemovedSuppressionFiles"/>
-+    <value type="int" key="Analyzer.Valgrind.SelfModifyingCodeDetection">1</value>
-+    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
-+    <value type="bool" key="Analyzer.Valgrind.ShowReachable">false</value>
-+    <value type="bool" key="Analyzer.Valgrind.TrackOrigins">true</value>
-+    <value type="QString" key="Analyzer.Valgrind.ValgrindExecutable">valgrind</value>
-+    <valuelist type="QVariantList" key="Analyzer.Valgrind.VisibleErrorKinds">
-+     <value type="int">0</value>
-+     <value type="int">1</value>
-+     <value type="int">2</value>
-+     <value type="int">3</value>
-+     <value type="int">4</value>
-+     <value type="int">5</value>
-+     <value type="int">6</value>
-+     <value type="int">7</value>
-+     <value type="int">8</value>
-+     <value type="int">9</value>
-+     <value type="int">10</value>
-+     <value type="int">11</value>
-+     <value type="int">12</value>
-+     <value type="int">13</value>
-+     <value type="int">14</value>
-+    </valuelist>
-+    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.Arguments"></value>
-+    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.UserWorkingDirectory"></value>
-+    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.UserWorkingDirectory.default">/tmp/QtCreator-SxPjod/qtc-cmake-VDDQmFMX/bin</value>
-+    <value type="int" key="PE.EnvironmentAspect.Base">2</value>
-+    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">downward</value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.downward
-+/home/pereira/Desktop/goal_recognition/fast-downward/src/search/</value>
-+    <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
-+    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
-+    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
-+    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
-+    <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
-+    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-+   </valuemap>
-+   <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
-+  </valuemap>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.TargetCount</variable>
-+  <value type="int">1</value>
-+ </data>
-+ <data>
-+  <variable>ProjectExplorer.Project.Updater.FileVersion</variable>
-+  <value type="int">18</value>
-+ </data>
-+ <data>
-+  <variable>Version</variable>
-+  <value type="int">18</value>
-+ </data>
-+</qtcreator>
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/new_constraint.txt fast-downward/new_constraint.txt
+--- fast-downward-original/new_constraint.txt	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/new_constraint.txt	2018-11-06 19:35:47.000000000 -0200
+@@ -0,0 +1,3 @@
++2 1e+20
++0 4
++1 1
+Binary files fast-downward-original/src/VAL/validate and fast-downward/src/VAL/validate differ
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modules/FastDownwardMacros.cmake fast-downward/src/cmake_modules/FastDownwardMacros.cmake
---- fast-downward-original/src/cmake_modules/FastDownwardMacros.cmake	2019-01-17 20:45:39.710846458 -0200
-+++ fast-downward/src/cmake_modules/FastDownwardMacros.cmake	2019-01-15 11:05:11.834522492 -0200
+--- fast-downward-original/src/cmake_modules/FastDownwardMacros.cmake	2018-12-24 16:48:31.000000000 -0200
++++ fast-downward/src/cmake_modules/FastDownwardMacros.cmake	2019-01-03 18:18:47.000000000 -0200
 @@ -18,7 +18,7 @@
  
          ## Configuration-specific flags
@@ -2082,61 +109,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modu
          set(CMAKE_CXX_FLAGS_PROFILE "-O3 -pg")
      elseif(MSVC)
          # We force linking to be static on Windows because this makes compiling OSI simpler
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/cegar/abstract_search.cc fast-downward/src/search/cegar/abstract_search.cc
---- fast-downward-original/src/search/cegar/abstract_search.cc	2019-01-17 20:45:41.226854642 -0200
-+++ fast-downward/src/search/cegar/abstract_search.cc	2019-01-15 11:05:11.766522618 -0200
-@@ -47,13 +47,38 @@
- }
- 
- void AbstractSearch::update_goal_distances(const Solution &solution) {
-+    /*
-+      Originally, we only updated the goal distances of states that are part of
-+      the trace (see Seipp and Helmert, JAIR 2018). The code below generalizes
-+      this idea and potentially updates the goal distances of all states.
-+
-+      Let C* be the cost of the trace and g(s) be the g value of states s when
-+      A* finds the trace. Then for all states s with g(s) < INF (i.e., s has
-+      been reached by the search), C*-g(s) is a lower bound on the goal
-+      distance. This is the case since
-+
-+      g(s) >= g*(s) [1]
-+
-+      and
-+
-+          f*(s) >= C*         (optimality of A* with an admissible heuristic)
-+      ==> g*(s) + h*(s) >= C* (definition of f values)
-+      ==> g(s) + h*(s) >= C*  (using [1])
-+      ==> h*(s) >= C* - g(s)  (arithmetic)
-+
-+      Together with our existing lower bound h*(s) >= h(s), i.e., the h values
-+      from the last iteration, for each abstract state s with g(s) < INF, we
-+      can set h(s) = max(h(s), C*-g(s)).
-+    */
-     int solution_cost = 0;
-     for (const Transition &transition : solution) {
-         solution_cost += operator_costs[transition.op_id];
-     }
-     for (auto &info : search_info) {
--        int new_h = max(info.get_h_value(), solution_cost - info.get_g_value());
--        info.increase_h_value_to(new_h);
-+        if (info.get_g_value() < INF) {
-+            int new_h = max(info.get_h_value(), solution_cost - info.get_g_value());
-+            info.increase_h_value_to(new_h);
-+        }
-     }
- }
- 
-@@ -64,7 +89,6 @@
-     reset(transitions.size());
-     search_info[init_id].decrease_g_value_to(0);
-     open_queue.push(search_info[init_id].get_h_value(), init_id);
--
-     int goal_id = astar_search(transitions, true, &goal_ids);
-     open_queue.clear();
-     bool has_found_solution = (goal_id != UNDEFINED);
+Binary files fast-downward-original/src/preprocess/preprocess and fast-downward/src/preprocess/preprocess differ
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
---- fast-downward-original/src/search/DownwardFiles.cmake	2019-01-17 20:45:41.226854642 -0200
-+++ fast-downward/src/search/DownwardFiles.cmake	2019-01-15 11:05:11.834522492 -0200
+--- fast-downward-original/src/search/DownwardFiles.cmake	2018-12-24 16:48:31.000000000 -0200
++++ fast-downward/src/search/DownwardFiles.cmake	2018-12-24 08:27:42.000000000 -0200
 @@ -698,6 +698,18 @@
  )
  
@@ -2156,9 +132,185 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
      NAME PDBS
      HELP "Plugin containing the code for PDBs"
      SOURCES
+Binary files fast-downward-original/src/search/downward-release and fast-downward/src/search/downward-release differ
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.cc fast-downward/src/search/lp/lp_solver.cc
+--- fast-downward-original/src/search/lp/lp_solver.cc	2018-12-24 16:48:31.000000000 -0200
++++ fast-downward/src/search/lp/lp_solver.cc	2018-10-19 10:13:50.000000000 -0300
+@@ -3,7 +3,7 @@
+ #include "lp_internals.h"
+ 
+ #include "../option_parser.h"
+-
++#include "../utils/logging.h"
+ #include "../utils/system.h"
+ 
+ #ifdef USE_LP
+@@ -67,10 +67,11 @@
+ }
+ 
+ LPVariable::LPVariable(double lower_bound, double upper_bound,
+-                       double objective_coefficient)
++                       double objective_coefficient, bool is_integer)
+     : lower_bound(lower_bound),
+       upper_bound(upper_bound),
+-      objective_coefficient(objective_coefficient) {
++      objective_coefficient(objective_coefficient),
++      is_integer(is_integer){
+ }
+ 
+ LPSolver::~LPSolver() {
+@@ -105,6 +106,10 @@
+     is_initialized = false;
+     num_permanent_constraints = constraints.size();
+ 
++    ///////////////////////////////////////////////////////////////////
++    all_constraints = constraints;
++    ///////////////////////////////////////////////////////////////////
++
+     for (const LPVariable &var : variables) {
+         col_lb.push_back(var.lower_bound);
+         col_ub.push_back(var.upper_bound);
+@@ -156,6 +161,14 @@
+                                objective.data(),
+                                row_lb.data(),
+                                row_ub.data());
++        int num_vars = variables.size();
++        for (int i = 0; i < num_vars; ++i) {
++            if (variables[i].is_integer) {
++                lp_solver->setInteger(i);
++            }
++        }
++        //cout << "Integer tolerance: " << lp_solver->getIntegerTolerance() << endl;
++        //cout << "Number of integer variables: " << lp_solver->getNumIntegers() << endl;
+     } catch (CoinError &error) {
+         handle_coin_error(error);
+     }
+@@ -176,7 +189,6 @@
+                                constraint.get_coefficients().data(),
+                                false));
+         }
+-
+         try {
+             lp_solver->addRows(num_rows,
+                                rows.data(), row_lb.data(), row_ub.data());
+@@ -192,6 +204,36 @@
+     }
+ }
+ 
++///////////////////////////////////////////////////////////////////
++void LPSolver::add_new_constraints(const vector<LPConstraint> &constraints) {
++    if (!constraints.empty()) {
++        clear_temporary_data();
++        int num_rows = constraints.size();
++        for (const LPConstraint &constraint : constraints) {
++            row_lb.push_back(constraint.get_lower_bound());
++            row_ub.push_back(constraint.get_upper_bound());
++            rows.push_back(new CoinShallowPackedVector(
++                               constraint.get_variables().size(),
++                               constraint.get_variables().data(),
++                               constraint.get_coefficients().data(),
++                               false));
++        }
++        try {
++            lp_solver->addRows(num_rows,
++                               rows.data(), row_lb.data(), row_ub.data());
++        } catch (CoinError &error) {
++            handle_coin_error(error);
++        }
++        for (CoinPackedVectorBase *row : rows) {
++            delete row;
++        }
++        clear_temporary_data();
++        //has_temporary_constraints_ = false;
++        //is_solved = false;
++    }
++}
++///////////////////////////////////////////////////////////////////
++
+ void LPSolver::clear_temporary_constraints() {
+     if (has_temporary_constraints_) {
+         try {
+@@ -297,6 +339,20 @@
+     }
+ }
+ 
++void LPSolver::solve_mip() {
++    try {
++        lp_solver->branchAndBound();
++        if (lp_solver->isAbandoned()) {
++            cerr << "Abandoned LP. "
++                 << "Reasons include \"numerical difficulties\" and running out of memory." << endl;
++            utils::exit_with(ExitCode::SEARCH_CRITICAL_ERROR);
++        }
++        is_solved = true;
++    } catch (CoinError &error) {
++        handle_coin_error(error);
++    }
++}
++
+ bool LPSolver::has_optimal_solution() const {
+     assert(is_solved);
+     try {
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.h fast-downward/src/search/lp/lp_solver.h
+--- fast-downward-original/src/search/lp/lp_solver.h	2018-12-24 16:48:31.000000000 -0200
++++ fast-downward/src/search/lp/lp_solver.h	2018-10-19 10:14:34.000000000 -0300
+@@ -67,10 +67,12 @@
+     double lower_bound;
+     double upper_bound;
+     double objective_coefficient;
++    bool is_integer;
+ 
+     LPVariable(double lower_bound,
+                double upper_bound,
+-               double objective_coefficient);
++               double objective_coefficient,
++               bool is_integer = false);
+ };
+ 
+ #ifdef __GNUG__
+@@ -85,7 +87,6 @@
+ #ifdef USE_LP
+     std::unique_ptr<OsiSolverInterface> lp_solver;
+ #endif
+-
+     /*
+       Temporary data for assigning a new problem. We keep the vectors
+       around to avoid recreating them in every assignment.
+@@ -101,6 +102,11 @@
+     std::vector<CoinPackedVectorBase *> rows;
+     void clear_temporary_data();
+ public:
++
++    ///////////////////////////////////////////////////////////////////
++    std::vector<LPConstraint> all_constraints;
++    ///////////////////////////////////////////////////////////////////
++
+     LP_METHOD(explicit LPSolver(LPSolverType solver_type))
+     /*
+       Note that the destructor does not use LP_METHOD because it should not
+@@ -115,6 +121,11 @@
+                   const std::vector<LPVariable> &variables,
+                   const std::vector<LPConstraint> &constraints))
+     LP_METHOD(void add_temporary_constraints(const std::vector<LPConstraint> &constraints))
++
++    ///////////////////////////////////////////////////////////////////
++    LP_METHOD(void add_new_constraints(const std::vector<LPConstraint> &constraints))
++    ///////////////////////////////////////////////////////////////////
++
+     LP_METHOD(void clear_temporary_constraints())
+     LP_METHOD(double get_infinity() const)
+ 
+@@ -126,6 +137,7 @@
+     LP_METHOD(void set_variable_upper_bound(int index, double bound))
+ 
+     LP_METHOD(void solve())
++    LP_METHOD(void solve_mip())
+ 
+     /*
+       Return true if the solving the LP showed that it is bounded feasible and
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-01-17 17:40:37.508721268 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-02-07 18:16:12.000000000 -0200
 @@ -0,0 +1,346 @@
 +#include "oc_single_shot_heuristic.h"
 +
@@ -2508,7 +660,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-17 17:20:02.452255858 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-17 17:20:02.000000000 -0200
 @@ -0,0 +1,41 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
@@ -2553,7 +705,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc.orig fast-downward/src/search/operator_counting/operator_counting_heuristic.cc.orig
 --- fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc.orig	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc.orig	2019-01-15 11:05:11.834522492 -0200
++++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc.orig	2018-12-21 20:15:05.000000000 -0200
 @@ -0,0 +1,225 @@
 +#include "operator_counting_heuristic.h"
 +
@@ -2780,34 +932,4 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +static Plugin<Evaluator> _plugin("operatorcounting", _parse);
 +}
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/template.pddl fast-downward/template.pddl
---- fast-downward-original/template.pddl	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/template.pddl	2009-01-08 21:45:09.000000000 -0200
-@@ -0,0 +1,27 @@
-+
-+(define (problem blocks_words)
-+	(:domain blocks)
-+(:objects 
-+
-+D R A W O E P C - block
-+)
-+(:init
-+(HANDEMPTY)
-+(CLEAR O)
-+(ONTABLE O)
-+(CLEAR R)
-+(ON R P)
-+(ONTABLE P)
-+(CLEAR E)
-+(ONTABLE E)
-+(CLEAR D)
-+(ON D A)
-+(ON A C)
-+(ONTABLE C)
-+(CLEAR W)
-+(ONTABLE W)
-+)
-+(:goal (and
-+<HYPOTHESIS>
-+))
-+)
+Binary files fast-downward-original/src/validate and fast-downward/src/validate differ
