@@ -308,44 +308,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
  
      /*
        Return true if the solving the LP showed that it is bounded feasible and
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
---- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2018-12-27 18:43:57.000000000 -0200
-@@ -44,6 +44,30 @@
-         return true;
-     } else {
-         lp_solver.add_temporary_constraints(constraints);
-+
-+        ///////////////////////////////////////////////////////////////////
-+        /*
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# LM-Cut Constraints(" << constraints.size() << "): " << endl;
-+        for (int i = 0; i < (int) constraints.size(); ++i) {
-+            lp::LPConstraint constraint = constraints[i];
-+
-+            cout << "constraints.append(Constraint(";
-+            for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
-+                int var = constraint.get_variables()[j];
-+                double coe = constraint.get_coefficients()[j];
-+                cout << coe << "*X[" << var << "]";
-+                if (j < (int) constraint.get_variables().size() - 1) {
-+                    cout << " + ";
-+                }
-+            }
-+            cout << ", lb=" << constraint.get_lower_bound();
-+            cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
-+        }
-+        cout << string(80, '*') << endl << endl;
-+        */
-+        ///////////////////////////////////////////////////////////////////
-+
-         return false;
-     }
- }
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-01-03 22:26:44.000000000 -0200
-@@ -0,0 +1,363 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-02-07 18:16:12.000000000 -0200
+@@ -0,0 +1,346 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -385,70 +351,211 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +using namespace std;
 +
 +namespace operator_counting {
++
 +OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
 +    : Heuristic(opts),
 +      constraint_generators(
 +          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
 +      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
-+      op_indexes() {
-+    
-+    enforce_observations = opts.get("enforce_observations",false);
++      enforce_observations(opts.get("enforce_observations",false)),
++      soft_constraints(opts.get("soft_constraints",false)),
++      op_indexes(),
++      observations(){
++
++    load_observations();
 +
 +    vector<lp::LPVariable> variables;
 +    double infinity = lp_solver.get_infinity();
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        int op_cost = op.get_cost();
-+        variables.push_back(lp::LPVariable(0, infinity, op_cost));
++        if (soft_constraints == false) {
++            variables.push_back(lp::LPVariable(0, infinity, op_cost));
++        } else { // Add variables to create soft constraints
++            variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
++        }
 +    }
++
 +    vector<lp::LPConstraint> constraints;
 +    for (const auto &generator : constraint_generators) {
 +        generator->initialize_constraints(task, constraints, infinity);
 +    }
-+    ///////////////////////////////////////////////////////////////////
-+    cout << endl << string(80, '*') << endl;
-+    cout << "# Mapping X -> op: " << endl;
++
++    map_operators(false);
++
++    if (soft_constraints == true) {
++        add_observation_soft_constraints(variables, constraints);
++    }
++    if(enforce_observations == true) {
++        enforce_observation_constraints(constraints);
++    }
++
++    show_variables_and_objective(variables, false);
++
++    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++}
++
++void OCSingleShotHeuristic::map_operators(bool show) {
++    if (show == true) {
++        cout << endl << string(80, '*') << endl;
++        cout << "# Mapping X -> op: " << endl;
++    }
 +    int i = 0;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        // Caching operator variable indexes
-+        if(!op_indexes.emplace(op.get_name(),i).second){
-+            cout << "Failed inserting op " << op.get_name() << endl;
-+        } else {
-+            cout << "Inserted op " << op.get_name() << " at position " << op_indexes[op.get_name()] << endl;
++        std::string op_name (op.get_name());
++        for (size_t i = 0; i< op.get_name().size(); ++i) {
++            op_name[i] = tolower(op_name.c_str()[i]);
 +        }
-+        cout << "# X[" << i << "] = " << op.get_name() << endl;
++
++        op_indexes[op_name] = i;
++        if (show == true) {
++            cout << "["<< op_name<< "]: " << op_indexes[op_name] << endl;
++        }
 +        i++;
 +    }
-+    cout << string(80, '*') << endl << endl;
-+    ///////////////////////////////////////////////////////////////////
-+
-+    ///////////////////////////////////////////////////////////////////
-+    cout << endl << string(80, '*') << endl;
-+    cout << "# Variables(" << variables.size() << "): " << endl;
-+    for (int i = 0; i < (int) variables.size(); ++i) {
-+        cout << "X[" << i << "] = Variable('X_" << i << "'";
-+        cout << ", lb=" << variables[i].lower_bound;
-+        cout << ", ub=" << variables[i].upper_bound;
-+        cout << ", type='integer')";
-+        cout << ", cost[" << i << "] = 1" << endl;
++    if (show == true) {
++        cout << string(80, '*') << endl << endl;
 +    }
-+    cout << string(80, '*') << endl << endl;
-+    ///////////////////////////////////////////////////////////////////
++}
 +
-+    ///////////////////////////////////////////////////////////////////
++void OCSingleShotHeuristic::show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show) {
++    if (show == true) {
++        cout << endl << string(80, '*') << endl;
++        cout << "# Variables(" << variables.size() << "): " << endl;
++        for (int i = 0; i < (int) variables.size(); ++i) {
++            cout << "X[" << i << "] = Variable('X_" << i << "'";
++            cout << ", lb=" << variables[i].lower_bound;
++            cout << ", ub=" << variables[i].upper_bound;
++            cout << ", cost[" << i << "] = " << variables[i].objective_coefficient << endl;
++        }
++        cout << string(80, '*') << endl << endl;
++
++        cout << endl << string(80, '*') << endl;
++        cout << "# Objective function: " << endl;
++        cout << "obj = Objective(";
++        for (int i = 0; i < (int) variables.size(); ++i) {
++            cout << "cost[" << i << "] * X[" << i << "]";
++            if (i < (int) variables.size() - 1) {
++                cout << " + ";
++            }
++        }
++        cout << ", direction='min')" << endl;
++        cout << string(80, '*') << endl << endl;
++    }
++}
++
++void OCSingleShotHeuristic::add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints) {
++    double infinity = lp_solver.get_infinity();
 +    cout << endl << string(80, '*') << endl;
-+    cout << "# Objective function: " << endl;
-+    cout << "obj = Objective(";
-+    for (int i = 0; i < (int) variables.size(); ++i) {
-+        cout << "cost[" << i << "] * X[" << i << "]";
-+        if (i < (int) variables.size() - 1) {
-+            cout << " + ";
++    // Adding constraints
++    cout << "Add soft constraints" << endl;
++    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
++        variables.push_back(lp::LPVariable(-infinity, infinity, -1.0));
++
++        cout << "Adding soft constraint on (" << (*it) << "), index " << std::to_string(op_indexes[*it]) << endl;
++        lp::LPConstraint constraint(0.0, 0.0);
++        constraint.insert(op_indexes[*it], 1.0);
++        constraint.insert(variables.size() - 1, -1.0);
++
++        cout << "X[" << op_indexes[*it] << "] = Variable('X_" << op_indexes[*it]  << "'";
++        cout << ", lb=" << variables[op_indexes[*it]].lower_bound;
++        cout << ", ub=" << variables[op_indexes[*it]].upper_bound;
++        cout << ", cost[" << op_indexes[*it] << "] = " << variables[op_indexes[*it]].objective_coefficient << endl;
++
++        cout << "X[" << variables.size() - 1 << "] = Variable('X_" << variables.size() - 1  << "'";
++        cout << ", lb=" << variables[variables.size() - 1].lower_bound;
++        cout << ", ub=" << variables[variables.size() - 1].upper_bound;
++        cout << ", cost[" << variables.size() - 1 << "] = " << variables[variables.size() - 1].objective_coefficient << endl;
++
++        cout << "constraint variables: " << constraint.get_variables()[0];
++        cout << ", " << constraint.get_variables()[1] << " - ";
++        cout << "constraint coefficients: " << constraint.get_coefficients()[0];
++        cout << ", " << constraint.get_coefficients()[1] << endl << endl;
++        constraints.push_back(constraint);
++    }
++    cout << endl << string(80, '*') << endl;
++}
++
++void OCSingleShotHeuristic::load_observations() {
++    // Read observations from file
++    cout << endl << string(80, '*') << endl;
++    cout << std::endl << "Load observations" << std::endl;
++    ifstream obs_file;
++    obs_file.open("obs.dat");
++    if(obs_file.is_open()){
++        while(!obs_file.eof()) {
++            string obs;
++            getline(obs_file, obs);
++            trim(obs);
++            if(!obs.empty() && obs[0]!=';') {
++                obs = obs.substr(1,obs.length()-2);
++                std::string obs_name (obs);
++                for (size_t i = 0; i< obs.size(); ++i) {
++                    obs_name[i] = tolower(obs.c_str()[i]);
++                }
++                cout << "Observation: " << obs_name << endl;
++                observations.push_back(obs_name);
++            }
 +        }
 +    }
-+    cout << ", direction='min')" << endl;
-+    cout << string(80, '*') << endl << endl;
-+    ///////////////////////////////////////////////////////////////////
++    cout << endl << string(80, '*') << endl;
 +
-+    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++    obs_file.close();
++}
++
++void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints) {
++    cout << endl << string(80, '*') << endl;
++    // Adding constraints
++    std::cout << "Enforcing observation constraints" << std::endl;
++
++    double infinity = lp_solver.get_infinity();
++    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
++        lp::LPConstraint constraint(1, infinity);
++
++        cout << "constraint " << (*it) << ": " << std::to_string(op_indexes[*it]) << endl;
++        constraint.insert(op_indexes[*it], 1);
++        constraints.push_back(constraint);
++    }
++    cout << endl << string(80, '*') << endl;
++}
++
++void OCSingleShotHeuristic::output_results(int result) {
++    cout << endl << string(80, '*') << endl;
++    vector<double> solution = lp_solver.extract_solution();
++    for (int i = 0; i < (int) solution.size(); ++i) {
++        cout << "X[" << i << "] = " << solution[i] << endl;
++    }
++    std::cout << "# observations in solution (" << observations.size() << "): " << std::endl;
++    double sat_observations = 0.0;
++    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
++        cout << (*it) << ": " << solution[op_indexes[*it]] << endl;
++        sat_observations += solution[op_indexes[*it]];
++    }
++    cout << "# sat observations: " << sat_observations << endl;
++    cout << "# h-value: " << result << endl;
++    cout << string(80, '*') << endl;
++
++    cout << endl << string(80, '*') << endl;
++
++    cout << "Writing results" << endl;
++    ofstream results;
++    //cout << "Writing results" << endl;
++    results.open("ocsingleshot_heuristic_result.dat");
++    results << "-- ";
++    results << endl << result << endl;
++    // Printing counts
++    int var_i=0;
++    vector<double> counts = lp_solver.extract_solution();
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        // cout << "(" << op.get_name() << ") = " << counts[var_i] << endl;
++        if (counts[var_i] > 0 ) {
++            results << "(" << op.get_name() << ") = " << counts[var_i] << endl;
++        }
++        var_i++;
++    }
++
++    results.flush();
++    results.close();
 +}
 +
 +OCSingleShotHeuristic::~OCSingleShotHeuristic() {
@@ -459,174 +566,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    return compute_heuristic(state);
 +}
 +
-+///////////////////////////////////////////////////////////////////
-+void OCSingleShotHeuristic::load_extra_constraints() {
-+ifstream file;
-+    file.open("new_constraint.txt");
-+    if (file.is_open()) {
-+        double lb, ub;
-+        file >> lb >> ub;
-+
-+        file.get();
-+
-+        string indexes;
-+        getline(file, indexes);
-+        istringstream indexes_iss(indexes);
-+        vector<string> indexes_str((istream_iterator<string>(indexes_iss)), istream_iterator<string>());
-+        vector<int> indexes_int;
-+        transform(indexes_str.begin(), indexes_str.end(), back_inserter(indexes_int), [](string i){
-+            return atoi(i.c_str());
-+        });
-+
-+        string coeffs;
-+        getline(file, coeffs);
-+        istringstream coeffs_iss(coeffs);
-+        vector<string> coeffs_str((istream_iterator<string>(coeffs_iss)), istream_iterator<string>());
-+        vector<double> coeffs_double;
-+        transform(coeffs_str.begin(), coeffs_str.end(), back_inserter(coeffs_double), [](string i){
-+            return atof(i.c_str());
-+        });
-+
-+        file.close();
-+
-+        vector<lp::LPConstraint> new_constraints;
-+        lp::LPConstraint constraint(lb, ub);
-+        for (size_t i = 0; i < indexes_int.size(); ++i) {
-+            int index = indexes_int[i];
-+            double coeff = coeffs_double[i];
-+            constraint.insert(index, coeff);
-+        }
-+        new_constraints.push_back(constraint);
-+        lp_solver.add_new_constraints(new_constraints);
-+
-+        cout << "# Adding constraint from file:" << endl;
-+        cout << "constraints.append(Constraint(";
-+        for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
-+            int var = constraint.get_variables()[j];
-+            double coe = constraint.get_coefficients()[j];
-+            cout << coe << "*X[" << var << "]";
-+            if (j < (int) constraint.get_variables().size() - 1) {
-+                cout << " + ";
-+            }
-+        }
-+        cout << ", lb=" << constraint.get_lower_bound();
-+        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
-+    }
-+}
-+///////////////////////////////////////////////////////////////////
-+
-+///////////////////////////////////////////////////////////////////
-+void OCSingleShotHeuristic::enforce_observation_constraints() {
-+    // Since we are going to need to access operators a couple of times, we hash their names to indexes
-+    /* Thanks to the wonders of C++, this did not work
-+    unordered_map<string,int> op_indexes;
-+    int op_i=0;
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        op_indexes[op.get_name()] = op_i;
-+        op_i++;
-+    }
-+    */
-+
-+    // Read observations from file
-+    ifstream obs_file;
-+    obs_file.open("obs.dat");
-+    vector<string> observations;
-+    if(obs_file.is_open()){
-+        while(!obs_file.eof()) {
-+            string obs;
-+            getline(obs_file, obs);
-+            trim(obs);
-+            if(!obs.empty() && obs[0]!=';') {
-+                obs = obs.substr(1,obs.length()-2);
-+                cout << "Observation: " << obs << endl;
-+                // istringstream obs_iss(obs);
-+                // vector<string> indexes_str((istream_iterator<string>(indexes_iss)), istream_iterator<string>());
-+                observations.push_back(obs);
-+            }
-+        }
-+
-+        cout << "Adding Constraints on Observations" << endl;
-+        // Adding constraints
-+        vector<lp::LPConstraint> new_constraints;
-+        double infinity = lp_solver.get_infinity();
-+        for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+            lp::LPConstraint constraint(1, infinity);
-+            cout << "Adding constraint on (" << (*it) << "), index " << std::to_string(op_indexes[*it]) << endl;
-+            constraint.insert(op_indexes[*it], 1);
-+            new_constraints.push_back(constraint);
-+        }
-+        
-+        
-+        lp_solver.add_new_constraints(new_constraints);
-+    }
-+
-+    obs_file.close();
-+}
-+///////////////////////////////////////////////////////////////////
-+
-+///////////////////////////////////////////////////////////////////
-+void OCSingleShotHeuristic::output_counts(const State &state, int result) {
-+    ofstream h_result;
-+    cout << "Writing objective result in h_result.txt" << endl;
-+    h_result.open("h_result.txt");
-+    // Output the state
-+    h_result << "-- ";
-+    for (FactProxy fact : state) {
-+        string fact_name = fact.get_name();
-+        if (fact_name != "<none of those>")
-+            h_result << fact_name << " "; // Using this crappy printing for the moment
-+    }
-+    h_result << endl << result << endl;
-+
-+    // Printing counts
-+    int var_i=0;
-+    vector<double> counts = lp_solver.extract_solution();
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        // cout << "(" << op.get_name() << ") = " << counts[var_i] << endl;
-+        if (counts[var_i] > 0 ) {
-+            h_result << "(" << op.get_name() << ") = " << counts[var_i] << endl;
-+        }
-+        var_i++;
-+    }
-+
-+    h_result.flush();
-+    h_result.close();
-+}
-+///////////////////////////////////////////////////////////////////
-+
-+///////////////////////////////////////////////////////////////////
-+void OCSingleShotHeuristic::output_constraints(int result) {
-+    cout << endl << string(80, '*') << endl;
-+    cout << "# Objective value: " << result << endl;
-+    cout << "# Solution: " << endl;
-+    vector<double> solution = lp_solver.extract_solution();
-+    for (int i = 0; i < (int) solution.size(); ++i) {
-+        cout << "X[" << i << "] = " << solution[i] << endl;
-+    }
-+    cout << string(80, '*') << endl;
-+}
-+///////////////////////////////////////////////////////////////////
-+
 +int OCSingleShotHeuristic::compute_heuristic(const State &state) {
 +    assert(!lp_solver.has_temporary_constraints());
 +    for (const auto &generator : constraint_generators) {
-+        bool dead_end = generator->update_constraints(state, lp_solver);
++          bool dead_end = generator->update_constraints(state, lp_solver);
 +        if (dead_end) {
 +            lp_solver.clear_temporary_constraints();
 +            return DEAD_END;
 +        }
 +    }
-+    ///////////////////////////////////////////////////////////////////
-+    load_extra_constraints();
-+    ///////////////////////////////////////////////////////////////////
-+    /* ******** */
-+    if(enforce_observations) {
-+        cout << "Enforcing Observation Constraints" << endl;
-+        enforce_observation_constraints();
-+    } else {
-+        cout << "Ignoring Observation Constraints" << endl;
-+    }
-+    /* ******** */
 +
 +    int result;
 +    lp_solver.solve();
@@ -639,10 +587,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        result = DEAD_END;
 +    }
 +
-+    ///////////////////////////////////////////////////////////////////
-+    output_constraints(result);
++    lp_solver.print_statistics();
 +
-+    output_counts(state,result);
++    ///////////////////////////////////////////////////////////////////
++    output_results(result);
 +
 +    if(result == DEAD_END)
 +        exit(EXIT_FAILURE);
@@ -695,6 +643,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        "constraint_generators",
 +        "methods that generate constraints over operator counting variables");
 +    parser.add_option<bool>("enforce_observations", "whether or not to enforce constraints on observations");
++    parser.add_option<bool>("soft_constraints", "whether or not to use observations as soft constraints");
 +    lp::add_lp_solver_option_to_parser(parser);
 +    Heuristic::add_options_to_parser(parser);
 +    Options opts = parser.parse();
@@ -711,8 +660,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-03 22:09:57.000000000 -0200
-@@ -0,0 +1,37 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-17 17:20:02.000000000 -0200
+@@ -0,0 +1,41 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +
@@ -735,17 +684,21 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
 +    lp::LPSolver lp_solver;
 +    bool enforce_observations;
++    bool soft_constraints;
 +    std::unordered_map<std::string,int> op_indexes;
++    std::vector<std::string> observations;
 +protected:
 +    virtual int compute_heuristic(const GlobalState &global_state) override;
 +    int compute_heuristic(const State &state);
-+    void load_extra_constraints();
-+    void enforce_observation_constraints();
-+    void output_constraints(int result);
-+    void output_counts(const State &state, int result);
++    void load_observations();
++    void enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints);
++    void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
++    void output_results(int result);
 +public:
 +    explicit OCSingleShotHeuristic(const options::Options &opts);
 +    ~OCSingleShotHeuristic();
++    void map_operators(bool show = false);
++    void show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show = false);
 +};
 +}
 +
@@ -979,131 +932,4 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +static Plugin<Evaluator> _plugin("operatorcounting", _parse);
 +}
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.cc fast-downward/src/search/operator_counting/pho_constraints.cc
---- fast-downward-original/src/search/operator_counting/pho_constraints.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/pho_constraints.cc	2018-12-27 18:46:07.000000000 -0200
-@@ -53,6 +53,14 @@
- 
- bool PhOConstraints::update_constraints(const State &state,
-                                         lp::LPSolver &lp_solver) {
-+
-+    ///////////////////////////////////////////////////////////////////
-+    /*
-+    cout << endl << string(80, '*') << endl;
-+    cout << "# Posthoc Constraints(" << pdbs->size() << "): " << endl;
-+    */
-+    ///////////////////////////////////////////////////////////////////
-+
-     for (size_t i = 0; i < pdbs->size(); ++i) {
-         int constraint_id = constraint_offset + i;
-         shared_ptr<pdbs::PatternDatabase> pdb = (*pdbs)[i];
-@@ -61,7 +69,31 @@
-             return true;
-         }
-         lp_solver.set_constraint_lower_bound(constraint_id, h);
-+
-+        ///////////////////////////////////////////////////////////////////
-+        /*
-+        lp_solver.all_constraints[constraint_id].set_lower_bound(h);
-+        lp::LPConstraint constraint = lp_solver.all_constraints[constraint_id];
-+        cout << "constraints.append(Constraint(";
-+        for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
-+            int var = constraint.get_variables()[j];
-+            double coe = constraint.get_coefficients()[j];
-+            cout << coe << "*X[" << var << "]";
-+            if (j < (int) constraint.get_variables().size() - 1) {
-+                cout << " + ";
-+            }
-+        }
-+        cout << ", lb=" << constraint.get_lower_bound();
-+        cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
-+        */
-+        ///////////////////////////////////////////////////////////////////
-+
-     }
-+
-+    ///////////////////////////////////////////////////////////////////
-+    cout << string(80, '*') << endl << endl;
-+    ///////////////////////////////////////////////////////////////////
-+
-     return false;
- }
- 
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.h fast-downward/src/search/operator_counting/pho_constraints.h
---- fast-downward-original/src/search/operator_counting/pho_constraints.h	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/pho_constraints.h	2018-11-06 18:41:04.000000000 -0200
-@@ -23,6 +23,7 @@
-     std::shared_ptr<pdbs::PDBCollection> pdbs;
- public:
-     explicit PhOConstraints(const options::Options &opts);
-+    ~PhOConstraints() = default;
- 
-     virtual void initialize_constraints(
-         const std::shared_ptr<AbstractTask> &task,
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/state_equation_constraints.cc fast-downward/src/search/operator_counting/state_equation_constraints.cc
---- fast-downward-original/src/search/operator_counting/state_equation_constraints.cc	2018-12-24 16:48:31.000000000 -0200
-+++ fast-downward/src/search/operator_counting/state_equation_constraints.cc	2018-11-06 18:47:12.000000000 -0200
-@@ -86,6 +86,24 @@
- 
- bool StateEquationConstraints::update_constraints(const State &state,
-                                                   lp::LPSolver &lp_solver) {
-+
-+    int size = 0;
-+    for (size_t var = 0; var < propositions.size(); ++var) {
-+        int num_values = propositions[var].size();
-+        for (int value = 0; value < num_values; ++value) {
-+            const Proposition &prop = propositions[var][value];
-+            if (prop.constraint_index >= 0) {
-+                size++;
-+            }
-+        }
-+    }
-+
-+    ///////////////////////////////////////////////////////////////////
-+    cout << endl;
-+    cout << string(80, '*') << endl;
-+    cout << "# StateEquation Constraints(" << size << "): " << endl;
-+    ///////////////////////////////////////////////////////////////////
-+
-     // Compute the bounds for the rows in the LP.
-     for (size_t var = 0; var < propositions.size(); ++var) {
-         int num_values = propositions[var].size();
-@@ -106,9 +124,31 @@
-                 }
-                 lp_solver.set_constraint_lower_bound(
-                     prop.constraint_index, lower_bound);
-+
-+                ///////////////////////////////////////////////////////////////////
-+                lp_solver.all_constraints[prop.constraint_index].set_lower_bound(lower_bound);
-+                lp::LPConstraint constraint = lp_solver.all_constraints[prop.constraint_index];
-+                cout << "constraints.append(Constraint(";
-+                for (int j = 0; j < (int) constraint.get_variables().size(); ++j) {
-+                    int var = constraint.get_variables()[j];
-+                    double coe = constraint.get_coefficients()[j];
-+                    cout << coe << "*X[" << var << "]";
-+                    if (j < (int) constraint.get_variables().size() - 1) {
-+                        cout << " + ";
-+                    }
-+                }
-+                cout << ", lb=" << constraint.get_lower_bound();
-+                cout << ", ub=" << constraint.get_upper_bound() << "))" << endl;
-+                ///////////////////////////////////////////////////////////////////
-+
-             }
-         }
-     }
-+
-+    ///////////////////////////////////////////////////////////////////
-+    cout << string(80, '*') << endl << endl;
-+    ///////////////////////////////////////////////////////////////////
-+
-     return false;
- }
- 
-@@ -151,4 +191,5 @@
- }
- 
- static Plugin<ConstraintGenerator> _plugin("state_equation_constraints", _parse);
-+
- }
 Binary files fast-downward-original/src/validate and fast-downward/src/validate differ
