@@ -16,7 +16,7 @@ pushd ../fast-downward
 FD_REV=`hg id -n`
 FD_REV=${FD_REV::-1} #Strip the + at the end
 echo "Making patch from revision ${FD_REV}"
-echo $FD_REV > $DIR/fd-patch-rev.txt
+echo $FD_REV > $DIR/fd-patch-rev
 pushd ..
 
 if [[ ! -d "fast-downward-original" ]]; then

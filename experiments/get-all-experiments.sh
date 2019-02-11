@@ -55,6 +55,11 @@ for domain in "${domains[@]}"; do
 		bash ../patch-blocks-world.sh
 		popd
 	fi
+	if [ $domain = "kitchen" ]; then
+		pushd $domain
+		bash ../patch-kitchen.sh
+		popd
+	fi
 	bash prepare-domain.sh $domain
 done
 

@@ -23,7 +23,7 @@ if [[ ! -d "$DOWNWARD_COIN_ROOT64" ]]; then
 else
 	echo "OSI Present"
 fi
-FD_REV=`cat fd-patch-rev.txt`
+FD_REV=`cat fd-patch-rev`
 pushd ..
 if [[ ! -d "$FD_ROOT" ]]; then
 	echo "Downloading Fast Downward"
