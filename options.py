@@ -17,7 +17,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:v:c:r:s",
+                                       "e:ht:m:vcrs",
                                        ["experiment=",
                                         "help",
                                         "max-time=",

@@ -45,7 +45,7 @@ class PRCommand:
                 if not '--' in line:
                     if self.h_value == 'n/a':
                         self.h_value = float(line)
-                        #print("value for %s is %d\n"%(self.problem,self.h_value))
+                        # print("value for %s is %d\n"%(self.problem,self.h_value))
                     else: # Gather operator counts
                         operator,count = line.split('=')
                         self.op_counts[operator.strip()] = float(count.strip())
@@ -106,6 +106,7 @@ class Hypothesis:
             # self.score = float( plan_for_H_cmd.num_obs_accounted)
             # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
             self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
+            # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
             self.score = float(pr_cmd.h_value)
 
             # self.score = float(hits)/float(hits+misses)
