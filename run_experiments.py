@@ -1,7 +1,8 @@
 #!/usr/bin/env python2
 
 import sys, os, csv, time, math
-from plan_recognition import Hypothesis, LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, custom_partition, Program_Options
+from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, Program_Options 
+from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
     def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c):

@@ -27,6 +27,8 @@ git push
 
 ## Running LP-Recognizer
 
+### Running plan recognition in a single problem
+
 Our Python code was based off of Ramirez and Geffner's original recognizer, so experiments are in the form of a ```tar.bz2``` file containing:
 
 - A PDDL Domain
@@ -46,3 +48,22 @@ Where ```<experiment_file>``` is one of the experiments in your dataset. For exa
 ```bash
 ./plan_recognition.py -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
+
+### Running plan recognition in a set of experiments 
+
+In order to run experiments for an entire domain organized in a folder named ```domain```, you need to run:
+
+```bash
+./run_experiments.py <domain>
+```
+
+
+For example, to run all Sokoban experiments, you would run
+
+```bash
+./run_experiments.py sokoban
+```
+
+### Running plan recognition 
+
+In order to run all of the experiments in our paper ```replace with citation```, you need to run ```experiments/run-all-experiments.sh```, which will run every single domain for all approaches. 
