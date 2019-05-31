@@ -36,17 +36,23 @@ Our Python code was based off of Ramirez and Geffner's original recognizer, so e
 - A number of hypotheses (possible goal formulas)
 - A PDDL Problem Template (containing the initial state)
 
-This recognizer is compatible with all the domains in this publicly available dataset of [Goal and Plan Recognition Datasets](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset)
+This recognizer is compatible with all the domains in this publicly available dataset of [Goal and Plan Recognition Datasets](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset). We currently implement four different approaches to goal recognition based on operator counts:
+
+1.  Comparing overlap of observations and operator counts, accessible with the ```-v``` switch
+2.  Minimizing the operator counts subject to constraints derived from the observations (i.e. all observations must be included in the counts), accessible with the ```-c``` switch
+3. Minimizing the difference between the operator counts with the observation constraints and the operator counts with then, accessible with the ```-d``` switch
+4. Minimizing the operator counts subject to soft constraints on the observations (i.e. trying to include as many observations in the counts while minimizing total count), accessible with the ```-s``` switch
 
 To run any experiment, just run:
 ```bash
-python plan_recognition.py -e <experiment_file>
+python plan_recognition.py <heuristics> -e <experiment_file>
 ``` 
 
-Where ```<experiment_file>``` is one of the experiments in your dataset. For example, with the experiments we provide here:
+Where ```<experiment_file>``` is one of the experiments in your dataset. 
+For example, with the experiments we provide here, we could run sokoban with the hard constraints strategy as follows:
 
 ```bash
-./plan_recognition.py -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
+./plan_recognition.py -c -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments 
@@ -54,14 +60,14 @@ Where ```<experiment_file>``` is one of the experiments in your dataset. For exa
 In order to run experiments for an entire domain organized in a folder named ```domain```, you need to run:
 
 ```bash
-./run_experiments.py <domain>
+./run_experiments.py <heuristics> <domain>
 ```
 
 
-For example, to run all Sokoban experiments, you would run
+For example, to run all Sokoban experiments, using all the heuristics you need to run:
 
 ```bash
-./run_experiments.py sokoban
+./run_experiments.py -v -c -d -s sokoban
 ```
 
 ### Running plan recognition 
