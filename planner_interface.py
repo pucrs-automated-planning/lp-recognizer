@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
-
 import sys, os, csv, time, math
+import benchmark
 
 fd_path = "../fast-downward/"
 
