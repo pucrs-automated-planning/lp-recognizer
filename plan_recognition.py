@@ -3,7 +3,6 @@
 # Code originally developed by Miquel Ramirez
 import sys, os, csv, time, math
 from options import Program_Options
-import benchmark
 from operator import attrgetter
 
 from planner_interface import Observations, PRCommand, Hypothesis
