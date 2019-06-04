@@ -75,25 +75,21 @@ class LPRecognizerHValue(PlanRecognizer):
         for i in range(0, len(self.hyps)):
            self.hyps[i].evaluate(i, self.observations)
 
-        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
+                # Select unique goal
                 if not self.unique_goal or h.score < self.unique_goal.score:
                    self.unique_goal = h
                 elif h.score == self.unique_goal.score and h.obs_hits > self.unique_goal.obs_hits:
                     self.unique_goal = h
-
-        # Select multi goal with tie-breaking
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal with tie-breaking
                 if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
                     self.multi_goal_tie_breaking.append(h)
-
-        # Select multi goal
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal
                 if h.score == self.unique_goal.score:
-                    self.multi_goal_no_tie_breaking.append(h)                    
+                    self.multi_goal_no_tie_breaking.append(h)
+                
+                
         
 class LPRecognizerHValueC(LPRecognizerHValue):
 
@@ -120,23 +116,18 @@ class LPRecognizerHValueC(LPRecognizerHValue):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
 
-        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
+                # Select unique goal
                 if not self.unique_goal or h.score < self.unique_goal.score:
                    self.unique_goal = h
-
-        # Select multi goal with tie-breaking
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal with tie-breaking
                 if h.score == self.unique_goal.score:
                     self.multi_goal_tie_breaking.append(h)
-
-        # Select multi goal
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal (I know it's the same check as above)
                 if h.score == self.unique_goal.score:
                     self.multi_goal_no_tie_breaking.append(h) 
+
 
 class LPRecognizerSoftC(LPRecognizerHValue):
 
@@ -163,25 +154,20 @@ class LPRecognizerSoftC(LPRecognizerHValue):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
         
-        # Select unique goal
         for h in self.hyps:
             if not h.test_failed:
+                # Select unique goal
                 if not self.unique_goal or h.obs_hits > self.unique_goal.obs_hits:
                     self.unique_goal  = h
                 elif h.obs_hits == self.unique_goal.obs_hits and h.score < self.unique_goal.score:
                     self.unique_goal  = h
-
-        # Select multi goal with tie-breaking
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal with tie-breaking
                 if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
                     self.multi_goal_tie_breaking.append(h)
-        
-        # Select multi goal
-        for h in self.hyps:
-            if not h.test_failed:
+                # Select multi goal
                 if h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_no_tie_breaking.append(h)        
+                    self.multi_goal_no_tie_breaking.append(h)
+                
 
 class LPRecognizerDiffHValueC(LPRecognizerHValue):
     def __init__(self, options):
