@@ -166,6 +166,9 @@ class Observations:
         for line in instream:
             self.observations.append(line.strip().lower())
 
+    def __len__(self):
+        return len(self.observations)
+
     def compute_count_intersection(self, opcounts):
         counts = dict(opcounts)
         hitcount = 0
