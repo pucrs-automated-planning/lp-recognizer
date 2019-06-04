@@ -6,7 +6,7 @@ from options import Program_Options
 import benchmark
 from operator import attrgetter
 
-import planner_interface
+from planner_interface import Observations, PRCommand, Hypothesis
 
 class PlanRecognizer:
     
@@ -17,6 +17,7 @@ class PlanRecognizer:
         self.unique_goal = None
         self.multi_goal_tie_breaking = []
         self.multi_goal_no_tie_breaking = []
+        self.multi_goal_missing_compensation = [] # 
         self.name = None
 
     def load_hypotheses(self):
@@ -88,6 +89,7 @@ class LPRecognizerHValue(PlanRecognizer):
                 # Select multi goal
                 if h.score == self.unique_goal.score:
                     self.multi_goal_no_tie_breaking.append(h)
+                # Compensate for partial observability
                 
                 
         
