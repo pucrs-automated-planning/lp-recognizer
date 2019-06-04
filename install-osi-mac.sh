@@ -3,7 +3,7 @@ pushd ..
 export DOWNWARD_CPLEX_ROOT64=/Applications/CPLEX_Studio_Community128/cplex
 # You should probably change the line below to match where you want COIN64
 # export DOWNWARD_COIN_ROOT64=~/Documents/workspace-planning/coin64
-export DOWNWARD_COIN_ROOT64=`pwd`/../coin64 
+export DOWNWARD_COIN_ROOT64=`pwd`/coin64 
 wget -c http://www.coin-or.org/download/source/Osi/Osi-0.107.9.tgz
 tar xvzf Osi-0.107.9.tgz
 cd Osi-0.107.9
