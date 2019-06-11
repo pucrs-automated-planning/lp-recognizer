@@ -11,13 +11,14 @@ def usage():
     print >> sys.stderr, "-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations"
     print >> sys.stderr, "-d  --diff-h-value-c             Plan recognition by difference between h-value-c and h-value"
     print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"    
+    print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
 
 class Program_Options:
 
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:vcrs",
+                                       "e:ht:m:vcrsdu",
                                        ["experiment=",
                                         "help",
                                         "max-time=",
@@ -25,7 +26,8 @@ class Program_Options:
                                         "h-value",
                                         "h-value-c",
                                         "diff-h-value-c",
-                                        "soft-c"])
+                                        "soft-c",
+                                        "h-value-c-uncertainty"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -39,7 +41,8 @@ class Program_Options:
         self.max_memory = 1024
         self.h_value = False
         self.h_value_c = False
-        self.diff_h_value_c  = False        
+        self.diff_h_value_c  = False
+        self.h_value_c_uncertainty = False
         self.soft_c = False    
         for opcode, oparg in opts:
             if opcode in ('-h', '--help'):
@@ -77,7 +80,9 @@ class Program_Options:
             if opcode in ('-d', '--diff-h-value-c'):
                 self.diff_h_value_c  = True                
             if opcode in ('-s', '--soft-c '):
-                self.soft_c = True   
+                self.soft_c = True
+            if opcode in ('-u', '--h-value-c-uncertainty '):
+                self.h_value_c_uncertainty = True   
 
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"

@@ -64,7 +64,8 @@ class PlanRecognizer:
         print(max(hyps))
 
     def run_recognizer(self):
-        return None
+        # return None
+        raise NotImplementedError("You need to implement your method to run the recognizer")
 
 
 class LPRecognizerHValue(PlanRecognizer):
@@ -124,6 +125,37 @@ class LPRecognizerHValueC(LPRecognizerHValue):
                 # Select multi goal (I know it's the same check as above)
                 if h.score == self.unique_goal.score:
                     self.multi_goal_no_tie_breaking.append(h) 
+
+
+class LPRecognizerHValueUncertainty(LPRecognizerHValue):
+    def __init__(self, options):
+        LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False)
+        self.name = "h-value-c-uncertainty"
+
+    def run_recognizer(self):
+        for i in range(0, len(self.hyps)):
+            self.hyps[i].evaluate(i, self.observations)
+
+        # Select unique goal
+        for h in self.hyps:
+            if not h.test_failed:
+                if not self.unique_goal or h.score < self.unique_goal.score:
+                   self.unique_goal = h
+
+        # Compute presumed uncertainty (score is the operator count)
+        theta = self.unique_goal.score - len(self.observations)
+        # print("Minimum score is %f, observation length is %f, theta is %f "%(self.unique_goal.score, len(self.observations), theta))
+
+        # Select other goals
+        for h in self.hyps:
+            if not h.test_failed:
+                # print("H score is %f"%h.score)
+                # Select multi goal with tie-breaking
+                if h.score < self.unique_goal.score + theta:
+                    self.multi_goal_tie_breaking.append(h)
+                # Select multi goal (I know it's the same check as above)
+                if h.score < self.unique_goal.score + theta:
+                    self.multi_goal_no_tie_breaking.append(h)     
 
 
 class LPRecognizerSoftC(LPRecognizerHValue):
@@ -230,6 +262,10 @@ def main():
     if options.soft_c:
         recognizer = LPRecognizerSoftC(options)
         run_recognizer(recognizer)
+    if options.h_value_c_uncertainty:
+        recognizer = LPRecognizerHValueUncertainty(options)
+        run_recognizer(recognizer)
+        
    
     #cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
 
