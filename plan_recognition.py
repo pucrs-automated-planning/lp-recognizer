@@ -9,9 +9,11 @@ from planner_interface import Observations, PRCommand, Hypothesis
 
 class PlanRecognizer:
     
-    def __init__(self, options):
+    def __init__(self, options, constraints = False, soft_constraints = False):
         self.options = options
         self.observations = Observations('obs.dat')
+        self.constraints = constraints
+        self.soft_constraints = soft_constraints
         self.hyps = self.load_hypotheses()
         self.unique_goal = None
         self.multi_goal_tie_breaking = []
@@ -25,7 +27,7 @@ class PlanRecognizer:
 
         for line in instream:
             line = line.strip()
-            H = Hypothesis()
+            H = Hypothesis(self.constraints,self.soft_constraints)
             H.atoms = [tok.strip() for tok in line.split(',')]
             H.check_if_actual()
             hyps.append(H)
@@ -67,8 +69,8 @@ class PlanRecognizer:
 
 class LPRecognizerHValue(PlanRecognizer):
 
-    def __init__(self, options):
-        PlanRecognizer.__init__(self,options)
+    def __init__(self, options, constraints = False, soft_constraints = False):
+        PlanRecognizer.__init__(self,options,constraints,soft_constraints)
         self.name = "h-value"
 
     def run_recognizer(self):
@@ -100,23 +102,8 @@ class LPRecognizerHValue(PlanRecognizer):
 class LPRecognizerHValueC(LPRecognizerHValue):
 
     def __init__(self, options):
-        LPRecognizerHValue.__init__(self,options)
+        LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False)
         self.name = "h-value-c"
-
-    def load_hypotheses(self):
-        hyps = []
-        instream = open('hyps.dat')
-
-        for line in instream:
-            line = line.strip()
-            H = Hypothesis(True, False)
-            H.atoms = [tok.strip() for tok in line.split(',')]
-            H.check_if_actual()
-            hyps.append(H)
-
-        instream.close()
-
-        return hyps
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -142,23 +129,8 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 class LPRecognizerSoftC(LPRecognizerHValue):
 
     def __init__(self, options):
-        LPRecognizerHValue.__init__(self,options)
+        LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
         self.name = "soft-c"
-
-    def load_hypotheses(self):
-        hyps = []
-        instream = open('hyps.dat')
-
-        for line in instream:
-            line = line.strip()
-            H = Hypothesis(False, True)
-            H.atoms = [tok.strip() for tok in line.split(',')]
-            H.check_if_actual()
-            hyps.append(H)
-
-        instream.close()
-
-        return hyps
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
