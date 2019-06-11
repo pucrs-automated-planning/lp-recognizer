@@ -33,7 +33,7 @@ fi
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -v -c -s -d
+	python2 run_experiments.py $domain -v -c -s -d -u
 	# python2 run_experiments.py $domain -v
 # 	mkdir results/h_value
 # 	mv *.txt ./results/h_value
