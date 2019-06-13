@@ -242,7 +242,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
     file_experiment.write(experiments_result)
     final_time = time.time() - experiment_time
     file_experiment.close()
-    print('Experiment Time: {0:3f}'.format(final_time))
+    print('Experiment Time: {0:3f}s'.format(final_time))
 
 
 def main():
