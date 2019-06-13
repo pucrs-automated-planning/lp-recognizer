@@ -1,11 +1,11 @@
 #!/usr/bin/env python2
 
 import sys, os, csv, time, math
-from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, Program_Options 
+from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
-    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c):
+    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty):
         self.unique_correct = 0        
         self.multi_tie_breaking_correct = 0
         self.multi_tie_breaking_spread = 0
@@ -16,6 +16,7 @@ class Experiment:
         self.h_value_c = h_value_c
         self.soft_c = soft_c
         self.diff_h_value_c = diff_h_value_c
+        self.h_value_c_uncertainty = h_value_c_uncertainty
         self.totalTime = 0
 
     def reset(self):
@@ -35,7 +36,9 @@ class Experiment:
         if self.soft_c:  
             recognizer = LPRecognizerSoftC(options)                   
         if self.diff_h_value_c:
-            recognizer = LPRecognizerDiffHValueC(options) 
+            recognizer = LPRecognizerDiffHValueC(options)
+        if self.h_value_c_uncertainty:
+             recognizer = LPRecognizerHValueUncertainty(options)
         
         startTime = time.time()
         recognizer.run_recognizer()
@@ -55,7 +58,7 @@ class Experiment:
     def __repr__(self):
         return "UC=%d MTBC=%d MTBS=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_tie_breaking_correct,self.multi_tie_breaking_spread,self.multi_correct,self.multi_spread,self.candidate_goals)
 
-def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c):
+def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty):
     experiment_time = time.time()
     totalProblems = 0
 
@@ -96,6 +99,14 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
         experiments["diff-h-value-c"] = Experiment(False, False, False, True)
         experiments_tables["diff-h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["diff-h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    if h_value_c_uncertainty:
+        print_text = print_text  + " h-value-c-uncertainty"
+        experiments_result = experiments_result  + ",h-value-c-uncertainty"
+        experiment_names.append("h-value-c-uncertainty")
+        experiments["h-value-c-uncertainty"] = Experiment(False, False, False, False, True)
+        experiments_tables["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+        experiments_tables_tb["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+
     print_text = print_text + "\n"
     experiments_result = experiments_result + "\n"
 
@@ -106,6 +117,8 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
     if soft_c:
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
     if diff_h_value_c:
+        experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
+    if h_value_c_uncertainty:
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
     print_text = print_text + "\n"
     experiments_result = experiments_result + "\n"
@@ -252,8 +265,10 @@ def main():
         soft_c = True        
     if "-d" in sys.argv:
         diff_h_value_c = True
+    if "-u" in sys.argv:
+        h-value-c-uncertainty = True
 
-    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c)
+    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h-value-c-uncertainty)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
