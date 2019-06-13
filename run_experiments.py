@@ -5,7 +5,7 @@ from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPReco
 from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
-    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty):
+    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty=False):
         self.unique_correct = 0        
         self.multi_tie_breaking_correct = 0
         self.multi_tie_breaking_spread = 0
