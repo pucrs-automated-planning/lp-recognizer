@@ -266,9 +266,9 @@ def main():
     if "-d" in sys.argv:
         diff_h_value_c = True
     if "-u" in sys.argv:
-        h-value-c-uncertainty = True
+        h_value_c_uncertainty = True
 
-    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h-value-c-uncertainty)
+    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
