@@ -2759,8 +2759,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/mer
      void dump_dot_graph() const;
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-02-07 18:16:12.000000000 -0200
-@@ -0,0 +1,346 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-08-08 17:53:05.000000000 -0300
+@@ -0,0 +1,348 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -2959,7 +2959,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +    double infinity = lp_solver.get_infinity();
 +    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+        lp::LPConstraint constraint(1, infinity);
++        double num_count = std::count(observations.begin(), observations.end(), (*it));
++        cout << num_count << endl;
++        lp::LPConstraint constraint(num_count, infinity);
 +
 +        cout << "constraint " << (*it) << ": " << std::to_string(op_indexes[*it]) << endl;
 +        constraint.insert(op_indexes[*it], 1);

@@ -143,7 +143,7 @@ class LPRecognizerHValueUncertainty(LPRecognizerHValue):
                    self.unique_goal = h
 
         # Compute presumed uncertainty (score is the operator count)
-        theta = self.unique_goal.score - len(self.observations)
+        theta = self.options.theta*(self.unique_goal.score - len(self.observations))
         # print("Minimum score is %f, observation length is %f, theta is %f "%(self.unique_goal.score, len(self.observations), theta))
 
         # Select other goals

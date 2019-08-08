@@ -18,11 +18,12 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:vcrsdu",
+                                       "e:ht:m:T:vcrsdu",
                                        ["experiment=",
                                         "help",
                                         "max-time=",
                                         "max-memory=",
+                                        "theta=",
                                         "h-value",
                                         "h-value-c",
                                         "diff-h-value-c",
@@ -42,8 +43,10 @@ class Program_Options:
         self.h_value = False
         self.h_value_c = False
         self.diff_h_value_c  = False
+        self.soft_c = False
         self.h_value_c_uncertainty = False
-        self.soft_c = False    
+        self.theta = 1.0 # Multiplier for any slack parameter 
+
         for opcode, oparg in opts:
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
@@ -72,6 +75,15 @@ class Program_Options:
                         sys.exit(1)
                 except ValueError:
                     print >> sys.stderr, "Memory amount must be an integer"
+                    sys.exit(1)
+            if opcode in ('-T', '--theta'):
+                try:
+                    self.theta = float(oparg)
+                    if self.theta <= 0:
+                        print >> sys.stderr, "Theta parameter must be greater than zero"
+                        sys.exit(1)
+                except ValueError:
+                    print >> sys.stderr, "Theta value must be a number"
                     sys.exit(1)
             if opcode in ('-v', '--hvalue'):
                 self.h_value = True

@@ -60,14 +60,14 @@ For example, with the experiments we provide here, we could run sokoban with the
 In order to run experiments for an entire domain organized in a folder named ```domain```, you need to run:
 
 ```bash
-./run_experiments.py <heuristics> <domain>
+./run_experiments.py <domain> <heuristics>
 ```
 
 
 For example, to run all Sokoban experiments, using all the heuristics you need to run:
 
 ```bash
-./run_experiments.py -v -c -d -s sokoban
+./run_experiments.py sokoban -v -c -d -s
 ```
 
 ### Running plan recognition 

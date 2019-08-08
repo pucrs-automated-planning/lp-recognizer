@@ -257,6 +257,8 @@ def main():
     h_value_c = False
     diff_h_value_c = False
     soft_c = False
+    h_value_c_uncertainty = True
+    
     if "-v" in sys.argv:
         h_value = True
     if "-c" in sys.argv:
