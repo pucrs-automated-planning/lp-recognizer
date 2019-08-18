@@ -100,19 +100,27 @@ def run(cmd, timeout, memory, log=None, verbose=True):
     log.suspend()
 
     time_passed_before = os.times()[2] + os.times()[3]
-    pid = os.fork()
-    if not pid:
-        # resource.setrlimit(resource.RLIMIT_CPU, (timeout - time_slack, timeout)) # This is not working here..
-        # resource.setrlimit(resource.RLIMIT_DATA, (memory, memory))
-        # resource.setrlimit(resource.RLIMIT_RSS, (memory, memory))
-        resource.setrlimit(resource.RLIMIT_AS, (memory, memory))
-        resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
-        signal = os.system(cmd)
-        if signal % 256 == 0:
-            os._exit(signal // 256)
-        os._exit(signal % 256)
+     # FRM - commented this out to debug, since this seems to break VSCode
+    # pid = os.fork()
+    # if not pid:
+    #     # resource.setrlimit(resource.RLIMIT_CPU, (timeout - time_slack, timeout)) # This is not working here..
+    #     # resource.setrlimit(resource.RLIMIT_DATA, (memory, memory))
+    #     # resource.setrlimit(resource.RLIMIT_RSS, (memory, memory))
+    #     resource.setrlimit(resource.RLIMIT_AS, (memory, memory))
+    #     resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+    #     signal = os.system(cmd)
+    #     if signal % 256 == 0:
+    #         os._exit(signal // 256)
+    #     os._exit(signal % 256)
 
-    signal = os.waitpid(pid, 0)[1]
+    # signal = os.waitpid(pid, 0)[1]
+
+    ## Begin Alternate Code
+    resource.setrlimit(resource.RLIMIT_AS, (memory, memory))
+    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+    signal = os.system(cmd)
+
+    ## End Alternate Code
 
     log.resume()
     time_passed = (os.times()[2] + os.times()[3]) - time_passed_before
