@@ -18,8 +18,9 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "e:ht:m:T:vcrsdu",
-                                       ["experiment=",
+                                       "be:ht:m:T:vcrsdu",
+                                       ["batch",
+                                        "experiment=",
                                         "help",
                                         "max-time=",
                                         "max-memory=",
@@ -34,6 +35,7 @@ class Program_Options:
             usage()
             sys.exit(1)
 
+        self.batch = False
         self.exp_file = None
         self.domain_name = None
         self.instance_names = []
@@ -45,9 +47,12 @@ class Program_Options:
         self.diff_h_value_c  = False
         self.soft_c = False
         self.h_value_c_uncertainty = False
-        self.theta = 1.0 # Multiplier for any slack parameter 
+        self.theta = 0.2 # Multiplier for any slack parameter 
 
         for opcode, oparg in opts:
+            if opcode in ('-b', '--batch'):
+                print >> sys.stderr, "Running batch experiments!"
+                self.batch = True
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
                 usage()
@@ -94,8 +99,13 @@ class Program_Options:
             if opcode in ('-s', '--soft-c '):
                 self.soft_c = True
             if opcode in ('-u', '--h-value-c-uncertainty '):
-                self.h_value_c_uncertainty = True   
+                self.h_value_c_uncertainty = True
 
+        # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)
+        if self.batch:
+            print >> sys.stderr, "Not checking other files"
+            return
+        
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"
             usage()

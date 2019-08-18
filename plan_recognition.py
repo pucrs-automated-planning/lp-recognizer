@@ -127,9 +127,9 @@ class LPRecognizerHValueC(LPRecognizerHValue):
                     self.multi_goal_no_tie_breaking.append(h) 
 
 
-class LPRecognizerHValueUncertainty(LPRecognizerHValue):
+class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
     def __init__(self, options):
-        LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False)
+        LPRecognizerHValue.__init__(self, options, constraints=True, soft_constraints=False)
         self.name = "h-value-c-uncertainty"
 
     def run_recognizer(self):
@@ -143,18 +143,19 @@ class LPRecognizerHValueUncertainty(LPRecognizerHValue):
                    self.unique_goal = h
 
         # Compute presumed uncertainty (score is the operator count)
-        theta = self.options.theta*(self.unique_goal.score - len(self.observations))
-        # print("Minimum score is %f, observation length is %f, theta is %f "%(self.unique_goal.score, len(self.observations), theta))
+        # print(self.options.theta)
+        theta = max(0, self.options.theta*(self.unique_goal.score - len(self.observations)))
+        # print("Minimum score is %f, observation length is %f, theta is %f, theta param was %f "%(self.unique_goal.score, len(self.observations), theta, self.options.theta))
 
         # Select other goals
         for h in self.hyps:
             if not h.test_failed:
                 # print("H score is %f"%h.score)
                 # Select multi goal with tie-breaking
-                if h.score < self.unique_goal.score + theta:
+                if h.score - theta <= self.unique_goal.score:
                     self.multi_goal_tie_breaking.append(h)
                 # Select multi goal (I know it's the same check as above)
-                if h.score < self.unique_goal.score + theta:
+                if h.score - theta <= self.unique_goal.score:
                     self.multi_goal_no_tie_breaking.append(h)     
 
 
@@ -263,7 +264,7 @@ def main():
         recognizer = LPRecognizerSoftC(options)
         run_recognizer(recognizer)
     if options.h_value_c_uncertainty:
-        recognizer = LPRecognizerHValueUncertainty(options)
+        recognizer = LPRecognizerHValueCUncertainty(options)
         run_recognizer(recognizer)
         
    

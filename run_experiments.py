@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 import sys, os, csv, time, math
-from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueUncertainty, Program_Options 
+from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
@@ -38,7 +38,7 @@ class Experiment:
         if self.diff_h_value_c:
             recognizer = LPRecognizerDiffHValueC(options)
         if self.h_value_c_uncertainty:
-             recognizer = LPRecognizerHValueUncertainty(options)
+             recognizer = LPRecognizerHValueCUncertainty(options)
         
         startTime = time.time()
         recognizer.run_recognizer()
@@ -171,6 +171,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
             falsePositives = float(experiments[e].multi_spread - experiments[e].multi_correct)
             falseNegatives = float(experiments[e].candidate_goals - experiments[e].multi_correct)
             # print("TP=%2.4f TN=%2.4f FP=%2.4f FN=%2.4f"%(truePositives,trueNegatives,falsePositives,falseNegatives))
+            print("TP=%2.4f TN=%2.4f FP=%2.4f FN=%2.4f MSpread=%2.4f MTBSpread=%2.4f"%(truePositives,trueNegatives,falsePositives,falseNegatives,experiments[e].multi_spread, experiments[e].multi_tie_breaking_spread))
 
             accuracy = float(experiments[e].multi_correct)/float(problems)
             precision = truePositives/float(experiments[e].multi_spread) if experiments[e].multi_spread != 0 else 0
@@ -195,7 +196,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
             trueNegatives = float(experiments[e].candidate_goals - experiments[e].multi_tie_breaking_spread)
             falsePositives = float(experiments[e].multi_tie_breaking_spread - experiments[e].multi_tie_breaking_correct)
             falseNegatives = float(experiments[e].candidate_goals - experiments[e].multi_tie_breaking_correct)
-            # print("TP=%2.4f TN=%2.4f FP=%2.4f FN=%2.4f"%(truePositives,trueNegatives,falsePositives,falseNegatives))
+            print("TP=%2.4f TN=%2.4f FP=%2.4f FN=%2.4f MSpread=%2.4f MTBSpread=%2.4f"%(truePositives,trueNegatives,falsePositives,falseNegatives,experiments[e].multi_spread, experiments[e].multi_tie_breaking_spread))
 
             accuracy = float(experiments[e].multi_tie_breaking_correct)/float(problems)
             precision = truePositives/float(experiments[e].multi_tie_breaking_spread) if experiments[e].multi_tie_breaking_spread != 0 else 0
