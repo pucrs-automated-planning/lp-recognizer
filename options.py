@@ -9,16 +9,17 @@ def usage():
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
     print >> sys.stderr, "-v  --hvalue                     Plan recognition by h-value"
     print >> sys.stderr, "-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations"
-    print >> sys.stderr, "-d  --diff-h-value-c             Plan recognition by difference between h-value-c and h-value"
+    print >> sys.stderr, "-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value"
     print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"    
     print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
+    print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"    
 
 class Program_Options:
 
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "be:ht:m:T:vcrsdu",
+                                       "be:ht:m:T:vcrsdun",
                                        ["batch",
                                         "experiment=",
                                         "help",
@@ -27,9 +28,10 @@ class Program_Options:
                                         "theta=",
                                         "h-value",
                                         "h-value-c",
-                                        "diff-h-value-c",
+                                        "delta-h-c",
                                         "soft-c",
-                                        "h-value-c-uncertainty"])
+                                        "h-value-c-uncertainty",
+                                        "delta-h-c-uncertainty"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -44,10 +46,11 @@ class Program_Options:
         self.max_memory = 1024
         self.h_value = False
         self.h_value_c = False
-        self.diff_h_value_c  = False
+        self.delta_h_c  = False
         self.soft_c = False
         self.h_value_c_uncertainty = False
-        self.theta = 0.2 # Multiplier for any slack parameter 
+        self.delta_h_c_uncertainty = False
+        self.theta = 1 # Multiplier for any slack parameter 
 
         for opcode, oparg in opts:
             if opcode in ('-b', '--batch'):
@@ -94,12 +97,14 @@ class Program_Options:
                 self.h_value = True
             if opcode in ('-c', '--h-value-c'):
                 self.h_value_c = True
-            if opcode in ('-d', '--diff-h-value-c'):
-                self.diff_h_value_c  = True                
+            if opcode in ('-d', '--delta-h-c'):
+                self.delta_h_c  = True                
             if opcode in ('-s', '--soft-c '):
                 self.soft_c = True
             if opcode in ('-u', '--h-value-c-uncertainty '):
                 self.h_value_c_uncertainty = True
+            if opcode in ('-n', '--delta-h-c-uncertainty'):
+                self.delta_h_c_uncertainty = True
 
         # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)
         if self.batch:

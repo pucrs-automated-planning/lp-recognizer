@@ -1,11 +1,11 @@
 #!/usr/bin/env python2
 
 import sys, os, csv, time, math
-from plan_recognition import LPRecognizerDiffHValueC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, Program_Options 
+from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
-    def __init__(self, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty=False):
+    def __init__(self, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty=False, delta_h_c_uncertainty = False):
         self.unique_correct = 0        
         self.multi_tie_breaking_correct = 0
         self.multi_tie_breaking_spread = 0
@@ -15,8 +15,9 @@ class Experiment:
         self.h_value = h_value
         self.h_value_c = h_value_c
         self.soft_c = soft_c
-        self.diff_h_value_c = diff_h_value_c
+        self.delta_h_c = delta_h_c
         self.h_value_c_uncertainty = h_value_c_uncertainty
+        self.delta_h_c_uncertainty = delta_h_c_uncertainty
         self.totalTime = 0
 
     def reset(self):
@@ -35,10 +36,12 @@ class Experiment:
             recognizer = LPRecognizerHValueC(options)   
         if self.soft_c:  
             recognizer = LPRecognizerSoftC(options)                   
-        if self.diff_h_value_c:
-            recognizer = LPRecognizerDiffHValueC(options)
+        if self.delta_h_c:
+            recognizer = LPRecognizerDeltaHC(options)
         if self.h_value_c_uncertainty:
-             recognizer = LPRecognizerHValueCUncertainty(options)
+            recognizer = LPRecognizerHValueCUncertainty(options)
+        if self.delta_h_c_uncertainty:
+            recognizer = LPRecognizerDeltaHCUncertainty(options)
         
         startTime = time.time()
         recognizer.run_recognizer()
@@ -58,7 +61,7 @@ class Experiment:
     def __repr__(self):
         return "UC=%d MTBC=%d MTBS=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_tie_breaking_correct,self.multi_tie_breaking_spread,self.multi_correct,self.multi_spread,self.candidate_goals)
 
-def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty):
+def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty):
     experiment_time = time.time()
     totalProblems = 0
 
@@ -92,13 +95,13 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
         experiments["soft-c"] = Experiment(False, False, True, False)
         experiments_tables["soft-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["soft-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
-    if diff_h_value_c:
-        print_text = print_text  + " diff-h-value-c"
-        experiments_result = experiments_result  + ",diff-h-value-c"
-        experiment_names.append("diff-h-value-c")
-        experiments["diff-h-value-c"] = Experiment(False, False, False, True)
-        experiments_tables["diff-h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
-        experiments_tables_tb["diff-h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    if delta_h_c:
+        print_text = print_text  + " delta-h-c"
+        experiments_result = experiments_result  + ",delta-h-c"
+        experiment_names.append("delta-h-c")
+        experiments["delta-h-c"] = Experiment(False, False, False, True)
+        experiments_tables["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+        experiments_tables_tb["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if h_value_c_uncertainty:
         print_text = print_text  + " h-value-c-uncertainty"
         experiments_result = experiments_result  + ",h-value-c-uncertainty"
@@ -106,6 +109,13 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
         experiments["h-value-c-uncertainty"] = Experiment(False, False, False, False, True)
         experiments_tables["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    if delta_h_c_uncertainty:
+        print_text = print_text  + " delta-h-c-uncertainty"
+        experiments_result = experiments_result  + ",delta-h-c-uncertainty"
+        experiment_names.append("delta-h-c-uncertainty")
+        experiments["delta-h-c-uncertainty"] = Experiment(False, False, False, False, True)
+        experiments_tables["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+        experiments_tables_tb["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
 
     print_text = print_text + "\n"
     experiments_result = experiments_result + "\n"
@@ -116,7 +126,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
     if soft_c:
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
-    if diff_h_value_c:
+    if delta_h_c:
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
     if h_value_c_uncertainty:
         experiments_result = experiments_result + ",U,UA,MY,MYA,MYS,MN,MNA,MNS"    
@@ -256,9 +266,10 @@ def main():
 
     h_value = False
     h_value_c = False
-    diff_h_value_c = False
+    delta_h_c = False
     soft_c = False
-    h_value_c_uncertainty = True
+    h_value_c_uncertainty = False
+    delta_h_c_uncertainty = False
     
     if "-v" in sys.argv:
         h_value = True
@@ -267,11 +278,13 @@ def main():
     if "-s" in sys.argv:
         soft_c = True        
     if "-d" in sys.argv:
-        diff_h_value_c = True
+        delta_h_c = True
     if "-u" in sys.argv:
         h_value_c_uncertainty = True
+    if "-n" in sys.argv:
+        delta_h_c_uncertainty = True
 
-    doExperiments(domainName, observability, h_value, h_value_c, soft_c, diff_h_value_c, h_value_c_uncertainty)
+    doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'

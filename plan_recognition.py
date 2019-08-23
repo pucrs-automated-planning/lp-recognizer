@@ -186,15 +186,46 @@ class LPRecognizerSoftC(LPRecognizerHValue):
                 # Select multi goal
                 if h.obs_hits == self.unique_goal.obs_hits:
                     self.multi_goal_no_tie_breaking.append(h)
-                
 
-class LPRecognizerDiffHValueC(LPRecognizerHValue):
+class LPRecognizerSoftCUncertainty(LPRecognizerHValue):
+
+    def __init__(self, options):
+        LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
+        self.name = "soft-c-uncertainty"
+
+    def run_recognizer(self):
+        for i in range(0, len(self.hyps)):
+            self.hyps[i].evaluate(i, self.observations)
+        
+        # Select unique goal (Goal with the maximum number of hits)
+        for h in self.hyps:
+            if not h.test_failed:
+                if not self.unique_goal or h.obs_hits > self.unique_goal.obs_hits:
+                    self.unique_goal  = h
+                elif h.obs_hits == self.unique_goal.obs_hits and h.score < self.unique_goal.score:
+                    self.unique_goal  = h
+
+        # Compute presumed uncertainty (score is the operator count)
+        # print(self.options.theta)
+        theta = max(0, self.options.theta*(self.unique_goal.score - len(self.observations)))
+
+        # Select other goals
+        for h in self.hyps:
+            if not h.test_failed:
+                # Select multi goal with tie-breaking
+                if h.score - theta <= self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_tie_breaking.append(h)
+                # Select multi goal
+                if h.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_no_tie_breaking.append(h)
+
+class LPRecognizerDeltaHC(LPRecognizerHValue):
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options)
         self.hsoft_recognizer = LPRecognizerSoftC(options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
         self.constraints_recognizer = LPRecognizerHValueC(options)
-        self.name = "diff-h-value-c"
+        self.name = "delta-h-c"
 
     def get_real_hypothesis(self):
         return self.hsoft_recognizer.get_real_hypothesis()
@@ -231,8 +262,62 @@ class LPRecognizerDiffHValueC(LPRecognizerHValue):
         for hs, hc in  zip(self.hsoft_recognizer.hyps, self.constraints_recognizer.hyps):
             if not hs.test_failed and not hc.test_failed:
                 if (hc.score - hs.score) == hyp_diff:
-                    self.multi_goal_no_tie_breaking.append(hs)    
+                    self.multi_goal_no_tie_breaking.append(hs) 
 
+
+class LPRecognizerDeltaHCUncertainty(LPRecognizerHValue):
+    def __init__(self, options):
+        LPRecognizerHValue.__init__(self,options)
+        self.hsoft_recognizer = LPRecognizerSoftC(options)
+        self.hvalue_recognizer = LPRecognizerHValue(options)
+        self.constraints_recognizer = LPRecognizerHValueC(options)
+        self.name = "delta-h-c-uncertainty"
+        self.min_h_c = None
+
+    def get_real_hypothesis(self):
+        return self.hsoft_recognizer.get_real_hypothesis()
+
+    def run_recognizer(self):
+        self.hvalue_recognizer.run_recognizer()
+        self.constraints_recognizer.run_recognizer()
+        self.hsoft_recognizer.run_recognizer()
+
+        hyp_diff = float("inf")
+        i = 0
+        # Select unique goal
+        for hv, hc, hs in  zip(self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps, self.hsoft_recognizer.hyps):
+            if not hs.test_failed and not hc.test_failed:  
+                hs.score = int((hs.score+hs.obs_hits)/10000)          
+                if not self.unique_goal or (hc.score - hs.score) < hyp_diff:
+                    self.unique_goal = hs
+                    hyp_diff = hc.score - hs.score
+                elif hc.score - hs.score == hyp_diff:
+                    if hs.obs_hits > self.unique_goal.obs_hits:
+                        self.unique_goal = hs    
+                #print('{0} - c: {1}, h: {2}, s: {3}, diff-current: {4}, obs-current: {7}, obs-hits-by-h: {5}, obs-hits-by-h: {6}'.format(i, hc.score, hv.score, hs.score, hyp_diff, hv.obs_hits, hs.obs_hits, self.unique_goal.obs_hits))                        
+            i = i + 1
+
+        # Select lowest h_c
+        for h in self.constraints_recognizer.hyps:
+            if not h.test_failed:
+                if not self.min_h_c or h.score < self.min_h_c:
+                   self.min_h_c = h
+        
+        theta = self.min_h_c.score - len(self.observations)
+
+        # Select multi goal with tie-breaking
+        for hs, hc in  zip(self.hsoft_recognizer.hyps, self.constraints_recognizer.hyps):
+            if not hs.test_failed and not hc.test_failed:
+                if (hc.score - hs.score) >= hyp_diff - theta and hs.obs_hits == self.unique_goal.obs_hits:
+                    self.multi_goal_tie_breaking.append(hs) 
+            #print('{0} - c: {1}, h: {2}, s: {3}, diff-current: {4}, obs-current: {7}, obs-hits-by-h: {5}, obs-hits-by-h: {6}'.format(i, hc.score, hv.score, hs.score, hyp_diff, hv.obs_hits, hs.obs_hits, self.unique_goal.obs_hits))                        
+   
+
+        # Select multi goal
+        for hs, hc in  zip(self.hsoft_recognizer.hyps, self.constraints_recognizer.hyps):
+            if not hs.test_failed and not hc.test_failed:
+                if (hc.score - hs.score) >= hyp_diff - theta:
+                    self.multi_goal_no_tie_breaking.append(hs) 
 
 def run_recognizer(recognizer):
     recognizer.run_recognizer()
@@ -257,8 +342,8 @@ def main():
     if options.h_value_c:
         recognizer = LPRecognizerHValueC(options)
         run_recognizer(recognizer)
-    if options.diff_h_value_c:
-        recognizer = LPRecognizerDiffHValueC(options)
+    if options.delta_h_c:
+        recognizer = LPRecognizerDeltaHC(options)
         run_recognizer(recognizer)
     if options.soft_c:
         recognizer = LPRecognizerSoftC(options)
@@ -266,9 +351,9 @@ def main():
     if options.h_value_c_uncertainty:
         recognizer = LPRecognizerHValueCUncertainty(options)
         run_recognizer(recognizer)
-        
-   
-    #cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
+    if options.delta_h_c_uncertainty:
+        recognizer = LPRecognizerDeltaHCUncertainty(options)
+        run_recognizer(recognizer)
 
 if __name__ == '__main__':
     main()

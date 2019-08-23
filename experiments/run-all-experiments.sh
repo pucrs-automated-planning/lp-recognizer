@@ -5,7 +5,7 @@ declare -a domains=(
 				#"intrusion-detection-small"
 				"blocks-world" 
 				"blocks-world-aaai"
-			 	"campus"
+			 	# "campus"
 			 	"campus-noisy"
 			 	"depots"
 			 	"driverlog"
@@ -14,9 +14,9 @@ declare -a domains=(
 			 	"easy-ipc-grid-noisy"
 			 	"ferry"
 				# 	"hanoi"
-			 	"intrusion-detection"
+			 	# "intrusion-detection"
 			 	"intrusion-detection-noisy"
-				"kitchen"
+				# "kitchen"
 				"kitchen-noisy"
 			 	"logistics"
 			 	"miconic"
@@ -47,6 +47,6 @@ for domain in "${domains[@]}"; do
 # 	mv *.txt ./results/soft_c
 #
 # 	python2 run_experiments.py $domain -d
-# 	mkdir results/diff_h_value_c
-# 	mv *.txt ./results/diff_h_value_c
+# 	mkdir results/delta_h_c
+# 	mv *.txt ./results/delta_h_c
 done
