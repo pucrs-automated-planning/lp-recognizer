@@ -1,0 +1,135 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{subcaption}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+%---------------------------------------------------------------------------------------------------------------
+
+\pdfinfo{
+/Title (?)
+/Author (?)
+}
+\setcounter{secnumdepth}{0}  
+
+\begin{document}
+\title{Operator-Counting Goal Recognition - Results (Missing)}
+\author{
+?
+}
+
+\maketitle
+%---------------------------------------------------------------------------------------------------------------
+
+\begin{table*}[]
+\centering
+\fontsize{5}{8}\selectfont
+\setlength\tabcolsep{3pt}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|}
+\hline
+                   &                     
+				   & \multicolumn{2}{c|}{} 
+				   & \multicolumn{3}{c|}{h-value-c-uncertainty-tb}
+				   & \multicolumn{3}{c|}{h-value-c-uncertainty}
+				   & \multicolumn{3}{c|}{h-value-c}
+				   \\ \hline
+\#                 
+& $|\mathcal{G}|$                   
+& \textbf{\% Obs}        
+& $|O|$
+
+& \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Accuracy\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Spread in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Accuracy\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Spread in $\mathcal{G}$\end{tabular}}  & 
+\textbf{Time}          & 
+\textbf{Accuracy}      & 
+\textbf{Spread in $\mathcal{G}$} 
+\\ 
+\hline
+
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{campus}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value-c-uncertainty-tb - 10% 
+		& 0.415 & 73.3\% & 1.2 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 0.415 & 73.3\% & 1.2 	 
+
+		% h-value-c - 10% 
+		& 0.439 & 60.0\% & 1.07 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value-c-uncertainty-tb - 30% 
+		& 0.427 & 100.0\% & 1.47 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 0.427 & 100.0\% & 1.47 	 
+
+		% h-value-c - 30% 
+		& 0.438 & 73.3\% & 1.2 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value-c-uncertainty-tb - 50% 
+		& 0.442 & 100.0\% & 1.6 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 0.442 & 100.0\% & 1.6 	 
+
+		% h-value-c - 50% 
+		& 0.439 & 93.3\% & 1.27 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value-c-uncertainty-tb - 70% 
+		& 0.423 & 100.0\% & 1.47 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 0.423 & 100.0\% & 1.47 	 
+
+		% h-value-c - 70% 
+		& 0.432 & 100.0\% & 1.07 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value-c-uncertainty-tb - 100% 
+		& 0.44 & 100.0\% & 1.4 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 0.44 & 100.0\% & 1.4 	 
+
+		% h-value-c - 100% 
+		& 0.424 & 100.0\% & 1.0 	 
+ \\ \hline
+
+Average & & & & 0.42916 & 94.666\% & 1.42668 & 0.42916 & 94.666\% & 1.42668 & 0.43408 & 85.332\% & 1.12002
+ 
+\\ \hline
+
+\end{tabular}
+\caption{Goal recognition results.}
+\label{tab:goalRecognitionResults}
+\end{table*}
+
+\end{document}
