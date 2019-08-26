@@ -13,7 +13,7 @@ cd Osi-0.107.9
             --without-lapack --enable-static=yes \
             --prefix="$DOWNWARD_COIN_ROOT" \
             --disable-zlib --disable-bzlib \
-            --with-cplex-incdir=$DOWNWARD_CPLEX_ROOT/include/ilcplex --with-cplex-lib="-lcplex -lm"
+            --with-cplex-incdir=$DOWNWARD_CPLEX_ROOT/include/ilcplex --with-cplex-lib="-lcplex -lm -ldl"
 make
 make install
 cd ..
