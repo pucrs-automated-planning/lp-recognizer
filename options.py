@@ -9,8 +9,9 @@ def usage():
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
     print >> sys.stderr, "-v  --hvalue                     Plan recognition by h-value"
     print >> sys.stderr, "-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations"
-    print >> sys.stderr, "-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value"
     print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"    
+    print >> sys.stderr, "-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value"
+    print >> sys.stderr, "-f  --delta-h-s                  Plan recognition by delta between h-value-c and soft-c"
     print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
     print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"    
 
@@ -19,7 +20,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "be:ht:m:T:vcrsdun",
+                                       "be:ht:m:T:vcrsdfun",
                                        ["batch",
                                         "experiment=",
                                         "help",
@@ -29,6 +30,7 @@ class Program_Options:
                                         "h-value",
                                         "h-value-c",
                                         "delta-h-c",
+                                        "delta-h-s",
                                         "soft-c",
                                         "h-value-c-uncertainty",
                                         "delta-h-c-uncertainty"])
@@ -47,6 +49,7 @@ class Program_Options:
         self.h_value = False
         self.h_value_c = False
         self.delta_h_c  = False
+        self.delta_h_s  = False
         self.soft_c = False
         self.h_value_c_uncertainty = False
         self.delta_h_c_uncertainty = False
@@ -97,10 +100,12 @@ class Program_Options:
                 self.h_value = True
             if opcode in ('-c', '--h-value-c'):
                 self.h_value_c = True
-            if opcode in ('-d', '--delta-h-c'):
-                self.delta_h_c  = True                
             if opcode in ('-s', '--soft-c '):
                 self.soft_c = True
+            if opcode in ('-d', '--delta-h-c'):
+                self.delta_h_c  = True
+            if opcode in ('-f', '--delta-h-s'):
+                self.delta_h_s  = True
             if opcode in ('-u', '--h-value-c-uncertainty '):
                 self.h_value_c_uncertainty = True
             if opcode in ('-n', '--delta-h-c-uncertainty'):

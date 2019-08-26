@@ -269,8 +269,9 @@ def main():
 
     h_value = False
     h_value_c = False
-    delta_h_c = False
     soft_c = False
+    delta_h_c = False
+    delta_h_s = False
     h_value_c_uncertainty = False
     delta_h_c_uncertainty = False
     
@@ -282,6 +283,8 @@ def main():
         soft_c = True        
     if "-d" in sys.argv:
         delta_h_c = True
+    if "-f" in sys.argv:
+        delta_h_s = True
     if "-u" in sys.argv:
         h_value_c_uncertainty = True
     if "-n" in sys.argv:
