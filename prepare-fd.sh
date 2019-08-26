@@ -5,10 +5,10 @@ if [[ $DIR == "." ]]; then
 fi
 # echo "Running from ${DIR}"
 pushd ..
-DOWNWARD_COIN_ROOT64=`pwd`/coin64 
+DOWNWARD_COIN_ROOT=`pwd`/coin64 
 FD_ROOT=`pwd`/fast-downward
 popd
-if [[ ! -d "$DOWNWARD_COIN_ROOT64" ]]; then
+if [[ ! -d "$DOWNWARD_COIN_ROOT" ]]; then
 	if [[ `uname` == "Darwin" ]]
 	then
 		echo "Installing OSI for Mac"
@@ -42,5 +42,5 @@ cp ${DIR}/fd-patch.diff .
 patch -s -p0 -i fd-patch.diff 
 rm fd-patch.diff
 pushd fast-downward
-./build.py release64
+./build.py release
 chmod u+x fast-downward
