@@ -37,10 +37,13 @@ class Experiment:
         if self.soft_c:  
             recognizer = LPRecognizerSoftC(options)                   
         if self.delta_h_c:
+            print("delta_h_c")
             recognizer = LPRecognizerDeltaHC(options)
         if self.h_value_c_uncertainty:
+            print("h_value_c_uncertainty")
             recognizer = LPRecognizerHValueCUncertainty(options)
         if self.delta_h_c_uncertainty:
+            print("delta_h_c_uncertainty")
             recognizer = LPRecognizerDeltaHCUncertainty(options)
         
         startTime = time.time()
@@ -113,7 +116,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
         print_text = print_text  + " delta-h-c-uncertainty"
         experiments_result = experiments_result  + ",delta-h-c-uncertainty"
         experiment_names.append("delta-h-c-uncertainty")
-        experiments["delta-h-c-uncertainty"] = Experiment(False, False, False, False, True)
+        experiments["delta-h-c-uncertainty"] = Experiment(False, False, False, False, False, True)
         experiments_tables["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
 
