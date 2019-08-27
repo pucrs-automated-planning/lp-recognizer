@@ -2,23 +2,12 @@
 import sys
 import os
 import math
+import argparse
 
-def main() :
+def main(domains, approaches, basepath, names):
+	print("Tabulating data from %s for domains %s"%(basepath,domains))
+
 	content_table = ''
-
-	# Domains with noisy observations.
-	# domains = ['campus-noisy', 'easy-ipc-grid-noisy', 'intrusion-detection-noisy', 'kitchen-noisy']
-
-	# Domains with missing observations.
-	domains = ['campus']
-	# domains = ['blocks-world-aaai', 'blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics',\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-
-	# List of evaluated approaches.
-	# approaches = ['diff-h-value-c-tb', 'diff-h-value-c', 'h-value-c-tb']
-	approaches = ['h-value-c-uncertainty-tb', 'h-value-c-uncertainty', 'h-value-c']
-	# approaches = ['h-value-tb', 'h-value', 'soft-c-tb', 'soft-c']
 	
 	approaches_metrics = dict()
 	for approach in approaches:
@@ -37,7 +26,7 @@ def main() :
 		totalProblems = 0
 		avgGoals = 0
 
-		path = 'results/' + domain_name + '-' + approaches[0] + '.txt'
+		path = basepath + "/" + domain_name + '-' + str(approaches[0]) + '.txt'
 		with open(path) as f:
 			printed = False
 			for l in f:
@@ -52,7 +41,7 @@ def main() :
 		for obs in observabilities:
 			printedObs = False
 			for approach in approaches:
-				path = 'results/' + domain_name + '-' + approach + '.txt'
+				path = basepath + "/" + domain_name + '-' + approach + '.txt'
 				with open(path) as f:
 					for l in f:
 						line = l.strip().split(' ')
@@ -95,8 +84,8 @@ def main() :
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
 
 	index = 0
-	for approach in approaches:
-		latexContent = latexContent.replace('<APPROACH_' + str(index) + '>', approach)
+	for approach, name in zip(approaches, names):
+		latexContent = latexContent.replace('<APPROACH_' + str(index) + '>', "$"+name+"$")
 		latexContent = latexContent.replace('<AVG_APPROACH_' + str(index) + '>', str(avg_approaches[approach][0]) + ' & ' + str(avg_approaches[approach][1]) + '\% & ' + str(avg_approaches[approach][2]))
 		index += 1
 
@@ -104,4 +93,39 @@ def main() :
 	    latex.write(latexContent)
 
 if __name__ == '__main__' :
-	main()
+	# Domains with noisy observations.
+	# domains = ['campus-noisy', 'easy-ipc-grid-noisy', 'intrusion-detection-noisy', 'kitchen-noisy']
+
+	# Domains with missing observations.
+	domains = ['campus']
+	# domains = ['blocks-world-aaai', 'blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
+	#  			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics',\
+	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
+
+	# List of evaluated approaches.
+	# approaches = ['diff-h-value-c-tb', 'diff-h-value-c', 'h-value-c-tb']
+	approaches = ['h-value-c-uncertainty-tb', 'h-value-c-uncertainty', 'h-value-c']
+	# approaches = ['h-value-tb', 'h-value', 'soft-c-tb', 'soft-c']
+	path = "./results"
+	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
+	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
+	parser.add_argument('-a', '--approaches', metavar="A", nargs='+', type=str, help="approaches to tabulate")
+	parser.add_argument('-p', '--path', metavar="P", nargs=1, type=str, help="base path of data result files")
+	parser.add_argument('-n', '--names', metavar="N", nargs='+', type=str, help="approach names to put in table")
+	args = parser.parse_args()
+	if args.domains:
+		domains = args.domains
+	if args.approaches:
+		approaches = args.approaches
+	if args.path:
+		path=args.path[0]
+	if args.names:
+		if len(args.names) == len(approaches):
+			names = args.names
+		else:
+			print("--names parameter requires the same number of names as --approaches")
+			names = approaches
+	else:
+		names = approaches
+
+	main(domains, approaches, path, names)
