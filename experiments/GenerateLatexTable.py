@@ -128,4 +128,7 @@ if __name__ == '__main__' :
 	else:
 		names = approaches
 
+	if len(approaches) > 3:
+		print("The current implementation is limited to 3 approaches per table")
+		exit(0)
 	main(domains, approaches, path, names)

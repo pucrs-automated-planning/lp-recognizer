@@ -44,9 +44,9 @@
 \hline
                    &                     
 				   & \multicolumn{2}{c|}{} 
-				   & \multicolumn{3}{c|}{$h_\delta$}
-				   & \multicolumn{3}{c|}{$h_\delta^u$}
+				   & \multicolumn{3}{c|}{$h_s$}
 				   & \multicolumn{3}{c|}{$h_c^u$}
+				   & \multicolumn{3}{c|}{<APPROACH_2>}
 				   \\ \hline
 \#                 
 & $|\mathcal{G}|$                   
@@ -66,232 +66,558 @@
 \hline
 
 
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks-world-aaai}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks-world}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
 	 & 10	 & 0.0
 
-		% delta-h-c - 10% 
-		& 8.545 & 93.3\% & 10.2 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 8.527 & 93.3\% & 10.53 	 
+		% soft-c - 10% 
+		& 6.01 & 96.8\% & 8.28 	 
 
 		% h-value-c-uncertainty - 10% 
-		& 4.31 & 80.0\% & 15.07 	 
+		& 6.022 & 92.7\% & 16.44 	 
 
 	\\ & & 30	 & 0.0
 
-		% delta-h-c - 30% 
-		& 7.397 & 93.3\% & 4.33 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 7.217 & 100.0\% & 4.93 	 
+		% soft-c - 30% 
+		& 6.009 & 91.1\% & 3.02 	 
 
 		% h-value-c-uncertainty - 30% 
-		& 3.608 & 86.7\% & 12.13 	 
+		& 6.031 & 97.2\% & 14.53 	 
 
 	\\ & & 50	 & 0.0
 
-		% delta-h-c - 50% 
-		& 7.031 & 86.7\% & 1.87 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 6.986 & 86.7\% & 2.67 	 
+		% soft-c - 50% 
+		& 6.006 & 93.5\% & 1.99 	 
 
 		% h-value-c-uncertainty - 50% 
-		& 3.559 & 100.0\% & 7.53 	 
+		& 6.023 & 99.6\% & 11.4 	 
 
 	\\ & & 70	 & 0.0
 
-		% delta-h-c - 70% 
-		& 7.583 & 100.0\% & 1.33 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 7.268 & 100.0\% & 1.33 	 
+		% soft-c - 70% 
+		& 6.012 & 98.4\% & 1.64 	 
 
 		% h-value-c-uncertainty - 70% 
-		& 3.671 & 100.0\% & 2.93 	 
+		& 6.029 & 99.2\% & 4.85 	 
 
 	\\ & & 100	 & 0.0
 
-		% delta-h-c - 100% 
-		& 7.061 & 100.0\% & 1.13 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 7.059 & 100.0\% & 1.13 	 
+		% soft-c - 100% 
+		& 5.949 & 100.0\% & 1.29 	 
 
 		% h-value-c-uncertainty - 100% 
-		& 3.539 & 100.0\% & 1.07 	 
+		& 5.973 & 100.0\% & 1.03 	 
  \\ \hline
 \multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
 	 & 10	 & 0.0
 
-		% delta-h-c - 10% 
-		& 5.557 & 61.9\% & 2.15 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 5.545 & 71.4\% & 3.51 	 
+		% soft-c - 10% 
+		& 4.164 & 64.3\% & 2.62 	 
 
 		% h-value-c-uncertainty - 10% 
-		& 2.806 & 100.0\% & 8.86 	 
+		& 4.135 & 100.0\% & 8.86 	 
 
 	\\ & & 30	 & 0.0
 
-		% delta-h-c - 30% 
-		& 5.812 & 71.4\% & 1.4 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 5.835 & 88.1\% & 4.17 	 
+		% soft-c - 30% 
+		& 4.184 & 57.1\% & 1.74 	 
 
 		% h-value-c-uncertainty - 30% 
-		& 2.86 & 100.0\% & 8.6 	 
+		& 4.125 & 100.0\% & 8.6 	 
 
 	\\ & & 50	 & 0.0
 
-		% delta-h-c - 50% 
-		& 5.354 & 92.9\% & 1.38 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 5.409 & 98.8\% & 3.65 	 
+		% soft-c - 50% 
+		& 4.167 & 63.1\% & 1.67 	 
 
 		% h-value-c-uncertainty - 50% 
-		& 2.638 & 100.0\% & 7.93 	 
+		& 4.116 & 100.0\% & 7.93 	 
 
 	\\ & & 70	 & 0.0
 
-		% delta-h-c - 70% 
-		& 5.198 & 97.6\% & 1.06 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 5.193 & 98.8\% & 1.75 	 
+		% soft-c - 70% 
+		& 4.168 & 67.9\% & 1.42 	 
 
 		% h-value-c-uncertainty - 70% 
-		& 2.574 & 100.0\% & 4.85 	 
+		& 4.122 & 100.0\% & 4.85 	 
 
 	\\ & & 100	 & 0.0
 
-		% delta-h-c - 100% 
-		& 5.149 & 100.0\% & 1.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 5.149 & 100.0\% & 1.0 	 
+		% soft-c - 100% 
+		& 4.17 & 75.0\% & 1.36 	 
 
 		% h-value-c-uncertainty - 100% 
-		& 2.579 & 100.0\% & 1.0 	 
+		& 4.122 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 2.561 & 77.4\% & 2.94 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 2.581 & 100.0\% & 7.14 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 2.583 & 81.0\% & 1.89 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 2.568 & 98.8\% & 6.89 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 2.581 & 82.1\% & 1.35 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 2.585 & 100.0\% & 6.08 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 2.571 & 77.4\% & 1.24 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 2.572 & 100.0\% & 3.48 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.571 & 89.3\% & 1.21 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.573 & 100.0\% & 1.04 	 
  \\ \hline
 \multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
 	 & 10	 & 0.0
 
-		% delta-h-c - 10% 
-		& 3.446 & 54.8\% & 2.21 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 3.428 & 95.2\% & 5.45 	 
+		% soft-c - 10% 
+		& 2.88 & 65.5\% & 2.73 	 
 
 		% h-value-c-uncertainty - 10% 
-		& 1.72 & 100.0\% & 7.29 	 
+		& 2.872 & 100.0\% & 7.29 	 
 
 	\\ & & 30	 & 0.0
 
-		% delta-h-c - 30% 
-		& 3.437 & 83.3\% & 1.58 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 3.426 & 100.0\% & 4.92 	 
+		% soft-c - 30% 
+		& 2.884 & 72.6\% & 1.76 	 
 
 		% h-value-c-uncertainty - 30% 
-		& 1.704 & 100.0\% & 7.27 	 
+		& 2.854 & 100.0\% & 7.27 	 
 
 	\\ & & 50	 & 0.0
 
-		% delta-h-c - 50% 
-		& 3.465 & 90.5\% & 1.21 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 3.461 & 100.0\% & 3.98 	 
+		% soft-c - 50% 
+		& 2.875 & 76.2\% & 1.42 	 
 
 		% h-value-c-uncertainty - 50% 
-		& 1.718 & 100.0\% & 6.46 	 
+		& 2.851 & 100.0\% & 6.46 	 
 
 	\\ & & 70	 & 0.0
 
-		% delta-h-c - 70% 
-		& 3.896 & 97.6\% & 1.07 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 3.902 & 100.0\% & 2.26 	 
+		% soft-c - 70% 
+		& 2.882 & 83.3\% & 1.21 	 
 
 		% h-value-c-uncertainty - 70% 
-		& 1.963 & 100.0\% & 3.75 	 
+		& 2.85 & 100.0\% & 3.75 	 
 
 	\\ & & 100	 & 0.0
 
-		% delta-h-c - 100% 
-		& 4.111 & 100.0\% & 1.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 4.133 & 100.0\% & 1.0 	 
+		% soft-c - 100% 
+		& 2.873 & 82.1\% & 1.04 	 
 
 		% h-value-c-uncertainty - 100% 
-		& 2.046 & 100.0\% & 1.0 	 
+		& 2.841 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{easy-ipc-grid}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 3.118 & 92.8\% & 1.94 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 3.127 & 64.0\% & 4.93 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 3.117 & 92.2\% & 1.29 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 3.127 & 94.1\% & 6.24 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 3.123 & 92.2\% & 1.08 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 3.131 & 100.0\% & 5.1 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 3.128 & 90.8\% & 1.05 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 3.139 & 100.0\% & 2.79 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.915 & 91.8\% & 1.0 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.914 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 2.099 & 100.0\% & 3.24 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 2.097 & 100.0\% & 7.57 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 2.093 & 100.0\% & 1.61 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 2.106 & 100.0\% & 7.45 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 2.096 & 100.0\% & 1.29 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 2.091 & 100.0\% & 5.42 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 2.099 & 100.0\% & 1.1 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 2.103 & 100.0\% & 2.19 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.104 & 100.0\% & 1.07 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.105 & 100.0\% & 1.07 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 2.449 & 100.0\% & 2.18 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 2.433 & 100.0\% & 6.0 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 2.447 & 100.0\% & 1.25 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 2.447 & 100.0\% & 6.0 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 2.453 & 100.0\% & 1.14 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 2.443 & 100.0\% & 5.92 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 2.448 & 100.0\% & 1.01 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 2.432 & 100.0\% & 3.94 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.442 & 100.0\% & 1.0 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.445 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 2.444 & 95.2\% & 2.7 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 2.433 & 100.0\% & 6.0 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 2.432 & 86.9\% & 1.37 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 2.442 & 100.0\% & 5.89 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 2.438 & 92.9\% & 1.14 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 2.429 & 100.0\% & 5.18 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 2.449 & 96.4\% & 1.1 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 2.443 & 100.0\% & 2.71 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.434 & 100.0\% & 1.11 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.462 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 2.596 & 95.2\% & 3.0 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 2.598 & 100.0\% & 6.43 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 2.606 & 91.7\% & 1.81 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 2.605 & 100.0\% & 6.4 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 2.6 & 96.4\% & 1.4 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 2.615 & 100.0\% & 6.23 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 2.6 & 96.4\% & 1.08 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 2.607 & 100.0\% & 3.98 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 2.607 & 96.4\% & 1.04 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 2.607 & 100.0\% & 1.04 	 
  \\ \hline
 \multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
 	 & 10	 & 0.0
 
-		% delta-h-c - 10% 
-		& 6.169 & 72.6\% & 1.61 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 6.088 & 78.6\% & 2.39 	 
+		% soft-c - 10% 
+		& 3.901 & 70.2\% & 1.98 	 
 
 		% h-value-c-uncertainty - 10% 
-		& 3.054 & 100.0\% & 6.65 	 
+		& 3.92 & 100.0\% & 6.65 	 
 
 	\\ & & 30	 & 0.0
 
-		% delta-h-c - 30% 
-		& 5.925 & 89.3\% & 1.11 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 5.878 & 95.2\% & 1.75 	 
+		% soft-c - 30% 
+		& 3.888 & 72.6\% & 1.48 	 
 
 		% h-value-c-uncertainty - 30% 
-		& 2.897 & 100.0\% & 5.15 	 
+		& 3.831 & 100.0\% & 5.15 	 
 
 	\\ & & 50	 & 0.0
 
-		% delta-h-c - 50% 
-		& 5.904 & 95.2\% & 1.08 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 5.859 & 100.0\% & 1.46 	 
+		% soft-c - 50% 
+		& 3.898 & 70.2\% & 1.23 	 
 
 		% h-value-c-uncertainty - 50% 
-		& 2.862 & 100.0\% & 3.36 	 
+		& 3.782 & 100.0\% & 3.36 	 
 
 	\\ & & 70	 & 0.0
 
-		% delta-h-c - 70% 
-		& 6.257 & 97.6\% & 1.04 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 6.187 & 98.8\% & 1.15 	 
+		% soft-c - 70% 
+		& 3.873 & 71.4\% & 1.15 	 
 
 		% h-value-c-uncertainty - 70% 
-		& 3.04 & 100.0\% & 1.57 	 
+		& 3.742 & 100.0\% & 1.57 	 
 
 	\\ & & 100	 & 0.0
 
-		% delta-h-c - 100% 
-		& 6.007 & 100.0\% & 1.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 5.921 & 100.0\% & 1.0 	 
+		% soft-c - 100% 
+		& 3.877 & 71.4\% & 1.0 	 
 
 		% h-value-c-uncertainty - 100% 
-		& 2.886 & 100.0\% & 1.0 	 
+		& 3.74 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{zeno-travel}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% soft-c - 10% 
+		& 3.414 & 85.7\% & 2.9 	 
+
+		% h-value-c-uncertainty - 10% 
+		& 3.437 & 100.0\% & 6.8 	 
+
+	\\ & & 30	 & 0.0
+
+		% soft-c - 30% 
+		& 3.411 & 86.9\% & 1.76 	 
+
+		% h-value-c-uncertainty - 30% 
+		& 3.434 & 100.0\% & 6.61 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 3.428 & 83.3\% & 1.19 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 3.42 & 100.0\% & 4.65 	 
+
+	\\ & & 70	 & 0.0
+
+		% soft-c - 70% 
+		& 3.427 & 92.9\% & 1.15 	 
+
+		% h-value-c-uncertainty - 70% 
+		& 3.412 & 100.0\% & 1.83 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 3.428 & 96.4\% & 1.04 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 3.408 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{intrusion-detection-noisy}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
+	 & 25	 & 0.0
+
+		% soft-c - 25% 
+		& 3.708 & 71.1\% & 2.7 	 
+
+		% h-value-c-uncertainty - 25% 
+		& 3.717 & 100.0\% & 16.67 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 3.717 & 96.7\% & 1.33 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 3.717 & 100.0\% & 16.64 	 
+
+	\\ & & 75	 & 0.0
+
+		% soft-c - 75% 
+		& 3.727 & 100.0\% & 1.01 	 
+
+		% h-value-c-uncertainty - 75% 
+		& 3.714 & 100.0\% & 12.68 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 3.731 & 100.0\% & 1.0 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 3.722 & 100.0\% & 2.0 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{kitchen-noisy}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
+	 & 25	 & 0.0
+
+		% soft-c - 25% 
+		& 0.671 & 73.3\% & 1.69 	 
+
+		% h-value-c-uncertainty - 25% 
+		& 0.669 & 73.3\% & 2.0 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 0.661 & 60.0\% & 1.4 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 0.667 & 71.1\% & 1.91 	 
+
+	\\ & & 75	 & 0.0
+
+		% soft-c - 75% 
+		& 0.66 & 55.6\% & 1.38 	 
+
+		% h-value-c-uncertainty - 75% 
+		& 0.663 & 71.1\% & 1.89 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 0.656 & 53.3\% & 1.4 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 0.675 & 93.3\% & 2.2 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{campus-noisy}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
+	 & 25	 & 0.0
+
+		% soft-c - 25% 
+		& 0.461 & 93.0\% & 1.29 	 
+
+		% h-value-c-uncertainty - 25% 
+		& 0.461 & 100.0\% & 2.0 	 
+
+	\\ & & 50	 & 0.0
+
+		% soft-c - 50% 
+		& 0.459 & 95.3\% & 1.22 	 
+
+		% h-value-c-uncertainty - 50% 
+		& 0.467 & 100.0\% & 2.0 	 
+
+	\\ & & 75	 & 0.0
+
+		% soft-c - 75% 
+		& 0.462 & 96.9\% & 1.19 	 
+
+		% h-value-c-uncertainty - 75% 
+		& 0.465 & 100.0\% & 2.0 	 
+
+	\\ & & 100	 & 0.0
+
+		% soft-c - 100% 
+		& 0.459 & 98.5\% & 1.11 	 
+
+		% h-value-c-uncertainty - 100% 
+		& 0.466 & 100.0\% & 2.0 	 
  \\ \hline
 
-Average & & & & 5.66516 & 88.905\% & 1.93916 & 5.623475 & 95.2505\% & 3.002625 & 2.80157 & 98.3335\% & 5.673565
+Average & & & & 2.81936571429 & 82.8041428571\% & 1.57746571429 & 2.81077428571 & 93.6352857143\% & 4.91392142857 & <AVG_APPROACH_2>
  
 \\ \hline
 

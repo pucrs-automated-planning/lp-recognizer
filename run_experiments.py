@@ -31,10 +31,13 @@ class Experiment:
 
     def run_experiment(self, options):
         if self.h_value:
+            print("h_value")
             recognizer = LPRecognizerHValue(options)       
         if self.h_value_c:
+            print("h_value_c")
             recognizer = LPRecognizerHValueC(options)   
         if self.soft_c:  
+            print("soft_c")
             recognizer = LPRecognizerSoftC(options)                   
         if self.delta_h_c:
             print("delta_h_c")
