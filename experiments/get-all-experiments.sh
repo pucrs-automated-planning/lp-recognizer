@@ -46,7 +46,7 @@ declare -a noisy_domains=("blocks-world-noisy"
 					"ferry-noisy"
 					"intrusion-detection-noisy"
 					"kitchen-noisy"
-					#"logistics"
+					"logistics-noisy"
 					"miconic-noisy"
 					"rovers-noisy"
 					"satellite-noisy"
@@ -56,7 +56,7 @@ declare -a noisy_domains=("blocks-world-noisy"
 
 pushd ../../
 
-git clone --depth=1 $EXPERIMENTS_REPO plan-recognition-experiments
+git clone --depth=1 $EXPERIMENTS_REPO goal-plan-recognition-dataset
 
 popd
 
@@ -67,24 +67,13 @@ echo "Preparing regular experiments"
 for domain in "${domains[@]}"; do
 	echo $domain
 	rm -rf $domain
-	cp -R "../../plan-recognition-experiments/$domain" .
-	# if [ $domain = "blocks-world" ] || [ $domain = "blocks-world-aaai" ]; then
-# 		pushd $domain
-# 		bash ../patch-blocks-world.sh
-# 		popd
-# 	fi
-# 	if [ $domain = "kitchen" ]; then
-# 		pushd $domain
-# 		bash ../patch-kitchen.sh
-# 		popd
-# 	fi
-# 	bash prepare-domain.sh $domain
+	cp -R "../../goal-plan-recognition-dataset/$domain" .
 done
 
-echo "Preparing noisy experiments"
+echo -e "\nPreparing noisy experiments"
 
 for domain in "${noisy_domains[@]}"; do
 	echo $domain
 	rm -rf $domain
-	cp -R "../../plan-recognition-experiments/$domain" .
+	cp -R "../../goal-plan-recognition-dataset/$domain" .
 done
