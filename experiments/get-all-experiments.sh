@@ -30,10 +30,21 @@ declare -a domains=("blocks-world"
 					"zeno-travel"
 					)
 
-declare -a noisy_domains=("campus-noisy"
+declare -a noisy_domains=("blocks-world-noisy"
+					"campus-noisy"
+					"depots-noisy"
+					"driverlog-noisy"
+					"dwr-noisy"
 					"easy-ipc-grid-noisy"
+					"ferry-noisy"
 					"intrusion-detection-noisy"
 					"kitchen-noisy"
+					#"logistics"
+					"miconic-noisy"
+					"rovers-noisy"
+					"satellite-noisy"
+					"sokoban-noisy"
+					"zeno-travel-noisy"
 					)
 
 pushd ../../
