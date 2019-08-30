@@ -39,7 +39,7 @@ class LPRecognizerDeltaHS(LPRecognizerHValue):
    
 
         # Select multi goal
-        for hv, hs in  zip(range(len(self.hvalue_recognizer.hyps)), self.hvalue_recognizer.hyps, self.hsoft_recognizer.hyps):
+        for i, hv, hs in  zip(range(len(self.hvalue_recognizer.hyps)), self.hvalue_recognizer.hyps, self.hsoft_recognizer.hyps):
             if not hs.test_failed and not hv.test_failed:
                 if (hs.score + len(self.hvalue_recognizer.observations) - hv.score) == min_diff:
                     self.multi_goal_no_tie_breaking.append(hs) 

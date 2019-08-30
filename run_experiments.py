@@ -71,6 +71,7 @@ class Experiment:
         self.multi_tie_breaking_spread = self.multi_tie_breaking_spread + len(recognizer.multi_goal_tie_breaking)            
         self.multi_spread = self.multi_spread  + len(recognizer.multi_goal_no_tie_breaking)
         self.candidate_goals = self.candidate_goals + len(recognizer.hyps)
+        return recognizer.unique_goal is not None
     
     def __repr__(self):
         return "UC=%d MTBC=%d MTBS=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_tie_breaking_correct,self.multi_tie_breaking_spread,self.multi_correct,self.multi_spread,self.candidate_goals)
@@ -81,6 +82,8 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
 
     file_experiment = open("experiment.txt",'a')
     file_experiment.write(domainName+"\n")
+
+    file_failures = open("failed.txt","w")
 
     print_text = "obs problems"
     experiments_result = "obs,problems"
@@ -183,7 +186,9 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
 
                 options = Program_Options(args)
                 for e in experiment_names:
-                    experiments[e].run_experiment(options)
+                    success = experiments[e].run_experiment(options)
+                    if not success:
+                        file_failures.write(problems_path + problem_file + "\n")
                     # print("%s %r"%(e,experiments[e]))
 
         print_text_result = "%s %d "%(obs,problems)             
@@ -281,6 +286,7 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
     file_experiment.write(experiments_result)
     final_time = time.time() - experiment_time
     file_experiment.close()
+    file_failures.close()
     print('Experiment Time: {0:3f}s'.format(final_time))
 
 
