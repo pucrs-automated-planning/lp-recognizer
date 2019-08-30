@@ -1,5 +1,11 @@
 #!/usr/bin/env zsh
 
+# declare -a domains=("blocks-world"
+# 					)
+#
+# declare -a noisy_domains=("blocks-world-noisy"
+# 					)
+
 declare -a domains=("blocks-world"
 					# "blocks-world-aaai"
 					"campus"
@@ -54,13 +60,17 @@ if [[ ! -d ../clones ]]; then
 	mkdir ../clones
 fi
 
+if [[ ! -d ../clones/fast-downward ]]; then
+	cp -R ../fast-downward ../clones/fast-downward
+fi
+
 for domain in "${domains[@]}"; do
 	echo "Copying domain ${domain}"
 	cp -R ../lp-recognizer ../clones/lp-recognizer-$domain
 	pushd ../clones/lp-recognizer-$domain
 	folder=`pwd`
 	echo "Running domain ${domain} at $folder"
-	screen -dm lp-recognizer-$domain -c "slack_message \"Started running $domain\" goalrecognition;python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
+	screen -dmS lp-recognizer-$domain zsh -c "python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain"
 	popd
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
@@ -89,6 +99,6 @@ for domain in "${noisy_domains[@]}"; do
 	pushd ../clones/lp-recognizer-$domain
 	folder=`pwd`
 	echo "Running domain ${domain} at $folder"
-	screen -dm lp-recognizer-$domain -c "echo \"Starting python\"; python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
+	screen -dmS lp-recognizer-$domain zsh -c "python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain"
 	popd
 done

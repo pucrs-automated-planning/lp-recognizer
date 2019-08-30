@@ -44,7 +44,7 @@ class Experiment:
         if self.delta_h_c:
             print("delta_h_c")
             recognizer = LPRecognizerDeltaHC(options)
-        if self.delta_h_c:
+        if self.delta_h_s:
             print("delta_h_s")
             recognizer = LPRecognizerDeltaHS(options)
         if self.h_value_c_uncertainty:
