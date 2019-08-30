@@ -60,7 +60,7 @@ for domain in "${domains[@]}"; do
 	pushd ../clones/lp-recognizer-$domain
 	folder=`pwd`
 	echo "Running domain ${domain} at $folder"
-	screen -dmS lp-recognizer-$domain "echo \"Starting python\"; python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
+	screen -dm lp-recognizer-$domain -c "slack_message \"Started running $domain\" goalrecognition; python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
 	popd
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
@@ -89,6 +89,6 @@ for domain in "${noisy_domains[@]}"; do
 	pushd ../clones/lp-recognizer-$domain
 	folder=`pwd`
 	echo "Running domain ${domain} at $folder"
-	screen -dmS lp-recognizer-$domain "echo \"Starting python\"; python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
+	screen -dm lp-recognizer-$domain -c "echo \"Starting python\"; python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message \"Finished running $domain in parallel\" goalrecognition;"
 	popd
 done
