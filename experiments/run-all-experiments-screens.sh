@@ -50,10 +50,13 @@ if [[ ! -d results ]]; then
 	mkdir results
 fi
 
+mkdir ../../clones
+
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -s -d -u -n -f -k
-	mv *.txt results
+	cp -R . ../clones/lp-recognizer-$domain
+	pushd ../clones/lp-recognizer-$domain
+	screen -s lp-recognizer-$domain -dm python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message "Finished running $domain in parallel" goalrecognition; 
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
 	# mkdir results/h_value
@@ -73,7 +76,11 @@ for domain in "${domains[@]}"; do
 done
 
 for domain in "${noisy_domains[@]}"; do
+	# echo "Running domain ${domain}"
+# 	python2 run_experiments.py $domain -s -d -u -n -f -k
+# 	mv *.txt results
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -s -d -u -n -f -k
-	mv *.txt results
+	cp -R . ../clones/lp-recognizer-$domain
+	pushd ../clones/lp-recognizer-$domain
+	screen -s lp-recognizer-$domain -dm python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message "Finished running $domain in parallel" goalrecognition; 
 done

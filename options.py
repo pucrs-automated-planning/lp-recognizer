@@ -13,14 +13,14 @@ def usage():
     print >> sys.stderr, "-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value"
     print >> sys.stderr, "-f  --delta-h-s                  Plan recognition by delta between h-value-c and soft-c"
     print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
-    print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"    
+    print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"
 
 class Program_Options:
 
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "be:ht:m:T:vcrsdfun",
+                                       "be:ht:m:T:vcrsdfunk",
                                        ["batch",
                                         "experiment=",
                                         "help",
@@ -33,7 +33,8 @@ class Program_Options:
                                         "delta-h-s",
                                         "soft-c",
                                         "h-value-c-uncertainty",
-                                        "delta-h-c-uncertainty"])
+                                        "delta-h-c-uncertainty",
+                                        "delta-h-s-uncertainty"])
         except getopt.GetoptError:
             print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
@@ -53,6 +54,7 @@ class Program_Options:
         self.soft_c = False
         self.h_value_c_uncertainty = False
         self.delta_h_c_uncertainty = False
+        self.delta_h_s_uncertainty = False
         self.theta = 1 # Multiplier for any slack parameter 
 
         for opcode, oparg in opts:
@@ -110,6 +112,8 @@ class Program_Options:
                 self.h_value_c_uncertainty = True
             if opcode in ('-n', '--delta-h-c-uncertainty'):
                 self.delta_h_c_uncertainty = True
+            if opcode in ('-k', '--delta-h-s-uncertainty'):
+                self.delta_h_s_uncertainty = True
 
         # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)
         if self.batch:

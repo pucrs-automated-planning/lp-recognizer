@@ -1,11 +1,11 @@
 #!/usr/bin/env python2
 
 import sys, os, csv, time, math
-from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, Program_Options 
+from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
 class Experiment:
-    def __init__(self, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty=False, delta_h_c_uncertainty = False):
+    def __init__(self, h_value = False, h_value_c = False, soft_c = False, delta_h_c = False, h_value_c_uncertainty=False, delta_h_c_uncertainty = False, delta_h_s = False, delta_h_s_uncertainty = False):
         self.unique_correct = 0        
         self.multi_tie_breaking_correct = 0
         self.multi_tie_breaking_spread = 0
@@ -16,8 +16,10 @@ class Experiment:
         self.h_value_c = h_value_c
         self.soft_c = soft_c
         self.delta_h_c = delta_h_c
+        self.delta_h_s = delta_h_s
         self.h_value_c_uncertainty = h_value_c_uncertainty
         self.delta_h_c_uncertainty = delta_h_c_uncertainty
+        self.delta_h_s_uncertainty = delta_h_s_uncertainty
         self.totalTime = 0
 
     def reset(self):
@@ -42,12 +44,18 @@ class Experiment:
         if self.delta_h_c:
             print("delta_h_c")
             recognizer = LPRecognizerDeltaHC(options)
+        if self.delta_h_c:
+            print("delta_h_s")
+            recognizer = LPRecognizerDeltaHS(options)
         if self.h_value_c_uncertainty:
             print("h_value_c_uncertainty")
             recognizer = LPRecognizerHValueCUncertainty(options)
         if self.delta_h_c_uncertainty:
             print("delta_h_c_uncertainty")
             recognizer = LPRecognizerDeltaHCUncertainty(options)
+        if self.delta_h_s_uncertainty:
+            print("delta_h_s_uncertainty")
+            recognizer = LPRecognizerDeltaHSUncertainty(options)
         
         startTime = time.time()
         recognizer.run_recognizer()
@@ -67,7 +75,7 @@ class Experiment:
     def __repr__(self):
         return "UC=%d MTBC=%d MTBS=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_tie_breaking_correct,self.multi_tie_breaking_spread,self.multi_correct,self.multi_spread,self.candidate_goals)
 
-def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty):
+def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty, delta_h_s, delta_h_s_uncertainty):
     experiment_time = time.time()
     totalProblems = 0
 
@@ -108,6 +116,13 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
         experiments["delta-h-c"] = Experiment(False, False, False, True)
         experiments_tables["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    if delta_h_s:
+        print_text = print_text  + " delta-h-s"
+        experiments_result = experiments_result  + ",delta-h-s"
+        experiment_names.append("delta-h-s")
+        experiments["delta-h-s"] = Experiment(False, False, False, False, delta_h_s=True)
+        experiments_tables["delta-h-s"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+        experiments_tables_tb["delta-h-s"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if h_value_c_uncertainty:
         print_text = print_text  + " h-value-c-uncertainty"
         experiments_result = experiments_result  + ",h-value-c-uncertainty"
@@ -122,6 +137,13 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
         experiments["delta-h-c-uncertainty"] = Experiment(False, False, False, False, False, True)
         experiments_tables["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    if delta_h_s_uncertainty:
+        print_text = print_text  + " delta-h-s-uncertainty"
+        experiments_result = experiments_result  + ",delta-h-s-uncertainty"
+        experiment_names.append("delta-h-s-uncertainty")
+        experiments["delta-h-s-uncertainty"] = Experiment(False, False, False, False, False, True)
+        experiments_tables["delta-h-s-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+        experiments_tables_tb["delta-h-s-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
 
     print_text = print_text + "\n"
     experiments_result = experiments_result + "\n"
@@ -277,6 +299,7 @@ def main():
     delta_h_s = False
     h_value_c_uncertainty = False
     delta_h_c_uncertainty = False
+    delta_h_s_uncertainty = False
     
     if "-v" in sys.argv:
         h_value = True
@@ -292,8 +315,10 @@ def main():
         h_value_c_uncertainty = True
     if "-n" in sys.argv:
         delta_h_c_uncertainty = True
+    if "-k" in sys.argv:
+        delta_h_s_uncertainty = True
 
-    doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty)
+    doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h_c, h_value_c_uncertainty, delta_h_c_uncertainty, delta_h_s, delta_h_s_uncertainty)
 
     # Get rid of the temp files
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'

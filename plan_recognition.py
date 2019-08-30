@@ -6,7 +6,7 @@ from options import Program_Options
 from operator import attrgetter
 
 from planner_interface import Observations, PRCommand, Hypothesis
-from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty
+from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty
 
 def run_recognizer(recognizer):
     recognizer.run_recognizer()
@@ -34,6 +34,9 @@ def main():
     if options.delta_h_c:
         recognizer = LPRecognizerDeltaHC(options)
         run_recognizer(recognizer)
+    if options.delta_h_s:
+        recognizer = LPRecognizerDeltaHS(options)
+        run_recognizer(recognizer)
     if options.soft_c:
         recognizer = LPRecognizerSoftC(options)
         run_recognizer(recognizer)
@@ -42,6 +45,9 @@ def main():
         run_recognizer(recognizer)
     if options.delta_h_c_uncertainty:
         recognizer = LPRecognizerDeltaHCUncertainty(options)
+        run_recognizer(recognizer)
+    if options.delta_h_s_uncertainty:
+        recognizer = LPRecognizerDeltaHSUncertainty(options)
         run_recognizer(recognizer)
 
 if __name__ == '__main__':
