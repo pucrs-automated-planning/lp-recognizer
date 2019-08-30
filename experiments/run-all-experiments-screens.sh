@@ -50,13 +50,13 @@ if [[ ! -d results ]]; then
 	mkdir results
 fi
 
-mkdir ../../clones
+mkdir ../clones
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
 	cp -R . ../clones/lp-recognizer-$domain
 	pushd ../clones/lp-recognizer-$domain
-	screen -s lp-recognizer-$domain -dm python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message "Finished running $domain in parallel" goalrecognition; 
+	screen -s lp-recognizer-$domain -d -m python2 run_experiments.py $domain -s -d -u -n -f -k; mv *.txt ..; cd ..; rm -rf lp-recognizer-$domain; slack_message "Finished running $domain in parallel" goalrecognition; 
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
 	# mkdir results/h_value
