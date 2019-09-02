@@ -4,6 +4,17 @@ import sys, os, csv, time, math
 from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
+def progress(count, total, status=''):
+    bar_len = 60
+    filled_len = int(round(bar_len * count / float(total)))
+
+    percents = round(100.0 * count / float(total), 1)
+    bar = '=' * filled_len + '-' * (bar_len - filled_len)
+
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+    sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
+
+
 class Experiment:
     def __init__(self, h_value = False, h_value_c = False, soft_c = False, delta_h_c = False, h_value_c_uncertainty=False, delta_h_c_uncertainty = False, delta_h_s = False, delta_h_s_uncertainty = False):
         self.unique_correct = 0        
@@ -33,28 +44,28 @@ class Experiment:
 
     def run_experiment(self, options):
         if self.h_value:
-            print("h_value")
+            # print("h_value")
             recognizer = LPRecognizerHValue(options)       
         if self.h_value_c:
-            print("h_value_c")
+            # print("h_value_c")
             recognizer = LPRecognizerHValueC(options)   
         if self.soft_c:  
-            print("soft_c")
+            # print("soft_c")
             recognizer = LPRecognizerSoftC(options)                   
         if self.delta_h_c:
-            print("delta_h_c")
+            # print("delta_h_c")
             recognizer = LPRecognizerDeltaHC(options)
         if self.delta_h_s:
-            print("delta_h_s")
+            # print("delta_h_s")
             recognizer = LPRecognizerDeltaHS(options)
         if self.h_value_c_uncertainty:
-            print("h_value_c_uncertainty")
+            # print("h_value_c_uncertainty")
             recognizer = LPRecognizerHValueCUncertainty(options)
         if self.delta_h_c_uncertainty:
-            print("delta_h_c_uncertainty")
+            # print("delta_h_c_uncertainty")
             recognizer = LPRecognizerDeltaHCUncertainty(options)
         if self.delta_h_s_uncertainty:
-            print("delta_h_s_uncertainty")
+            # print("delta_h_s_uncertainty")
             recognizer = LPRecognizerDeltaHSUncertainty(options)
         
         startTime = time.time()
@@ -95,56 +106,56 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
         print_text = print_text + " h-value"
         experiments_result = experiments_result  + ",h-value"
         experiment_names.append("h-value")
-        experiments["h-value"] = Experiment(True, False, False, False) 
+        experiments["h-value"] = Experiment(h_value=True) 
         experiments_tables["h-value"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["h-value"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if h_value_c:
         print_text = print_text  + " h-value-c"          
         experiments_result = experiments_result  + ",h-value-c"
         experiment_names.append("h-value-c")
-        experiments["h-value-c"] = Experiment(False, True, False, False)
+        experiments["h-value-c"] = Experiment(h_value_c=True)
         experiments_tables["h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["h-value-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if soft_c:
         print_text = print_text  + " soft-c"     
         experiments_result = experiments_result  + ",soft-c"
         experiment_names.append("soft-c")
-        experiments["soft-c"] = Experiment(False, False, True, False)
+        experiments["soft-c"] = Experiment(soft_c=True)
         experiments_tables["soft-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["soft-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if delta_h_c:
         print_text = print_text  + " delta-h-c"
         experiments_result = experiments_result  + ",delta-h-c"
         experiment_names.append("delta-h-c")
-        experiments["delta-h-c"] = Experiment(False, False, False, True)
+        experiments["delta-h-c"] = Experiment(delta_h_c=True)
         experiments_tables["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-c"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if delta_h_s:
         print_text = print_text  + " delta-h-s"
         experiments_result = experiments_result  + ",delta-h-s"
         experiment_names.append("delta-h-s")
-        experiments["delta-h-s"] = Experiment(False, False, False, False, delta_h_s=True)
+        experiments["delta-h-s"] = Experiment(delta_h_s=True)
         experiments_tables["delta-h-s"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-s"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if h_value_c_uncertainty:
         print_text = print_text  + " h-value-c-uncertainty"
         experiments_result = experiments_result  + ",h-value-c-uncertainty"
         experiment_names.append("h-value-c-uncertainty")
-        experiments["h-value-c-uncertainty"] = Experiment(False, False, False, False, True)
+        experiments["h-value-c-uncertainty"] = Experiment(h_value_c_uncertainty=True)
         experiments_tables["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["h-value-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if delta_h_c_uncertainty:
         print_text = print_text  + " delta-h-c-uncertainty"
         experiments_result = experiments_result  + ",delta-h-c-uncertainty"
         experiment_names.append("delta-h-c-uncertainty")
-        experiments["delta-h-c-uncertainty"] = Experiment(False, False, False, False, False, True)
+        experiments["delta-h-c-uncertainty"] = Experiment(delta_h_c_uncertainty=True)
         experiments_tables["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-c-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
     if delta_h_s_uncertainty:
         print_text = print_text  + " delta-h-s-uncertainty"
         experiments_result = experiments_result  + ",delta-h-s-uncertainty"
         experiment_names.append("delta-h-s-uncertainty")
-        experiments["delta-h-s-uncertainty"] = Experiment(False, False, False, False, False, True)
+        experiments["delta-h-s-uncertainty"] = Experiment(delta_h_s_uncertainty=True)
         experiments_tables["delta-h-s-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
         experiments_tables_tb["delta-h-s-uncertainty"] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
 
@@ -171,13 +182,17 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
             experiments[e].reset()       
         
         problems_path = 'experiments/' + domainName + '/' + obs + '/'
+        total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
+            progress(problems, total_problems, ""+domainName+":"+str(obs)+"%")
+            # progress(problems,total_problems,experiments[e].recognizer.name+":"+str(obs)+"%")
             if problem_file.endswith(".tar.bz2"):
                 cmd_clean = 'rm -rf *.pddl *.dat *.log'
                 os.system(cmd_clean)
 
                 print(problems_path + problem_file)
                 cmd_untar = 'tar xvjf ' + problems_path + problem_file
+                # cmd_untar = 'tar xjf ' + problems_path + problem_file
                 os.system(cmd_untar)
 
                 problems = problems + 1
