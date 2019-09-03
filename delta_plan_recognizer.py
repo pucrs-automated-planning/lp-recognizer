@@ -163,7 +163,7 @@ class LPRecognizerDeltaHCUncertainty(LPRecognizerHValue):
         
         uncertainty = self.min_h_c.score - len(self.observations)
         uncertainty_ratio = (1+uncertainty/self.min_h_c.score)
-        print("u: {0}, u_ratio: {1}, min_h_c: {2}".format(uncertainty, uncertainty_ratio, self.min_h_c.score))
+        # print("u: {0}, u_ratio: {1}, min_h_c: {2}".format(uncertainty, uncertainty_ratio, self.min_h_c.score))
 
         # Select multi goal with tie-breaking
         for i, hv, hc in  zip(range(len(self.hvalue_recognizer.hyps)), self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):

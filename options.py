@@ -14,6 +14,7 @@ def usage():
     print >> sys.stderr, "-f  --delta-h-s                  Plan recognition by delta between h-value-c and soft-c"
     print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
     print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"
+    print >> sys.stderr, "-k  --delta-h-s-uncertainty      Plan recognition with delta h-s accounting for missing observations"
 
 class Program_Options:
 
