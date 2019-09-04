@@ -46,7 +46,9 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
 
         # Compute presumed uncertainty (score is the operator count)
         # print(self.options.theta)
-        uncertainty = self.options.theta*(self.unique_goal.score - len(self.observations))
+        # uncertainty = self.options.theta*(self.unique_goal.score - len(self.observations))
+        uncertainty = (self.unique_goal.score - len(self.observations))
+        uncertainty_ratio = (1+uncertainty/self.unique_goal.score)
         # print("Minimum score is %f, observation length is %f, theta is %f, theta param was %f "%(self.unique_goal.score, len(self.observations), theta, self.options.theta))
 
         # Select other goals
@@ -54,10 +56,10 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
             if not h.test_failed:
                 # print("H score is %f"%h.score)
                 # Select multi goal with tie-breaking
-                if h.score - uncertainty <= self.unique_goal.score:
+                if h.score <= self.unique_goal.score*uncertainty_ratio:
                     self.multi_goal_tie_breaking.append(h)
                 # Select multi goal (I know it's the same check as above)
-                if h.score - uncertainty <= self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
+                if h.score <= self.unique_goal.score*uncertainty_ratio and h.obs_hits == self.unique_goal.obs_hits:
                     self.multi_goal_no_tie_breaking.append(h)     
 
 
