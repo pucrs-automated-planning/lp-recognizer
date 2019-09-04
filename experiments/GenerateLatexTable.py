@@ -35,7 +35,11 @@ def main(domains, approaches, basepath, names):
 					avgGoals = float(0)
 					printed = True
 		
-		content_table += '\n\\multirow{' + str(multirow) +'}{*}{\\rotatebox[origin=c]{90}{\\textsc{' + domain_name + '}} \\rotatebox[origin=c]{90}{(' + str((totalProblems * 4)) + ')}} & \\multirow{' + str(multirow) + '}{*}{' + str(round(avgGoals, 1)) + '} '	
+		domain_name_4table = domain_name
+		if 'intrusion-detection' in domain_name:
+			domain_name_4table = 'instrusion'
+		
+		content_table += '\n\\multirow{' + str(multirow) +'}{*}{\\rotatebox[origin=c]{90}{\\textsc{' + domain_name_4table + '}} \\rotatebox[origin=c]{90}{(' + str((totalProblems * 4)) + ')}} & \\multirow{' + str(multirow) + '}{*}{' + str(round(avgGoals, 1)) + '} '	
 
 		print_metrics = ''
 		for obs in observabilities:
@@ -72,9 +76,9 @@ def main(domains, approaches, basepath, names):
 
 	avg_approaches = dict()
 	for approach in approaches_metrics.keys():
-		time = (approaches_metrics[approach][0] / 5) / (len(domains))
-		accuracy = (approaches_metrics[approach][1] / 5) / (len(domains))
-		spread = (approaches_metrics[approach][2] / 5) / (len(domains))
+		time = (approaches_metrics[approach][0] / len(observabilities)) / (len(domains))
+		accuracy = (approaches_metrics[approach][1] / len(observabilities)) / (len(domains))
+		spread = (approaches_metrics[approach][2] / len(observabilities)) / (len(domains))
 		avg_approaches[approach] = [time, accuracy, spread]
 
 	latexContent = ''
@@ -94,17 +98,18 @@ def main(domains, approaches, basepath, names):
 
 if __name__ == '__main__' :
 	# Domains with noisy observations.
-	# domains = ['campus-noisy', 'easy-ipc-grid-noisy', 'intrusion-detection-noisy', 'kitchen-noisy']
+	# domains = ['blocks-world-noisy', 'campus-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
+	#  			'easy-ipc-grid-noisy', 'ferry-noisy', 'intrusion-detection-noisy', 'kitchen-noisy',\
+	#  			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
 
 	# Domains with missing observations.
-	domains = ['campus']
-	# domains = ['blocks-world-aaai', 'blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics',\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
+	domains = ['blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
+	 			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen',\
+	 			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
 
 	# List of evaluated approaches.
 	# approaches = ['diff-h-value-c-tb', 'diff-h-value-c', 'h-value-c-tb']
-	approaches = ['h-value-c-uncertainty-tb', 'h-value-c-uncertainty', 'h-value-c']
+	approaches = ['delta-h-c', 'soft-c', 'delta-h-c-uncertainty', 'delta-h-s-uncertainty-tb']
 	# approaches = ['h-value-tb', 'h-value', 'soft-c-tb', 'soft-c']
 	path = "./results"
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
@@ -128,7 +133,4 @@ if __name__ == '__main__' :
 	else:
 		names = approaches
 
-	if len(approaches) > 3:
-		print("The current implementation is limited to 3 approaches per table")
-		exit(0)
 	main(domains, approaches, path, names)
