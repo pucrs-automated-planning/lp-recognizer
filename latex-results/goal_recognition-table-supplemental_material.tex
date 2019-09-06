@@ -1,0 +1,2687 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{subcaption}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\uniqueness}{POM 2017~$h_{\mathit{uniq}}$}
+\newcommand{\completion}{POM 2017~$h_{\mathit{gc}}$}
+\newcommand{\rg}{R\&G 2009}
+\newcommand{\fgr}{FGR 2015}
+\newcommand{\mirroring}{M+L 2018}
+
+%---------------------------------------------------------------------------------------------------------------
+
+\pdfinfo{
+/Title (?)
+/Author (?)
+}
+\setcounter{secnumdepth}{0}  
+
+\begin{document}
+\title{LP-Based Approaches for Goal Recognition as Planning \\ (Supplemental Material)}
+\author{
+Paper \#6100
+}
+
+\maketitle
+%---------------------------------------------------------------------------------------------------------------
+
+In this document, we present a supplemental material containing a complete comparison between our LP-based heuristics and the state-of-the-art in goal recognition as planning.
+We evaluated these approaches over thousands of goal recognition problems using several IPC domains models, varying the levels of observability for partial and full observable plans in 10\%, 30\%, 50\%, 70\%, and 100\%, and for noisy, partial and full observable plans in 25\%, 50\%, 75\%, and 100\%. Note that the noisy datasets contain 2 noisy (spurious) actions in every observation sequence for all levels of observability.
+Part of the results we presented here in this document have been used to build the tables (Tables 1 and 2 in the original paper) in the original submitted paper.
+
+Here, as in the original submitted paper, we use the following metrics for evaluation: \textit{Accuracy}, the fraction of times that the correct hidden goal was among the goals found to be most likely; \textit{Spread in} $\mathcal{G}$ the average number of returned goals; and recognition time in seconds. Specifically, each row in Tables \ref{tab:goalRecognitionResults} and \ref{tab:goalRecognitionResults2} express averages for the number of candidate goals $|\mathcal{G}|$; the percentage of the plan that is actually observed \% Obs; the average number of observations (actions) per problem $|O|$; and for each approach, the time in seconds to recognize the goal given the observations (Time); Acc \% with which the approaches correctly infer the hidden goal; and S in $\mathcal{G}$ represents the average number of returned goals. Below the name of each domain contains the number of goal recognition problems. At the bottom of Tables~\ref{tab:goalRecognitionResults} and~\ref{tab:goalRecognitionResults2}, we provide the average for evaluated metrics we used over all domains and problems in the datasets.
+
+We evaluate the effectiveness of our heuristics against the state-of-the-art in goal recognition as planning, and the approaches we compare against are: \rg~\cite{Ramirez:2009wo}, \fgr~\cite{Martin:2015ta}, \completion~\cite{PereiraOrenMeneguzzi2017}, \uniqueness~\cite{PereiraOrenMeneguzzi2017}, and \mirroring~\cite{MorEtAl_AAMAS18}. Since the approach of \citeauthor{Sohrabi:2016uw}~\shortcite{Sohrabi:2016uw} timed out for virtually all problems in all domains (using a top-K planner, with K=1000, as the main author of the paper recommend to be used), even with a twenty-minute timeout, so we excluded the results from our comparison. Note that \fgr~timed out for all problem for \textsc{Depots}, and had parsing issues for some domains. When an approach had issues regarding time, we use \timeout~in the tables. As for the parsing issues, we use the symbol $\dag$. \mirroring~has faced some issues with respect to memory usage (we set a maximum usage limit of 4GB), so we use \outofmemory~to indicate memory issues in the tables.
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{2pt}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|}
+\toprule
+\multicolumn{25}{c}{\begin{tabular}[c]{@{}c@{}} Partial and Full Observability \end{tabular}}	\\ \hline
+                   &                     
+				   & \multicolumn{2}{c|}{} 
+				   & \multicolumn{3}{c|}{\hdeltahc}
+				   & \multicolumn{3}{c|}{\hdeltahcu}
+				   & \multicolumn{3}{c|}{\rg}
+				   & \multicolumn{3}{c|}{\fgr}				   
+				   & \multicolumn{3}{c|}{\completion}
+				   & \multicolumn{3}{c|}{\uniqueness}
+				   & \multicolumn{3}{c|}{\mirroring}				   
+				   \\ \hline
+\#                 
+& $|\mathcal{G}|$                   
+& \textbf{\% Obs}        
+& $|O|$
+
+& \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{Time}          & 
+\textbf{Acc \%}      & 
+\textbf{S in $\mathcal{G}$} 
+\\ 
+\hline
+
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(1076)}} & \multirow{5}{*}{20.3} 
+	 & 10	 & 1.8
+
+		% delta-h-c - 10% 
+		& 11.575 & 95.5\% & 7.81 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 11.574 & 95.9\% & 8.7 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.22 & 86.8\% & 7.84 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 46.563 & 65.9\% & 9.11 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.144 & 39.9\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.131 & 31.7\% & 1.04 	 
+
+		% mirroring_landmarks - 10% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 30	 & 4.9
+
+		% delta-h-c - 30% 
+		& 11.57 & 89.4\% & 2.79 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 11.567 & 94.3\% & 5.12 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.639 & 87.2\% & 3.57 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 36.649 & 78.0\% & 10.53 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.156 & 50.6\% & 1.09 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.144 & 51.4\% & 1.06 	 
+
+		% mirroring_landmarks - 30% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 50	 & 7.6
+
+		% delta-h-c - 50% 
+		& 11.581 & 92.7\% & 1.78 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 11.587 & 93.9\% & 3.24 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 2.402 & 97.9\% & 2.63 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 34.291 & 81.3\% & 10.68 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.179 & 65.0\% & 1.09 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.168 & 60.1\% & 1.08 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 70	 & 11.1
+
+		% delta-h-c - 70% 
+		& 11.594 & 98.8\% & 1.41 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 11.595 & 98.8\% & 1.8 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.785 & 97.5\% & 1.83 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 37.057 & 89.8\% & 8.63 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.192 & 84.8\% & 1.12 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.184 & 79.0\% & 1.14 	 
+
+		% mirroring_landmarks - 70% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 100	 & 14.5
+
+		% delta-h-c - 100% 
+		& 11.904 & 100.0\% & 1.21 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 11.937 & 100.0\% & 1.21 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 6.791 & 100.0\% & 1.46 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 40.405 & 100.0\% & 1.23 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.246 & 100.0\% & 1.36 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.239 & 100.0\% & 1.09 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory
+ \\ \hline
+ 
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{8.5} 
+	 & 10	 & 3.1
+
+		% delta-h-c - 10% 
+		& 8.299 & 61.9\% & 2.15 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 8.305 & 71.4\% & 3.51 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.496 & 77.4\% & 3.99 	 
+
+		% goal_recognition-yolanda - 10% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.369 & 35.7\% & 1.18 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.393 & 32.1\% & 1.1 	 
+
+		% mirroring_landmarks - 10% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 30	 & 8.6
+
+		% delta-h-c - 30% 
+		& 8.292 & 71.4\% & 1.4 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 8.298 & 88.1\% & 4.17 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.309 & 77.4\% & 2.39 	 
+
+		% goal_recognition-yolanda - 30% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.357 & 58.3\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.393 & 47.6\% & 1.07 	 
+
+		% mirroring_landmarks - 30% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 50	 & 14.1
+
+		% delta-h-c - 50% 
+		& 8.282 & 92.9\% & 1.38 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 8.28 & 98.8\% & 3.65 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 3.411 & 84.5\% & 1.92 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.369 & 76.2\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.405 & 71.4\% & 1.02 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 70	 & 19.7
+
+		% delta-h-c - 70% 
+		& 8.282 & 97.6\% & 1.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 8.279 & 98.8\% & 1.75 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 5.27 & 91.7\% & 1.68 	 
+
+		% goal_recognition-yolanda - 70% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.393 & 89.3\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.44 & 84.5\% & 1.01 	 
+
+		% mirroring_landmarks - 70% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 100	 & 24.4
+
+		% delta-h-c - 100% 
+		& 8.296 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 8.296 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 7.117 & 92.9\% & 1.46 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.464 & 100.0\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.5 & 100.0\% & 1.04 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory
+		
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{10.5} 
+	 & 10	 & 2.6
+
+		% delta-h-c - 10% 
+		& 5.159 & 77.4\% & 2.61 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.168 & 78.6\% & 3.17 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.169 & 96.4\% & 4.71 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 79.488 & 42.9\% & 1.92 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.333 & 41.7\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.321 & 35.7\% & 1.11 	 
+
+		% mirroring_landmarks - 10% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 30	 & 6.9
+
+		% delta-h-c - 30% 
+		& 5.149 & 83.3\% & 1.69 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.163 & 91.7\% & 2.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.411 & 92.9\% & 3.35 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 60.168 & 70.2\% & 3.19 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.31 & 54.8\% & 1.13 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.31 & 47.6\% & 1.1 	 
+
+		% mirroring_landmarks - 30% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 50	 & 11.1
+
+		% delta-h-c - 50% 
+		& 5.167 & 92.9\% & 1.23 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.146 & 97.6\% & 2.0 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.694 & 94.0\% & 2.88 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 64.427 & 79.8\% & 4.6 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.321 & 72.6\% & 1.17 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.31 & 64.3\% & 1.14 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 70	 & 15.6
+
+		% delta-h-c - 70% 
+		& 5.148 & 95.2\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.146 & 95.2\% & 1.5 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.973 & 89.3\% & 2.46 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 75.085 & 82.1\% & 4.11 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.333 & 90.5\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.321 & 90.5\% & 1.17 	 
+
+		% mirroring_landmarks - 70% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 100	 & 21.7
+
+		% delta-h-c - 100% 
+		& 5.166 & 100.0\% & 1.04 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.157 & 100.0\% & 1.04 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.821 & 89.3\% & 2.14 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 96.091 & 96.4\% & 1.11 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.321 & 100.0\% & 1.21 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.321 & 100.0\% & 1.18 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory
+		
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{7.3} 
+	 & 10	 & 5.7
+
+		% delta-h-c - 10% 
+		& 5.759 & 54.8\% & 2.21 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.745 & 95.2\% & 5.45 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.767 & 83.3\% & 4.21 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 66.496 & 92.9\% & 6.38 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.452 & 36.9\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.512 & 33.3\% & 1.06 	 
+
+		% mirroring_landmarks - 10% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 30	 & 16.0
+
+		% delta-h-c - 30% 
+		& 5.745 & 83.3\% & 1.58 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.753 & 100.0\% & 4.92 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.723 & 81.0\% & 3.35 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 54.461 & 97.6\% & 6.56 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.452 & 60.7\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.5 & 51.2\% & 1.06 	 
+
+		% mirroring_landmarks - 30% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 50	 & 26.2
+
+		% delta-h-c - 50% 
+		& 5.742 & 90.5\% & 1.21 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.734 & 100.0\% & 3.98 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 4.822 & 72.6\% & 2.27 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 56.256 & 98.8\% & 6.27 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.488 & 66.7\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.548 & 61.9\% & 1.01 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 70	 & 36.8
+
+		% delta-h-c - 70% 
+		& 5.75 & 97.6\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.735 & 100.0\% & 2.26 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 10.914 & 70.2\% & 2.05 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 65.101 & 98.8\% & 6.0 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.536 & 89.3\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.607 & 78.6\% & 1.05 	 
+
+		% mirroring_landmarks - 70% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 100	 & 51.9
+
+		% delta-h-c - 100% 
+		& 5.763 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.75 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 25.092 & 67.9\% & 1.68 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 86.46 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.643 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.75 & 96.4\% & 1.04 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory
+		
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(673)}} & \multirow{5}{*}{9.0} 
+	 & 10	 & 2.9
+
+		% delta-h-c - 10% 
+		& 6.216 & 92.8\% & 1.92 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.209 & 94.8\% & 2.32 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.091 & 96.1\% & 2.46 	 
+
+		% goal_recognition-yolanda - 10% 
+		& \timeout & \timeout & \timeout
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.248 & 66.7\% & 2.58 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.242 & 62.7\% & 2.58 	 
+
+		% mirroring_landmarks - 10% 
+		& 0.758 & 58.2\% & 2.11 	 
+
+	\\ & & 30	 & 7.8
+
+		% delta-h-c - 30% 
+		& 6.051 & 95.4\% & 1.29 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.044 & 98.0\% & 1.48 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.476 & 97.4\% & 1.42 	 
+
+		% goal_recognition-yolanda - 30% 
+		& \timeout & \timeout & \timeout
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.242 & 81.7\% & 1.65 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.242 & 83.7\% & 1.66 	 
+
+		% mirroring_landmarks - 30% 
+		& 0.699 & 80.4\% & 1.62 	 
+
+	\\ & & 50	 & 12.7
+
+		% delta-h-c - 50% 
+		& 6.123 & 98.7\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.122 & 100.0\% & 1.25 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.905 & 100.0\% & 1.16 	 
+
+		% goal_recognition-yolanda - 50% 
+		& \timeout & \timeout & \timeout
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.261 & 90.8\% & 1.18 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.248 & 90.8\% & 1.18 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.667 & 93.5\% & 1.21 	 
+
+	\\ & & 70	 & 17.9
+
+		% delta-h-c - 70% 
+		& 6.251 & 99.4\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.259 & 100.0\% & 1.19 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 2.552 & 100.0\% & 1.05 	 
+
+		% goal_recognition-yolanda - 70% 
+		& \timeout & \timeout & \timeout
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.268 & 97.4\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.268 & 97.4\% & 1.07 	 
+
+		% mirroring_landmarks - 70% 
+		& 0.673 & 91.5\% & 1.08 	 
+
+	\\ & & 100	 & 24.8
+
+		% delta-h-c - 100% 
+		& 5.825 & 100.0\% & 1.03 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.826 & 100.0\% & 1.03 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.057 & 100.0\% & 1.0 	 
+
+		% goal_recognition-yolanda - 100% 
+		& \timeout & \timeout & \timeout
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.262 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.262 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.59 & 83.6\% & 1.1 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 2.9
+
+		% delta-h-c - 10% 
+		& 4.201 & 100.0\% & 3.17 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.201 & 100.0\% & 3.2 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.491 & 98.8\% & 3.37 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 6.66 & 91.7\% & 6.65 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.071 & 58.3\% & 1.26 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.071 & 58.3\% & 1.18 	 
+
+		% mirroring_landmarks - 10% 
+		& 4.548 & 51.2\% & 1.35 	 
+
+	\\ & & 30	 & 7.6
+
+		% delta-h-c - 30% 
+		& 4.072 & 100.0\% & 1.56 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.075 & 100.0\% & 1.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 0.677 & 100.0\% & 1.76 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 6.801 & 100.0\% & 7.57 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.06 & 85.7\% & 1.12 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.06 & 83.3\% & 1.06 	 
+
+		% mirroring_landmarks - 30% 
+		& 4.393 & 73.8\% & 1.13 	 
+
+	\\ & & 50	 & 12.3
+
+		% delta-h-c - 50% 
+		& 4.141 & 100.0\% & 1.29 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.141 & 100.0\% & 1.44 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.795 & 100.0\% & 1.42 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 8.297 & 100.0\% & 7.57 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.06 & 95.2\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.06 & 91.7\% & 1.01 	 
+
+		% mirroring_landmarks - 50% 
+		& 4.31 & 81.0\% & 1.12 	 
+
+	\\ & & 70	 & 17.3
+
+		% delta-h-c - 70% 
+		& 4.199 & 100.0\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.197 & 100.0\% & 1.12 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.253 & 98.8\% & 1.14 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 10.65 & 100.0\% & 7.32 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.071 & 100.0\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.071 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 70% 
+		& 4.274 & 96.4\% & 1.05 	 
+
+	\\ & & 100	 & 24.2
+
+		% delta-h-c - 100% 
+		& 4.196 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.204 & 100.0\% & 1.07 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 1.632 & 100.0\% & 1.07 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 13.625 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.071 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.071 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 4.214 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(673)}} & \multirow{5}{*}{10.5} 
+	 & 10	 & 2.9
+
+		% delta-h-c - 10% 
+		& 6.79 & 100.0\% & 2.5 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.789 & 100.0\% & 2.8 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.201 & 99.3\% & 2.98 	 
+
+		% goal_recognition-yolanda - 10% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.641 & 55.6\% & 1.73 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.641 & 49.0\% & 1.24 	 
+
+		% mirroring_landmarks - 10% 
+		& 3.967 & 51.0\% & 1.63 	 
+
+	\\ & & 30	 & 8.2
+
+		% delta-h-c - 30% 
+		& 6.953 & 98.0\% & 1.3 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.944 & 98.0\% & 1.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.799 & 98.7\% & 1.39 	 
+
+		% goal_recognition-yolanda - 30% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.621 & 80.4\% & 1.21 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.634 & 76.5\% & 1.12 	 
+
+		% mirroring_landmarks - 30% 
+		& 3.83 & 77.8\% & 1.46 	 
+
+	\\ & & 50	 & 13.4
+
+		% delta-h-c - 50% 
+		& 6.944 & 98.7\% & 1.13 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.959 & 98.7\% & 1.37 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 2.509 & 98.7\% & 1.29 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.641 & 90.2\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.647 & 86.3\% & 1.05 	 
+
+		% mirroring_landmarks - 50% 
+		& 5.085 & 88.9\% & 1.32 	 
+
+	\\ & & 70	 & 18.9
+
+		% delta-h-c - 70% 
+		& 6.938 & 100.0\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.95 & 100.0\% & 1.15 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.461 & 100.0\% & 1.13 	 
+
+		% goal_recognition-yolanda - 70% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.667 & 96.7\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.66 & 96.7\% & 1.02 	 
+
+		% mirroring_landmarks - 70% 
+		& 3.739 & 95.4\% & 1.3 	 
+
+	\\ & & 100	 & 26.5
+
+		% delta-h-c - 100% 
+		& 6.63 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 6.633 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.832 & 100.0\% & 1.0 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 3.213 & 100.0\% & 1.1 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 3.9
+
+		% delta-h-c - 10% 
+		& 4.905 & 100.0\% & 2.12 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.886 & 100.0\% & 2.29 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.813 & 100.0\% & 3.26 	 
+
+		% goal_recognition-yolanda - 10% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.464 & 67.9\% & 1.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.352 & 54.8\% & 1.26 	 
+
+		% mirroring_landmarks - 10% 
+		& 9.548 & 58.3\% & 1.54 	 
+
+	\\ & & 30	 & 11.1
+
+		% delta-h-c - 30% 
+		& 4.897 & 100.0\% & 1.19 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.895 & 100.0\% & 1.46 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.191 & 100.0\% & 1.58 	 
+
+		% goal_recognition-yolanda - 30% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.452 & 96.4\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.364 & 90.5\% & 1.08 	 
+
+		% mirroring_landmarks - 30% 
+		& 9.286 & 77.4\% & 1.26 	 
+
+	\\ & & 50	 & 18.1
+
+		% delta-h-c - 50% 
+		& 4.901 & 100.0\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.89 & 100.0\% & 1.32 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.722 & 100.0\% & 1.29 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.452 & 96.4\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.352 & 96.4\% & 1.0 	 
+
+		% mirroring_landmarks - 50% 
+		& 9.238 & 88.1\% & 1.21 	 
+
+	\\ & & 70	 & 25.3
+
+		% delta-h-c - 70% 
+		& 4.892 & 100.0\% & 1.01 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.891 & 100.0\% & 1.02 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 2.59 & 100.0\% & 1.04 	 
+
+		% goal_recognition-yolanda - 70% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.452 & 100.0\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.376 & 100.0\% & 1.01 	 
+
+		% mirroring_landmarks - 70% 
+		& 9.167 & 96.4\% & 1.12 	 
+
+	\\ & & 100	 & 35.6
+
+		% delta-h-c - 100% 
+		& 4.894 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.894 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 5.107 & 100.0\% & 1.0 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.464 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.364 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 9.036 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 3.0
+
+		% delta-h-c - 10% 
+		& 4.863 & 98.8\% & 2.71 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.858 & 100.0\% & 2.94 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.745 & 98.8\% & 2.86 	 
+
+		% goal_recognition-yolanda - 10% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.348 & 64.3\% & 1.73 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.371 & 51.2\% & 1.11 	 
+
+		% mirroring_landmarks - 10% 
+		& 20.893 & 65.5\% & 1.85 	 
+
+	\\ & & 30	 & 7.9
+
+		% delta-h-c - 30% 
+		& 4.881 & 85.7\% & 1.17 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.87 & 91.7\% & 1.83 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.031 & 100.0\% & 1.67 	 
+
+		% goal_recognition-yolanda - 30% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.348 & 83.3\% & 1.24 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.348 & 69.0\% & 1.07 	 
+
+		% mirroring_landmarks - 30% 
+		& 22.714 & 81.0\% & 1.42 	 
+
+	\\ & & 50	 & 12.7
+
+		% delta-h-c - 50% 
+		& 4.87 & 98.8\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.856 & 98.8\% & 1.44 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.345 & 100.0\% & 1.3 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.336 & 92.9\% & 1.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.348 & 85.7\% & 1.01 	 
+
+		% mirroring_landmarks - 50% 
+		& 17.119 & 90.5\% & 1.13 	 
+
+	\\ & & 70	 & 17.9
+
+		% delta-h-c - 70% 
+		& 4.858 & 98.8\% & 1.01 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.838 & 98.8\% & 1.06 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.177 & 100.0\% & 1.07 	 
+
+		% goal_recognition-yolanda - 70% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.348 & 98.8\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.36 & 91.7\% & 1.0 	 
+
+		% mirroring_landmarks - 70% 
+		& 17.095 & 98.8\% & 1.07 	 
+
+	\\ & & 100	 & 24.9
+
+		% delta-h-c - 100% 
+		& 4.823 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.884 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.298 & 100.0\% & 1.07 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.371 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.571 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 16.571 & 100.0\% & 1.04 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{6.5} 
+	 & 10	 & 2.1
+
+		% delta-h-c - 10% 
+		& 5.196 & 91.7\% & 2.73 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.204 & 92.9\% & 2.92 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.076 & 97.6\% & 3.42 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 14.82 & 89.3\% & 4.87 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.45 & 57.1\% & 1.56 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.45 & 47.6\% & 1.21 	 
+
+		% mirroring_landmarks - 10% 
+		& 2.226 & 69.0\% & 2.05 	 
+
+	\\ & & 30	 & 5.4
+
+		% delta-h-c - 30% 
+		& 5.178 & 92.9\% & 1.76 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.201 & 96.4\% & 2.31 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.183 & 97.6\% & 2.4 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 32.171 & 86.9\% & 4.21 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.45 & 76.2\% & 1.31 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.414 & 69.0\% & 1.14 	 
+
+		% mirroring_landmarks - 30% 
+		& 2.024 & 83.3\% & 1.42 	 
+
+	\\ & & 50	 & 8.7
+
+		% delta-h-c - 50% 
+		& 5.197 & 96.4\% & 1.32 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.194 & 98.8\% & 1.77 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.328 & 97.6\% & 1.69 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 51.567 & 88.1\% & 3.65 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.426 & 85.7\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.414 & 81.0\% & 1.11 	 
+
+		% mirroring_landmarks - 50% 
+		& 1.905 & 92.9\% & 1.27 	 
+
+	\\ & & 70	 & 12.2
+
+		% delta-h-c - 70% 
+		& 5.191 & 97.6\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.193 & 97.6\% & 1.21 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.841 & 96.4\% & 1.52 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 75.363 & 92.9\% & 2.89 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.402 & 97.6\% & 1.02 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.414 & 94.0\% & 1.04 	 
+
+		% mirroring_landmarks - 70% 
+		& 1.893 & 98.8\% & 1.06 	 
+
+	\\ & & 100	 & 16.8
+
+		% delta-h-c - 100% 
+		& 5.212 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.205 & 100.0\% & 1.07 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.045 & 96.4\% & 1.32 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 113.381 & 100.0\% & 2.57 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.414 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.414 & 100.0\% & 1.07 	 
+
+		% mirroring_landmarks - 100% 
+		& 1.786 & 100.0\% & 1.04 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{7.3} 
+	 & 10	 & 3.1
+
+		% delta-h-c - 10% 
+		& 7.827 & 72.6\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 7.849 & 78.6\% & 2.39 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 3.153 & 69.0\% & 4.02 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 461.701 & 67.9\% & 2.99 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.607 & 53.6\% & 2.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.607 & 51.2\% & 1.86 	 
+
+		% mirroring_landmarks - 10% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 30	 & 8.7
+
+		% delta-h-c - 30% 
+		& 7.744 & 89.3\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 7.742 & 95.2\% & 1.75 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 4.622 & 89.3\% & 4.17 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 370.413 & 83.3\% & 3.14 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.595 & 57.1\% & 1.37 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.607 & 56.0\% & 1.21 	 
+
+		% mirroring_landmarks - 30% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 50	 & 14.1
+
+		% delta-h-c - 50% 
+		& 7.701 & 95.2\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 7.709 & 100.0\% & 1.46 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 7.441 & 89.3\% & 4.11 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 358.028 & 82.1\% & 2.27 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.595 & 71.4\% & 1.32 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.607 & 69.0\% & 1.2 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 70	 & 19.8
+
+		% delta-h-c - 70% 
+		& 7.69 & 97.6\% & 1.04 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 7.677 & 98.8\% & 1.15 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 9.877 & 89.3\% & 4.18 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 353.721 & 85.7\% & 1.85 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.607 & 83.3\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.607 & 86.9\% & 1.08 	 
+
+		% mirroring_landmarks - 70% 
+		& \outofmemory & \outofmemory & \outofmemory
+
+	\\ & & 100	 & 35.5
+
+		% delta-h-c - 100% 
+		& 7.67 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 7.658 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 12.996 & 89.3\% & 4.54 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 353.182 & 85.7\% & 1.04 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.643 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory
+		
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{zeno}} \rotatebox[origin=c]{90}{(364)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 2.6
+
+		% delta-h-c - 10% 
+		& 6.843 & 86.9\% & 2.71 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.871 & 88.1\% & 3.12 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.814 & 96.4\% & 3.4 	 
+
+		% goal_recognition-yolanda - 10% 
+		& 93.918 & 66.7\% & 1.63 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.567 & 39.3\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.555 & 36.9\% & 1.05 	 
+
+		% mirroring_landmarks - 10% 
+		& 13.119 & 41.7\% & 1.24 	 
+
+	\\ & & 30	 & 6.7
+
+		% delta-h-c - 30% 
+		& 6.838 & 90.5\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.854 & 96.4\% & 2.56 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.539 & 88.1\% & 2.12 	 
+
+		% goal_recognition-yolanda - 30% 
+		& 88.285 & 78.6\% & 2.27 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.555 & 70.2\% & 1.15 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.531 & 60.7\% & 1.02 	 
+
+		% mirroring_landmarks - 30% 
+		& 12.881 & 76.2\% & 1.31 	 
+
+	\\ & & 50	 & 10.8
+
+		% delta-h-c - 50% 
+		& 6.845 & 95.2\% & 1.15 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.851 & 96.4\% & 1.83 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 3.079 & 92.9\% & 1.42 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 105.814 & 91.7\% & 2.56 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.543 & 78.6\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.555 & 76.2\% & 1.0 	 
+
+		% mirroring_landmarks - 50% 
+		& 12.5 & 83.3\% & 1.07 	 
+
+	\\ & & 70	 & 15.2
+
+		% delta-h-c - 70% 
+		& 6.855 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.851 & 100.0\% & 1.04 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.907 & 96.4\% & 1.13 	 
+
+		% goal_recognition-yolanda - 70% 
+		& 125.653 & 94.0\% & 2.58 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.567 & 97.6\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.555 & 90.5\% & 1.0 	 
+
+		% mirroring_landmarks - 70% 
+		& 12.417 & 96.4\% & 1.02 	 
+
+	\\ & & 100	 & 21.1
+
+		% delta-h-c - 100% 
+		& 6.852 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 6.842 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.866 & 100.0\% & 1.07 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 168.675 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.543 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.543 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 12.321 & 100.0\% & 1.0 	 
+ \\ \hline
+
+Average & & & & 6.456 & 94.11\% & 1.55 & 6.457 & 96.94\% & 2.14 & 3.322 & 93.38\% & 2.30 & 106.049 & 87.40\% & 4.32 & 0.397 & 79.66\% & 1.18 & 0.400 & 75.87\% & 1.12 & 7.391 & 83.43\% & 1.28
+ 
+\\ \hline
+
+\end{tabular}
+\caption{Results comparing the state-of-the-art in goal recognition as planning for partial and full observability.}
+\label{tab:goalRecognitionResults}
+\end{table*}
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{2pt}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|}
+\toprule
+\multicolumn{25}{c}{\begin{tabular}[c]{@{}c@{}} Noisy, Partial, and Full Observability \end{tabular}}	\\ \hline
+                   &                     
+				   & \multicolumn{2}{c|}{} 
+				   & \multicolumn{3}{c|}{\hdeltahc}
+				   & \multicolumn{3}{c|}{\hdeltahcu}
+				   & \multicolumn{3}{c|}{\rg}
+				   & \multicolumn{3}{c|}{\fgr}				   
+				   & \multicolumn{3}{c|}{\completion}
+				   & \multicolumn{3}{c|}{\uniqueness}
+				   & \multicolumn{3}{c|}{\mirroring}				   
+				   \\ \hline
+\#                 
+& $|\mathcal{G}|$                   
+& \textbf{\% Obs}        
+& $|O|$
+
+& \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{Time}          & 
+\textbf{Acc \%}      & 
+\textbf{S in $\mathcal{G}$} 
+\\ 
+\hline
+
+
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{20.3} 
+	 & 25	 & 2.4
+
+		% delta-h-c - 25% 
+		& 16.033 & 58.3\% & 6.22 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 16.019 & 75.0\% & 10.39 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 1.045 & 38.9\% & 5.39 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 3.044 & 69.4\% & 12.67 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.083 & 2.8\% & 1.22 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.083 & 8.3\% & 1.0 	 
+
+		% mirroring_landmarks - 25% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 50	 & 4.4
+
+		% delta-h-c - 50% 
+		& 12.626 & 52.8\% & 3.31 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 12.675 & 88.9\% & 12.44 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.122 & 52.8\% & 4.61 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 2.71 & 80.6\% & 15.58 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.083 & 25.0\% & 1.19 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.083 & 13.9\% & 1.08 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 75	 & 6.8
+
+		% delta-h-c - 75% 
+		& 11.282 & 80.6\% & 2.11 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 11.235 & 91.7\% & 7.36 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 1.405 & 75.0\% & 2.72 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 2.647 & 77.8\% & 12.39 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.056 & 47.2\% & 1.19 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.056 & 38.9\% & 1.25 	 
+
+		% mirroring_landmarks - 75% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 100	 & 8.8
+
+		% delta-h-c - 100% 
+		& 10.576 & 88.9\% & 1.92 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 10.629 & 97.2\% & 2.86 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 1.652 & 86.1\% & 2.03 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 2.693 & 88.9\% & 11.31 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.083 & 77.8\% & 1.36 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.056 & 75.0\% & 1.33 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{9.3} 
+	 & 25	 & 4.4
+
+		% delta-h-c - 25% 
+		& 11.495 & 52.8\% & 2.19 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 11.445 & 63.9\% & 4.47 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.284 & 5.6\% & 9.17 	 
+
+		% goal_recognition-yolanda - 25% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.528 & 38.9\% & 1.64 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.528 & 27.8\% & 1.22 	 
+
+		% mirroring_landmarks - 25% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 50	 & 8.4
+
+		% delta-h-c - 50% 
+		& 10.299 & 61.1\% & 1.67 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 10.263 & 83.3\% & 4.14 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.189 & 0.0\% & 9.33 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.472 & 52.8\% & 1.22 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.472 & 41.7\% & 1.19 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 75	 & 12.7
+
+		% delta-h-c - 75% 
+		& 8.671 & 88.9\% & 1.19 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 8.674 & 94.4\% & 2.14 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.361 & 11.1\% & 8.28 	 
+
+		% goal_recognition-yolanda - 75% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.472 & 80.6\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.5 & 75.0\% & 1.06 	 
+
+		% mirroring_landmarks - 75% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 100	 & 16.2
+
+		% delta-h-c - 100% 
+		& 8.098 & 94.4\% & 1.19 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 8.075 & 91.7\% & 1.22 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.292 & 5.6\% & 8.83 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.472 & 88.9\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.472 & 86.1\% & 1.11 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{6.6} 
+	 & 25	 & 3.5
+
+		% delta-h-c - 25% 
+		& 5.383 & 55.6\% & 2.61 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 5.362 & 83.3\% & 4.69 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.234 & 44.4\% & 5.89 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 1.732 & 36.1\% & 2.33 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.111 & 36.1\% & 1.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.111 & 25.0\% & 1.08 	 
+
+		% mirroring_landmarks - 25% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 50	 & 6.7
+
+		% delta-h-c - 50% 
+		& 4.982 & 77.8\% & 1.72 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.97 & 91.7\% & 3.47 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.282 & 38.9\% & 4.72 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 1.625 & 55.6\% & 3.03 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.083 & 58.3\% & 1.28 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.083 & 52.8\% & 1.11 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 75	 & 10.0
+
+		% delta-h-c - 75% 
+		& 4.825 & 86.1\% & 1.25 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 4.855 & 94.4\% & 2.31 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.239 & 30.6\% & 5.47 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 1.902 & 61.1\% & 2.67 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.083 & 61.1\% & 1.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.111 & 52.8\% & 1.14 	 
+
+		% mirroring_landmarks - 75% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 100	 & 12.8
+
+		% delta-h-c - 100% 
+		& 4.511 & 97.2\% & 1.31 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.511 & 97.2\% & 1.64 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.358 & 44.4\% & 4.42 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 2.205 & 75.0\% & 2.78 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.083 & 94.4\% & 1.47 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.083 & 97.2\% & 1.42 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{7.0} 
+	 & 25	 & 9.2
+
+		% delta-h-c - 25% 
+		& 7.546 & 72.2\% & 2.0 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 7.614 & 97.2\% & 5.11 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.808 & 41.7\% & 5.67 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 37.661 & 94.4\% & 5.89 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.444 & 44.4\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.5 & 33.3\% & 1.0 	 
+
+		% mirroring_landmarks - 25% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 50	 & 17.8
+
+		% delta-h-c - 50% 
+		& 7.108 & 80.6\% & 1.67 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 7.153 & 94.4\% & 4.47 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.569 & 22.2\% & 5.39 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 32.228 & 100.0\% & 5.28 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.417 & 63.9\% & 1.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.444 & 50.0\% & 1.06 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 75	 & 26.6
+
+		% delta-h-c - 75% 
+		& 6.509 & 91.7\% & 1.22 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 6.482 & 94.4\% & 1.78 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 2.793 & 19.4\% & 5.5 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 34.49 & 94.4\% & 4.94 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.417 & 94.4\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.472 & 69.4\% & 1.08 	 
+
+		% mirroring_landmarks - 75% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 100	 & 34.9
+
+		% delta-h-c - 100% 
+		& 5.803 & 100.0\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.768 & 97.2\% & 1.06 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 7.392 & 30.6\% & 4.42 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 39.713 & 94.4\% & 2.22 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.444 & 94.4\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.472 & 94.4\% & 1.03 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{8.3} 
+	 & 25	 & 4.0
+
+		% delta-h-c - 25% 
+		& 7.871 & 81.1\% & 1.67 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 7.889 & 85.6\% & 2.61 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.265 & 12.2\% & 7.56 	 
+
+		% goal_recognition-yolanda - 25% 
+		& \timeout & \timeout & \timeout 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.244 & 58.9\% & 1.78 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.233 & 53.3\% & 1.72 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.522 & 64.4\% & 1.89 	 
+
+	\\ & & 50	 & 7.7
+
+		% delta-h-c - 50% 
+		& 6.03 & 94.4\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.011 & 94.4\% & 1.71 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.2 & 4.4\% & 8.07 	 
+
+		% goal_recognition-yolanda - 50% 
+		& \timeout & \timeout & \timeout 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.222 & 85.6\% & 1.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.211 & 83.3\% & 1.32 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.389 & 83.3\% & 1.36 	 
+
+	\\ & & 75	 & 11.5
+
+		% delta-h-c - 75% 
+		& 5.481 & 98.9\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 5.497 & 97.8\% & 1.13 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.223 & 6.7\% & 7.89 	 
+
+		% goal_recognition-yolanda - 75% 
+		& \timeout & \timeout & \timeout 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.211 & 94.4\% & 1.09 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.211 & 94.4\% & 1.09 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.378 & 91.1\% & 1.17 	 
+
+	\\ & & 100	 & 16.9
+
+		% delta-h-c - 100% 
+		& 5.01 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.988 & 90.0\% & 0.9 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.266 & 10.0\% & 7.77 	 
+
+		% goal_recognition-yolanda - 100% 
+		& \timeout & \timeout & \timeout 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.2 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.2 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.4 & 76.7\% & 1.1 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{7.0} 
+	 & 25	 & 5.8
+
+		% delta-h-c - 25% 
+		& 4.745 & 80.6\% & 2.78 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 4.736 & 86.1\% & 5.11 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.256 & 75.0\% & 2.92 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 0.495 & 100.0\% & 7.0 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.028 & 47.2\% & 1.28 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.028 & 27.8\% & 1.08 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.583 & 50.0\% & 1.69 	 
+
+	\\ & & 50	 & 11.2
+
+		% delta-h-c - 50% 
+		& 4.402 & 97.2\% & 1.72 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.365 & 97.2\% & 3.83 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.375 & 94.4\% & 1.94 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 0.545 & 100.0\% & 7.0 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.028 & 88.9\% & 1.31 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.028 & 77.8\% & 1.06 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.5 & 83.3\% & 1.19 	 
+
+	\\ & & 75	 & 16.6
+
+		% delta-h-c - 75% 
+		& 4.236 & 94.4\% & 1.56 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 4.223 & 97.2\% & 2.42 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.585 & 88.9\% & 1.53 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 0.643 & 94.4\% & 6.64 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.028 & 97.2\% & 1.17 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.028 & 83.3\% & 1.08 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.444 & 83.3\% & 1.22 	 
+
+	\\ & & 100	 & 21.9
+
+		% delta-h-c - 100% 
+		& 4.187 & 97.2\% & 1.17 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.183 & 97.2\% & 1.17 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.906 & 97.2\% & 1.25 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 0.783 & 94.4\% & 4.39 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.028 & 100.0\% & 1.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.028 & 97.2\% & 1.06 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.472 & 100.0\% & 1.14 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{10.0} 
+	 & 25	 & 4.8
+
+		% delta-h-c - 25% 
+		& 7.461 & 91.7\% & 2.11 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 7.446 & 97.2\% & 3.42 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.203 & 5.6\% & 9.42 	 
+
+		% goal_recognition-yolanda - 25% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.222 & 61.1\% & 1.56 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.222 & 38.9\% & 1.08 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.722 & 50.0\% & 1.53 	 
+
+	\\ & & 50	 & 9.4
+
+		% delta-h-c - 50% 
+		& 6.875 & 97.2\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.848 & 97.2\% & 1.36 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.214 & 5.6\% & 9.33 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.194 & 83.3\% & 1.17 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.167 & 75.0\% & 1.06 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.611 & 72.2\% & 1.47 	 
+
+	\\ & & 75	 & 14.1
+
+		% delta-h-c - 75% 
+		& 6.253 & 100.0\% & 1.03 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 6.234 & 100.0\% & 1.06 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.259 & 13.9\% & 8.78 	 
+
+		% goal_recognition-yolanda - 75% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.194 & 97.2\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.167 & 100.0\% & 1.03 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.583 & 91.7\% & 1.42 	 
+
+	\\ & & 100	 & 18.1
+
+		% delta-h-c - 100% 
+		& 5.436 & 100.0\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.438 & 100.0\% & 1.08 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.321 & 13.9\% & 8.78 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.194 & 100.0\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.194 & 100.0\% & 1.03 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.583 & 94.4\% & 1.28 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{6.0} 
+	 & 25	 & 4.4
+
+		% delta-h-c - 25% 
+		& 4.892 & 52.8\% & 1.97 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 4.908 & 83.3\% & 4.17 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.318 & 88.9\% & 2.89 	 
+
+		% goal_recognition-yolanda - 25% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.111 & 50.0\% & 1.39 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.111 & 33.3\% & 1.17 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.306 & 50.0\% & 1.56 	 
+
+	\\ & & 50	 & 8.4
+
+		% delta-h-c - 50% 
+		& 4.533 & 80.6\% & 1.17 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.566 & 97.2\% & 2.17 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.387 & 100.0\% & 1.75 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.083 & 83.3\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.083 & 80.6\% & 1.11 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.25 & 77.8\% & 1.36 	 
+
+	\\ & & 75	 & 12.6
+
+		% delta-h-c - 75% 
+		& 4.387 & 91.7\% & 1.06 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 4.379 & 100.0\% & 1.31 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.483 & 100.0\% & 1.19 	 
+
+		% goal_recognition-yolanda - 75% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.083 & 97.2\% & 1.03 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.083 & 88.9\% & 1.03 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.25 & 86.1\% & 1.08 	 
+
+	\\ & & 100	 & 16.3
+
+		% delta-h-c - 100% 
+		& 4.294 & 100.0\% & 1.03 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.311 & 100.0\% & 1.08 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.628 & 100.0\% & 1.0 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.056 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.056 & 100.0\% & 1.0 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.25 & 97.2\% & 1.06 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{6.0} 
+	 & 25	 & 3.1
+
+		% delta-h-c - 25% 
+		& 5.346 & 72.2\% & 2.22 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 5.359 & 75.0\% & 2.78 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.264 & 33.3\% & 4.78 	 
+
+		% goal_recognition-yolanda - 25% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.083 & 52.8\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.083 & 50.0\% & 1.14 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.167 & 52.8\% & 1.19 	 
+
+	\\ & & 50	 & 5.7
+
+		% delta-h-c - 50% 
+		& 4.973 & 80.6\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.941 & 88.9\% & 2.92 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.296 & 50.0\% & 3.81 	 
+
+		% goal_recognition-yolanda - 50% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.056 & 69.4\% & 1.31 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.056 & 58.3\% & 1.08 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.167 & 63.9\% & 1.11 	 
+
+	\\ & & 75	 & 8.4
+
+		% delta-h-c - 75% 
+		& 4.889 & 91.7\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 4.905 & 100.0\% & 1.47 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.301 & 44.4\% & 3.92 	 
+
+		% goal_recognition-yolanda - 75% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.083 & 86.1\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.056 & 75.0\% & 1.08 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.167 & 83.3\% & 1.14 	 
+
+	\\ & & 100	 & 10.8
+
+		% delta-h-c - 100% 
+		& 4.513 & 100.0\% & 1.03 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.53 & 100.0\% & 1.03 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.305 & 38.9\% & 4.06 	 
+
+		% goal_recognition-yolanda - 100% 
+		& $\dag$ & $\dag$  & $\dag$
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.083 & 97.2\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.056 & 86.1\% & 1.03 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.139 & 88.9\% & 1.03 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{6.0} 
+	 & 25	 & 3.3
+
+		% delta-h-c - 25% 
+		& 4.51 & 75.0\% & 3.31 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 4.444 & 88.9\% & 4.28 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.224 & 58.3\% & 4.53 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 0.399 & 83.3\% & 4.94 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.056 & 52.8\% & 2.42 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.056 & 30.6\% & 1.33 	 
+
+		% mirroring_landmarks - 25% 
+		& 0.111 & 58.3\% & 2.44 	 
+
+	\\ & & 50	 & 5.7
+
+		% delta-h-c - 50% 
+		& 4.056 & 72.2\% & 2.44 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.091 & 83.3\% & 3.92 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.255 & 72.2\% & 3.58 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 0.446 & 72.2\% & 4.44 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.028 & 72.2\% & 2.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.028 & 44.4\% & 1.31 	 
+
+		% mirroring_landmarks - 50% 
+		& 0.111 & 77.8\% & 2.08 	 
+
+	\\ & & 75	 & 8.4
+
+		% delta-h-c - 75% 
+		& 3.915 & 83.3\% & 1.44 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 3.966 & 88.9\% & 2.83 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 0.28 & 77.8\% & 2.75 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 0.486 & 83.3\% & 4.17 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.028 & 80.6\% & 1.28 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.028 & 69.4\% & 1.08 	 
+
+		% mirroring_landmarks - 75% 
+		& 0.111 & 80.6\% & 1.22 	 
+
+	\\ & & 100	 & 10.7
+
+		% delta-h-c - 100% 
+		& 3.929 & 94.4\% & 1.47 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 3.935 & 94.4\% & 1.86 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.298 & 72.2\% & 3.0 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 0.496 & 86.1\% & 3.94 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.056 & 94.4\% & 1.31 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.028 & 91.7\% & 1.19 	 
+
+		% mirroring_landmarks - 100% 
+		& 0.083 & 91.7\% & 1.19 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{8.6} 
+	 & 25	 & 5.3
+
+		% delta-h-c - 25% 
+		& 13.104 & 36.1\% & 1.64 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 13.101 & 72.2\% & 4.69 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 1.953 & 25.0\% & 7.28 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 346.669 & 58.3\% & 4.97 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.75 & 41.7\% & 1.75 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.75 & 38.9\% & 1.56 	 
+
+		% mirroring_landmarks - 25% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 50	 & 10.3
+
+		% delta-h-c - 50% 
+		& 11.319 & 50.0\% & 1.17 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 11.323 & 58.3\% & 1.94 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 2.086 & 19.4\% & 6.67 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 256.744 & 61.1\% & 3.56 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.667 & 66.7\% & 1.44 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.694 & 58.3\% & 1.08 	 
+
+		% mirroring_landmarks - 50% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 75	 & 15.6
+
+		% delta-h-c - 75% 
+		& 9.527 & 36.1\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 9.46 & 36.1\% & 0.56 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 2.121 & 19.4\% & 7.69 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 222.685 & 61.1\% & 3.36 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.694 & 80.6\% & 1.28 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.667 & 72.2\% & 1.03 	 
+
+		% mirroring_landmarks - 75% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+
+	\\ & & 100	 & 20.1
+
+		% delta-h-c - 100% 
+		& 8.946 & 33.3\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 9.029 & 36.1\% & 0.5 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 5.878 & 33.3\% & 6.47 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 217.736 & 61.1\% & 2.75 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.694 & 94.4\% & 1.22 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.694 & 86.1\% & 1.06 	 
+
+		% mirroring_landmarks - 100% 
+		& \outofmemory & \outofmemory & \outofmemory 	 
+ \\ \hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{zeno}} \rotatebox[origin=c]{90}{(144)}} & \multirow{4}{*}{6.6} 
+	 & 25	 & 3.0
+
+		% delta-h-c - 25% 
+		& 8.209 & 44.4\% & 2.72 	 
+
+		% delta-h-c-uncertainty - 25% 
+		& 8.27 & 80.6\% & 5.25 	 
+
+		% planrecognition-ramirezgeffner - 25% 
+		& 0.946 & 72.2\% & 3.92 	 
+
+		% goal_recognition-yolanda - 25% 
+		& 30.776 & 44.4\% & 2.25 	 
+
+		% planrecognition-heuristic_completion-0 - 25% 
+		& 0.417 & 55.6\% & 1.92 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 25% 
+		& 0.417 & 33.3\% & 1.03 	 
+
+		% mirroring_landmarks - 25% 
+		& 3.361 & 47.2\% & 1.67 	 
+
+	\\ & & 50	 & 5.8
+
+		% delta-h-c - 50% 
+		& 7.712 & 91.7\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 7.653 & 97.2\% & 4.03 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.025 & 88.9\% & 1.78 	 
+
+		% goal_recognition-yolanda - 50% 
+		& 27.018 & 72.2\% & 3.53 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.361 & 77.8\% & 1.67 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.361 & 61.1\% & 1.08 	 
+
+		% mirroring_landmarks - 50% 
+		& 3.639 & 77.8\% & 1.56 	 
+
+	\\ & & 75	 & 8.8
+
+		% delta-h-c - 75% 
+		& 6.785 & 91.7\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 75% 
+		& 6.766 & 100.0\% & 2.44 	 
+
+		% planrecognition-ramirezgeffner - 75% 
+		& 1.167 & 100.0\% & 1.22 	 
+
+		% goal_recognition-yolanda - 75% 
+		& 27.262 & 97.2\% & 2.81 	 
+
+		% planrecognition-heuristic_completion-0 - 75% 
+		& 0.361 & 88.9\% & 1.25 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 75% 
+		& 0.361 & 77.8\% & 1.0 	 
+
+		% mirroring_landmarks - 75% 
+		& 3.083 & 94.4\% & 1.17 	 
+
+	\\ & & 100	 & 11.3
+
+		% delta-h-c - 100% 
+		& 6.177 & 97.2\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 6.141 & 100.0\% & 1.42 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 1.289 & 97.2\% & 1.08 	 
+
+		% goal_recognition-yolanda - 100% 
+		& 30.361 & 77.8\% & 2.08 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.361 & 97.2\% & 1.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.333 & 97.2\% & 1.03 	 
+
+		% mirroring_landmarks - 100% 
+		& 3.083 & 97.2\% & 1.08 	 
+ \\ \hline
+
+Average & & & & 6.870 & 80.14\% & 1.69 & 6.868 & 88.68\% & 3.04 & 0.929 & 47.22\% & 5.01 & 41.444 & 67.97\% & 4.65 & 0.234 & 73.21\% & 1.30 & 0.234 & 64.71\% & 1.13 & 0.767 & 77.34\% & 1.37
+ 
+\\ \hline
+
+\end{tabular}
+\caption{Results comparing the state-of-the-art in goal recognition as planning for noisy, partial, and full observability.}
+\label{tab:goalRecognitionResults2}
+\end{table*}
+
+\bibliographystyle{aaai}
+\bibliography{goal_recognition-table-supplemental_material}
+\end{document}

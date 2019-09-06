@@ -78,6 +78,16 @@ def main(domains, approaches, basepath, names):
 							if 'completion' in approach and 'noisy' in domain_name:
 								time = float(line[10])
 								accuracy = (float(line[1]) * 100)
+								spreadG = float(line[9])
+
+							if 'mirroring' in approach and 'noisy' in domain_name:
+								time = float(line[10])
+								accuracy = (float(line[1]) * 100)
+								spreadG = float(line[9])
+
+							if 'mirroring' in approach:
+								time = float(line[10])
+								accuracy = (float(line[1]) * 100)
 								spreadG = float(line[9])								
 
 							list_metrics = approaches_metrics[approach]
@@ -132,7 +142,7 @@ if __name__ == '__main__' :
 	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
 
 	# List of evaluated approaches.
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0']
+	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
 
 	path = "./results"
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")

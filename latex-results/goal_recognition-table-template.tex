@@ -19,6 +19,9 @@
 \newtheorem{definition}{Definition}
 \newtheorem{example}{Example}
 
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
 \newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
 \newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
 \newcommand{\uniqueness}{POM 2017 $h_{\mathit{uniq}}$}
@@ -36,9 +39,9 @@
 \setcounter{secnumdepth}{0}  
 
 \begin{document}
-\title{Operator-Counting Goal Recognition - Results (Missing)}
+\title{LP-Based Approaches for Goal Recognition as Planning \\ (Supplemental Material)}
 \author{
-?
+Paper \#6100
 }
 
 \maketitle
@@ -48,15 +51,17 @@
 \centering
 \fontsize{5}{6}\selectfont
 \setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|}
 \hline
                    &                     
 				   & \multicolumn{2}{c|}{} 
 				   & \multicolumn{3}{c|}{\hdeltahc}
 				   & \multicolumn{3}{c|}{\hdeltahcu}
 				   & \multicolumn{3}{c|}{\rg}
+				   & \multicolumn{3}{c|}{\fgr}				   
 				   & \multicolumn{3}{c|}{\completion}
 				   & \multicolumn{3}{c|}{\uniqueness}
+				   & \multicolumn{3}{c|}{\mirroring}				   
 				   \\ \hline
 \#                 
 & $|\mathcal{G}|$                   
@@ -64,6 +69,12 @@
 & $|O|$
 
 & \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
 \textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
 \textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
 \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
@@ -83,12 +94,12 @@
 
 <TABLE_LP_RESULTS>
 
-Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3> & <AVG_APPROACH_4>
+Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3> & <AVG_APPROACH_4> & <AVG_APPROACH_5> & <AVG_APPROACH_6>
  
 \\ \hline
 
 \end{tabular}
-\caption{Goal recognition results.}
+\caption{Results comparing the state-of-the-art in goal recognition as planning for partial and full observability.}
 \label{tab:goalRecognitionResults}
 \end{table*}
 
