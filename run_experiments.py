@@ -1,11 +1,12 @@
 #!/usr/bin/env python2
 
-import sys, os, csv, time, math
+import sys, os, csv, time, math, subprocess
+DEVNULL = open(os.devnull,"r+b")
 from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
 from planner_interface import Hypothesis, custom_partition
 
 def progress(count, total, status=''):
-    bar_len = 60
+    bar_len = 30
     filled_len = int(round(bar_len * count / float(total)))
 
     percents = round(100.0 * count / float(total), 1)
@@ -184,16 +185,18 @@ def doExperiments(domainName, observability, h_value, h_value_c, soft_c, delta_h
         problems_path = 'experiments/' + domainName + '/' + obs + '/'
         total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
-            progress(problems, total_problems, ""+domainName+":"+str(obs)+"%")
+            progress(problems, total_problems, e+":"+domainName+":"+str(obs)+"%")
             # progress(problems,total_problems,experiments[e].recognizer.name+":"+str(obs)+"%")
             if problem_file.endswith(".tar.bz2"):
                 cmd_clean = 'rm -rf *.pddl *.dat *.log'
                 os.system(cmd_clean)
 
-                print(problems_path + problem_file)
+                # print(problems_path + problem_file)
                 cmd_untar = 'tar xvjf ' + problems_path + problem_file
                 # cmd_untar = 'tar xjf ' + problems_path + problem_file
                 os.system(cmd_untar)
+                # cmd_untar = ['tar', 'xjf', problems_path + problem_file]
+                # subprocess.call(cmd_untar,stdout=DEVNULL,stderr=DEVNULL)
 
                 problems = problems + 1
 
