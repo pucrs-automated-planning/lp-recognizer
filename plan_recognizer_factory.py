@@ -2,6 +2,7 @@
 
 from plan_recognizer import PlanRecognizer
 import plan_recognition
+# XXX My implementation of the factory relies on all recognizer classes having been imported into the plan_recognition module
 from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerSoftCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
 import const_plan_recognizer
 import delta_plan_recognizer
