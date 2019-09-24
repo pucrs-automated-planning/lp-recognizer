@@ -3,11 +3,13 @@
 from const_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty
 
 class LPRecognizerDeltaHS(LPRecognizerHValue):
+
+    name = "delta-h-s"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options)
         self.hsoft_recognizer = LPRecognizerSoftC(options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
-        self.name = "delta-h-s"
 
     def get_real_hypothesis(self):
         return self.hsoft_recognizer.get_real_hypothesis()
@@ -45,11 +47,13 @@ class LPRecognizerDeltaHS(LPRecognizerHValue):
                     self.multi_goal_no_tie_breaking.append(hs) 
 
 class LPRecognizerDeltaHSUncertainty(LPRecognizerHValue):
+
+    name = "delta-h-s-uncertainty"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options)
         self.hsoft_recognizer = LPRecognizerSoftC(options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
-        self.name = "delta-h-s-uncertainty"
 
     def get_real_hypothesis(self):
         return self.hsoft_recognizer.get_real_hypothesis()
@@ -88,11 +92,13 @@ class LPRecognizerDeltaHSUncertainty(LPRecognizerHValue):
                     self.multi_goal_no_tie_breaking.append(hs) 
 
 class LPRecognizerDeltaHC(LPRecognizerHValue):
+
+    name = "delta-h-c"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
         self.constraints_recognizer = LPRecognizerHValueC(options)
-        self.name = "delta-h-c"
 
     def get_real_hypothesis(self):
         return self.hvalue_recognizer.get_real_hypothesis()
@@ -129,11 +135,13 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
 
 
 class LPRecognizerDeltaHCUncertainty(LPRecognizerHValue):
+    
+    name = "delta-h-c-uncertainty"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
         self.constraints_recognizer = LPRecognizerHValueC(options)
-        self.name = "delta-h-c-uncertainty"
         self.min_h_c = None
 
     def get_real_hypothesis(self):

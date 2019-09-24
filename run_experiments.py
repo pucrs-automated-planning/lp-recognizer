@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3.7
 
 import sys, os, csv, time, math, subprocess
 DEVNULL = open(os.devnull,"r+b")
