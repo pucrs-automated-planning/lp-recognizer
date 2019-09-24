@@ -1,6 +1,6 @@
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward fast-downward/fast-downward
 --- fast-downward-original/fast-downward	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fast-downward	2019-08-20 15:46:01.000000000 -0300
++++ fast-downward/fast-downward	2019-08-26 17:56:59.000000000 -0300
 @@ -0,0 +1,13 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -18,7 +18,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward 
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints fast-downward/fd-constraints
 --- fast-downward-original/fd-constraints	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fd-constraints	2019-08-26 17:31:27.000000000 -0300
++++ fast-downward/fd-constraints	2019-08-26 17:56:59.000000000 -0300
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -37,7 +37,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-linux.sh fast-downward/install-osi-linux.sh
 --- fast-downward-original/install-osi-linux.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-linux.sh	2019-08-26 16:42:35.000000000 -0300
++++ fast-downward/install-osi-linux.sh	2019-08-26 17:56:59.000000000 -0300
 @@ -0,0 +1,22 @@
 +#!/usr/bin/env bash
 +export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio129/cplex
@@ -64,7 +64,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-li
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-mac.sh fast-downward/install-osi-mac.sh
 --- fast-downward-original/install-osi-mac.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-mac.sh	2019-08-26 17:29:21.000000000 -0300
++++ fast-downward/install-osi-mac.sh	2019-08-26 17:56:59.000000000 -0300
 @@ -0,0 +1,26 @@
 +#!/usr/bin/env bash
 +# Ensure we are using the system's gcc/g++ rather than brew's
@@ -94,8 +94,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-ma
 +popd
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
---- fast-downward-original/src/search/DownwardFiles.cmake	2019-08-26 17:37:21.000000000 -0300
-+++ fast-downward/src/search/DownwardFiles.cmake	2019-08-26 16:36:44.000000000 -0300
+--- fast-downward-original/src/search/DownwardFiles.cmake	2019-08-30 18:03:11.000000000 -0300
++++ fast-downward/src/search/DownwardFiles.cmake	2019-08-26 17:56:59.000000000 -0300
 @@ -699,6 +699,18 @@
  )
  
@@ -117,8 +117,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
      SOURCES
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-08-19 17:21:26.000000000 -0300
-@@ -0,0 +1,349 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2019-08-30 19:15:40.000000000 -0300
+@@ -0,0 +1,351 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -401,10 +401,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    ///////////////////////////////////////////////////////////////////
 +    output_results(result);
 +
-+    if(result == DEAD_END)
-+        exit(EXIT_FAILURE);
-+    else
-+        exit(EXIT_SUCCESS);
++	//// Returning failure for deadend states makes the rest of the recognizer hang
++    // if(result == DEAD_END)
++//         exit(EXIT_FAILURE);
++//     else
++//         exit(EXIT_SUCCESS);
++	exit(EXIT_SUCCESS);
 +    ///////////////////////////////////////////////////////////////////
 +
 +    lp_solver.clear_temporary_constraints();
@@ -470,7 +472,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-01-17 17:20:02.000000000 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2019-08-26 17:56:59.000000000 -0300
 @@ -0,0 +1,41 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
