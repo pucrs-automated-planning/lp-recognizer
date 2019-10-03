@@ -21,9 +21,12 @@ class Singleton(type):
 class PlanRecognizerFactory(object):
     __metaclass__ = Singleton
 
-    def __init__(self, options):
+    def __init__(self, options=None):
         self.options = options
 
+    def get_recognizer_names(self):
+        recognizers = dict([(cls.name, cls) for name, cls in plan_recognition.__dict__.items() if isinstance(cls,type) and issubclass(cls, PlanRecognizer)])
+        return list(recognizers.keys())
     
     def get_recognizer(self, name, options=None):
         """Returns an instance of PlanRecognizer given the name used in the parameters"""
@@ -34,7 +37,12 @@ class PlanRecognizerFactory(object):
             options = self.options
 
         # Finding the objects 
-        recognizers = dict([(cls.name, cls) for name, cls in plan_recognition.__dict__.items() if isinstance(cls,type) and issubclass(cls, PlanRecognizer)])
+        recognizers = dict([(cls.name, cls) 
+                            for _, cls in plan_recognition.__dict__.items() 
+                            if isinstance(cls, object) and
+                              hasattr(cls,'name')]) # Hack to get my instantiation to work w/ Python 2.7
+        ## The line below works in Python 3.7 (bot not 2.7, and I hate python for that)
+        # recognizers = dict([(cls.name, cls) for _, cls in plan_recognition.__dict__.items() if isinstance(cls, object) and issubclass(cls, PlanRecognizer)])
         # print(recognizers)
         recognizer = recognizers[name](options)
 

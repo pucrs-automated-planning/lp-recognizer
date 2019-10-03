@@ -1,5 +1,5 @@
+from __future__ import print_function
 import getopt, os, sys
-
 
 def usage():
     print >> sys.stderr, "Parameters:"
@@ -37,7 +37,8 @@ class Program_Options:
                                         "delta-h-c-uncertainty",
                                         "delta-h-s-uncertainty"])
         except getopt.GetoptError:
-            print >> sys.stderr, "Missing or incorrect parameters specified!"
+            print("Missing or incorrect parameters specified!", file=sys.stderr)
+            # print >> sys.stderr, "Missing or incorrect parameters specified!"
             usage()
             sys.exit(1)
 
@@ -60,7 +61,8 @@ class Program_Options:
 
         for opcode, oparg in opts:
             if opcode in ('-b', '--batch'):
-                print >> sys.stderr, "Running batch experiments!"
+                # print >> sys.stderr, 
+                print("Running batch experiments!", file=sys.stderr)
                 self.batch = True
             if opcode in ('-h', '--help'):
                 print >> sys.stderr, "Help invoked!"
