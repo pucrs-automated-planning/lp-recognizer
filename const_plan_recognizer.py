@@ -4,9 +4,10 @@ from h_plan_recognizer import LPRecognizerHValue
 
 class LPRecognizerHValueC(LPRecognizerHValue):
 
+    name = "h-value-c"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False)
-        self.name = "h-value-c"
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -30,9 +31,11 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
+    
+    name = "h-value-c-uncertainty"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self, options, constraints=True, soft_constraints=False)
-        self.name = "h-value-c-uncertainty"
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -65,9 +68,10 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
 
 class LPRecognizerSoftC(LPRecognizerHValue):
 
+    name = "soft-c"
+
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
-        self.name = "soft-c"
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -92,10 +96,10 @@ class LPRecognizerSoftC(LPRecognizerHValue):
                     self.multi_goal_no_tie_breaking.append(h)
 
 class LPRecognizerSoftCUncertainty(LPRecognizerHValue):
+    name = "soft-c-uncertainty"
 
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
-        self.name = "soft-c-uncertainty"
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):

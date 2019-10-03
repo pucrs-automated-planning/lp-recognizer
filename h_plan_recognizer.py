@@ -3,10 +3,10 @@
 from plan_recognizer import PlanRecognizer
 
 class LPRecognizerHValue(PlanRecognizer):
+    name = "h-value"
 
     def __init__(self, options, constraints = False, soft_constraints = False):
         PlanRecognizer.__init__(self,options,constraints,soft_constraints)
-        self.name = "h-value"
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):

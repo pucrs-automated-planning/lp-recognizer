@@ -3,6 +3,7 @@
 from planner_interface import Observations, PRCommand, Hypothesis
 
 class PlanRecognizer:
+    name = None
     
     def __init__(self, options, constraints = False, soft_constraints = False):
         self.options = options
@@ -14,7 +15,6 @@ class PlanRecognizer:
         self.multi_goal_tie_breaking = []
         self.multi_goal_no_tie_breaking = []
         self.multi_goal_missing_compensation = [] # 
-        self.name = None
 
     def load_hypotheses(self):
         hyps = []
@@ -40,6 +40,8 @@ class PlanRecognizer:
     def write_report(self, experiment, hyps):
         outstream = open('report.txt', 'w')
 
+        # Convert this to Python 3
+        # print(s,end="", file=outstream)
         print >> outstream, "Experiment=%s" % experiment
         print >> outstream, "Num_Hyp=%d" % len(hyps)
         for hyp in hyps:

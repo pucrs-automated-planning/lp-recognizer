@@ -7,6 +7,7 @@ from operator import attrgetter
 
 from planner_interface import Observations, PRCommand, Hypothesis
 from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty
+from const_plan_recognizer import LPRecognizerSoftCUncertainty
 
 def run_recognizer(recognizer):
     recognizer.run_recognizer()
