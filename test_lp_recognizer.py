@@ -16,16 +16,18 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         self.assertEqual(recognizer.__class__, LPRecognizerSoftC)
         recognizer = factory.get_recognizer("soft-c-uncertainty")
         self.assertEqual(recognizer.__class__, LPRecognizerSoftCUncertainty)
-        recognizer = factory.get_recognizer("soft-c-uncertainty")
-        self.assertEqual(recognizer.__class__, LPRecognizerSoftCUncertainty)
         recognizer = factory.get_recognizer("delta-h-s")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHS)
         recognizer = factory.get_recognizer("delta-h-s-uncertainty")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHSUncertainty)
         recognizer = factory.get_recognizer("delta-h-c")
-        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHS)
+        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         recognizer = factory.get_recognizer("delta-h-c-uncertainty")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHCUncertainty)
+
+    def test_hvalue_recognizer(self):
+        factory = PlanRecognizerFactory(None)
+        recognizer = factory.get_recognizer("h-value",options=None)
 
 if __name__ == '__main__':
     unittest.main()

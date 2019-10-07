@@ -1,8 +1,9 @@
 language: python
 python:
-  - "3.7"
+  - "2.7"
 # command to install dependencies
-script: python tests/test_lp_recognizer.py
+script: python test_lp_recognizer.py
 branches:
   only:
     - master
+    - refactor
