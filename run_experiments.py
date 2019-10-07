@@ -19,7 +19,7 @@ def progress(count, total, status=''):
 
 class Experiment:
     def __init__(self, recognizer_name):
-        self.unique_correct = 0        
+        self.unique_correct = 0
         self.multi_tie_breaking_correct = 0
         self.multi_tie_breaking_spread = 0
         self.multi_correct = 0
