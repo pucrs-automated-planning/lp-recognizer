@@ -8,6 +8,12 @@ class LPRecognizerHValue(PlanRecognizer):
     def __init__(self, options, constraints = False, soft_constraints = False):
         PlanRecognizer.__init__(self,options,constraints,soft_constraints)
 
+    def accept_hypothesis(self, h, unc=1):
+        if not h.test_failed:
+            return h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits
+        return False
+
+
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
            self.hyps[i].evaluate(i, self.observations)
@@ -22,13 +28,5 @@ class LPRecognizerHValue(PlanRecognizer):
 
         # Select other goals
         for h in self.hyps:
-            if not h.test_failed:
-                # Select multi goal with tie-breaking
-                if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_tie_breaking.append(h)
-                # Select multi goal
-                if h.score == self.unique_goal.score:
-                    self.multi_goal_no_tie_breaking.append(h)
-                # Compensate for partial observability (incomplete)
-                # missing_obs = h.score - len(self.observations)
-                # if h.score = self.unique_goal.score
+            if self.accept_hypothesis(h):
+                self.accepted_hypotheses.append(h)

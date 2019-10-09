@@ -9,6 +9,12 @@ class LPRecognizerHValueC(LPRecognizerHValue):
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False)
 
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        if not h.test_failed:
+            return h.score == self.unique_goal.score
+            # return h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits
+        return False
+
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
@@ -21,13 +27,8 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
         # Select other goals
         for h in self.hyps:
-            if not h.test_failed:
-                # Select multi goal with tie-breaking
-                if h.score == self.unique_goal.score:
-                    self.multi_goal_tie_breaking.append(h)
-                # Select multi goal (I know it's the same check as above)
-                if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_no_tie_breaking.append(h) 
+            if self.accept_hypothesis(h):
+                self.accepted_hypotheses.append(h)
 
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
@@ -36,6 +37,11 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
 
     def __init__(self, options):
         LPRecognizerHValue.__init__(self, options, constraints=True, soft_constraints=False)
+
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        if not h.test_failed:
+            return h.score <= self.unique_goal.score*unc
+        return False
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -56,14 +62,8 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValue):
 
         # Select other goals
         for h in self.hyps:
-            if not h.test_failed:
-                # print("H score is %f"%h.score)
-                # Select multi goal with tie-breaking
-                if h.score <= self.unique_goal.score*uncertainty_ratio:
-                    self.multi_goal_tie_breaking.append(h)
-                # Select multi goal (I know it's the same check as above)
-                if h.score <= self.unique_goal.score*uncertainty_ratio and h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_no_tie_breaking.append(h)     
+            if self.accept_hypothesis(h, unc=uncertainty_ratio):
+                self.accepted_hypotheses.append(h)
 
 
 class LPRecognizerSoftC(LPRecognizerHValue):
@@ -72,6 +72,14 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
+
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        if not h.test_failed:
+            # Select multi goal with tie-breaking
+            return h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits
+            # Select multi goal
+            # return h.obs_hits == self.unique_goal.obs_hits
+        return False
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -87,19 +95,23 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 
         # Select other goals
         for h in self.hyps:
-            if not h.test_failed:
-                # Select multi goal with tie-breaking
-                if h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_tie_breaking.append(h)
-                # Select multi goal
-                if h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_no_tie_breaking.append(h)
+            if self.accept_hypothesis(h):
+                self.accepted_hypotheses.append(h)
+                
 
 class LPRecognizerSoftCUncertainty(LPRecognizerHValue):
     name = "soft-c-uncertainty"
 
     def __init__(self, options):
         LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True)
+
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        if not h.test_failed:
+            # Select multi goal with tie-breaking
+            return h.score <= self.unique_goal.score*unc and h.obs_hits == self.unique_goal.obs_hits
+            # Select multi goal
+            # return h.obs_hits == self.unique_goal.obs_hits
+        return False
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
@@ -119,10 +131,5 @@ class LPRecognizerSoftCUncertainty(LPRecognizerHValue):
 
         # Select other goals
         for h in self.hyps:
-            if not h.test_failed:
-                # Select multi goal with tie-breaking
-                if h.score - uncertainty <= self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_tie_breaking.append(h)
-                # Select multi goal
-                if h.obs_hits == self.unique_goal.obs_hits:
-                    self.multi_goal_no_tie_breaking.append(h)
+            if self.accept_hypothesis(h, unc=uncertainty):
+                self.accepted_hypotheses.append(h, unc=uncertainty)
