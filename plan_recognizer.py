@@ -5,13 +5,14 @@ from planner_interface import Observations, PRCommand, Hypothesis
 class PlanRecognizer:
     name = None
     
-    def __init__(self, options, constraints = False, soft_constraints = False):
+    def __init__(self, options, constraints = False, soft_constraints = False, auto_uncertainty = False):
         self.options = options
         self.observations = Observations('obs.dat')
         self.constraints = constraints
         self.soft_constraints = soft_constraints
         self.hyps = self.load_hypotheses()
         self.unique_goal = None
+        self.auto_uncertainty = auto_uncertainty
         self.accepted_hypotheses = []
 
     def load_hypotheses(self):
