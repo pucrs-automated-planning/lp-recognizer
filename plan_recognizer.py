@@ -5,16 +5,15 @@ from planner_interface import Observations, PRCommand, Hypothesis
 class PlanRecognizer:
     name = None
     
-    def __init__(self, options, constraints = False, soft_constraints = False):
+    def __init__(self, options, constraints = False, soft_constraints = False, auto_uncertainty = False):
         self.options = options
         self.observations = Observations('obs.dat')
         self.constraints = constraints
         self.soft_constraints = soft_constraints
         self.hyps = self.load_hypotheses()
         self.unique_goal = None
-        self.multi_goal_tie_breaking = []
-        self.multi_goal_no_tie_breaking = []
-        self.multi_goal_missing_compensation = [] # 
+        self.auto_uncertainty = auto_uncertainty
+        self.accepted_hypotheses = []
 
     def load_hypotheses(self):
         hyps = []
@@ -61,5 +60,11 @@ class PlanRecognizer:
         print(max(hyps))
 
     def run_recognizer(self):
+        # return None
+        raise NotImplementedError("You need to implement your method to run the recognizer")
+
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        """ Tests whether or not to accept hypothesis h as a likely one, under an unc uncertainty in the range [1,2]"""
+        # TODO I still need to refactor this function to something more elegant in terms of how we access it
         # return None
         raise NotImplementedError("You need to implement your method to run the recognizer")
