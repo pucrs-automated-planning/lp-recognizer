@@ -187,7 +187,7 @@ def main():
     if "-c" in sys.argv:
         recognizer_names.append("h-value-c")
     if "-s" in sys.argv:
-        recognizer_names.append("soft_c")
+        recognizer_names.append("soft-c")
     if "-d" in sys.argv:
         recognizer_names.append("delta-h-c")
     if "-f" in sys.argv:
