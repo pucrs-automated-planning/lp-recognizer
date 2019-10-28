@@ -9,10 +9,11 @@ def usage():
     print >> sys.stderr, "-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)"
     print >> sys.stderr, "-v  --hvalue                     Plan recognition by h-value"
     print >> sys.stderr, "-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations"
-    print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"    
+    print >> sys.stderr, "-s  --soft-c                     Plan recognition with soft constraints"
+    print >> sys.stderr, "-o  --overlap                    Recognizer formerly known as soft constraints"
     print >> sys.stderr, "-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value"
     print >> sys.stderr, "-f  --delta-h-s                  Plan recognition by delta between h-value-c and soft-c"
-    print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"    
+    print >> sys.stderr, "-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations"
     print >> sys.stderr, "-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations"
     print >> sys.stderr, "-k  --delta-h-s-uncertainty      Plan recognition with delta h-s accounting for missing observations"
 
@@ -21,7 +22,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "be:ht:m:T:vcrsdfunk",
+                                       "be:ht:m:T:vcrosdfunk",
                                        ["batch",
                                         "experiment=",
                                         "help",
@@ -30,9 +31,10 @@ class Program_Options:
                                         "theta=",
                                         "h-value",
                                         "h-value-c",
+                                        "overlap",
+                                        "soft-c",
                                         "delta-h-c",
                                         "delta-h-s",
-                                        "soft-c",
                                         "h-value-c-uncertainty",
                                         "delta-h-c-uncertainty",
                                         "delta-h-s-uncertainty"])
@@ -51,17 +53,18 @@ class Program_Options:
         self.max_memory = 1024
         self.h_value = False
         self.h_value_c = False
+        self.overlap = False
+        self.soft_c = False
         self.delta_h_c  = False
         self.delta_h_s  = False
-        self.soft_c = False
         self.h_value_c_uncertainty = False
         self.delta_h_c_uncertainty = False
         self.delta_h_s_uncertainty = False
-        self.theta = 1 # Multiplier for any slack parameter 
+        self.theta = 1 # Multiplier for any slack parameter
 
         for opcode, oparg in opts:
             if opcode in ('-b', '--batch'):
-                # print >> sys.stderr, 
+                # print >> sys.stderr,
                 print("Running batch experiments!", file=sys.stderr)
                 self.batch = True
             if opcode in ('-h', '--help'):
@@ -105,6 +108,8 @@ class Program_Options:
                 self.h_value = True
             if opcode in ('-c', '--h-value-c'):
                 self.h_value_c = True
+            if opcode in ('-o', '--overlap'):
+                self.overlap = True
             if opcode in ('-s', '--soft-c '):
                 self.soft_c = True
             if opcode in ('-d', '--delta-h-c'):
@@ -122,7 +127,7 @@ class Program_Options:
         if self.batch:
             print >> sys.stderr, "Not checking other files"
             return
-        
+
         if self.exp_file is None:
             print >> sys.stderr, "No experiment file was specified!!"
             usage()

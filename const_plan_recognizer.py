@@ -43,16 +43,16 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
-    
+
     name = "h-value-c-uncertainty"
 
     def __init__(self, options):
         LPRecognizerHValueC.__init__(self, options, auto_uncertainty = True)
 
-class LPRecognizerSoftC(LPRecognizerHValue):
+# New Recognizer class for Overlap (the former soft_constraints)
+class LPRecognizerOverlap(LPRecognizerHValue):
 
-    name = "soft-c"
-
+    name = "overlap"
     def __init__(self, options, auto_uncertainty = False):
         LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True, auto_uncertainty = auto_uncertainty)
 
@@ -67,7 +67,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
             self.hyps[i].evaluate(i, self.observations)
-        
+
         # Select unique goal (Goal with the maximum number of hits)
         for h in self.hyps:
             if not h.test_failed:
@@ -82,13 +82,50 @@ class LPRecognizerSoftC(LPRecognizerHValue):
             uncertainty_ratio = self.options.theta*(self.unique_goal.score - len(self.observations))
         else:
             uncertainty_ratio = 1
-        
 
         # Select other goals
         for h in self.hyps:
             if self.accept_hypothesis(h, unc=uncertainty_ratio):
                 self.accepted_hypotheses.append(h)
-                
+
+# New soft_constraints
+class LPRecognizerSoftC(LPRecognizerHValue):
+
+    name = "soft-c"
+    def __init__(self, options, auto_uncertainty = False):
+        LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True, auto_uncertainty = auto_uncertainty)
+
+    def accept_hypothesis(self, h, unc = 1, h2 = None):
+        if not h.test_failed:
+            # Select multi goal with tie-breaking
+            return h.score <= self.unique_goal.score*unc
+            # Select multi goal
+            # return h.obs_hits == self.unique_goal.obs_hits
+        return False
+
+    def run_recognizer(self):
+        for i in range(0, len(self.hyps)):
+            self.hyps[i].evaluate(i, self.observations)
+
+        # Select unique goal
+        for h in self.hyps:
+            print(h.score)
+            if not h.test_failed:
+	               if not self.unique_goal or h.score < self.unique_goal.score:
+	                      self.unique_goal = h
+
+        if self.auto_uncertainty:
+            # Compute presumed uncertainty (score is the operator count)
+            # print(self.options.theta)
+            uncertainty_ratio = self.options.theta*(self.unique_goal.score - len(self.observations))
+        else:
+            uncertainty_ratio = 1
+
+        # Select other goals
+        for h in self.hyps:
+            if self.accept_hypothesis(h, unc=uncertainty_ratio):
+                self.accepted_hypotheses.append(h)
+
 
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
     name = "soft-c-uncertainty"

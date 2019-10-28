@@ -6,8 +6,8 @@ from options import Program_Options
 from operator import attrgetter
 
 from planner_interface import Observations, PRCommand, Hypothesis
-from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty
-from const_plan_recognizer import LPRecognizerSoftCUncertainty
+from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerOverlap, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty
+from const_plan_recognizer import LPRecognizerSoftCUncertainty, LPRecognizerSoftC
 
 def run_recognizer(recognizer):
     recognizer.run_recognizer()
@@ -17,7 +17,7 @@ def run_recognizer(recognizer):
         print('True!')
     else:
         print('False!')
-    print(recognizer.name)        
+    print(recognizer.name)
 
 def main():
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
@@ -26,9 +26,9 @@ def main():
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
-    if options.h_value:       
-        recognizer = LPRecognizerHValue(options)       
-        run_recognizer(recognizer)     
+    if options.h_value:
+        recognizer = LPRecognizerHValue(options)
+        run_recognizer(recognizer)
     if options.h_value_c:
         recognizer = LPRecognizerHValueC(options)
         run_recognizer(recognizer)
@@ -38,6 +38,8 @@ def main():
     if options.delta_h_s:
         recognizer = LPRecognizerDeltaHS(options)
         run_recognizer(recognizer)
+    if options.overlap:
+        run_recognizer(LPRecognizerOverlap(options))
     if options.soft_c:
         recognizer = LPRecognizerSoftC(options)
         run_recognizer(recognizer)
