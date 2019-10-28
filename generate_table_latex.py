@@ -8,7 +8,7 @@ def main(domains, approaches, basepath, names):
 	print("Tabulating data from %s for domains %s"%(basepath,domains))
 
 	content_table = ''
-	
+
 	approaches_metrics = dict()
 	for approach in approaches:
 		approaches_metrics[approach] = [0, 0, 0]
@@ -19,7 +19,7 @@ def main(domains, approaches, basepath, names):
 		if 'noisy' in domain_name:
 			multirow = 4
 			observabilities = ['25', '50', '75', '100']
-		else: 
+		else:
 			multirow = 5
 			observabilities = ['10', '30', '50', '70', '100']
 
@@ -34,7 +34,7 @@ def main(domains, approaches, basepath, names):
 				if(line[0] == '10' and printed == False):
 					avgGoals = float(0)
 					printed = True
-		
+
 		domain_name_4table = domain_name.replace('-noisy', '')
 		if 'intrusion-detection' in domain_name:
 			domain_name_4table = 'instrusion'
@@ -46,9 +46,9 @@ def main(domains, approaches, basepath, names):
 			domain_name_4table = 'zeno'
 
 		if 'easy-ipc-grid' in domain_name:
-			domain_name_4table = 'ipc-grid'			
-		
-		content_table += '\n\\multirow{' + str(multirow) +'}{*}{\\rotatebox[origin=c]{90}{\\textsc{' + domain_name_4table + '}} \\rotatebox[origin=c]{90}{(' + str((totalProblems * 4)) + ')}} & \\multirow{' + str(multirow) + '}{*}{' + str(round(avgGoals, 1)) + '} '	
+			domain_name_4table = 'ipc-grid'
+
+		content_table += '\n\\multirow{' + str(multirow) +'}{*}{\\rotatebox[origin=c]{90}{\\textsc{' + domain_name_4table + '}} \\rotatebox[origin=c]{90}{(' + str((totalProblems * 4)) + ')}} & \\multirow{' + str(multirow) + '}{*}{' + str(round(avgGoals, 1)) + '} '
 
 		print_metrics = ''
 		for obs in observabilities:
@@ -63,10 +63,10 @@ def main(domains, approaches, basepath, names):
 								avgObs = float(0)
 								print_metrics += '\n\t' + ('\\\\ & & ' if (obs != '25' and obs != '10') else ' & ') + obs + '\t & ' + str(avgObs) + '\n'
 								printedObs = True
-							
+
 							if len(line) < 9:
 								continue
-							
+
 							time = float(line[8])
 							accuracy = (float(line[1]) * 100)
 							spreadG = float(line[7])
@@ -88,17 +88,17 @@ def main(domains, approaches, basepath, names):
 							if 'mirroring' in approach:
 								time = float(line[10])
 								accuracy = (float(line[1]) * 100)
-								spreadG = float(line[9])								
+								spreadG = float(line[9])
 
 							list_metrics = approaches_metrics[approach]
 							list_metrics[0] += time
 							list_metrics[1] += accuracy
 							list_metrics[2] += spreadG
-							
+
 							print_metrics += '\n\t\t% ' + approach + ' - ' + obs + '% '
 							print_metrics += '\n\t\t& ' + str(round(time, 3)) + ' & ' + str(round(accuracy, 1)) + '\% & ' + str(round(spreadG, 2))
 							print_metrics += ' \t \n'
-						
+
 		print_metrics += ' \\\\ \hline'
 		content_table += print_metrics
 
@@ -121,30 +121,34 @@ def main(domains, approaches, basepath, names):
 		latexContent = latexContent.replace('<AVG_APPROACH_' + str(index) + '>', '%.3f'%(avg_approaches[approach][0]) + ' & ' + '%.2f'%(avg_approaches[approach][1]) + '\% & ' + '%.2f'%(avg_approaches[approach][2]))
 		index += 1
 
-	with open('latex-results/goal_recognition-table.tex', 'w') as latex:
+	with open('latex-results/goal_recognition-table-soft-noisy.tex', 'w') as latex:
 	    latex.write(latexContent)
 
 if __name__ == '__main__' :
 	# Domains with noisy observations.
-	# domains = ['blocks-world-noisy', 'campus-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
-	#  			'easy-ipc-grid-noisy', 'ferry-noisy', 'intrusion-detection-noisy', 'kitchen-noisy', 'logistics-noisy',\
+	domains = ['blocks-world-noisy', 'campus-noisy', 'depots-noisy', 'driverlog-noisy',\
+		'dwr-noisy','easy-ipc-grid-noisy', 'ferry-noisy', 'intrusion-detection-noisy',\
+		'kitchen-noisy', 'logistics-noisy','miconic-noisy', 'rovers-noisy', \
+		'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
+	# domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
+	#  			'easy-ipc-grid-noisy', 'ferry-noisy', 'logistics-noisy',\
 	#  			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
-	domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
-	 			'easy-ipc-grid-noisy', 'ferry-noisy', 'logistics-noisy',\
-	 			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
 
 	# Domains with missing observations.
-	# domains = ['blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics' ,\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-	# domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
+#	domains = ['blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
+#	 			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics' ,\
+#	 			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
+#	# domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
 	#  			'easy-ipc-grid', 'ferry', 'logistics' ,\
 	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
 
 	# List of evaluated approaches.
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
+	
+	approaches = ['soft-c','delta-h-c','delta-h-c-uncertainty','planrecognition-ramirezgeffner', 'planrecognition-heuristic_completion-0','planrecognition-heuristic_uniqueness-0']
 
-	path = "./results"
+	#approaches = ['soft-c','h-value-c-uncertainty','delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
+	
+	path = "./results-mixed"
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
 	parser.add_argument('-a', '--approaches', metavar="A", nargs='+', type=str, help="approaches to tabulate")

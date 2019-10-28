@@ -1,0 +1,23 @@
+-- 
+5
+(move f2-0f f2-1f right) = 1
+(move f4-1f f4-2f right) = 1
+(move f4-4f f4-5f right) = 1
+(move f5-1f f5-2f right) = 1
+(move f5-2f f6-2f down) = 2
+(move f5-4f f5-3f left) = 1
+(move f6-0f f5-0f up) = 1
+(move f6-1f f6-0f left) = 1
+(move f6-2f f6-1f left) = 1
+(move f6-2f f6-3f right) = 1
+(move f6-3f f6-4f right) = 1
+(push f2-1f f3-1f f4-1f down box1) = 1
+(push f2-3f f1-3f f0-3f up box0) = 1
+(push f3-1f f4-1f f5-1f down box1) = 1
+(push f3-3f f2-3f f1-3f up box0) = 1
+(push f4-2f f5-2f f6-2f down box1) = 1
+(push f4-3f f3-3f f2-3f up box0) = 1
+(push f4-5f f4-4f f4-3f left box0) = 1
+(push f5-0f f5-1f f5-2f right box1) = 1
+(push f5-3f f4-3f f3-3f up box0) = 1
+(push f6-4f f5-4f f4-4f up box0) = 1

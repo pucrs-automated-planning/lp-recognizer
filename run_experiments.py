@@ -2,7 +2,7 @@
 
 import sys, os, csv, time, math, subprocess
 DEVNULL = open(os.devnull,"r+b")
-from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
+from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options
 from planner_interface import Hypothesis, custom_partition
 from plan_recognizer_factory import PlanRecognizerFactory
 
@@ -40,7 +40,7 @@ class Experiment:
         self.totalTime = 0
 
     def reset(self):
-        self.unique_correct = 0        
+        self.unique_correct = 0
         self.multi_correct = 0
         self.multi_spread  = 0
         self.candidate_goals = 0
@@ -49,20 +49,20 @@ class Experiment:
     def run_experiment(self, options):
         # print(self.recognizer_name)
         recognizer = PlanRecognizerFactory().get_recognizer(self.recognizer_name)
-        
+
         startTime = time.time()
         recognizer.run_recognizer()
         experimentTime = time.time() - startTime
         self.totalTime += experimentTime
-        
+
         if recognizer.unique_goal is not None and recognizer.get_real_hypothesis() == recognizer.unique_goal:
             self.unique_correct = self.unique_correct + 1
         if recognizer.get_real_hypothesis() in recognizer.accepted_hypotheses:
-            self.multi_correct = self.multi_correct + 1  
+            self.multi_correct = self.multi_correct + 1
         self.multi_spread = self.multi_spread  + len(recognizer.accepted_hypotheses)
         self.candidate_goals = self.candidate_goals + len(recognizer.hyps)
         return recognizer.unique_goal is not None
-    
+
     def __repr__(self):
         return "UC=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_correct,self.multi_spread,self.candidate_goals)
 
@@ -76,37 +76,38 @@ def doExperiments(domainName, observability, recognizer_names):
     experiment_names = []
     experiments_tables = {}
     experiments = {}
-    
+
     for recognizer_name in recognizer_names:
         print_text = print_text + " " + recognizer_name
         experiment_names.append(recognizer_name)
-        experiments[recognizer_name] = Experiment(recognizer_name) 
+        experiments[recognizer_name] = Experiment(recognizer_name)
         experiments_tables[recognizer_name] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
-    
+
     print_text = print_text + "\n"
 
     print_text = print_text + "\n"
 
 
     for obs in observability:
-        problems = 0   
+        problems = 0
         for e in experiment_names:
-            experiments[e].reset()       
-        
+            experiments[e].reset()
+
         problems_path = 'experiments/' + domainName + '/' + obs + '/'
         total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
             # progress(problems,total_problems,experiments[e].recognizer.name+":"+str(obs)+"%")
             if problem_file.endswith(".tar.bz2"):
+                sys.stdout = open(os.devnull,"w")
                 cmd_clean = 'rm -rf *.pddl *.dat *.log'
                 os.system(cmd_clean)
-
                 # print(problems_path + problem_file)
-                cmd_untar = 'tar xvjf ' + problems_path + problem_file
+                cmd_untar = 'tar xjf ' + problems_path + problem_file
                 # cmd_untar = 'tar xjf ' + problems_path + problem_file
                 os.system(cmd_untar)
                 # cmd_untar = ['tar', 'xjf', problems_path + problem_file]
                 # subprocess.call(cmd_untar,stdout=DEVNULL,stderr=DEVNULL)
+                sys.stdout = sys.__stdout__
 
                 problems = problems + 1
 
@@ -116,16 +117,17 @@ def doExperiments(domainName, observability, recognizer_names):
                 for e in experiment_names:
                     success = experiments[e].run_experiment(options)
                     if not success:
+                        print("Failed:")
                         file_failures.write(problems_path + problem_file + "\n")
                     # print("%s %r"%(e,experiments[e]))
                     progress(problems, total_problems, e+":"+domainName+":"+str(obs)+"%")
                     print("")
 
-        print_text_result = "%s %d "%(obs,problems)             
+        print_text_result = "%s %d "%(obs,problems)
         totalProblems += problems
         for e in experiment_names:
-            print_text_result = print_text_result + "%d "%(experiments[e].unique_correct)   
-            
+            print_text_result = print_text_result + "%d "%(experiments[e].unique_correct)
+
             experiments_tables[e] += "%s "%(obs)
 
             truePositives = float(experiments[e].multi_correct)
@@ -155,12 +157,12 @@ def doExperiments(domainName, observability, recognizer_names):
 
 
         print_text_result = print_text_result + "\n"
-        
+
         print_text = print_text + print_text_result
 
         print(str(domainName))
         print(print_text)
-    
+
     for e in experiment_names:
         experiments_tables[e] += '\n$> Total Problems: ' + str(totalProblems)
         table_file = open(str(domainName) + "-" + e +'.txt', 'w')
@@ -181,11 +183,13 @@ def main():
         observability = ['10', '30', '50', '70', '100']
 
     recognizer_names = []
-    
+
     if "-v" in sys.argv:
         recognizer_names.append("h-value")
     if "-c" in sys.argv:
         recognizer_names.append("h-value-c")
+    if "-o" in sys.argv:
+        recognizer_names.append("overlap")
     if "-s" in sys.argv:
         recognizer_names.append("soft-c")
     if "-d" in sys.argv:
@@ -199,11 +203,14 @@ def main():
     if "-k" in sys.argv:
         recognizer_names.append("delta-h-s-uncertainty")
 
-    doExperiments(domainName, observability, recognizer_names)
+    if recognizer_names == []: 
+        print("No recognizer called.")
+    else:
+        doExperiments(domainName, observability, recognizer_names)
 
     # Get rid of the temp files
-    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
-    os.system(cmdClean)
+    #cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
+    #os.system(cmdClean)
 
 if __name__ == '__main__':
     main()
