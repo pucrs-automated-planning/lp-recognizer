@@ -2,7 +2,7 @@
 
 declare -a domains=("blocks-world"
 					# "blocks-world-aaai"
-					"campus"
+					#"campus"  # no
 					"depots"
 					"driverlog"
 					"dwr"
@@ -10,8 +10,8 @@ declare -a domains=("blocks-world"
 					"ferry"
 					# "hanoi"
 					# "hanoi_handmade"
-					"intrusion-detection"
-					"kitchen"
+					#"intrusion-detection" # no
+					#"kitchen" # nope
 					# "lo_handmade"
 					# "lodigital"
 					"logistics"
@@ -28,14 +28,14 @@ declare -a domains=("blocks-world"
 					)
 
 declare -a noisy_domains=("blocks-world-noisy"
-					"campus-noisy"
+					#"campus-noisy"
 					"depots-noisy"
 					"driverlog-noisy"
 					"dwr-noisy"
 					"easy-ipc-grid-noisy"
 					"ferry-noisy"
-					"intrusion-detection-noisy"
-					"kitchen-noisy"
+					#"intrusion-detection-noisy"
+					#"kitchen-noisy"
 					"logistics-noisy"
 					"miconic-noisy"
 					"rovers-noisy"
@@ -52,7 +52,7 @@ fi
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -s -d -u -n -f -k
+	python2 run_experiments.py $domain -f #-s #-d -u -n -f -k
 	mv *.txt results
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
@@ -74,6 +74,6 @@ done
 
 for domain in "${noisy_domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -s -d -u -n -f -k
+	python2 run_experiments.py $domain  -f #-s #-d -u -n -f -k
 	mv *.txt results
 done

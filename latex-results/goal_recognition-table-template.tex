@@ -22,13 +22,26 @@
 \newcommand{\timeout}{{\it Timeout}}
 \newcommand{\outofmemory}{{\it Out of Memory}}
 
+%\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+%\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%\newcommand{\uniqueness}{POM 2017 $h_{\mathit{uniq}}$}
+%\newcommand{\completion}{POM 2017 $h_{\mathit{gc}}$}
+%\newcommand{\rg}{RG 2009}
+%\newcommand{\fgr}{FGR 2015}
+%\newcommand{\mirroring}{M+L 2018}
+
+
+\newcommand{\softc}{soft_c}
 \newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
 \newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\hvalue}{h}
+\newcommand{\rg}{RG 2009}
 \newcommand{\uniqueness}{POM 2017 $h_{\mathit{uniq}}$}
 \newcommand{\completion}{POM 2017 $h_{\mathit{gc}}$}
-\newcommand{\rg}{RG 2009}
-\newcommand{\fgr}{FGR 2015}
-\newcommand{\mirroring}{M+L 2018}
+
+%\newcommand{\fgr}{FGR 2015}
+%\newcommand{\mirroring}{M+L 2018}
+
 
 %---------------------------------------------------------------------------------------------------------------
 
@@ -51,17 +64,17 @@ Paper \#6100
 \centering
 \fontsize{5}{6}\selectfont
 \setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc}
 \hline
                    &                     
 				   & \multicolumn{2}{c|}{} 
+%				   & \multicolumn{3}{c|}{\hvalue}
+				   & \multicolumn{3}{c|}{\softc}
 				   & \multicolumn{3}{c|}{\hdeltahc}
 				   & \multicolumn{3}{c|}{\hdeltahcu}
 				   & \multicolumn{3}{c|}{\rg}
-				   & \multicolumn{3}{c|}{\fgr}				   
 				   & \multicolumn{3}{c|}{\completion}
 				   & \multicolumn{3}{c|}{\uniqueness}
-				   & \multicolumn{3}{c|}{\mirroring}				   
 				   \\ \hline
 \#                 
 & $|\mathcal{G}|$                   
@@ -71,9 +84,7 @@ Paper \#6100
 & \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
 \textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
 \textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
-\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
-\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
-\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+
 \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
 \textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
 \textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 

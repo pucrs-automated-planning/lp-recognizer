@@ -10,7 +10,6 @@
 #
 
 echo -n "Fixing domain.pddl in all experiments. Please wait. "
-pushd kitchen
 for FILE in *.tar.bz2; do
 	FOLDER=${FILE::-8}
 	# echo $FOLDER

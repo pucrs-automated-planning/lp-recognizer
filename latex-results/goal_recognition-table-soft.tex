@@ -1,0 +1,1859 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{subcaption}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+%\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+%\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%\newcommand{\uniqueness}{POM 2017 $h_{\mathit{uniq}}$}
+%\newcommand{\completion}{POM 2017 $h_{\mathit{gc}}$}
+%\newcommand{\rg}{RG 2009}
+%\newcommand{\fgr}{FGR 2015}
+%\newcommand{\mirroring}{M+L 2018}
+
+
+\newcommand{\softc}{soft_c}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\hvalue}{h}
+\newcommand{\rg}{RG 2009}
+\newcommand{\uniqueness}{POM 2017 $h_{\mathit{uniq}}$}
+\newcommand{\completion}{POM 2017 $h_{\mathit{gc}}$}
+
+%\newcommand{\fgr}{FGR 2015}
+%\newcommand{\mirroring}{M+L 2018}
+
+
+%---------------------------------------------------------------------------------------------------------------
+
+\pdfinfo{
+/Title (?)
+/Author (?)
+}
+\setcounter{secnumdepth}{0}  
+
+\begin{document}
+\title{LP-Based Approaches for Goal Recognition as Planning \\ (Supplemental Material)}
+\author{
+Paper \#6100
+}
+
+\maketitle
+%---------------------------------------------------------------------------------------------------------------
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{2pt}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc}
+\hline
+                   &                     
+				   & \multicolumn{2}{c|}{} 
+				   & \multicolumn{3}{c|}{\hvalue}
+				   & \multicolumn{3}{c|}{\softc}
+				   & \multicolumn{3}{c|}{\hdeltahc}
+				   & \multicolumn{3}{c|}{\hdeltahcu}
+				   & \multicolumn{3}{c|}{\rg}
+				   & \multicolumn{3}{c|}{\completion}
+				   & \multicolumn{3}{c|}{\uniqueness}
+				   \\ \hline
+\#                 
+& $|\mathcal{G}|$                   
+& \textbf{\% Obs}        
+& $|O|$
+
+& \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{Time}          & 
+\textbf{Acc \%}      & 
+\textbf{S in $\mathcal{G}$} 
+\\ 
+\hline
+
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 3.24 & 19.9\% & 1.98 	 
+
+		% soft-c - 10% 
+		& 4.172 & 28.5\% & 2.39 	 
+
+		% delta-h-c - 10% 
+		& 11.575 & 95.5\% & 7.81 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 11.574 & 95.9\% & 8.7 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.22 & 86.8\% & 7.84 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.144 & 39.9\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.131 & 31.7\% & 1.04 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 3.439 & 16.3\% & 1.54 	 
+
+		% soft-c - 30% 
+		& 4.028 & 44.7\% & 1.97 	 
+
+		% delta-h-c - 30% 
+		& 11.57 & 89.4\% & 2.79 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 11.567 & 94.3\% & 5.12 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.639 & 87.2\% & 3.57 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.156 & 50.6\% & 1.09 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.144 & 51.4\% & 1.06 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 3.434 & 14.2\% & 1.37 	 
+
+		% soft-c - 50% 
+		& 3.579 & 57.7\% & 1.72 	 
+
+		% delta-h-c - 50% 
+		& 11.581 & 92.7\% & 1.78 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 11.587 & 93.9\% & 3.24 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 2.402 & 97.9\% & 2.63 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.179 & 65.0\% & 1.09 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.168 & 60.1\% & 1.08 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 3.692 & 11.0\% & 1.32 	 
+
+		% soft-c - 70% 
+		& 2.965 & 77.2\% & 1.47 	 
+
+		% delta-h-c - 70% 
+		& 11.594 & 98.8\% & 1.41 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 11.595 & 98.8\% & 1.8 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.785 & 97.5\% & 1.83 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.192 & 84.8\% & 1.12 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.184 & 79.0\% & 1.14 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 3.645 & 10.9\% & 1.12 	 
+
+		% soft-c - 100% 
+		& 3.065 & 100.0\% & 1.26 	 
+
+		% delta-h-c - 100% 
+		& 11.904 & 100.0\% & 1.21 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 11.937 & 100.0\% & 1.21 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 6.791 & 100.0\% & 1.46 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.246 & 100.0\% & 1.36 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.239 & 100.0\% & 1.09 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{campus}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 0.283 & 53.3\% & 1.0 	 
+
+		% soft-c - 10% 
+		& 0.225 & 53.3\% & 1.0 	 
+
+		% delta-h-c - 10% 
+		& 0.925 & 100.0\% & 1.27 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.948 & 100.0\% & 1.27 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.077 & 93.3\% & 1.47 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.0 & 73.3\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.0 & 86.7\% & 1.13 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 0.302 & 53.3\% & 1.0 	 
+
+		% soft-c - 30% 
+		& 0.223 & 60.0\% & 1.07 	 
+
+		% delta-h-c - 30% 
+		& 0.938 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.925 & 100.0\% & 1.07 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 0.067 & 93.3\% & 1.27 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.0 & 80.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.0 & 86.7\% & 1.13 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 0.281 & 40.0\% & 1.0 	 
+
+		% soft-c - 50% 
+		& 0.226 & 73.3\% & 1.27 	 
+
+		% delta-h-c - 50% 
+		& 0.929 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.942 & 100.0\% & 1.13 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.061 & 93.3\% & 1.27 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.0 & 80.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.0 & 93.3\% & 1.13 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 0.281 & 53.3\% & 1.0 	 
+
+		% soft-c - 70% 
+		& 0.223 & 100.0\% & 1.27 	 
+
+		% delta-h-c - 70% 
+		& 0.922 & 93.3\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.926 & 100.0\% & 1.27 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 0.063 & 93.3\% & 1.33 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.0 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.0 & 100.0\% & 1.0 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 0.289 & 60.0\% & 1.0 	 
+
+		% soft-c - 100% 
+		& 0.225 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 0.93 & 100.0\% & 1.13 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 0.928 & 100.0\% & 1.47 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.072 & 86.7\% & 1.13 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.0 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.0 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 2.753 & 15.5\% & 1.3 	 
+
+		% soft-c - 10% 
+		& 2.371 & 28.6\% & 1.62 	 
+
+		% delta-h-c - 10% 
+		& 8.299 & 61.9\% & 2.15 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 8.305 & 71.4\% & 3.51 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.496 & 77.4\% & 3.99 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.369 & 35.7\% & 1.18 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.393 & 32.1\% & 1.1 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 2.688 & 14.3\% & 1.18 	 
+
+		% soft-c - 30% 
+		& 2.26 & 41.7\% & 1.6 	 
+
+		% delta-h-c - 30% 
+		& 8.292 & 71.4\% & 1.4 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 8.298 & 88.1\% & 4.17 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.309 & 77.4\% & 2.39 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.357 & 58.3\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.393 & 47.6\% & 1.07 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 2.683 & 10.7\% & 1.17 	 
+
+		% soft-c - 50% 
+		& 2.257 & 72.6\% & 1.49 	 
+
+		% delta-h-c - 50% 
+		& 8.282 & 92.9\% & 1.38 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 8.28 & 98.8\% & 3.65 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 3.411 & 84.5\% & 1.92 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.369 & 76.2\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.405 & 71.4\% & 1.02 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 2.697 & 13.1\% & 1.19 	 
+
+		% soft-c - 70% 
+		& 2.256 & 92.9\% & 1.29 	 
+
+		% delta-h-c - 70% 
+		& 8.282 & 97.6\% & 1.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 8.279 & 98.8\% & 1.75 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 5.27 & 91.7\% & 1.68 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.393 & 89.3\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.44 & 84.5\% & 1.01 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 2.796 & 10.7\% & 1.18 	 
+
+		% soft-c - 100% 
+		& 2.254 & 100.0\% & 1.04 	 
+
+		% delta-h-c - 100% 
+		& 8.296 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 8.296 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 7.117 & 92.9\% & 1.46 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.464 & 100.0\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.5 & 100.0\% & 1.04 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.603 & 30.9\% & 1.48 	 
+
+		% soft-c - 10% 
+		& 1.327 & 39.3\% & 1.69 	 
+
+		% delta-h-c - 10% 
+		& 5.159 & 77.4\% & 2.61 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.168 & 78.6\% & 3.17 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.169 & 96.4\% & 4.71 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.333 & 41.7\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.321 & 35.7\% & 1.11 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.61 & 29.8\% & 1.37 	 
+
+		% soft-c - 30% 
+		& 1.328 & 63.1\% & 1.64 	 
+
+		% delta-h-c - 30% 
+		& 5.149 & 83.3\% & 1.69 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.163 & 91.7\% & 2.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.411 & 92.9\% & 3.35 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.31 & 54.8\% & 1.13 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.31 & 47.6\% & 1.1 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.578 & 29.8\% & 1.18 	 
+
+		% soft-c - 50% 
+		& 1.327 & 79.8\% & 1.43 	 
+
+		% delta-h-c - 50% 
+		& 5.167 & 92.9\% & 1.23 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.146 & 97.6\% & 2.0 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.694 & 94.0\% & 2.88 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.321 & 72.6\% & 1.17 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.31 & 64.3\% & 1.14 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.572 & 29.8\% & 1.15 	 
+
+		% soft-c - 70% 
+		& 1.331 & 91.7\% & 1.29 	 
+
+		% delta-h-c - 70% 
+		& 5.148 & 95.2\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.146 & 95.2\% & 1.5 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.973 & 89.3\% & 2.46 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.333 & 90.5\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.321 & 90.5\% & 1.17 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.568 & 28.6\% & 1.04 	 
+
+		% soft-c - 100% 
+		& 1.335 & 100.0\% & 1.07 	 
+
+		% delta-h-c - 100% 
+		& 5.166 & 100.0\% & 1.04 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.157 & 100.0\% & 1.04 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.821 & 89.3\% & 2.14 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.321 & 100.0\% & 1.21 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.321 & 100.0\% & 1.18 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.858 & 38.1\% & 1.62 	 
+
+		% soft-c - 10% 
+		& 1.504 & 44.0\% & 1.69 	 
+
+		% delta-h-c - 10% 
+		& 5.759 & 54.8\% & 2.21 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.745 & 95.2\% & 5.45 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.767 & 83.3\% & 4.21 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.452 & 36.9\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.512 & 33.3\% & 1.06 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.814 & 36.9\% & 1.21 	 
+
+		% soft-c - 30% 
+		& 1.505 & 64.3\% & 1.33 	 
+
+		% delta-h-c - 30% 
+		& 5.745 & 83.3\% & 1.58 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.753 & 100.0\% & 4.92 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.723 & 81.0\% & 3.35 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.452 & 60.7\% & 1.04 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.5 & 51.2\% & 1.06 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.878 & 36.9\% & 1.12 	 
+
+		% soft-c - 50% 
+		& 1.504 & 82.1\% & 1.27 	 
+
+		% delta-h-c - 50% 
+		& 5.742 & 90.5\% & 1.21 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.734 & 100.0\% & 3.98 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 4.822 & 72.6\% & 2.27 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.488 & 66.7\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.548 & 61.9\% & 1.01 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.843 & 36.9\% & 1.04 	 
+
+		% soft-c - 70% 
+		& 1.502 & 98.8\% & 1.07 	 
+
+		% delta-h-c - 70% 
+		& 5.75 & 97.6\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.735 & 100.0\% & 2.26 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 10.914 & 70.2\% & 2.05 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.536 & 89.3\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.607 & 78.6\% & 1.05 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.71 & 35.7\% & 1.04 	 
+
+		% soft-c - 100% 
+		& 1.504 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 5.763 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.75 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 25.092 & 67.9\% & 1.68 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.643 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.75 & 96.4\% & 1.04 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.906 & 9.8\% & 1.0 	 
+
+		% soft-c - 10% 
+		& 1.573 & 17.0\% & 1.03 	 
+
+		% delta-h-c - 10% 
+		& 6.216 & 92.8\% & 1.92 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.209 & 94.8\% & 2.32 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.091 & 96.1\% & 2.46 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.248 & 66.7\% & 2.58 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.242 & 62.7\% & 2.58 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.893 & 9.2\% & 1.0 	 
+
+		% soft-c - 30% 
+		& 1.575 & 30.7\% & 1.23 	 
+
+		% delta-h-c - 30% 
+		& 6.051 & 95.4\% & 1.29 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.044 & 98.0\% & 1.48 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.476 & 97.4\% & 1.42 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.242 & 81.7\% & 1.65 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.242 & 83.7\% & 1.66 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.899 & 9.8\% & 1.0 	 
+
+		% soft-c - 50% 
+		& 1.581 & 51.0\% & 1.23 	 
+
+		% delta-h-c - 50% 
+		& 6.123 & 98.7\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.122 & 100.0\% & 1.25 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.905 & 100.0\% & 1.16 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.261 & 90.8\% & 1.18 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.248 & 90.8\% & 1.18 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.912 & 9.2\% & 1.0 	 
+
+		% soft-c - 70% 
+		& 1.594 & 71.9\% & 1.28 	 
+
+		% delta-h-c - 70% 
+		& 6.251 & 99.4\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.259 & 100.0\% & 1.19 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 2.552 & 100.0\% & 1.05 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.268 & 97.4\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.268 & 97.4\% & 1.07 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.812 & 9.8\% & 1.0 	 
+
+		% soft-c - 100% 
+		& 1.497 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 5.825 & 100.0\% & 1.03 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.826 & 100.0\% & 1.03 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.057 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.262 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.262 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.328 & 39.3\% & 1.64 	 
+
+		% soft-c - 10% 
+		& 1.179 & 54.8\% & 1.82 	 
+
+		% delta-h-c - 10% 
+		& 4.201 & 100.0\% & 3.17 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.201 & 100.0\% & 3.2 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.491 & 98.8\% & 3.37 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.071 & 58.3\% & 1.26 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.071 & 58.3\% & 1.18 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.291 & 39.3\% & 1.29 	 
+
+		% soft-c - 30% 
+		& 1.202 & 76.2\% & 1.43 	 
+
+		% delta-h-c - 30% 
+		& 4.072 & 100.0\% & 1.56 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.075 & 100.0\% & 1.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 0.677 & 100.0\% & 1.76 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.06 & 85.7\% & 1.12 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.06 & 83.3\% & 1.06 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.291 & 39.3\% & 1.17 	 
+
+		% soft-c - 50% 
+		& 1.18 & 89.3\% & 1.25 	 
+
+		% delta-h-c - 50% 
+		& 4.141 & 100.0\% & 1.29 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.141 & 100.0\% & 1.44 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.795 & 100.0\% & 1.42 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.06 & 95.2\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.06 & 91.7\% & 1.01 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.276 & 39.3\% & 1.11 	 
+
+		% soft-c - 70% 
+		& 1.189 & 100.0\% & 1.14 	 
+
+		% delta-h-c - 70% 
+		& 4.199 & 100.0\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.197 & 100.0\% & 1.12 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.253 & 98.8\% & 1.14 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.071 & 100.0\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.071 & 100.0\% & 1.0 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.248 & 39.3\% & 1.11 	 
+
+		% soft-c - 100% 
+		& 1.189 & 100.0\% & 1.07 	 
+
+		% delta-h-c - 100% 
+		& 4.196 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.204 & 100.0\% & 1.07 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 1.63 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.071 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.071 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{instrusion}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 2.203 & 10.5\% & 1.25 	 
+
+		% soft-c - 10% 
+		& 1.988 & 27.6\% & 1.81 	 
+
+		% delta-h-c - 10% 
+		& 7.281 & 100.0\% & 2.52 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 7.267 & 100.0\% & 2.52 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.721 & 100.0\% & 2.53 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.057 & 62.9\% & 1.14 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.067 & 64.8\% & 1.24 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 2.222 & 9.5\% & 1.12 	 
+
+		% soft-c - 30% 
+		& 2.03 & 80.0\% & 1.4 	 
+
+		% delta-h-c - 30% 
+		& 7.098 & 100.0\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 7.092 & 100.0\% & 1.11 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 0.81 & 100.0\% & 1.11 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.057 & 94.3\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.057 & 85.7\% & 1.03 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 2.229 & 9.5\% & 1.09 	 
+
+		% soft-c - 50% 
+		& 2.117 & 94.3\% & 1.12 	 
+
+		% delta-h-c - 50% 
+		& 6.874 & 100.0\% & 1.02 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.856 & 100.0\% & 1.02 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.886 & 100.0\% & 1.02 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.057 & 99.0\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.057 & 94.3\% & 1.01 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 2.229 & 10.5\% & 1.09 	 
+
+		% soft-c - 70% 
+		& 2.05 & 97.1\% & 1.13 	 
+
+		% delta-h-c - 70% 
+		& 7.418 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 7.438 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.06 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.057 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.057 & 94.3\% & 1.01 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 2.236 & 8.9\% & 1.13 	 
+
+		% soft-c - 100% 
+		& 2.044 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 7.458 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 7.458 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 1.257 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.067 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.067 & 97.8\% & 1.04 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{kitchen}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 0.413 & 53.3\% & 1.0 	 
+
+		% soft-c - 10% 
+		& 0.378 & 53.3\% & 1.0 	 
+
+		% delta-h-c - 10% 
+		& 1.339 & 100.0\% & 1.87 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.34 & 100.0\% & 1.87 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.084 & 100.0\% & 1.87 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.0 & 0.0\% & 0.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.0 & 100.0\% & 3.0 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 0.395 & 26.7\% & 1.0 	 
+
+		% soft-c - 30% 
+		& 0.373 & 33.3\% & 1.07 	 
+
+		% delta-h-c - 30% 
+		& 1.343 & 100.0\% & 1.33 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.343 & 100.0\% & 1.33 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 0.08 & 100.0\% & 1.33 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.0 & 20.0\% & 0.2 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.0 & 100.0\% & 2.6 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 0.412 & 46.7\% & 1.0 	 
+
+		% soft-c - 50% 
+		& 0.386 & 53.3\% & 1.07 	 
+
+		% delta-h-c - 50% 
+		& 1.345 & 93.3\% & 1.33 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.336 & 93.3\% & 1.33 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 0.087 & 100.0\% & 1.47 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.0 & 20.0\% & 0.2 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.0 & 100.0\% & 2.6 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 0.402 & 46.7\% & 1.0 	 
+
+		% soft-c - 70% 
+		& 0.378 & 66.7\% & 1.13 	 
+
+		% delta-h-c - 70% 
+		& 1.325 & 86.7\% & 1.13 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.339 & 86.7\% & 1.13 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 0.093 & 100.0\% & 1.27 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.0 & 33.3\% & 0.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.0 & 100.0\% & 2.33 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 0.415 & 46.7\% & 1.0 	 
+
+		% soft-c - 100% 
+		& 0.378 & 73.3\% & 1.27 	 
+
+		% delta-h-c - 100% 
+		& 1.336 & 60.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.32 & 60.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 0.102 & 100.0\% & 1.4 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.0 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.0 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 2.17 & 28.8\% & 1.52 	 
+
+		% soft-c - 10% 
+		& 2.051 & 47.1\% & 1.86 	 
+
+		% delta-h-c - 10% 
+		& 6.79 & 100.0\% & 2.5 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.789 & 100.0\% & 2.8 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.201 & 99.3\% & 2.98 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.641 & 55.6\% & 1.73 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.641 & 49.0\% & 1.24 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 2.156 & 28.1\% & 1.14 	 
+
+		% soft-c - 30% 
+		& 2.035 & 64.7\% & 1.33 	 
+
+		% delta-h-c - 30% 
+		& 6.953 & 98.0\% & 1.3 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.944 & 98.0\% & 1.76 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.799 & 98.7\% & 1.39 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.621 & 80.4\% & 1.21 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.634 & 76.5\% & 1.12 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 2.142 & 28.8\% & 1.09 	 
+
+		% soft-c - 50% 
+		& 2.315 & 90.8\% & 1.22 	 
+
+		% delta-h-c - 50% 
+		& 6.944 & 98.7\% & 1.13 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.959 & 98.7\% & 1.37 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 2.509 & 98.7\% & 1.29 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.641 & 90.2\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.647 & 86.3\% & 1.05 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 2.148 & 29.4\% & 1.03 	 
+
+		% soft-c - 70% 
+		& 2.058 & 100.0\% & 1.08 	 
+
+		% delta-h-c - 70% 
+		& 6.938 & 100.0\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.95 & 100.0\% & 1.15 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.461 & 100.0\% & 1.13 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.667 & 96.7\% & 1.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.66 & 96.7\% & 1.02 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 2.046 & 31.1\% & 1.0 	 
+
+		% soft-c - 100% 
+		& 1.96 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 6.63 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 6.633 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.832 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.554 & 36.9\% & 1.26 	 
+
+		% soft-c - 10% 
+		& 1.504 & 66.7\% & 1.45 	 
+
+		% delta-h-c - 10% 
+		& 4.905 & 100.0\% & 2.12 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.886 & 100.0\% & 2.29 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.813 & 100.0\% & 3.26 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.464 & 67.9\% & 1.33 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.352 & 54.8\% & 1.26 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.55 & 39.3\% & 1.18 	 
+
+		% soft-c - 30% 
+		& 1.512 & 89.3\% & 1.19 	 
+
+		% delta-h-c - 30% 
+		& 4.897 & 100.0\% & 1.19 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.895 & 100.0\% & 1.46 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.191 & 100.0\% & 1.58 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.452 & 96.4\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.364 & 90.5\% & 1.08 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.544 & 39.3\% & 1.17 	 
+
+		% soft-c - 50% 
+		& 1.508 & 100.0\% & 1.17 	 
+
+		% delta-h-c - 50% 
+		& 4.901 & 100.0\% & 1.1 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.89 & 100.0\% & 1.32 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.722 & 100.0\% & 1.29 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.452 & 96.4\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.352 & 96.4\% & 1.0 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.677 & 39.3\% & 1.05 	 
+
+		% soft-c - 70% 
+		& 1.509 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 70% 
+		& 4.892 & 100.0\% & 1.01 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.891 & 100.0\% & 1.02 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 2.59 & 100.0\% & 1.04 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.452 & 100.0\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.376 & 100.0\% & 1.01 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.859 & 39.3\% & 1.07 	 
+
+		% soft-c - 100% 
+		& 1.514 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 4.894 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.894 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 5.107 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.464 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.364 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.804 & 52.4\% & 2.26 	 
+
+		% soft-c - 10% 
+		& 1.509 & 66.7\% & 1.77 	 
+
+		% delta-h-c - 10% 
+		& 4.863 & 98.8\% & 2.71 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.858 & 100.0\% & 2.94 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 0.745 & 98.8\% & 2.86 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.348 & 64.3\% & 1.73 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.371 & 51.2\% & 1.11 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.614 & 48.8\% & 1.68 	 
+
+		% soft-c - 30% 
+		& 1.477 & 84.5\% & 1.29 	 
+
+		% delta-h-c - 30% 
+		& 4.881 & 85.7\% & 1.17 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.87 & 91.7\% & 1.83 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.03 & 100.0\% & 1.67 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.348 & 83.3\% & 1.24 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.348 & 69.0\% & 1.07 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.701 & 50.0\% & 1.43 	 
+
+		% soft-c - 50% 
+		& 1.478 & 97.6\% & 1.19 	 
+
+		% delta-h-c - 50% 
+		& 4.87 & 98.8\% & 1.14 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.856 & 98.8\% & 1.44 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.345 & 100.0\% & 1.3 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.336 & 92.9\% & 1.08 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.348 & 85.7\% & 1.01 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.646 & 52.4\% & 1.32 	 
+
+		% soft-c - 70% 
+		& 1.472 & 98.8\% & 1.01 	 
+
+		% delta-h-c - 70% 
+		& 4.858 & 98.8\% & 1.01 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.838 & 98.8\% & 1.06 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.177 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.348 & 98.8\% & 1.01 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.36 & 91.7\% & 1.0 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.682 & 53.6\% & 1.21 	 
+
+		% soft-c - 100% 
+		& 1.478 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 4.823 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.884 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.298 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.371 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.571 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 1.71 & 30.9\% & 1.65 	 
+
+		% soft-c - 10% 
+		& 1.566 & 61.9\% & 2.12 	 
+
+		% delta-h-c - 10% 
+		& 5.196 & 91.7\% & 2.73 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 5.204 & 92.9\% & 2.92 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.076 & 97.6\% & 3.42 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.45 & 57.1\% & 1.56 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.45 & 47.6\% & 1.21 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 1.726 & 28.6\% & 1.51 	 
+
+		% soft-c - 30% 
+		& 1.569 & 85.7\% & 1.75 	 
+
+		% delta-h-c - 30% 
+		& 5.178 & 92.9\% & 1.76 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 5.201 & 96.4\% & 2.31 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 1.183 & 97.6\% & 2.4 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.45 & 76.2\% & 1.31 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.414 & 69.0\% & 1.14 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 1.697 & 28.6\% & 1.3 	 
+
+		% soft-c - 50% 
+		& 1.534 & 95.2\% & 1.27 	 
+
+		% delta-h-c - 50% 
+		& 5.197 & 96.4\% & 1.32 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 5.194 & 98.8\% & 1.77 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 1.328 & 97.6\% & 1.69 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.426 & 85.7\% & 1.1 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.414 & 81.0\% & 1.11 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 1.8 & 27.4\% & 1.17 	 
+
+		% soft-c - 70% 
+		& 1.567 & 100.0\% & 1.08 	 
+
+		% delta-h-c - 70% 
+		& 5.191 & 97.6\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 5.193 & 97.6\% & 1.21 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 1.841 & 96.4\% & 1.52 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.402 & 97.6\% & 1.02 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.414 & 94.0\% & 1.04 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 1.698 & 25.0\% & 1.07 	 
+
+		% soft-c - 100% 
+		& 1.563 & 100.0\% & 1.04 	 
+
+		% delta-h-c - 100% 
+		& 5.212 & 100.0\% & 1.07 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 5.205 & 100.0\% & 1.07 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 2.045 & 96.4\% & 1.32 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.414 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.414 & 100.0\% & 1.07 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 2.729 & 23.8\% & 1.2 	 
+
+		% soft-c - 10% 
+		& 2.469 & 39.3\% & 1.44 	 
+
+		% delta-h-c - 10% 
+		& 7.827 & 72.6\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 7.849 & 78.6\% & 2.39 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 3.153 & 69.0\% & 4.02 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.607 & 53.6\% & 2.06 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.607 & 51.2\% & 1.86 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 2.71 & 20.2\% & 1.08 	 
+
+		% soft-c - 30% 
+		& 2.499 & 63.1\% & 1.39 	 
+
+		% delta-h-c - 30% 
+		& 7.744 & 89.3\% & 1.11 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 7.742 & 95.2\% & 1.75 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 4.622 & 89.3\% & 4.17 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.595 & 57.1\% & 1.37 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.607 & 56.0\% & 1.21 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 2.663 & 21.4\% & 1.05 	 
+
+		% soft-c - 50% 
+		& 2.549 & 72.6\% & 1.18 	 
+
+		% delta-h-c - 50% 
+		& 7.701 & 95.2\% & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 7.709 & 100.0\% & 1.46 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 7.441 & 89.3\% & 4.11 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.595 & 71.4\% & 1.32 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.607 & 69.0\% & 1.2 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 2.795 & 23.8\% & 1.07 	 
+
+		% soft-c - 70% 
+		& 2.547 & 97.6\% & 1.08 	 
+
+		% delta-h-c - 70% 
+		& 7.69 & 97.6\% & 1.04 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 7.677 & 98.8\% & 1.15 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 9.877 & 89.3\% & 4.18 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.607 & 83.3\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.607 & 86.9\% & 1.08 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 2.676 & 25.0\% & 1.04 	 
+
+		% soft-c - 100% 
+		& 2.497 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 7.67 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 7.658 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 12.996 & 89.3\% & 4.54 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.607 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.643 & 100.0\% & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{zeno}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
+	 & 10	 & 0.0
+
+		% h-value - 10% 
+		& 2.415 & 34.5\% & 1.61 	 
+
+		% soft-c - 10% 
+		& 2.149 & 48.8\% & 1.67 	 
+
+		% delta-h-c - 10% 
+		& 6.843 & 86.9\% & 2.71 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 6.871 & 88.1\% & 3.12 	 
+
+		% planrecognition-ramirezgeffner - 10% 
+		& 1.814 & 96.4\% & 3.4 	 
+
+		% planrecognition-heuristic_completion-0 - 10% 
+		& 0.567 & 39.3\% & 1.11 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 10% 
+		& 0.555 & 36.9\% & 1.05 	 
+
+	\\ & & 30	 & 0.0
+
+		% h-value - 30% 
+		& 2.141 & 33.3\% & 1.43 	 
+
+		% soft-c - 30% 
+		& 2.205 & 65.5\% & 1.3 	 
+
+		% delta-h-c - 30% 
+		& 6.838 & 90.5\% & 1.61 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 6.854 & 96.4\% & 2.56 	 
+
+		% planrecognition-ramirezgeffner - 30% 
+		& 2.539 & 88.1\% & 2.12 	 
+
+		% planrecognition-heuristic_completion-0 - 30% 
+		& 0.555 & 70.2\% & 1.15 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 30% 
+		& 0.531 & 60.7\% & 1.02 	 
+
+	\\ & & 50	 & 0.0
+
+		% h-value - 50% 
+		& 2.057 & 32.1\% & 1.37 	 
+
+		% soft-c - 50% 
+		& 2.35 & 79.8\% & 1.19 	 
+
+		% delta-h-c - 50% 
+		& 6.845 & 95.2\% & 1.15 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 6.851 & 96.4\% & 1.83 	 
+
+		% planrecognition-ramirezgeffner - 50% 
+		& 3.079 & 92.9\% & 1.42 	 
+
+		% planrecognition-heuristic_completion-0 - 50% 
+		& 0.543 & 78.6\% & 1.07 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 50% 
+		& 0.555 & 76.2\% & 1.0 	 
+
+	\\ & & 70	 & 0.0
+
+		% h-value - 70% 
+		& 2.066 & 32.1\% & 1.36 	 
+
+		% soft-c - 70% 
+		& 2.233 & 95.2\% & 1.08 	 
+
+		% delta-h-c - 70% 
+		& 6.855 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 6.851 & 100.0\% & 1.04 	 
+
+		% planrecognition-ramirezgeffner - 70% 
+		& 3.907 & 96.4\% & 1.13 	 
+
+		% planrecognition-heuristic_completion-0 - 70% 
+		& 0.567 & 97.6\% & 1.05 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 70% 
+		& 0.555 & 90.5\% & 1.0 	 
+
+	\\ & & 100	 & 0.0
+
+		% h-value - 100% 
+		& 2.064 & 32.1\% & 1.36 	 
+
+		% soft-c - 100% 
+		& 2.172 & 100.0\% & 1.0 	 
+
+		% delta-h-c - 100% 
+		& 6.852 & 100.0\% & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 6.842 & 100.0\% & 1.0 	 
+
+		% planrecognition-ramirezgeffner - 100% 
+		& 4.866 & 100.0\% & 1.07 	 
+
+		% planrecognition-heuristic_completion-0 - 100% 
+		& 0.543 & 100.0\% & 1.0 	 
+
+		% planrecognition-heuristic_uniqueness-0 - 100% 
+		& 0.543 & 100.0\% & 1.0 	 
+ \\ \hline
+
+Average & & & & 1.850 & 30.12\% & 1.22 & 1.696 & 75.66\% & 1.30 & 5.798 & 94.40\% & 1.49 & 5.799 & 96.75\% & 1.97 & 2.731 & 94.17\% & 2.12 & 0.321 & 77.90\% & 1.10 & 0.324 & 79.41\% & 1.19
+ 
+\\ \hline
+
+\end{tabular}
+\caption{Results comparing the state-of-the-art in goal recognition as planning for partial and full observability.}
+\label{tab:goalRecognitionResults}
+\end{table*}
+
+\end{document}
