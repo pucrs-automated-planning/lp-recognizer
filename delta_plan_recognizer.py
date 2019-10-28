@@ -1,6 +1,6 @@
 #!/usr/bin/env python2.7
 
-from const_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerOverlap, LPRecognizerHValueCUncertainty
+from const_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerOverlap, LPRecognizerHValueCUncertainty, LPRecognizerSoftC
 
 class LPRecognizerDeltaHS(LPRecognizerHValue):
 
@@ -8,7 +8,7 @@ class LPRecognizerDeltaHS(LPRecognizerHValue):
 
     def __init__(self, options, auto_uncertainty=False):
         LPRecognizerHValue.__init__(self,options, auto_uncertainty=auto_uncertainty)
-        self.overlap_recognizer = LPRecognizerOverlap(options)
+        self.overlap_recognizer = LPRecognizerSoftC(options)
         self.hvalue_recognizer = LPRecognizerHValue(options)
 
     def get_real_hypothesis(self):
