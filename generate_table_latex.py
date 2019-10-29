@@ -126,21 +126,21 @@ def main(domains, approaches, basepath, names):
 
 if __name__ == '__main__' :
 	# Domains with noisy observations.
-	domains = ['blocks-world-noisy', 'campus-noisy', 'depots-noisy', 'driverlog-noisy',\
-		'dwr-noisy','easy-ipc-grid-noisy', 'ferry-noisy', 'intrusion-detection-noisy',\
-		'kitchen-noisy', 'logistics-noisy','miconic-noisy', 'rovers-noisy', \
-		'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
-	# domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
-	#  			'easy-ipc-grid-noisy', 'ferry-noisy', 'logistics-noisy',\
-	#  			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
+	#domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy',\
+	#	'dwr-noisy','easy-ipc-grid-noisy', 'ferry-noisy', \
+	#	'logistics-noisy','miconic-noisy', 'rovers-noisy', \
+	#	'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
+	domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
+	 			'easy-ipc-grid-noisy', 'ferry-noisy', 'logistics-noisy',\
+				 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
 
 	# Domains with missing observations.
 #	domains = ['blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
 #	 			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics' ,\
 #	 			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-#	# domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'logistics' ,\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
+	#domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
+	#	'easy-ipc-grid', 'ferry', 'logistics' ,\
+	#  	'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
 
 	# List of evaluated approaches.
 	

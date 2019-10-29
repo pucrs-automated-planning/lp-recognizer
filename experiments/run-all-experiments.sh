@@ -1,45 +1,47 @@
 #!/usr/bin/env bash
 
-declare -a domains=("blocks-world"
-					# "blocks-world-aaai"
-					#"campus"  # no
-					"depots"
-					"driverlog"
-					"dwr"
-					"easy-ipc-grid"
-					"ferry"
-					# "hanoi"
-					# "hanoi_handmade"
-					#"intrusion-detection" # no
-					#"kitchen" # nope
-					# "lo_handmade"
-					# "lodigital"
-					"logistics"
-					# "lotwisted"
-					# "mandrill"
-					"miconic"
-					# "mnist"
-					# "mnist_handmade"
-					"rovers"
-					"satellite"
-					"sokoban"
-					# "spider"
-					"zeno-travel"
+declare -a domains=(
+	                #"blocks-world"
+					## "blocks-world-aaai"
+					##"campus"  # no
+					#"depots"
+					#"driverlog"
+					#"dwr"
+					#"easy-ipc-grid"
+					#"ferry"
+					## "hanoi"
+					## "hanoi_handmade"
+					##"intrusion-detection" # no
+					##"kitchen" # nope
+					## "lo_handmade"
+					## "lodigital"
+					#"logistics"
+					## "lotwisted"
+					## "mandrill"
+					#"miconic"
+					## "mnist"
+					## "mnist_handmade"
+					#"rovers"
+					#"satellite"
+					#"sokoban"
+					## "spider"
+					#"zeno-travel"
 					)
 
-declare -a noisy_domains=("blocks-world-noisy"
-					#"campus-noisy"
-					"depots-noisy"
-					"driverlog-noisy"
-					"dwr-noisy"
-					"easy-ipc-grid-noisy"
-					"ferry-noisy"
-					#"intrusion-detection-noisy"
-					#"kitchen-noisy"
-					"logistics-noisy"
-					"miconic-noisy"
-					"rovers-noisy"
-					"satellite-noisy"
+declare -a noisy_domains=(
+	                #"blocks-world-noisy"
+					##"campus-noisy"
+					#"depots-noisy"
+					#"driverlog-noisy"
+					#"dwr-noisy"
+					#"easy-ipc-grid-noisy"
+					#"ferry-noisy"
+					##"intrusion-detection-noisy"
+					##"kitchen-noisy"
+					#"logistics-noisy"
+					#"miconic-noisy"
+					#"rovers-noisy"
+					#"satellite-noisy"
 					"sokoban-noisy"
 					"zeno-travel-noisy"
 					)
@@ -52,7 +54,7 @@ fi
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -f #-s #-d -u -n -f -k
+	python2 run_experiments.py $domain -s #-s #-d -u -n -f -k
 	mv *.txt results
 	# python2 run_experiments.py $domain -v -c -s -d -u -n
 	# python2 run_experiments.py $domain -v
@@ -74,6 +76,6 @@ done
 
 for domain in "${noisy_domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain  -f #-s #-d -u -n -f -k
+	python2 run_experiments.py $domain  -c #-s #-d -u -n -f -k
 	mv *.txt results
 done

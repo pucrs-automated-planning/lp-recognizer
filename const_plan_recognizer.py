@@ -98,7 +98,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
     def accept_hypothesis(self, h, unc = 1, h2 = None):
         if not h.test_failed:
             # Select multi goal with tie-breaking
-            return h.score <= self.unique_goal.score*unc
+            return h.obs_hits == self.unique_goal.obs_hits
             # Select multi goal
             # return h.obs_hits == self.unique_goal.obs_hits
         return False
@@ -108,11 +108,13 @@ class LPRecognizerSoftC(LPRecognizerHValue):
             self.hyps[i].evaluate(i, self.observations)
 
         # Select unique goal
-        for h in self.hyps:
-            print(h.score)
-            if not h.test_failed:
-	               if not self.unique_goal or h.score < self.unique_goal.score:
-	                      self.unique_goal = h
+        for h in self.hyps:            
+            if not h.test_failed:                                
+                #new_score = ((h.score+h.obs_hits)/10000.0)+h.obs_hits
+                #print("{} - {} - {} - {}".format(h, h.score, h.obs_hits, new_score))
+                #h.score = new_score
+                if not self.unique_goal or h.obs_hits > self.unique_goal.obs_hits:
+                    self.unique_goal = h
 
         if self.auto_uncertainty:
             # Compute presumed uncertainty (score is the operator count)

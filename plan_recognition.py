@@ -11,14 +11,21 @@ from const_plan_recognizer import LPRecognizerSoftCUncertainty, LPRecognizerSoft
 
 def run_recognizer(recognizer):
     recognizer.run_recognizer()
-    realHyp = recognizer.get_real_hypothesis()
-    print("Real Goal is: %s\n\nRecognized: %s"%(str(realHyp),str(recognizer.unique_goal)))
-    if recognizer.unique_goal is not None and realHyp == recognizer.unique_goal:
-        print('True!')
+    real_hyp = recognizer.get_real_hypothesis()
+    print("Method: {}".format(recognizer.name))
+    print("Corret Goal: {}".format(real_hyp))
+    correct_goal_reconized = False
+    print("Hypotheses: ")    
+    for hyp in recognizer.accepted_hypotheses:      
+        if hyp is not None:             
+            print(hyp)
+        if real_hyp == hyp:            
+            correct_goal_reconized = True
+    if correct_goal_reconized == True:
+        print("True!")
     else:
-        print('False!')
-    print(recognizer.name)
-
+        print("False!")
+            
 def main():
     cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
     os.system(cmdClean)

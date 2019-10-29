@@ -87,14 +87,15 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
         self.min_diff = float("inf")
         # Select unique goal
         for i, hv, hc in  zip(range(len(self.hvalue_recognizer.hyps)), self.hvalue_recognizer.hyps, self.constraints_recognizer.hyps):
-            if not hv.test_failed and not hc.test_failed:
+            if not hv.test_failed and not hc.test_failed:    
+                # print('{0} - c: {1}, h: {2}, s: {3}, diff-current: {4}, obs-current: {7}, obs-hits-by-h: {5}, obs-hits-by-h: {6}'.format(i, hc.score, hv.score, hs.score, min_diff, hv.obs_hits, hs.obs_hits, self.unique_goal.obs_hits))            
+                print('{} - {}'.format(hc.score, hv.score))            
                 if not self.unique_goal or (hc.score - hv.score) < self.min_diff:
                     self.unique_goal = hv
                     self.min_diff = hc.score - hv.score
                 elif hc.score - hv.score == self.min_diff:
                     if hv.obs_hits > self.unique_goal.obs_hits:
                         self.unique_goal = hv
-                # print('{0} - c: {1}, h: {2}, s: {3}, diff-current: {4}, obs-current: {7}, obs-hits-by-h: {5}, obs-hits-by-h: {6}'.format(i, hc.score, hv.score, hs.score, min_diff, hv.obs_hits, hs.obs_hits, self.unique_goal.obs_hits))
 
         if self.auto_uncertainty:
             # Select lowest h_c

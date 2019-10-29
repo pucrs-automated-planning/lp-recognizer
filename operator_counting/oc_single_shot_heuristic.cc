@@ -54,8 +54,8 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
         if (soft_constraints == false) {
             variables.push_back(lp::LPVariable(0, infinity, op_cost));
         } else { // Add variables to create soft constraints
-            variables.push_back(lp::LPVariable(0, infinity, op_cost));
-            //variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
+            //variables.push_back(lp::LPVariable(0, infinity, op_cost));
+            variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
         }
     }
 
@@ -148,7 +148,7 @@ void OCSingleShotHeuristic::add_observation_soft_constraints(std::vector<lp::LPV
 			count_op_observations = std::count(observations.begin(), observations.end(), (*it));
 			outstream << "New soft constraint on (" << (*it) << "), index " << std::to_string(op_indexes[*it]) << std::endl;
 			// Creates new soft_a variable and new constraint: infinity >= (count_a - soft_a) >= 0
-			variables.push_back(lp::LPVariable(0.0, count_op_observations, -1.0)); // assumes unit cost
+            variables.push_back(lp::LPVariable(0.0, count_op_observations, -10001)); // assumes unit cost
 			lp::LPConstraint constraint1(0.0, infinity);
 			constraint1.insert(op_indexes[*it], 1.0);
 			constraint1.insert(variables.size() - 1, -1.0);

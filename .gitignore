@@ -115,3 +115,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+experiments/blocks-world-aaai/
+
+experiments/hanoi/
+
+experiments/out
+
+latex-results/goal_recognition-table-soft-noisy\.pdf
+
+latex-results/goal_recognition-table-soft-noisy\.tex
