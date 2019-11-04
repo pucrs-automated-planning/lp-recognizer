@@ -104,9 +104,15 @@ class Hypothesis:
             self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
             # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
             self.score = float(pr_cmd.h_value)
-            if pr_cmd.h_value == -1:
-                self.test_failed
-
+            if pr_cmd.h_value < 0 or pr_cmd.h_value == 'n/a' or pr_cmd.h_value == None:
+                # Previously:
+                # if pr_cmd.h_value == -1:
+                #   self.test_failed
+                # Bug: missing attrib = True
+                # This caused HC and DeltaHC to include bad scores in accept_hypothesis
+                # H-Value doesn't seem to have been affected because all cases there had signal != 0
+                # and score None / 'n/a'
+                self.test_failed = True
             # self.score = float(hits)/float(hits+misses)
         else:
             self.test_failed = True
