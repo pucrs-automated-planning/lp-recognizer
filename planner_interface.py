@@ -23,6 +23,7 @@ class PRCommand:
         self.max_mem = max_mem
         self.num_accounted_obs = 'n/a'
         #
+        self.bad_observations = []
         self.h_value = 'n/a'
         self.op_counts = {}
         self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false, soft_constraints=false))\"'

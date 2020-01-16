@@ -10,7 +10,7 @@ class LPRecognizerHValueC(LPRecognizerHValue):
         LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False, auto_uncertainty = auto_uncertainty)
 
     def accept_hypothesis(self, h, unc = 1, h2 = None):
-        if not h.test_failed and h.score >= 0 and h.score != 'n/a':
+        if not h.test_failed:
             # return h.score == self.unique_goal.score
             # return h.score == self.unique_goal.score and h.obs_hits == self.unique_goal.obs_hits
             return h.score <= self.unique_goal.score*unc
@@ -22,7 +22,7 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
         # Select unique goal
         for h in self.hyps:
-            if not h.test_failed and h.score >= 0 and h.score != 'n/a':
+            if not h.test_failed:
                 if not self.unique_goal or h.score < self.unique_goal.score:
                    self.unique_goal = h
 
@@ -74,7 +74,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 
         # Select unique goal (Goal with the maximum number of hits)
         for h in self.hyps:
-            if not h.test_failed and h.score >= 0 and h.score != 'n/a':
+            if not h.test_failed:
                 if not self.unique_goal or h.obs_hits > self.unique_goal.obs_hits:
                     self.unique_goal  = h
                 elif h.obs_hits == self.unique_goal.obs_hits and h.score < self.unique_goal.score:
