@@ -39,7 +39,6 @@ class PRCommand:
         string = fd_path + '/fast-downward %s %s ' + translate_options
         string += search_options_template.format(h_fd=",".join(heuristics), h_hc= enforce_observations, h_soft=soft_constraints)
 
-        print("Command string="+string)
         return string
 
     def execute(self):
@@ -108,8 +107,6 @@ class Hypothesis:
         self.soft_constraints = soft_constraints
         self.heuristics = heuristics
 
-        print("Using heuristics: ",heuristics)
-
 
     def evaluate(self, index, observations):
         # generate the problem with G=H
@@ -132,7 +129,7 @@ class Hypothesis:
             self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
             # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
             self.score = float(pr_cmd.h_value)
-            print("FD returned signal 0 for hypothesis")
+            #print("FD returned signal 0 for hypothesis")
 
             if pr_cmd.h_value < 0 or pr_cmd.h_value == 'n/a' or pr_cmd.h_value == None:
                 # print("Obs hits: {} | Obs misses: {}".format(self.obs_hits, self.obs_misses)) # nao eh o que eu queria

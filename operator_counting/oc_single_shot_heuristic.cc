@@ -191,7 +191,7 @@ void OCSingleShotHeuristic::load_observations() {
 
 void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints) {
     // Debugging output (cumulative: appends new info with each call)
-    std::fstream outfile("noisy_obs/observation_sanity.txt", std::ios::out|std::ios::app) ;
+    std::fstream outfile("debug/observation_sanity.txt", std::ios::out|std::ios::app) ;
     // Set output stream (set to std::cout to print to terminal)
     std::ostream& outstream = outfile;
     // Reinitialize class variables for invalid (unmapped) observations.
