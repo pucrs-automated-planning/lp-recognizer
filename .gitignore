@@ -51,6 +51,16 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# Ignore tars, pddls etc
+*.tar.bz2
+*.pddl
+*.csv
+*.pyc
+hyps.dat
+obs.dat
+real_hyp*
+noisy_obs/
+
 # Translations
 *.mo
 *.pot

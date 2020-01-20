@@ -137,8 +137,8 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
                     print("Uncertainty below 1 [hc.score - len(obs) is negative!]")
                     print("HV: {} | HC: {} | Unc: {} | #Obs: {}".format(self.candidate['hv'].score, self.candidate['hc'].score, uncertainty_ratio, len(self.observations)))
                     print(self.options.exp_file)
-                    print("Exiting now.")
-                    exit()
+                    # print("Exiting now.")
+                    # exit()
         else:
 
             uncertainty_ratio = 1

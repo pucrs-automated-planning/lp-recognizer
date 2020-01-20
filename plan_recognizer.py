@@ -4,7 +4,7 @@ from planner_interface import Observations, PRCommand, Hypothesis
 
 class PlanRecognizer:
     name = None
-    
+
     def __init__(self, options, constraints = False, soft_constraints = False, auto_uncertainty = False):
         self.options = options
         self.observations = Observations('obs.dat')
@@ -21,7 +21,7 @@ class PlanRecognizer:
 
         for line in instream:
             line = line.strip()
-            H = Hypothesis(self.constraints,self.soft_constraints)
+            H = Hypothesis(self.options.heuristics,self.constraints,self.soft_constraints)
             H.atoms = [tok.strip() for tok in line.split(',')]
             H.check_if_actual()
             hyps.append(H)
