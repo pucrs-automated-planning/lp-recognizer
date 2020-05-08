@@ -6,8 +6,8 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
     name = "h-value-c"
 
-    def __init__(self, options, auto_uncertainty = False):
-        LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False, auto_uncertainty = auto_uncertainty)
+    def __init__(self, options, delta = False, auto_uncertainty = False):
+        LPRecognizerHValue.__init__(self,options, constraints=True, soft_constraints=False, delta = delta, auto_uncertainty = auto_uncertainty)
 
     def accept_hypothesis(self, h, unc = 1, h2 = None):
         if not h.test_failed:
@@ -50,15 +50,15 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
 
     name = "h-value-c-uncertainty"
 
-    def __init__(self, options):
-        LPRecognizerHValueC.__init__(self, options, auto_uncertainty = True)
+    def __init__(self, options, delta = False):
+        LPRecognizerHValueC.__init__(self, options, delta=delta, auto_uncertainty = True)
 
 class LPRecognizerSoftC(LPRecognizerHValue):
 
     name = "soft-c"
 
-    def __init__(self, options, auto_uncertainty = False):
-        LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True, auto_uncertainty = auto_uncertainty)
+    def __init__(self, options, delta = False, auto_uncertainty = False):
+        LPRecognizerHValue.__init__(self,options, constraints=False, soft_constraints=True, delta = delta, auto_uncertainty = auto_uncertainty)
 
     def accept_hypothesis(self, h, unc = 1, h2 = None):
         if not h.test_failed:
@@ -100,5 +100,5 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
     name = "soft-c-uncertainty"
 
-    def __init__(self, options):
-        LPRecognizerSoftC.__init__(self,options, constraints=False, soft_constraints=True, auto_uncertainty = True)
+    def __init__(self, options, delta = False):
+        LPRecognizerSoftC.__init__(self,options, delta=delta, auto_uncertainty = True)

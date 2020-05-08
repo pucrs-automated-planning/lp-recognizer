@@ -26,29 +26,25 @@ def main():
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
 
+    recognizer = None
     if options.h_value:       
-        recognizer = LPRecognizerHValue(options)       
-        run_recognizer(recognizer)     
+        recognizer = LPRecognizerHValue(options)          
     if options.h_value_c:
         recognizer = LPRecognizerHValueC(options)
-        run_recognizer(recognizer)
     if options.delta_h_c:
         recognizer = LPRecognizerDeltaHC(options)
-        run_recognizer(recognizer)
     if options.delta_h_s:
         recognizer = LPRecognizerDeltaHS(options)
-        run_recognizer(recognizer)
     if options.soft_c:
         recognizer = LPRecognizerSoftC(options)
-        run_recognizer(recognizer)
     if options.h_value_c_uncertainty:
         recognizer = LPRecognizerHValueCUncertainty(options)
-        run_recognizer(recognizer)
     if options.delta_h_c_uncertainty:
         recognizer = LPRecognizerDeltaHCUncertainty(options)
-        run_recognizer(recognizer)
     if options.delta_h_s_uncertainty:
         recognizer = LPRecognizerDeltaHSUncertainty(options)
+
+    if recognizer != None:
         run_recognizer(recognizer)
 
 if __name__ == '__main__':

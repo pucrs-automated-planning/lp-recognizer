@@ -24,20 +24,20 @@ class PRCommand:
         self.num_accounted_obs = 'n/a'
         #
         self.num_invalid_obs = 0
-        self.h_value = 'n/a'
+        self.h_values = None
         self.op_counts = {}
 
-        self.planner_string = self.make_planner_string(list(heuristics), False, False)
+        self.planner_string = self.make_planner_string(list(heuristics), False, False, False)
 
-    def make_planner_string(self, heuristics, enforce_observations, soft_constraints):
+    def make_planner_string(self, heuristics, enforce_observations, soft_constraints, calculate_delta):
 
         enforce_observations = str(enforce_observations).lower()
         soft_constraints = str(soft_constraints).lower()
         translate_options = ' --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
-        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h_fd}], enforce_observations={h_hc}, soft_constraints={h_soft}))\"'
+        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h_fd}], enforce_observations={h_hc}, soft_constraints={h_soft}, calculate_delta={delta}))\"'
 
         string = fd_path + '/fast-downward %s %s ' + translate_options
-        string += search_options_template.format(h_fd=",".join(heuristics), h_hc= enforce_observations, h_soft=soft_constraints)
+        string += search_options_template.format(h_fd=",".join(heuristics), h_hc= enforce_observations, h_soft=soft_constraints, delta=calculate_delta)
 
         return string
 
@@ -57,12 +57,10 @@ class PRCommand:
                     values = [int(w) for w in line.split() if w.isdigit()]
                     num_obs = values[0]
                     self.num_invalid_obs = values[1]
-
-
                 elif not '--' in line:
-                    if self.h_value == 'n/a':
-                        self.h_value = float(line)
-                        # print("value for %s is %d\n"%(self.problem,self.h_value))
+                    if self.h_values == None:
+                        values = line.split()
+                        self.h_values = [float(x) for x in values]
                     else: # Gather operator counts
                         operator,count = line.split('=')
                         self.op_counts[operator.strip()] = float(count.strip())
@@ -75,22 +73,22 @@ class PRCommand:
 
 class PRCommandConstraints(PRCommand):
 
-    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048):
+    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048, delta=False):
         PRCommand.__init__(self,domain,problem,heuristics, max_time,max_mem)
         # self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=true, soft_constraints=false))\"'
-        self.planner_string = self.make_planner_string(heuristics, True, False)
+        self.planner_string = self.make_planner_string(heuristics, True, False, delta)
 
 class PRCommandSoft(PRCommand):
 
-    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048):
+    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048, delta=False):
         PRCommand.__init__(self,domain,problem, heuristics,max_time,max_mem)
         #self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false, soft_constraints=true))\"'
-        self.planner_string = self.make_planner_string(heuristics, False,True)
+        self.planner_string = self.make_planner_string(heuristics, False, True, delta)
 
 class Hypothesis:
 
     def __init__(self, heuristics=["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"], \
-                    constraints = False, soft_constraints = False):
+                    constraints = False, soft_constraints = False, calculate_delta = False):
         self.atoms = []
         self.Delta = 0.0
         self.plan = []
@@ -105,6 +103,7 @@ class Hypothesis:
         self.obs_misses = None
         self.enforce_constraints = constraints
         self.soft_constraints = soft_constraints
+        self.calculate_delta = calculate_delta
         self.heuristics = heuristics
 
 
@@ -113,9 +112,9 @@ class Hypothesis:
         hyp_problem = 'hyp_%d_problem.pddl' % index
         self.generate_pddl_for_hyp_plan(hyp_problem)
         if self.enforce_constraints:
-            pr_cmd = PRCommandConstraints('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics)
+            pr_cmd = PRCommandConstraints('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics, delta=self.calculate_delta)
         elif self.soft_constraints:
-            pr_cmd = PRCommandSoft('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics)
+            pr_cmd = PRCommandSoft('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics, delta=self.calculate_delta)
         else:
             pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics)
         pr_cmd.execute()
@@ -123,23 +122,31 @@ class Hypothesis:
         self.total_time = pr_cmd.time
         pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
 
-        if pr_cmd.signal == 0:
-            # self.score = float( plan_for_H_cmd.num_obs_accounted)
-            # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
-            self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
-            # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
-            self.score = float(pr_cmd.h_value)
-            #print("FD returned signal 0 for hypothesis")
+        if pr_cmd.signal != 0:
+            print("signal error: %d" % pr_cmd.signal)
+            self.test_failed = True
+            return
+        
+        # self.score = float( plan_for_H_cmd.num_obs_accounted)
+        # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
+        self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
+        # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
+        
+        #print("FD returned signal 0 for hypothesis")
 
-            if pr_cmd.h_value < 0 or pr_cmd.h_value == 'n/a' or pr_cmd.h_value == None:
-                # print("Obs hits: {} | Obs misses: {}".format(self.obs_hits, self.obs_misses)) # nao eh o que eu queria
-                # for op in pr_cmd.op_counts:
-                #     print(op)
+        if pr_cmd.h_values == None:
+            # print("Obs hits: {} | Obs misses: {}".format(self.obs_hits, self.obs_misses)) # nao eh o que eu queria
+            # for op in pr_cmd.op_counts:
+            #     print(op)
+            print("No h value. Failed.")
+            self.test_failed = True
+            return
+        for x in pr_cmd.h_values:
+            if x < 0:
                 print("Negative h value. Failed.")
                 self.test_failed = True
-            # self.score = float(hits)/float(hits+misses)
-        else:
-            self.test_failed = True
+                return
+        self.score = pr_cmd.h_values + [self.obs_hits]
 
     def load_plan(self, plan_name):
         instream = open(plan_name)

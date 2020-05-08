@@ -43,8 +43,10 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
       constraint_generators(
           opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
       lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
+      lp_solver_c(lp::LPSolverType(opts.get_enum("lpsolver"))),
       enforce_observations(opts.get("enforce_observations",false)),
       soft_constraints(opts.get("soft_constraints",false)),
+      calculate_delta(opts.get("calculate_delta",false)),
       op_indexes(),
       observations(){
 
@@ -65,19 +67,20 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
     for (const auto &generator : constraint_generators) {
         generator->initialize_constraints(task, constraints, infinity);
     }
-
+    
     map_operators(false);
+    
+    if (calculate_delta) {
+        lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
+    }
 
-    if (soft_constraints == true) {
+    if (soft_constraints) {
         add_observation_soft_constraints(variables, constraints);
     }
-    if(enforce_observations == true) {
+    if (enforce_observations) {
         enforce_observation_constraints(constraints);
     }
-
-    show_variables_and_objective(variables, false);
-
-    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
+    lp_solver_c.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 }
 
 void OCSingleShotHeuristic::map_operators(bool show) {
@@ -216,11 +219,11 @@ void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPCo
     //outstream << "Enforcing observation constraints" << std::endl;
     outstream << endl<<"-+-"; // marks start
 
-    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
+    for(map<string, int>::iterator it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
 
       // Determine how many times the same observed operation occurs.
-      op = *it;
-      count_obs = std::count(observations.begin(), observations.end(), op);
+      op = it->first;
+      count_obs = it->second;
 
       // Observation is mappable?
       // If not: ignore observation, storing it in a separate list.
@@ -264,7 +267,7 @@ void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPCo
     }
   }
 
-void OCSingleShotHeuristic::output_results(int result) {
+void OCSingleShotHeuristic::output_results(int result, int result_c) {
     cout << endl << string(80, '*') << endl;
     vector<double> solution = lp_solver.extract_solution();
     for (int i = 0; i < (int) solution.size(); ++i) {
@@ -277,28 +280,25 @@ void OCSingleShotHeuristic::output_results(int result) {
         sat_observations += solution[op_indexes[*it]];
     }
     cout << "# sat observations: " << sat_observations << endl;
-    cout << "# h-value: " << result << endl;
-    cout << string(80, '*') << endl;
-
-    cout << endl << string(80, '*') << endl;
+    cout << "# h-value: " << result_c << endl;
+    cout << string(80, '*') << endl << endl;
+    
+    int delta = result < 0 || result_c < 0 ? DEAD_END : result_c - result;
 
     cout << "Writing results" << endl;
     ofstream results;
-    //cout << "Writing results" << endl;
     results.open("ocsingleshot_heuristic_result.dat");
     results << "-- ";
-    results << endl << result << endl;
+    results << endl << delta << " " << result_c << endl;
     // Printing counts
     int var_i=0;
-    vector<double> counts = lp_solver.extract_solution();
+    vector<double> counts = lp_solver_c.extract_solution();
     for (OperatorProxy op : task_proxy.get_operators()) {
-        // cout << "(" << op.get_name() << ") = " << counts[var_i] << endl;
         if (counts[var_i] > 0 ) {
             results << "(" << op.get_name() << ") = " << counts[var_i] << endl;
         }
         var_i++;
     }
-
     results.flush();
     results.close();
 }
@@ -312,41 +312,51 @@ int OCSingleShotHeuristic::compute_heuristic(const GlobalState &global_state) {
 }
 
 int OCSingleShotHeuristic::compute_heuristic(const State &state) {
-    assert(!lp_solver.has_temporary_constraints());
+    assert(!lp_solver_c.has_temporary_constraints());
     for (const auto &generator : constraint_generators) {
-          bool dead_end = generator->update_constraints(state, lp_solver);
+        bool dead_end = generator->update_constraints(state, lp_solver_c);
         if (dead_end) {
-            lp_solver.clear_temporary_constraints();
+            lp_solver_c.clear_temporary_constraints();
             return DEAD_END;
+        }
+        if (calculate_delta) {
+            bool dead_end2 = generator->update_constraints(state, lp_solver);
+            if (dead_end2) {
+                lp_solver_c.clear_temporary_constraints();
+                lp_solver.clear_temporary_constraints();
+                return DEAD_END;
+            }
         }
     }
 
     int result;
-    lp_solver.solve();
-    if (lp_solver.has_optimal_solution()) {
-        double epsilon = 0.01;
-        double objective_value = lp_solver.get_objective_value();
-        result = ceil(objective_value - epsilon);
-
+    if (calculate_delta) {
+        lp_solver.solve();
+        if (lp_solver.has_optimal_solution()) {
+            double epsilon = 0.01;
+            double objective_value = lp_solver.get_objective_value();
+            result = ceil(objective_value - epsilon);
+        } else {
+            result = DEAD_END;
+        }
     } else {
-        result = DEAD_END;
+        result = 0;
+    }
+    
+    int result_c;
+    lp_solver_c.solve();
+    if (lp_solver_c.has_optimal_solution()) {
+        double epsilon = 0.01;
+        double objective_value = lp_solver_c.get_objective_value();
+        result_c = ceil(objective_value - epsilon);
+    } else {
+        result_c = DEAD_END;
     }
 
-    lp_solver.print_statistics();
-
-    ///////////////////////////////////////////////////////////////////
-    output_results(result);
-
-	//// Returning failure for deadend states makes the rest of the recognizer hang
-    // if(result == DEAD_END)
-//         exit(EXIT_FAILURE);
-//     else
-//         exit(EXIT_SUCCESS);
+    lp_solver_c.print_statistics();
+    output_results(result, result_c);
 	exit(EXIT_SUCCESS);
-    ///////////////////////////////////////////////////////////////////
-
-    lp_solver.clear_temporary_constraints();
-    return result;
+    return result_c;
 }
 
 static shared_ptr<Heuristic> _parse(OptionParser &parser) {
@@ -392,6 +402,7 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
         "methods that generate constraints over operator counting variables");
     parser.add_option<bool>("enforce_observations", "whether or not to enforce constraints on observations");
     parser.add_option<bool>("soft_constraints", "whether or not to use observations as soft constraints");
+    parser.add_option<bool>("calculate_delta", "whether or not to calculate the difference between with and without constraints");
     lp::add_lp_solver_option_to_parser(parser);
     Heuristic::add_options_to_parser(parser);
     Options opts = parser.parse();
