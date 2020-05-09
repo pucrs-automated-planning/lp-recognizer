@@ -1,0 +1,77 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Comparing Constraint Sets)
+/Author (?)
+}
+\begin{document}
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{2pt}
+\begin{tabular}{|c|c|cc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|}
+\hline
+                   &                     
+				   & \multicolumn{2}{c|}{}
+				   & \multicolumn{3}{c|}{\hdeltahc (L)}
+				   & \multicolumn{3}{c|}{\hdeltahcu (L)}
+				   & \multicolumn{3}{c|}{\hdeltahc (P)}
+				   & \multicolumn{3}{c|}{\hdeltahcu (P)}
+				   & \multicolumn{3}{c|}{\hdeltahc (S)}
+				   & \multicolumn{3}{c|}{\hdeltahcu (S)}
+				   \\ \hline
+\#                 
+& $|\mathcal{G}|$                   
+& \textbf{\% Obs}        
+& $|O|$
+
+& \textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Time\end{tabular}}                  & 
+\textbf{\begin{tabular}[c]{@{}c@{}}Acc \%\end{tabular}}              & 
+\textbf{\begin{tabular}[c]{@{}c@{}}S in $\mathcal{G}$\end{tabular}}  & 
+\textbf{Time}          & 
+\textbf{Acc \%}      & 
+\textbf{S in $\mathcal{G}$} 
+\\ 
+\hline
+
+<TABLE_LP_RESULTS>
+
+Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3> & <AVG_APPROACH_4> & <AVG_APPROACH_5>
+ 
+\\ \hline
+
+\end{tabular}
+\caption*{L=Landmarks, P=Post-hoc, S=State equation}
+\end{table*}
+\end{document}

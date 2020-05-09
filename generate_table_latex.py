@@ -13,7 +13,7 @@ def main(template, file, domains, approaches, basepaths, names):
 	for basepath, approach in zip(basepaths, approaches):
 		approaches_metrics[basepath + approach] = [0, 0, 0]
 
-    totalInstances = 0
+	totalInstances = 0
 	for domain_name in domains:
 		multirow = 0
 		observabilities = []
@@ -26,7 +26,7 @@ def main(template, file, domains, approaches, basepaths, names):
 
 		totalProblems = 0
 		avgGoals = 0
-        totalInstances += multirow
+		totalInstances += multirow
 
 		path = basepaths[0] + "/" + domain_name + '-' + str(approaches[0]) + '.txt'
 		with open(path) as f:
@@ -116,7 +116,7 @@ def main(template, file, domains, approaches, basepaths, names):
 
 	latexContent = ''
 	with open(template, 'r') as latex:
-	    latexContent = latex.read()
+		latexContent = latex.read()
 
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
 
@@ -128,7 +128,7 @@ def main(template, file, domains, approaches, basepaths, names):
 		index += 1
 
 	with open(file, 'w') as latex:
-	    latex.write(latexContent)
+		latex.write(latexContent)
 
 if __name__ == '__main__' :
 	# Domains with noisy observations.
@@ -148,11 +148,11 @@ if __name__ == '__main__' :
 	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
 
 	# List of evaluated approaches.
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
-
-	file = 'latex-results/goal_recognition-table.tex'
-	template = 'latex-results/goal_recognition-table-template.tex'
-	paths = []
+	
+	file = 'latex-results/corrections.tex'
+	template = 'latex-results/corrections-template.tex'
+	approaches = ['delta-h-c', 'delta-h-c-uncertainty'] * 3
+	paths = ['results'] * 2 + ['results/v2'] * 2 + ['results/v3'] * 2
 
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
@@ -163,6 +163,7 @@ if __name__ == '__main__' :
 	parser.add_argument('-f', '--file', metavar="F", nargs=1, type=str, help="result file")
 	args = parser.parse_args()
 
+	default_path = 'results'
 
 	# Latex resulting files
 	if args.file:
@@ -177,15 +178,16 @@ if __name__ == '__main__' :
 	# Latex template file
 	if args.template:
 		template = args.template[0]
-		if 'constraints' in template:
-			paths = ['v3_delta-cpp1/lp-recognizer/results', 'v3_delta-cpp2/lp-recognizer/results', 'v3_delta-cpp3/lp-recognizer/results', 'v3_delta-cpp4/lp-recognizer/results', 'v3_delta-cpp5/lp-recognizer/results', 'v3_delta-cpp6/lp-recognizer/results']
-			if 'uncertainty' in file:
-				approaches = ['delta-h-c-uncertainty', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty']
+		if 'previous' in template:
+			paths = ['results/v3'] * 2 + [default_path] * 5
+			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
+		elif 'constraints' in template:
+			if 'single' in template:
+				paths = ['results/v3_c1'] * 2 + ['results/v3_c2'] * 2 + ['results/v3_c3'] * 2
 			else:
-				approaches = ['delta-h-c', 'delta-h-c', 'delta-h-c', 'delta-h-c', 'delta-h-c', 'delta-h-c']
-		elif 'corrections' in template:
-			paths = ['v1/lp-recognizer/results', 'v1/lp-recognizer/results', 'v2_corrections/lp-recognizer/results', 'v2_corrections/lp-recognizer/results', 'v3_delta-cpp/lp-recognizer/results', 'v3_delta-cpp/lp-recognizer/results']
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c', 'delta-h-c-uncertainty']
+				paths = ['results/v3_c4'] * 2 + ['results/v3_c5'] * 2 + ['results/v3_c6'] * 2
+		elif 'filters' in template:
+			paths = ['results/v4_f0'] * 2 + ['results/v4_f1'] * 2 + ['results/v4_f2'] * 2
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 
@@ -199,20 +201,8 @@ if __name__ == '__main__' :
 		names = approaches
 	if args.paths:
 		paths=args.paths
-	while len(paths) < len(approaches):
-		paths.append("./results")
+	
+	if len(paths) < len(approaches):
+		paths += [default_path] * (len(approaches) - len(paths))
 
 	main(template, file, domains, approaches, paths, names)
-
-"""
-
-# Corrections comparison:
-./generate-table-latex.py -t corrections-template.tex -f corrections.tex
-
-# Constraint sets comparision:
-./generate-table-latex.py -t constraints-template.tex -f constraints.tex
-
-# Constraint sets comparision (uncertainty):
-./generate-table-latex.py -t constraints-template.tex constraints-uncertainty.tex
-
-"""
