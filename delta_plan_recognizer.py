@@ -102,9 +102,9 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
             else:
                 uncertainty_ratio = 1
             # Select multi goal
-            print("Undercainty: %d" % uncertainty_ratio)
+            print("Uncertainty: %d" % uncertainty_ratio)
             for h in self.delta_recognizer.hyps:
-                if self.accept_hypothesis(h,unc=uncertainty_ratio):
+                if self.accept_hypothesis(h, unc=uncertainty_ratio):
                     self.accepted_hypotheses.append(h)
         else:
             for h in self.delta_recognizer.hyps:
