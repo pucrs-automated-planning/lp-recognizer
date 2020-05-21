@@ -93,7 +93,7 @@ def doExperiments(domainName, observability, recognizer_names):
         for e in experiment_names:
             experiments[e].reset()
 
-        problems_path = 'experiments/' + domainName + '/' + obs + '/'
+        problems_path = '../../domains/' + domainName + '/' + obs + '/'
         total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
             # progress(problems,total_problems,experiments[e].recognizer.name+":"+str(obs)+"%")

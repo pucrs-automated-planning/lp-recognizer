@@ -15,36 +15,31 @@ def custom_partition(s, sep):
 
 class PRCommand:
 
-    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048):
+    def __init__(self, domain, problem, opts):
         self.domain = domain
         self.problem = problem
+        self.opts = opts
         self.noext_problem = os.path.basename(self.problem).replace('.pddl', '')
-        self.max_time = max_time
-        self.max_mem = max_mem
-        self.num_accounted_obs = 'n/a'
-        #
-        self.num_invalid_obs = 0
+        self.num_obs = 'n/a'
+        self.num_invalid_obs = 'n/a'
         self.h_values = None
         self.op_counts = {}
+        self.planner_string = self.make_planner_string()
 
-        self.planner_string = self.make_planner_string(list(heuristics), False, False, False)
-
-    def make_planner_string(self, heuristics, enforce_observations, soft_constraints, calculate_delta):
-
-        enforce_observations = str(enforce_observations).lower()
-        soft_constraints = str(soft_constraints).lower()
+    def make_planner_string(self):
         translate_options = ' --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
-        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h_fd}], enforce_observations={h_hc}, soft_constraints={h_soft}, calculate_delta={delta}))\"'
-
+        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h}], observation_constraints={c}, calculate_delta={d}, filter={f}))\"'
         string = fd_path + '/fast-downward %s %s ' + translate_options
-        string += search_options_template.format(h_fd=",".join(heuristics), h_hc= enforce_observations, h_soft=soft_constraints, delta=calculate_delta)
-
+        string += search_options_template.format(h=",".join(self.opts[2]), \
+            c = self.opts[3], \
+            d = self.opts[4], \
+            f = 1)
         return string
 
     def execute(self):
         cmd_string = self.planner_string % (self.domain, self.problem)
         self.log = benchmark.Log('%s.log' % self.noext_problem)
-        self.signal, self.time = benchmark.run(cmd_string, self.max_time, self.max_mem, self.log, False)
+        self.signal, self.time = benchmark.run(cmd_string, self.opts[0], self.opts[1], self.log, False)
         self.gather_data()
 
     def gather_data(self):
@@ -55,12 +50,16 @@ class PRCommand:
                 if 'Observations report:' in line:
                     # Observations report: Total = {} | Invalid = {}
                     values = [int(w) for w in line.split() if w.isdigit()]
-                    num_obs = values[0]
+                    self.num_obs = values[0]
                     self.num_invalid_obs = values[1]
+                    self.obs_hits = values[2]
+                    self.obs_misses = values[3]
+                    print(values)
                 elif not '--' in line:
                     if self.h_values == None:
                         values = line.split()
                         self.h_values = [float(x) for x in values]
+                        print(self.h_values)
                     else: # Gather operator counts
                         operator,count = line.split('=')
                         self.op_counts[operator.strip()] = float(count.strip())
@@ -68,29 +67,13 @@ class PRCommand:
 
     def write_result(self, filename):
         res = csv.writer(open('%s' % filename, 'w'))
-        res.writerow([os.path.basename(self.domain), os.path.basename(self.problem), self.signal, self.time,
-                      self.num_accounted_obs])
+        res.writerow([os.path.basename(self.domain), os.path.basename(self.problem), self.signal, self.time, self.num_obs])
 
-class PRCommandConstraints(PRCommand):
-
-    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048, delta=False):
-        PRCommand.__init__(self,domain,problem,heuristics, max_time,max_mem)
-        # self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=true, soft_constraints=false))\"'
-        self.planner_string = self.make_planner_string(heuristics, True, False, delta)
-
-class PRCommandSoft(PRCommand):
-
-    def __init__(self, domain, problem, heuristics=[], max_time=120, max_mem=2048, delta=False):
-        PRCommand.__init__(self,domain,problem, heuristics,max_time,max_mem)
-        #self.planner_string = fd_path + '/fast-downward %s %s --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts --search-options --search \"astar(ocsingleshot([lmcut_constraints(), pho_constraints(), state_equation_constraints()],enforce_observations=false, soft_constraints=true))\"'
-        self.planner_string = self.make_planner_string(heuristics, False, True, delta)
 
 class Hypothesis:
 
-    def __init__(self, heuristics=["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"], \
-                    constraints = False, soft_constraints = False, calculate_delta = False):
+    def __init__(self, opts):
         self.atoms = []
-        self.Delta = 0.0
         self.plan = []
         self.is_true = True
         self.test_failed = False
@@ -101,43 +84,28 @@ class Hypothesis:
         self.score = None
         self.obs_hits = None
         self.obs_misses = None
-        self.enforce_constraints = constraints
-        self.soft_constraints = soft_constraints
-        self.calculate_delta = calculate_delta
-        self.heuristics = heuristics
+        self.obs_count = None
+        self.num_invalid_obs = None
+        self.opts = opts
 
 
     def evaluate(self, index, observations):
-        # generate the problem with G=H
         hyp_problem = 'hyp_%d_problem.pddl' % index
         self.generate_pddl_for_hyp_plan(hyp_problem)
-        if self.enforce_constraints:
-            pr_cmd = PRCommandConstraints('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics, delta=self.calculate_delta)
-        elif self.soft_constraints:
-            pr_cmd = PRCommandSoft('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics, delta=self.calculate_delta)
-        else:
-            pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index, self.heuristics)
+        pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index, self.opts)
         pr_cmd.execute()
         self.plan_time = pr_cmd.time
         self.total_time = pr_cmd.time
         pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
-
         if pr_cmd.signal != 0:
             print("signal error: %d" % pr_cmd.signal)
             self.test_failed = True
             return
-        
-        # self.score = float( plan_for_H_cmd.num_obs_accounted)
-        # self.load_plan( 'pr-problem-hyp-%d.soln'%index )
-        self.obs_hits, self.obs_misses = observations.compute_count_intersection(pr_cmd.op_counts)
-        # print("Hits=%d Misses=%d"%(self.obs_hits, self.obs_misses))
-        
-        #print("FD returned signal 0 for hypothesis")
-
+        self.obs_hits = pr_cmd.obs_hits
+        self.obs_misses = pr_cmd.obs_misses
+        self.obs_count = pr_cmd.num_obs - pr_cmd.num_invalid_obs
+        self.num_invalid_obs = pr_cmd.num_invalid_obs
         if pr_cmd.h_values == None:
-            # print("Obs hits: {} | Obs misses: {}".format(self.obs_hits, self.obs_misses)) # nao eh o que eu queria
-            # for op in pr_cmd.op_counts:
-            #     print(op)
             print("No h value. Failed.")
             self.test_failed = True
             return
@@ -146,7 +114,7 @@ class Hypothesis:
                 print("Negative h value. Failed.")
                 self.test_failed = True
                 return
-        self.score = pr_cmd.h_values + [self.obs_hits]
+        self.score = pr_cmd.h_values
 
     def load_plan(self, plan_name):
         instream = open(plan_name)
@@ -197,29 +165,3 @@ class Hypothesis:
     def __repr__(self):
         return str(self)
 
-class Observations:
-
-    def __init__(self, obs):
-        self.observations = []
-        instream = open(obs)
-        for line in instream:
-            self.observations.append(line.strip().lower())
-
-    def __len__(self):
-        return len(self.observations)
-
-    def compute_count_intersection(self, opcounts):
-        counts = dict(opcounts)
-        hitcount = 0
-        misscount = 0
-        for obs in self.observations:
-            if obs in counts.keys():
-                if counts[obs] > 0:
-                    hitcount +=1
-                    counts[obs]-=1
-                else:
-                    misscount +=1
-            else:
-                misscount+=1
-        misscount += sum([v for v in counts.values()])
-        return hitcount,misscount

@@ -49,6 +49,7 @@ class Program_Options:
         self.instance_names = []
         self.goal_file = None
         self.max_time = 1800
+        self.hyp_max_time = 120
         self.max_memory = 1024
         self.h_value = False
         self.h_value_c = False

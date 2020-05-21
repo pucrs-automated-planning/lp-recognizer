@@ -3,9 +3,7 @@
 # Code originally developed by Miquel Ramirez
 import sys, os, csv, time, math
 from options import Program_Options
-from operator import attrgetter
 
-from planner_interface import Observations, PRCommand, Hypothesis
 from delta_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerDeltaHC, LPRecognizerDeltaHCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty
 from const_plan_recognizer import LPRecognizerSoftCUncertainty
 

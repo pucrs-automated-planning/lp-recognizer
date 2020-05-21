@@ -11,7 +11,7 @@ def main(template, file, domains, approaches, basepaths, names):
 	
 	approaches_metrics = dict()
 	for basepath, approach in zip(basepaths, approaches):
-		approaches_metrics[basepath + approach] = [0, 0, 0, 0]
+		approaches_metrics[basepath + approach] = [0, 0, 0]
 
 	totalInstances = 0
 	for domain_name in domains:
@@ -93,19 +93,15 @@ def main(template, file, domains, approaches, basepaths, names):
 							time = float(line[10])
 							accuracy = (float(line[1]) * 100)
 							spreadG = float(line[9])
-						if spreadG > 0:
-							ratio = accuracy / spreadG
-						else:
-							ratio = 0
+
 
 						list_metrics = approaches_metrics[basepath + approach]
 						list_metrics[0] += time
 						list_metrics[1] += accuracy
 						list_metrics[2] += spreadG
-						list_metrics[3] += ratio
 
 						print_metrics += '\n\t\t% ' + approach + ' - ' + obs + '% '
-						print_metrics += '\n\t\t& ' + str(round(time, 3)) + ' & ' + str(round(accuracy, 1)) + '\% & ' + str(round(spreadG, 2)) + ' & ' + str(round(ratio, 1)) 
+						print_metrics += '\n\t\t& ' + str(round(time, 3)) + ' & ' + str(round(accuracy, 1)) + '\% & ' + str(round(spreadG, 2))
 						print_metrics += ' \t \n'
 
 		print_metrics += ' \\\\ \hline'
@@ -116,8 +112,7 @@ def main(template, file, domains, approaches, basepaths, names):
 		time = approaches_metrics[approach][0] / totalInstances
 		accuracy = approaches_metrics[approach][1] / totalInstances
 		spread = approaches_metrics[approach][2] / totalInstances
-		ratio = approaches_metrics[approach][3] / totalInstances
-		avg_approaches[approach] = [time, accuracy, spread, ratio]
+		avg_approaches[approach] = [time, accuracy, spread]
 
 	latexContent = ''
 	with open(template, 'r') as latex:
@@ -129,7 +124,7 @@ def main(template, file, domains, approaches, basepaths, names):
 	for basepath, approach, name in zip(basepaths, approaches, names):
 		metrics = avg_approaches[basepath + approach]
 		latexContent = latexContent.replace('<APPROACH_' + str(index) + '>', "$"+name+"$")
-		latexContent = latexContent.replace('<AVG_APPROACH_' + str(index) + '>', '%.3f'%(metrics[0]) + ' & ' + '%.2f'%(metrics[1]) + '\% & ' + '%.2f'%(metrics[2]) + ' & ' + '%.2f'%(metrics[3]))
+		latexContent = latexContent.replace('<AVG_APPROACH_' + str(index) + '>', '%.3f'%(metrics[0]) + ' & ' + '%.2f'%(metrics[1]) + '\% & ' + '%.2f'%(metrics[2]))
 		index += 1
 
 	with open(file, 'w') as latex:
@@ -157,7 +152,7 @@ if __name__ == '__main__' :
 	file = 'latex-results/corrections.tex'
 	template = 'latex-results/corrections-template.tex'
 	approaches = ['delta-h-c', 'delta-h-c-uncertainty'] * 3
-	paths = ['results'] * 2 + ['results/v2'] * 2 + ['results/v3'] * 2
+	paths = ['results/v1'] * 2 + ['results/v2'] * 2 + ['results/v3'] * 2
 
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
@@ -184,20 +179,15 @@ if __name__ == '__main__' :
 	if args.template:
 		template = args.template[0]
 		if 'previous' in template:
-			paths = ['results/v3'] * 2 + [default_path] * 5
+			paths = [default_path] * 7
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
 		elif 'constraints' in template:
 			if 'single' in template:
-				paths = ['results/v3_cL'] * 2 + ['results/v3_cP']* 2 + ['results/v3_cS'] * 2
+				paths = ['result/v3_c1'] * 2 + ['result/v3_c2'] * 2 + ['result/v3_c3'] * 2
 			else:
-				paths = ['results/v3_cPS'] * 2 + ['results/v3_cLS'] * 2 + ['results/v3_cLP'] * 2
+				paths = ['result/v3_c4'] * 2 + ['result/v3_c5'] * 2 + ['result/v3_c6'] * 2
 		elif 'filters' in template:
-			if 'opt' in file:
-				paths = ['results/v4_f0'] * 2 + ['results/v4_f1_opt'] * 2 + ['results/v4_f2_opt'] * 2
-			else:
-				paths = ['results/v4_f0'] * 2 + ['results/v4_f1'] * 2 + ['results/v4_f2'] * 2
-		elif 'pho3' in template:
-			paths = ['results/v3'] * 2 + ['results/v3_cP'] * 2 + ['results/v3_cP3'] * 2
+			paths = ['result/v4_f0'] * 2 + ['result/v4_f1'] * 2 + ['result/v4_f2'] * 2
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 

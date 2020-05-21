@@ -1,6 +1,1382 @@
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/CHANGES.md fast-downward/CHANGES.md
+--- fast-downward-original/CHANGES.md	2020-05-21 11:56:32.206671900 -0300
++++ fast-downward/CHANGES.md	2020-03-24 18:30:23.260883200 -0300
+@@ -9,6 +9,31 @@
+ (<http://issues.fast-downward.org>). Repository branches are named
+ after the corresponding tracker issues.
+ 
++## Changes since the last release
++
++- LP solver: updated build instructions of the open solver interface.
++  <http://issues.fast-downward.org/issue752>
++  <http://issues.fast-downward.org/issue925>
++  The way we recommend building OSI now links dynamically against the
++  solvers and uses zlib. If your existing OSI installation stops
++  working, try installing zlib (sudo apt install zlib1g-dev) or
++  re-install OSI (http://www.fast-downward.org/LPBuildInstructions).
++
++- LP solver: added support for version 12.9 of CPLEX.
++  <http://issues.fast-downward.org/issue925>
++  Older versions are still supported but we recommend using 12.9.
++  In our experiments, we saw performance differences between version
++  12.8 and 12.9, as well as between using static and dynamic linking.
++  However, on average there was no significant advantage for any
++  configuration. See the issue for details.
++
++- LP solver: added support for the solver [SoPlex](https://soplex.zib.de/)
++  <http://issues.fast-downward.org/issue752>
++  The relative performance of CPLEX and SoPlex depends on the domain and
++  configuration with each solver outperforming the other in some cases.
++  See the issue for a more detailed discussion of performance.
++
++
+ ## Fast Downward 19.06
+ 
+ Released on June 11, 2019.
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/driver/portfolios/seq_opt_fdss_1.py fast-downward/driver/portfolios/seq_opt_fdss_1.py
+--- fast-downward-original/driver/portfolios/seq_opt_fdss_1.py	2020-05-21 11:56:32.237913200 -0300
++++ fast-downward/driver/portfolios/seq_opt_fdss_1.py	2020-03-24 18:30:23.257893100 -0300
+@@ -13,8 +13,10 @@
+            "shrink_strategy=shrink_bisimulation(greedy=false),"
+            "label_reduction=exact(before_shrinking=true,before_merging=false),"
+            "max_states=200000))"]),
+-    (455, ["--search",
+-           "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]),admissible=true),mpd=true)"]),
++    (455, ["--evaluator",
++           "lmc=lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]),admissible=true)",
++           "--search",
++           "astar(lmc,lazy_evaluator=lmc)"]),
+     (569, ["--search",
+            "astar(lmcut())"]),
+      ]
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/driver/portfolios/seq_opt_fdss_2.py fast-downward/driver/portfolios/seq_opt_fdss_2.py
+--- fast-downward-original/driver/portfolios/seq_opt_fdss_2.py	2020-05-21 11:56:32.237913200 -0300
++++ fast-downward/driver/portfolios/seq_opt_fdss_2.py	2020-03-24 18:30:23.264873100 -0300
+@@ -13,8 +13,10 @@
+            "shrink_strategy=shrink_bisimulation(greedy=false),"
+            "label_reduction=exact(before_shrinking=true,before_merging=false),"
+            "max_states=200000))"]),
+-    (1, ["--search",
+-           "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]),admissible=true),mpd=true)"]),
++    (1, ["--evaluator",
++           "lmc=lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]),admissible=true)",
++           "--search",
++           "astar(lmc,lazy_evaluator=lmc)"]),
+     (1, ["--search",
+            "astar(lmcut())"]),
+     (1, ["--search",
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/common_setup.py fast-downward/experiments/issue752/common_setup.py
+--- fast-downward-original/experiments/issue752/common_setup.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/common_setup.py	2020-03-24 18:30:23.486957200 -0300
+@@ -0,0 +1,382 @@
++# -*- coding: utf-8 -*-
++
++import itertools
++import os
++import platform
++import subprocess
++import sys
++
++from lab.experiment import ARGPARSER
++from lab import tools
++
++from downward.experiment import FastDownwardExperiment
++from downward.reports.absolute import AbsoluteReport
++from downward.reports.compare import ComparativeReport
++from downward.reports.scatter import ScatterPlotReport
++
++from relativescatter import RelativeScatterPlotReport
++
++
++def parse_args():
++    ARGPARSER.add_argument(
++        "--test",
++        choices=["yes", "no", "auto"],
++        default="auto",
++        dest="test_run",
++        help="test experiment locally on a small suite if --test=yes or "
++             "--test=auto and we are not on a cluster")
++    return ARGPARSER.parse_args()
++
++ARGS = parse_args()
++
++
++DEFAULT_OPTIMAL_SUITE = [
++    'airport', 'barman-opt11-strips', 'barman-opt14-strips', 'blocks',
++    'childsnack-opt14-strips', 'depot', 'driverlog',
++    'elevators-opt08-strips', 'elevators-opt11-strips',
++    'floortile-opt11-strips', 'floortile-opt14-strips', 'freecell',
++    'ged-opt14-strips', 'grid', 'gripper', 'hiking-opt14-strips',
++    'logistics00', 'logistics98', 'miconic', 'movie', 'mprime',
++    'mystery', 'nomystery-opt11-strips', 'openstacks-opt08-strips',
++    'openstacks-opt11-strips', 'openstacks-opt14-strips',
++    'openstacks-strips', 'parcprinter-08-strips',
++    'parcprinter-opt11-strips', 'parking-opt11-strips',
++    'parking-opt14-strips', 'pathways-noneg', 'pegsol-08-strips',
++    'pegsol-opt11-strips', 'pipesworld-notankage',
++    'pipesworld-tankage', 'psr-small', 'rovers', 'satellite',
++    'scanalyzer-08-strips', 'scanalyzer-opt11-strips',
++    'sokoban-opt08-strips', 'sokoban-opt11-strips', 'storage',
++    'tetris-opt14-strips', 'tidybot-opt11-strips',
++    'tidybot-opt14-strips', 'tpp', 'transport-opt08-strips',
++    'transport-opt11-strips', 'transport-opt14-strips',
++    'trucks-strips', 'visitall-opt11-strips', 'visitall-opt14-strips',
++    'woodworking-opt08-strips', 'woodworking-opt11-strips',
++    'zenotravel']
++
++DEFAULT_SATISFICING_SUITE = [
++    'airport', 'assembly', 'barman-sat11-strips',
++    'barman-sat14-strips', 'blocks', 'cavediving-14-adl',
++    'childsnack-sat14-strips', 'citycar-sat14-adl', 'depot',
++    'driverlog', 'elevators-sat08-strips', 'elevators-sat11-strips',
++    'floortile-sat11-strips', 'floortile-sat14-strips', 'freecell',
++    'ged-sat14-strips', 'grid', 'gripper', 'hiking-sat14-strips',
++    'logistics00', 'logistics98', 'maintenance-sat14-adl', 'miconic',
++    'miconic-fulladl', 'miconic-simpleadl', 'movie', 'mprime',
++    'mystery', 'nomystery-sat11-strips', 'openstacks',
++    'openstacks-sat08-adl', 'openstacks-sat08-strips',
++    'openstacks-sat11-strips', 'openstacks-sat14-strips',
++    'openstacks-strips', 'optical-telegraphs', 'parcprinter-08-strips',
++    'parcprinter-sat11-strips', 'parking-sat11-strips',
++    'parking-sat14-strips', 'pathways', 'pathways-noneg',
++    'pegsol-08-strips', 'pegsol-sat11-strips', 'philosophers',
++    'pipesworld-notankage', 'pipesworld-tankage', 'psr-large',
++    'psr-middle', 'psr-small', 'rovers', 'satellite',
++    'scanalyzer-08-strips', 'scanalyzer-sat11-strips', 'schedule',
++    'sokoban-sat08-strips', 'sokoban-sat11-strips', 'storage',
++    'tetris-sat14-strips', 'thoughtful-sat14-strips',
++    'tidybot-sat11-strips', 'tpp', 'transport-sat08-strips',
++    'transport-sat11-strips', 'transport-sat14-strips', 'trucks',
++    'trucks-strips', 'visitall-sat11-strips', 'visitall-sat14-strips',
++    'woodworking-sat08-strips', 'woodworking-sat11-strips',
++    'zenotravel']
++
++
++def get_script():
++    """Get file name of main script."""
++    return tools.get_script_path()
++
++
++def get_script_dir():
++    """Get directory of main script.
++
++    Usually a relative directory (depends on how it was called by the user.)"""
++    return os.path.dirname(get_script())
++
++
++def get_experiment_name():
++    """Get name for experiment.
++
++    Derived from the absolute filename of the main script, e.g.
++    "/ham/spam/eggs.py" => "spam-eggs"."""
++    script = os.path.abspath(get_script())
++    script_dir = os.path.basename(os.path.dirname(script))
++    script_base = os.path.splitext(os.path.basename(script))[0]
++    return "%s-%s" % (script_dir, script_base)
++
++
++def get_data_dir():
++    """Get data dir for the experiment.
++
++    This is the subdirectory "data" of the directory containing
++    the main script."""
++    return os.path.join(get_script_dir(), "data", get_experiment_name())
++
++
++def get_repo_base():
++    """Get base directory of the repository, as an absolute path.
++
++    Search upwards in the directory tree from the main script until a
++    directory with a subdirectory named ".hg" is found.
++
++    Abort if the repo base cannot be found."""
++    path = os.path.abspath(get_script_dir())
++    while os.path.dirname(path) != path:
++        if os.path.exists(os.path.join(path, ".hg")):
++            return path
++        path = os.path.dirname(path)
++    sys.exit("repo base could not be found")
++
++
++def is_running_on_cluster():
++    node = platform.node()
++    return node.endswith(".scicore.unibas.ch") or node.endswith(".cluster.bc2.ch")
++
++
++def is_test_run():
++    return ARGS.test_run == "yes" or (
++        ARGS.test_run == "auto" and not is_running_on_cluster())
++
++
++def get_algo_nick(revision, config_nick):
++    return "{revision}-{config_nick}".format(**locals())
++
++
++class IssueConfig(object):
++    """Hold information about a planner configuration.
++
++    See FastDownwardExperiment.add_algorithm() for documentation of the
++    constructor's options.
++
++    """
++    def __init__(self, nick, component_options,
++                 build_options=None, driver_options=None):
++        self.nick = nick
++        self.component_options = component_options
++        self.build_options = build_options
++        self.driver_options = driver_options
++
++
++class IssueExperiment(FastDownwardExperiment):
++    """Subclass of FastDownwardExperiment with some convenience features."""
++
++    DEFAULT_TEST_SUITE = ["depot:p01.pddl", "gripper:prob01.pddl"]
++
++    DEFAULT_TABLE_ATTRIBUTES = [
++        "cost",
++        "coverage",
++        "error",
++        "evaluations",
++        "expansions",
++        "expansions_until_last_jump",
++        "generated",
++        "memory",
++        "quality",
++        "run_dir",
++        "score_evaluations",
++        "score_expansions",
++        "score_generated",
++        "score_memory",
++        "score_search_time",
++        "score_total_time",
++        "search_time",
++        "total_time",
++        ]
++
++    DEFAULT_SCATTER_PLOT_ATTRIBUTES = [
++        "evaluations",
++        "expansions",
++        "expansions_until_last_jump",
++        "initial_h_value",
++        "memory",
++        "search_time",
++        "total_time",
++        ]
++
++    PORTFOLIO_ATTRIBUTES = [
++        "cost",
++        "coverage",
++        "error",
++        "plan_length",
++        "run_dir",
++        ]
++
++    def __init__(self, revisions=None, configs=None, path=None, **kwargs):
++        """
++
++        You can either specify both *revisions* and *configs* or none
++        of them. If they are omitted, you will need to call
++        exp.add_algorithm() manually.
++
++        If *revisions* is given, it must be a non-empty list of
++        revision identifiers, which specify which planner versions to
++        use in the experiment. The same versions are used for
++        translator, preprocessor and search. ::
++
++            IssueExperiment(revisions=["issue123", "4b3d581643"], ...)
++
++        If *configs* is given, it must be a non-empty list of
++        IssueConfig objects. ::
++
++            IssueExperiment(..., configs=[
++                IssueConfig("ff", ["--search", "eager_greedy(ff())"]),
++                IssueConfig(
++                    "lama", [],
++                    driver_options=["--alias", "seq-sat-lama-2011"]),
++            ])
++
++        If *path* is specified, it must be the path to where the
++        experiment should be built (e.g.
++        /home/john/experiments/issue123/exp01/). If omitted, the
++        experiment path is derived automatically from the main
++        script's filename. Example::
++
++            script = experiments/issue123/exp01.py -->
++            path = experiments/issue123/data/issue123-exp01/
++
++        """
++
++        path = path or get_data_dir()
++
++        FastDownwardExperiment.__init__(self, path=path, **kwargs)
++
++        if (revisions and not configs) or (not revisions and configs):
++            raise ValueError(
++                "please provide either both or none of revisions and configs")
++
++        for rev in revisions:
++            for config in configs:
++                self.add_algorithm(
++                    get_algo_nick(rev, config.nick),
++                    get_repo_base(),
++                    rev,
++                    config.component_options,
++                    build_options=config.build_options,
++                    driver_options=config.driver_options)
++
++        self._revisions = revisions
++        self._configs = configs
++
++    @classmethod
++    def _is_portfolio(cls, config_nick):
++        return "fdss" in config_nick
++
++    @classmethod
++    def get_supported_attributes(cls, config_nick, attributes):
++        if cls._is_portfolio(config_nick):
++            return [attr for attr in attributes
++                    if attr in cls.PORTFOLIO_ATTRIBUTES]
++        return attributes
++
++    def add_absolute_report_step(self, **kwargs):
++        """Add step that makes an absolute report.
++
++        Absolute reports are useful for experiments that don't compare
++        revisions.
++
++        The report is written to the experiment evaluation directory.
++
++        All *kwargs* will be passed to the AbsoluteReport class. If the
++        keyword argument *attributes* is not specified, a default list
++        of attributes is used. ::
++
++            exp.add_absolute_report_step(attributes=["coverage"])
++
++        """
++        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
++        report = AbsoluteReport(**kwargs)
++        outfile = os.path.join(
++            self.eval_dir,
++            get_experiment_name() + "." + report.output_format)
++        self.add_report(report, outfile=outfile)
++        self.add_step(
++            'publish-absolute-report', subprocess.call, ['publish', outfile])
++
++    def add_comparison_table_step(self, **kwargs):
++        """Add a step that makes pairwise revision comparisons.
++
++        Create comparative reports for all pairs of Fast Downward
++        revisions. Each report pairs up the runs of the same config and
++        lists the two absolute attribute values and their difference
++        for all attributes in kwargs["attributes"].
++
++        All *kwargs* will be passed to the CompareConfigsReport class.
++        If the keyword argument *attributes* is not specified, a
++        default list of attributes is used. ::
++
++            exp.add_comparison_table_step(attributes=["coverage"])
++
++        """
++        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
++
++        def make_comparison_tables():
++            for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                compared_configs = []
++                for config in self._configs:
++                    config_nick = config.nick
++                    compared_configs.append(
++                        ("%s-%s" % (rev1, config_nick),
++                         "%s-%s" % (rev2, config_nick),
++                         "Diff (%s)" % config_nick))
++                report = ComparativeReport(compared_configs, **kwargs)
++                outfile = os.path.join(
++                    self.eval_dir,
++                    "%s-%s-%s-compare.%s" % (
++                        self.name, rev1, rev2, report.output_format))
++                report(self.eval_dir, outfile)
++
++        def publish_comparison_tables():
++            for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                outfile = os.path.join(
++                    self.eval_dir,
++                    "%s-%s-%s-compare.html" % (self.name, rev1, rev2))
++                subprocess.call(["publish", outfile])
++
++        self.add_step("make-comparison-tables", make_comparison_tables)
++        self.add_step(
++            "publish-comparison-tables", publish_comparison_tables)
++
++    def add_scatter_plot_step(self, relative=False, attributes=None):
++        """Add step creating (relative) scatter plots for all revision pairs.
++
++        Create a scatter plot for each combination of attribute,
++        configuration and revisions pair. If *attributes* is not
++        specified, a list of common scatter plot attributes is used.
++        For portfolios all attributes except "cost", "coverage" and
++        "plan_length" will be ignored. ::
++
++            exp.add_scatter_plot_step(attributes=["expansions"])
++
++        """
++        if relative:
++            report_class = RelativeScatterPlotReport
++            scatter_dir = os.path.join(self.eval_dir, "scatter-relative")
++            step_name = "make-relative-scatter-plots"
++        else:
++            report_class = ScatterPlotReport
++            scatter_dir = os.path.join(self.eval_dir, "scatter-absolute")
++            step_name = "make-absolute-scatter-plots"
++        if attributes is None:
++            attributes = self.DEFAULT_SCATTER_PLOT_ATTRIBUTES
++
++        def make_scatter_plot(config_nick, rev1, rev2, attribute):
++            name = "-".join([self.name, rev1, rev2, attribute, config_nick])
++            print "Make scatter plot for", name
++            algo1 = "{}-{}".format(rev1, config_nick)
++            algo2 = "{}-{}".format(rev2, config_nick)
++            report = report_class(
++                filter_config=[algo1, algo2],
++                attributes=[attribute],
++                get_category=lambda run1, run2: run1["domain"],
++                legend_location=(1.3, 0.5))
++            report(
++                self.eval_dir,
++                os.path.join(scatter_dir, rev1 + "-" + rev2, name))
++
++        def make_scatter_plots():
++            for config in self._configs:
++                for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                    for attribute in self.get_supported_attributes(
++                            config.nick, attributes):
++                        make_scatter_plot(config.nick, rev1, rev2, attribute)
++
++        self.add_step(step_name, make_scatter_plots)
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/relativescatter.py fast-downward/experiments/issue752/relativescatter.py
+--- fast-downward-original/experiments/issue752/relativescatter.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/relativescatter.py	2020-03-24 18:30:23.503912100 -0300
+@@ -0,0 +1,105 @@
++# -*- coding: utf-8 -*-
++
++from collections import defaultdict
++
++from matplotlib import ticker
++
++from downward.reports.scatter import ScatterPlotReport
++from downward.reports.plot import PlotReport, Matplotlib, MatplotlibPlot
++
++
++# TODO: handle outliers
++
++# TODO: this is mostly copied from ScatterMatplotlib (scatter.py)
++class RelativeScatterMatplotlib(Matplotlib):
++    @classmethod
++    def _plot(cls, report, axes, categories, styles):
++        # Display grid
++        axes.grid(b=True, linestyle='-', color='0.75')
++
++        has_points = False
++        # Generate the scatter plots
++        for category, coords in sorted(categories.items()):
++            X, Y = zip(*coords)
++            axes.scatter(X, Y, s=42, label=category, **styles[category])
++            if X and Y:
++                has_points = True
++
++        if report.xscale == 'linear' or report.yscale == 'linear':
++            plot_size = report.missing_val * 1.01
++        else:
++            plot_size = report.missing_val * 1.25
++
++        # make 5 ticks above and below 1
++        yticks = []
++        tick_step = report.ylim_top**(1/5.0)
++        for i in xrange(-5, 6):
++            yticks.append(tick_step**i)
++        axes.set_yticks(yticks)
++        axes.get_yaxis().set_major_formatter(ticker.ScalarFormatter())
++
++        axes.set_xlim(report.xlim_left or -1, report.xlim_right or plot_size)
++        axes.set_ylim(report.ylim_bottom or -1, report.ylim_top or plot_size)
++
++        for axis in [axes.xaxis, axes.yaxis]:
++            MatplotlibPlot.change_axis_formatter(
++                axis,
++                report.missing_val if report.show_missing else None)
++        return has_points
++
++
++class RelativeScatterPlotReport(ScatterPlotReport):
++    """
++    Generate a scatter plot that shows a relative comparison of two
++    algorithms with regard to the given attribute. The attribute value
++    of algorithm 1 is shown on the x-axis and the relation to the value
++    of algorithm 2 on the y-axis.
++    """
++
++    def __init__(self, show_missing=True, get_category=None, **kwargs):
++        ScatterPlotReport.__init__(self, show_missing, get_category, **kwargs)
++        if self.output_format == 'tex':
++            raise "not supported"
++        else:
++            self.writer = RelativeScatterMatplotlib
++
++    def _fill_categories(self, runs):
++        # We discard the *runs* parameter.
++        # Map category names to value tuples
++        categories = defaultdict(list)
++        self.ylim_bottom = 2
++        self.ylim_top = 0.5
++        self.xlim_left = float("inf")
++        for (domain, problem), runs in self.problem_runs.items():
++            if len(runs) != 2:
++                continue
++            run1, run2 = runs
++            assert (run1['algorithm'] == self.algorithms[0] and
++                    run2['algorithm'] == self.algorithms[1])
++            val1 = run1.get(self.attribute)
++            val2 = run2.get(self.attribute)
++            if val1 is None or val2 is None:
++                continue
++            category = self.get_category(run1, run2)
++            assert val1 > 0, (domain, problem, self.algorithms[0], val1)
++            assert val2 > 0, (domain, problem, self.algorithms[1], val2)
++            x = val1
++            y = val2 / float(val1)
++
++            categories[category].append((x, y))
++
++            self.ylim_top = max(self.ylim_top, y)
++            self.ylim_bottom = min(self.ylim_bottom, y)
++            self.xlim_left = min(self.xlim_left, x)
++
++        # center around 1
++        if self.ylim_bottom < 1:
++            self.ylim_top = max(self.ylim_top, 1 / float(self.ylim_bottom))
++        if self.ylim_top > 1:
++            self.ylim_bottom = min(self.ylim_bottom, 1 / float(self.ylim_top))
++        return categories
++
++    def _set_scales(self, xscale, yscale):
++        # ScatterPlot uses log-scaling on the x-axis by default.
++        PlotReport._set_scales(
++            self, xscale or self.attribute.scale or 'log', 'log')
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/v1-new.py fast-downward/experiments/issue752/v1-new.py
+--- fast-downward-original/experiments/issue752/v1-new.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/v1-new.py	2020-03-24 18:30:23.507902000 -0300
+@@ -0,0 +1,36 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++REVISIONS = ["issue752-v1"]
++CONFIGS = [
++    IssueConfig('astar-blind', ["--search", "astar(blind())"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-cplex1271', ["--search", "astar(operatorcounting([state_equation_constraints()], lpsolver=cplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(email="florian.pommerening@unibas.ch", export=["PATH", "DOWNWARD_BENCHMARKS"])
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=1)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++exp.add_absolute_report_step()
++
++exp.run_steps()
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/v1-old.py fast-downward/experiments/issue752/v1-old.py
+--- fast-downward-original/experiments/issue752/v1-old.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/v1-old.py	2020-03-24 18:30:23.430109600 -0300
+@@ -0,0 +1,36 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++REVISIONS = ["issue752-base"]
++CONFIGS = [
++    IssueConfig('astar-blind', ["--search", "astar(blind())"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-cplex1251', ["--search", "astar(operatorcounting([state_equation_constraints()], lpsolver=cplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(email="florian.pommerening@unibas.ch", export=["PATH", "DOWNWARD_BENCHMARKS"])
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=1)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++exp.add_absolute_report_step()
++
++exp.run_steps()
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/v1-soplex.py fast-downward/experiments/issue752/v1-soplex.py
+--- fast-downward-original/experiments/issue752/v1-soplex.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/v1-soplex.py	2020-03-24 18:30:23.458034500 -0300
+@@ -0,0 +1,56 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++REVISIONS = ["issue752-v1"]
++CONFIGS = [
++    IssueConfig('astar-seq-cplex', ["--search", "astar(operatorcounting([state_equation_constraints()], lpsolver=cplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-soplex', ["--search", "astar(operatorcounting([state_equation_constraints()], lpsolver=soplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-pho-cplex', ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=cplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-pho-soplex', ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=soplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-lmcut-cplex', ["--search", "astar(operatorcounting([state_equation_constraints(), pho_constraints(patterns=systematic(2))], lpsolver=cplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++    IssueConfig('astar-seq-lmcut-soplex', ["--search", "astar(operatorcounting([state_equation_constraints(), pho_constraints(patterns=systematic(2))], lpsolver=soplex))"],
++        build_options=["release64"], driver_options=["--build", "release64"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(email="florian.pommerening@unibas.ch", export=["PATH", "DOWNWARD_BENCHMARKS"])
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=1)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++exp.add_absolute_report_step()
++
++for attribute in ["total_time"]:
++    for config in ["astar-seq-pho", "astar-seq-lmcut"]:
++        for rev in REVISIONS:
++            exp.add_report(
++                RelativeScatterPlotReport(
++                    attributes=[attribute],
++                    filter_algorithm=["{}-{}-{}".format(rev, config, solver) for solver in ["cplex", "soplex"]],
++                    get_category=lambda run1, run2: run1.get("domain"),
++                ),
++                outfile="{}-{}-{}.png".format(exp.name, attribute, config)
++            )
++
++exp.run_steps()
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/v2.py fast-downward/experiments/issue752/v2.py
+--- fast-downward-original/experiments/issue752/v2.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/v2.py	2020-03-24 18:30:23.464018500 -0300
+@@ -0,0 +1,55 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++REVISIONS = ["issue752-v2"]
++CONFIGS = [
++    IssueConfig("opcount-seq-lmcut-soplex", ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=soplex))"]),
++    IssueConfig("diverse-potentials-soplex", ["--search", "astar(diverse_potentials(lpsolver=soplex))"]),
++    IssueConfig("optimal-lmcount-soplex", ["--search", "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]), admissible=true, optimal=true, lpsolver=soplex))"]),
++    IssueConfig("opcount-seq-lmcut-cplex", ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=cplex))"]),
++    IssueConfig("diverse-potentials-cplex", ["--search", "astar(diverse_potentials(lpsolver=cplex))"]),
++    IssueConfig("optimal-lmcount-cplex", ["--search", "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]), admissible=true, optimal=true, lpsolver=cplex))"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(partition="infai_2", email="florian.pommerening@unibas.ch")
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=4)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++
++exp.add_parser(exp.EXITCODE_PARSER)
++exp.add_parser(exp.TRANSLATOR_PARSER)
++exp.add_parser(exp.SINGLE_SEARCH_PARSER)
++exp.add_parser(exp.PLANNER_PARSER)
++
++exp.add_step('build', exp.build)
++exp.add_step('start', exp.start_runs)
++exp.add_fetcher(name='fetch')
++
++exp.add_absolute_report_step()
++
++for nick in ["opcount-seq-lmcut", "diverse-potentials", "optimal-lmcount"]:
++    exp.add_report(RelativeScatterPlotReport(
++        attributes=["total_time"],
++        filter_algorithm=["issue752-v2-%s-%s" % (nick, solver) for solver in ["cplex", "soplex"]],
++        get_category=lambda r1, r2: r1["domain"]),
++        outfile="issue752-v2-scatter-total-time-%s.png" % nick)
++
++exp.run_steps()
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue752/v3.py fast-downward/experiments/issue752/v3.py
+--- fast-downward-original/experiments/issue752/v3.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue752/v3.py	2020-03-24 18:30:23.471997200 -0300
+@@ -0,0 +1,55 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++REVISIONS = ["issue752-v3"]
++CONFIGS = [
++    IssueConfig("opcount-seq-lmcut-soplex", ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=soplex))"]),
++    IssueConfig("diverse-potentials-soplex", ["--search", "astar(diverse_potentials(lpsolver=soplex))"]),
++    IssueConfig("optimal-lmcount-soplex", ["--search", "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]), admissible=true, optimal=true, lpsolver=soplex))"]),
++    IssueConfig("opcount-seq-lmcut-cplex", ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()], lpsolver=cplex))"]),
++    IssueConfig("diverse-potentials-cplex", ["--search", "astar(diverse_potentials(lpsolver=cplex))"]),
++    IssueConfig("optimal-lmcount-cplex", ["--search", "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]), admissible=true, optimal=true, lpsolver=cplex))"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(partition="infai_2", email="florian.pommerening@unibas.ch")
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=4)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++
++exp.add_parser(exp.EXITCODE_PARSER)
++exp.add_parser(exp.TRANSLATOR_PARSER)
++exp.add_parser(exp.SINGLE_SEARCH_PARSER)
++exp.add_parser(exp.PLANNER_PARSER)
++
++exp.add_step('build', exp.build)
++exp.add_step('start', exp.start_runs)
++exp.add_fetcher(name='fetch')
++
++exp.add_absolute_report_step()
++
++for nick in ["opcount-seq-lmcut", "diverse-potentials", "optimal-lmcount"]:
++    exp.add_report(RelativeScatterPlotReport(
++        attributes=["total_time"],
++        filter_algorithm=["issue752-v3-%s-%s" % (nick, solver) for solver in ["cplex", "soplex"]],
++        get_category=lambda r1, r2: r1["domain"]),
++        outfile="issue752-v3-scatter-total-time-%s.png" % nick)
++
++exp.run_steps()
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue925/common_setup.py fast-downward/experiments/issue925/common_setup.py
+--- fast-downward-original/experiments/issue925/common_setup.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue925/common_setup.py	2020-03-24 18:30:23.539815900 -0300
+@@ -0,0 +1,382 @@
++# -*- coding: utf-8 -*-
++
++import itertools
++import os
++import platform
++import subprocess
++import sys
++
++from lab.experiment import ARGPARSER
++from lab import tools
++
++from downward.experiment import FastDownwardExperiment
++from downward.reports.absolute import AbsoluteReport
++from downward.reports.compare import ComparativeReport
++from downward.reports.scatter import ScatterPlotReport
++
++from relativescatter import RelativeScatterPlotReport
++
++
++def parse_args():
++    ARGPARSER.add_argument(
++        "--test",
++        choices=["yes", "no", "auto"],
++        default="auto",
++        dest="test_run",
++        help="test experiment locally on a small suite if --test=yes or "
++             "--test=auto and we are not on a cluster")
++    return ARGPARSER.parse_args()
++
++ARGS = parse_args()
++
++
++DEFAULT_OPTIMAL_SUITE = [
++    'airport', 'barman-opt11-strips', 'barman-opt14-strips', 'blocks',
++    'childsnack-opt14-strips', 'depot', 'driverlog',
++    'elevators-opt08-strips', 'elevators-opt11-strips',
++    'floortile-opt11-strips', 'floortile-opt14-strips', 'freecell',
++    'ged-opt14-strips', 'grid', 'gripper', 'hiking-opt14-strips',
++    'logistics00', 'logistics98', 'miconic', 'movie', 'mprime',
++    'mystery', 'nomystery-opt11-strips', 'openstacks-opt08-strips',
++    'openstacks-opt11-strips', 'openstacks-opt14-strips',
++    'openstacks-strips', 'parcprinter-08-strips',
++    'parcprinter-opt11-strips', 'parking-opt11-strips',
++    'parking-opt14-strips', 'pathways-noneg', 'pegsol-08-strips',
++    'pegsol-opt11-strips', 'pipesworld-notankage',
++    'pipesworld-tankage', 'psr-small', 'rovers', 'satellite',
++    'scanalyzer-08-strips', 'scanalyzer-opt11-strips',
++    'sokoban-opt08-strips', 'sokoban-opt11-strips', 'storage',
++    'tetris-opt14-strips', 'tidybot-opt11-strips',
++    'tidybot-opt14-strips', 'tpp', 'transport-opt08-strips',
++    'transport-opt11-strips', 'transport-opt14-strips',
++    'trucks-strips', 'visitall-opt11-strips', 'visitall-opt14-strips',
++    'woodworking-opt08-strips', 'woodworking-opt11-strips',
++    'zenotravel']
++
++DEFAULT_SATISFICING_SUITE = [
++    'airport', 'assembly', 'barman-sat11-strips',
++    'barman-sat14-strips', 'blocks', 'cavediving-14-adl',
++    'childsnack-sat14-strips', 'citycar-sat14-adl', 'depot',
++    'driverlog', 'elevators-sat08-strips', 'elevators-sat11-strips',
++    'floortile-sat11-strips', 'floortile-sat14-strips', 'freecell',
++    'ged-sat14-strips', 'grid', 'gripper', 'hiking-sat14-strips',
++    'logistics00', 'logistics98', 'maintenance-sat14-adl', 'miconic',
++    'miconic-fulladl', 'miconic-simpleadl', 'movie', 'mprime',
++    'mystery', 'nomystery-sat11-strips', 'openstacks',
++    'openstacks-sat08-adl', 'openstacks-sat08-strips',
++    'openstacks-sat11-strips', 'openstacks-sat14-strips',
++    'openstacks-strips', 'optical-telegraphs', 'parcprinter-08-strips',
++    'parcprinter-sat11-strips', 'parking-sat11-strips',
++    'parking-sat14-strips', 'pathways', 'pathways-noneg',
++    'pegsol-08-strips', 'pegsol-sat11-strips', 'philosophers',
++    'pipesworld-notankage', 'pipesworld-tankage', 'psr-large',
++    'psr-middle', 'psr-small', 'rovers', 'satellite',
++    'scanalyzer-08-strips', 'scanalyzer-sat11-strips', 'schedule',
++    'sokoban-sat08-strips', 'sokoban-sat11-strips', 'storage',
++    'tetris-sat14-strips', 'thoughtful-sat14-strips',
++    'tidybot-sat11-strips', 'tpp', 'transport-sat08-strips',
++    'transport-sat11-strips', 'transport-sat14-strips', 'trucks',
++    'trucks-strips', 'visitall-sat11-strips', 'visitall-sat14-strips',
++    'woodworking-sat08-strips', 'woodworking-sat11-strips',
++    'zenotravel']
++
++
++def get_script():
++    """Get file name of main script."""
++    return tools.get_script_path()
++
++
++def get_script_dir():
++    """Get directory of main script.
++
++    Usually a relative directory (depends on how it was called by the user.)"""
++    return os.path.dirname(get_script())
++
++
++def get_experiment_name():
++    """Get name for experiment.
++
++    Derived from the absolute filename of the main script, e.g.
++    "/ham/spam/eggs.py" => "spam-eggs"."""
++    script = os.path.abspath(get_script())
++    script_dir = os.path.basename(os.path.dirname(script))
++    script_base = os.path.splitext(os.path.basename(script))[0]
++    return "%s-%s" % (script_dir, script_base)
++
++
++def get_data_dir():
++    """Get data dir for the experiment.
++
++    This is the subdirectory "data" of the directory containing
++    the main script."""
++    return os.path.join(get_script_dir(), "data", get_experiment_name())
++
++
++def get_repo_base():
++    """Get base directory of the repository, as an absolute path.
++
++    Search upwards in the directory tree from the main script until a
++    directory with a subdirectory named ".hg" is found.
++
++    Abort if the repo base cannot be found."""
++    path = os.path.abspath(get_script_dir())
++    while os.path.dirname(path) != path:
++        if os.path.exists(os.path.join(path, ".hg")):
++            return path
++        path = os.path.dirname(path)
++    sys.exit("repo base could not be found")
++
++
++def is_running_on_cluster():
++    node = platform.node()
++    return node.endswith(".scicore.unibas.ch") or node.endswith(".cluster.bc2.ch")
++
++
++def is_test_run():
++    return ARGS.test_run == "yes" or (
++        ARGS.test_run == "auto" and not is_running_on_cluster())
++
++
++def get_algo_nick(revision, config_nick):
++    return "{revision}-{config_nick}".format(**locals())
++
++
++class IssueConfig(object):
++    """Hold information about a planner configuration.
++
++    See FastDownwardExperiment.add_algorithm() for documentation of the
++    constructor's options.
++
++    """
++    def __init__(self, nick, component_options,
++                 build_options=None, driver_options=None):
++        self.nick = nick
++        self.component_options = component_options
++        self.build_options = build_options
++        self.driver_options = driver_options
++
++
++class IssueExperiment(FastDownwardExperiment):
++    """Subclass of FastDownwardExperiment with some convenience features."""
++
++    DEFAULT_TEST_SUITE = ["depot:p01.pddl", "gripper:prob01.pddl"]
++
++    DEFAULT_TABLE_ATTRIBUTES = [
++        "cost",
++        "coverage",
++        "error",
++        "evaluations",
++        "expansions",
++        "expansions_until_last_jump",
++        "generated",
++        "memory",
++        "quality",
++        "run_dir",
++        "score_evaluations",
++        "score_expansions",
++        "score_generated",
++        "score_memory",
++        "score_search_time",
++        "score_total_time",
++        "search_time",
++        "total_time",
++        ]
++
++    DEFAULT_SCATTER_PLOT_ATTRIBUTES = [
++        "evaluations",
++        "expansions",
++        "expansions_until_last_jump",
++        "initial_h_value",
++        "memory",
++        "search_time",
++        "total_time",
++        ]
++
++    PORTFOLIO_ATTRIBUTES = [
++        "cost",
++        "coverage",
++        "error",
++        "plan_length",
++        "run_dir",
++        ]
++
++    def __init__(self, revisions=None, configs=None, path=None, **kwargs):
++        """
++
++        You can either specify both *revisions* and *configs* or none
++        of them. If they are omitted, you will need to call
++        exp.add_algorithm() manually.
++
++        If *revisions* is given, it must be a non-empty list of
++        revision identifiers, which specify which planner versions to
++        use in the experiment. The same versions are used for
++        translator, preprocessor and search. ::
++
++            IssueExperiment(revisions=["issue123", "4b3d581643"], ...)
++
++        If *configs* is given, it must be a non-empty list of
++        IssueConfig objects. ::
++
++            IssueExperiment(..., configs=[
++                IssueConfig("ff", ["--search", "eager_greedy(ff())"]),
++                IssueConfig(
++                    "lama", [],
++                    driver_options=["--alias", "seq-sat-lama-2011"]),
++            ])
++
++        If *path* is specified, it must be the path to where the
++        experiment should be built (e.g.
++        /home/john/experiments/issue123/exp01/). If omitted, the
++        experiment path is derived automatically from the main
++        script's filename. Example::
++
++            script = experiments/issue123/exp01.py -->
++            path = experiments/issue123/data/issue123-exp01/
++
++        """
++
++        path = path or get_data_dir()
++
++        FastDownwardExperiment.__init__(self, path=path, **kwargs)
++
++        if (revisions and not configs) or (not revisions and configs):
++            raise ValueError(
++                "please provide either both or none of revisions and configs")
++
++        for rev in revisions:
++            for config in configs:
++                self.add_algorithm(
++                    get_algo_nick(rev, config.nick),
++                    get_repo_base(),
++                    rev,
++                    config.component_options,
++                    build_options=config.build_options,
++                    driver_options=config.driver_options)
++
++        self._revisions = revisions
++        self._configs = configs
++
++    @classmethod
++    def _is_portfolio(cls, config_nick):
++        return "fdss" in config_nick
++
++    @classmethod
++    def get_supported_attributes(cls, config_nick, attributes):
++        if cls._is_portfolio(config_nick):
++            return [attr for attr in attributes
++                    if attr in cls.PORTFOLIO_ATTRIBUTES]
++        return attributes
++
++    def add_absolute_report_step(self, **kwargs):
++        """Add step that makes an absolute report.
++
++        Absolute reports are useful for experiments that don't compare
++        revisions.
++
++        The report is written to the experiment evaluation directory.
++
++        All *kwargs* will be passed to the AbsoluteReport class. If the
++        keyword argument *attributes* is not specified, a default list
++        of attributes is used. ::
++
++            exp.add_absolute_report_step(attributes=["coverage"])
++
++        """
++        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
++        report = AbsoluteReport(**kwargs)
++        outfile = os.path.join(
++            self.eval_dir,
++            get_experiment_name() + "." + report.output_format)
++        self.add_report(report, outfile=outfile)
++        self.add_step(
++            'publish-absolute-report', subprocess.call, ['publish', outfile])
++
++    def add_comparison_table_step(self, **kwargs):
++        """Add a step that makes pairwise revision comparisons.
++
++        Create comparative reports for all pairs of Fast Downward
++        revisions. Each report pairs up the runs of the same config and
++        lists the two absolute attribute values and their difference
++        for all attributes in kwargs["attributes"].
++
++        All *kwargs* will be passed to the CompareConfigsReport class.
++        If the keyword argument *attributes* is not specified, a
++        default list of attributes is used. ::
++
++            exp.add_comparison_table_step(attributes=["coverage"])
++
++        """
++        kwargs.setdefault("attributes", self.DEFAULT_TABLE_ATTRIBUTES)
++
++        def make_comparison_tables():
++            for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                compared_configs = []
++                for config in self._configs:
++                    config_nick = config.nick
++                    compared_configs.append(
++                        ("%s-%s" % (rev1, config_nick),
++                         "%s-%s" % (rev2, config_nick),
++                         "Diff (%s)" % config_nick))
++                report = ComparativeReport(compared_configs, **kwargs)
++                outfile = os.path.join(
++                    self.eval_dir,
++                    "%s-%s-%s-compare.%s" % (
++                        self.name, rev1, rev2, report.output_format))
++                report(self.eval_dir, outfile)
++
++        def publish_comparison_tables():
++            for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                outfile = os.path.join(
++                    self.eval_dir,
++                    "%s-%s-%s-compare.html" % (self.name, rev1, rev2))
++                subprocess.call(["publish", outfile])
++
++        self.add_step("make-comparison-tables", make_comparison_tables)
++        self.add_step(
++            "publish-comparison-tables", publish_comparison_tables)
++
++    def add_scatter_plot_step(self, relative=False, attributes=None):
++        """Add step creating (relative) scatter plots for all revision pairs.
++
++        Create a scatter plot for each combination of attribute,
++        configuration and revisions pair. If *attributes* is not
++        specified, a list of common scatter plot attributes is used.
++        For portfolios all attributes except "cost", "coverage" and
++        "plan_length" will be ignored. ::
++
++            exp.add_scatter_plot_step(attributes=["expansions"])
++
++        """
++        if relative:
++            report_class = RelativeScatterPlotReport
++            scatter_dir = os.path.join(self.eval_dir, "scatter-relative")
++            step_name = "make-relative-scatter-plots"
++        else:
++            report_class = ScatterPlotReport
++            scatter_dir = os.path.join(self.eval_dir, "scatter-absolute")
++            step_name = "make-absolute-scatter-plots"
++        if attributes is None:
++            attributes = self.DEFAULT_SCATTER_PLOT_ATTRIBUTES
++
++        def make_scatter_plot(config_nick, rev1, rev2, attribute):
++            name = "-".join([self.name, rev1, rev2, attribute, config_nick])
++            print "Make scatter plot for", name
++            algo1 = "{}-{}".format(rev1, config_nick)
++            algo2 = "{}-{}".format(rev2, config_nick)
++            report = report_class(
++                filter_config=[algo1, algo2],
++                attributes=[attribute],
++                get_category=lambda run1, run2: run1["domain"],
++                legend_location=(1.3, 0.5))
++            report(
++                self.eval_dir,
++                os.path.join(scatter_dir, rev1 + "-" + rev2, name))
++
++        def make_scatter_plots():
++            for config in self._configs:
++                for rev1, rev2 in itertools.combinations(self._revisions, 2):
++                    for attribute in self.get_supported_attributes(
++                            config.nick, attributes):
++                        make_scatter_plot(config.nick, rev1, rev2, attribute)
++
++        self.add_step(step_name, make_scatter_plots)
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue925/relativescatter.py fast-downward/experiments/issue925/relativescatter.py
+--- fast-downward-original/experiments/issue925/relativescatter.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue925/relativescatter.py	2020-03-24 18:30:23.551783800 -0300
+@@ -0,0 +1,105 @@
++# -*- coding: utf-8 -*-
++
++from collections import defaultdict
++
++from matplotlib import ticker
++
++from downward.reports.scatter import ScatterPlotReport
++from downward.reports.plot import PlotReport, Matplotlib, MatplotlibPlot
++
++
++# TODO: handle outliers
++
++# TODO: this is mostly copied from ScatterMatplotlib (scatter.py)
++class RelativeScatterMatplotlib(Matplotlib):
++    @classmethod
++    def _plot(cls, report, axes, categories, styles):
++        # Display grid
++        axes.grid(b=True, linestyle='-', color='0.75')
++
++        has_points = False
++        # Generate the scatter plots
++        for category, coords in sorted(categories.items()):
++            X, Y = zip(*coords)
++            axes.scatter(X, Y, s=42, label=category, **styles[category])
++            if X and Y:
++                has_points = True
++
++        if report.xscale == 'linear' or report.yscale == 'linear':
++            plot_size = report.missing_val * 1.01
++        else:
++            plot_size = report.missing_val * 1.25
++
++        # make 5 ticks above and below 1
++        yticks = []
++        tick_step = report.ylim_top**(1/5.0)
++        for i in xrange(-5, 6):
++            yticks.append(tick_step**i)
++        axes.set_yticks(yticks)
++        axes.get_yaxis().set_major_formatter(ticker.ScalarFormatter())
++
++        axes.set_xlim(report.xlim_left or -1, report.xlim_right or plot_size)
++        axes.set_ylim(report.ylim_bottom or -1, report.ylim_top or plot_size)
++
++        for axis in [axes.xaxis, axes.yaxis]:
++            MatplotlibPlot.change_axis_formatter(
++                axis,
++                report.missing_val if report.show_missing else None)
++        return has_points
++
++
++class RelativeScatterPlotReport(ScatterPlotReport):
++    """
++    Generate a scatter plot that shows a relative comparison of two
++    algorithms with regard to the given attribute. The attribute value
++    of algorithm 1 is shown on the x-axis and the relation to the value
++    of algorithm 2 on the y-axis.
++    """
++
++    def __init__(self, show_missing=True, get_category=None, **kwargs):
++        ScatterPlotReport.__init__(self, show_missing, get_category, **kwargs)
++        if self.output_format == 'tex':
++            raise "not supported"
++        else:
++            self.writer = RelativeScatterMatplotlib
++
++    def _fill_categories(self, runs):
++        # We discard the *runs* parameter.
++        # Map category names to value tuples
++        categories = defaultdict(list)
++        self.ylim_bottom = 2
++        self.ylim_top = 0.5
++        self.xlim_left = float("inf")
++        for (domain, problem), runs in self.problem_runs.items():
++            if len(runs) != 2:
++                continue
++            run1, run2 = runs
++            assert (run1['algorithm'] == self.algorithms[0] and
++                    run2['algorithm'] == self.algorithms[1])
++            val1 = run1.get(self.attribute)
++            val2 = run2.get(self.attribute)
++            if val1 is None or val2 is None:
++                continue
++            category = self.get_category(run1, run2)
++            assert val1 > 0, (domain, problem, self.algorithms[0], val1)
++            assert val2 > 0, (domain, problem, self.algorithms[1], val2)
++            x = val1
++            y = val2 / float(val1)
++
++            categories[category].append((x, y))
++
++            self.ylim_top = max(self.ylim_top, y)
++            self.ylim_bottom = min(self.ylim_bottom, y)
++            self.xlim_left = min(self.xlim_left, x)
++
++        # center around 1
++        if self.ylim_bottom < 1:
++            self.ylim_top = max(self.ylim_top, 1 / float(self.ylim_bottom))
++        if self.ylim_top > 1:
++            self.ylim_bottom = min(self.ylim_bottom, 1 / float(self.ylim_top))
++        return categories
++
++    def _set_scales(self, xscale, yscale):
++        # ScatterPlot uses log-scaling on the x-axis by default.
++        PlotReport._set_scales(
++            self, xscale or self.attribute.scale or 'log', 'log')
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/experiments/issue925/v1.py fast-downward/experiments/issue925/v1.py
+--- fast-downward-original/experiments/issue925/v1.py	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/experiments/issue925/v1.py	2020-03-24 18:30:23.558764900 -0300
+@@ -0,0 +1,57 @@
++#! /usr/bin/env python
++# -*- coding: utf-8 -*-
++
++import os
++
++from lab.environments import LocalEnvironment, BaselSlurmEnvironment
++
++import common_setup
++from common_setup import IssueConfig, IssueExperiment
++from relativescatter import RelativeScatterPlotReport
++from itertools import combinations
++
++DIR = os.path.dirname(os.path.abspath(__file__))
++BENCHMARKS_DIR = os.environ["DOWNWARD_BENCHMARKS"]
++# These revisions are all tag experimental branches off the same revision.
++# we only need different tags so lab creates separate build directories in the build cache.
++# We then manually recompile the code in the build cache with the correct settings.
++REVISIONS = ["issue925-cplex12.8-static", "issue925-cplex12.8-dynamic", "issue925-cplex12.9-static", "issue925-cplex12.9-dynamic"]
++CONFIGS = [
++    IssueConfig("opcount-seq-lmcut", ["--search", "astar(operatorcounting([state_equation_constraints(), lmcut_constraints()]))"]),
++    IssueConfig("diverse-potentials", ["--search", "astar(diverse_potentials())"]),
++    IssueConfig("optimal-lmcount", ["--search", "astar(lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]), admissible=true, optimal=true))"]),
++]
++SUITE = common_setup.DEFAULT_OPTIMAL_SUITE
++ENVIRONMENT = BaselSlurmEnvironment(email="florian.pommerening@unibas.ch")
++
++if common_setup.is_test_run():
++    SUITE = IssueExperiment.DEFAULT_TEST_SUITE
++    ENVIRONMENT = LocalEnvironment(processes=4)
++
++exp = IssueExperiment(
++    revisions=REVISIONS,
++    configs=CONFIGS,
++    environment=ENVIRONMENT,
++)
++exp.add_suite(BENCHMARKS_DIR, SUITE)
++
++exp.add_parser(exp.EXITCODE_PARSER)
++exp.add_parser(exp.TRANSLATOR_PARSER)
++exp.add_parser(exp.SINGLE_SEARCH_PARSER)
++exp.add_parser(exp.PLANNER_PARSER)
++
++exp.add_step('build', exp.build)
++exp.add_step('start', exp.start_runs)
++exp.add_fetcher(name='fetch')
++
++exp.add_comparison_table_step()
++
++for r1, r2 in combinations(REVISIONS, 2):
++    for nick in ["opcount-seq-lmcut", "diverse-potentials", "optimal-lmcount"]:
++        exp.add_report(RelativeScatterPlotReport(
++            attributes=["total_time"],
++            filter_algorithm=["%s-%s" % (r, nick) for r in [r1, r2]],
++            get_category=lambda run1, run2: run1["domain"]),
++            outfile="issue925-v1-total-time-%s-%s-%s.png" % (r1, r2, nick))
++
++exp.run_steps()
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward fast-downward/fast-downward
 --- fast-downward-original/fast-downward	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fast-downward	2019-08-26 17:56:59.000000000 -0300
++++ fast-downward/fast-downward	2020-03-24 18:30:23.967584000 -0300
 @@ -0,0 +1,13 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -18,7 +1394,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward 
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints fast-downward/fd-constraints
 --- fast-downward-original/fd-constraints	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/fd-constraints	2019-08-26 17:56:59.000000000 -0300
++++ fast-downward/fd-constraints	2020-03-24 18:30:23.968582000 -0300
 @@ -0,0 +1,14 @@
 +#!/usr/bin/env bash
 +DIR=`dirname $0`
@@ -37,12 +1413,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fd-constraints
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-linux.sh fast-downward/install-osi-linux.sh
 --- fast-downward-original/install-osi-linux.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-linux.sh	2019-08-26 17:56:59.000000000 -0300
++++ fast-downward/install-osi-linux.sh	2020-03-25 17:50:18.127612600 -0300
 @@ -0,0 +1,22 @@
 +#!/usr/bin/env bash
-+export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio129/cplex
++export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio1210/cplex
 +# You should probably change the line below to match where you want COIN64
-+export DOWNWARD_COIN_ROOT=~/workspace-planning/coin64 
++export DOWNWARD_COIN_ROOT=/opt/coin/Osi-0.107.9
 +mkdir $DOWNWARD_COIN_ROOT
 +pushd ..
 +wget -c http://www.coin-or.org/download/source/Osi/Osi-0.107.9.tgz
@@ -64,7 +1440,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-li
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-mac.sh fast-downward/install-osi-mac.sh
 --- fast-downward-original/install-osi-mac.sh	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/install-osi-mac.sh	2019-08-26 17:56:59.000000000 -0300
++++ fast-downward/install-osi-mac.sh	2020-03-24 18:30:23.970576100 -0300
 @@ -0,0 +1,26 @@
 +#!/usr/bin/env bash
 +# Ensure we are using the system's gcc/g++ rather than brew's
@@ -93,9 +1469,252 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/install-osi-ma
 +# rm Osi-0.107.9.tgz
 +popd
 \ No newline at end of file
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/misc/buildbot/buildbot-exp.py fast-downward/misc/buildbot/buildbot-exp.py
+--- fast-downward-original/misc/buildbot/buildbot-exp.py	2020-05-21 11:56:32.284778400 -0300
++++ fast-downward/misc/buildbot/buildbot-exp.py	2020-03-24 18:30:23.542808100 -0300
+@@ -60,7 +60,7 @@
+ REVISION_CACHE = os.path.join(BASE_DIR, 'revision-cache')
+ REGRESSIONS_DIR = os.path.join(BASE_DIR, 'regressions')
+ 
+-BASELINE = cached_revision.get_global_rev(REPO, rev='9e8be78bb8e5')
++BASELINE = cached_revision.get_global_rev(REPO, rev='0b4344f8f5a8')
+ CONFIGS = {}
+ CONFIGS['nightly'] = [
+     ('lmcut', ['--search', 'astar(lmcut())']),
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/misc/tests/test-memory-leaks.py fast-downward/misc/tests/test-memory-leaks.py
+--- fast-downward-original/misc/tests/test-memory-leaks.py	2020-05-21 11:56:32.316020300 -0300
++++ fast-downward/misc/tests/test-memory-leaks.py	2020-03-24 18:30:23.551783800 -0300
+@@ -21,6 +21,10 @@
+ PLAN_FILE = os.path.join(REPO, "test.plan")
+ VALGRIND_GCC5_SUPPRESSION_FILE = os.path.join(
+     REPO, "misc", "tests", "valgrind", "gcc5.supp")
++DLOPEN_SUPPRESSION_FILE = os.path.join(
++    REPO, "misc", "tests", "valgrind", "dlopen.supp")
++DL_CATCH_ERROR_SUPPRESSION_FILE = os.path.join(
++    REPO, "misc", "tests", "valgrind", "dl_catch_error.supp")
+ VALGRIND_ERROR_EXITCODE = 99
+ 
+ TASKS = [os.path.join(BENCHMARKS_DIR, path) for path in [
+@@ -91,7 +95,10 @@
+     subprocess.check_call(["./build.py"], cwd=REPO)
+     compiler, compiler_version = get_compiler_and_version()
+     print("Compiler:", compiler, compiler_version)
+-    suppression_files = []
++    suppression_files = [
++        DLOPEN_SUPPRESSION_FILE,
++        DL_CATCH_ERROR_SUPPRESSION_FILE,
++    ]
+     if compiler == "GNU" and compiler_version.split(".")[0] == "5":
+         print("Using leak suppression file for GCC 5 "
+               "(see http://issues.fast-downward.org/issue703).")
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/misc/tests/valgrind/dl_catch_error.supp fast-downward/misc/tests/valgrind/dl_catch_error.supp
+--- fast-downward-original/misc/tests/valgrind/dl_catch_error.supp	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/misc/tests/valgrind/dl_catch_error.supp	2020-03-24 18:30:23.488957300 -0300
+@@ -0,0 +1,9 @@
++{
++   libdl bug related to _dl_catch_error
++   Memcheck:Leak
++   match-leak-kinds: reachable
++   fun:malloc
++   ...
++   fun:_dl_catch_error
++   ...
++}
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/misc/tests/valgrind/dlopen.supp fast-downward/misc/tests/valgrind/dlopen.supp
+--- fast-downward-original/misc/tests/valgrind/dlopen.supp	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/misc/tests/valgrind/dlopen.supp	2020-03-24 18:30:23.521864000 -0300
+@@ -0,0 +1,9 @@
++{
++   Debian libpthread dlopen bug (see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=700899)
++   Memcheck:Leak
++   match-leak-kinds: reachable
++   fun:calloc
++   fun:_dlerror_run
++   fun:dlopen@@GLIBC_2.2.5
++   ...
++}
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modules/FindCplex.cmake fast-downward/src/cmake_modules/FindCplex.cmake
+--- fast-downward-original/src/cmake_modules/FindCplex.cmake	2020-05-21 11:56:32.331641500 -0300
++++ fast-downward/src/cmake_modules/FindCplex.cmake	2020-03-24 18:30:23.563752200 -0300
+@@ -106,24 +106,30 @@
+     )
+ endif()
+ 
++# CMake uses the first discovered library, searching in the order they
++# are mentioned here. We prefer dynamic libraries over static ones
++# (see issue925) and otherwise prefer the latest available version.
+ find_library(CPLEX_LIBRARY_RELEASE
+     NAMES
+-    cplex
+-    cplex1262
+-    cplex1271
++    cplex1290
+     cplex1280
++    cplex1271
++    cplex1262
++    cplex
+     HINTS
+     ${CPLEX_HINT_PATHS_RELEASE}
+     PATH_SUFFIXES
+     ${CPLEX_LIBRARY_PATH_SUFFIX_RELEASE}
+ )
+ 
++# See above.
+ find_library(CPLEX_LIBRARY_DEBUG
+     NAMES
+-    cplex
+-    cplex1262
+-    cplex1271
++    cplex1290
+     cplex1280
++    cplex1271
++    cplex1262
++    cplex
+     HINTS
+     ${CPLEX_HINT_PATHS_DEBUG}
+     PATH_SUFFIXES
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modules/FindOSI.cmake fast-downward/src/cmake_modules/FindOSI.cmake
+--- fast-downward-original/src/cmake_modules/FindOSI.cmake	2020-05-21 11:56:32.331641500 -0300
++++ fast-downward/src/cmake_modules/FindOSI.cmake	2020-03-24 18:30:23.571732700 -0300
+@@ -6,6 +6,7 @@
+ #  Clp (internal solver of COIN)
+ #  Cpx (CPLEX)
+ #  Grb (Gurobi)
++#  Spx (SoPlex)
+ #
+ # This code defines the following variables:
+ #
+@@ -124,6 +125,16 @@
+     set(OSI_Grb_FOUND FALSE)
+ endif()
+ 
++# Spx component
++if(OSI_Spx_LIBRARIES)
++    find_package(Soplex)
++    if (SOPLEX_FOUND)
++        list(APPEND OSI_Spx_LIBRARIES ${SOPLEX_LIBRARIES})
++        list(APPEND OSI_Spx_INCLUDE_DIRS ${SOPLEX_INCLUDE_DIRS})
++        set(OSI_Spx_FOUND TRUE)
++    endif()
++endif()
++
+ 
+ # Check for consistency and handle arguments like QUIET, REQUIRED, etc.
+ include(FindPackageHandleStandardArgs)
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/cmake_modules/FindSoplex.cmake fast-downward/src/cmake_modules/FindSoplex.cmake
+--- fast-downward-original/src/cmake_modules/FindSoplex.cmake	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/src/cmake_modules/FindSoplex.cmake	2020-03-24 18:30:23.490946800 -0300
+@@ -0,0 +1,78 @@
++# - Find the SoPlex LP solver.
++# This code defines the following variables:
++#
++#  SOPLEX_FOUND                 - TRUE if SOPLEX was found.
++#  SOPLEX_INCLUDE_DIRS          - Full paths to all include dirs.
++#  SOPLEX_LIBRARIES             - Full paths to all libraries.
++#
++# Usage:
++#  find_package(soplex)
++#
++# The location of SoPlex can be specified using the environment variable
++# or cmake parameter DOWNWARD_SOPLEX_ROOT. If different installations
++# for release/debug versions of SOPLEX are available, they can be
++# specified with
++#   DOWNWARD_SOPLEX_ROOT
++#   DOWNWARD_SOPLEX_ROOT_RELEASE
++#   DOWNWARD_SOPLEX_ROOT_DEBUG
++# More specific paths are preferred over less specific ones when searching
++# for libraries.
++#
++# Note that the standard FIND_PACKAGE features are supported
++# (QUIET, REQUIRED, etc.).
++
++foreach(BUILDMODE "RELEASE" "DEBUG")
++    set(SOPLEX_HINT_PATHS_${BUILDMODE}
++        ${DOWNWARD_SOPLEX_ROOT_${BUILDMODE}}
++        $ENV{DOWNWARD_SOPLEX_ROOT_${BUILDMODE}}
++        ${DOWNWARD_SOPLEX_ROOT}
++        $ENV{DOWNWARD_SOPLEX_ROOT}
++    )
++endforeach()
++
++find_path(SOPLEX_INCLUDE_DIRS
++    NAMES
++    soplex.h
++    HINTS
++    ${SOPLEX_HINT_PATHS_RELEASE}
++    ${SOPLEX_HINT_PATHS_DEBUG}
++    PATH_SUFFIXES
++    include
++)
++
++find_library(SOPLEX_LIBRARY_RELEASE
++    NAMES
++    soplex
++    HINTS
++    ${SOPLEX_HINT_PATHS_RELEASE}
++    PATH_SUFFIXES
++    lib
++)
++
++find_library(SOPLEX_LIBRARY_DEBUG
++    NAMES
++    soplex
++    HINTS
++    ${SOPLEX_HINT_PATHS_DEBUG}
++    PATH_SUFFIXES
++    lib
++)
++
++if(SOPLEX_LIBRARY_RELEASE OR SOPLEX_LIBRARY_DEBUG)
++    set(SOPLEX_LIBRARIES
++        optimized ${SOPLEX_LIBRARY_RELEASE}
++        debug ${SOPLEX_LIBRARY_DEBUG}
++    )
++endif()
++
++# Check if everything was found and set SOPLEX_FOUND.
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(
++    soplex
++    REQUIRED_VARS SOPLEX_INCLUDE_DIRS SOPLEX_LIBRARIES
++)
++
++mark_as_advanced(
++    SOPLEX_INCLUDE_DIRS SOPLEX_LIBRARIES
++    SOPLEX_LIBRARY_RELEASE SOPLEX_LIBRARY_DEBUG
++)
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/CMakeLists.txt fast-downward/src/search/CMakeLists.txt
+--- fast-downward-original/src/search/CMakeLists.txt	2020-05-21 11:56:32.331641500 -0300
++++ fast-downward/src/search/CMakeLists.txt	2020-03-24 18:30:23.524855800 -0300
+@@ -46,9 +46,9 @@
+   TRUE)
+ 
+ if(PLUGIN_LP_SOLVER_ENABLED AND USE_LP)
+-    find_package(OSI OPTIONAL_COMPONENTS Cpx Clp Grb)
+-    if(OSI_FOUND AND (OSI_Cpx_FOUND OR OSI_Clp_FOUND OR OSI_Grb_FOUND))
+-        foreach(SOLVER Cpx Clp Grb)
++    find_package(OSI OPTIONAL_COMPONENTS Cpx Clp Grb Spx)
++    if(OSI_FOUND AND (OSI_Cpx_FOUND OR OSI_Clp_FOUND OR OSI_Grb_FOUND OR OSI_Spx_FOUND))
++        foreach(SOLVER Cpx Clp Grb Spx)
+             if(OSI_${SOLVER}_FOUND)
+                 string(TOUPPER ${SOLVER} TMP_SOLVER_UPPER_CASE)
+                 mark_as_advanced(TMP_SOLVER_UPPER_CASE)
+@@ -62,6 +62,12 @@
+         add_definitions("-D USE_LP")
+         include_directories(${OSI_INCLUDE_DIRS})
+         target_link_libraries(downward ${OSI_LIBRARIES})
++
++        find_package(ZLIB REQUIRED)
++        if(ZLIB_FOUND)
++            include_directories(${ZLIB_INCLUDE_DIRS})
++            target_link_libraries(downward ${ZLIB_LIBRARIES})
++        endif()
+     endif()
+ 
+     if(OSI_Cpx_FOUND AND CPLEX_RUNTIME_LIBRARY)
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
---- fast-downward-original/src/search/DownwardFiles.cmake	2019-08-30 18:03:11.000000000 -0300
-+++ fast-downward/src/search/DownwardFiles.cmake	2019-08-26 17:56:59.000000000 -0300
+--- fast-downward-original/src/search/DownwardFiles.cmake	2020-05-21 11:56:32.331641500 -0300
++++ fast-downward/src/search/DownwardFiles.cmake	2020-03-24 18:30:23.972570700 -0300
 @@ -699,6 +699,18 @@
  )
  
@@ -115,10 +1734,97 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
      NAME PDBS
      HELP "Plugin containing the code for PDBs"
      SOURCES
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_internals.cc fast-downward/src/search/lp/lp_internals.cc
+--- fast-downward-original/src/search/lp/lp_internals.cc	2020-05-21 11:56:32.425369600 -0300
++++ fast-downward/src/search/lp/lp_internals.cc	2020-03-24 18:30:23.619602300 -0300
+@@ -33,6 +33,11 @@
+ #include <OsiGrbSolverInterface.hpp>
+ #endif
+ 
++#ifdef COIN_HAS_SPX
++#include <OsiSpxSolverInterface.hpp>
++#include <spxout.h>
++#endif
++
+ #ifdef __GNUG__
+ #pragma GCC diagnostic pop
+ #endif
+@@ -116,6 +121,17 @@
+         missing_symbol = "COIN_HAS_GRB";
+ #endif
+         break;
++    case LPSolverType::SOPLEX:
++#ifdef COIN_HAS_SPX
++        {
++            OsiSpxSolverInterface *spx_solver = new OsiSpxSolverInterface;
++            spx_solver->getSPxOut()->setVerbosity(soplex::SPxOut::ERROR);
++            lp_solver = spx_solver;
++        }
++#else
++        missing_symbol = "COIN_HAS_SPX";
++#endif
++        break;
+     default:
+         ABORT("Unknown LP solver type.");
+     }
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.cc fast-downward/src/search/lp/lp_solver.cc
+--- fast-downward-original/src/search/lp/lp_solver.cc	2020-05-21 11:56:32.425369600 -0300
++++ fast-downward/src/search/lp/lp_solver.cc	2020-03-24 18:30:23.530839800 -0300
+@@ -39,6 +39,8 @@
+     lp_solvers_doc.push_back("commercial solver by IBM");
+     lp_solvers.push_back("GUROBI");
+     lp_solvers_doc.push_back("commercial solver");
++    lp_solvers.push_back("SOPLEX");
++    lp_solvers_doc.push_back("open source solver by ZIB");
+     parser.add_enum_option(
+         "lpsolver",
+         lp_solvers,
+@@ -115,12 +117,6 @@
+         row_ub.push_back(constraint.get_upper_bound());
+     }
+ 
+-    if (sense == LPObjectiveSense::MINIMIZE) {
+-        lp_solver->setObjSense(1);
+-    } else {
+-        lp_solver->setObjSense(-1);
+-    }
+-
+     for (const LPConstraint &constraint : constraints) {
+         const vector<int> &vars = constraint.get_variables();
+         const vector<double> &coeffs = constraint.get_coefficients();
+@@ -156,6 +152,16 @@
+                                objective.data(),
+                                row_lb.data(),
+                                row_ub.data());
++        /*
++          We set the objective sense after loading because the SoPlex
++          interfaces of all OSI versions <= 0.108.4 ignore it when it is
++          set earlier. See issue752 for details.
++        */
++        if (sense == LPObjectiveSense::MINIMIZE) {
++            lp_solver->setObjSense(1);
++        } else {
++            lp_solver->setObjSense(-1);
++        }
+     } catch (CoinError &error) {
+         handle_coin_error(error);
+     }
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.h fast-downward/src/search/lp/lp_solver.h
+--- fast-downward-original/src/search/lp/lp_solver.h	2020-05-21 11:56:32.425369600 -0300
++++ fast-downward/src/search/lp/lp_solver.h	2020-03-24 18:30:23.565746300 -0300
+@@ -32,7 +32,7 @@
+ 
+ namespace lp {
+ enum class LPSolverType {
+-    CLP, CPLEX, GUROBI
++    CLP, CPLEX, GUROBI, SOPLEX
+ };
+ 
+ enum class LPObjectiveSense {
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-05-12 13:57:55.000000000 -0300
-@@ -0,0 +1,419 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-05-21 11:43:15.688852700 -0300
+@@ -0,0 +1,439 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -134,6 +1840,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#include <algorithm>
 +#include <cctype>
 +#include <locale>
++
++using namespace std;
 +
 +// trim from start (in place)
 +static inline void ltrim(std::string &s) {
@@ -165,47 +1873,43 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
 +      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
 +      lp_solver_c(lp::LPSolverType(opts.get_enum("lpsolver"))),
-+      enforce_observations(opts.get("enforce_observations",false)),
-+      soft_constraints(opts.get("soft_constraints",false)),
++      observation_constraints(opts.get<int>("observation_constraints",0)),
 +      calculate_delta(opts.get("calculate_delta",false)),
++      filter(opts.get<int>("filter",0)),
 +      op_indexes(),
 +      observations(){
 +
 +    load_observations();
-+
 +    vector<lp::LPVariable> variables;
 +    double infinity = lp_solver.get_infinity();
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        int op_cost = op.get_cost();
-+        if (soft_constraints == false) {
++        if (observation_constraints != 1) {
 +            variables.push_back(lp::LPVariable(0, infinity, op_cost));
 +        } else { // Add variables to create soft constraints
 +            variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
 +        }
 +    }
-+
 +    vector<lp::LPConstraint> constraints;
 +    for (const auto &generator : constraint_generators) {
 +        generator->initialize_constraints(task, constraints, infinity);
 +    }
-+    
 +    map_operators(false);
-+    
 +    if (calculate_delta) {
 +        lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 +    }
-+
-+    if (soft_constraints) {
++    if (observation_constraints == 1) {
++        // Soft observation constraints
 +        add_observation_soft_constraints(variables, constraints);
-+    }
-+    if (enforce_observations) {
-+        enforce_observation_constraints(constraints);
++    } else if (observation_constraints == 2) {
++        // Enforce observations
++        enforce_observation_constraints(variables, constraints);
 +    }
 +    lp_solver_c.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 +}
 +
 +void OCSingleShotHeuristic::map_operators(bool show) {
-+    if (show == true) {
++    if (show) {
 +        cout << endl << string(80, '*') << endl;
 +        cout << "# Mapping X -> op: " << endl;
 +    }
@@ -216,45 +1920,41 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        for (size_t i = 0; i< op.get_name().size(); ++i) {
 +            op_name[i] = tolower(op_name.c_str()[i]);
 +        }
-+
 +        op_indexes[op_name] = i;
-+        if (show == true) {
++        if (show) {
 +            cout << "["<< op_name<< "]: " << op_indexes[op_name] << endl;
 +        }
 +        i++;
 +    }
-+    if (show == true) {
-+        cout << string(80, '*') << endl << endl;
++    if (show) {
++        cout << string(80, '*') << endl;
 +    }
 +}
 +
-+void OCSingleShotHeuristic::show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show) {
-+    if (show == true) {
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# Variables(" << variables.size() << "): " << endl;
-+        for (int i = 0; i < (int) variables.size(); ++i) {
-+            cout << "X[" << i << "] = Variable('X_" << i << "'";
-+            cout << ", lb=" << variables[i].lower_bound;
-+            cout << ", ub=" << variables[i].upper_bound;
-+            cout << ", cost[" << i << "] = " << variables[i].objective_coefficient << endl;
-+        }
-+        cout << string(80, '*') << endl << endl;
-+
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# Objective function: " << endl;
-+        cout << "obj = Objective(";
-+        for (int i = 0; i < (int) variables.size(); ++i) {
-+            cout << "cost[" << i << "] * X[" << i << "]";
-+            if (i < (int) variables.size() - 1) {
-+                cout << " + ";
-+            }
-+        }
-+        cout << ", direction='min')" << endl;
-+        cout << string(80, '*') << endl << endl;
++void OCSingleShotHeuristic::show_variables_and_objective(const vector<lp::LPVariable> &variables) {
++    cout << endl << string(80, '*') << endl;
++    cout << "# Variables(" << variables.size() << "): " << endl;
++    for (int i = 0; i < (int) variables.size(); ++i) {
++        cout << "X[" << i << "] = Variable('X_" << i << "'";
++        cout << ", lb=" << variables[i].lower_bound;
++        cout << ", ub=" << variables[i].upper_bound;
++        cout << ", cost[" << i << "] = " << variables[i].objective_coefficient << endl;
 +    }
++    cout << string(80, '*') << endl;
++    cout << endl << string(80, '*') << endl;
++    cout << "# Objective function: " << endl;
++    cout << "obj = Objective(";
++    for (int i = 0; i < (int) variables.size(); ++i) {
++        cout << "cost[" << i << "] * X[" << i << "]";
++        if (i < (int) variables.size() - 1) {
++            cout << " + ";
++        }
++    }
++    cout << ", direction='min')" << endl;
++    cout << string(80, '*') << endl;
 +}
 +
-+void OCSingleShotHeuristic::add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints) {
++void OCSingleShotHeuristic::add_observation_soft_constraints(vector<lp::LPVariable> &variables, vector<lp::LPConstraint> &constraints) {
 +    double infinity = lp_solver.get_infinity();
 +    cout << endl << string(80, '*') << endl;
 +    // Adding constraints
@@ -309,11 +2009,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +    }
 +    cout << endl << string(80, '*') << endl;
-+
 +    obs_file.close();
 +}
 +
-+void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints) {
++void OCSingleShotHeuristic::enforce_observation_constraints(vector<lp::LPVariable> &variables, vector<lp::LPConstraint> &constraints) {
 +    // Debugging output (cumulative: appends new info with each call)
 +    std::fstream outfile("debug/observation_sanity.txt", std::ios::out|std::ios::app) ;
 +    // Set output stream (set to std::cout to print to terminal)
@@ -321,104 +2020,131 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // Reinitialize class variables for invalid (unmapped) observations.
 +    num_pruned_observations = 0;
 +    pruned_observations.clear();
-+
 +    // Function variables
 +    double infinity = lp_solver.get_infinity();
 +    vector<string> invalid_operators;
 +    int num_invalid_operators = 0;
-+    int count_obs;
-+    string op;
 +    map<string, int> obs_occurrences;
-+
 +    // =-=-=-=-= Each observation is associated with its number of occurrences. =-=-=-=-= //
 +    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+      op = *it;
-+      obs_occurrences[op]++;
++        obs_occurrences[*it]++;
 +    }
 +    // =-=-=-=-= Iterate each operator to enforce constraints. =-=-=-=-= //
 +    //outstream << endl << string(80, '*') << endl;
 +    //outstream << "Enforcing observation constraints" << std::endl;
-+    outstream << endl<<"-+-"; // marks start
-+
++    outstream << endl<< "-+-"; // marks start
 +    for(map<string, int>::iterator it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
-+
-+      // Determine how many times the same observed operation occurs.
-+      op = it->first;
-+      count_obs = it->second;
-+
-+      // Observation is mappable?
-+      // If not: ignore observation, storing it in a separate list.
-+      if (op_indexes.find(op) == op_indexes.end()) {
-+        //outstream << "[INVALID OP] " << op << endl;
-+        invalid_operators.push_back(op);
-+        num_invalid_operators += 1;
-+        num_pruned_observations += count_obs;
-+      }
-+      // If mappable obs, add hard constraint for the operator,
-+      // forcing it to occur at least as many times as observed.
-+      else {
-+        lp::LPConstraint constraint(count_obs, infinity);
-+        cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
-+        constraint.insert(op_indexes[op], 1);
-+        constraints.push_back(constraint);
-+      }
++        // Determine how many times the same observed operation occurs.
++        string op = it->first;
++        int count_obs = it->second;
++        // Observation is mappable?
++        // If not: ignore observation, storing it in a separate list.
++        if (op_indexes.find(op) == op_indexes.end()) {
++            //outstream << "[INVALID OP] " << op << endl;
++            invalid_operators.push_back(op);
++            num_invalid_operators += 1;
++            num_pruned_observations += count_obs;
++            continue;
++        }
++        // If mappable obs, add hard constraint for the operator,
++        // forcing it to occur at least as many times as observed.
++        if (filter == 0) {
++            lp::LPConstraint constraint(count_obs, infinity);
++            cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
++            constraint.insert(op_indexes[op], 1);
++            constraints.push_back(constraint);
++        } else {
++            variables.push_back(lp::LPVariable(0, infinity, 0));
++            lp::LPConstraint constraint(0, infinity);
++            outstream << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
++            constraint.insert(op_indexes[op], 1);
++            constraint.insert(variables.size() - 1, -1);
++            constraints.push_back(constraint);
++        }
 +    }
-+
++    if (filter > 0) {
++        int k = max(0, filter - num_pruned_observations);
++        lp::LPConstraint constraint(observations.size() - num_pruned_observations - k, infinity);
++        int var_id = task_proxy.get_operators().size();
++        for(map<string, int>::iterator it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
++            if (op_indexes.find(it->first) != op_indexes.end()) {
++                constraint.insert(op_indexes[it->first], 1);
++                var_id++;
++            }
++        }
++        constraints.push_back(constraint);
++    }
 +    // =-=-=-=-= Report on pruned and invalid operators/observations. =-=-=-=-= //
 +    // Basic structure:
 +    // Print invalid observations, number of operators and total number of observations.
 +    // Last line holds number of observations and number of invalid observations,
 +    //  followed by any relevant tags.
-+    for (int i = 0 ; i < num_invalid_operators; i++){
-+      outstream << endl<<"[INVALID OP] " << invalid_operators[i] << ": " << obs_occurrences[invalid_operators[i]]<<" time(s).";
++    for (int i = 0 ; i < num_invalid_operators; i++) {
++        outstream << endl<<"[INVALID OP] " << invalid_operators[i] << ": " << obs_occurrences[invalid_operators[i]]<<" time(s).";
 +    }
-+
-+    if(num_pruned_observations > 0){
-+      outstream<<endl<<"# mappable operators: " << op_indexes.size() << endl;
-+      outstream << "Obs - Total: " << observations.size() << " | Invalid: " << num_pruned_observations;
-+      // if(num_pruned_observations > 2) {
-+      //   outstream << " <OVER-TWO>";
-+      //   if (num_pruned_observations == (int)observations.size()){
-+      //     outstream << "<ALL-PRUNED>";
-+      //   }
-+      //   else {
-+      //     outstream << "<ACTUAL-OBS-PRUNED>";
-+      //   }
-+      // }
++    if(num_pruned_observations > 0) {
++        outstream<<endl<<"# mappable operators: " << op_indexes.size() << endl;
++        outstream << "Obs - Total: " << observations.size() << " | Invalid: " << num_pruned_observations;
 +    }
-+  }
++    outfile.flush();
++    outfile.close();
++}
 +
 +void OCSingleShotHeuristic::output_results(int result, int result_c) {
++    // Log solutions
 +    cout << endl << string(80, '*') << endl;
-+    vector<double> solution = lp_solver.extract_solution();
++    vector<double> solution = lp_solver_c.extract_solution();
 +    for (int i = 0; i < (int) solution.size(); ++i) {
 +        cout << "X[" << i << "] = " << solution[i] << endl;
 +    }
++    // Get hits/misses
 +    std::cout << "# observations in solution (" << observations.size() << "): " << std::endl;
-+    double sat_observations = 0.0;
++    double obs_hits = 0, obs_miss = 0;
++    map<string, double> counts;
 +    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+        cout << (*it) << ": " << solution[op_indexes[*it]] << endl;
-+        sat_observations += solution[op_indexes[*it]];
++        if (op_indexes.find(*it) != op_indexes.end()) {
++            if (solution[op_indexes[*it]] > counts[*it]) {
++                obs_hits++;
++                counts[*it]++;
++            } else {
++                obs_miss++;
++            }
++        }
 +    }
-+    cout << "# sat observations: " << sat_observations << endl;
 +    cout << "# h-value: " << result_c << endl;
 +    cout << string(80, '*') << endl << endl;
-+    
-+    int delta = result < 0 || result_c < 0 ? DEAD_END : result_c - result;
-+
++    // Write result
 +    cout << "Writing results" << endl;
 +    ofstream results;
 +    results.open("ocsingleshot_heuristic_result.dat");
-+    results << "-- ";
-+    results << endl << delta << " " << result_c << endl;
-+    // Printing counts
-+    int var_i=0;
-+    vector<double> counts = lp_solver_c.extract_solution();
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        if (counts[var_i] > 0 ) {
-+            results << "(" << op.get_name() << ") = " << counts[var_i] << endl;
++    results << "Observations report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
++    results << "-- " << endl;
++    if (result < 0 || result_c < 0) {
++        results << DEAD_END << endl;
++    } else {
++        if (calculate_delta) {
++            if (observation_constraints == 1) {
++                // Soft constraints
++                double score = (result_c + obs_hits) / 10000;
++                double delta = score + observations.size() - num_pruned_observations - result;
++                results << delta << " " << obs_miss << " " << score << endl; 
++            } else {
++                // Enforce observations
++                results << result_c - result << " " << result_c << " " << obs_miss << endl; 
++            }
++        } else if (observation_constraints == 1) {
++            results << obs_miss << result_c << endl; 
++        } else {
++            results << result_c << obs_miss << endl; 
 +        }
-+        var_i++;
++        // Write counts
++        int var_i=0;
++        for (OperatorProxy op : task_proxy.get_operators()) {
++            if (solution[var_i] > 0) {
++                results << "(" << op.get_name() << ") = " << solution[var_i] << endl;
++            }
++            var_i++;
++        }
 +    }
 +    results.flush();
 +    results.close();
@@ -449,7 +2175,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            }
 +        }
 +    }
-+
++    // LP result without observation constraints
 +    int result;
 +    if (calculate_delta) {
 +        lp_solver.solve();
@@ -463,7 +2189,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    } else {
 +        result = 0;
 +    }
-+    
++    // LP result with observation constraints
 +    int result_c;
 +    lp_solver_c.solve();
 +    if (lp_solver_c.has_optimal_solution()) {
@@ -473,10 +2199,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    } else {
 +        result_c = DEAD_END;
 +    }
-+
++    // Output
 +    lp_solver_c.print_statistics();
 +    output_results(result, result_c);
-+	exit(EXIT_SUCCESS);
++    exit(EXIT_SUCCESS);
 +    return result_c;
 +}
 +
@@ -521,9 +2247,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    parser.add_list_option<shared_ptr<ConstraintGenerator>>(
 +        "constraint_generators",
 +        "methods that generate constraints over operator counting variables");
-+    parser.add_option<bool>("enforce_observations", "whether or not to enforce constraints on observations");
-+    parser.add_option<bool>("soft_constraints", "whether or not to use observations as soft constraints");
++    parser.add_option<int>("observation_constraints", "0 = none, 1 = soft, 2 = enforce");
 +    parser.add_option<bool>("calculate_delta", "whether or not to calculate the difference between with and without constraints");
++    parser.add_option<int>("filter", "observation filter");
 +    lp::add_lp_solver_option_to_parser(parser);
 +    Heuristic::add_options_to_parser(parser);
 +    Options opts = parser.parse();
@@ -540,7 +2266,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-05-12 13:58:01.000000000 -0300
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-05-08 17:38:02.086134600 -0300
 @@ -0,0 +1,46 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
@@ -564,9 +2290,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
 +    lp::LPSolver lp_solver;
 +    lp::LPSolver lp_solver_c;
-+    bool enforce_observations;
-+    bool soft_constraints;
++    int observation_constraints;
 +    bool calculate_delta;
++    int filter;
 +    std::unordered_map<std::string,int> op_indexes;
 +    std::vector<std::string> observations;
 +    std::vector<std::string> pruned_observations;
@@ -576,414 +2302,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    virtual int compute_heuristic(const GlobalState &global_state) override;
 +    int compute_heuristic(const State &state);
 +    void load_observations();
-+    void enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints);
++    void enforce_observation_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
 +    void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
 +    void output_results(int result, int result_c);
 +public:
 +    explicit OCSingleShotHeuristic(const options::Options &opts);
 +    ~OCSingleShotHeuristic();
 +    void map_operators(bool show = false);
-+    void show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show = false);
-+};
-+}
-+
-+#endif
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.old.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.old.cc
---- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.old.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.old.cc	2020-05-12 13:57:51.000000000 -0300
-@@ -0,0 +1,351 @@
-+#include "oc_single_shot_heuristic.h"
-+
-+#include "constraint_generator.h"
-+
-+#include "../option_parser.h"
-+#include "../plugin.h"
-+
-+#include "../utils/markup.h"
-+
-+#include <cmath>
-+#include <fstream>
-+
-+#include <algorithm> 
-+#include <cctype>
-+#include <locale>
-+
-+// trim from start (in place)
-+static inline void ltrim(std::string &s) {
-+    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch) {
-+        return !std::isspace(ch);
-+    }));
-+}
-+
-+// trim from end (in place)
-+static inline void rtrim(std::string &s) {
-+    s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) {
-+        return !std::isspace(ch);
-+    }).base(), s.end());
-+}
-+
-+// trim from both ends (in place)
-+static inline void trim(std::string &s) {
-+    ltrim(s);
-+    rtrim(s);
-+}
-+
-+using namespace std;
-+
-+namespace operator_counting {
-+
-+OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
-+    : Heuristic(opts),
-+      constraint_generators(
-+          opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
-+      lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
-+      enforce_observations(opts.get("enforce_observations",false)),
-+      soft_constraints(opts.get("soft_constraints",false)),
-+      op_indexes(),
-+      observations(){
-+
-+    load_observations();
-+
-+    vector<lp::LPVariable> variables;
-+    double infinity = lp_solver.get_infinity();
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        int op_cost = op.get_cost();
-+        if (soft_constraints == false) {
-+            variables.push_back(lp::LPVariable(0, infinity, op_cost));
-+        } else { // Add variables to create soft constraints
-+            variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
-+        }
-+    }
-+
-+    vector<lp::LPConstraint> constraints;
-+    for (const auto &generator : constraint_generators) {
-+        generator->initialize_constraints(task, constraints, infinity);
-+    }
-+
-+    map_operators(false);
-+
-+    if (soft_constraints == true) {
-+        add_observation_soft_constraints(variables, constraints);
-+    }
-+    if(enforce_observations == true) {
-+        enforce_observation_constraints(constraints);
-+    }
-+
-+    show_variables_and_objective(variables, false);
-+
-+    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
-+}
-+
-+void OCSingleShotHeuristic::map_operators(bool show) {
-+    if (show == true) {
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# Mapping X -> op: " << endl;
-+    }
-+    int i = 0;
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        // Caching operator variable indexes
-+        std::string op_name (op.get_name());
-+        for (size_t i = 0; i< op.get_name().size(); ++i) {
-+            op_name[i] = tolower(op_name.c_str()[i]);
-+        }
-+
-+        op_indexes[op_name] = i;
-+        if (show == true) {
-+            cout << "["<< op_name<< "]: " << op_indexes[op_name] << endl;
-+        }
-+        i++;
-+    }
-+    if (show == true) {
-+        cout << string(80, '*') << endl << endl;
-+    }
-+}
-+
-+void OCSingleShotHeuristic::show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show) {
-+    if (show == true) {
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# Variables(" << variables.size() << "): " << endl;
-+        for (int i = 0; i < (int) variables.size(); ++i) {
-+            cout << "X[" << i << "] = Variable('X_" << i << "'";
-+            cout << ", lb=" << variables[i].lower_bound;
-+            cout << ", ub=" << variables[i].upper_bound;
-+            cout << ", cost[" << i << "] = " << variables[i].objective_coefficient << endl;
-+        }
-+        cout << string(80, '*') << endl << endl;
-+
-+        cout << endl << string(80, '*') << endl;
-+        cout << "# Objective function: " << endl;
-+        cout << "obj = Objective(";
-+        for (int i = 0; i < (int) variables.size(); ++i) {
-+            cout << "cost[" << i << "] * X[" << i << "]";
-+            if (i < (int) variables.size() - 1) {
-+                cout << " + ";
-+            }
-+        }
-+        cout << ", direction='min')" << endl;
-+        cout << string(80, '*') << endl << endl;
-+    }
-+}
-+
-+void OCSingleShotHeuristic::add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints) {
-+    double infinity = lp_solver.get_infinity();
-+    cout << endl << string(80, '*') << endl;
-+    // Adding constraints
-+    cout << "Add soft constraints" << endl;
-+    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+        variables.push_back(lp::LPVariable(-infinity, infinity, -1.0));
-+
-+        cout << "Adding soft constraint on (" << (*it) << "), index " << std::to_string(op_indexes[*it]) << endl;
-+        lp::LPConstraint constraint(0.0, 0.0);
-+        constraint.insert(op_indexes[*it], 1.0);
-+        constraint.insert(variables.size() - 1, -1.0);
-+
-+        cout << "X[" << op_indexes[*it] << "] = Variable('X_" << op_indexes[*it]  << "'";
-+        cout << ", lb=" << variables[op_indexes[*it]].lower_bound;
-+        cout << ", ub=" << variables[op_indexes[*it]].upper_bound;
-+        cout << ", cost[" << op_indexes[*it] << "] = " << variables[op_indexes[*it]].objective_coefficient << endl;
-+
-+        cout << "X[" << variables.size() - 1 << "] = Variable('X_" << variables.size() - 1  << "'";
-+        cout << ", lb=" << variables[variables.size() - 1].lower_bound;
-+        cout << ", ub=" << variables[variables.size() - 1].upper_bound;
-+        cout << ", cost[" << variables.size() - 1 << "] = " << variables[variables.size() - 1].objective_coefficient << endl;
-+
-+        cout << "constraint variables: " << constraint.get_variables()[0];
-+        cout << ", " << constraint.get_variables()[1] << " - ";
-+        cout << "constraint coefficients: " << constraint.get_coefficients()[0];
-+        cout << ", " << constraint.get_coefficients()[1] << endl << endl;
-+        constraints.push_back(constraint);
-+    }
-+    cout << endl << string(80, '*') << endl;
-+}
-+
-+void OCSingleShotHeuristic::load_observations() {
-+    // Read observations from file
-+    cout << endl << string(80, '*') << endl;
-+    cout << std::endl << "Load observations" << std::endl;
-+    ifstream obs_file;
-+    obs_file.open("obs.dat");
-+    if(obs_file.is_open()){
-+        while(!obs_file.eof()) {
-+            string obs;
-+            getline(obs_file, obs);
-+            trim(obs);
-+            if(!obs.empty() && obs[0]!=';') {
-+                obs = obs.substr(1,obs.length()-2);
-+                std::string obs_name (obs);
-+                for (size_t i = 0; i< obs.size(); ++i) {
-+                    obs_name[i] = tolower(obs.c_str()[i]);
-+                }
-+                cout << "Observation: " << obs_name << endl;
-+                observations.push_back(obs_name);
-+            }
-+        }
-+    }
-+    cout << endl << string(80, '*') << endl;
-+
-+    obs_file.close();
-+}
-+
-+void OCSingleShotHeuristic::enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints) {
-+    cout << endl << string(80, '*') << endl;
-+    // Adding constraints
-+    std::cout << "Enforcing observation constraints" << std::endl;
-+
-+    double infinity = lp_solver.get_infinity();
-+    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+        double num_count = std::count(observations.begin(), observations.end(), (*it));
-+        cout << num_count << endl;
-+        lp::LPConstraint constraint(num_count, infinity);
-+
-+        cout << "constraint " << (*it) << ": " << std::to_string(op_indexes[*it]) << endl;
-+        constraint.insert(op_indexes[*it], 1);
-+        constraints.push_back(constraint);
-+    }
-+    cout << endl << string(80, '*') << endl;
-+}
-+
-+void OCSingleShotHeuristic::output_results(int result) {
-+    cout << endl << string(80, '*') << endl;
-+    vector<double> solution = lp_solver.extract_solution();
-+    for (int i = 0; i < (int) solution.size(); ++i) {
-+        cout << "X[" << i << "] = " << solution[i] << endl;
-+    }
-+    std::cout << "# observations in solution (" << observations.size() << "): " << std::endl;
-+    double sat_observations = 0.0;
-+    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-+        cout << (*it) << ": " << solution[op_indexes[*it]] << endl;
-+        sat_observations += solution[op_indexes[*it]];
-+    }
-+    cout << "# sat observations: " << sat_observations << endl;
-+    cout << "# h-value: " << result << endl;
-+    cout << string(80, '*') << endl;
-+
-+    cout << endl << string(80, '*') << endl;
-+
-+    cout << "Writing results" << endl;
-+    ofstream results;
-+    //cout << "Writing results" << endl;
-+    results.open("ocsingleshot_heuristic_result.dat");
-+    results << "-- ";
-+    results << endl << result << endl;
-+    // Printing counts
-+    int var_i=0;
-+    vector<double> counts = lp_solver.extract_solution();
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        // cout << "(" << op.get_name() << ") = " << counts[var_i] << endl;
-+        if (counts[var_i] > 0 ) {
-+            results << "(" << op.get_name() << ") = " << counts[var_i] << endl;
-+        }
-+        var_i++;
-+    }
-+
-+    results.flush();
-+    results.close();
-+}
-+
-+OCSingleShotHeuristic::~OCSingleShotHeuristic() {
-+}
-+
-+int OCSingleShotHeuristic::compute_heuristic(const GlobalState &global_state) {
-+    State state = convert_global_state(global_state);
-+    return compute_heuristic(state);
-+}
-+
-+int OCSingleShotHeuristic::compute_heuristic(const State &state) {
-+    assert(!lp_solver.has_temporary_constraints());
-+    for (const auto &generator : constraint_generators) {
-+          bool dead_end = generator->update_constraints(state, lp_solver);
-+        if (dead_end) {
-+            lp_solver.clear_temporary_constraints();
-+            return DEAD_END;
-+        }
-+    }
-+
-+    int result;
-+    lp_solver.solve();
-+    if (lp_solver.has_optimal_solution()) {
-+        double epsilon = 0.01;
-+        double objective_value = lp_solver.get_objective_value();
-+        result = ceil(objective_value - epsilon);
-+        
-+    } else {
-+        result = DEAD_END;
-+    }
-+
-+    lp_solver.print_statistics();
-+
-+    ///////////////////////////////////////////////////////////////////
-+    output_results(result);
-+
-+	//// Returning failure for deadend states makes the rest of the recognizer hang
-+    // if(result == DEAD_END)
-+//         exit(EXIT_FAILURE);
-+//     else
-+//         exit(EXIT_SUCCESS);
-+	exit(EXIT_SUCCESS);
-+    ///////////////////////////////////////////////////////////////////
-+
-+    lp_solver.clear_temporary_constraints();
-+    return result;
-+}
-+
-+static shared_ptr<Heuristic> _parse(OptionParser &parser) {
-+    parser.document_synopsis(
-+        "Operator counting heuristic",
-+        "An operator counting heuristic computes a linear program (LP) in each "
-+        "state. The LP has one variable Count_o for each operator o that "
-+        "represents how often the operator is used in a plan. Operator "
-+        "counting constraints are linear constraints over these varaibles that "
-+        "are guaranteed to have a solution with Count_o = occurrences(o, pi) "
-+        "for every plan pi. Minimizing the total cost of operators subject to "
-+        "some operator counting constraints is an admissible heuristic. "
-+        "For details, see" + utils::format_conference_reference( // TODO - Change this for our paper
-+            {"Florian Pommerening", "Gabriele Roeger", "Malte Helmert",
-+             "Blai Bonet"},
-+            "LP-based Heuristics for Cost-optimal Planning",
-+            "http://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/7892/8031",
-+            "Proceedings of the Twenty-Fourth International Conference"
-+            " on Automated Planning and Scheduling (ICAPS 2014)",
-+            "226-234",
-+            "AAAI Press",
-+            "2014"));
-+
-+    parser.document_language_support("action costs", "supported");
-+    parser.document_language_support(
-+        "conditional effects",
-+        "not supported (the heuristic supports them in theory, but none of "
-+        "the currently implemented constraint generators do)");
-+    parser.document_language_support(
-+        "axioms",
-+        "not supported (the heuristic supports them in theory, but none of "
-+        "the currently implemented constraint generators do)");
-+    parser.document_property("admissible", "yes");
-+    parser.document_property(
-+        "consistent",
-+        "yes, if all constraint generators represent consistent heuristics");
-+    parser.document_property("safe", "yes");
-+    // TODO: prefer operators that are non-zero in the solution.
-+    parser.document_property("preferred operators", "no");
-+
-+    parser.add_list_option<shared_ptr<ConstraintGenerator>>(
-+        "constraint_generators",
-+        "methods that generate constraints over operator counting variables");
-+    parser.add_option<bool>("enforce_observations", "whether or not to enforce constraints on observations");
-+    parser.add_option<bool>("soft_constraints", "whether or not to use observations as soft constraints");
-+    lp::add_lp_solver_option_to_parser(parser);
-+    Heuristic::add_options_to_parser(parser);
-+    Options opts = parser.parse();
-+    if (parser.help_mode())
-+        return nullptr;
-+    opts.verify_list_non_empty<shared_ptr<ConstraintGenerator>>(
-+        "constraint_generators");
-+    if (parser.dry_run())
-+        return nullptr;
-+    return make_shared<OCSingleShotHeuristic>(opts);
-+}
-+
-+static Plugin<Evaluator> _plugin("ocsingleshot", _parse);
-+}
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.old.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.old.h
---- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.old.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.old.h	2020-05-12 13:57:42.000000000 -0300
-@@ -0,0 +1,41 @@
-+#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
-+#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
-+
-+#include "../heuristic.h"
-+
-+#include "../lp/lp_solver.h"
-+
-+#include <memory>
-+#include <vector>
-+#include <string>
-+
-+namespace options {
-+class Options;
-+}
-+
-+namespace operator_counting {
-+class ConstraintGenerator;
-+
-+class OCSingleShotHeuristic : public Heuristic {
-+    std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
-+    lp::LPSolver lp_solver;
-+    bool enforce_observations;
-+    bool soft_constraints;
-+    std::unordered_map<std::string,int> op_indexes;
-+    std::vector<std::string> observations;
-+protected:
-+    virtual int compute_heuristic(const GlobalState &global_state) override;
-+    int compute_heuristic(const State &state);
-+    void load_observations();
-+    void enforce_observation_constraints(std::vector<lp::LPConstraint> &constraints);
-+    void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
-+    void output_results(int result);
-+public:
-+    explicit OCSingleShotHeuristic(const options::Options &opts);
-+    ~OCSingleShotHeuristic();
-+    void map_operators(bool show = false);
-+    void show_variables_and_objective(const std::vector<lp::LPVariable> &variables, bool show = false);
++    void show_variables_and_objective(const std::vector<lp::LPVariable> &variables);
 +};
 +}
 +
