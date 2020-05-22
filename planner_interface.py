@@ -28,12 +28,12 @@ class PRCommand:
 
     def make_planner_string(self):
         translate_options = ' --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
-        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h}], observation_constraints={c}, calculate_delta={d}, filter={f}))\"'
-        string = fd_path + '/fast-downward %s %s ' + translate_options
+        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h}], observation_constraints={c}, calculate_delta={d}, filter={f}, lpsolver=SOPLEX))\"'
+        string = fd_path + '/fast-downward.py %s %s ' + translate_options
         string += search_options_template.format(h=",".join(self.opts[2]), \
             c = self.opts[3], \
             d = self.opts[4], \
-            f = 1)
+            f = self.opts[5])
         return string
 
     def execute(self):

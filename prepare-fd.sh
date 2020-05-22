@@ -5,8 +5,12 @@ if [[ $DIR == "." ]]; then
 fi
 # echo "Running from ${DIR}"
 pushd ..
-DOWNWARD_COIN_ROOT=`pwd`/coin64 
-FD_ROOT=`pwd`/fast-downward
+if [[ ! -d "$DOWNWARD_COIN_ROOT" ]]; then
+	export DOWNWARD_COIN_ROOT=`pwd`/coin64
+fi
+if [[ ! -d "$FD_ROOT" ]]; then
+	export FD_ROOT=`pwd`/fast-downward
+fi
 popd
 if [[ ! -d "$DOWNWARD_COIN_ROOT" ]]; then
 	if [[ `uname` == "Darwin" ]]

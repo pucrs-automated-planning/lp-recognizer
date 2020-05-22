@@ -4,7 +4,13 @@ language: python
 python:
   - "2.7"
 # command to install dependencies
-script: python test_lp_recognizer.py
+before_install: 
+  - chmod +x *.sh
+  - sudo apt install cmake g++ mercurial make python3 zlib1g-dev libgmp3-dev
+install: 
+  - ./prepare-fd.sh
+script: 
+  - python test_lp_recognizer.py
 branches:
   only:
     - master
