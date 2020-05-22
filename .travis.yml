@@ -5,9 +5,11 @@ python:
   - "2.7"
 # command to install dependencies
 before_install: 
-  - chmod +x *.sh
+  - sudo apt-get update -y
+  - sudo apt-get update
   - sudo apt install cmake g++ mercurial make python3 zlib1g-dev libgmp3-dev
 install: 
+  - chmod +x *.sh
   - ./prepare-fd.sh
 script: 
   - python test_lp_recognizer.py
