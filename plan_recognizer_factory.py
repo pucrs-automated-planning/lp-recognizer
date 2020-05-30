@@ -1,11 +1,8 @@
 #!/usr/bin/env python2.7
 
-from plan_recognizer import PlanRecognizer
-import plan_recognition
-# XXX My implementation of the factory relies on all recognizer classes having been imported into the plan_recognition module
-from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerSoftCUncertainty, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options 
+import h_plan_recognizer
 import const_plan_recognizer
-import delta_plan_recognizer
+import delta_plan_recognizer 
 
 import importlib
 
@@ -23,29 +20,26 @@ class PlanRecognizerFactory(object):
 
     def __init__(self, options=None):
         self.options = options
+        self.recognizers = self.get_recognizers()
 
-    def get_recognizer_names(self):
-        recognizers = dict([(cls.name, cls) for name, cls in plan_recognition.__dict__.items() if isinstance(cls,type) and issubclass(cls, PlanRecognizer)])
-        return list(recognizers.keys())
-    
-    def get_recognizer(self, name, options=None):
-        """Returns an instance of PlanRecognizer given the name used in the parameters"""
+    def get_recognizers(self):
         # From https://stackoverflow.com/questions/7584418/iterate-the-classes-defined-in-a-module-imported-dynamically
         # to create a dict that maps the names to the classes
         # dict([(name, cls) for name, cls in mod.__dict__.items() if isinstance(cls, type)])
+        h_recognizers = dict([(cls.name, cls) for name, cls in h_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
+        const_recognizers = dict([(cls.name, cls) for name, cls in const_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
+        delta_recognizers = dict([(cls.name, cls) for name, cls in delta_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
+        h_recognizers.update(const_recognizers)
+        h_recognizers.update(delta_recognizers)
+        return h_recognizers
+
+    def get_recognizer_names(self):
+        recognizers = self.get_recognizers()
+        return list(recognizers.keys())
+
+    def get_recognizer(self, name, options=None):
+        """Returns an instance of PlanRecognizer given the name used in the parameters"""
         if options == None:
             options = self.options
-
-        # Finding the objects 
-        recognizers = dict([(cls.name, cls) 
-                            for _, cls in plan_recognition.__dict__.items() 
-                            if isinstance(cls, object) and
-                              hasattr(cls,'name')]) # Hack to get my instantiation to work w/ Python 2.7
-        ## The line below works in Python 3.7 (bot not 2.7, and I hate python for that)
-        # recognizers = dict([(cls.name, cls) for _, cls in plan_recognition.__dict__.items() if isinstance(cls, object) and issubclass(cls, PlanRecognizer)])
-        # print(recognizers)
-        recognizer = recognizers[name](options)
-
+        recognizer = self.recognizers[name](options)
         return recognizer
-
-

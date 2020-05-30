@@ -5,17 +5,17 @@ from h_plan_recognizer import LPRecognizerHValue
 class LPRecognizerHValueC(LPRecognizerHValue):
     name = "h-value-c"
 
-    def __init__(self, options, filter = 0):
+    def __init__(self, options):
         # Set to hard constraints.
         # Do not calculate delta.
-        LPRecognizerHValue.__init__(self, options, 2, False, filter)
+        LPRecognizerHValue.__init__(self, options, 2, False)
 
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
     name = "h-value-c-uncertainty"
 
-    def __init__(self, options, filter = 0):
-        LPRecognizerHValueC.__init__(self, options, filter)
+    def __init__(self, options):
+        LPRecognizerHValueC.__init__(self, options)
         
     def calculate_uncertainty(self):
         if self.unique_goal:
@@ -27,10 +27,10 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
 class LPRecognizerSoftC(LPRecognizerHValue):
     name = "soft-c"
 
-    def __init__(self, options, filter = 0):
+    def __init__(self, options):
         # Set to soft constraints.
         # Do not calculate delta.
-        LPRecognizerHValue.__init__(self, options, 1, False, filter)
+        LPRecognizerHValue.__init__(self, options, 1, False)
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
@@ -44,10 +44,34 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
     name = "soft-c-uncertainty"
 
-    def __init__(self, options, filter = 0):
-        LPRecognizerSoftC.__init__(self, options, filter)
+    def __init__(self, options):
+        LPRecognizerSoftC.__init__(self, options)
 
     def calculate_uncertainty(self):
         if self.unique_goal:
             self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[1] - self.unique_goal.obs_count)
 
+
+class LPRecognizerWeightedC(LPRecognizerHValue):
+    name = "weighted-c"
+
+    def __init__(self, options):
+        # Set to soft (weighted) constraints.
+        # Do not calculate delta.
+        LPRecognizerHValue.__init__(self, options, 3, False)
+
+    def accept_hypothesis(self, h):
+        if not h.test_failed:
+            return h.score[0] <= self.unique_goal.score[1] * self.uncertainty_ratio
+        return False
+
+
+class LPRecognizerWeightedCUncertainty(LPRecognizerWeightedC):
+    name = "weighted-c-uncertainty"
+
+    def __init__(self, options):
+        LPRecognizerSoftC.__init__(self, options)
+
+    def calculate_uncertainty(self):
+        if self.unique_goal:
+            self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[1] - self.unique_goal.obs_count)

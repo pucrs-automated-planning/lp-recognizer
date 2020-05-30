@@ -2,41 +2,25 @@
 
 import sys, os, csv, time, math, subprocess
 DEVNULL = open(os.devnull,"r+b")
-from plan_recognition import LPRecognizerDeltaHC, LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty, LPRecognizerDeltaHCUncertainty, LPRecognizerDeltaHS, LPRecognizerDeltaHSUncertainty, Program_Options
-from planner_interface import Hypothesis, custom_partition
+from options import Program_Options
 from plan_recognizer_factory import PlanRecognizerFactory
 
-# from blessings import Terminal
-# t = Terminal()
 
 def progress(count, total, status=''):
     bar_len = 30
     filled_len = int(round(bar_len * count / float(total)))
-
     percents = round(100.0 * count / float(total), 1)
     bar = '=' * filled_len + '-' * (bar_len - filled_len)
-
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
 
-# def progress(count, total, status=''):
-#     bar_len = 30
-#     filled_len = int(round(bar_len * count / float(total)))
-
-#     percents = round(100.0 * count / float(total), 1)
-#     bar = '=' * filled_len + '-' * (bar_len - filled_len)
-
-#     with t.location():
-#         print('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-
 
 class Experiment:
-    def __init__(self, recognizer_name):
+    def __init__(self):
         self.unique_correct = 0
         self.multi_correct = 0
         self.multi_spread  = 0
         self.candidate_goals = 0
-        self.recognizer_name = recognizer_name
         self.totalTime = 0
 
     def reset(self):
@@ -48,7 +32,8 @@ class Experiment:
 
     def run_experiment(self, options):
         # print(self.recognizer_name)
-        recognizer = PlanRecognizerFactory(options).get_recognizer(self.recognizer_name, options)
+        recognizer = PlanRecognizerFactory(options).get_recognizer(options.recognizer_name, options)
+        self.recognizer_name = options.recognizer_name
 
         startTime = time.time()
         recognizer.run_recognizer()
@@ -66,59 +51,43 @@ class Experiment:
     def __repr__(self):
         return "UC=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_correct,self.multi_spread,self.candidate_goals)
 
-def doExperiments(domainName, observability, recognizer_names):
+
+def do_experiments(domainName, observability, experiment_names):
     experiment_time = time.time()
     totalProblems = 0
 
     file_failures = open("failed.txt","w")
 
     print_text = "obs problems"
-    experiment_names = []
     experiments_tables = {}
     experiments = {}
 
-    for recognizer_name in recognizer_names:
-        print_text = print_text + " " + recognizer_name
-        experiment_names.append(recognizer_name)
-        experiments[recognizer_name] = Experiment(recognizer_name)
-        experiments_tables[recognizer_name] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
+    for e in experiment_names:
+        print_text = print_text + " " + e
+        experiments[e] = Experiment()
+        experiments_tables[e] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
 
-    print_text = print_text + "\n"
-
-    print_text = print_text + "\n"
-
+    print_text += print_text + "\n\n"
 
     for obs in observability:
         problems = 0
         for e in experiment_names:
             experiments[e].reset()
-
         problems_path = '../../domains/' + domainName + '/' + obs + '/'
         total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
-            # progress(problems,total_problems,experiments[e].recognizer.name+":"+str(obs)+"%")
             if problem_file.endswith(".tar.bz2"):
-                cmd_clean = 'rm -rf *.pddl *.dat *.log'
-                os.system(cmd_clean)
-
-                # print(problems_path + problem_file)
-                cmd_untar = 'tar xvjf ' + problems_path + problem_file
-                # cmd_untar = 'tar xjf ' + problems_path + problem_file
-                os.system(cmd_untar)
-                # cmd_untar = ['tar', 'xjf', problems_path + problem_file]
-                # subprocess.call(cmd_untar,stdout=DEVNULL,stderr=DEVNULL)
-
+                path = problems_path + problem_file
+                os.system('rm -rf *.pddl *.dat *.log')
+                os.system('tar xvjf ' + path)
                 problems = problems + 1
-
-                args = ['-e', problems_path + problem_file]
-
-                options = Program_Options(args)
                 for e in experiment_names:
+                    args = ['-r', e, '-e', problems_path + problem_file]
+                    options = Program_Options(args)
                     success = experiments[e].run_experiment(options)
                     if not success:
                         file_failures.write(problems_path + problem_file + "\n")
-                    # print("%s %r"%(e,experiments[e]))
-                    progress(problems, total_problems, e+":"+domainName+":"+str(obs)+"%")
+                    progress(problems, total_problems, experiments[e].recognizer_name + ":" + domainName + ":" + str(obs) + "%")
                     print("")
 
         print_text_result = "%s %d "%(obs,problems)
@@ -153,17 +122,14 @@ def doExperiments(domainName, observability, recognizer_names):
             experiments_tables[e] += "%2.4f "%(float(experiments[e].totalTime)/float(problems))
             experiments_tables[e] += "\n"
 
-
-        print_text_result = print_text_result + "\n"
-
-        print_text = print_text + print_text_result
-
+        print_text_result += print_text_result + "\n"
+        print_text += print_text_result
         print(str(domainName))
         print(print_text)
 
     for e in experiment_names:
         experiments_tables[e] += '\n$> Total Problems: ' + str(totalProblems)
-        table_file = open(str(domainName) + "-" + e +'.txt', 'w')
+        table_file = open(str(domainName) + "-" + experiments[e].recognizer_name +'.txt', 'w')
         table_file.write(experiments_tables[e])
         table_file.close()
 
@@ -171,39 +137,12 @@ def doExperiments(domainName, observability, recognizer_names):
     file_failures.close()
     print('Experiment Time: {0:3f}s'.format(final_time))
 
-
-def main():
+if __name__ == '__main__':
     domainName = sys.argv[1]
-    #Totally unacceptable hack to have this script work with noisy domains
     if domainName.endswith("noisy"):
         observability = ['25', '50', '75', '100']
     else:
         observability = ['10', '30', '50', '70', '100']
-
-    recognizer_names = []
-
-    if "-v" in sys.argv:
-        recognizer_names.append("h-value")
-    if "-c" in sys.argv:
-        recognizer_names.append("h-value-c")
-    if "-s" in sys.argv:
-        recognizer_names.append("soft-c")
-    if "-d" in sys.argv:
-        recognizer_names.append("delta-h-c")
-    if "-f" in sys.argv:
-        recognizer_names.append("delta-h-s")
-    if "-u" in sys.argv:
-        recognizer_names.append("h-value-c-uncertainty")
-    if "-n" in sys.argv:
-        recognizer_names.append("delta-h-c-uncertainty")
-    if "-k" in sys.argv:
-        recognizer_names.append("delta-h-s-uncertainty")
-
-    doExperiments(domainName, observability, recognizer_names)
-
+    do_experiments(domainName, observability, sys.argv[2:])
     # Get rid of the temp files
-    cmdClean = 'rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2'
-    os.system(cmdClean)
-
-if __name__ == '__main__':
-    main()
+    os.system('rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2')

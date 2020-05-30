@@ -5,11 +5,11 @@ from planner_interface import Hypothesis
 class PlanRecognizer:
     name = None
 
-    def __init__(self, options, constraints = 0, delta = False, filter = 0):
+    def __init__(self, options, constraints = 0, delta = False):
         self.options = options
         self.observations = self.load_observations('obs.dat')
         self.hyps = self.load_hypotheses([options.hyp_max_time, options.max_memory, options.heuristics, \
-            constraints, str(delta).lower(), filter])
+            constraints, str(delta).lower(), options.filter])
         self.unique_goal = None
         self.accepted_hypotheses = []
 

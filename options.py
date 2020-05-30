@@ -8,7 +8,7 @@ def usage():
     print("-t  --max-time <time>            Maximum allowed execution time (defaults to 1800 secs)", file=sys.stderr)
     print("-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)", file=sys.stderr)
     print("-H  --heuristics                 Fast Downward search heuristics as a comma-separated string:\nExample: -H lmcut_constraints(), pho_constraints(), state_equation_constraints()", file=sys.stderr)
-    print("-v  --hvalue                     Plan recognition by h-value", file=sys.stderr)
+    print("-v  --h-value                    Plan recognition by h-value", file=sys.stderr)
     print("-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations", file=sys.stderr)
     print("-s  --soft-c                     Plan recognition with soft constraints", file=sys.stderr)
     print("-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value", file=sys.stderr)
@@ -21,25 +21,18 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "be:ht:m:T:H:vcrsdfunk",
-                                       ["batch",
+                                       "r:be:ht:m:T:F:H:",
+                                       ["recognizer-name=",
+                                        "batch",
                                         "experiment=",
                                         "help",
                                         "max-time=",
                                         "max-memory=",
                                         "theta=",
-                                        "heuristics=",
-                                        "h-value",
-                                        "h-value-c",
-                                        "delta-h-c",
-                                        "delta-h-s",
-                                        "soft-c",
-                                        "h-value-c-uncertainty",
-                                        "delta-h-c-uncertainty",
-                                        "delta-h-s-uncertainty"])
+                                        "filter=",
+                                        "heuristics="])
         except getopt.GetoptError:
             print("Missing or incorrect parameters specified!", file=sys.stderr)
-            # print("Missing or incorrect parameters specified!", file=sys.stderr)
             usage()
             sys.exit(1)
 
@@ -51,15 +44,9 @@ class Program_Options:
         self.max_time = 1800
         self.hyp_max_time = 120
         self.max_memory = 1024
-        self.h_value = False
-        self.h_value_c = False
-        self.delta_h_c  = False
-        self.delta_h_s  = False
-        self.soft_c = False
-        self.h_value_c_uncertainty = False
-        self.delta_h_c_uncertainty = False
-        self.delta_h_s_uncertainty = False
+        self.recognizer_name = None
         self.theta = 1 # Multiplier for any slack parameter
+        self.filter = 0 # Obs filter
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
 
         for opcode, oparg in opts:
@@ -103,27 +90,46 @@ class Program_Options:
                 except ValueError:
                     print("Theta value must be a number", file=sys.stderr)
                     sys.exit(1)
+            if opcode in ('-W', '--weighted'):
+                print("Using weighted observations!", file=sys.stderr)
+                self.weight_obs = True
+            if opcode in ('-F', '--filter'):
+                try:
+                    self.filter = int(oparg)
+                    if self.filter < 0:
+                        print("Filter parameter must be at least zero", file=sys.stderr)
+                        sys.exit(1)
+                except ValueError:
+                    print("Filter value must be an integer", file=sys.stderr)
+                    sys.exit(1)
             if opcode in ('-H', '--heuristics'):
                 self.heuristics = list(oparg.split(","))
                 print("LIST OF HEURISTICS: "+oparg)
                 print(self.heuristics)
 
-            if opcode in ('-v', '--hvalue'):
-                self.h_value = True
-            if opcode in ('-c', '--h-value-c'):
-                self.h_value_c = True
-            if opcode in ('-s', '--soft-c '):
-                self.soft_c = True
-            if opcode in ('-d', '--delta-h-c'):
-                self.delta_h_c  = True
-            if opcode in ('-f', '--delta-h-s'):
-                self.delta_h_s  = True
-            if opcode in ('-u', '--h-value-c-uncertainty '):
-                self.h_value_c_uncertainty = True
-            if opcode in ('-n', '--delta-h-c-uncertainty'):
-                self.delta_h_c_uncertainty = True
-            if opcode in ('-k', '--delta-h-s-uncertainty'):
-                self.delta_h_s_uncertainty = True
+            if opcode in ('-r', '--recognizer-name'):
+                if oparg == 'v':
+                    self.recognizer_name = "h-value"
+                elif oparg == 'c':
+                    self.recognizer_name = "h-value-c"
+                elif oparg == 's':
+                    self.recognizer_name = "soft-c"
+                elif oparg == 'w':
+                    self.recognizer_name = "weighted-c"
+                elif oparg == 'dc':
+                    self.recognizer_name = "delta-h-c"
+                elif oparg == 'ds':
+                    self.recognizer_name = "delta-h-s"
+                elif oparg == 'hu':
+                    self.recognizer_name = "h-value-c-uncertainty"
+                elif oparg == 'wu':
+                    self.recognizer_name = "weighted-c-uncertainty"
+                elif oparg == 'dcu':
+                    self.recognizer_name = "delta-h-c-uncertainty"
+                elif oparg == 'dsu':
+                    self.recognizer_name = "delta-h-s-uncertainty"
+                else:
+                    self.recognizer_name = oparg
 
         # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)
         if self.batch:

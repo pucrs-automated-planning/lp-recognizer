@@ -9,7 +9,6 @@
 
 #include <cmath>
 #include <fstream>
-#include <map>
 #include <algorithm>
 #include <cctype>
 #include <locale>
@@ -46,13 +45,30 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
           opts.get_list<shared_ptr<ConstraintGenerator>>("constraint_generators")),
       lp_solver(lp::LPSolverType(opts.get_enum("lpsolver"))),
       lp_solver_c(lp::LPSolverType(opts.get_enum("lpsolver"))),
-      observation_constraints(opts.get<int>("observation_constraints",0)),
-      calculate_delta(opts.get("calculate_delta",false)),
-      filter(opts.get<int>("filter",0)),
-      op_indexes(),
-      observations(){
+      observation_constraints(opts.get<int>("observation_constraints")),
+      calculate_delta(opts.get<bool>("calculate_delta")),
+      filter(opts.get<int>("filter")) {
 
+    // Initialize map to convert operator name to operator ID
+    map_operators(false);
+
+    // Read observations from file and prune invalid
     load_observations();
+    prune_observations();
+
+    // Set observarion weights
+    if (observation_constraints == 3) {
+        double weight = 1;
+        for (auto it = observations.begin(); it != observations.end(); ++it) {
+            if (op_indexes.find(*it) != op_indexes.end()) {
+                max_weight += weight;
+                weights[*it] += weight;
+                weight += 1;
+            }
+        }
+    }
+
+    // Create LP variables for operators
     vector<lp::LPVariable> variables;
     double infinity = lp_solver.get_infinity();
     for (OperatorProxy op : task_proxy.get_operators()) {
@@ -63,21 +79,28 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
             variables.push_back(lp::LPVariable(0, infinity, 10000*op_cost));
         }
     }
+
+    // Create heuristic constraints
     vector<lp::LPConstraint> constraints;
     for (const auto &generator : constraint_generators) {
         generator->initialize_constraints(task, constraints, infinity);
     }
-    map_operators(false);
+    
+    // Initialize LP problem without observation constraints
     if (calculate_delta) {
         lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
     }
+
+    // Add observation constrants
     if (observation_constraints == 1) {
         // Soft observation constraints
         add_observation_soft_constraints(variables, constraints);
-    } else if (observation_constraints == 2) {
+    } else if (observation_constraints == 2 || observation_constraints == 3) {
         // Enforce observations
         enforce_observation_constraints(variables, constraints);
     }
+
+    // Initialize LP problem with all constraints
     lp_solver_c.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 }
 
@@ -127,6 +150,80 @@ void OCSingleShotHeuristic::show_variables_and_objective(const vector<lp::LPVari
     cout << string(80, '*') << endl;
 }
 
+void OCSingleShotHeuristic::load_observations() {
+    // Read observations from file
+    cout << endl << string(80, '*') << endl;
+    cout << std::endl << "Load observations" << std::endl;
+    ifstream obs_file;
+    obs_file.open("obs.dat");
+    if(obs_file.is_open()){
+        while(!obs_file.eof()) {
+            string obs;
+            getline(obs_file, obs);
+            trim(obs);
+            if(!obs.empty() && obs[0]!=';') {
+                obs = obs.substr(1,obs.length()-2);
+                std::string obs_name (obs);
+                for (size_t i = 0; i< obs.size(); ++i) {
+                    obs_name[i] = tolower(obs.c_str()[i]);
+                }
+                cout << "Observation: " << obs_name << endl;
+                observations.push_back(obs_name);
+            }
+        }
+    }
+    cout << endl << string(80, '*') << endl;
+    obs_file.close();
+    // =-=-=-=-= Each observation is associated with its number of occurrences. =-=-=-=-= //
+    obs_occurrences.clear();
+    for(auto it = observations.begin() ; it != observations.end(); ++it) {
+        obs_occurrences[*it]++;
+    }
+}
+
+void OCSingleShotHeuristic::prune_observations() { 
+    // Debugging output (cumulative: appends new info with each call)
+    std::fstream outfile("debug/observation_sanity.txt", std::ios::out|std::ios::app) ;
+    // Set output stream (set to std::cout to print to terminal)
+    std::ostream& outstream = outfile;
+    // Reinitialize class variables for invalid (unmapped) observations.
+    num_pruned_observations = 0;
+    pruned_observations.clear();
+    valid_obs_occurrences.clear();
+    vector<string> invalid_operators;
+    int num_invalid_operators = 0;
+    //outstream << endl << string(80, '*') << endl;
+    //outstream << "Enforcing observation constraints" << std::endl;
+    outstream << endl<< "-+-"; // marks start
+    for (auto it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
+        // Observation is mappable?
+        // If not: ignore observation, storing it in a separate list.
+        if (op_indexes.find(it->first) == op_indexes.end()) {
+            //outstream << "[INVALID OP] " << op << endl;
+            invalid_operators.push_back(it->first);
+            num_invalid_operators += 1;
+            num_pruned_observations += it->second;
+        } else {
+            valid_obs_occurrences[it->first] = it->second;
+            num_valid_observations += it->second;
+        }
+    }
+    // =-=-=-=-= Report on pruned and invalid operators/observations. =-=-=-=-= //
+    // Basic structure:
+    // Print invalid observations, number of operators and total number of observations.
+    // Last line holds number of observations and number of invalid observations,
+    //  followed by any relevant tags.
+    for (int i = 0 ; i < num_invalid_operators; i++) {
+        outstream << endl<< "[INVALID OP] " << invalid_operators[i] << ": " << obs_occurrences[invalid_operators[i]] <<" time(s).";
+    }
+    if (num_pruned_observations > 0) {
+        outstream << endl << "# mappable operators: " << op_indexes.size() << endl;
+        outstream << "Obs - Total: " << observations.size() << " | Invalid: " << num_pruned_observations;
+    }
+    outfile.flush();
+    outfile.close();
+}
+
 void OCSingleShotHeuristic::add_observation_soft_constraints(vector<lp::LPVariable> &variables, vector<lp::LPConstraint> &constraints) {
     double infinity = lp_solver.get_infinity();
     cout << endl << string(80, '*') << endl;
@@ -159,108 +256,40 @@ void OCSingleShotHeuristic::add_observation_soft_constraints(vector<lp::LPVariab
     cout << endl << string(80, '*') << endl;
 }
 
-void OCSingleShotHeuristic::load_observations() {
-    // Read observations from file
-    cout << endl << string(80, '*') << endl;
-    cout << std::endl << "Load observations" << std::endl;
-    ifstream obs_file;
-    obs_file.open("obs.dat");
-    if(obs_file.is_open()){
-        while(!obs_file.eof()) {
-            string obs;
-            getline(obs_file, obs);
-            trim(obs);
-            if(!obs.empty() && obs[0]!=';') {
-                obs = obs.substr(1,obs.length()-2);
-                std::string obs_name (obs);
-                for (size_t i = 0; i< obs.size(); ++i) {
-                    obs_name[i] = tolower(obs.c_str()[i]);
-                }
-                cout << "Observation: " << obs_name << endl;
-                observations.push_back(obs_name);
-            }
-        }
-    }
-    cout << endl << string(80, '*') << endl;
-    obs_file.close();
-}
-
 void OCSingleShotHeuristic::enforce_observation_constraints(vector<lp::LPVariable> &variables, vector<lp::LPConstraint> &constraints) {
-    // Debugging output (cumulative: appends new info with each call)
-    std::fstream outfile("debug/observation_sanity.txt", std::ios::out|std::ios::app) ;
-    // Set output stream (set to std::cout to print to terminal)
-    std::ostream& outstream = outfile;
-    // Reinitialize class variables for invalid (unmapped) observations.
-    num_pruned_observations = 0;
-    pruned_observations.clear();
-    // Function variables
     double infinity = lp_solver.get_infinity();
-    vector<string> invalid_operators;
-    int num_invalid_operators = 0;
-    map<string, int> obs_occurrences;
-    // =-=-=-=-= Each observation is associated with its number of occurrences. =-=-=-=-= //
-    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
-        obs_occurrences[*it]++;
-    }
     // =-=-=-=-= Iterate each operator to enforce constraints. =-=-=-=-= //
-    //outstream << endl << string(80, '*') << endl;
-    //outstream << "Enforcing observation constraints" << std::endl;
-    outstream << endl<< "-+-"; // marks start
-    for(map<string, int>::iterator it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
+    int obs_id = task_proxy.get_operators().size();
+    for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
         // Determine how many times the same observed operation occurs.
         string op = it->first;
         int count_obs = it->second;
-        // Observation is mappable?
-        // If not: ignore observation, storing it in a separate list.
-        if (op_indexes.find(op) == op_indexes.end()) {
-            //outstream << "[INVALID OP] " << op << endl;
-            invalid_operators.push_back(op);
-            num_invalid_operators += 1;
-            num_pruned_observations += count_obs;
-            continue;
-        }
-        // If mappable obs, add hard constraint for the operator,
-        // forcing it to occur at least as many times as observed.
-        if (filter == 0) {
+        if (filter > 0 || observation_constraints == 3) {
+            variables.push_back(lp::LPVariable(0, infinity, -weights[op]));
+            lp::LPConstraint constraint(0, infinity);
+            cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
+            constraint.insert(op_indexes[op], 1);
+            constraint.insert(obs_id, -1);
+            constraints.push_back(constraint);
+            obs_id++;
+        } else {
+            // Force it to occur at least as many times as observed.
             lp::LPConstraint constraint(count_obs, infinity);
             cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
             constraint.insert(op_indexes[op], 1);
-            constraints.push_back(constraint);
-        } else {
-            variables.push_back(lp::LPVariable(0, infinity, 0));
-            lp::LPConstraint constraint(0, infinity);
-            outstream << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
-            constraint.insert(op_indexes[op], 1);
-            constraint.insert(variables.size() - 1, -1);
             constraints.push_back(constraint);
         }
     }
     if (filter > 0) {
         int k = max(0, filter - num_pruned_observations);
-        lp::LPConstraint constraint(observations.size() - num_pruned_observations - k, infinity);
-        int var_id = task_proxy.get_operators().size();
-        for(map<string, int>::iterator it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
-            if (op_indexes.find(it->first) != op_indexes.end()) {
-                constraint.insert(op_indexes[it->first], 1);
-                var_id++;
-            }
+        lp::LPConstraint constraint(num_valid_observations - k, infinity);
+        int obs_id = task_proxy.get_operators().size();
+        for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
+            constraint.insert(op_indexes[it->first], 1);
+            obs_id++;
         }
         constraints.push_back(constraint);
     }
-    // =-=-=-=-= Report on pruned and invalid operators/observations. =-=-=-=-= //
-    // Basic structure:
-    // Print invalid observations, number of operators and total number of observations.
-    // Last line holds number of observations and number of invalid observations,
-    //  followed by any relevant tags.
-    for (int i = 0 ; i < num_invalid_operators; i++) {
-        outstream << endl<<"[INVALID OP] " << invalid_operators[i] << ": " << obs_occurrences[invalid_operators[i]]<<" time(s).";
-    }
-    if(num_pruned_observations > 0) {
-        outstream<<endl<<"# mappable operators: " << op_indexes.size() << endl;
-        outstream << "Obs - Total: " << observations.size() << " | Invalid: " << num_pruned_observations;
-    }
-    outfile.flush();
-    outfile.close();
 }
 
 void OCSingleShotHeuristic::output_results(int result, int result_c) {
@@ -273,8 +302,8 @@ void OCSingleShotHeuristic::output_results(int result, int result_c) {
     // Get hits/misses
     std::cout << "# observations in solution (" << observations.size() << "): " << std::endl;
     double obs_hits = 0, obs_miss = 0;
-    map<string, double> counts;
-    for(vector<string>::iterator it = observations.begin() ; it != observations.end(); ++it) {
+    unordered_map<string, double> counts;
+    for(auto it = observations.begin() ; it != observations.end(); ++it) {
         if (op_indexes.find(*it) != op_indexes.end()) {
             if (solution[op_indexes[*it]] > counts[*it]) {
                 obs_hits++;
@@ -292,32 +321,29 @@ void OCSingleShotHeuristic::output_results(int result, int result_c) {
     results.open("ocsingleshot_heuristic_result.dat");
     results << "Observations report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
     results << "-- " << endl;
-    if (result < 0 || result_c < 0) {
-        results << DEAD_END << endl;
-    } else {
-        if (calculate_delta) {
-            if (observation_constraints == 1) {
-                // Soft constraints
-                double score = (result_c + obs_hits) / 10000;
-                double delta = score + observations.size() - num_pruned_observations - result;
-                results << delta << " " << obs_miss << " " << score << endl; 
-            } else {
-                // Enforce observations
-                results << result_c - result << " " << result_c << " " << obs_miss << endl; 
-            }
-        } else if (observation_constraints == 1) {
-            results << obs_miss << result_c << endl; 
+    if (calculate_delta) {
+        if (observation_constraints == 1) {
+            // Soft constraints
+            double score = (result_c + obs_hits) / 10000;
+            double delta = score + num_valid_observations - result;
+            results << delta << " " << obs_miss << " " << score << endl; 
         } else {
-            results << result_c << obs_miss << endl; 
+            double delta = result_c < 0 || result < 0 ? -1 : result_c - result;
+            // Enforce observations
+            results << delta << " " << result_c << " " << obs_miss << endl; 
         }
-        // Write counts
-        int var_i=0;
-        for (OperatorProxy op : task_proxy.get_operators()) {
-            if (solution[var_i] > 0) {
-                results << "(" << op.get_name() << ") = " << solution[var_i] << endl;
-            }
-            var_i++;
+    } else if (observation_constraints == 1) {
+        results << obs_miss << " " << result_c << endl; 
+    } else {
+        results << result_c << " " << obs_miss << endl; 
+    }
+    // Write counts
+    int var_i = 0;
+    for (OperatorProxy op : task_proxy.get_operators()) {
+        if (solution[var_i] > 0) {
+            results << "(" << op.get_name() << ") = " << solution[var_i] << endl;
         }
+        var_i++;
     }
     results.flush();
     results.close();
@@ -368,7 +394,7 @@ int OCSingleShotHeuristic::compute_heuristic(const State &state) {
     if (lp_solver_c.has_optimal_solution()) {
         double epsilon = 0.01;
         double objective_value = lp_solver_c.get_objective_value();
-        result_c = ceil(objective_value - epsilon);
+        result_c = ceil(objective_value - epsilon) + max_weight;
     } else {
         result_c = DEAD_END;
     }
@@ -420,9 +446,9 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
     parser.add_list_option<shared_ptr<ConstraintGenerator>>(
         "constraint_generators",
         "methods that generate constraints over operator counting variables");
-    parser.add_option<int>("observation_constraints", "0 = none, 1 = soft, 2 = enforce");
-    parser.add_option<bool>("calculate_delta", "whether or not to calculate the difference between with and without constraints");
-    parser.add_option<int>("filter", "observation filter");
+    parser.add_option<int>("observation_constraints", "0 = none, 1 = soft, 2 = enforce", "0");
+    parser.add_option<bool>("calculate_delta", "calculate the difference between with and without observation constraints", "false");
+    parser.add_option<int>("filter", "observation filter", "0");
     lp::add_lp_solver_option_to_parser(parser);
     Heuristic::add_options_to_parser(parser);
     Options opts = parser.parse();

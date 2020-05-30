@@ -42,12 +42,12 @@ fi
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -d -n > experiments/$domain.output
+	python2 run_experiments.py $domain w > experiments/$domain.output
 	mv *.txt results
 done
 
 for domain in "${noisy_domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain -d -n > experiments/$domain.output
+	python2 run_experiments.py $domain w > experiments/$domain.output
 	mv *.txt results
 done

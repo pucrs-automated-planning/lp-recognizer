@@ -54,12 +54,12 @@ class PRCommand:
                     self.num_invalid_obs = values[1]
                     self.obs_hits = values[2]
                     self.obs_misses = values[3]
-                    print(values)
+                    print("Obs: {}".format(values))
                 elif not '--' in line:
                     if self.h_values == None:
                         values = line.split()
                         self.h_values = [float(x) for x in values]
-                        print(self.h_values)
+                        print("Score: {}".format(self.h_values))
                     else: # Gather operator counts
                         operator,count = line.split('=')
                         self.op_counts[operator.strip()] = float(count.strip())

@@ -5,10 +5,10 @@ from const_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRec
 class LPRecognizerDeltaHC(LPRecognizerHValue):
     name = "delta-h-c"
 
-    def __init__(self, options, filter = 0):
+    def __init__(self, options):
         # Set to hard constraints.
         # Calculate delta.
-        LPRecognizerHValue.__init__(self, options, 2, True, filter)
+        LPRecognizerHValue.__init__(self, options, 2, True)
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
@@ -22,8 +22,8 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
 class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
     name = "delta-h-c-uncertainty"
 
-    def __init__(self, options, filter = 0):
-        LPRecognizerDeltaHC.__init__(self, options, filter)
+    def __init__(self, options):
+        LPRecognizerDeltaHC.__init__(self, options)
 
     def calculate_uncertainty(self):
         if self.unique_goal:
@@ -42,10 +42,10 @@ class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
 class LPRecognizerDeltaHS(LPRecognizerHValue):
     name = "delta-h-s"
 
-    def __init__(self, options, filter = 0):
+    def __init__(self, options):
         # Set to soft constraints.
         # Calculate delta.  
-        LPRecognizerHValue.__init__(self, options, 1, True, filter)
+        LPRecognizerHValue.__init__(self, options, 1, True)
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
@@ -59,8 +59,8 @@ class LPRecognizerDeltaHS(LPRecognizerHValue):
 class LPRecognizerDeltaHSUncertainty(LPRecognizerDeltaHS):
     name = "delta-h-s-uncertainty"
 
-    def __init__(self, options, filter = 0):
-        LPRecognizerDeltaHS.__init__(self, options, filter)
+    def __init__(self, options):
+        LPRecognizerDeltaHS.__init__(self, options)
         
     def calculate_uncertainty(self):
         if self.unique_goal:

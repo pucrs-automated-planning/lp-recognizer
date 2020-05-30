@@ -54,7 +54,7 @@ Where ```<experiment_file>``` is one of the experiments in your dataset.
 For example, with the experiments we provide here, we could run sokoban with the hard constraints strategy as follows:
 
 ```bash
-./plan_recognition.py -c -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
+./plan_recognition.py -r c -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments 
@@ -69,7 +69,7 @@ In order to run experiments for an entire domain organized in a folder named ```
 For example, to run all Sokoban experiments, using all the heuristics you need to run:
 
 ```bash
-./run_experiments.py sokoban -v -c -d -s
+./run_experiments.py sokoban v c dc ds
 ```
 
 ### Running plan recognition 

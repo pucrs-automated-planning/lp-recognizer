@@ -8,6 +8,7 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 namespace options {
 class Options;
@@ -26,12 +27,18 @@ class OCSingleShotHeuristic : public Heuristic {
     std::unordered_map<std::string,int> op_indexes;
     std::vector<std::string> observations;
     std::vector<std::string> pruned_observations;
+    std::unordered_map<std::string, int> obs_occurrences;
+    std::unordered_map<std::string, int> valid_obs_occurrences;
     int num_pruned_observations = 0;
+    int num_valid_observations = 0;
+    std::unordered_map<std::string, double> weights;
+    double max_weight = 0;
 
 protected:
     virtual int compute_heuristic(const GlobalState &global_state) override;
     int compute_heuristic(const State &state);
     void load_observations();
+    void prune_observations();
     void enforce_observation_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
     void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
     void output_results(int result, int result_c);

@@ -5,8 +5,8 @@ from plan_recognizer import PlanRecognizer
 class LPRecognizerHValue(PlanRecognizer):
     name = "h-value"
 
-    def __init__(self, options, constraints = 0, delta = False, filter = 0):
-        PlanRecognizer.__init__(self, options, constraints, delta, filter)
+    def __init__(self, options, constraints = 0, delta = False):
+        PlanRecognizer.__init__(self, options, constraints, delta)
         self.uncertainty_ratio = 1
 
     def accept_hypothesis(self, h):
