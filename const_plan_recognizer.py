@@ -62,7 +62,7 @@ class LPRecognizerWeightedC(LPRecognizerHValue):
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
-            return h.score[0] <= self.unique_goal.score[1] * self.uncertainty_ratio
+            return h.score[0] <= self.unique_goal.score[0] * self.uncertainty_ratio
         return False
 
 
@@ -74,4 +74,4 @@ class LPRecognizerWeightedCUncertainty(LPRecognizerWeightedC):
 
     def calculate_uncertainty(self):
         if self.unique_goal:
-            self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[1] - self.unique_goal.obs_count)
+            self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[0] - self.unique_goal.obs_count)

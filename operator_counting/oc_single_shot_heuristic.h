@@ -41,7 +41,7 @@ protected:
     void prune_observations();
     void enforce_observation_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
     void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
-    void output_results(int result, int result_c);
+    void output_results(double result, double result_c);
 public:
     explicit OCSingleShotHeuristic(const options::Options &opts);
     ~OCSingleShotHeuristic();

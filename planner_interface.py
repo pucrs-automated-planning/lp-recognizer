@@ -114,6 +114,10 @@ class Hypothesis:
                 print("Negative h value. Failed.")
                 self.test_failed = True
                 return
+            if x != x:
+                print("h value not a number. Failed.")
+                self.test_failed = True
+                return
         self.score = pr_cmd.h_values
 
     def load_plan(self, plan_name):

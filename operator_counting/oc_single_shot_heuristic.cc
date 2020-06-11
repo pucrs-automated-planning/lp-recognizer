@@ -56,15 +56,19 @@ OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
     load_observations();
     prune_observations();
 
-    // Set observarion weights
+    // Set observation weights
     if (observation_constraints == 3) {
-        double weight = 1;
+        double weight_per_op = 1.0;
+        double weight = weight_per_op;
         for (auto it = observations.begin(); it != observations.end(); ++it) {
             if (op_indexes.find(*it) != op_indexes.end()) {
                 max_weight += weight;
                 weights[*it] += weight;
-                weight += 1;
+                weight += weight_per_op;
             }
+        }
+        for (auto it = obs_occurrences.begin(); it != obs_occurrences.end(); ++it) {
+            weights[it->first] /= it->second;
         }
     }
 
@@ -265,12 +269,13 @@ void OCSingleShotHeuristic::enforce_observation_constraints(vector<lp::LPVariabl
         string op = it->first;
         int count_obs = it->second;
         if (filter > 0 || observation_constraints == 3) {
-            variables.push_back(lp::LPVariable(0, infinity, -weights[op]));
-            lp::LPConstraint constraint(0, infinity);
+            variables.push_back(lp::LPVariable(0, count_obs, -weights[op]));
+            // c < Y(o)
+            lp::LPConstraint lt_y(0, infinity);
             cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
-            constraint.insert(op_indexes[op], 1);
-            constraint.insert(obs_id, -1);
-            constraints.push_back(constraint);
+            lt_y.insert(op_indexes[op], 1);
+            lt_y.insert(obs_id, -1);
+            constraints.push_back(lt_y);
             obs_id++;
         } else {
             // Force it to occur at least as many times as observed.
@@ -292,7 +297,7 @@ void OCSingleShotHeuristic::enforce_observation_constraints(vector<lp::LPVariabl
     }
 }
 
-void OCSingleShotHeuristic::output_results(int result, int result_c) {
+void OCSingleShotHeuristic::output_results(double result, double result_c) {
     // Log solutions
     cout << endl << string(80, '*') << endl;
     vector<double> solution = lp_solver_c.extract_solution();
@@ -328,13 +333,14 @@ void OCSingleShotHeuristic::output_results(int result, int result_c) {
             double delta = score + num_valid_observations - result;
             results << delta << " " << obs_miss << " " << score << endl; 
         } else {
-            double delta = result_c < 0 || result < 0 ? -1 : result_c - result;
             // Enforce observations
-            results << delta << " " << result_c << " " << obs_miss << endl; 
+            results << result_c - result << " " << result_c << " " << obs_miss << endl; 
         }
     } else if (observation_constraints == 1) {
+        // Soft constraints
         results << obs_miss << " " << result_c << endl; 
     } else {
+        // Hard or weighted constraints
         results << result_c << " " << obs_miss << endl; 
     }
     // Write counts
@@ -375,7 +381,7 @@ int OCSingleShotHeuristic::compute_heuristic(const State &state) {
         }
     }
     // LP result without observation constraints
-    int result;
+    double result;
     if (calculate_delta) {
         lp_solver.solve();
         if (lp_solver.has_optimal_solution()) {
@@ -383,20 +389,20 @@ int OCSingleShotHeuristic::compute_heuristic(const State &state) {
             double objective_value = lp_solver.get_objective_value();
             result = ceil(objective_value - epsilon);
         } else {
-            result = DEAD_END;
+            result = 0.0 / 0.0;
         }
     } else {
         result = 0;
     }
     // LP result with observation constraints
-    int result_c;
+    double result_c;
     lp_solver_c.solve();
     if (lp_solver_c.has_optimal_solution()) {
         double epsilon = 0.01;
         double objective_value = lp_solver_c.get_objective_value();
         result_c = ceil(objective_value - epsilon) + max_weight;
     } else {
-        result_c = DEAD_END;
+        result_c = 0.0 / 0.0;
     }
     // Output
     lp_solver_c.print_statistics();
