@@ -40,21 +40,21 @@ Our Python code was based off of Ramirez and Geffner's original recognizer, so e
 
 This recognizer is compatible with all the domains in this publicly available dataset of [Goal and Plan Recognition Datasets](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset). We currently implement four different approaches to goal recognition based on operator counts:
 
-1.  Comparing overlap of observations and operator counts, accessible with the ```-v``` switch
-2.  Minimizing the operator counts subject to constraints derived from the observations (i.e. all observations must be included in the counts), accessible with the ```-c``` switch
-3. Minimizing the difference between the operator counts with the observation constraints and the operator counts with then, accessible with the ```-d``` switch
-4. Minimizing the operator counts subject to soft constraints on the observations (i.e. trying to include as many observations in the counts while minimizing total count), accessible with the ```-s``` switch
+1.  Comparing overlap of observations and operator counts, accessible with the ```v``` heuristic
+2.  Minimizing the operator counts subject to constraints derived from the observations (i.e. all observations must be included in the counts), accessible with the ```c``` heuristic
+3. Minimizing the difference between the operator counts with the observation constraints and the operator counts with then, accessible with the ```dc``` heuristic
+4. Minimizing the operator counts subject to soft constraints on the observations (i.e. trying to include as many observations in the counts while minimizing total count), accessible with the ```s``` heuristic
 
 To run any experiment, just run:
 ```bash
-python plan_recognition.py <heuristics> -e <experiment_file>
+python test_instance.py -r <heuristics> -e <experiment_file>
 ``` 
 
 Where ```<experiment_file>``` is one of the experiments in your dataset. 
 For example, with the experiments we provide here, we could run sokoban with the hard constraints strategy as follows:
 
 ```bash
-./plan_recognition.py -r c -e experiments/sokoban/sokoban_p01_hyp-1_10_1.tar.bz2
+./test_instance.py -r dc -e experiments/sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments 
@@ -62,14 +62,13 @@ For example, with the experiments we provide here, we could run sokoban with the
 In order to run experiments for an entire domain organized in a folder named ```domain```, you need to run:
 
 ```bash
-./run_experiments.py <domain> <heuristics>
+./test_domain.py <path> <domain> <heuristics>
 ```
-
 
 For example, to run all Sokoban experiments, using all the heuristics you need to run:
 
 ```bash
-./run_experiments.py sokoban v c dc ds
+./test_domain.py experiments sokoban v c dc ds
 ```
 
 ### Running plan recognition 

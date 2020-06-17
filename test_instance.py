@@ -12,9 +12,14 @@ if __name__ == '__main__':
     recognizer = PlanRecognizerFactory(options).get_recognizer(options.recognizer_name)
     recognizer.run_recognizer()
     realHyp = recognizer.get_real_hypothesis()
-    print("Real Goal is: %s\n\nRecognized: %s"%(str(realHyp),str(recognizer.unique_goal)))
-    if recognizer.unique_goal is not None and realHyp == recognizer.unique_goal:
-        print('True!')
+    print("Real Goal is: %s" % str(realHyp))
+    print("Recognized: %s" % str(recognizer.unique_goal))
+    if recognizer.unique_goal == None:
+        print("No goal recognized!")
+    elif realHyp == recognizer.unique_goal:
+        print("Recognized true hypothesis!")
+    elif realHyp in recognizer.accepted_hypotheses:
+        print("Accepted true hypothesis!")
     else:
-        print('False!')
+        print("Rejected true hypothesis.")
     print(recognizer.name)        

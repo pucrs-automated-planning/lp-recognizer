@@ -5,6 +5,7 @@ import const_plan_recognizer
 import delta_plan_recognizer 
 
 import importlib
+import copy
 
 class Singleton(type):
     _instances = {}
@@ -40,6 +41,12 @@ class PlanRecognizerFactory(object):
     def get_recognizer(self, name, options=None):
         """Returns an instance of PlanRecognizer given the name used in the parameters"""
         if options == None:
-            options = self.options
+            options = copy.copy(self.options)
+        if "f1" in name:
+            name = name.replace("-f1", "")
+            options.filter = 1
+        elif "f2" in name:
+            name = name.replace("-f2", "")
+            options.filter = 2
         recognizer = self.recognizers[name](options)
         return recognizer

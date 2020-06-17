@@ -70,7 +70,7 @@ class LPRecognizerWeightedCUncertainty(LPRecognizerWeightedC):
     name = "weighted-c-uncertainty"
 
     def __init__(self, options):
-        LPRecognizerSoftC.__init__(self, options)
+        LPRecognizerWeightedC.__init__(self, options)
 
     def calculate_uncertainty(self):
         if self.unique_goal:

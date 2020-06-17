@@ -1,3 +1,5 @@
+#!/usr/bin/env python2.7
+
 import unittest
 
 from options import Program_Options
@@ -26,7 +28,11 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHSUncertainty)
         recognizer = self.factory.get_recognizer("delta-h-c")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
+        recognizer = self.factory.get_recognizer("delta-h-c-f2")
+        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         recognizer = self.factory.get_recognizer("delta-h-c-uncertainty")
+        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHCUncertainty)
+        recognizer = self.factory.get_recognizer("delta-h-c-f2-uncertainty")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHCUncertainty)
 
     def test_hvalue_recognizer(self):

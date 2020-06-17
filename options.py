@@ -118,6 +118,10 @@ class Program_Options:
                     self.recognizer_name = "weighted-c"
                 elif oparg == 'dc':
                     self.recognizer_name = "delta-h-c"
+                elif oparg == 'dc-f1':
+                    self.recognizer_name = "delta-h-c-f1"
+                elif oparg == 'dc-f2':
+                    self.recognizer_name = "delta-h-c-f2"
                 elif oparg == 'ds':
                     self.recognizer_name = "delta-h-s"
                 elif oparg == 'hu':
@@ -128,6 +132,10 @@ class Program_Options:
                     self.recognizer_name = "delta-h-c-uncertainty"
                 elif oparg == 'dsu':
                     self.recognizer_name = "delta-h-s-uncertainty"
+                elif oparg == 'dcu-f1':
+                    self.recognizer_name = "delta-h-c-f1-uncertainty"
+                elif oparg == 'dcu-f2':
+                    self.recognizer_name = "delta-h-c-f2-uncertainty"
                 else:
                     self.recognizer_name = oparg
 

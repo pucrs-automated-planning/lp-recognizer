@@ -59,21 +59,3 @@ pushd ../../
 git clone --depth=1 $EXPERIMENTS_REPO goal-plan-recognition-dataset
 
 popd
-
-# pushd experiments
-
-echo "Preparing regular experiments"
-
-for domain in "${domains[@]}"; do
-	echo $domain
-	rm -rf $domain
-	cp -R "../../goal-plan-recognition-dataset/$domain" .
-done
-
-echo -e "\nPreparing noisy experiments"
-
-for domain in "${noisy_domains[@]}"; do
-	echo $domain
-	rm -rf $domain
-	cp -R "../../goal-plan-recognition-dataset/$domain" .
-done

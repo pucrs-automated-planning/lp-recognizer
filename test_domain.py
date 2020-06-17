@@ -52,7 +52,7 @@ class Experiment:
         return "UC=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_correct,self.multi_spread,self.candidate_goals)
 
 
-def do_experiments(domainName, observability, experiment_names):
+def do_experiments(basePath, domainName, observability, experiment_names):
     experiment_time = time.time()
     totalProblems = 0
 
@@ -73,7 +73,7 @@ def do_experiments(domainName, observability, experiment_names):
         problems = 0
         for e in experiment_names:
             experiments[e].reset()
-        problems_path = '../../domains/' + domainName + '/' + obs + '/'
+        problems_path = basePath + '/' + domainName + '/' + obs + '/'
         total_problems = len(os.listdir(problems_path))
         for problem_file in os.listdir(problems_path):
             if problem_file.endswith(".tar.bz2"):
@@ -138,11 +138,12 @@ def do_experiments(domainName, observability, experiment_names):
     print('Experiment Time: {0:3f}s'.format(final_time))
 
 if __name__ == '__main__':
-    domainName = sys.argv[1]
+    basePath = sys.argv[1]
+    domainName = sys.argv[2]
     if domainName.endswith("noisy"):
         observability = ['25', '50', '75', '100']
     else:
         observability = ['10', '30', '50', '70', '100']
-    do_experiments(domainName, observability, sys.argv[2:])
+    do_experiments(basePath, domainName, observability, sys.argv[3:])
     # Get rid of the temp files
     os.system('rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2')

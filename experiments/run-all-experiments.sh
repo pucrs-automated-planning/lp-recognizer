@@ -35,19 +35,23 @@ declare -a noisy_domains=("blocks-world-noisy"
 					)
 
 pushd ..
-# echo "$domains"
+
+FOLDER=../goal-plan-recognition-dataset
+
 if [[ ! -d results ]]; then
 	mkdir results
 fi
 
 for domain in "${domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain w > experiments/$domain.output
+	python2 test_domain.py $FOLDER $domain dc w dcu wu > experiments/$domain.output
 	mv *.txt results
 done
 
 for domain in "${noisy_domains[@]}"; do
 	echo "Running domain ${domain}"
-	python2 run_experiments.py $domain w > experiments/$domain.output
+	python2 test_domain.py $FOLDER $domain dc dc-f1 dc-f2 w dcu dcu-f1 dcu-f2 wu > experiments/$domain.output
 	mv *.txt results
 done
+
+popd

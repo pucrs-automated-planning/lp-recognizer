@@ -13,8 +13,9 @@ install:
   - chmod +x *.sh
   - ./prepare-fd.sh
 script: 
-  - python test_lp_recognizer.py
+  - ./test_units.py
+  - ./test_instance.py -r dc -e experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2
+  - ./test_domain.py experiments small-sokoban v hu c dc dcu s ds dsu w wu dc-f1 dcu-f1 dc-f2 dcu-f2
 branches:
   only:
     - master
-    - refactor
