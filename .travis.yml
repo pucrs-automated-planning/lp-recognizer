@@ -12,6 +12,7 @@ before_install:
 install: 
   - chmod +x *.sh
   - ./prepare-fd.sh
+  - chmod +x *.py
 script: 
   - ./test_units.py
   - ./test_instance.py -r dc -e experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2
