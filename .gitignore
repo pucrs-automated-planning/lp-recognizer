@@ -52,7 +52,6 @@ coverage.xml
 .pytest_cache/
 
 # Ignore tars, pddls etc
-*.tar.bz2
 *.pddl
 *.csv
 *.pyc
