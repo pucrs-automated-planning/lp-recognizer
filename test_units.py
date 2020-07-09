@@ -22,10 +22,6 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         self.assertEqual(recognizer.__class__, LPRecognizerSoftC)
         recognizer = self.factory.get_recognizer("soft-c-uncertainty")
         self.assertEqual(recognizer.__class__, LPRecognizerSoftCUncertainty)
-        recognizer = self.factory.get_recognizer("delta-h-s")
-        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHS)
-        recognizer = self.factory.get_recognizer("delta-h-s-uncertainty")
-        self.assertEqual(recognizer.__class__, LPRecognizerDeltaHSUncertainty)
         recognizer = self.factory.get_recognizer("delta-h-c")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         recognizer = self.factory.get_recognizer("delta-h-c-f2")
@@ -42,9 +38,9 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         recognizer = self.factory.get_recognizer("h-value", options)
         recognizer.run_recognizer()
         self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses) 
-        for h in recognizer.accepted_hypotheses:
-            self.assertGreaterEqual(h.obs_count, h.score[0])
-            self.assertGreaterEqual(h.obs_count, h.score[1])
+        for hyp in recognizer.accepted_hypotheses:
+            self.assertGreaterEqual(hyp.num_obs, hyp.h)
+            self.assertGreaterEqual(hyp.num_obs, hyp.obs_hits)
 
     def test_deltahc_recognizer(self):
         print("Testing delta-h-c")

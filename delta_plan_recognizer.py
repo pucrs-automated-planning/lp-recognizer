@@ -8,7 +8,10 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
     def __init__(self, options):
         # Set to hard constraints.
         # Calculate delta.
-        LPRecognizerHValue.__init__(self, options, 2, True)
+        LPRecognizerHValue.__init__(self, options, h = True, h_c = True, h_s = False)
+
+    def get_score(self, h):
+        return [h.h_c - h.h, h.h_c, h.obs_hits]
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
@@ -28,42 +31,47 @@ class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
     def calculate_uncertainty(self):
         if self.unique_goal:
             delta = self.unique_goal.score[0]
-            hc = self.unique_goal.score[1]
-            hv = hc - delta # score[0] = hc - hv 
-            print("Delta: {} | HV: {} | HC: {} | #Obs: {}".format(delta, hv, hc, self.unique_goal.obs_hits))
+            hc = self.unique_goal.h_c
+            hv = self.unique_goal.h
             uncertainty = (hc - self.unique_goal.obs_hits) / hc
             self.uncertainty_ratio = 1 + uncertainty
             if uncertainty < 0:
                 print("Uncertainty below 1 [hc - obs_hits is negative!]")
                 print(self.options.exp_file)
             print("Uncertainty: {}".format(self.uncertainty_ratio))
-            
-            
-class LPRecognizerDeltaHS(LPRecognizerHValue):
-    name = "delta-h-s"
+
+
+class LPRecognizerWeightedDeltaHC(LPRecognizerDeltaHC):
+    name = "weighted-delta-h-c"
 
     def __init__(self, options):
-        # Set to soft constraints.
-        # Calculate delta.  
-        LPRecognizerHValue.__init__(self, options, 1, True)
+        # Set to hard constraints.
+        # Calculate delta.
+        LPRecognizerDeltaHC.__init__(self, options)
 
     def accept_hypothesis(self, h):
-        if not h.test_failed:
-            # With tie breaking
-            # return (h2.score + len(self.hvalue_recognizer.observations) - h.score) <= (self.min_diff * unc) and h2.obs_hits == self.unique_goal.obs_hits
-            # Without tie breaking
-            return h.score[0] <= (self.unique_goal.score[0] * self.uncertainty_ratio)
-        return False
+        if h.test_failed:
+            return False
+        if h.last_obs < self.last_obs / self.uncertainty_ratio:
+            return False
+        return h.score[0] <= (self.unique_goal.score[0] * self.uncertainty_ratio)
 
+    def calculate_uncertainty(self):
+        self.last_obs = -1
+        if self.unique_goal:
+            for h in self.hyps:
+                if not h.test_failed and (h.last_obs > self.last_obs):
+                    self.last_obs = h.last_obs
 
-class LPRecognizerDeltaHSUncertainty(LPRecognizerDeltaHS):
-    name = "delta-h-s-uncertainty"
+class LPRecognizerWeightedDeltaHUncertainty(LPRecognizerDeltaHCUncertainty, LPRecognizerWeightedDeltaHC):
+    name = "weighted-delta-h-c-uncertainty"
 
     def __init__(self, options):
-        LPRecognizerDeltaHS.__init__(self, options)
-        
+        LPRecognizerWeightedDeltaHC.__init__(self, options)
+
+    def accept_hypothesis(self, h):
+        return LPRecognizerWeightedDeltaHC.accept_hypothesis(self, h)
+
     def calculate_uncertainty(self):
-        if self.unique_goal:
-            uncertainty_ratio = 1 + self.unique_goal.score[2] / (self.unique_goal.score[2] + len(obs))
-            
-            
+        LPRecognizerWeightedDeltaHC.calculate_uncertainty(self)
+        LPRecognizerDeltaHCUncertainty.calculate_uncertainty(self)

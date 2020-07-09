@@ -189,7 +189,7 @@ if __name__ == '__main__' :
 	if args.template:
 		template = args.template[0]
 		if 'previous' in template:
-			paths = ['../results/v3'] * 2 + [default_path] * 5
+			paths = [default_path] * 7
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
 		elif 'constraints' in template:
 			if 'single' in template:
@@ -197,15 +197,17 @@ if __name__ == '__main__' :
 			else:
 				paths = ['../results/v3_cPS'] * 2 + ['../results/v3_cLS'] * 2 + ['../results/v3_cLP'] * 2
 		elif 'filters' in template:
-			if 'opt' in file:
-				paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1_opt'] * 2 + ['../results/v4_f2_opt'] * 2
-			else:
-				paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1'] * 2 + ['../results/v4_f2'] * 2
+			paths = ['../results'] * 6
+			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
+			#if 'opt' in file:
+			#	paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1_opt'] * 2 + ['../results/v4_f2_opt'] * 2
+			#else:
+			#	paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1'] * 2 + ['../results/v4_f2'] * 2
 		elif 'pho3' in template:
 			paths = ['../results/v3'] * 2 + ['../results/v3_cLP3S'] * 2 + ['../results/v3_cP3'] * 2
 		elif 'weighted' in template:
-			paths = ['../results/v3'] + ['../results/v5-1'] * 2 + ['../results/v5-2'] * 2
-			approaches = ['delta-h-c', 'delta-h-c', 'weighted-c', 'delta-h-c', 'weighted-c']
+			paths = ['../results'] * 3 + ['../results/v5-2']
+			approaches = ['delta-h-c', 'weighted-c',  'weighted-c-uncertainty', 'delta-h-c']
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 

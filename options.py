@@ -8,14 +8,7 @@ def usage():
     print("-t  --max-time <time>            Maximum allowed execution time (defaults to 1800 secs)", file=sys.stderr)
     print("-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)", file=sys.stderr)
     print("-H  --heuristics                 Fast Downward search heuristics as a comma-separated string:\nExample: -H lmcut_constraints(), pho_constraints(), state_equation_constraints()", file=sys.stderr)
-    print("-v  --h-value                    Plan recognition by h-value", file=sys.stderr)
-    print("-c  --h-value-c                  Plan recognition by h-value with enforced constraints derived from the observations", file=sys.stderr)
-    print("-s  --soft-c                     Plan recognition with soft constraints", file=sys.stderr)
-    print("-d  --delta-h-c                  Plan recognition by delta between h-value-c and h-value", file=sys.stderr)
-    print("-f  --delta-h-s                  Plan recognition by delta between h-value-c and soft-c", file=sys.stderr)
-    print("-u  --h-value-c-uncertainty      Plan recognition with soft constraints accounting for missing observations", file=sys.stderr)
-    print("-n  --delta-h-c-uncertainty      Plan recognition with delta h-c accounting for missing observations", file=sys.stderr)
-    print("-k  --delta-h-s-uncertainty      Plan recognition with delta h-s accounting for missing observations", file=sys.stderr)
+    print("-r  --recognizer-name            Plan recognition name", file=sys.stderr)
 class Program_Options:
 
     def __init__(self, args):
@@ -47,6 +40,7 @@ class Program_Options:
         self.recognizer_name = None
         self.theta = 1 # Multiplier for any slack parameter
         self.filter = 0 # Obs filter
+        self.weight = 3
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
 
         for opcode, oparg in opts:
@@ -114,28 +108,26 @@ class Program_Options:
                     self.recognizer_name = "h-value-c"
                 elif oparg == 's':
                     self.recognizer_name = "soft-c"
-                elif oparg == 'w':
-                    self.recognizer_name = "weighted-c"
                 elif oparg == 'dc':
                     self.recognizer_name = "delta-h-c"
                 elif oparg == 'dc-f1':
                     self.recognizer_name = "delta-h-c-f1"
                 elif oparg == 'dc-f2':
                     self.recognizer_name = "delta-h-c-f2"
-                elif oparg == 'ds':
-                    self.recognizer_name = "delta-h-s"
-                elif oparg == 'hu':
-                    self.recognizer_name = "h-value-c-uncertainty"
-                elif oparg == 'wu':
-                    self.recognizer_name = "weighted-c-uncertainty"
+                elif oparg == 'w':
+                    self.recognizer_name = "weighted-c"
+                elif oparg == 'wdc':
+                    self.recognizer_name = "weighted-delta-h-c"
                 elif oparg == 'dcu':
                     self.recognizer_name = "delta-h-c-uncertainty"
-                elif oparg == 'dsu':
-                    self.recognizer_name = "delta-h-s-uncertainty"
                 elif oparg == 'dcu-f1':
                     self.recognizer_name = "delta-h-c-f1-uncertainty"
                 elif oparg == 'dcu-f2':
                     self.recognizer_name = "delta-h-c-f2-uncertainty"
+                elif oparg == 'wu':
+                    self.recognizer_name = "weighted-c-uncertainty"
+                elif oparg == 'wdcu':
+                    self.recognizer_name = "weighted-delta-h-c-uncertainty"
                 else:
                     self.recognizer_name = oparg
 

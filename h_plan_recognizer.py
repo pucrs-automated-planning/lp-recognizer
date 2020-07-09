@@ -5,14 +5,17 @@ from plan_recognizer import PlanRecognizer
 class LPRecognizerHValue(PlanRecognizer):
     name = "h-value"
 
-    def __init__(self, options, constraints = 0, delta = False):
-        PlanRecognizer.__init__(self, options, constraints, delta)
+    def __init__(self, options, h = True, h_c = False, h_s = False):
+        PlanRecognizer.__init__(self, options, h, h_c, h_s)
         self.uncertainty_ratio = 1
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
             return h.score[0] <= self.unique_goal.score[0] * self.uncertainty_ratio and h.obs_hits == self.unique_goal.obs_hits
         return False
+
+    def get_score(self, h):
+        return [h.h, h.obs_hits]
 
     def verify_hypothesis(self):
         if self.unique_goal:
@@ -30,8 +33,12 @@ class LPRecognizerHValue(PlanRecognizer):
 
     def run_recognizer(self):
         for i in range(0, len(self.hyps)):
-           self.hyps[i].evaluate(i, self.observations)
-        # Select unique goal (choose the goal with the smallest count)
+            hyp = self.hyps[i]
+            hyp.evaluate(i, self.observations)
+            if not hyp.test_failed:
+                hyp.score = self.get_score(hyp)
+                print("Score: %s" % hyp.score)
+        # Select unique goal (choose the goal with the smallest score)
         for h in self.hyps:
             if not h.test_failed:
                 if not self.unique_goal or h.score < self.unique_goal.score:

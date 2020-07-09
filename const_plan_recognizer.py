@@ -1,5 +1,6 @@
 #!/usr/bin/env python2
 
+import math
 from h_plan_recognizer import LPRecognizerHValue
 
 class LPRecognizerHValueC(LPRecognizerHValue):
@@ -8,8 +9,10 @@ class LPRecognizerHValueC(LPRecognizerHValue):
     def __init__(self, options):
         # Set to hard constraints.
         # Do not calculate delta.
-        LPRecognizerHValue.__init__(self, options, 2, False)
+        LPRecognizerHValue.__init__(self, options, h = False, h_c = True, h_s = False)
 
+    def get_score(self, h):
+        return [h.h_c, h.obs_hits]
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
     name = "h-value-c-uncertainty"
@@ -19,9 +22,13 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
         
     def calculate_uncertainty(self):
         if self.unique_goal:
-            score = self.unique_goal.score
-            self.uncertainty_ratio = 1 + (score[0] - self.unique_goal.obs_count) / score[0]
-            # self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[0] - self.unique_goal.obs_count)
+            hyp = self.unique_goal
+            uncertainty = (hyp.h_c - self.unique_goal.obs_hits) / hyp.h_c
+            self.uncertainty_ratio = 1 + uncertainty
+            if uncertainty < 0:
+                print("Uncertainty below 1 [hc - obs_hits is negative!]")
+                print(self.options.exp_file)
+            print("Uncertainty: {}".format(self.uncertainty_ratio))
             
 
 class LPRecognizerSoftC(LPRecognizerHValue):
@@ -30,16 +37,19 @@ class LPRecognizerSoftC(LPRecognizerHValue):
     def __init__(self, options):
         # Set to soft constraints.
         # Do not calculate delta.
-        LPRecognizerHValue.__init__(self, options, 1, False)
+        LPRecognizerHValue.__init__(self, options, h = False, h_c = False, h_s = True)
+
+    def get_score(self, h):
+        h.h_s = math.floor(h.h_s)
+        return [h.obs_hits, h.h_s]
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
             # Select multi goal with tie-breaking
-            return h.score[1] <= self.unique_goal.score[1] * self.uncertainty_ratio and h.obs_hits == self.unique_goal.obs_hits
+            return h.h_s <= self.unique_goal.h_s * self.uncertainty_ratio and h.obs_hits == self.unique_goal.obs_hits
             # Select multi goal
             # return h.obs_hits == self.unique_goal.obs_hits
         return False
-
 
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
     name = "soft-c-uncertainty"
@@ -49,7 +59,8 @@ class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
 
     def calculate_uncertainty(self):
         if self.unique_goal:
-            self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[1] - self.unique_goal.obs_count)
+            hyp = self.unique_goal
+            self.uncertainty_ratio = 1 + (hyp.h_s - hyp.obs_count) / hyp.h_s
 
 
 class LPRecognizerWeightedC(LPRecognizerHValue):
@@ -57,8 +68,11 @@ class LPRecognizerWeightedC(LPRecognizerHValue):
 
     def __init__(self, options):
         # Set to soft (weighted) constraints.
-        # Do not calculate delta.
-        LPRecognizerHValue.__init__(self, options, 3, False)
+        # Calculate delta.
+        LPRecognizerHValue.__init__(self, options, h = True, h_c = False, h_s = True)
+
+    def get_score(self, h):
+        return [h.h_s, h.h_s + h.h]
 
     def accept_hypothesis(self, h):
         if not h.test_failed:
@@ -74,4 +88,8 @@ class LPRecognizerWeightedCUncertainty(LPRecognizerWeightedC):
 
     def calculate_uncertainty(self):
         if self.unique_goal:
-            self.uncertainty_ratio = self.options.theta * (self.unique_goal.score[0] - self.unique_goal.obs_count)
+            delta = self.unique_goal.score[0]
+            hc = self.unique_goal.score[1]
+            uncertainty = (hc - self.unique_goal.obs_hits) / hc
+            self.uncertainty_ratio = 1 + uncertainty
+            print("Uncertainty: {}".format(self.uncertainty_ratio))

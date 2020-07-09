@@ -5,11 +5,12 @@ from planner_interface import Hypothesis
 class PlanRecognizer:
     name = None
 
-    def __init__(self, options, constraints = 0, delta = False):
+    def __init__(self, options, h, h_c, h_s):
         self.options = options
         self.observations = self.load_observations('obs.dat')
         self.hyps = self.load_hypotheses([options.hyp_max_time, options.max_memory, options.heuristics, \
-            constraints, str(delta).lower(), options.filter])
+            str(h).lower(), str(h_c).lower(), str(h_s).lower(), \
+            options.weight, options.filter])
         self.unique_goal = None
         self.accepted_hypotheses = []
 
@@ -25,8 +26,8 @@ class PlanRecognizer:
         instream = open('hyps.dat')
         for line in instream:
             line = line.strip()
-            H = Hypothesis(opts)
-            H.atoms = [tok.strip() for tok in line.split(',')]
+            atoms = [tok.strip() for tok in line.split(',')]
+            H = Hypothesis(opts, atoms)
             H.check_if_actual()
             hyps.append(H)
         instream.close()
@@ -35,8 +36,7 @@ class PlanRecognizer:
     def get_real_hypothesis(self):
         for h in self.hyps:
             if h.is_true:
-                realHyp = h
-                return realHyp
+                return h
 
     def write_report(self, experiment, hyps):
         outstream = open('report.txt', 'w')
@@ -60,11 +60,7 @@ class PlanRecognizer:
         print(max(hyps))
 
     def run_recognizer(self):
-        # return None
         raise NotImplementedError("You need to implement your method to run the recognizer")
 
     def accept_hypothesis(self, h):
-        """ Tests whether or not to accept hypothesis h as a likely one, under an unc uncertainty in the range [1,2]"""
-        # TODO I still need to refactor this function to something more elegant in terms of how we access it
-        # return None
         raise NotImplementedError("You need to implement your method to run the recognizer")

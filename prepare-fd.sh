@@ -37,7 +37,7 @@ fi
 
 pushd $FD_ROOT
 echo "Fast Downward Present"
-hg update -r $FD_REV
+hg update -r $(cat fd-patch-rev)
 if [[ ! $? ]]; then echo "Failed to update fast-downward. Exiting."; exit; fi
 popd
 

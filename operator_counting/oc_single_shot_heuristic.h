@@ -19,11 +19,12 @@ class ConstraintGenerator;
 
 class OCSingleShotHeuristic : public Heuristic {
     std::vector<std::shared_ptr<ConstraintGenerator>> constraint_generators;
-    lp::LPSolver lp_solver;
-    lp::LPSolver lp_solver_c;
-    int observation_constraints;
-    bool calculate_delta;
+    lp::LPSolver lp_h;
+    lp::LPSolver lp_h_c;
+    lp::LPSolver lp_h_s;
+    bool calculate_h, calculate_h_c, calculate_h_s;
     int filter;
+
     std::unordered_map<std::string,int> op_indexes;
     std::vector<std::string> observations;
     std::vector<std::string> pruned_observations;
@@ -31,6 +32,8 @@ class OCSingleShotHeuristic : public Heuristic {
     std::unordered_map<std::string, int> valid_obs_occurrences;
     int num_pruned_observations = 0;
     int num_valid_observations = 0;
+
+    int soft_weight;
     std::unordered_map<std::string, double> weights;
     double max_weight = 0;
 
@@ -39,9 +42,7 @@ protected:
     int compute_heuristic(const State &state);
     void load_observations();
     void prune_observations();
-    void enforce_observation_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
-    void add_observation_soft_constraints(std::vector<lp::LPVariable> &variables, std::vector<lp::LPConstraint> &constraints);
-    void output_results(double result, double result_c);
+    void output_results(double result, double result_c, double result_s);
 public:
     explicit OCSingleShotHeuristic(const options::Options &opts);
     ~OCSingleShotHeuristic();
