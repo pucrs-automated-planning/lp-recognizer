@@ -8,7 +8,7 @@ python:
 before_install: 
   - sudo apt-get update -y
   - sudo apt-get update
-  - sudo apt install cmake g++ mercurial make python3 zlib1g-dev libgmp3-dev
+  - sudo apt install cmake g++ git make python3 zlib1g-dev libgmp3-dev
 install: 
   - chmod +x *.sh
   - ./prepare-fd.sh
