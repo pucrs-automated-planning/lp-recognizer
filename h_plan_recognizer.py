@@ -15,16 +15,16 @@ class LPRecognizerHValue(PlanRecognizer):
         return False
 
     def get_score(self, h):
-        return [h.h, h.obs_hits]
+        return [h.h, h.obs_misses]
 
     def verify_hypothesis(self):
         if self.unique_goal:
             for h in self.hyps:
                 if self.accept_hypothesis(h):
-                    self.accepted_hypotheses.append(h)
+                    self.accepted_hypotheses.add(h)
         else: 
             for h in self.hyps:
-                self.accepted_hypotheses.append(h)
+                self.accepted_hypotheses.add(h)
             print("All hypotheses failed.")
             print(self.options.exp_file)
 

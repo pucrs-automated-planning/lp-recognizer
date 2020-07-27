@@ -70,6 +70,7 @@ class Hypothesis:
         self.atoms = atoms
         self.plan = []
         self.is_true = True
+        self.is_solution = True
         self.test_failed = False
         self.plan_time = 0
         self.total_time = 0
@@ -146,16 +147,29 @@ class Hypothesis:
         outstream.close()
         instream.close()
 
+    def check_if_equal(self, atoms):
+        for atom in atoms:
+            if not atom in self.atoms:
+                return False
+        return True
+
     def check_if_actual(self):
-        real_hyp_atoms = []
         instream = open('real_hyp.dat')
         for line in instream:
-            real_hyp_atoms = [tok.strip() for tok in line.split(',')]
+            atoms = [tok.strip() for tok in line.split(',')]
+            self.is_true = self.check_if_equal(atoms)
         instream.close()
-        for atom in real_hyp_atoms:
-            if not atom in self.atoms:
-                self.is_true = False
+        if self.is_true:
+            self.is_solution = True
+            return
+        instream = open('solution.dat')
+        for line in instream:
+            atoms = [tok.strip() for tok in line.split(',')]
+            self.is_solution = self.check_if_equal(atoms)
+            if self.is_solution:
                 break
+        instream.close()
+
 
     def __str__(self):
         res = ""

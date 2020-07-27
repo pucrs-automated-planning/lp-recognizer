@@ -11,7 +11,7 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
         LPRecognizerHValue.__init__(self, options, h = True, h_c = True, h_s = False)
 
     def get_score(self, h):
-        return [h.h_c - h.h, h.h_c, h.obs_hits]
+        return [h.h_c - h.h, h.h_c, h.obs_misses]
 
     def accept_hypothesis(self, h):
         if not h.test_failed:

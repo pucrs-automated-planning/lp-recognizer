@@ -5,145 +5,101 @@ DEVNULL = open(os.devnull,"r+b")
 from options import Program_Options
 from plan_recognizer_factory import PlanRecognizerFactory
 
-
-def progress(count, total, status=''):
-    bar_len = 30
-    filled_len = int(round(bar_len * count / float(total)))
-    percents = round(100.0 * count / float(total), 1)
-    bar = '=' * filled_len + '-' * (bar_len - filled_len)
-    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-    sys.stdout.flush()  # As suggested by Rom Ruben (see: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console/27871113#comment50529068_27871113)
-
-
 class Experiment:
+
     def __init__(self):
         self.unique_correct = 0
         self.multi_correct = 0
         self.multi_spread  = 0
-        self.candidate_goals = 0
-        self.totalTime = 0
-
-    def reset(self):
-        self.unique_correct = 0
-        self.multi_correct = 0
-        self.multi_spread  = 0
-        self.candidate_goals = 0
-        self.totalTime = 0
+        self.num_goals = 0
+        self.num_obs = 0
+        self.total_time = 0
+        self.fpr = 0
+        self.fnr = 0
+        self.agreement = 0
 
     def run_experiment(self, options):
         # print(self.recognizer_name)
         recognizer = PlanRecognizerFactory(options).get_recognizer(options.recognizer_name, options)
         self.recognizer_name = options.recognizer_name
 
-        startTime = time.time()
+        start_time = time.time()
         recognizer.run_recognizer()
-        experimentTime = time.time() - startTime
-        self.totalTime += experimentTime
+        experimentTime = time.time() - start_time
+        self.total_time += experimentTime
+        self.num_goals += len(recognizer.hyps)
+        self.num_obs += len(recognizer.observations)
 
-        if recognizer.unique_goal is not None and recognizer.get_real_hypothesis() == recognizer.unique_goal:
-            self.unique_correct = self.unique_correct + 1
+        if recognizer.unique_goal is None:
+            return False
+
+        if recognizer.get_real_hypothesis() == recognizer.unique_goal:
+            self.unique_correct += 1
         if recognizer.get_real_hypothesis() in recognizer.accepted_hypotheses:
-            self.multi_correct = self.multi_correct + 1
-        self.multi_spread = self.multi_spread  + len(recognizer.accepted_hypotheses)
-        self.candidate_goals = self.candidate_goals + len(recognizer.hyps)
-        return recognizer.unique_goal is not None
+            self.multi_correct += 1
+        self.multi_spread += len(recognizer.accepted_hypotheses)
+
+        solution_set = set([h for h in recognizer.hyps if h.is_solution])
+        total = float(len(solution_set | recognizer.accepted_hypotheses))
+        fp = float(len(recognizer.accepted_hypotheses - solution_set))
+        fn = float(len(solution_set - recognizer.accepted_hypotheses))
+        self.fpr += fp / total
+        self.fnr += fn / total
+        self.agreement += (total - fp - fn) / total
+        return True
 
     def __repr__(self):
-        return "UC=%d MC=%d MS=%d CG=%d"%(self.unique_correct,self.multi_correct,self.multi_spread,self.candidate_goals)
+        return "UC=%d MC=%d MS=%d CG=%d O=%d"%(self.unique_correct,self.multi_correct,self.multi_spread,self.num_goals,self.num_obs)
+
+    def stats(self):
+        return "AR=%2.4f FPR=%2.4f FNR=%2.4f MSpread=%2.4f" % (self.agreement, self.fpr, self.fnr, self.multi_spread)
 
 
-def do_experiments(basePath, domainName, observability, experiment_names):
+def do_experiments(base_path, domain_name, observability, recognizer):
     experiment_time = time.time()
-    totalProblems = 0
-
     file_failures = open("failed.txt","w")
 
-    print_text = "obs problems"
-    experiments_tables = {}
-    experiments = {}
+    options = Program_Options(['-r', recognizer])
 
-    for e in experiment_names:
-        print_text = print_text + " " + e
-        experiments[e] = Experiment()
-        experiments_tables[e] = "Obs  Accuracy  Precision  Recall  F1score  Fallout  Missrate  AvgRecG Total Time\n"
-
-    print_text += print_text + "\n\n"
-
+    file_content = "#P\tO%\t|O|\t|G|\tAR\tFPR\tFNR\tAcc\tSpread\tTime\n"
     for obs in observability:
-        problems = 0
-        for e in experiment_names:
-            experiments[e].reset()
-        problems_path = basePath + '/' + domainName + '/' + obs + '/'
-        total_problems = len(os.listdir(problems_path))
-        for problem_file in os.listdir(problems_path):
-            if problem_file.endswith(".tar.bz2"):
-                path = problems_path + problem_file
-                os.system('rm -rf *.pddl *.dat *.log')
-                os.system('tar xvjf ' + path)
-                problems = problems + 1
-                for e in experiment_names:
-                    args = ['-r', e, '-e', problems_path + problem_file]
-                    options = Program_Options(args)
-                    success = experiments[e].run_experiment(options)
-                    if not success:
-                        file_failures.write(problems_path + problem_file + "\n")
-                    progress(problems, total_problems, experiments[e].recognizer_name + ":" + domainName + ":" + str(obs) + "%")
-                    print("")
+        current_problem = 0
+        problem_dir = base_path + '/' + domain_name + '/' + obs + '/'
+        files = [file for file in os.listdir(problem_dir) if file.endswith(".tar.bz2")]
+        experiment = Experiment()
+        for problem_file in files:
+            problem_path = problem_dir + problem_file
+            current_problem += 1
+            os.system('rm -rf *.pddl *.dat *.log')
+            options.extract_exp_file(problem_path)
+            success = experiment.run_experiment(options)
+            if not success:
+                file_failures.write(problem_dir + problem_file + "\n")
+            print(options.recognizer_name + ":" + domain_name + ":" + str(obs) + "% - " + str(current_problem) + "/" + str(len(files)))
 
-        print_text_result = "%s %d "%(obs,problems)
-        totalProblems += problems
-        for e in experiment_names:
-            print_text_result = print_text_result + "%d "%(experiments[e].unique_correct)
+        num_problems = float(len(files))
+        file_content += "%s\t%s\t%s\t%s" % (len(files), obs, experiment.num_obs / num_problems, experiment.num_goals / num_problems)
+        file_content += "\t%2.4f" % (experiment.agreement / num_problems)
+        file_content += "\t%2.4f" % (experiment.fpr / num_problems)
+        file_content += "\t%2.4f" % (experiment.fnr / num_problems)
+        file_content += "\t%2.4f" % (experiment.multi_correct / num_problems)
+        file_content += "\t%2.4f" % (experiment.multi_spread / num_problems)
+        file_content += "\t%2.4f" % (experiment.total_time / num_problems)
+        file_content += "\n"
 
-            experiments_tables[e] += "%s "%(obs)
-
-            truePositives = float(experiments[e].multi_correct)
-            trueNegatives = float(experiments[e].candidate_goals - experiments[e].multi_spread)
-            falsePositives = float(experiments[e].multi_spread - experiments[e].multi_correct)
-            falseNegatives = float(experiments[e].candidate_goals - experiments[e].multi_correct)
-            print("TP=%2.4f TN=%2.4f FP=%2.4f FN=%2.4f MSpread=%2.4f"%(truePositives,trueNegatives,falsePositives,falseNegatives,experiments[e].multi_spread))
-
-            accuracy = float(experiments[e].multi_correct)/float(problems)
-            precision = truePositives/float(experiments[e].multi_spread) if experiments[e].multi_spread != 0 else 0
-            recall = truePositives/float(problems)
-            if ((precision + recall) == 0):
-                f1score = 0
-            else:
-                f1score = 2 * ((precision * recall) / (precision + recall))
-            fallout = falsePositives / (trueNegatives + falsePositives)
-            missrate = falseNegatives / (falseNegatives + truePositives)
-            experiments_tables[e] += "%2.4f "%(accuracy)
-            experiments_tables[e] += "%2.4f "%(precision)
-            experiments_tables[e] += "%2.4f "%(recall)
-            experiments_tables[e] += "%2.4f "%(f1score)
-            experiments_tables[e] += "%2.4f "%(fallout)
-            experiments_tables[e] += "%2.4f "%(missrate)
-            experiments_tables[e] += "%2.4f "%(float(experiments[e].multi_spread)/float(problems))
-            experiments_tables[e] += "%2.4f "%(float(experiments[e].totalTime)/float(problems))
-            experiments_tables[e] += "\n"
-
-        print_text_result += print_text_result + "\n"
-        print_text += print_text_result
-        print(str(domainName))
-        print(print_text)
-
-    for e in experiment_names:
-        experiments_tables[e] += '\n$> Total Problems: ' + str(totalProblems)
-        table_file = open(str(domainName) + "-" + experiments[e].recognizer_name +'.txt', 'w')
-        table_file.write(experiments_tables[e])
-        table_file.close()
+    table_file = open(domain_name + "-" + options.recognizer_name +'.txt', 'w')
+    table_file.write(file_content)
+    table_file.close()
 
     final_time = time.time() - experiment_time
     file_failures.close()
     print('Experiment Time: {0:3f}s'.format(final_time))
 
 if __name__ == '__main__':
-    basePath = sys.argv[1]
-    domainName = sys.argv[2]
-    if domainName.endswith("noisy"):
-        observability = ['25', '50', '75', '100']
-    else:
-        observability = ['10', '30', '50', '70', '100']
-    do_experiments(basePath, domainName, observability, sys.argv[3:])
+    observability = ['10', '30', '50', '70', '100']
+    base_path = sys.argv[1]
+    domain_name = sys.argv[2]
+    for approach in sys.argv[3:]:
+        do_experiments(base_path, domain_name, observability, approach)
     # Get rid of the temp files
     os.system('rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2')

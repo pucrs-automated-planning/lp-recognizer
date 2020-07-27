@@ -12,7 +12,7 @@ class PlanRecognizer:
             str(h).lower(), str(h_c).lower(), str(h_s).lower(), \
             options.weight, options.filter])
         self.unique_goal = None
-        self.accepted_hypotheses = []
+        self.accepted_hypotheses = set()
 
     def load_observations(self, file):
         observations = []

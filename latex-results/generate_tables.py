@@ -4,184 +4,161 @@ import os
 import math
 import argparse
 
-def main(template, file, domains, approaches, basepaths, names):
+class DomainData:
+
+	def __init__(self, observabilities):
+		self.observabilities = observabilities
+		self.total_problems = 0
+		self.obs_data = dict()
+		for obs in observabilities:
+			self.obs_data[obs] = dict()
+		self.num_lines = 0
+		self.avg_data = dict()
+
+	def read_approach_data(self, file, approach):
+		file.readline() # Header
+		sum_values = [0] * 10
+		for obs in self.observabilities:
+			line = file.readline().strip().split('\t')
+			self.total_problems += int(line[0])
+			values = [float(x) for x in line]
+			self.obs_data[obs][approach] = values
+			sum_values = [x + y for x, y in zip(sum_values, values)]
+		self.avg_data[approach] = [x / len(self.observabilities) for x in sum_values]
+
+	def get_avg_goals(self):
+		sum_goals = 0
+		problems = 0
+		for approach_data in self.obs_data.values():
+			for values in approach_data.values():
+				sum_goals += values[3]
+				problems += 1
+		return sum_goals / problems if problems > 0 else float("nan")
+
+	def get_avg_obs(self, obs):
+		sum_obs = 0
+		problems = 0
+		approach_data = self.obs_data[obs]
+		for values in approach_data.values():
+			sum_obs += values[2]
+			problems += 1
+		return sum_obs / problems if problems > 0 else float("nan")
+
+def average_values(all_domain_data, approach):
+	sum_values = [0] * 10
+	for domain_data in all_domain_data.values():
+		if approach in domain_data.avg_data:
+			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
+	return [x / len(all_domain_data.keys()) for x in sum_values]
+
+def collect_data(file, domains, approaches, basepaths, observabilities):
+	all_domain_data = dict()
+	for domain_name in domains:
+		domain_data = DomainData(observabilities)
+		all_domain_data[domain_name] = domain_data
+		for basepath, approach in zip(basepaths, approaches):
+			path = basepath + "/" + domain_name + '-' + approach + '.txt'
+			if not os.path.isfile(path):
+				continue
+			with open(path) as f:
+				domain_data.read_approach_data(f, basepath + approach)
+	return all_domain_data
+
+
+def main(template, file, domains, approaches, basepaths):
 	print("Tabulating data from %s for domains %s"%(basepaths,domains))
+	observabilities = ['10', '30', '50', '70', '100']
+	all_domain_data = collect_data(file, domains, approaches, basepaths, observabilities)
 
 	content_table = ''
-	
-	approaches_metrics = dict()
-	for basepath, approach in zip(basepaths, approaches):
-		approaches_metrics[basepath + approach] = [0, 0, 0, 0]
 
-	totalInstances = 0
 	for domain_name in domains:
-		multirow = 0
-		observabilities = []
-		if 'noisy' in domain_name:
-			multirow = 4
-			observabilities = ['25', '50', '75', '100']
-		else: 
-			multirow = 5
-			observabilities = ['10', '30', '50', '70', '100']
-
-		totalProblems = 0
-		avgGoals = 0
-		totalInstances += multirow
-
-		path = basepaths[0] + "/" + domain_name + '-' + str(approaches[0]) + '.txt'
-		with open(path) as f:
-			printed = False
-			for l in f:
-				line = l.strip().split('\t')
-				if(line[0] == '10' and printed == False):
-					avgGoals = float(0)
-					printed = True
-		
-		domain_name_4table = domain_name.replace('-noisy', '')
+		domain_name_4table = domain_name
+		domain_name_4table = domain_name_4table.replace('-optimal', '')
+		domain_name_4table = domain_name_4table.replace('-suboptimal', '')
+		domain_name_4table = domain_name_4table.replace('-noisy', '')
 		if 'intrusion-detection' in domain_name:
-			domain_name_4table = 'instrusion'
-
+			domain_name_4table = domain_name_4table.replace("-detection", "")
 		if 'blocks-world' in domain_name:
-			domain_name_4table = 'blocks'
-
+			domain_name_4table = domain_name_4table.replace("-world", "")
 		if 'zeno-travel' in domain_name:
-			domain_name_4table = 'zeno'
-
+			domain_name_4table = domain_name_4table.replace("-travel", "")
 		if 'easy-ipc-grid' in domain_name:
-			domain_name_4table = 'ipc-grid'			
+			domain_name_4table = domain_name_4table.replace("easy-", "")
+
+		domain_data = all_domain_data[domain_name]
 		
-		content_table += '\n\\multirow{' + str(multirow) +'}{*}{\\rotatebox[origin=c]{90}{\\textsc{' + domain_name_4table + '}} \\rotatebox[origin=c]{90}{(' + str((totalProblems * 4)) + ')}} & \\multirow{' + str(multirow) + '}{*}{' + str(round(avgGoals, 1)) + '} '	
+		content_table += '\n\\multirow{%s}{*}{\\rotatebox[origin=c]{90}{\\textsc{%s}} \\rotatebox[origin=c]{90}{(%s)}} & \\multirow{%s}{*}{%s} ' \
+			% (len(observabilities), domain_name_4table, domain_data.total_problems, len(observabilities), round(domain_data.get_avg_goals(), 1))
 
-		print_metrics = ''
 		for obs in observabilities:
-			printedObs = False
+			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + str(round(domain_data.get_avg_obs(obs), 2)) + '\n'
 			for basepath, approach in zip(basepaths, approaches):
-				path = basepath + "/" + domain_name + '-' + approach + '.txt'
-				if not os.path.isfile(path):
-					print_metrics += '\n\t\t% ' + approach + ' - ' + obs + '% '
-					print_metrics += '\n\t\t& - & - & - & -'
-					print_metrics += ' \t \n'
+				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
+				if (basepath + approach) not in domain_data.obs_data[obs]:
+					content_table += '\n\t\t& - & - & - & - \t \n'
 					continue
-				with open(path) as f:
-					for l in f:
-						line = l.strip().replace(' ', '\t').split('\t')
-						if len(line) == 0 or line[0] != obs:
-							continue
+				values = domain_data.obs_data[obs][basepath + approach]
+				time = round(values[9], 3)
+				accuracy = round(values[7] * 100, 1)
+				spread = round(values[8], 2)
+				ratio = 0 if (values[8] == 0) else round(100 * values[7] / values[8], 1)
+				ar = round(values[4], 2)
+				fpr = round(values[5], 2)
+				fnr = round(values[6], 2)
+				content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, ar, fpr, fnr)
 
-						if not printedObs:
-							avgObs = float(0)
-							print_metrics += '\n\t' + ('\\\\ & & ' if (obs != '25' and obs != '10') else ' & ') + obs + '\t & ' + str(avgObs) + '\n'
-							printedObs = True
+				content_table += ' \t \n'
+		content_table += ' \\\\ \hline'
 
-						if len(line) < 9:
-							continue
-
-						time = float(line[8])
-						accuracy = (float(line[1]) * 100)
-						spreadG = float(line[7])
-						if 'uniqueness' in approach and 'noisy' in domain_name:
-							time = float(line[10])
-							accuracy = (float(line[1]) * 100)
-							spreadG = float(line[9])
-
-						if 'completion' in approach and 'noisy' in domain_name:
-							time = float(line[10])
-							accuracy = (float(line[1]) * 100)
-							spreadG = float(line[9])
-
-						if 'mirroring' in approach and 'noisy' in domain_name:
-							time = float(line[10])
-							accuracy = (float(line[1]) * 100)
-							spreadG = float(line[9])
-
-						if 'mirroring' in approach:
-							time = float(line[10])
-							accuracy = (float(line[1]) * 100)
-							spreadG = float(line[9])
-						if spreadG > 0:
-							ratio = accuracy / spreadG
-						else:
-							ratio = 0
-
-						list_metrics = approaches_metrics[basepath + approach]
-						list_metrics[0] += time
-						list_metrics[1] += accuracy
-						list_metrics[2] += spreadG
-						list_metrics[3] += ratio
-
-						print_metrics += '\n\t\t% ' + approach + ' - ' + obs + '% '
-						print_metrics += '\n\t\t& ' + str(round(time, 3)) + ' & ' + str(round(accuracy, 1)) + '\% & ' + str(round(spreadG, 2)) + ' & ' + str(round(ratio, 1)) 
-						print_metrics += ' \t \n'
-
-		print_metrics += ' \\\\ \hline'
-		content_table += print_metrics
-
-	avg_approaches = dict()
-	for approach in approaches_metrics.keys():
-		time = approaches_metrics[approach][0] / totalInstances
-		accuracy = approaches_metrics[approach][1] / totalInstances
-		spread = approaches_metrics[approach][2] / totalInstances
-		ratio = approaches_metrics[approach][3] / totalInstances
-		avg_approaches[approach] = [time, accuracy, spread, ratio]
+	content_avg = ''
+	for basepath, approach in zip(basepaths, approaches):
+		values = average_values(all_domain_data, basepath + approach)
+		time = round(values[9], 3)
+		accuracy = round(values[7] * 100, 2)
+		spread = round(values[8], 2)
+		ratio = 0 if (values[8] == 0) else round(100 * values[7] / values[8], 2)
+		ar = round(values[4], 2)
+		fpr = round(values[5], 2)
+		fnr = round(values[6], 2)
+		content_avg += ' & {0} & {1} & {2} & {3}'.format(time, ar, fpr, fnr)
 
 	latexContent = ''
 	with open(template, 'r') as latex:
 		latexContent = latex.read()
-
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
-
-	index = 0
-	for basepath, approach, name in zip(basepaths, approaches, names):
-		metrics = avg_approaches[basepath + approach]
-		latexContent = latexContent.replace('<APPROACH_' + str(index) + '>', "$"+name+"$")
-		latexContent = latexContent.replace('<AVG_APPROACH_' + str(index) + '>', '%.3f'%(metrics[0]) + ' & ' + '%.2f'%(metrics[1]) + '\% & ' + '%.2f'%(metrics[2]) + ' & ' + '%.2f'%(metrics[3]))
-		index += 1
-
+	latexContent = latexContent.replace('<AVG_APPROACH>', content_avg)
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
+	os.system("pdflatex " + file)
 
 if __name__ == '__main__' :
-	# Domains with noisy observations.
-	# domains = ['blocks-world-noisy', 'campus-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
-	#  			'easy-ipc-grid-noisy', 'ferry-noisy', 'intrusion-detection-noisy', 'kitchen-noisy', 'logistics-noisy',\
-	#  			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
-	domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
-	 			'easy-ipc-grid', 'ferry', 'logistics',\
-	 			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-
-	# Domains with missing observations.
-	# domains = ['blocks-world', 'campus', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'intrusion-detection', 'kitchen', 'logistics' ,\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-	# domains = ['blocks-world', 'depots', 'driverlog', 'dwr',\
-	#  			'easy-ipc-grid', 'ferry', 'logistics' ,\
-	#  			 'miconic', 'rovers', 'satellite', 'sokoban', 'zeno-travel']
-
-	# List of evaluated approaches.
-	
-	file = 'corrections.tex'
-	template = 'corrections-template.tex'
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty'] * 3
-	paths = ['results'] * 2 + ['results/v2'] * 2 + ['results/v3'] * 2
+	default_path = '../results'
+	#domains = ['blocks-world-optimal', 'depots-optimal', 'driverlog-optimal', 'dwr-optimal',\
+	# 			'easy-ipc-grid-optimal', 'ferry-optimal', 'logistics-optimal',\
+	# 			 'miconic-optimal', 'rovers-optimal', 'satellite-optimal', 'sokoban-optimal', 'zeno-travel-optimal']
+	domains = ['blocks-world-optimal', 'easy-ipc-grid-optimal', 'logistics-optimal', 'sokoban-optimal']
+	file = 'filters-optimal.tex'
+	template = 'filters-template.tex'
+	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
+	paths = [default_path] * 6
 
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
 	parser.add_argument('-a', '--approaches', metavar="A", nargs='+', type=str, help="approaches to tabulate")
 	parser.add_argument('-p', '--paths', metavar="P", nargs='+', type=str, help="base path of data result files for each approach")
-	parser.add_argument('-n', '--names', metavar="N", nargs='+', type=str, help="approach names to put in table")
 	parser.add_argument('-t', '--template', metavar="T", nargs=1, type=str, help="template file")
 	parser.add_argument('-f', '--file', metavar="F", nargs=1, type=str, help="result file")
 	args = parser.parse_args()
-
-	default_path = '../results'
 
 	# Latex resulting files
 	if args.file:
 		file = args.file[0]
 		if 'noisy' in file:
-			domains = ['blocks-world-noisy', 'depots-noisy', 'driverlog-noisy', 'dwr-noisy',\
-			 			'easy-ipc-grid-noisy', 'ferry-noisy', 'logistics-noisy',\
-			 			 'miconic-noisy', 'rovers-noisy', 'satellite-noisy', 'sokoban-noisy', 'zeno-travel-noisy']
+			domains = [name.replace("optimal", "noisy") for name in domains]
+		elif 'suboptimal' in file:
+			domains = [name.replace("optimal", "suboptimal") for name in domains]
+			print('bla')
 	if args.domains:
 		domains = args.domains # Domains used
 
@@ -191,38 +168,22 @@ if __name__ == '__main__' :
 		if 'previous' in template:
 			paths = [default_path] * 7
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'planrecognition-ramirezgeffner', 'goal_recognition-yolanda', 'planrecognition-heuristic_completion-0', 'planrecognition-heuristic_uniqueness-0', 'mirroring_landmarks']
+		elif 'filters' in template:
+			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
+		elif 'weighted' in template:
+			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'weighted-c', 'weighted-c-uncertainty', 'weighted-delta-h-c', 'weighted-delta-h-c-uncertainty']
 		elif 'constraints' in template:
 			if 'single' in template:
-				paths = ['../results/v3_cL'] * 2 + ['../results/v3_cP']* 2 + ['../results/v3_cS'] * 2
+				approaches['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']
 			else:
-				paths = ['../results/v3_cPS'] * 2 + ['../results/v3_cLS'] * 2 + ['../results/v3_cLP'] * 2
-		elif 'filters' in template:
-			paths = ['../results'] * 6
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
-			#if 'opt' in file:
-			#	paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1_opt'] * 2 + ['../results/v4_f2_opt'] * 2
-			#else:
-			#	paths = ['../results/v4_f0'] * 2 + ['../results/v4_f1'] * 2 + ['../results/v4_f2'] * 2
-		elif 'pho3' in template:
-			paths = ['../results/v3'] * 2 + ['../results/v3_cLP3S'] * 2 + ['../results/v3_cP3'] * 2
-		elif 'weighted' in template:
-			paths = ['../results'] * 3 + ['../results/v5-2']
-			approaches = ['delta-h-c', 'weighted-c',  'weighted-c-uncertainty', 'delta-h-c']
+				approaches['delta-h-c-cps', 'delta-h-c-cps-uncertainty', 'delta-h-c-cls', 'delta-h-c-cls-uncertainty', 'delta-h-c-clp', 'delta-h-c-clp-uncertainty']
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 
-	if args.names:
-		if len(args.names) == len(approaches):
-			names = args.names
-		else:
-			print("--names parameter requires the same number of names as --approaches")
-			names = approaches
-	else:
-		names = approaches
 	if args.paths:
 		paths=args.paths
 	
 	if len(paths) < len(approaches):
 		paths += [default_path] * (len(approaches) - len(paths))
 
-	main(template, file, domains, approaches, paths, names)
+	main(template, file, domains, approaches, paths)

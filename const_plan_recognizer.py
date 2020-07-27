@@ -12,7 +12,7 @@ class LPRecognizerHValueC(LPRecognizerHValue):
         LPRecognizerHValue.__init__(self, options, h = False, h_c = True, h_s = False)
 
     def get_score(self, h):
-        return [h.h_c, h.obs_hits]
+        return [h.h_c, h.obs_misses]
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
     name = "h-value-c-uncertainty"
@@ -41,7 +41,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
 
     def get_score(self, h):
         h.h_s = math.floor(h.h_s)
-        return [h.obs_hits, h.h_s]
+        return [h.obs_misses, h.h_s]
 
     def accept_hypothesis(self, h):
         if not h.test_failed:

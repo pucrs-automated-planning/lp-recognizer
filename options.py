@@ -136,14 +136,16 @@ class Program_Options:
             print("Not checking other files", file=sys.stderr)
             return
 
-        if self.exp_file is None:
-            print("No experiment file was specified!!", file=sys.stderr)
-            usage()
-            sys.exit(1)
+        if self.exp_file:
+            self.extract_exp_file()
 
-        os.system('tar jxvf %s' % self.exp_file)
+
+    def extract_exp_file(self, exp_file=None):
+        if not exp_file:
+            exp_file = self.exp_file
+        os.system('tar jxvf %s' % exp_file)
         if not os.path.exists('domain.pddl'):
-            os.system('tar -jxvf %s' % self.exp_file + ' --strip-components 1')
+            os.system('tar -jxvf %s' % exp_file + ' --strip-components 1')
             if not os.path.exists('domain.pddl'):
                 print("No 'domain.pddl' file found in experiment file!", file=sys.stderr)
                 usage()
@@ -164,6 +166,13 @@ class Program_Options:
             print("No 'real_hyp.dat' file found in experiment file!", file=sys.stderr)
             usage()
             sys.exit(1)
+        solution_file = exp_file.replace("tar.bz2", "solution")
+        if os.path.exists(solution_file):
+            os.system("cp %s solution.dat" % solution_file)
+        else:
+            print("No solution file: %s" % solution_file)
+            os.system("cp real_hyp.dat solution.dat")
+
 
     def print_options(self):
         def print_yes(): 

@@ -42,11 +42,34 @@ class PlanRecognizerFactory(object):
         """Returns an instance of PlanRecognizer given the name used in the parameters"""
         if options == None:
             options = copy.copy(self.options)
-        if "f1" in name:
+
+        # Filter options
+        if "-f1" in name:
             name = name.replace("-f1", "")
             options.filter = 1
-        elif "f2" in name:
+        elif "-f2" in name:
             name = name.replace("-f2", "")
             options.filter = 2
+
+        # Heuristic options
+        if "-cl" in name:
+            name = name.replace("-cl", "")
+            options.heuristics = ["lmcut_constraints()"]
+        elif "-cp" in name:
+            name = name.replace("-cp", "")
+            options.heuristics = ["pho_constraints()"]
+        elif "-cs" in name:
+            name = name.replace("-cs", "")
+            options.heuristics = ["state_equation_constraints()"]
+        elif "-cps" in name:
+            name = name.replace("-cps", "")
+            options.heuristics = ["pho_constraints()", "state_equation_constraints()"]
+        elif "-cls" in name:
+            name = name.replace("-cls", "")
+            options.heuristics = ["lmcut_constraints()", "state_equation_constraints()"]
+        elif "-clp" in name:
+            name = name.replace("-clp", "")
+            options.heuristics = ["lmcut_constraints()", "pho_constraints()"]
+
         recognizer = self.recognizers[name](options)
         return recognizer
