@@ -52,16 +52,7 @@ class PlanRecognizerFactory(object):
             options.filter = 2
 
         # Heuristic options
-        if "-cl" in name:
-            name = name.replace("-cl", "")
-            options.heuristics = ["lmcut_constraints()"]
-        elif "-cp" in name:
-            name = name.replace("-cp", "")
-            options.heuristics = ["pho_constraints()"]
-        elif "-cs" in name:
-            name = name.replace("-cs", "")
-            options.heuristics = ["state_equation_constraints()"]
-        elif "-cps" in name:
+        if "-cps" in name:
             name = name.replace("-cps", "")
             options.heuristics = ["pho_constraints()", "state_equation_constraints()"]
         elif "-cls" in name:
@@ -70,6 +61,16 @@ class PlanRecognizerFactory(object):
         elif "-clp" in name:
             name = name.replace("-clp", "")
             options.heuristics = ["lmcut_constraints()", "pho_constraints()"]
+        elif "-cl" in name:
+            name = name.replace("-cl", "")
+            options.heuristics = ["lmcut_constraints()"]
+        elif "-cp" in name:
+            name = name.replace("-cp", "")
+            options.heuristics = ["pho_constraints()"]
+        elif "-cs" in name:
+            name = name.replace("-cs", "")
+            options.heuristics = ["state_equation_constraints()"]
+
 
         recognizer = self.recognizers[name](options)
         return recognizer

@@ -102,34 +102,42 @@ class Program_Options:
                 print(self.heuristics)
 
             if opcode in ('-r', '--recognizer-name'):
-                if oparg == 'v':
-                    self.recognizer_name = "h-value"
-                elif oparg == 'c':
-                    self.recognizer_name = "h-value-c"
-                elif oparg == 's':
-                    self.recognizer_name = "soft-c"
-                elif oparg == 'dc':
-                    self.recognizer_name = "delta-h-c"
-                elif oparg == 'dc-f1':
-                    self.recognizer_name = "delta-h-c-f1"
-                elif oparg == 'dc-f2':
-                    self.recognizer_name = "delta-h-c-f2"
-                elif oparg == 'w':
-                    self.recognizer_name = "weighted-c"
-                elif oparg == 'wdc':
+                if 'wdc' in oparg:
                     self.recognizer_name = "weighted-delta-h-c"
-                elif oparg == 'dcu':
-                    self.recognizer_name = "delta-h-c-uncertainty"
-                elif oparg == 'dcu-f1':
-                    self.recognizer_name = "delta-h-c-f1-uncertainty"
-                elif oparg == 'dcu-f2':
-                    self.recognizer_name = "delta-h-c-f2-uncertainty"
-                elif oparg == 'wu':
-                    self.recognizer_name = "weighted-c-uncertainty"
-                elif oparg == 'wdcu':
-                    self.recognizer_name = "weighted-delta-h-c-uncertainty"
+                elif 'w' in oparg:
+                    self.recognizer_name = "weighted-c"
+                elif 'dc' in oparg:
+                    self.recognizer_name = "delta-h-c"
+                elif 'vc' in oparg:
+                    self.recognizer_name = "h-value-c"
+                elif 'sc' in oparg:
+                    self.recognizer_name = "soft-c"
+                elif 'v' in oparg:
+                    self.recognizer_name = "h-value"
                 else:
-                    self.recognizer_name = oparg
+                    self.recogniszer_name = oparg
+
+                if '-f1' in oparg:
+                    self.recognizer_name += "-f1"
+                elif '-f2' in oparg:
+                    self.recognizer_name += "-f2"
+
+                if '-cps' in oparg:
+                    self.recognizer_name += "-cps"
+                elif '-cls' in oparg:
+                    self.recognizer_name += "-cls"
+                elif '-clp' in oparg:
+                    self.recognizer_name += "-clp"
+                elif '-cl' in oparg:
+                    self.recognizer_name += "-cl"
+                elif '-cp' in oparg:
+                    self.recognizer_name += "-cp"
+                elif '-cs' in oparg:
+                    self.recognizer_name += "-cs"
+
+                if 'u' in oparg:
+                    self.recognizer_name += "-uncertainty"
+
 
         # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)
         if self.batch:
