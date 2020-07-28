@@ -9,8 +9,7 @@ from delta_plan_recognizer import *
 
 class TestPlanRecognizerFactory(unittest.TestCase):
     def setUp(self):
-        args = ["-e", "experiments/sokoban/10/sokoban_p07_hyp-4_10_3.tar.bz2"]
-        options = Program_Options(args)
+        options = Program_Options([])
         self.factory = PlanRecognizerFactory(options)
 
     def test_factory(self):
@@ -33,7 +32,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_hvalue_recognizer(self):
         print("Testing h-value")
-        args = ["-e", "experiments/sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
+        args = ["-e", "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("h-value", options)
         recognizer.run_recognizer()
@@ -44,7 +43,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_deltahc_recognizer(self):
         print("Testing delta-h-c")
-        args = ["-e", "experiments/sokoban/10/sokoban_p07_hyp-4_10_3.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c", options)
         recognizer.run_recognizer()
@@ -54,7 +53,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_deltahc_uncertainty_recognizer(self):
         print("Testing delta-h-c-uncertainty")
-        args = ["-e", "experiments/sokoban/10/sokoban_p07_hyp-4_10_3.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c-uncertainty", options)
         recognizer.run_recognizer()
@@ -65,7 +64,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_deltahc_filter_recognizer(self):
         print("Testing delta-h-c with filter")
-        args = ["-e", "experiments/sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
+        args = ["-e", "experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c", options)
         recognizer.run_recognizer()

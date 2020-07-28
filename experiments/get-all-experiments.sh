@@ -7,55 +7,8 @@
 #  Copyright 2019 Felipe Meneguzzi. All rights reserved.
 #
 
-EXPERIMENTS_REPO="https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset.git"
-
-declare -a domains=("blocks-world"
-					# "blocks-world-aaai"
-					"campus"
-					"depots"
-					"driverlog"
-					"dwr"
-					"dwr"
-					"easy-ipc-grid"
-					"ferry"
-					# "hanoi"
-					# "hanoi_handmade"
-					"intrusion-detection"
-					"kitchen"
-					# "lo_handmade"
-					# "lodigital"
-					"logistics"
-					# "lotwisted"
-					# "mandrill"
-					"miconic"
-					# "mnist"
-					# "mnist_handmade"
-					"rovers"
-					"satellite"
-					"sokoban"
-					# "spider"
-					"zeno-travel"
-					)
-
-declare -a noisy_domains=("blocks-world-noisy"
-					"campus-noisy"
-					"depots-noisy"
-					"driverlog-noisy"
-					"dwr-noisy"
-					"easy-ipc-grid-noisy"
-					"ferry-noisy"
-					"intrusion-detection-noisy"
-					"kitchen-noisy"
-					"logistics-noisy"
-					"miconic-noisy"
-					"rovers-noisy"
-					"satellite-noisy"
-					"sokoban-noisy"
-					"zeno-travel-noisy"
-					)
+EXPERIMENTS_REPO="https://github.com/luisaras/goal-plan-recognition-dataset.git"
 
 pushd ../../
-
 git clone --depth=1 $EXPERIMENTS_REPO goal-plan-recognition-dataset
-
 popd
