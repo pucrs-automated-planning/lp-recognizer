@@ -28,17 +28,17 @@ class ExperimentH:
             recognizer.run_recognizer()
             real_hyp = recognizer.get_real_hypothesis()
             hyp = recognizer.unique_goal
-            self.real_h_values[c].append(real_hyp.score[1])
-            self.h_values[c].append(hyp.score[1])
+            self.real_h_values[c].append(real_hyp.h)
+            self.h_values[c].append(hyp.h)
             self.spread[c].append(len(recognizer.accepted_hypotheses))
-            self.real_delta_values[c].append(real_hyp.score[0])
-            self.delta_values[c].append(hyp.score[0])
+            self.real_delta_values[c].append(real_hyp.h_c)
+            self.delta_values[c].append(hyp.h_c)
         return True
 
     def do_experiments(self, domains): 
         file_failures = open("failed.txt", "w")
         for domainName in domains:
-            problems_path = '../domains/' + domainName + '/' + str(self.obs) + '/'
+            problems_path = '../goal-plan-recognition-dataset/' + domainName + '/' + str(self.obs) + '/'
             for problem_file in os.listdir(problems_path):
                 if not problem_file.endswith(".tar.bz2"):
                     continue
@@ -67,21 +67,21 @@ class ExperimentH:
 def get_all_h_values():
     observabilities = [10, 30, 50, 70]
     constraint_sets = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
-    domains = ["blocks-world", \
-                    "campus", \
-                    "depots", \
-                    "driverlog", \
-                    "dwr", \
-                    "easy-ipc-grid", \
-                    "ferry", \
-                    "intrusion-detection", \
-                    "kitchen", \
-                    "logistics", \
-                    "miconic", \
-                    "rovers", \
-                    "satellite", \
-                    "sokoban", \
-                    "zeno-travel"]
+    domains = ["blocks-world-optimal", \
+                "campus-optimal", \
+                "depots-optimal", \
+                "driverlog-optimal", \
+                "dwr-optimal", \
+                "easy-ipc-grid-optimal", \
+                "ferry-optimal", \
+                "intrusion-detection-optimal", \
+                "kitchen-optimal", \
+                "logistics-optimal", \
+                "miconic-optimal", \
+                "rovers-optimal", \
+                "satellite-optimal", \
+                "sokoban-optimal", \
+                "zeno-travel-optimal"]
     for obs in observabilities:
         e = ExperimentH(constraint_sets, obs)
         e.do_experiments(domains)

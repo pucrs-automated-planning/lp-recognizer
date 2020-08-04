@@ -133,7 +133,7 @@ def main(template, file, domains, approaches, basepaths):
 	os.system("pdflatex " + file)
 
 if __name__ == '__main__' :
-	default_path = '../results'
+	default_path = '../results-new'
 	#domains = ['blocks-world-optimal', 'depots-optimal', 'driverlog-optimal', 'dwr-optimal',\
 	# 			'easy-ipc-grid-optimal', 'ferry-optimal', 'logistics-optimal',\
 	# 			 'miconic-optimal', 'rovers-optimal', 'satellite-optimal', 'sokoban-optimal', 'zeno-travel-optimal']
@@ -155,10 +155,9 @@ if __name__ == '__main__' :
 	if args.file:
 		file = args.file[0]
 		if 'noisy' in file:
-			domains = [name.replace("optimal", "noisy") for name in domains]
-		elif 'suboptimal' in file:
+			domains = [name.replace("optimal", "optimal-noisy") for name in domains]
+		if 'suboptimal' in file:
 			domains = [name.replace("optimal", "suboptimal") for name in domains]
-			print('bla')
 	if args.domains:
 		domains = args.domains # Domains used
 
@@ -174,9 +173,9 @@ if __name__ == '__main__' :
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'weighted-c', 'weighted-c-uncertainty', 'weighted-delta-h-c', 'weighted-delta-h-c-uncertainty']
 		elif 'constraints' in template:
 			if 'single' in template:
-				approaches['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']
+				approaches = ['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']
 			else:
-				approaches['delta-h-c-cps', 'delta-h-c-cps-uncertainty', 'delta-h-c-cls', 'delta-h-c-cls-uncertainty', 'delta-h-c-clp', 'delta-h-c-clp-uncertainty']
+				approaches = ['delta-h-c-cps', 'delta-h-c-cps-uncertainty', 'delta-h-c-cls', 'delta-h-c-cls-uncertainty', 'delta-h-c-clp', 'delta-h-c-clp-uncertainty']
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 

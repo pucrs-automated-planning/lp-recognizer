@@ -3,11 +3,20 @@
 import math, ast
 import matplotlib as mpl
 mpl.use('Agg')
+mpl.use("pgf")
+mpl.rcParams.update({
+    "pgf.texsystem": "pdflatex",
+    'font.family': 'serif',
+    'text.usetex': True,
+    'pgf.rcfonts': False,
+})
+
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 import pandas as pd
 from scipy.stats import gaussian_kde
+
 
 class Instances:
     def __init__(self, name, real_h_values, h_values, spread):
@@ -137,7 +146,7 @@ def generate_scatter_plot(x, y, obs = None):
     plt.xlabel(x.name)
     plt.ylabel(y.name)
     title = get_title(x, y, obs)
-    plt.title(title)
+    #plt.title(title)
     x = x.real_h_values
     y = y.real_h_values
     xy = np.vstack([x,y])
@@ -151,16 +160,20 @@ def generate_scatter_plot(x, y, obs = None):
     x0,x1 = ax.get_xlim()
     y0,y1 = ax.get_ylim()
     ax.set_aspect(abs(x1-x0)/abs(y1-y0))
-    fig.savefig(title + ' scatter.png')
-
+    fig.set_size_inches(w=3.2, h=2.5)
+    fig.savefig(title + ' scatter.pgf')
        
+
 def generate_mean_chart(h_values, observabilities, constraint_sets):
     df = pd.DataFrame(h_values,
                      index=[str(x) for x in observabilities],
                      columns=pd.Index(constraint_sets, name='Constraints'))
-    title = 'Average h-values per contraint set per obs%'
+    #title = 'Average h-values per contraint set per obs'
+    title = "" # for pgf
     ax = df.plot(kind='bar', figsize=(10,4), title=title)
-    ax.get_figure().savefig("h-values.png")
+    fig = ax.get_figure()
+    fig.set_size_inches(w=3.2, h=1.8)
+    fig.savefig("h-values.pgf")
 
 
 def generate_count_chart(results_per_obs, obs = None):
@@ -178,12 +191,15 @@ def generate_count_chart(results_per_obs, obs = None):
                      columns=pd.Index(col, name='Number of'))
     title = "Accuracy & Spread vs h-value Correlation"
     if obs != None:
-        title += " - " + str(results_per_obs.observabilities[obs]) + '%'
+        title += " - " + str(results_per_obs.observabilities[obs])
     else:
         title += " (average)"
-    ax = df.plot(kind='barh', figsize=(10,4), title=title)
+    #ax = df.plot(kind='barh', figsize=(10,4), title=title)
+    ax = df.plot(kind='barh', figsize=(10,4))
     ax.invert_yaxis()
-    ax.get_figure().savefig(title + ".png")
+    fig = ax.get_figure()
+    fig.set_size_inches(w=3.2, h=2.5)
+    fig.savefig(title + ".pgf")
     print(title)
 
 

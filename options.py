@@ -178,8 +178,17 @@ class Program_Options:
         if os.path.exists(solution_file):
             os.system("cp %s solution.dat" % solution_file)
         else:
-            print("No solution file: %s" % solution_file)
-            os.system("cp real_hyp.dat solution.dat")
+            if "noisy" in exp_file:
+                solution_file_original = solution_file.replace("-noisy_0.2", "").replace("-noisy", "")
+                if os.path.exists(solution_file_original):
+                    os.system("cp %s solution.dat" % solution_file_original)
+                else:
+                    print("No solution file: %s" % solution_file)
+                    print("No solution file: %s" % solution_file_original)
+                    os.system("cp real_hyp.dat solution.dat")
+            else:
+                print("No solution file: %s" % solution_file)
+                os.system("cp real_hyp.dat solution.dat")
 
 
     def print_options(self):

@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-import sys, os, csv, time, math
+import sys, os, csv, time, math, re
 import benchmark
 
 fd_path = "../fast-downward/"
@@ -164,12 +164,11 @@ class Hypothesis:
             return
         instream = open('solution.dat')
         for line in instream:
-            atoms = [tok.strip() for tok in line.split(',')]
+            atoms = re.findall("\([\w\s]+\)", line)
             self.is_solution = self.check_if_equal(atoms)
             if self.is_solution:
                 break
         instream.close()
-
 
     def __str__(self):
         res = ""
