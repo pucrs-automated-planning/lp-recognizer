@@ -70,7 +70,6 @@ def patch_exp_file(exp_file, domain_path):
         num_solutions = 0.0
         for solution_file in files:
             with open(problem_dir + solution_file) as f:
-
                 num_solutions += len(f.readlines())
         r.insert(4, str(num_solutions / len(files)))
         file_content += "\t".join(r)
@@ -108,7 +107,6 @@ def do_experiments(base_path, domain_name, observability, recognizer):
             print(options.recognizer_name + ":" + domain_name + ":" + str(obs) + "% - " + str(current_problem) + "/" + str(len(files)))
 
         num_problems = float(len(files))
-        print(experiment.num_solution, num_problems, experiment.num_solution / num_problems)
         file_content += "%s\t%s\t%s\t%s\t%s" % (len(files), obs, experiment.num_obs / num_problems, experiment.num_goals / num_problems, experiment.num_solutions / num_problems)
         file_content += "\t%2.4f" % (experiment.agreement / num_problems)
         file_content += "\t%2.4f" % (experiment.fpr / num_problems)
