@@ -17,7 +17,7 @@ class DomainData:
 
 	def read_approach_data(self, file, approach):
 		file.readline() # Header
-		sum_values = [0] * 10
+		sum_values = [0] * 11
 		for obs in self.observabilities:
 			line = file.readline().strip().split('\t')
 			self.total_problems += int(line[0])
@@ -44,8 +44,17 @@ class DomainData:
 			problems += 1
 		return sum_obs / problems if problems > 0 else float("nan")
 
+	def get_avg_solutions(self, obs):
+		sum_s = 0
+		problems = 0
+		approach_data = self.obs_data[obs]
+		for values in approach_data.values():
+			sum_s += values[4]
+			problems += 1
+		return sum_s / problems if problems > 0 else float("nan")
+
 def average_values(all_domain_data, approach):
-	sum_values = [0] * 10
+	sum_values = [0] * 11
 	for domain_data in all_domain_data.values():
 		if approach in domain_data.avg_data:
 			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
@@ -65,7 +74,7 @@ def collect_data(file, domains, approaches, basepaths, observabilities):
 	return all_domain_data
 
 
-def main(template, file, domains, approaches, basepaths):
+def get_latex_content(file, domains, approaches, basepaths):
 	print("Tabulating data from %s for domains %s"%(basepaths,domains))
 	observabilities = ['10', '30', '50', '70', '100']
 	all_domain_data = collect_data(file, domains, approaches, basepaths, observabilities)
@@ -92,42 +101,56 @@ def main(template, file, domains, approaches, basepaths):
 			% (len(observabilities), domain_name_4table, domain_data.total_problems, len(observabilities), round(domain_data.get_avg_goals(), 1))
 
 		for obs in observabilities:
-			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + str(round(domain_data.get_avg_obs(obs), 2)) + '\n'
+			len_obs = str(round(domain_data.get_avg_obs(obs), 2))
+			len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
+			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + len_obs + '\t & ' + len_solutions + '\n'
 			for basepath, approach in zip(basepaths, approaches):
 				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
 				if (basepath + approach) not in domain_data.obs_data[obs]:
 					content_table += '\n\t\t& - & - & - & - \t \n'
 					continue
 				values = domain_data.obs_data[obs][basepath + approach]
-				time = round(values[9], 3)
-				accuracy = round(values[7] * 100, 1)
-				spread = round(values[8], 2)
-				ratio = 0 if (values[8] == 0) else round(100 * values[7] / values[8], 1)
-				ar = round(values[4], 2)
-				fpr = round(values[5], 2)
-				fnr = round(values[6], 2)
-				content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, ar, fpr, fnr)
-
+				time = round(values[10], 3)
+				accuracy = round(values[8] * 100, 1)
+				spread = round(values[9], 2)
+				ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 1)
+				ar = round(values[5], 2)
+				fpr = round(values[6], 2)
+				fnr = round(values[7], 2)
+				content_table += '\n\t\t& {0} & {1} & {2} & {3} & {4} & {5}'.format(time, ar, fpr, fnr, accuracy, spread)
 				content_table += ' \t \n'
 		content_table += ' \\\\ \hline'
 
 	content_avg = ''
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
-		time = round(values[9], 3)
-		accuracy = round(values[7] * 100, 2)
-		spread = round(values[8], 2)
-		ratio = 0 if (values[8] == 0) else round(100 * values[7] / values[8], 2)
-		ar = round(values[4], 2)
-		fpr = round(values[5], 2)
-		fnr = round(values[6], 2)
-		content_avg += ' & {0} & {1} & {2} & {3}'.format(time, ar, fpr, fnr)
+		time = round(values[10], 3)
+		accuracy = round(values[8] * 100, 2)
+		spread = round(values[9], 2)
+		ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 2)
+		ar = round(values[5], 2)
+		fpr = round(values[6], 2)
+		fnr = round(values[7], 2)
+		content_avg += ' & {0} & {1} & {2} & {3} & {4} & {5}'.format(time, ar, fpr, fnr, accuracy, spread)
 
+	return content_table, content_avg
+
+def main(template, file, domains, approaches, basepaths):
+	# Get content.
+	content_table, content_avg = get_latex_content(file, domains, approaches, basepaths)
+	domains = [name.replace("optimal", "suboptimal") for name in domains]
+	content_table_2, content_avg_2 = get_latex_content(file, domains, approaches, basepaths)
+	# Write latex
 	latexContent = ''
 	with open(template, 'r') as latex:
 		latexContent = latex.read()
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
 	latexContent = latexContent.replace('<AVG_APPROACH>', content_avg)
+	latexContent = latexContent.replace('<TABLE_LP_RESULTS_2>', content_table_2)
+	latexContent = latexContent.replace('<AVG_APPROACH_2>', content_avg_2)
+	if "noisy" in domains[0]:
+		latexContent = latexContent.replace("- Optimal", "- Optimal, Noisy")
+		latexContent = latexContent.replace("- Suboptimal", "- Suboptimal, Noisy")
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
 	os.system("pdflatex " + file)
@@ -137,7 +160,7 @@ if __name__ == '__main__' :
 	#domains = ['blocks-world-optimal', 'depots-optimal', 'driverlog-optimal', 'dwr-optimal',\
 	# 			'easy-ipc-grid-optimal', 'ferry-optimal', 'logistics-optimal',\
 	# 			 'miconic-optimal', 'rovers-optimal', 'satellite-optimal', 'sokoban-optimal', 'zeno-travel-optimal']
-	domains = ['blocks-world-optimal', 'easy-ipc-grid-optimal', 'logistics-optimal', 'sokoban-optimal']
+	domains = ['blocks-world-optimal', 'easy-ipc-grid-optimal', 'logistics-optimal', 'miconic-optimal', 'rovers-optimal', 'sokoban-optimal']
 	file = 'filters-optimal.tex'
 	template = 'filters-template.tex'
 	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
@@ -170,7 +193,8 @@ if __name__ == '__main__' :
 		elif 'filters' in template:
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
 		elif 'weighted' in template:
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'weighted-c', 'weighted-c-uncertainty', 'weighted-delta-h-c', 'weighted-delta-h-c-uncertainty']
+			paths = [default_path] * 4
+			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'weighted-c', 'weighted-c-uncertainty']
 		elif 'constraints' in template:
 			if 'single' in template:
 				approaches = ['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']

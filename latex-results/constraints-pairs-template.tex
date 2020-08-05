@@ -20,45 +20,75 @@
 \newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
 %---------------------------------------------------------------------------------------------------------------
 \pdfinfo{
-/Title (Comparing Constraint Sets)
+/Title (Comparing Constraint Sets - Pairs)
 /Author (?)
 }
 \begin{document}
+
 \begin{table*}[]
 \centering
-\fontsize{5}{6}\selectfont
-\setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|cccc|cccc|cccc|cccc|cccc|cccc|}
+Constraints (pairs) - Optimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
 \hline
 % empty
 & % empty
-& \multicolumn{2}{c|}{}
-& \multicolumn{4}{c|}{\hdeltahc (P, S)}
-& \multicolumn{4}{c|}{\hdeltahcu (P, S)}
-& \multicolumn{4}{c|}{\hdeltahc (L, S)}
-& \multicolumn{4}{c|}{\hdeltahcu (L, S)}
-& \multicolumn{4}{c|}{\hdeltahc (L, P)}
-& \multicolumn{4}{c|}{\hdeltahcu (L, P)}
-
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc (P, S)}
+& \multicolumn{6}{c|}{\hdeltahcu (P, S)}
+& \multicolumn{6}{c|}{\hdeltahc (L, S)}
+& \multicolumn{6}{c|}{\hdeltahcu (L, S)}
+& \multicolumn{6}{c|}{\hdeltahc (L, P)}
+& \multicolumn{6}{c|}{\hdeltahcu (L, P)}
 \\ \hline
-
-\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}    
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
-
 <TABLE_LP_RESULTS>
-
-Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3> & <AVG_APPROACH_4> & <AVG_APPROACH_5>
- 
+Average & & & & <AVG_APPROACH>
 \\ \hline
-
 \end{tabular}
-\caption*{L=Landmarks, P=Post-hoc, S=State equation}
+\caption{Results for each pair of contraint sets, for optimal observations. L for Landmarks, P for Post-hoc, and S for State equation.}
 \end{table*}
+
+\begin{table*}[]
+\centering
+Constraints (pairs) - Suboptimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc (P, S)}
+& \multicolumn{6}{c|}{\hdeltahcu (P, S)}
+& \multicolumn{6}{c|}{\hdeltahc (L, S)}
+& \multicolumn{6}{c|}{\hdeltahcu (L, S)}
+& \multicolumn{6}{c|}{\hdeltahc (L, P)}
+& \multicolumn{6}{c|}{\hdeltahcu (L, P)}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+<TABLE_LP_RESULTS_2>
+Average & & & & <AVG_APPROACH_2>
+\\ \hline
+\end{tabular}
+\caption{Results for each pair of contraint sets, for suboptimal observations. L for Landmarks, P for Post-hoc, and S for State equation.}
+\end{table*}
+
 \end{document}

@@ -20,1017 +20,1287 @@
 \newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
 %---------------------------------------------------------------------------------------------------------------
 \pdfinfo{
-/Title (Comparing Constraint Sets)
+/Title (Comparing Constraint Sets - Single)
 /Author (?)
 }
 \begin{document}
+
 \begin{table*}[]
 \centering
-\fontsize{5}{6}\selectfont
-\setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|cccc|cccc|cccc|cccc|cccc|cccc|}
+Constraints (single) - Optimal, Noisy\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
 \hline
 % empty
 & % empty
-& \multicolumn{2}{c|}{}
-& \multicolumn{4}{c|}{\hdeltahc (L)}
-& \multicolumn{4}{c|}{\hdeltahcu (L)}
-& \multicolumn{4}{c|}{\hdeltahc (P)}
-& \multicolumn{4}{c|}{\hdeltahcu (P)}
-& \multicolumn{4}{c|}{\hdeltahc (S)}
-& \multicolumn{4}{c|}{\hdeltahcu (S)}
-
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc (L)}
+& \multicolumn{6}{c|}{\hdeltahcu (L)}
+& \multicolumn{6}{c|}{\hdeltahc (P)}
+& \multicolumn{6}{c|}{\hdeltahcu (P)}
+& \multicolumn{6}{c|}{\hdeltahc (S)}
+& \multicolumn{6}{c|}{\hdeltahcu (S)}
 \\ \hline
-
-\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}    
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
 
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{20.3} 
+	 & 10	 & 1.25	 & 8.0
 
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+		% delta-h-c-cl - 10% 
+		& 28.485 & 0.42 & 0.38 & 0.2 & 91.7 & 10.61 	 
 
-		% delta-h-c - 25% 
-		& 3.414 & 63.9\% & 8.03 & 8.0 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 18.713 & 0.42 & 0.38 & 0.2 & 91.7 & 10.61 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 3.414 & 72.2\% & 10.14 & 7.1 	 
+		% delta-h-c-cp - 10% 
+		& 29.008 & 0.41 & 0.34 & 0.25 & 88.9 & 8.22 	 
 
-		% delta-h-c - 25% 
-		& 3.462 & 30.6\% & 4.47 & 6.8 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 19.207 & 0.41 & 0.34 & 0.25 & 88.9 & 8.22 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 3.543 & 30.6\% & 4.94 & 6.2 	 
+		% delta-h-c-cs - 10% 
+		& 18.972 & 0.44 & 0.28 & 0.28 & 88.9 & 8.58 	 
 
-		% delta-h-c - 25% 
-		& 3.371 & 69.4\% & 7.42 & 9.4 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 12.661 & 0.44 & 0.28 & 0.28 & 88.9 & 8.58 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 3.443 & 80.6\% & 11.47 & 7.0 	 
+	\\ & & 30	 & 3.08	 & 3.97
 
-	\\ & & 50	 & 0.0
+		% delta-h-c-cl - 30% 
+		& 28.514 & 0.3 & 0.38 & 0.32 & 80.6 & 4.47 	 
 
-		% delta-h-c - 50% 
-		& 3.409 & 66.7\% & 5.5 & 12.1 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 18.792 & 0.3 & 0.46 & 0.24 & 83.3 & 7.75 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 3.417 & 75.0\% & 9.61 & 7.8 	 
+		% delta-h-c-cp - 30% 
+		& 29.086 & 0.34 & 0.36 & 0.3 & 61.1 & 3.83 	 
 
-		% delta-h-c - 50% 
-		& 3.449 & 44.4\% & 3.92 & 11.3 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 19.082 & 0.34 & 0.36 & 0.3 & 61.1 & 3.83 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 3.512 & 44.4\% & 3.92 & 11.3 	 
+		% delta-h-c-cs - 30% 
+		& 19.024 & 0.39 & 0.26 & 0.35 & 75.0 & 3.61 	 
 
-		% delta-h-c - 50% 
-		& 3.372 & 55.6\% & 4.03 & 13.8 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 12.601 & 0.39 & 0.39 & 0.22 & 86.1 & 7.64 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 3.46 & 88.9\% & 12.86 & 6.9 	 
+	\\ & & 50	 & 4.42	 & 2.5
 
-	\\ & & 75	 & 0.0
+		% delta-h-c-cl - 50% 
+		& 28.524 & 0.34 & 0.4 & 0.26 & 69.4 & 3.11 	 
 
-		% delta-h-c - 75% 
-		& 3.414 & 75.0\% & 3.03 & 24.8 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 18.737 & 0.33 & 0.49 & 0.18 & 80.6 & 5.72 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 3.443 & 83.3\% & 4.81 & 17.3 	 
+		% delta-h-c-cp - 50% 
+		& 29.04 & 0.32 & 0.44 & 0.24 & 50.0 & 3.53 	 
 
-		% delta-h-c - 75% 
-		& 3.439 & 58.3\% & 3.03 & 19.3 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 19.213 & 0.32 & 0.45 & 0.23 & 52.8 & 3.89 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 3.518 & 66.7\% & 4.06 & 16.4 	 
+		% delta-h-c-cs - 50% 
+		& 19.095 & 0.43 & 0.37 & 0.2 & 77.8 & 3.67 	 
 
-		% delta-h-c - 75% 
-		& 3.371 & 77.8\% & 2.11 & 36.8 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 12.736 & 0.34 & 0.57 & 0.09 & 94.4 & 9.42 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 3.457 & 91.7\% & 7.31 & 12.5 	 
+	\\ & & 70	 & 6.67	 & 1.94
 
-	\\ & & 100	 & 0.0
+		% delta-h-c-cl - 70% 
+		& 28.506 & 0.56 & 0.26 & 0.19 & 77.8 & 2.25 	 
 
-		% delta-h-c - 100% 
-		& 3.424 & 72.2\% & 2.11 & 34.2 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 18.738 & 0.52 & 0.36 & 0.11 & 88.9 & 4.53 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 3.443 & 80.6\% & 2.56 & 31.5 	 
+		% delta-h-c-cp - 70% 
+		& 26.262 & 0.47 & 0.45 & 0.09 & 80.6 & 3.67 	 
 
-		% delta-h-c - 100% 
-		& 3.45 & 69.4\% & 2.86 & 24.3 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 17.669 & 0.46 & 0.46 & 0.08 & 83.3 & 4.03 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 3.54 & 75.0\% & 3.31 & 22.7 	 
+		% delta-h-c-cs - 70% 
+		& 17.049 & 0.68 & 0.23 & 0.09 & 91.7 & 2.36 	 
 
-		% delta-h-c - 100% 
-		& 3.384 & 86.1\% & 2.03 & 42.5 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 11.722 & 0.47 & 0.45 & 0.07 & 94.4 & 5.64 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 3.451 & 97.2\% & 3.08 & 31.5 	 
+	\\ & & 100	 & 8.83	 & 1.83
+
+		% delta-h-c-cl - 100% 
+		& 28.454 & 0.59 & 0.2 & 0.21 & 75.0 & 1.75 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 18.542 & 0.62 & 0.27 & 0.11 & 91.7 & 3.5 	 
+
+		% delta-h-c-cp - 100% 
+		& 20.068 & 0.51 & 0.4 & 0.09 & 75.0 & 3.5 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 14.882 & 0.51 & 0.4 & 0.09 & 75.0 & 3.5 	 
+
+		% delta-h-c-cs - 100% 
+		& 14.363 & 0.64 & 0.2 & 0.16 & 83.3 & 1.92 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 9.443 & 0.65 & 0.31 & 0.04 & 100.0 & 4.25 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(1248)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 1.63	 & 2.71
 
-		% delta-h-c - 25% 
-		& 2.382 & 80.6\% & 5.78 & 13.9 	 
+		% delta-h-c-cl - 10% 
+		& 11.412 & 0.84 & 0.13 & 0.03 & 95.8 & 3.17 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 2.422 & 86.1\% & 6.47 & 13.3 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 7.554 & 0.84 & 0.13 & 0.03 & 95.8 & 3.17 	 
 
-		% delta-h-c - 25% 
-		& 2.473 & 97.2\% & 7.83 & 12.4 	 
+		% delta-h-c-cp - 10% 
+		& 11.992 & 0.4 & 0.56 & 0.03 & 97.9 & 7.06 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 2.581 & 97.2\% & 7.83 & 12.4 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 8.039 & 0.4 & 0.56 & 0.03 & 97.9 & 7.06 	 
 
-		% delta-h-c - 25% 
-		& 2.341 & 83.3\% & 6.28 & 13.3 	 
+		% delta-h-c-cs - 10% 
+		& 11.465 & 0.61 & 0.22 & 0.17 & 79.2 & 3.48 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 2.453 & 86.1\% & 7.83 & 11.0 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 7.59 & 0.61 & 0.22 & 0.17 & 79.2 & 3.48 	 
 
-	\\ & & 50	 & 0.0
+	\\ & & 30	 & 4.0	 & 1.21
 
-		% delta-h-c - 50% 
-		& 2.387 & 77.8\% & 3.33 & 23.3 	 
+		% delta-h-c-cl - 30% 
+		& 11.414 & 0.91 & 0.09 & 0.0 & 100.0 & 1.42 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 2.432 & 88.9\% & 4.44 & 20.0 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 7.555 & 0.86 & 0.14 & 0.0 & 100.0 & 1.77 	 
 
-		% delta-h-c - 50% 
-		& 2.466 & 83.3\% & 6.19 & 13.5 	 
+		% delta-h-c-cp - 30% 
+		& 11.944 & 0.25 & 0.74 & 0.01 & 100.0 & 6.81 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 2.587 & 83.3\% & 6.39 & 13.0 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 7.967 & 0.25 & 0.74 & 0.01 & 100.0 & 6.81 	 
 
-		% delta-h-c - 50% 
-		& 2.344 & 91.7\% & 2.89 & 31.7 	 
+		% delta-h-c-cs - 30% 
+		& 11.43 & 0.68 & 0.23 & 0.1 & 89.6 & 1.81 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 2.446 & 97.2\% & 6.94 & 14.0 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 7.563 & 0.63 & 0.32 & 0.06 & 95.8 & 2.77 	 
 
-	\\ & & 75	 & 0.0
+	\\ & & 50	 & 6.19	 & 1.13
 
-		% delta-h-c - 75% 
-		& 2.38 & 94.4\% & 1.86 & 50.7 	 
+		% delta-h-c-cl - 50% 
+		& 11.382 & 0.88 & 0.08 & 0.04 & 95.8 & 1.35 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 2.426 & 94.4\% & 2.0 & 47.2 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 7.587 & 0.86 & 0.11 & 0.03 & 97.9 & 1.54 	 
 
-		% delta-h-c - 75% 
-		& 2.458 & 75.0\% & 4.89 & 15.3 	 
+		% delta-h-c-cp - 50% 
+		& 11.952 & 0.23 & 0.74 & 0.03 & 93.8 & 6.63 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 2.58 & 75.0\% & 4.89 & 15.3 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 8.031 & 0.23 & 0.74 & 0.03 & 93.8 & 6.63 	 
 
-		% delta-h-c - 75% 
-		& 2.344 & 100.0\% & 1.58 & 63.2 	 
+		% delta-h-c-cs - 50% 
+		& 11.444 & 0.76 & 0.15 & 0.09 & 87.5 & 1.48 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 2.466 & 100.0\% & 3.47 & 28.8 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 7.584 & 0.74 & 0.2 & 0.06 & 93.8 & 2.02 	 
 
-	\\ & & 100	 & 0.0
+	\\ & & 70	 & 8.69	 & 1.04
 
-		% delta-h-c - 100% 
-		& 2.393 & 97.2\% & 1.58 & 61.4 	 
+		% delta-h-c-cl - 70% 
+		& 11.424 & 0.96 & 0.03 & 0.01 & 97.9 & 1.08 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 2.421 & 97.2\% & 1.58 & 61.4 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 7.589 & 0.94 & 0.06 & 0.0 & 100.0 & 1.27 	 
 
-		% delta-h-c - 100% 
-		& 2.467 & 80.6\% & 5.69 & 14.1 	 
+		% delta-h-c-cp - 70% 
+		& 11.998 & 0.31 & 0.64 & 0.05 & 81.3 & 5.33 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 2.587 & 80.6\% & 5.69 & 14.1 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 7.96 & 0.31 & 0.64 & 0.05 & 81.3 & 5.33 	 
 
-		% delta-h-c - 100% 
-		& 2.35 & 97.2\% & 1.31 & 74.5 	 
+		% delta-h-c-cs - 70% 
+		& 11.454 & 0.88 & 0.09 & 0.03 & 95.8 & 1.21 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 2.447 & 97.2\% & 1.42 & 68.6 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 7.553 & 0.79 & 0.2 & 0.01 & 100.0 & 1.85 	 
+
+	\\ & & 100	 & 11.88	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 11.509 & 0.97 & 0.03 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 7.548 & 0.97 & 0.03 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-cp - 100% 
+		& 11.991 & 0.25 & 0.62 & 0.13 & 56.3 & 4.13 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 7.95 & 0.25 & 0.62 & 0.13 & 56.3 & 4.13 	 
+
+		% delta-h-c-cs - 100% 
+		& 11.516 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 7.497 & 0.94 & 0.06 & 0.0 & 100.0 & 1.5 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.0	 & 2.83
 
-		% delta-h-c - 25% 
-		& 1.108 & 83.3\% & 3.81 & 21.9 	 
+		% delta-h-c-cl - 10% 
+		& 13.548 & 0.75 & 0.24 & 0.02 & 97.2 & 4.64 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.115 & 86.1\% & 4.5 & 19.1 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 8.864 & 0.75 & 0.24 & 0.02 & 97.2 & 4.64 	 
 
-		% delta-h-c - 25% 
-		& 1.1 & 55.6\% & 2.94 & 18.9 	 
+		% delta-h-c-cp - 10% 
+		& 13.59 & 0.61 & 0.27 & 0.12 & 88.9 & 3.61 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.123 & 55.6\% & 3.22 & 17.2 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 8.881 & 0.61 & 0.27 & 0.12 & 88.9 & 3.61 	 
 
-		% delta-h-c - 25% 
-		& 1.094 & 61.1\% & 2.61 & 23.4 	 
+		% delta-h-c-cs - 10% 
+		& 13.528 & 0.72 & 0.26 & 0.02 & 97.2 & 4.86 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.124 & 77.8\% & 4.36 & 17.8 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 8.834 & 0.71 & 0.27 & 0.02 & 97.2 & 4.97 	 
 
-	\\ & & 50	 & 0.0
+	\\ & & 30	 & 5.75	 & 1.19
 
-		% delta-h-c - 50% 
-		& 1.106 & 88.9\% & 2.5 & 35.6 	 
+		% delta-h-c-cl - 30% 
+		& 13.434 & 0.8 & 0.2 & 0.0 & 100.0 & 1.94 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.124 & 88.9\% & 3.11 & 28.6 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 8.872 & 0.67 & 0.33 & 0.0 & 100.0 & 2.92 	 
 
-		% delta-h-c - 50% 
-		& 1.098 & 72.2\% & 2.28 & 31.7 	 
+		% delta-h-c-cp - 30% 
+		& 13.427 & 0.5 & 0.47 & 0.03 & 91.7 & 2.64 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.117 & 80.6\% & 2.69 & 29.9 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 8.839 & 0.44 & 0.56 & 0.0 & 100.0 & 3.86 	 
 
-		% delta-h-c - 50% 
-		& 1.1 & 83.3\% & 2.0 & 41.7 	 
+		% delta-h-c-cs - 30% 
+		& 13.392 & 0.69 & 0.31 & 0.0 & 100.0 & 2.36 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.115 & 91.7\% & 3.67 & 25.0 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 8.911 & 0.44 & 0.56 & 0.0 & 100.0 & 5.06 	 
 
-	\\ & & 75	 & 0.0
+	\\ & & 50	 & 9.42	 & 1.06
 
-		% delta-h-c - 75% 
-		& 1.112 & 94.4\% & 2.0 & 47.2 	 
+		% delta-h-c-cl - 50% 
+		& 13.449 & 0.88 & 0.1 & 0.01 & 97.2 & 1.31 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.117 & 94.4\% & 2.22 & 42.5 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 8.826 & 0.84 & 0.16 & 0.0 & 100.0 & 1.58 	 
 
-		% delta-h-c - 75% 
-		& 1.097 & 63.9\% & 1.83 & 34.8 	 
+		% delta-h-c-cp - 50% 
+		& 13.502 & 0.64 & 0.34 & 0.02 & 94.4 & 1.92 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.112 & 77.8\% & 2.83 & 27.5 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 8.905 & 0.61 & 0.39 & 0.0 & 100.0 & 2.53 	 
 
-		% delta-h-c - 75% 
-		& 1.09 & 86.1\% & 1.61 & 53.4 	 
+		% delta-h-c-cs - 50% 
+		& 13.449 & 0.85 & 0.15 & 0.0 & 100.0 & 1.58 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.115 & 100.0\% & 3.06 & 32.7 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 8.868 & 0.64 & 0.36 & 0.0 & 100.0 & 2.69 	 
 
-	\\ & & 100	 & 0.0
+	\\ & & 70	 & 13.25	 & 1.03
 
-		% delta-h-c - 100% 
-		& 1.122 & 100.0\% & 1.5 & 66.7 	 
+		% delta-h-c-cl - 70% 
+		& 13.532 & 0.97 & 0.03 & 0.0 & 100.0 & 1.08 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.115 & 100.0\% & 1.5 & 66.7 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 8.946 & 0.89 & 0.11 & 0.0 & 100.0 & 1.33 	 
 
-		% delta-h-c - 100% 
-		& 1.102 & 77.8\% & 1.81 & 43.1 	 
+		% delta-h-c-cp - 70% 
+		& 13.494 & 0.7 & 0.3 & 0.0 & 100.0 & 1.72 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.126 & 86.1\% & 2.06 & 41.9 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 8.848 & 0.68 & 0.32 & 0.0 & 100.0 & 2.08 	 
 
-		% delta-h-c - 100% 
-		& 1.088 & 97.2\% & 1.36 & 71.4 	 
+		% delta-h-c-cs - 70% 
+		& 13.509 & 0.94 & 0.06 & 0.0 & 100.0 & 1.14 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.11 & 97.2\% & 1.89 & 51.5 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 8.855 & 0.7 & 0.3 & 0.0 & 100.0 & 2.14 	 
+
+	\\ & & 100	 & 18.17	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 13.416 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 8.817 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cp - 100% 
+		& 13.469 & 0.69 & 0.31 & 0.0 & 100.0 & 1.67 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 8.961 & 0.69 & 0.31 & 0.0 & 100.0 & 1.67 	 
+
+		% delta-h-c-cs - 100% 
+		& 13.568 & 0.96 & 0.04 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 8.859 & 0.88 & 0.13 & 0.0 & 100.0 & 1.25 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 2.0	 & 2.53
 
-		% delta-h-c - 25% 
-		& 1.589 & 58.3\% & 3.17 & 18.4 	 
+		% delta-h-c-cl - 10% 
+		& 8.488 & 0.74 & 0.25 & 0.01 & 97.2 & 3.56 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.607 & 80.6\% & 5.03 & 16.0 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 5.58 & 0.74 & 0.25 & 0.01 & 97.2 & 3.56 	 
 
-		% delta-h-c - 25% 
-		& 1.6 & 72.2\% & 5.53 & 13.1 	 
+		% delta-h-c-cp - 10% 
+		& 8.637 & 0.6 & 0.4 & 0.0 & 100.0 & 4.42 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.669 & 94.4\% & 6.61 & 14.3 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 5.621 & 0.6 & 0.4 & 0.0 & 100.0 & 4.42 	 
 
-		% delta-h-c - 25% 
-		& 1.537 & 80.6\% & 2.58 & 31.2 	 
+		% delta-h-c-cs - 10% 
+		& 8.502 & 0.69 & 0.31 & 0.0 & 100.0 & 4.08 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.597 & 100.0\% & 6.03 & 16.6 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 5.596 & 0.67 & 0.33 & 0.0 & 100.0 & 4.19 	 
 
-	\\ & & 50	 & 0.0
+	\\ & & 30	 & 5.42	 & 1.22
 
-		% delta-h-c - 50% 
-		& 1.59 & 44.4\% & 2.64 & 16.8 	 
+		% delta-h-c-cl - 30% 
+		& 8.552 & 0.62 & 0.34 & 0.04 & 94.4 & 2.08 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.596 & 77.8\% & 4.39 & 17.7 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 5.592 & 0.6 & 0.36 & 0.03 & 94.4 & 2.36 	 
 
-		% delta-h-c - 50% 
-		& 1.594 & 52.8\% & 4.25 & 12.4 	 
+		% delta-h-c-cp - 30% 
+		& 8.517 & 0.51 & 0.49 & 0.0 & 100.0 & 2.83 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.67 & 86.1\% & 6.14 & 14.0 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 5.588 & 0.26 & 0.74 & 0.0 & 100.0 & 4.86 	 
 
-		% delta-h-c - 50% 
-		& 1.54 & 94.4\% & 2.08 & 45.3 	 
+		% delta-h-c-cs - 30% 
+		& 8.485 & 0.51 & 0.49 & 0.0 & 100.0 & 2.83 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.604 & 100.0\% & 4.92 & 20.3 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 5.579 & 0.26 & 0.74 & 0.0 & 100.0 & 5.25 	 
 
-	\\ & & 75	 & 0.0
+	\\ & & 50	 & 8.42	 & 1.06
 
-		% delta-h-c - 75% 
-		& 1.592 & 72.2\% & 1.81 & 40.0 	 
+		% delta-h-c-cl - 50% 
+		& 8.445 & 0.79 & 0.19 & 0.01 & 97.2 & 1.47 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.598 & 80.6\% & 2.67 & 30.2 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 5.645 & 0.61 & 0.38 & 0.01 & 97.2 & 2.31 	 
 
-		% delta-h-c - 75% 
-		& 1.605 & 36.1\% & 2.44 & 14.8 	 
+		% delta-h-c-cp - 50% 
+		& 8.54 & 0.69 & 0.31 & 0.0 & 100.0 & 1.81 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.683 & 55.6\% & 3.25 & 17.1 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 5.656 & 0.4 & 0.6 & 0.0 & 100.0 & 3.72 	 
 
-		% delta-h-c - 75% 
-		& 1.541 & 97.2\% & 1.31 & 74.5 	 
+		% delta-h-c-cs - 50% 
+		& 8.501 & 0.69 & 0.31 & 0.0 & 100.0 & 1.81 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.595 & 100.0\% & 2.33 & 42.9 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 5.576 & 0.26 & 0.74 & 0.0 & 100.0 & 5.08 	 
 
-	\\ & & 100	 & 0.0
+	\\ & & 70	 & 11.92	 & 1.0
 
-		% delta-h-c - 100% 
-		& 1.587 & 66.7\% & 1.19 & 55.8 	 
+		% delta-h-c-cl - 70% 
+		& 8.516 & 0.85 & 0.13 & 0.01 & 97.2 & 1.28 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.586 & 80.6\% & 1.64 & 49.2 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 5.578 & 0.77 & 0.21 & 0.01 & 97.2 & 1.5 	 
 
-		% delta-h-c - 100% 
-		& 1.608 & 47.2\% & 2.25 & 21.0 	 
+		% delta-h-c-cp - 70% 
+		& 8.499 & 0.8 & 0.2 & 0.0 & 100.0 & 1.47 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.688 & 47.2\% & 2.36 & 20.0 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 5.721 & 0.45 & 0.55 & 0.0 & 100.0 & 3.17 	 
 
-		% delta-h-c - 100% 
-		& 1.54 & 100.0\% & 1.06 & 94.7 	 
+		% delta-h-c-cs - 70% 
+		& 8.53 & 0.8 & 0.2 & 0.0 & 100.0 & 1.47 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.6 & 100.0\% & 1.06 & 94.7 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 5.565 & 0.31 & 0.69 & 0.0 & 100.0 & 4.22 	 
+
+	\\ & & 100	 & 16.33	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 8.572 & 0.88 & 0.13 & 0.0 & 100.0 & 1.25 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 5.564 & 0.86 & 0.14 & 0.0 & 100.0 & 1.33 	 
+
+		% delta-h-c-cp - 100% 
+		& 8.533 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 5.66 & 0.66 & 0.34 & 0.0 & 100.0 & 2.25 	 
+
+		% delta-h-c-cs - 100% 
+		& 8.611 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 5.596 & 0.43 & 0.57 & 0.0 & 100.0 & 3.42 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.67	 & 2.28
 
-		% delta-h-c - 25% 
-		& 1.684 & 97.8\% & 2.02 & 48.4 	 
+		% delta-h-c-cl - 10% 
+		& 9.214 & 0.57 & 0.27 & 0.15 & 75.0 & 2.92 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.701 & 97.8\% & 2.32 & 42.1 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 6.102 & 0.57 & 0.27 & 0.15 & 75.0 & 2.92 	 
 
-		% delta-h-c - 25% 
-		& 1.759 & 95.6\% & 7.66 & 12.5 	 
+		% delta-h-c-cp - 10% 
+		& 9.267 & 0.54 & 0.4 & 0.05 & 91.7 & 4.31 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.835 & 95.6\% & 7.66 & 12.5 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 6.141 & 0.54 & 0.4 & 0.05 & 91.7 & 4.31 	 
 
-		% delta-h-c - 25% 
-		& 1.654 & 86.7\% & 2.49 & 34.8 	 
+		% delta-h-c-cs - 10% 
+		& 9.275 & 0.51 & 0.45 & 0.04 & 94.4 & 4.64 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 1.703 & 88.9\% & 3.26 & 27.3 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 6.065 & 0.51 & 0.48 & 0.02 & 100.0 & 4.94 	 
 
-	\\ & & 50	 & 0.0
+	\\ & & 30	 & 3.67	 & 1.31
 
-		% delta-h-c - 50% 
-		& 1.654 & 100.0\% & 1.22 & 81.8 	 
+		% delta-h-c-cl - 30% 
+		& 9.204 & 0.7 & 0.25 & 0.05 & 88.9 & 1.92 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.706 & 100.0\% & 1.52 & 65.7 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 6.146 & 0.7 & 0.27 & 0.04 & 91.7 & 2.22 	 
 
-		% delta-h-c - 50% 
-		& 1.767 & 92.2\% & 6.72 & 13.7 	 
+		% delta-h-c-cp - 30% 
+		& 9.284 & 0.6 & 0.37 & 0.03 & 94.4 & 2.58 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.834 & 92.2\% & 6.72 & 13.7 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 6.097 & 0.45 & 0.53 & 0.01 & 97.2 & 4.14 	 
 
-		% delta-h-c - 50% 
-		& 1.665 & 94.4\% & 1.62 & 58.2 	 
+		% delta-h-c-cs - 30% 
+		& 9.245 & 0.48 & 0.48 & 0.04 & 91.7 & 3.19 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 1.722 & 100.0\% & 2.32 & 43.1 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 5.987 & 0.34 & 0.65 & 0.01 & 97.2 & 4.67 	 
 
-	\\ & & 75	 & 0.0
+	\\ & & 50	 & 5.75	 & 1.19
 
-		% delta-h-c - 75% 
-		& 1.644 & 100.0\% & 1.13 & 88.2 	 
+		% delta-h-c-cl - 50% 
+		& 9.16 & 0.83 & 0.11 & 0.06 & 91.7 & 1.42 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.706 & 100.0\% & 1.16 & 86.5 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 6.147 & 0.83 & 0.14 & 0.03 & 94.4 & 1.67 	 
 
-		% delta-h-c - 75% 
-		& 1.762 & 74.4\% & 5.11 & 14.6 	 
+		% delta-h-c-cp - 50% 
+		& 9.27 & 0.75 & 0.22 & 0.03 & 94.4 & 1.75 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.833 & 74.4\% & 5.11 & 14.6 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 6.137 & 0.53 & 0.44 & 0.03 & 94.4 & 2.86 	 
 
-		% delta-h-c - 75% 
-		& 1.654 & 100.0\% & 1.22 & 81.8 	 
+		% delta-h-c-cs - 50% 
+		& 9.223 & 0.64 & 0.36 & 0.0 & 100.0 & 2.44 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 1.711 & 100.0\% & 1.5 & 66.7 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 6.112 & 0.4 & 0.6 & 0.0 & 100.0 & 4.33 	 
 
-	\\ & & 100	 & 0.0
+	\\ & & 70	 & 8.17	 & 1.0
 
-		% delta-h-c - 100% 
-		& 1.646 & 100.0\% & 1.0 & 100.0 	 
+		% delta-h-c-cl - 70% 
+		& 9.191 & 0.81 & 0.16 & 0.03 & 94.4 & 1.31 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.707 & 100.0\% & 1.0 & 100.0 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 6.073 & 0.78 & 0.19 & 0.03 & 94.4 & 1.47 	 
 
-		% delta-h-c - 100% 
-		& 1.754 & 36.7\% & 2.4 & 15.3 	 
+		% delta-h-c-cp - 70% 
+		& 9.261 & 0.82 & 0.16 & 0.02 & 94.4 & 1.36 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.835 & 36.7\% & 2.4 & 15.3 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 6.101 & 0.7 & 0.3 & 0.0 & 100.0 & 2.22 	 
 
-		% delta-h-c - 100% 
-		& 1.659 & 100.0\% & 1.0 & 100.0 	 
+		% delta-h-c-cs - 70% 
+		& 9.262 & 0.72 & 0.24 & 0.04 & 88.9 & 1.61 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 1.71 & 100.0\% & 1.0 & 100.0 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 6.14 & 0.32 & 0.65 & 0.02 & 94.4 & 4.19 	 
+
+	\\ & & 100	 & 10.83	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 9.267 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 6.126 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cp - 100% 
+		& 9.279 & 0.94 & 0.06 & 0.0 & 100.0 & 1.25 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 6.173 & 0.85 & 0.15 & 0.0 & 100.0 & 1.42 	 
+
+		% delta-h-c-cs - 100% 
+		& 9.286 & 0.85 & 0.15 & 0.0 & 100.0 & 1.42 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 6.127 & 0.55 & 0.45 & 0.0 & 100.0 & 3.17 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{8.7} 
+	 & 10	 & 2.33	 & 2.11
 
-		% delta-h-c - 25% 
-		& 0.926 & 80.6\% & 2.83 & 28.4 	 
+		% delta-h-c-cl - 10% 
+		& 18.308 & 0.3 & 0.58 & 0.12 & 72.2 & 5.08 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 0.933 & 86.1\% & 5.33 & 16.1 	 
+		% delta-h-c-cl-uncertainty - 10% 
+		& 12.145 & 0.3 & 0.58 & 0.12 & 72.2 & 5.08 	 
 
-		% delta-h-c - 25% 
-		& 0.934 & 75.0\% & 3.97 & 18.9 	 
+		% delta-h-c-cp - 10% 
+		& 19.634 & 0.24 & 0.72 & 0.04 & 91.7 & 7.58 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 0.942 & 75.0\% & 3.97 & 18.9 	 
+		% delta-h-c-cp-uncertainty - 10% 
+		& 13.288 & 0.24 & 0.72 & 0.04 & 91.7 & 7.58 	 
 
-		% delta-h-c - 25% 
-		& 0.928 & 80.6\% & 2.78 & 29.0 	 
+		% delta-h-c-cs - 10% 
+		& 18.794 & 0.32 & 0.35 & 0.33 & 47.2 & 2.47 	 
 
-		% delta-h-c-uncertainty - 25% 
-		& 0.945 & 91.7\% & 5.78 & 15.9 	 
+		% delta-h-c-cs-uncertainty - 10% 
+		& 12.533 & 0.28 & 0.48 & 0.24 & 58.3 & 4.14 	 
 
-	\\ & & 50	 & 0.0
+	\\ & & 30	 & 6.5	 & 1.25
 
-		% delta-h-c - 50% 
-		& 0.925 & 97.2\% & 1.72 & 56.5 	 
+		% delta-h-c-cl - 30% 
+		& 18.326 & 0.39 & 0.49 & 0.12 & 72.2 & 2.67 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 0.936 & 97.2\% & 3.42 & 28.5 	 
+		% delta-h-c-cl-uncertainty - 30% 
+		& 12.16 & 0.35 & 0.55 & 0.1 & 80.6 & 3.53 	 
 
-		% delta-h-c - 50% 
-		& 0.93 & 66.7\% & 3.31 & 20.2 	 
+		% delta-h-c-cp - 30% 
+		& 19.618 & 0.14 & 0.75 & 0.11 & 63.9 & 5.0 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 0.948 & 75.0\% & 3.72 & 20.1 	 
+		% delta-h-c-cp-uncertainty - 30% 
+		& 13.257 & 0.14 & 0.75 & 0.11 & 63.9 & 5.0 	 
 
-		% delta-h-c - 50% 
-		& 0.931 & 97.2\% & 1.72 & 56.5 	 
+		% delta-h-c-cs - 30% 
+		& 18.71 & 0.48 & 0.33 & 0.19 & 66.7 & 1.72 	 
 
-		% delta-h-c-uncertainty - 50% 
-		& 0.931 & 100.0\% & 4.89 & 20.5 	 
+		% delta-h-c-cs-uncertainty - 30% 
+		& 12.641 & 0.47 & 0.52 & 0.02 & 97.2 & 4.08 	 
 
-	\\ & & 75	 & 0.0
+	\\ & & 50	 & 10.33	 & 1.22
 
-		% delta-h-c - 75% 
-		& 0.925 & 94.4\% & 1.5 & 63.0 	 
+		% delta-h-c-cl - 50% 
+		& 18.342 & 0.36 & 0.38 & 0.25 & 63.9 & 1.81 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 0.932 & 100.0\% & 2.31 & 43.4 	 
+		% delta-h-c-cl-uncertainty - 50% 
+		& 12.236 & 0.34 & 0.52 & 0.14 & 83.3 & 3.42 	 
 
-		% delta-h-c - 75% 
-		& 0.929 & 72.2\% & 3.28 & 22.0 	 
+		% delta-h-c-cp - 50% 
+		& 19.692 & 0.21 & 0.59 & 0.19 & 52.8 & 3.17 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 0.943 & 80.6\% & 3.75 & 21.5 	 
+		% delta-h-c-cp-uncertainty - 50% 
+		& 13.318 & 0.22 & 0.6 & 0.17 & 58.3 & 3.31 	 
 
-		% delta-h-c - 75% 
-		& 0.929 & 94.4\% & 1.56 & 60.7 	 
+		% delta-h-c-cs - 50% 
+		& 18.832 & 0.52 & 0.33 & 0.15 & 72.2 & 2.67 	 
 
-		% delta-h-c-uncertainty - 75% 
-		& 0.935 & 100.0\% & 2.86 & 35.0 	 
+		% delta-h-c-cs-uncertainty - 50% 
+		& 12.607 & 0.35 & 0.63 & 0.02 & 94.4 & 5.78 	 
 
-	\\ & & 100	 & 0.0
+	\\ & & 70	 & 14.67	 & 1.03
 
-		% delta-h-c - 100% 
-		& 0.931 & 97.2\% & 1.17 & 83.3 	 
+		% delta-h-c-cl - 70% 
+		& 18.37 & 0.51 & 0.34 & 0.15 & 66.7 & 1.56 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 0.934 & 97.2\% & 1.17 & 83.3 	 
+		% delta-h-c-cl-uncertainty - 70% 
+		& 12.069 & 0.47 & 0.49 & 0.04 & 91.7 & 3.25 	 
 
-		% delta-h-c - 100% 
-		& 0.934 & 83.3\% & 3.28 & 25.4 	 
+		% delta-h-c-cp - 70% 
+		& 19.676 & 0.21 & 0.49 & 0.3 & 30.6 & 1.72 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 0.946 & 83.3\% & 3.28 & 25.4 	 
+		% delta-h-c-cp-uncertainty - 70% 
+		& 13.309 & 0.21 & 0.49 & 0.3 & 30.6 & 1.72 	 
 
-		% delta-h-c - 100% 
-		& 0.929 & 97.2\% & 1.17 & 83.3 	 
+		% delta-h-c-cs - 70% 
+		& 15.811 & 0.56 & 0.35 & 0.08 & 86.1 & 3.44 	 
 
-		% delta-h-c-uncertainty - 100% 
-		& 0.94 & 100.0\% & 1.36 & 73.5 	 
+		% delta-h-c-cs-uncertainty - 70% 
+		& 10.375 & 0.42 & 0.58 & 0.0 & 100.0 & 4.97 	 
+
+	\\ & & 100	 & 20.17	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 18.291 & 0.68 & 0.24 & 0.08 & 83.3 & 1.58 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 12.365 & 0.62 & 0.29 & 0.08 & 83.3 & 1.83 	 
+
+		% delta-h-c-cp - 100% 
+		& 19.69 & 0.21 & 0.49 & 0.3 & 33.3 & 1.83 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 13.224 & 0.21 & 0.49 & 0.3 & 33.3 & 1.83 	 
+
+		% delta-h-c-cs - 100% 
+		& 13.255 & 0.64 & 0.28 & 0.08 & 83.3 & 2.58 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 8.519 & 0.45 & 0.55 & 0.0 & 100.0 & 4.25 	 
  \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 1.527 & 94.4\% & 2.31 & 41.0 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.553 & 97.2\% & 2.75 & 35.4 	 
-
-		% delta-h-c - 25% 
-		& 1.534 & 88.9\% & 2.44 & 36.4 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.559 & 91.7\% & 2.83 & 32.4 	 
-
-		% delta-h-c - 25% 
-		& 1.53 & 94.4\% & 2.44 & 38.6 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.559 & 100.0\% & 3.39 & 29.5 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 1.519 & 100.0\% & 1.11 & 90.0 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.559 & 100.0\% & 1.25 & 80.0 	 
-
-		% delta-h-c - 50% 
-		& 1.538 & 100.0\% & 1.86 & 53.7 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.548 & 100.0\% & 2.11 & 47.4 	 
-
-		% delta-h-c - 50% 
-		& 1.539 & 100.0\% & 1.19 & 83.7 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.574 & 100.0\% & 1.78 & 56.2 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 1.524 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.564 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c - 75% 
-		& 1.526 & 100.0\% & 1.67 & 60.0 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.553 & 100.0\% & 1.67 & 60.0 	 
-
-		% delta-h-c - 75% 
-		& 1.533 & 100.0\% & 1.06 & 94.7 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.568 & 100.0\% & 1.28 & 78.3 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 1.528 & 100.0\% & 1.06 & 94.7 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.561 & 100.0\% & 1.06 & 94.7 	 
-
-		% delta-h-c - 100% 
-		& 1.524 & 100.0\% & 1.67 & 60.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.558 & 100.0\% & 1.67 & 60.0 	 
-
-		% delta-h-c - 100% 
-		& 1.538 & 100.0\% & 1.11 & 90.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.573 & 100.0\% & 1.14 & 87.8 	 
- \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 0.993 & 72.2\% & 2.28 & 31.7 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.014 & 72.2\% & 3.06 & 23.6 	 
-
-		% delta-h-c - 25% 
-		& 0.989 & 100.0\% & 3.31 & 30.3 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.006 & 100.0\% & 5.5 & 18.2 	 
-
-		% delta-h-c - 25% 
-		& 0.994 & 100.0\% & 3.31 & 30.3 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.012 & 100.0\% & 5.67 & 17.6 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 0.988 & 94.4\% & 1.39 & 68.0 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.01 & 94.4\% & 2.22 & 42.5 	 
-
-		% delta-h-c - 50% 
-		& 0.986 & 100.0\% & 1.75 & 57.1 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.014 & 100.0\% & 3.75 & 26.7 	 
-
-		% delta-h-c - 50% 
-		& 0.989 & 100.0\% & 1.78 & 56.2 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.014 & 100.0\% & 4.83 & 20.7 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 0.982 & 100.0\% & 1.22 & 81.8 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.011 & 100.0\% & 1.22 & 81.8 	 
-
-		% delta-h-c - 75% 
-		& 0.99 & 97.2\% & 1.14 & 85.4 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.008 & 100.0\% & 2.33 & 42.9 	 
-
-		% delta-h-c - 75% 
-		& 0.989 & 97.2\% & 1.14 & 85.4 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.016 & 100.0\% & 3.72 & 26.9 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 0.986 & 100.0\% & 1.06 & 94.7 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.012 & 100.0\% & 1.06 & 94.7 	 
-
-		% delta-h-c - 100% 
-		& 0.985 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.009 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c - 100% 
-		& 0.996 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.019 & 100.0\% & 1.69 & 59.0 	 
- \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 1.104 & 88.9\% & 2.44 & 36.4 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.137 & 88.9\% & 2.67 & 33.3 	 
-
-		% delta-h-c - 25% 
-		& 1.103 & 88.9\% & 3.06 & 29.1 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.133 & 94.4\% & 3.92 & 24.1 	 
-
-		% delta-h-c - 25% 
-		& 1.107 & 86.1\% & 3.44 & 25.0 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.139 & 94.4\% & 4.86 & 19.4 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 1.096 & 94.4\% & 1.64 & 57.6 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.139 & 94.4\% & 2.42 & 39.1 	 
-
-		% delta-h-c - 50% 
-		& 1.097 & 91.7\% & 2.44 & 37.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.133 & 100.0\% & 4.08 & 24.5 	 
-
-		% delta-h-c - 50% 
-		& 1.111 & 94.4\% & 3.0 & 31.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.139 & 100.0\% & 5.0 & 20.0 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 1.107 & 100.0\% & 1.25 & 80.0 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.143 & 100.0\% & 1.47 & 67.9 	 
-
-		% delta-h-c - 75% 
-		& 1.1 & 100.0\% & 1.25 & 80.0 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.126 & 100.0\% & 2.28 & 43.9 	 
-
-		% delta-h-c - 75% 
-		& 1.105 & 97.2\% & 1.81 & 53.8 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.141 & 97.2\% & 4.19 & 23.2 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 1.103 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.14 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c - 100% 
-		& 1.097 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.135 & 100.0\% & 1.25 & 80.0 	 
-
-		% delta-h-c - 100% 
-		& 1.106 & 100.0\% & 1.22 & 81.8 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.138 & 100.0\% & 2.89 & 34.6 	 
- \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 0.869 & 80.6\% & 3.67 & 22.0 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 0.885 & 83.3\% & 4.08 & 20.4 	 
-
-		% delta-h-c - 25% 
-		& 0.875 & 91.7\% & 4.64 & 19.8 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 0.878 & 94.4\% & 4.83 & 19.5 	 
-
-		% delta-h-c - 25% 
-		& 0.866 & 83.3\% & 3.81 & 21.9 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 0.884 & 97.2\% & 5.81 & 16.7 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 0.866 & 80.6\% & 2.64 & 30.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 0.887 & 86.1\% & 3.64 & 23.7 	 
-
-		% delta-h-c - 50% 
-		& 0.867 & 97.2\% & 3.14 & 31.0 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 0.869 & 97.2\% & 3.78 & 25.7 	 
-
-		% delta-h-c - 50% 
-		& 0.87 & 80.6\% & 2.42 & 33.3 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 0.877 & 97.2\% & 5.03 & 19.3 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 0.864 & 88.9\% & 1.67 & 53.3 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 0.881 & 88.9\% & 1.94 & 45.7 	 
-
-		% delta-h-c - 75% 
-		& 0.873 & 91.7\% & 1.83 & 50.0 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 0.871 & 94.4\% & 2.58 & 36.6 	 
-
-		% delta-h-c - 75% 
-		& 0.87 & 86.1\% & 1.53 & 56.4 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 0.881 & 97.2\% & 3.94 & 24.6 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 0.865 & 94.4\% & 1.47 & 64.1 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 0.882 & 94.4\% & 1.47 & 64.1 	 
-
-		% delta-h-c - 100% 
-		& 0.875 & 100.0\% & 1.64 & 61.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 0.872 & 100.0\% & 1.75 & 57.1 	 
-
-		% delta-h-c - 100% 
-		& 0.861 & 94.4\% & 1.36 & 69.4 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 0.881 & 100.0\% & 3.11 & 32.1 	 
- \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 2.538 & 41.7\% & 2.97 & 14.0 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 2.703 & 47.2\% & 3.47 & 13.6 	 
-
-		% delta-h-c - 25% 
-		& 2.734 & 83.3\% & 6.33 & 13.2 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 2.71 & 83.3\% & 6.33 & 13.2 	 
-
-		% delta-h-c - 25% 
-		& 2.635 & 47.2\% & 2.61 & 18.1 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 2.758 & 86.1\% & 6.03 & 14.3 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 2.545 & 66.7\% & 1.92 & 34.8 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 2.683 & 80.6\% & 3.44 & 23.4 	 
-
-		% delta-h-c - 50% 
-		& 2.665 & 41.7\% & 2.69 & 15.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 2.647 & 41.7\% & 2.81 & 14.9 	 
-
-		% delta-h-c - 50% 
-		& 2.631 & 61.1\% & 2.33 & 26.2 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 2.747 & 94.4\% & 4.31 & 21.9 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 2.541 & 80.6\% & 1.61 & 50.0 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 2.655 & 88.9\% & 2.5 & 35.6 	 
-
-		% delta-h-c - 75% 
-		& 2.641 & 30.6\% & 1.58 & 19.3 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 2.642 & 30.6\% & 1.58 & 19.3 	 
-
-		% delta-h-c - 75% 
-		& 2.634 & 91.7\% & 3.44 & 26.6 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 2.76 & 94.4\% & 4.06 & 23.3 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 2.538 & 88.9\% & 1.22 & 72.7 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 2.66 & 88.9\% & 1.22 & 72.7 	 
-
-		% delta-h-c - 100% 
-		& 2.638 & 25.0\% & 1.67 & 15.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 2.641 & 25.0\% & 1.67 & 15.0 	 
-
-		% delta-h-c - 100% 
-		& 2.632 & 88.9\% & 2.83 & 31.4 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 2.779 & 94.4\% & 3.17 & 29.8 	 
- \\ \hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{zeno}} \rotatebox[origin=c]{90}{(0)}} & \multirow{4}{*}{0.0} 
-	 & 25	 & 0.0
-
-		% delta-h-c - 25% 
-		& 1.755 & 63.9\% & 3.78 & 16.9 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.817 & 69.4\% & 4.39 & 15.8 	 
-
-		% delta-h-c - 25% 
-		& 1.699 & 77.8\% & 4.92 & 15.8 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.699 & 83.3\% & 5.67 & 14.7 	 
-
-		% delta-h-c - 25% 
-		& 1.762 & 80.6\% & 4.19 & 19.2 	 
-
-		% delta-h-c-uncertainty - 25% 
-		& 1.827 & 91.7\% & 6.11 & 15.0 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 1.752 & 86.1\% & 1.69 & 50.8 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.818 & 91.7\% & 3.69 & 24.8 	 
-
-		% delta-h-c - 50% 
-		& 1.699 & 86.1\% & 3.47 & 24.8 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.703 & 91.7\% & 4.69 & 19.5 	 
-
-		% delta-h-c - 50% 
-		& 1.768 & 97.2\% & 1.86 & 52.2 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.788 & 100.0\% & 4.89 & 20.5 	 
-
-	\\ & & 75	 & 0.0
-
-		% delta-h-c - 75% 
-		& 1.751 & 97.2\% & 1.33 & 72.9 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.821 & 100.0\% & 1.56 & 64.3 	 
-
-		% delta-h-c - 75% 
-		& 1.697 & 86.1\% & 2.47 & 34.8 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.7 & 94.4\% & 3.81 & 24.8 	 
-
-		% delta-h-c - 75% 
-		& 1.751 & 100.0\% & 1.22 & 81.8 	 
-
-		% delta-h-c-uncertainty - 75% 
-		& 1.769 & 100.0\% & 3.11 & 32.1 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 1.749 & 100.0\% & 1.08 & 92.3 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.833 & 100.0\% & 1.08 & 92.3 	 
-
-		% delta-h-c - 100% 
-		& 1.7 & 88.9\% & 2.25 & 39.5 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.702 & 88.9\% & 2.25 & 39.5 	 
-
-		% delta-h-c - 100% 
-		& 1.743 & 100.0\% & 1.03 & 97.3 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.747 & 100.0\% & 1.69 & 59.0 	 
- \\ \hline
-
-Average & & & & 1.655 & 85.78\% & 2.19 & 52.61 & 1.692 & 89.83\% & 2.89 & 46.36 & 1.681 & 76.66\% & 3.27 & 31.63 & 1.718 & 80.42\% & 3.77 & 26.93 & 1.652 & 89.42\% & 2.23 & 52.71 & 1.702 & 96.47\% & 4.09 & 34.29
- 
+Average & & & &  & 14.908 & 0.71 & 0.21 & 0.08 & 89.1 & 2.37 & 9.84 & 0.68 & 0.26 & 0.06 & 92.66 & 2.99 & 14.941 & 0.5 & 0.42 & 0.08 & 83.57 & 3.54 & 9.991 & 0.43 & 0.49 & 0.08 & 84.68 & 4.0 & 12.919 & 0.67 & 0.25 & 0.08 & 89.88 & 2.58 & 8.543 & 0.51 & 0.44 & 0.04 & 95.72 & 4.33
 \\ \hline
-
-\end{tabular}
-\caption*{L=Landmarks, P=Post-hoc, S=State equation}
+\end{tabular}\\
+\caption{Results for each contraint set, for optimal observations. L for Landmarks, P for Post-hoc, and S for State equation.}
 \end{table*}
+
+\begin{table*}[]
+\centering
+Constraints (single) - Suboptimal, Noisy\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc (L)}
+& \multicolumn{6}{c|}{\hdeltahcu (L)}
+& \multicolumn{6}{c|}{\hdeltahc (P)}
+& \multicolumn{6}{c|}{\hdeltahcu (P)}
+& \multicolumn{6}{c|}{\hdeltahc (S)}
+& \multicolumn{6}{c|}{\hdeltahcu (S)}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{20.3} 
+	 & 10	 & 1.42	 & 7.61
+
+		% delta-h-c-cl - 10% 
+		& 28.544 & 0.4 & 0.35 & 0.25 & 86.1 & 9.92 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 18.768 & 0.4 & 0.35 & 0.25 & 86.1 & 9.92 	 
+
+		% delta-h-c-cp - 10% 
+		& 29.198 & 0.31 & 0.41 & 0.28 & 86.1 & 8.89 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 19.202 & 0.31 & 0.41 & 0.28 & 86.1 & 8.89 	 
+
+		% delta-h-c-cs - 10% 
+		& 19.012 & 0.42 & 0.32 & 0.26 & 83.3 & 9.08 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 12.616 & 0.42 & 0.32 & 0.26 & 83.3 & 9.25 	 
+
+	\\ & & 30	 & 3.83	 & 3.58
+
+		% delta-h-c-cl - 30% 
+		& 28.428 & 0.36 & 0.39 & 0.25 & 80.6 & 4.92 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 18.715 & 0.28 & 0.52 & 0.2 & 86.1 & 9.0 	 
+
+		% delta-h-c-cp - 30% 
+		& 29.092 & 0.33 & 0.41 & 0.26 & 63.9 & 4.72 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 19.066 & 0.33 & 0.41 & 0.26 & 66.7 & 4.97 	 
+
+		% delta-h-c-cs - 30% 
+		& 19.116 & 0.4 & 0.3 & 0.3 & 75.0 & 4.31 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 12.669 & 0.31 & 0.5 & 0.19 & 94.4 & 9.56 	 
+
+	\\ & & 50	 & 5.92	 & 3.19
+
+		% delta-h-c-cl - 50% 
+		& 28.548 & 0.33 & 0.35 & 0.32 & 66.7 & 3.44 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 18.702 & 0.32 & 0.46 & 0.22 & 77.8 & 7.03 	 
+
+		% delta-h-c-cp - 50% 
+		& 29.143 & 0.4 & 0.38 & 0.22 & 66.7 & 3.53 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 19.257 & 0.4 & 0.38 & 0.22 & 66.7 & 3.53 	 
+
+		% delta-h-c-cs - 50% 
+		& 19.078 & 0.47 & 0.28 & 0.24 & 86.1 & 4.17 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 12.581 & 0.27 & 0.6 & 0.13 & 94.4 & 9.64 	 
+
+	\\ & & 70	 & 8.5	 & 2.53
+
+		% delta-h-c-cl - 70% 
+		& 28.579 & 0.38 & 0.33 & 0.29 & 69.4 & 2.83 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 18.79 & 0.36 & 0.46 & 0.18 & 86.1 & 5.36 	 
+
+		% delta-h-c-cp - 70% 
+		& 26.14 & 0.44 & 0.31 & 0.25 & 66.7 & 2.72 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 17.721 & 0.42 & 0.33 & 0.25 & 66.7 & 2.97 	 
+
+		% delta-h-c-cs - 70% 
+		& 17.057 & 0.48 & 0.25 & 0.27 & 72.2 & 2.33 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 11.624 & 0.32 & 0.61 & 0.07 & 100.0 & 9.39 	 
+
+	\\ & & 100	 & 11.83	 & 2.25
+
+		% delta-h-c-cl - 100% 
+		& 28.502 & 0.44 & 0.27 & 0.29 & 66.7 & 2.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 18.725 & 0.56 & 0.33 & 0.11 & 100.0 & 4.08 	 
+
+		% delta-h-c-cp - 100% 
+		& 20.091 & 0.49 & 0.31 & 0.21 & 66.7 & 2.25 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 14.755 & 0.47 & 0.35 & 0.18 & 75.0 & 3.33 	 
+
+		% delta-h-c-cs - 100% 
+		& 14.526 & 0.58 & 0.17 & 0.25 & 75.0 & 1.92 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 9.428 & 0.58 & 0.29 & 0.13 & 100.0 & 3.67 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(1248)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 2.06	 & 1.58
+
+		% delta-h-c-cl - 10% 
+		& 11.381 & 0.69 & 0.28 & 0.02 & 95.8 & 2.75 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 7.503 & 0.65 & 0.32 & 0.02 & 95.8 & 3.25 	 
+
+		% delta-h-c-cp - 10% 
+		& 11.934 & 0.25 & 0.73 & 0.02 & 97.9 & 7.15 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 7.933 & 0.25 & 0.73 & 0.02 & 97.9 & 7.15 	 
+
+		% delta-h-c-cs - 10% 
+		& 11.467 & 0.5 & 0.4 & 0.1 & 85.4 & 3.4 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 7.583 & 0.47 & 0.44 & 0.09 & 87.5 & 4.02 	 
+
+	\\ & & 30	 & 5.56	 & 1.4
+
+		% delta-h-c-cl - 30% 
+		& 11.408 & 0.86 & 0.09 & 0.05 & 100.0 & 1.33 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 7.553 & 0.77 & 0.21 & 0.02 & 100.0 & 2.31 	 
+
+		% delta-h-c-cp - 30% 
+		& 11.97 & 0.22 & 0.74 & 0.04 & 91.7 & 6.81 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 7.938 & 0.22 & 0.74 & 0.04 & 91.7 & 6.81 	 
+
+		% delta-h-c-cs - 30% 
+		& 11.404 & 0.69 & 0.19 & 0.12 & 89.6 & 1.77 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 7.542 & 0.61 & 0.33 & 0.05 & 93.8 & 3.25 	 
+
+	\\ & & 50	 & 8.88	 & 1.35
+
+		% delta-h-c-cl - 50% 
+		& 11.456 & 0.85 & 0.09 & 0.06 & 97.9 & 1.25 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 7.464 & 0.75 & 0.22 & 0.03 & 100.0 & 1.83 	 
+
+		% delta-h-c-cp - 50% 
+		& 11.932 & 0.31 & 0.63 & 0.06 & 81.3 & 5.6 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 7.898 & 0.31 & 0.63 & 0.06 & 81.3 & 5.6 	 
+
+		% delta-h-c-cs - 50% 
+		& 11.386 & 0.71 & 0.22 & 0.07 & 97.9 & 1.69 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 7.523 & 0.53 & 0.41 & 0.06 & 97.9 & 3.08 	 
+
+	\\ & & 70	 & 12.56	 & 1.31
+
+		% delta-h-c-cl - 70% 
+		& 11.404 & 0.86 & 0.06 & 0.08 & 97.9 & 1.13 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 7.517 & 0.81 & 0.14 & 0.06 & 100.0 & 1.44 	 
+
+		% delta-h-c-cp - 70% 
+		& 11.988 & 0.21 & 0.63 & 0.16 & 47.9 & 4.31 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 7.937 & 0.21 & 0.63 & 0.16 & 47.9 & 4.31 	 
+
+		% delta-h-c-cs - 70% 
+		& 11.445 & 0.79 & 0.12 & 0.09 & 95.8 & 1.25 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 7.571 & 0.61 & 0.33 & 0.06 & 100.0 & 2.73 	 
+
+	\\ & & 100	 & 17.25	 & 1.5
+
+		% delta-h-c-cl - 100% 
+		& 11.401 & 0.91 & 0.03 & 0.06 & 100.0 & 1.06 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 7.561 & 0.82 & 0.13 & 0.06 & 100.0 & 1.25 	 
+
+		% delta-h-c-cp - 100% 
+		& 12.072 & 0.07 & 0.53 & 0.4 & 6.3 & 1.88 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 7.996 & 0.07 & 0.53 & 0.4 & 6.3 & 1.88 	 
+
+		% delta-h-c-cs - 100% 
+		& 11.489 & 0.85 & 0.06 & 0.09 & 93.8 & 1.06 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 7.544 & 0.69 & 0.22 & 0.09 & 93.8 & 1.69 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.67	 & 2.0
+
+		% delta-h-c-cl - 10% 
+		& 13.475 & 0.73 & 0.27 & 0.0 & 100.0 & 3.78 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 8.887 & 0.73 & 0.27 & 0.0 & 100.0 & 3.78 	 
+
+		% delta-h-c-cp - 10% 
+		& 13.475 & 0.69 & 0.3 & 0.02 & 97.2 & 3.53 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 8.845 & 0.68 & 0.3 & 0.02 & 97.2 & 3.58 	 
+
+		% delta-h-c-cs - 10% 
+		& 13.529 & 0.72 & 0.28 & 0.0 & 100.0 & 3.86 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 8.856 & 0.61 & 0.39 & 0.0 & 100.0 & 5.22 	 
+
+	\\ & & 30	 & 7.5	 & 1.14
+
+		% delta-h-c-cl - 30% 
+		& 13.499 & 0.86 & 0.13 & 0.01 & 97.2 & 1.44 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 8.896 & 0.71 & 0.29 & 0.0 & 100.0 & 2.53 	 
+
+		% delta-h-c-cp - 30% 
+		& 13.496 & 0.66 & 0.32 & 0.02 & 94.4 & 1.97 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 8.886 & 0.63 & 0.37 & 0.0 & 100.0 & 2.33 	 
+
+		% delta-h-c-cs - 30% 
+		& 13.441 & 0.74 & 0.26 & 0.0 & 100.0 & 2.03 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 8.839 & 0.5 & 0.5 & 0.0 & 100.0 & 4.44 	 
+
+	\\ & & 50	 & 11.92	 & 1.06
+
+		% delta-h-c-cl - 50% 
+		& 13.527 & 0.88 & 0.12 & 0.0 & 100.0 & 1.33 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 8.899 & 0.7 & 0.3 & 0.0 & 100.0 & 2.11 	 
+
+		% delta-h-c-cp - 50% 
+		& 13.402 & 0.69 & 0.31 & 0.0 & 100.0 & 1.75 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 8.914 & 0.68 & 0.32 & 0.0 & 100.0 & 1.92 	 
+
+		% delta-h-c-cs - 50% 
+		& 13.473 & 0.79 & 0.21 & 0.0 & 100.0 & 1.72 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 8.957 & 0.47 & 0.53 & 0.0 & 100.0 & 4.22 	 
+
+	\\ & & 70	 & 16.67	 & 1.03
+
+		% delta-h-c-cl - 70% 
+		& 13.57 & 0.98 & 0.02 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 8.86 & 0.85 & 0.15 & 0.0 & 100.0 & 1.39 	 
+
+		% delta-h-c-cp - 70% 
+		& 13.571 & 0.71 & 0.29 & 0.0 & 100.0 & 1.67 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 8.788 & 0.69 & 0.31 & 0.0 & 100.0 & 1.69 	 
+
+		% delta-h-c-cs - 70% 
+		& 13.497 & 0.91 & 0.09 & 0.0 & 100.0 & 1.22 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 8.893 & 0.7 & 0.3 & 0.0 & 100.0 & 2.36 	 
+
+	\\ & & 100	 & 23.17	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 13.526 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 8.851 & 0.96 & 0.04 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cp - 100% 
+		& 13.476 & 0.69 & 0.31 & 0.0 & 100.0 & 1.67 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 8.919 & 0.69 & 0.31 & 0.0 & 100.0 & 1.67 	 
+
+		% delta-h-c-cs - 100% 
+		& 13.47 & 0.96 & 0.04 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 9.021 & 0.76 & 0.24 & 0.0 & 100.0 & 1.67 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 3.0	 & 1.83
+
+		% delta-h-c-cl - 10% 
+		& 8.486 & 0.61 & 0.36 & 0.03 & 94.4 & 3.25 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 5.547 & 0.61 & 0.37 & 0.03 & 94.4 & 3.33 	 
+
+		% delta-h-c-cp - 10% 
+		& 8.572 & 0.48 & 0.52 & 0.0 & 100.0 & 4.36 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 5.664 & 0.42 & 0.58 & 0.0 & 100.0 & 5.17 	 
+
+		% delta-h-c-cs - 10% 
+		& 8.568 & 0.48 & 0.52 & 0.0 & 100.0 & 4.36 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 5.581 & 0.39 & 0.61 & 0.0 & 100.0 & 5.31 	 
+
+	\\ & & 30	 & 7.67	 & 1.25
+
+		% delta-h-c-cl - 30% 
+		& 8.532 & 0.61 & 0.27 & 0.12 & 83.3 & 1.67 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 5.562 & 0.44 & 0.53 & 0.03 & 97.2 & 3.36 	 
+
+		% delta-h-c-cp - 30% 
+		& 8.499 & 0.5 & 0.48 & 0.01 & 97.2 & 2.86 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 5.671 & 0.28 & 0.72 & 0.0 & 100.0 & 5.39 	 
+
+		% delta-h-c-cs - 30% 
+		& 8.515 & 0.5 & 0.48 & 0.01 & 97.2 & 2.86 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 5.575 & 0.24 & 0.76 & 0.0 & 100.0 & 5.72 	 
+
+	\\ & & 50	 & 12.25	 & 1.03
+
+		% delta-h-c-cl - 50% 
+		& 8.528 & 0.74 & 0.19 & 0.08 & 86.1 & 1.31 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 5.556 & 0.53 & 0.43 & 0.04 & 94.4 & 2.5 	 
+
+		% delta-h-c-cp - 50% 
+		& 8.593 & 0.78 & 0.22 & 0.0 & 100.0 & 1.61 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 5.661 & 0.25 & 0.75 & 0.0 & 100.0 & 4.89 	 
+
+		% delta-h-c-cs - 50% 
+		& 8.452 & 0.78 & 0.22 & 0.0 & 100.0 & 1.61 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 5.602 & 0.22 & 0.78 & 0.0 & 100.0 & 5.33 	 
+
+	\\ & & 70	 & 17.33	 & 1.0
+
+		% delta-h-c-cl - 70% 
+		& 8.557 & 0.81 & 0.14 & 0.05 & 88.9 & 1.25 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 5.576 & 0.63 & 0.34 & 0.03 & 94.4 & 2.08 	 
+
+		% delta-h-c-cp - 70% 
+		& 8.556 & 0.76 & 0.23 & 0.01 & 97.2 & 1.5 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 5.581 & 0.37 & 0.63 & 0.0 & 100.0 & 3.75 	 
+
+		% delta-h-c-cs - 70% 
+		& 8.479 & 0.75 & 0.23 & 0.01 & 97.2 & 1.53 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 5.644 & 0.21 & 0.79 & 0.0 & 100.0 & 5.25 	 
+
+	\\ & & 100	 & 24.0	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 8.502 & 0.92 & 0.04 & 0.04 & 91.7 & 1.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 5.629 & 0.94 & 0.06 & 0.0 & 100.0 & 1.17 	 
+
+		% delta-h-c-cp - 100% 
+		& 8.657 & 0.96 & 0.04 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 5.722 & 0.89 & 0.11 & 0.0 & 100.0 & 1.42 	 
+
+		% delta-h-c-cs - 100% 
+		& 8.45 & 0.96 & 0.04 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 5.671 & 0.31 & 0.69 & 0.0 & 100.0 & 4.42 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.83	 & 2.39
+
+		% delta-h-c-cl - 10% 
+		& 9.259 & 0.72 & 0.23 & 0.05 & 94.4 & 3.33 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 6.091 & 0.72 & 0.23 & 0.05 & 94.4 & 3.33 	 
+
+		% delta-h-c-cp - 10% 
+		& 9.221 & 0.59 & 0.39 & 0.02 & 97.2 & 4.53 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 6.06 & 0.59 & 0.39 & 0.02 & 97.2 & 4.53 	 
+
+		% delta-h-c-cs - 10% 
+		& 9.2 & 0.54 & 0.44 & 0.02 & 97.2 & 4.75 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 6.08 & 0.5 & 0.48 & 0.02 & 97.2 & 5.06 	 
+
+	\\ & & 30	 & 4.5	 & 1.39
+
+		% delta-h-c-cl - 30% 
+		& 9.254 & 0.75 & 0.16 & 0.09 & 88.9 & 1.64 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 6.103 & 0.66 & 0.27 & 0.07 & 91.7 & 2.33 	 
+
+		% delta-h-c-cp - 30% 
+		& 9.242 & 0.64 & 0.31 & 0.06 & 88.9 & 2.25 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 6.145 & 0.47 & 0.52 & 0.01 & 97.2 & 4.17 	 
+
+		% delta-h-c-cs - 30% 
+		& 9.269 & 0.56 & 0.38 & 0.06 & 86.1 & 2.64 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 6.035 & 0.37 & 0.62 & 0.01 & 97.2 & 4.78 	 
+
+	\\ & & 50	 & 7.17	 & 1.11
+
+		% delta-h-c-cl - 50% 
+		& 9.234 & 0.78 & 0.17 & 0.05 & 91.7 & 1.42 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 6.049 & 0.69 & 0.26 & 0.05 & 91.7 & 2.0 	 
+
+		% delta-h-c-cp - 50% 
+		& 9.256 & 0.67 & 0.28 & 0.04 & 88.9 & 1.81 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 6.159 & 0.35 & 0.63 & 0.01 & 97.2 & 3.89 	 
+
+		% delta-h-c-cs - 50% 
+		& 9.232 & 0.53 & 0.43 & 0.04 & 88.9 & 2.64 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 6.13 & 0.28 & 0.72 & 0.0 & 100.0 & 5.14 	 
+
+	\\ & & 70	 & 10.0	 & 1.06
+
+		% delta-h-c-cl - 70% 
+		& 9.337 & 0.9 & 0.1 & 0.0 & 100.0 & 1.36 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 6.075 & 0.75 & 0.25 & 0.0 & 100.0 & 1.97 	 
+
+		% delta-h-c-cp - 70% 
+		& 9.345 & 0.82 & 0.18 & 0.0 & 100.0 & 1.58 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 6.119 & 0.55 & 0.45 & 0.0 & 100.0 & 2.86 	 
+
+		% delta-h-c-cs - 70% 
+		& 9.287 & 0.74 & 0.24 & 0.01 & 97.2 & 1.81 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 6.037 & 0.33 & 0.67 & 0.0 & 100.0 & 4.75 	 
+
+	\\ & & 100	 & 13.67	 & 1.0
+
+		% delta-h-c-cl - 100% 
+		& 9.136 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 6.063 & 0.94 & 0.06 & 0.0 & 100.0 & 1.25 	 
+
+		% delta-h-c-cp - 100% 
+		& 9.333 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 6.277 & 0.9 & 0.1 & 0.0 & 100.0 & 1.33 	 
+
+		% delta-h-c-cs - 100% 
+		& 9.209 & 0.9 & 0.1 & 0.0 & 100.0 & 1.33 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 5.974 & 0.61 & 0.39 & 0.0 & 100.0 & 2.92 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(936)}} & \multirow{5}{*}{8.7} 
+	 & 10	 & 3.33	 & 1.83
+
+		% delta-h-c-cl - 10% 
+		& 18.268 & 0.27 & 0.52 & 0.21 & 58.3 & 3.81 	 
+
+		% delta-h-c-cl-uncertainty - 10% 
+		& 12.179 & 0.27 & 0.54 & 0.19 & 61.1 & 4.06 	 
+
+		% delta-h-c-cp - 10% 
+		& 19.612 & 0.24 & 0.72 & 0.04 & 91.7 & 6.78 	 
+
+		% delta-h-c-cp-uncertainty - 10% 
+		& 13.308 & 0.24 & 0.72 & 0.04 & 91.7 & 6.78 	 
+
+		% delta-h-c-cs - 10% 
+		& 18.774 & 0.37 & 0.3 & 0.33 & 47.2 & 1.94 	 
+
+		% delta-h-c-cs-uncertainty - 10% 
+		& 12.464 & 0.36 & 0.44 & 0.19 & 72.2 & 3.97 	 
+
+	\\ & & 30	 & 8.67	 & 1.28
+
+		% delta-h-c-cl - 30% 
+		& 18.376 & 0.37 & 0.45 & 0.17 & 72.2 & 2.53 	 
+
+		% delta-h-c-cl-uncertainty - 30% 
+		& 12.225 & 0.28 & 0.65 & 0.07 & 86.1 & 5.11 	 
+
+		% delta-h-c-cp - 30% 
+		& 19.76 & 0.13 & 0.62 & 0.25 & 41.7 & 2.97 	 
+
+		% delta-h-c-cp-uncertainty - 30% 
+		& 13.499 & 0.13 & 0.62 & 0.25 & 41.7 & 2.97 	 
+
+		% delta-h-c-cs - 30% 
+		& 18.779 & 0.58 & 0.25 & 0.17 & 72.2 & 2.19 	 
+
+		% delta-h-c-cs-uncertainty - 30% 
+		& 12.618 & 0.35 & 0.64 & 0.01 & 97.2 & 5.56 	 
+
+	\\ & & 50	 & 13.75	 & 1.33
+
+		% delta-h-c-cl - 50% 
+		& 18.366 & 0.4 & 0.34 & 0.27 & 55.6 & 1.61 	 
+
+		% delta-h-c-cl-uncertainty - 50% 
+		& 12.207 & 0.38 & 0.57 & 0.05 & 91.7 & 4.67 	 
+
+		% delta-h-c-cp - 50% 
+		& 19.74 & 0.16 & 0.43 & 0.41 & 19.4 & 1.39 	 
+
+		% delta-h-c-cp-uncertainty - 50% 
+		& 13.422 & 0.16 & 0.47 & 0.37 & 30.6 & 1.78 	 
+
+		% delta-h-c-cs - 50% 
+		& 18.808 & 0.54 & 0.25 & 0.22 & 63.9 & 2.0 	 
+
+		% delta-h-c-cs-uncertainty - 50% 
+		& 12.571 & 0.32 & 0.6 & 0.08 & 83.3 & 4.83 	 
+
+	\\ & & 70	 & 19.33	 & 1.36
+
+		% delta-h-c-cl - 70% 
+		& 18.318 & 0.43 & 0.32 & 0.25 & 63.9 & 1.72 	 
+
+		% delta-h-c-cl-uncertainty - 70% 
+		& 12.277 & 0.37 & 0.53 & 0.11 & 80.6 & 3.89 	 
+
+		% delta-h-c-cp - 70% 
+		& 19.746 & 0.17 & 0.41 & 0.42 & 22.2 & 1.44 	 
+
+		% delta-h-c-cp-uncertainty - 70% 
+		& 13.37 & 0.16 & 0.43 & 0.41 & 22.2 & 1.61 	 
+
+		% delta-h-c-cs - 70% 
+		& 15.75 & 0.44 & 0.41 & 0.15 & 83.3 & 3.97 	 
+
+		% delta-h-c-cs-uncertainty - 70% 
+		& 10.337 & 0.25 & 0.72 & 0.03 & 94.4 & 6.53 	 
+
+	\\ & & 100	 & 27.0	 & 1.33
+
+		% delta-h-c-cl - 100% 
+		& 18.254 & 0.74 & 0.1 & 0.17 & 83.3 & 1.17 	 
+
+		% delta-h-c-cl-uncertainty - 100% 
+		& 12.082 & 0.61 & 0.35 & 0.04 & 100.0 & 3.0 	 
+
+		% delta-h-c-cp - 100% 
+		& 19.685 & 0.13 & 0.49 & 0.38 & 16.7 & 1.75 	 
+
+		% delta-h-c-cp-uncertainty - 100% 
+		& 13.69 & 0.15 & 0.49 & 0.36 & 16.7 & 1.83 	 
+
+		% delta-h-c-cs - 100% 
+		& 12.955 & 0.47 & 0.45 & 0.08 & 83.3 & 4.67 	 
+
+		% delta-h-c-cs-uncertainty - 100% 
+		& 8.222 & 0.3 & 0.65 & 0.04 & 91.7 & 6.17 	 
+ \\ \hline
+Average & & & &  & 14.922 & 0.69 & 0.21 & 0.11 & 87.04 & 2.24 & 9.83 & 0.62 & 0.32 & 0.06 & 93.66 & 3.35 & 14.96 & 0.48 & 0.4 & 0.12 & 77.59 & 3.18 & 10.013 & 0.41 & 0.48 & 0.11 & 79.26 & 3.77 & 12.904 & 0.64 & 0.27 & 0.1 & 88.93 & 2.68 & 8.526 & 0.43 & 0.52 & 0.05 & 95.95 & 5.0
+\\ \hline
+\end{tabular}
+\caption{Results for each contraint set, for suboptimal observations. L for Landmarks, P for Post-hoc, and S for State equation.}
+\end{table*}
+
 \end{document}

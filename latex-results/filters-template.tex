@@ -24,41 +24,71 @@
 /Author (?)
 }
 \begin{document}
+
 \begin{table*}[]
 \centering
-\fontsize{5}{6}\selectfont
-\setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|cccc|cccc|cccc|cccc|cccc|cccc|}
+Observation Filters - Optimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
 \hline
 % empty
 & % empty
-& \multicolumn{2}{c|}{}
-& \multicolumn{4}{c|}{\hdeltahc F0}
-& \multicolumn{4}{c|}{\hdeltahcu F0}
-& \multicolumn{4}{c|}{\hdeltahc F1}
-& \multicolumn{4}{c|}{\hdeltahcu F1}
-& \multicolumn{4}{c|}{\hdeltahc F2}
-& \multicolumn{4}{c|}{\hdeltahcu F2}
-
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc F0}
+& \multicolumn{6}{c|}{\hdeltahcu F0}
+& \multicolumn{6}{c|}{\hdeltahc F1}
+& \multicolumn{6}{c|}{\hdeltahcu F1}
+& \multicolumn{6}{c|}{\hdeltahc F2}
+& \multicolumn{6}{c|}{\hdeltahcu F2}
 \\ \hline
-
-\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}    
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
-
 <TABLE_LP_RESULTS>
-
-Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3> & <AVG_APPROACH_4> & <AVG_APPROACH_5>
- 
+Average & & & & <AVG_APPROACH>
 \\ \hline
-
 \end{tabular}
-\caption*{F0 = No filtering, F1 = filtering 1 observation, F2 = filtering 2 observations}
+\caption{Results for each filtering $k$, with optimal observations. F0 for no filter, F1 for $k=1$ and F2 for $k=2$.}
 \end{table*}
+
+\begin{table*}[]
+\centering
+Observation Filters - Suboptimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{\hdeltahc F0}
+& \multicolumn{6}{c|}{\hdeltahcu F0}
+& \multicolumn{6}{c|}{\hdeltahc F1}
+& \multicolumn{6}{c|}{\hdeltahcu F1}
+& \multicolumn{6}{c|}{\hdeltahc F2}
+& \multicolumn{6}{c|}{\hdeltahcu F2}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+<TABLE_LP_RESULTS_2>
+Average & & & & <AVG_APPROACH_2>
+\\ \hline
+\end{tabular}
+\caption{Results for each filtering $k$, with suboptimal observations. F0 for no filter, F1 for $k=1$ and F2 for $k=2$.}
+\end{table*}
+
 \end{document}

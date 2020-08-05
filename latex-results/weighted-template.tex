@@ -24,37 +24,63 @@
 /Author (?)
 }
 \begin{document}
+
 \begin{table*}[]
 \centering
-\fontsize{5}{6}\selectfont
-\setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|cccc|cccc|cccc|cccc|}
+Observation Filters - Optimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|}
 \hline
 % empty
 & % empty
-& \multicolumn{2}{c|}{}
-& \multicolumn{4}{c|}{No weight (original)}
-& \multicolumn{4}{c|}{Weighted}
-& \multicolumn{4}{c|}{Weighted-U}
-& \multicolumn{4}{c|}{Weighted-Normalized}
-
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{No weight (original)}
+& \multicolumn{6}{c|}{No weight-U (original)}
+& \multicolumn{6}{c|}{Weighted}
+& \multicolumn{6}{c|}{Weighted-U}
 \\ \hline
-
-\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
-
 <TABLE_LP_RESULTS>
-
-Average & & & & <AVG_APPROACH_0> & <AVG_APPROACH_1> & <AVG_APPROACH_2> & <AVG_APPROACH_3>
- 
+Average & & & & <AVG_APPROACH>
 \\ \hline
-
 \end{tabular}
-\caption*{}
+\caption{Results for weighted observation sequences, with optimal observations. Each observation $\omega_i$ receives weight $i$.}
 \end{table*}
+
+\begin{table*}[]
+\centering
+Observation Filters - Suboptimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{No weight (original)}
+& \multicolumn{6}{c|}{No weight-U (original)}
+& \multicolumn{6}{c|}{Weighted}
+& \multicolumn{6}{c|}{Weighted-U}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+<TABLE_LP_RESULTS_2>
+Average & & & & <AVG_APPROACH_2>
+\\ \hline
+\end{tabular}
+\caption{Results for weighted observation sequences, with suboptimal observations. Each observation $\omega_i$ receives weight $i$.}
+\end{table*}
+
 \end{document}
