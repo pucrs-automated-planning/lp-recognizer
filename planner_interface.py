@@ -70,7 +70,7 @@ class Hypothesis:
         self.atoms = atoms
         self.plan = []
         self.is_true = True
-        self.is_solution = True
+        self.is_solution = False
         self.test_failed = False
         self.plan_time = 0
         self.total_time = 0
@@ -164,7 +164,7 @@ class Hypothesis:
             return
         instream = open('solution.dat')
         for line in instream:
-            atoms = re.findall("\([\w\s]+\)", line)
+            atoms = re.findall("\(.*?\)", line)
             self.is_solution = self.check_if_equal(atoms)
             if self.is_solution:
                 break
