@@ -13,6 +13,15 @@ pushd ..
 	if [[ -z "$DOWNWARD_SOPLEX_ROOT" ]]; then
 		export DOWNWARD_SOPLEX_ROOT=`pwd`/soplex
 	fi
+	if [[ -z "$DOWNWARD_CPLEX_ROOT" ]]; then
+		if [[ `uname` == "Darwin" ]]; then
+			export DOWNWARD_CPLEX_ROOT=/Applications/CPLEX_Studio129/cplex
+		elif [[ `uname` == "Linux" ]]; then
+			export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio129/cplex
+		else
+			export DOWNWARD_CPLEX_ROOT=C:/Program\ Files/IBM/ILOG/CPLEX_Studio129/cplex
+		fi
+	fi
 popd
 
 # Check for libs in paths
@@ -49,6 +58,7 @@ pushd ..
 
 	pushd $FD_ROOT
 		./build.py release
+		cp $DIR/fast-downward .
 		chmod u+x fast-downward
 	popd
 popd

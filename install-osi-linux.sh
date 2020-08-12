@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 pushd ..
 
+# Uncomment the exports below if oyu want to run this outside of 'prepare-fd.sh'
+# Check that this is where you have CPLEX (if you have it)
+# export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio129/cplex
+# You should probably change the line below to match where you want COIN64
+# export DOWNWARD_COIN_ROOT=`pwd`/coin64
+# You should probably change the line below to match where you want SOPLEX
+# export DOWNWARD_SOPLEX_ROOT=`pwd`/soplex
+
 # Install soplex
 if [[ ! -d "$DOWNWARD_SOPLEX_ROOT" ]]; then
 	# Install soplex
