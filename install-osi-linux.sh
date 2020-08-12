@@ -16,7 +16,7 @@ if [[ ! -d "$DOWNWARD_SOPLEX_ROOT" ]]; then
 	tar xvzf soplex-3.1.1.tgz
 	pushd soplex-3.1.1
 	cmake -DCMAKE_INSTALL_PREFIX="$DOWNWARD_SOPLEX_ROOT" .
-	make
+	make -j8 #(use as many cores as possible)
 	make install
 	echo "Installed Soplex at $DOWNWARD_SOPLEX_ROOT"
 	popd
@@ -52,7 +52,7 @@ else
 	            --with-soplex-incdir=$DOWNWARD_SOPLEX_ROOT/include \
 	            --with-soplex-lib="-lsoplex"
 fi
-make
+make -j8 #(use as many cores as possible)
 make install
 popd
 echo "Installed OSI at $DOWNWARD_COIN_ROOT"

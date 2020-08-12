@@ -18,7 +18,7 @@ if [[ ! -d "$DOWNWARD_SOPLEX_ROOT" ]]; then
 	tar xvzf soplex-3.1.1.tgz
 	pushd soplex-3.1.1
 	cmake -DCMAKE_INSTALL_PREFIX="$DOWNWARD_SOPLEX_ROOT" .
-	make
+	make -j8
 	make install
 	echo "Installed Soplex at $DOWNWARD_SOPLEX_ROOT"
 	popd
