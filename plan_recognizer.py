@@ -26,10 +26,11 @@ class PlanRecognizer:
         instream = open('hyps.dat')
         for line in instream:
             line = line.strip()
-            atoms = [tok.strip() for tok in line.split(',')]
+            atoms = [tok.strip().lower() for tok in line.split(',')]
             H = Hypothesis(opts, atoms)
             H.check_if_actual()
             hyps.append(H)
+        print("Real solution: %s" % [hyp for hyp in hyps if hyp.is_solution])
         instream.close()
         return hyps
 

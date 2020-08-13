@@ -156,7 +156,7 @@ class Hypothesis:
     def check_if_actual(self):
         instream = open('real_hyp.dat')
         for line in instream:
-            atoms = [tok.strip() for tok in line.split(',')]
+            atoms = [tok.strip().lower() for tok in line.split(',')]
             self.is_true = self.check_if_equal(atoms)
         instream.close()
         if self.is_true:
@@ -164,7 +164,7 @@ class Hypothesis:
             return
         instream = open('solution.dat')
         for line in instream:
-            atoms = re.findall("\(.*?\)", line)
+            atoms = [tok.strip().lower() for tok in re.findall("\(.*?\)", line)]
             self.is_solution = self.check_if_equal(atoms)
             if self.is_solution:
                 break

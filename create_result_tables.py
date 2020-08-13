@@ -24,26 +24,22 @@ def read_hyps():
 	hyps = set()
 	with open("hyps.dat") as f:
 		for line in f:
-			atoms = [tok.strip() for tok in line.split(',')]
+			atoms = [tok.strip().lower() for tok in line.split(',')]
 			hyps.add(frozenset(atoms))
 	return hyps
 
 def read_real_hyp(hyps):
 	with open("real_hyp.dat") as f:
-		atoms = frozenset([tok.strip() for tok in f.readline().split(',')])
-		for hyp in hyps:
-			if hyp == atoms:
-				return hyp
-	print("No real hyp.")
-	return None
+		atoms = [tok.strip().lower() for tok in f.readline().split(',')]
+	return frozenset(atoms)
 
 def read_solutions(hyps):
 	goals = set()
 	with open("solution.dat") as f:
 		for line in f:
-			atoms = re.findall("\(.*?\)", line)
+			atoms = [tok.strip().lower() for tok in re.findall("\(.*?\)", line)]
 			goals.add(frozenset(atoms))
-	return set([hyp for hyp in hyps if hyp in goals])
+	return goals
 
 def read_observations():
 	observations = []
@@ -139,17 +135,17 @@ def read_experiments(base_path, domain, method, observabilities):
 						break
 				continue
 			line = line.split(":")
-			current_file = line[0]
-			if current_file.isdigit():
-				raw_results[observabilities[reading_obs]].total_time += float(line)
+			current_file = line[0].strip()
+			if current_file[0].isdigit():
+				raw_results[observabilities[reading_obs]].total_time += float(line[0]) * current_results.num_problems
 				reading_obs += 1
 			for obs in observabilities:
 				print(obs + "/", line[0])
 				if obs + "/" in line[0]:
 					current_results = raw_results[obs]
 					break
-			if len(line) > 1 and line[1].strip().isdigit():
-				current_results.total_time += float(line[1]) * current_results.num_problems
+			if len(line) > 1 and line[1][0].isdigit():
+				current_results.total_time += float(line[1])
 			current_results.solutions[current_file] = set()
 	experiments = []
 	for obs in observabilities:
@@ -182,18 +178,18 @@ if __name__ == '__main__':
 	'miconic-suboptimal',
 	'rovers-suboptimal',
 	'sokoban-suboptimal',
-	'blocks-world-optimal-old-noisy',
-	'easy-ipc-grid-optimal-old-noisy',
-	'logistics-optimal-old-noisy',
-	'miconic-optimal-old-noisy',
-	'rovers-optimal-old-noisy',
-	'sokoban-optimal-old-noisy',
-	'blocks-world-suboptimal-old-noisy',
-	'easy-ipc-grid-suboptimal-old-noisy',
-	'logistics-suboptimal-old-noisy',
-	'miconic-suboptimal-old-noisy',
-	'rovers-suboptimal-old-noisy',
-	'sokoban-suboptimal-old-noisy',
+	'blocks-world-optimal-noisy',
+	'easy-ipc-grid-optimal-noisy',
+	'logistics-optimal-noisy',
+	'miconic-optimal-noisy',
+	'rovers-optimal-noisy',
+	'sokoban-optimal-noisy',
+	'blocks-world-suboptimal-noisy',
+	'easy-ipc-grid-suboptimal-noisy',
+	'logistics-suboptimal-noisy',
+	'miconic-suboptimal-noisy',
+	'rovers-suboptimal-noisy',
+	'sokoban-suboptimal-noisy',
 	]
 	observabilities = ['10', '30', '50', '70', '100']
 	for domain in domains:
