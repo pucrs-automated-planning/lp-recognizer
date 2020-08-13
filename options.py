@@ -179,7 +179,8 @@ class Program_Options:
             os.system("cp %s solution.dat" % solution_file)
         else:
             if "noisy" in exp_file:
-                solution_file_original = solution_file.replace("-noisy_0.2", "").replace("-noisy", "")
+                solution_file_original = solution_file.replace("-noisy_0.2", "").replace("-noisy", "").replace("-old", "").replace("_noisy", "")
+                solution_file_original = solution_file_original.replace("full_1", "full").replace("full_2", "full").replace("full_3", "full")
                 if os.path.exists(solution_file_original):
                     os.system("cp %s solution.dat" % solution_file_original)
                 else:
