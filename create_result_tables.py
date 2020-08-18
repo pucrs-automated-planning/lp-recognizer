@@ -165,33 +165,25 @@ def write_table(experiments, observabilities, file_name):
 if __name__ == '__main__':
 	base_path = sys.argv[1]
 	method = sys.argv[2]
-	domains = [
-	'blocks-world-optimal',
-	'easy-ipc-grid-optimal',
-	'logistics-optimal',
-	'miconic-optimal',
-	'rovers-optimal',
-	'sokoban-optimal',
-	'blocks-world-suboptimal',
-	'easy-ipc-grid-suboptimal',
-	'logistics-suboptimal',
-	'miconic-suboptimal',
-	'rovers-suboptimal',
-	'sokoban-suboptimal',
-	'blocks-world-optimal-noisy',
-	'easy-ipc-grid-optimal-noisy',
-	'logistics-optimal-noisy',
-	'miconic-optimal-noisy',
-	'rovers-optimal-noisy',
-	'sokoban-optimal-noisy',
-	'blocks-world-suboptimal-noisy',
-	'easy-ipc-grid-suboptimal-noisy',
-	'logistics-suboptimal-noisy',
-	'miconic-suboptimal-noisy',
-	'rovers-suboptimal-noisy',
-	'sokoban-suboptimal-noisy',
-	]
 	observabilities = ['10', '30', '50', '70', '100']
+	domains = [
+	'blocks-world',
+	'easy-ipc-grid',
+	'logistics',
+	'miconic',
+	'rovers',
+	'satellite',
+	'sokoban',
+	]
+	domain_types = [
+	'-optimal',
+	'-optimal-noisy',
+	'-optimal-old-noisy',
+	'-suboptimal',
+	'-suboptimal-noisy',
+	'-suboptimal-old-noisy',
+	]
 	for domain in domains:
-		experiments = read_experiments(base_path + "/", domain, method, observabilities)
-	   	write_table(experiments, observabilities, domain + "-" + method + ".txt")
+		for dt in domain_types:
+			experiments = read_experiments(base_path + "/", domain + dt, method, observabilities)
+		   	write_table(experiments, observabilities, domain + dt + "-" + method + ".txt")

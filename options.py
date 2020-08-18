@@ -135,7 +135,9 @@ class Program_Options:
                 elif '-cs' in oparg:
                     self.recognizer_name += "-cs"
 
-                if 'u' in oparg:
+                if 'um' in oparg:
+                    self.recognizer_name += "-uncertainty-max"
+                elif 'u' in oparg:
                     self.recognizer_name += "-uncertainty"
 
 

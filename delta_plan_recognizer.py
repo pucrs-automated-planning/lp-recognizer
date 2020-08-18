@@ -41,6 +41,15 @@ class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
             print("Uncertainty: {}".format(self.uncertainty_ratio))
 
 
+class LPRecognizerDeltaHCUncertaintyMax(LPRecognizerDeltaHCUncertainty):
+    name = "delta-h-c-uncertainty-max"
+
+    def __init__(self, options):
+        LPRecognizerDeltaHCUncertainty.__init__(self, options)
+
+    def get_score(self, h):
+        return [h.h_c - h.h, -h.h_c, h.obs_misses]
+
 class LPRecognizerWeightedDeltaHC(LPRecognizerDeltaHC):
     name = "weighted-delta-h-c"
 
