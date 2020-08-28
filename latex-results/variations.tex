@@ -1,0 +1,1294 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Weighted by Obversations)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+Weighted by Observations - Optimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{No weight (original)}
+& \multicolumn{6}{c|}{No weight-U (original)}
+& \multicolumn{6}{c|}{No weight-U-Max (original)}
+& \multicolumn{6}{c|}{Weighted}
+& \multicolumn{6}{c|}{Weighted-U}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{20.3} 
+	 & 10	 & 1.25	 & 8.0
+
+		% delta-h-c - 10% 
+		& 3.881 & 0.44 & 0.24 & 0.32 & 86.1 & 7.53 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 3.862 & 0.44 & 0.25 & 0.32 & 86.1 & 7.56 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 4.115 & 0.44 & 0.25 & 0.32 & 86.1 & 7.56 	 
+
+		% weighted-c - 10% 
+		& 15.399 & 0.05 & 0.2 & 0.75 & 22.2 & 1.97 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 9.927 & 0.34 & 0.59 & 0.07 & 97.2 & 17.67 	 
+
+	\\ & & 30	 & 3.08	 & 3.97
+
+		% delta-h-c - 30% 
+		& 3.856 & 0.46 & 0.14 & 0.4 & 77.8 & 2.5 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 3.873 & 0.44 & 0.24 & 0.31 & 86.1 & 4.67 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 4.12 & 0.44 & 0.24 & 0.31 & 86.1 & 4.67 	 
+
+		% weighted-c - 30% 
+		& 12.883 & 0.23 & 0.2 & 0.58 & 58.3 & 1.67 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 8.544 & 0.2 & 0.77 & 0.04 & 97.2 & 16.36 	 
+
+	\\ & & 50	 & 4.42	 & 2.5
+
+		% delta-h-c - 50% 
+		& 3.857 & 0.59 & 0.21 & 0.2 & 88.9 & 3.03 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 3.85 & 0.52 & 0.3 & 0.19 & 88.9 & 3.86 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 4.117 & 0.49 & 0.32 & 0.19 & 88.9 & 4.64 	 
+
+		% weighted-c - 50% 
+		& 10.864 & 0.34 & 0.23 & 0.43 & 63.9 & 1.58 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 8.434 & 0.18 & 0.78 & 0.04 & 100.0 & 13.33 	 
+
+	\\ & & 70	 & 6.67	 & 1.94
+
+		% delta-h-c - 70% 
+		& 3.857 & 0.85 & 0.05 & 0.1 & 97.2 & 1.83 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 3.892 & 0.76 & 0.14 & 0.1 & 97.2 & 2.42 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 4.123 & 0.74 & 0.16 & 0.1 & 97.2 & 2.64 	 
+
+		% weighted-c - 70% 
+		& 10.54 & 0.5 & 0.15 & 0.35 & 77.8 & 1.19 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.739 & 0.27 & 0.67 & 0.06 & 100.0 & 8.42 	 
+
+	\\ & & 100	 & 8.83	 & 1.83
+
+		% delta-h-c - 100% 
+		& 3.9 & 0.92 & 0.0 & 0.08 & 100.0 & 1.67 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.131 & 0.92 & 0.0 & 0.08 & 100.0 & 1.67 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 4.124 & 0.92 & 0.0 & 0.08 & 100.0 & 1.67 	 
+
+		% weighted-c - 100% 
+		& 10.382 & 0.74 & 0.0 & 0.26 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 6.716 & 0.48 & 0.44 & 0.07 & 100.0 & 3.42 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(208)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 1.63	 & 2.71
+
+		% delta-h-c - 10% 
+		& 1.673 & 0.87 & 0.05 & 0.08 & 93.8 & 2.67 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.675 & 0.88 & 0.05 & 0.07 & 95.8 & 2.69 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.673 & 0.88 & 0.05 & 0.07 & 95.8 & 2.69 	 
+
+		% weighted-c - 10% 
+		& 8.101 & 0.35 & 0.17 & 0.48 & 43.8 & 1.19 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 7.047 & 0.4 & 0.53 & 0.07 & 87.5 & 5.44 	 
+
+	\\ & & 30	 & 4.0	 & 1.21
+
+		% delta-h-c - 30% 
+		& 1.675 & 0.93 & 0.02 & 0.05 & 95.8 & 1.15 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.673 & 0.94 & 0.02 & 0.04 & 97.9 & 1.17 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.676 & 0.94 & 0.02 & 0.04 & 97.9 & 1.17 	 
+
+		% weighted-c - 30% 
+		& 7.235 & 0.74 & 0.1 & 0.16 & 79.2 & 1.1 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 6.62 & 0.33 & 0.67 & 0.0 & 100.0 & 5.06 	 
+
+	\\ & & 50	 & 6.19	 & 1.13
+
+		% delta-h-c - 50% 
+		& 1.676 & 0.96 & 0.01 & 0.03 & 97.9 & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.679 & 0.96 & 0.01 & 0.03 & 97.9 & 1.08 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.679 & 0.96 & 0.01 & 0.03 & 97.9 & 1.08 	 
+
+		% weighted-c - 50% 
+		& 7.138 & 0.9 & 0.03 & 0.07 & 95.8 & 1.04 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 6.402 & 0.44 & 0.56 & 0.0 & 100.0 & 3.98 	 
+
+	\\ & & 70	 & 8.69	 & 1.04
+
+		% delta-h-c - 70% 
+		& 1.682 & 0.97 & 0.02 & 0.01 & 97.9 & 1.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.681 & 0.97 & 0.02 & 0.01 & 97.9 & 1.06 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.679 & 0.97 & 0.02 & 0.01 & 97.9 & 1.06 	 
+
+		% weighted-c - 70% 
+		& 7.143 & 0.98 & 0.0 & 0.02 & 97.9 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.432 & 0.53 & 0.47 & 0.0 & 100.0 & 2.67 	 
+
+	\\ & & 100	 & 11.88	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.69 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.689 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.686 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 7.1 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 6.487 & 0.69 & 0.31 & 0.0 & 100.0 & 1.63 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.0	 & 2.83
+
+		% delta-h-c - 10% 
+		& 1.898 & 0.9 & 0.1 & 0.0 & 100.0 & 3.53 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.898 & 0.9 & 0.1 & 0.0 & 100.0 & 3.53 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.897 & 0.9 & 0.1 & 0.0 & 100.0 & 3.53 	 
+
+		% weighted-c - 10% 
+		& 9.33 & 0.41 & 0.2 & 0.38 & 55.6 & 2.11 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 7.889 & 0.28 & 0.72 & 0.0 & 100.0 & 10.0 	 
+
+	\\ & & 30	 & 5.75	 & 1.19
+
+		% delta-h-c - 30% 
+		& 1.899 & 0.92 & 0.08 & 0.0 & 100.0 & 1.47 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.901 & 0.92 & 0.08 & 0.0 & 100.0 & 1.47 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.903 & 0.92 & 0.08 & 0.0 & 100.0 & 1.47 	 
+
+		% weighted-c - 30% 
+		& 9.334 & 0.81 & 0.09 & 0.1 & 83.3 & 1.19 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 7.917 & 0.12 & 0.88 & 0.0 & 100.0 & 9.83 	 
+
+	\\ & & 50	 & 9.42	 & 1.06
+
+		% delta-h-c - 50% 
+		& 1.896 & 0.96 & 0.04 & 0.0 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.9 & 0.96 & 0.04 & 0.0 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.904 & 0.96 & 0.04 & 0.0 & 100.0 & 1.17 	 
+
+		% weighted-c - 50% 
+		& 8.985 & 0.91 & 0.06 & 0.03 & 97.2 & 1.17 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 7.823 & 0.13 & 0.87 & 0.0 & 100.0 & 9.31 	 
+
+	\\ & & 70	 & 13.25	 & 1.03
+
+		% delta-h-c - 70% 
+		& 1.903 & 0.99 & 0.01 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.903 & 0.99 & 0.01 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.902 & 0.99 & 0.01 & 0.0 & 100.0 & 1.06 	 
+
+		% weighted-c - 70% 
+		& 8.074 & 0.97 & 0.01 & 0.01 & 97.2 & 1.03 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 7.807 & 0.21 & 0.79 & 0.0 & 100.0 & 7.44 	 
+
+	\\ & & 100	 & 18.17	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.901 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.902 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.906 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 7.906 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 7.892 & 0.31 & 0.69 & 0.0 & 100.0 & 5.33 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 2.0	 & 2.53
+
+		% delta-h-c - 10% 
+		& 1.195 & 0.89 & 0.11 & 0.0 & 100.0 & 2.97 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.193 & 0.89 & 0.11 & 0.0 & 100.0 & 2.97 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.195 & 0.89 & 0.11 & 0.0 & 100.0 & 2.97 	 
+
+		% weighted-c - 10% 
+		& 5.975 & 0.51 & 0.19 & 0.3 & 77.8 & 2.14 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 5.958 & 0.42 & 0.58 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 30	 & 5.42	 & 1.22
+
+		% delta-h-c - 30% 
+		& 1.195 & 0.95 & 0.05 & 0.0 & 100.0 & 1.36 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.198 & 0.95 & 0.05 & 0.0 & 100.0 & 1.36 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.197 & 0.95 & 0.05 & 0.0 & 100.0 & 1.36 	 
+
+		% weighted-c - 30% 
+		& 6.017 & 0.82 & 0.1 & 0.08 & 88.9 & 1.31 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 5.984 & 0.2 & 0.8 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 50	 & 8.42	 & 1.06
+
+		% delta-h-c - 50% 
+		& 1.197 & 0.97 & 0.03 & 0.0 & 100.0 & 1.11 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.198 & 0.97 & 0.03 & 0.0 & 100.0 & 1.11 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.196 & 0.97 & 0.03 & 0.0 & 100.0 & 1.11 	 
+
+		% weighted-c - 50% 
+		& 6.018 & 0.88 & 0.09 & 0.03 & 97.2 & 1.19 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 5.981 & 0.18 & 0.82 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 70	 & 11.92	 & 1.0
+
+		% delta-h-c - 70% 
+		& 1.197 & 0.98 & 0.02 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.196 & 0.98 & 0.02 & 0.0 & 100.0 & 1.06 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.195 & 0.98 & 0.02 & 0.0 & 100.0 & 1.06 	 
+
+		% weighted-c - 70% 
+		& 5.993 & 0.99 & 0.01 & 0.0 & 100.0 & 1.03 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.022 & 0.17 & 0.83 & 0.0 & 100.0 & 5.94 	 
+
+	\\ & & 100	 & 16.33	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.198 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.198 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.196 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 5.959 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 5.961 & 0.19 & 0.81 & 0.0 & 100.0 & 5.25 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.67	 & 2.28
+
+		% delta-h-c - 10% 
+		& 1.273 & 0.83 & 0.13 & 0.04 & 97.2 & 2.75 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.274 & 0.83 & 0.13 & 0.04 & 97.2 & 2.75 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.276 & 0.83 & 0.13 & 0.04 & 97.2 & 2.75 	 
+
+		% weighted-c - 10% 
+		& 6.45 & 0.47 & 0.19 & 0.33 & 66.7 & 1.81 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 6.457 & 0.38 & 0.62 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 30	 & 3.67	 & 1.31
+
+		% delta-h-c - 30% 
+		& 1.278 & 0.94 & 0.06 & 0.0 & 100.0 & 1.44 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.276 & 0.94 & 0.06 & 0.0 & 100.0 & 1.44 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.276 & 0.94 & 0.06 & 0.0 & 100.0 & 1.44 	 
+
+		% weighted-c - 30% 
+		& 6.483 & 0.77 & 0.14 & 0.09 & 88.9 & 1.47 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 6.497 & 0.22 & 0.78 & 0.0 & 100.0 & 5.97 	 
+
+	\\ & & 50	 & 5.75	 & 1.19
+
+		% delta-h-c - 50% 
+		& 1.275 & 0.92 & 0.01 & 0.07 & 88.9 & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.276 & 0.92 & 0.01 & 0.07 & 88.9 & 1.08 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.276 & 0.92 & 0.01 & 0.07 & 88.9 & 1.08 	 
+
+		% weighted-c - 50% 
+		& 6.42 & 0.89 & 0.03 & 0.08 & 94.4 & 1.08 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 6.478 & 0.22 & 0.78 & 0.0 & 100.0 & 5.53 	 
+
+	\\ & & 70	 & 8.17	 & 1.0
+
+		% delta-h-c - 70% 
+		& 1.277 & 0.99 & 0.01 & 0.0 & 100.0 & 1.03 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.276 & 0.99 & 0.01 & 0.0 & 100.0 & 1.03 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.276 & 0.99 & 0.01 & 0.0 & 100.0 & 1.03 	 
+
+		% weighted-c - 70% 
+		& 6.502 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 5.939 & 0.24 & 0.76 & 0.0 & 100.0 & 4.39 	 
+
+	\\ & & 100	 & 10.83	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.275 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.277 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.274 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 6.564 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 5.955 & 0.49 & 0.51 & 0.0 & 100.0 & 2.5 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(93)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.42	 & 3.53
+
+		% delta-h-c - 10% 
+		& 1.092 & 0.85 & 0.11 & 0.03 & 94.4 & 3.81 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.091 & 0.85 & 0.11 & 0.03 & 94.4 & 3.81 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.091 & 0.85 & 0.11 & 0.03 & 94.4 & 3.81 	 
+
+		% weighted-c - 10% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 10% 
+		& - & - & - & - 	 
+
+	\\ & & 30	 & 3.42	 & 2.39
+
+		% delta-h-c - 30% 
+		& 1.093 & 0.86 & 0.08 & 0.05 & 91.7 & 2.44 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.093 & 0.86 & 0.08 & 0.05 & 91.7 & 2.44 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.092 & 0.86 & 0.08 & 0.05 & 91.7 & 2.44 	 
+
+		% weighted-c - 30% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 30% 
+		& - & - & - & - 	 
+
+	\\ & & 50	 & 5.75	 & 1.58
+
+		% delta-h-c - 50% 
+		& 1.092 & 0.93 & 0.02 & 0.05 & 97.2 & 1.53 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.093 & 0.91 & 0.04 & 0.05 & 97.2 & 1.58 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.091 & 0.91 & 0.04 & 0.05 & 97.2 & 1.58 	 
+
+		% weighted-c - 50% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 50% 
+		& - & - & - & - 	 
+
+	\\ & & 70	 & 8.08	 & 1.31
+
+		% delta-h-c - 70% 
+		& 1.094 & 0.94 & 0.02 & 0.04 & 100.0 & 1.28 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.092 & 0.94 & 0.02 & 0.04 & 100.0 & 1.28 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.092 & 0.94 & 0.02 & 0.04 & 100.0 & 1.28 	 
+
+		% weighted-c - 70% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 70% 
+		& - & - & - & - 	 
+
+	\\ & & 100	 & 10.75	 & 1.25
+
+		% delta-h-c - 100% 
+		& 1.089 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.088 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.093 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% weighted-c - 100% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 100% 
+		& - & - & - & - 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{8.7} 
+	 & 10	 & 2.33	 & 2.11
+
+		% delta-h-c - 10% 
+		& 3.238 & 0.39 & 0.31 & 0.3 & 52.8 & 2.08 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 3.24 & 0.38 & 0.38 & 0.25 & 61.1 & 2.94 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 3.232 & 0.38 & 0.38 & 0.25 & 61.1 & 2.94 	 
+
+		% weighted-c - 10% 
+		& 13.807 & 0.26 & 0.31 & 0.43 & 36.1 & 1.53 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 9.165 & 0.25 & 0.74 & 0.01 & 100.0 & 8.17 	 
+
+	\\ & & 30	 & 6.5	 & 1.25
+
+		% delta-h-c - 30% 
+		& 3.184 & 0.75 & 0.13 & 0.13 & 80.6 & 1.25 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 3.184 & 0.64 & 0.3 & 0.06 & 91.7 & 2.06 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 3.182 & 0.64 & 0.3 & 0.06 & 91.7 & 2.06 	 
+
+		% weighted-c - 30% 
+		& 12.547 & 0.72 & 0.11 & 0.17 & 80.6 & 1.08 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 7.97 & 0.17 & 0.83 & 0.0 & 100.0 & 7.94 	 
+
+	\\ & & 50	 & 10.33	 & 1.22
+
+		% delta-h-c - 50% 
+		& 3.167 & 0.92 & 0.03 & 0.05 & 100.0 & 1.19 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 3.165 & 0.83 & 0.12 & 0.05 & 100.0 & 1.39 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 3.163 & 0.82 & 0.13 & 0.05 & 100.0 & 1.42 	 
+
+		% weighted-c - 50% 
+		& 12.054 & 0.9 & 0.0 & 0.1 & 97.2 & 1.0 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 7.88 & 0.2 & 0.79 & 0.01 & 100.0 & 6.75 	 
+
+	\\ & & 70	 & 14.67	 & 1.03
+
+		% delta-h-c - 70% 
+		& 3.151 & 0.99 & 0.0 & 0.01 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 3.147 & 0.94 & 0.04 & 0.01 & 100.0 & 1.08 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 3.152 & 0.94 & 0.04 & 0.01 & 100.0 & 1.08 	 
+
+		% weighted-c - 70% 
+		& 11.162 & 0.99 & 0.0 & 0.01 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 7.95 & 0.3 & 0.69 & 0.01 & 100.0 & 4.67 	 
+
+	\\ & & 100	 & 20.17	 & 1.0
+
+		% delta-h-c - 100% 
+		& 3.166 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 3.163 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 3.166 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 9.521 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 7.882 & 0.67 & 0.33 & 0.0 & 100.0 & 1.83 	 
+ \\ \hline
+Average & & & &  & 2.028 & 0.88 & 0.06 & 0.06 & 95.38 & 1.81 & 2.035 & 0.87 & 0.08 & 0.05 & 96.29 & 1.97 & 2.063 & 0.87 & 0.08 & 0.05 & 96.29 & 2.0 & 7.483 & 0.63 & 0.08 & 0.15 & 71.43 & 1.08 & 6.136 & 0.26 & 0.58 & 0.01 & 85.2 & 5.8
+\\ \hline
+\end{tabular}
+\caption{Results for weighted observation sequences, with optimal observations. Each observation $\omega_i$ receives weight $i$.}
+\end{table*}
+
+\begin{table*}[]
+\centering
+Weighted by Observations - Suboptimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{6}{c|}{No weight (original)}
+& \multicolumn{6}{c|}{No weight-U (original)}
+& \multicolumn{6}{c|}{No weight-U-Max (original)}
+& \multicolumn{6}{c|}{Weighted}
+& \multicolumn{6}{c|}{Weighted-U}
+\\ \hline
+\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+\\ 
+\hline
+
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{20.3} 
+	 & 10	 & 1.42	 & 7.61
+
+		% delta-h-c - 10% 
+		& 4.861 & 0.41 & 0.24 & 0.35 & 86.1 & 6.86 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 4.853 & 0.42 & 0.25 & 0.32 & 88.9 & 7.42 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 4.852 & 0.42 & 0.25 & 0.32 & 88.9 & 7.42 	 
+
+		% weighted-c - 10% 
+		& 15.396 & 0.08 & 0.21 & 0.71 & 27.8 & 2.39 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 9.93 & 0.33 & 0.59 & 0.08 & 91.7 & 16.94 	 
+
+	\\ & & 30	 & 3.83	 & 3.58
+
+		% delta-h-c - 30% 
+		& 4.862 & 0.49 & 0.2 & 0.31 & 77.8 & 3.17 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 4.855 & 0.35 & 0.4 & 0.25 & 86.1 & 6.92 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 4.852 & 0.35 & 0.4 & 0.25 & 86.1 & 6.92 	 
+
+		% weighted-c - 30% 
+		& 12.985 & 0.2 & 0.28 & 0.51 & 61.1 & 1.94 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 8.591 & 0.18 & 0.78 & 0.04 & 100.0 & 16.78 	 
+
+	\\ & & 50	 & 5.92	 & 3.19
+
+		% delta-h-c - 50% 
+		& 4.854 & 0.55 & 0.21 & 0.24 & 86.1 & 3.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 4.859 & 0.42 & 0.4 & 0.18 & 94.4 & 5.61 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 4.857 & 0.39 & 0.45 & 0.16 & 97.2 & 6.56 	 
+
+		% weighted-c - 50% 
+		& 10.878 & 0.34 & 0.2 & 0.46 & 69.4 & 1.56 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 8.443 & 0.2 & 0.78 & 0.02 & 100.0 & 15.61 	 
+
+	\\ & & 70	 & 8.5	 & 2.53
+
+		% delta-h-c - 70% 
+		& 4.862 & 0.71 & 0.08 & 0.21 & 91.7 & 2.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 4.863 & 0.56 & 0.28 & 0.17 & 94.4 & 3.06 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 4.858 & 0.51 & 0.33 & 0.16 & 94.4 & 4.08 	 
+
+		% weighted-c - 70% 
+		& 10.485 & 0.45 & 0.14 & 0.41 & 83.3 & 1.28 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.751 & 0.18 & 0.78 & 0.04 & 100.0 & 13.53 	 
+
+	\\ & & 100	 & 11.83	 & 2.25
+
+		% delta-h-c - 100% 
+		& 4.866 & 0.84 & 0.0 & 0.16 & 100.0 & 1.67 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 4.865 & 0.84 & 0.0 & 0.16 & 100.0 & 1.67 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 4.851 & 0.84 & 0.0 & 0.16 & 100.0 & 1.67 	 
+
+		% weighted-c - 100% 
+		& 10.556 & 0.66 & 0.0 & 0.34 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 6.742 & 0.36 & 0.48 & 0.16 & 100.0 & 4.08 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(208)}} & \multirow{5}{*}{7.5} 
+	 & 10	 & 2.06	 & 1.58
+
+		% delta-h-c - 10% 
+		& 1.999 & 0.77 & 0.14 & 0.09 & 91.7 & 1.81 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.995 & 0.75 & 0.19 & 0.06 & 97.9 & 2.4 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.998 & 0.75 & 0.19 & 0.06 & 97.9 & 2.4 	 
+
+		% weighted-c - 10% 
+		& 8.157 & 0.4 & 0.25 & 0.35 & 54.2 & 1.23 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 7.095 & 0.26 & 0.67 & 0.07 & 87.5 & 5.19 	 
+
+	\\ & & 30	 & 5.56	 & 1.4
+
+		% delta-h-c - 30% 
+		& 2.001 & 0.82 & 0.06 & 0.12 & 93.8 & 1.13 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 2.001 & 0.77 & 0.16 & 0.07 & 97.9 & 1.6 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.999 & 0.77 & 0.16 & 0.07 & 97.9 & 1.6 	 
+
+		% weighted-c - 30% 
+		& 7.259 & 0.63 & 0.15 & 0.22 & 77.1 & 1.08 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 6.566 & 0.28 & 0.67 & 0.05 & 100.0 & 5.04 	 
+
+	\\ & & 50	 & 8.88	 & 1.35
+
+		% delta-h-c - 50% 
+		& 2.003 & 0.84 & 0.06 & 0.09 & 93.8 & 1.13 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 2.001 & 0.84 & 0.14 & 0.02 & 100.0 & 1.56 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 2.002 & 0.84 & 0.14 & 0.02 & 100.0 & 1.56 	 
+
+		% weighted-c - 50% 
+		& 7.121 & 0.75 & 0.11 & 0.13 & 91.7 & 1.15 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 6.387 & 0.32 & 0.64 & 0.05 & 100.0 & 4.42 	 
+
+	\\ & & 70	 & 12.56	 & 1.31
+
+		% delta-h-c - 70% 
+		& 2.007 & 0.89 & 0.04 & 0.07 & 100.0 & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 2.004 & 0.85 & 0.09 & 0.06 & 100.0 & 1.23 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 2.006 & 0.85 & 0.09 & 0.06 & 100.0 & 1.23 	 
+
+		% weighted-c - 70% 
+		& 7.123 & 0.9 & 0.01 & 0.09 & 97.9 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.426 & 0.41 & 0.55 & 0.05 & 100.0 & 3.63 	 
+
+	\\ & & 100	 & 17.25	 & 1.5
+
+		% delta-h-c - 100% 
+		& 2.02 & 0.94 & 0.0 & 0.06 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 2.013 & 0.94 & 0.0 & 0.06 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 2.012 & 0.94 & 0.0 & 0.06 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 7.191 & 0.94 & 0.0 & 0.06 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 6.426 & 0.57 & 0.38 & 0.06 & 100.0 & 1.75 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.67	 & 2.0
+
+		% delta-h-c - 10% 
+		& 2.232 & 0.88 & 0.11 & 0.01 & 100.0 & 2.44 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 2.234 & 0.85 & 0.14 & 0.01 & 100.0 & 2.72 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 2.229 & 0.85 & 0.14 & 0.01 & 100.0 & 2.72 	 
+
+		% weighted-c - 10% 
+		& 9.431 & 0.48 & 0.15 & 0.38 & 52.8 & 1.33 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 7.838 & 0.2 & 0.8 & 0.0 & 100.0 & 10.0 	 
+
+	\\ & & 30	 & 7.5	 & 1.14
+
+		% delta-h-c - 30% 
+		& 2.235 & 0.91 & 0.09 & 0.0 & 100.0 & 1.33 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 2.238 & 0.75 & 0.25 & 0.0 & 100.0 & 2.14 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 2.235 & 0.75 & 0.25 & 0.0 & 100.0 & 2.14 	 
+
+		% weighted-c - 30% 
+		& 9.358 & 0.75 & 0.15 & 0.1 & 80.6 & 1.31 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 7.843 & 0.11 & 0.89 & 0.0 & 100.0 & 9.97 	 
+
+	\\ & & 50	 & 11.92	 & 1.06
+
+		% delta-h-c - 50% 
+		& 2.237 & 0.88 & 0.1 & 0.01 & 97.2 & 1.25 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 2.237 & 0.86 & 0.14 & 0.0 & 100.0 & 1.47 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 2.237 & 0.86 & 0.14 & 0.0 & 100.0 & 1.47 	 
+
+		% weighted-c - 50% 
+		& 8.973 & 0.9 & 0.07 & 0.03 & 94.4 & 1.17 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 7.852 & 0.12 & 0.88 & 0.0 & 100.0 & 9.28 	 
+
+	\\ & & 70	 & 16.67	 & 1.03
+
+		% delta-h-c - 70% 
+		& 2.243 & 0.97 & 0.03 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 2.239 & 0.92 & 0.08 & 0.0 & 100.0 & 1.19 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 2.239 & 0.92 & 0.08 & 0.0 & 100.0 & 1.19 	 
+
+		% weighted-c - 70% 
+		& 8.079 & 0.96 & 0.03 & 0.01 & 97.2 & 1.06 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 7.869 & 0.2 & 0.8 & 0.0 & 100.0 & 8.11 	 
+
+	\\ & & 100	 & 23.17	 & 1.0
+
+		% delta-h-c - 100% 
+		& 2.244 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 2.234 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 2.24 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 7.826 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 7.889 & 0.3 & 0.7 & 0.0 & 100.0 & 5.67 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 3.0	 & 1.83
+
+		% delta-h-c - 10% 
+		& 1.418 & 0.76 & 0.24 & 0.0 & 100.0 & 2.67 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.42 & 0.74 & 0.26 & 0.0 & 100.0 & 3.0 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.419 & 0.74 & 0.26 & 0.0 & 100.0 & 3.0 	 
+
+		% weighted-c - 10% 
+		& 5.982 & 0.65 & 0.14 & 0.21 & 72.2 & 1.64 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 5.997 & 0.31 & 0.69 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 30	 & 7.67	 & 1.25
+
+		% delta-h-c - 30% 
+		& 1.42 & 0.89 & 0.1 & 0.01 & 100.0 & 1.47 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.421 & 0.65 & 0.35 & 0.0 & 100.0 & 2.5 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.422 & 0.65 & 0.35 & 0.0 & 100.0 & 2.5 	 
+
+		% weighted-c - 30% 
+		& 6.002 & 0.81 & 0.13 & 0.07 & 91.7 & 1.33 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 5.996 & 0.21 & 0.79 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 50	 & 12.25	 & 1.03
+
+		% delta-h-c - 50% 
+		& 1.425 & 0.98 & 0.02 & 0.0 & 100.0 & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.421 & 0.82 & 0.18 & 0.0 & 100.0 & 1.5 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.42 & 0.82 & 0.18 & 0.0 & 100.0 & 1.5 	 
+
+		% weighted-c - 50% 
+		& 5.981 & 0.97 & 0.01 & 0.01 & 97.2 & 1.03 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 5.979 & 0.17 & 0.83 & 0.0 & 100.0 & 5.97 	 
+
+	\\ & & 70	 & 17.33	 & 1.0
+
+		% delta-h-c - 70% 
+		& 1.421 & 0.99 & 0.01 & 0.0 & 100.0 & 1.03 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.423 & 0.9 & 0.1 & 0.0 & 100.0 & 1.31 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.423 & 0.9 & 0.1 & 0.0 & 100.0 & 1.31 	 
+
+		% weighted-c - 70% 
+		& 5.956 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 6.029 & 0.17 & 0.83 & 0.0 & 100.0 & 5.94 	 
+
+	\\ & & 100	 & 24.0	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.418 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.424 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.422 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 5.944 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 5.987 & 0.18 & 0.82 & 0.0 & 100.0 & 5.67 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.83	 & 2.39
+
+		% delta-h-c - 10% 
+		& 1.539 & 0.83 & 0.13 & 0.04 & 88.9 & 2.89 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.54 & 0.83 & 0.13 & 0.04 & 88.9 & 2.89 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.537 & 0.83 & 0.13 & 0.04 & 88.9 & 2.89 	 
+
+		% weighted-c - 10% 
+		& 6.485 & 0.47 & 0.19 & 0.34 & 75.0 & 1.92 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 6.445 & 0.4 & 0.6 & 0.0 & 100.0 & 6.0 	 
+
+	\\ & & 30	 & 4.5	 & 1.39
+
+		% delta-h-c - 30% 
+		& 1.54 & 0.88 & 0.06 & 0.06 & 88.9 & 1.39 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.54 & 0.81 & 0.14 & 0.06 & 88.9 & 1.75 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.539 & 0.81 & 0.14 & 0.06 & 88.9 & 1.75 	 
+
+		% weighted-c - 30% 
+		& 6.494 & 0.67 & 0.16 & 0.17 & 86.1 & 1.39 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 6.453 & 0.23 & 0.77 & 0.0 & 100.0 & 5.97 	 
+
+	\\ & & 50	 & 7.17	 & 1.11
+
+		% delta-h-c - 50% 
+		& 1.541 & 0.93 & 0.04 & 0.03 & 94.4 & 1.14 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.542 & 0.86 & 0.11 & 0.03 & 94.4 & 1.33 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.54 & 0.86 & 0.11 & 0.03 & 94.4 & 1.33 	 
+
+		% weighted-c - 50% 
+		& 6.444 & 0.94 & 0.01 & 0.04 & 97.2 & 1.06 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 6.43 & 0.2 & 0.8 & 0.0 & 100.0 & 5.58 	 
+
+	\\ & & 70	 & 10.0	 & 1.06
+
+		% delta-h-c - 70% 
+		& 1.541 & 0.94 & 0.03 & 0.03 & 94.4 & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.54 & 0.92 & 0.07 & 0.01 & 97.2 & 1.22 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.538 & 0.92 & 0.07 & 0.01 & 97.2 & 1.22 	 
+
+		% weighted-c - 70% 
+		& 6.463 & 0.96 & 0.03 & 0.01 & 100.0 & 1.08 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 5.965 & 0.27 & 0.73 & 0.0 & 100.0 & 4.69 	 
+
+	\\ & & 100	 & 13.67	 & 1.0
+
+		% delta-h-c - 100% 
+		& 1.542 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.542 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.538 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 6.505 & 1.0 & 0.0 & 0.0 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 5.867 & 0.45 & 0.55 & 0.0 & 100.0 & 2.75 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(93)}} & \multirow{5}{*}{6.0} 
+	 & 10	 & 2.0	 & 3.25
+
+		% delta-h-c - 10% 
+		& 1.284 & 0.9 & 0.07 & 0.03 & 97.2 & 3.44 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 1.282 & 0.9 & 0.07 & 0.03 & 97.2 & 3.44 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 1.283 & 0.9 & 0.07 & 0.03 & 97.2 & 3.44 	 
+
+		% weighted-c - 10% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 10% 
+		& - & - & - & - 	 
+
+	\\ & & 30	 & 4.33	 & 1.78
+
+		% delta-h-c - 30% 
+		& 1.287 & 0.8 & 0.16 & 0.04 & 94.4 & 2.22 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 1.284 & 0.78 & 0.18 & 0.04 & 94.4 & 2.33 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 1.285 & 0.78 & 0.18 & 0.04 & 94.4 & 2.33 	 
+
+		% weighted-c - 30% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 30% 
+		& - & - & - & - 	 
+
+	\\ & & 50	 & 6.75	 & 1.36
+
+		% delta-h-c - 50% 
+		& 1.286 & 0.92 & 0.05 & 0.03 & 94.4 & 1.42 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 1.286 & 0.85 & 0.12 & 0.03 & 94.4 & 1.72 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 1.285 & 0.84 & 0.13 & 0.03 & 94.4 & 1.78 	 
+
+		% weighted-c - 50% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 50% 
+		& - & - & - & - 	 
+
+	\\ & & 70	 & 9.42	 & 1.33
+
+		% delta-h-c - 70% 
+		& 1.286 & 0.94 & 0.04 & 0.02 & 100.0 & 1.36 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 1.286 & 0.94 & 0.04 & 0.02 & 100.0 & 1.36 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 1.286 & 0.93 & 0.05 & 0.02 & 100.0 & 1.42 	 
+
+		% weighted-c - 70% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 70% 
+		& - & - & - & - 	 
+
+	\\ & & 100	 & 12.75	 & 1.25
+
+		% delta-h-c - 100% 
+		& 1.284 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 1.288 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 1.288 & 0.96 & 0.0 & 0.04 & 100.0 & 1.17 	 
+
+		% weighted-c - 100% 
+		& - & - & - & - 	 
+
+		% weighted-c-uncertainty - 100% 
+		& - & - & - & - 	 
+ \\ \hline
+\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(156)}} & \multirow{5}{*}{8.7} 
+	 & 10	 & 3.33	 & 1.83
+
+		% delta-h-c - 10% 
+		& 3.854 & 0.52 & 0.23 & 0.26 & 61.1 & 1.78 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 3.858 & 0.44 & 0.38 & 0.18 & 72.2 & 3.17 	 
+
+		% delta-h-c-uncertainty-max - 10% 
+		& 3.858 & 0.44 & 0.38 & 0.18 & 72.2 & 3.17 	 
+
+		% weighted-c - 10% 
+		& 13.808 & 0.4 & 0.26 & 0.33 & 55.6 & 1.39 	 
+
+		% weighted-c-uncertainty - 10% 
+		& 8.972 & 0.23 & 0.76 & 0.0 & 100.0 & 8.14 	 
+
+	\\ & & 30	 & 8.67	 & 1.28
+
+		% delta-h-c - 30% 
+		& 3.819 & 0.77 & 0.07 & 0.15 & 83.3 & 1.08 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 3.822 & 0.62 & 0.35 & 0.03 & 97.2 & 2.67 	 
+
+		% delta-h-c-uncertainty-max - 30% 
+		& 3.82 & 0.62 & 0.35 & 0.03 & 97.2 & 2.67 	 
+
+		% weighted-c - 30% 
+		& 12.534 & 0.73 & 0.13 & 0.14 & 88.9 & 1.22 	 
+
+		% weighted-c-uncertainty - 30% 
+		& 7.997 & 0.16 & 0.83 & 0.0 & 100.0 & 7.94 	 
+
+	\\ & & 50	 & 13.75	 & 1.33
+
+		% delta-h-c - 50% 
+		& 3.814 & 0.79 & 0.06 & 0.14 & 91.7 & 1.17 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 3.816 & 0.66 & 0.31 & 0.03 & 100.0 & 2.58 	 
+
+		% delta-h-c-uncertainty-max - 50% 
+		& 3.811 & 0.66 & 0.32 & 0.03 & 100.0 & 2.61 	 
+
+		% weighted-c - 50% 
+		& 12.286 & 0.76 & 0.09 & 0.16 & 97.2 & 1.19 	 
+
+		% weighted-c-uncertainty - 50% 
+		& 8.022 & 0.21 & 0.79 & 0.0 & 100.0 & 7.25 	 
+
+	\\ & & 70	 & 19.33	 & 1.36
+
+		% delta-h-c - 70% 
+		& 3.8 & 0.8 & 0.02 & 0.18 & 97.2 & 1.03 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 3.805 & 0.85 & 0.07 & 0.08 & 100.0 & 1.39 	 
+
+		% delta-h-c-uncertainty-max - 70% 
+		& 3.804 & 0.85 & 0.07 & 0.08 & 100.0 & 1.42 	 
+
+		% weighted-c - 70% 
+		& 11.069 & 0.82 & 0.0 & 0.18 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 70% 
+		& 7.92 & 0.25 & 0.72 & 0.03 & 100.0 & 5.94 	 
+
+	\\ & & 100	 & 27.0	 & 1.33
+
+		% delta-h-c - 100% 
+		& 3.78 & 0.83 & 0.0 & 0.17 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& 3.779 & 0.83 & 0.0 & 0.17 & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty-max - 100% 
+		& 3.773 & 0.83 & 0.0 & 0.17 & 100.0 & 1.0 	 
+
+		% weighted-c - 100% 
+		& 9.37 & 0.83 & 0.0 & 0.17 & 100.0 & 1.0 	 
+
+		% weighted-c-uncertainty - 100% 
+		& 7.613 & 0.49 & 0.44 & 0.07 & 100.0 & 2.67 	 
+ \\ \hline
+Average & & & &  & 2.452 & 0.84 & 0.08 & 0.08 & 94.4 & 1.73 & 2.452 & 0.78 & 0.15 & 0.06 & 96.71 & 2.27 & 2.45 & 0.78 & 0.16 & 0.06 & 96.79 & 2.33 & 7.49 & 0.61 & 0.08 & 0.16 & 72.82 & 1.08 & 6.123 & 0.23 & 0.61 & 0.02 & 85.12 & 6.19
+\\ \hline
+\end{tabular}
+\caption{Results for weighted observation sequences, with suboptimal observations. Each observation $\omega_i$ receives weight $i$.}
+\end{table*}
+
+\end{document}

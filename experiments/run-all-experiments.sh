@@ -11,9 +11,9 @@ declare -a domains=(
 					)
 
 DATASETS=../goal-plan-recognition-dataset
-BASIC="dc dcu dcum"
-CONSTRAINT_PAIRS="dcu-cps dcu-cls dcu-clp"
-CONSTRAINT_SINGLE="dcu-cl dcu-cp dcu-cs"
+BASIC="dc dcu"
+CONSTRAINT_PAIRS="dc-cps dc-cls dc-clp dcu-cps dcu-cls dcu-clp"
+CONSTRAINT_SINGLE="dc-cl dc-cp dc-cs dcu-cl dcu-cp dcu-cs"
 FILTERS="dc-f1 dcu-f1 dc-f2 dcu-f2"
 WEIGHTED="w wu"
 
@@ -28,16 +28,15 @@ if [[ ! -d results ]]; then
 fi
 
 run_domain() {
-	domain=$1
-	echo "Running domain ${domain}"
-	python2 test_domain.py $DATASETS $domain $METHODS > experiments/$domain.output
+	echo "Running domain $1"
+	python2 test_domain.py $DATASETS $1 $METHODS > experiments/$1.output
 }
 
 for domain in "${domains[@]}"; do
 	METHODS=$BASIC
 	run_domain $domain-optimal
 	run_domain $domain-suboptimal
-	METHODS="${BASIC} ${FILTERS}" 
+	METHODS="$BASIC $FILTERS" 
 	run_domain $domain-optimal-noisy
 	run_domain $domain-suboptimal-noisy
 	run_domain $domain-optimal-old-noisy
@@ -45,4 +44,3 @@ for domain in "${domains[@]}"; do
 done
 
 popd
-

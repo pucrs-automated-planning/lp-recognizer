@@ -25,1439 +25,1275 @@
 \newcommand{\mirroring}{M+L 2018}
 %---------------------------------------------------------------------------------------------------------------
 \pdfinfo{
-/Title (Previous Methods vs Our Method)
+/Title (Previous Methods)
 /Author (?)
 }
 \begin{document}
+
 \begin{table*}[]
 \centering
-\fontsize{5}{6}\selectfont
-\setlength\tabcolsep{2pt}
-\begin{tabular}{|c|c|cc|cccc|cccc|cccc|cccc|cccc|cccc|cccc|}
+Previous Methods - Optimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|ccc|ccc|ccc|ccc|ccc|}
 \hline
 % empty
-& % empty               
-& \multicolumn{2}{c|}{} 
-& \multicolumn{4}{c|}{\hdeltahc}
-& \multicolumn{4}{c|}{\hdeltahcu}
-& \multicolumn{4}{c|}{\rg}
-& \multicolumn{4}{c|}{\fgr}				   
-& \multicolumn{4}{c|}{\completion}
-& \multicolumn{4}{c|}{\uniqueness}
-& \multicolumn{4}{c|}{\mirroring}
-
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{3}{c|}{\hdeltahc}
+& \multicolumn{3}{c|}{\hdeltahcu}
+& \multicolumn{3}{c|}{\rg}		   
+& \multicolumn{3}{c|}{\completion}
+& \multicolumn{3}{c|}{\completion 0.3}
 \\ \hline
-
-\# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}    
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}   
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
-& \textbf{Time} & \textbf{Acc \%} & \textbf{S in $\mathcal{G}$} & \textbf{Acc/S}  
+\# & $|\Gamma|$ & \textbf{\% Obs} & $|\Omega|$ & $|\Gamma^*|$ 
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
 \\ 
 \hline
 
-
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{blocks}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
-
-		% delta-h-c - 10% 
-		& 4.079 & 95.5\% & 7.81 & 12.2 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 3.86 & 95.9\% & 8.7 & 11.0 	 
-
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.22 & 86.8\% & 7.84 & 11.1 	 
-
-		% goal_recognition-yolanda - 10% 
-		& 46.563 & 65.9\% & 9.11 & 7.2 	 
-
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.144 & 39.9\% & 1.05 & 37.8 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.131 & 31.7\% & 1.04 & 30.6 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 30	 & 0.0
-
-		% delta-h-c - 30% 
-		& 4.117 & 89.4\% & 2.79 & 32.0 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 4.112 & 94.3\% & 5.16 & 18.3 	 
-
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.639 & 87.2\% & 3.57 & 24.5 	 
-
-		% goal_recognition-yolanda - 30% 
-		& 36.649 & 78.0\% & 10.53 & 7.4 	 
-
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.156 & 50.6\% & 1.09 & 46.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.144 & 51.4\% & 1.06 & 48.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 4.118 & 92.7\% & 1.78 & 52.2 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 4.114 & 93.9\% & 3.28 & 28.7 	 
-
-		% planrecognition-ramirezgeffner - 50% 
-		& 2.402 & 97.9\% & 2.63 & 37.2 	 
-
-		% goal_recognition-yolanda - 50% 
-		& 34.291 & 81.3\% & 10.68 & 7.6 	 
-
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.179 & 65.0\% & 1.09 & 59.6 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.168 & 60.1\% & 1.08 & 55.5 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 70	 & 0.0
-
-		% delta-h-c - 70% 
-		& 4.117 & 98.8\% & 1.41 & 70.2 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 4.116 & 98.8\% & 1.84 & 53.6 	 
-
-		% planrecognition-ramirezgeffner - 70% 
-		& 3.785 & 97.5\% & 1.83 & 53.3 	 
-
-		% goal_recognition-yolanda - 70% 
-		& 37.057 & 89.8\% & 8.63 & 10.4 	 
-
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.192 & 84.8\% & 1.12 & 75.5 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.184 & 79.0\% & 1.14 & 69.3 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 4.07 & 100.0\% & 1.21 & 82.9 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 4.07 & 100.0\% & 1.21 & 82.9 	 
-
-		% planrecognition-ramirezgeffner - 100% 
-		& 6.791 & 100.0\% & 1.46 & 68.4 	 
-
-		% goal_recognition-yolanda - 100% 
-		& 40.405 & 100.0\% & 1.23 & 81.4 	 
-
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.246 & 100.0\% & 1.36 & 73.4 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.239 & 100.0\% & 1.09 & 91.7 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
- \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{depots}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{blocks}} } & \multirow{5}{*}{20.1} 
+	 & 10	 & 1.25	 & 7.9
 
 		% delta-h-c - 10% 
-		& 3.334 & 61.9\% & 2.15 & 28.7 	 
+		& 0.44 & 86.1 & 7.53 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 3.346 & 71.4\% & 3.51 & 20.3 	 
+		& 0.44 & 86.1 & 7.56 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.496 & 77.4\% & 3.99 & 19.4 	 
+		% rg2009 - 10% 
+		& \textbf{0.47} & 91.7 & 9.83 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 10% 
+		& 0.06 & 16.7 & 1.44 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.369 & 35.7\% & 1.18 & 30.3 	 
+		% lm_hc30 - 10% 
+		& 0.38 & 100.0 & 18.14 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.393 & 32.1\% & 1.1 & 29.3 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 3.08	 & 3.91
 
 		% delta-h-c - 30% 
-		& 3.286 & 71.4\% & 1.4 & 50.8 	 
+		& \textbf{0.46} & 77.8 & 2.5 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 3.315 & 88.1\% & 4.18 & 21.1 	 
+		& 0.44 & 86.1 & 4.67 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 2.309 & 77.4\% & 2.39 & 32.3 	 
+		% rg2009 - 30% 
+		& 0.45 & 91.7 & 5.56 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 30% 
+		& 0.21 & 38.9 & 1.17 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.357 & 58.3\% & 1.06 & 55.1 	 
+		% lm_hc30 - 30% 
+		& 0.24 & 100.0 & 15.25 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.393 & 47.6\% & 1.07 & 44.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 4.42	 & 2.48
 
 		% delta-h-c - 50% 
-		& 3.282 & 92.9\% & 1.38 & 67.2 	 
+		& 0.59 & 88.9 & 3.03 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 3.302 & 98.8\% & 3.65 & 27.0 	 
+		& 0.52 & 88.9 & 3.86 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 3.411 & 84.5\% & 1.92 & 44.1 	 
+		% rg2009 - 50% 
+		& \textbf{0.62} & 97.2 & 3.69 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 50% 
+		& 0.33 & 58.3 & 1.25 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.369 & 76.2\% & 1.06 & 71.9 	 
+		% lm_hc30 - 50% 
+		& 0.25 & 97.2 & 12.17 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.405 & 71.4\% & 1.02 & 69.8 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 6.67	 & 1.94
 
 		% delta-h-c - 70% 
-		& 3.289 & 97.6\% & 1.06 & 92.1 	 
+		& \textbf{0.85} & 97.2 & 1.83 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 3.24 & 98.8\% & 1.75 & 56.5 	 
+		& 0.76 & 97.2 & 2.42 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 5.27 & 91.7\% & 1.68 & 54.6 	 
+		% rg2009 - 70% 
+		& 0.81 & 100.0 & 2.22 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 70% 
+		& 0.51 & 72.2 & 1.14 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.393 & 89.3\% & 1.01 & 88.2 	 
+		% lm_hc30 - 70% 
+		& 0.25 & 100.0 & 9.22 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.44 & 84.5\% & 1.01 & 83.5 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 8.83	 & 1.83
 
 		% delta-h-c - 100% 
-		& 3.282 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{0.92} & 100.0 & 1.67 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 3.27 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{0.92} & 100.0 & 1.67 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 7.117 & 92.9\% & 1.46 & 63.4 	 
+		% rg2009 - 100% 
+		& 0.9 & 100.0 & 2.08 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 100% 
+		& 0.59 & 100.0 & 1.67 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.464 & 100.0\% & 1.04 & 96.6 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.5 & 100.0\% & 1.04 & 96.6 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc30 - 100% 
+		& 0.31 & 100.0 & 6.42 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{driverlog}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{ipc-grid}} } & \multirow{5}{*}{7.5} 
+	 & 10	 & 1.63	 & 2.71
 
 		% delta-h-c - 10% 
-		& 1.972 & 77.4\% & 2.61 & 29.7 	 
+		& 0.87 & 93.8 & 2.67 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 1.945 & 78.6\% & 3.17 & 24.8 	 
+		& 0.88 & 95.8 & 2.69 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.169 & 96.4\% & 4.71 & 20.5 	 
+		% rg2009 - 10% 
+		& \textbf{0.91} & 100.0 & 3.23 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 79.488 & 42.9\% & 1.92 & 22.4 	 
+		% lm_hc0 - 10% 
+		& 0.47 & 75.0 & 2.35 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.333 & 41.7\% & 1.04 & 40.2 	 
+		% lm_hc30 - 10% 
+		& 0.49 & 100.0 & 6.25 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.321 & 35.7\% & 1.11 & 32.3 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 4.0	 & 1.21
 
 		% delta-h-c - 30% 
-		& 1.991 & 83.3\% & 1.69 & 49.3 	 
+		& 0.93 & 95.8 & 1.15 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 1.958 & 92.9\% & 2.79 & 33.3 	 
+		& 0.94 & 97.9 & 1.17 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.411 & 92.9\% & 3.35 & 27.8 	 
+		% rg2009 - 30% 
+		& \textbf{0.99} & 100.0 & 1.25 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 60.168 & 70.2\% & 3.19 & 22.0 	 
+		% lm_hc0 - 30% 
+		& 0.85 & 97.9 & 1.52 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.31 & 54.8\% & 1.13 & 48.4 	 
+		% lm_hc30 - 30% 
+		& 0.64 & 100.0 & 3.17 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.31 & 47.6\% & 1.1 & 43.5 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 6.19	 & 1.13
 
 		% delta-h-c - 50% 
-		& 1.998 & 92.9\% & 1.23 & 75.7 	 
+		& 0.96 & 97.9 & 1.08 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 1.962 & 97.6\% & 2.04 & 48.0 	 
+		& 0.96 & 97.9 & 1.08 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 1.694 & 94.0\% & 2.88 & 32.6 	 
+		% rg2009 - 50% 
+		& \textbf{1.0} & 100.0 & 1.13 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 64.427 & 79.8\% & 4.6 & 17.4 	 
+		% lm_hc0 - 50% 
+		& 0.86 & 100.0 & 1.44 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.321 & 72.6\% & 1.17 & 62.2 	 
+		% lm_hc30 - 50% 
+		& 0.77 & 100.0 & 2.15 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.31 & 64.3\% & 1.14 & 56.2 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 8.69	 & 1.04
 
 		% delta-h-c - 70% 
-		& 1.99 & 95.2\% & 1.14 & 83.3 	 
+		& 0.97 & 97.9 & 1.06 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 1.948 & 95.2\% & 1.5 & 63.5 	 
+		& 0.97 & 97.9 & 1.06 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 1.973 & 89.3\% & 2.46 & 36.2 	 
+		% rg2009 - 70% 
+		& \textbf{1.0} & 100.0 & 1.04 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 75.085 & 82.1\% & 4.11 & 20.0 	 
+		% lm_hc0 - 70% 
+		& 0.97 & 97.9 & 1.02 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.333 & 90.5\% & 1.14 & 79.2 	 
+		% lm_hc30 - 70% 
+		& 0.93 & 97.9 & 1.15 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.321 & 90.5\% & 1.17 & 77.6 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 11.88	 & 1.0
 
 		% delta-h-c - 100% 
-		& 1.982 & 100.0\% & 1.04 & 96.6 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 1.977 & 100.0\% & 1.04 & 96.6 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 2.821 & 89.3\% & 2.14 & 41.7 	 
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 96.091 & 96.4\% & 1.11 & 87.1 	 
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.321 & 100.0\% & 1.21 & 82.4 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.321 & 100.0\% & 1.18 & 84.8 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc30 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{dwr}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{logistics}} } & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.0	 & 2.83
 
 		% delta-h-c - 10% 
-		& 2.191 & 54.8\% & 2.21 & 24.7 	 
+		& \textbf{0.9} & 100.0 & 3.53 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 2.19 & 95.2\% & 5.46 & 17.4 	 
+		& \textbf{0.9} & 100.0 & 3.53 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.767 & 83.3\% & 4.21 & 19.8 	 
+		% rg2009 - 10% 
+		& 0.87 & 100.0 & 3.78 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 66.496 & 92.9\% & 6.38 & 14.6 	 
+		% lm_hc0 - 10% 
+		& 0.43 & 58.3 & 2.11 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.452 & 36.9\% & 1.1 & 33.7 	 
+		% lm_hc30 - 10% 
+		& 0.31 & 100.0 & 9.53 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.512 & 33.3\% & 1.06 & 31.5 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 5.75	 & 1.19
 
 		% delta-h-c - 30% 
-		& 2.177 & 83.3\% & 1.58 & 52.6 	 
+		& \textbf{0.92} & 100.0 & 1.47 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 2.179 & 100.0\% & 5.0 & 20.0 	 
+		& \textbf{0.92} & 100.0 & 1.47 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 2.723 & 81.0\% & 3.35 & 24.2 	 
+		% rg2009 - 30% 
+		& 0.86 & 100.0 & 1.75 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 54.461 & 97.6\% & 6.56 & 14.9 	 
+		% lm_hc0 - 30% 
+		& 0.78 & 86.1 & 1.33 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.452 & 60.7\% & 1.04 & 58.6 	 
+		% lm_hc30 - 30% 
+		& 0.24 & 100.0 & 6.58 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.5 & 51.2\% & 1.06 & 48.3 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 9.42	 & 1.06
 
 		% delta-h-c - 50% 
-		& 2.169 & 90.5\% & 1.21 & 74.5 	 
+		& \textbf{0.96} & 100.0 & 1.17 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 2.165 & 100.0\% & 3.98 & 25.1 	 
+		& \textbf{0.96} & 100.0 & 1.17 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 4.822 & 72.6\% & 2.27 & 31.9 	 
+		% rg2009 - 50% 
+		& 0.93 & 100.0 & 1.25 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 56.256 & 98.8\% & 6.27 & 15.7 	 
+		% lm_hc0 - 50% 
+		& 0.9 & 94.4 & 1.17 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.488 & 66.7\% & 1.0 & 66.7 	 
+		% lm_hc30 - 50% 
+		& 0.39 & 100.0 & 4.36 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.548 & 61.9\% & 1.01 & 61.2 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 13.25	 & 1.03
 
 		% delta-h-c - 70% 
-		& 2.158 & 97.6\% & 1.07 & 91.1 	 
+		& 0.99 & 100.0 & 1.06 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 2.158 & 100.0\% & 2.26 & 44.2 	 
+		& 0.99 & 100.0 & 1.06 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 10.914 & 70.2\% & 2.05 & 34.3 	 
+		% rg2009 - 70% 
+		& 0.99 & 100.0 & 1.06 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 65.101 & 98.8\% & 6.0 & 16.5 	 
+		% lm_hc0 - 70% 
+		& \textbf{1.0} & 100.0 & 1.03 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.536 & 89.3\% & 1.0 & 89.3 	 
+		% lm_hc30 - 70% 
+		& 0.62 & 100.0 & 2.19 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.607 & 78.6\% & 1.05 & 75.0 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 18.17	 & 1.0
 
 		% delta-h-c - 100% 
-		& 2.153 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 2.15 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 25.092 & 67.9\% & 1.68 & 40.4 	 
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 86.46 & 100.0\% & 1.0 & 100.0 	 
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.643 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.75 & 96.4\% & 1.04 & 93.1 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc30 - 100% 
+		& 0.72 & 100.0 & 1.67 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ipc-grid}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{miconic}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 2.0	 & 2.53
 
 		% delta-h-c - 10% 
-		& 2.256 & 92.8\% & 1.92 & 48.3 	 
+		& \textbf{0.89} & 100.0 & 2.97 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 2.258 & 94.8\% & 2.33 & 40.7 	 
+		& \textbf{0.89} & 100.0 & 2.97 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.091 & 96.1\% & 2.46 & 39.1 	 
+		% rg2009 - 10% 
+		& 0.76 & 100.0 & 3.53 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 10% 
+		& 0.39 & 52.8 & 1.69 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.248 & 66.7\% & 2.58 & 25.9 	 
+		% lm_hc30 - 10% 
+		& 0.42 & 100.0 & 6.0 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.242 & 62.7\% & 2.58 & 24.4 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.758 & 58.2\% & 2.11 & 27.6 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 5.42	 & 1.22
 
 		% delta-h-c - 30% 
-		& 2.251 & 95.4\% & 1.29 & 73.7 	 
+		& \textbf{0.95} & 100.0 & 1.36 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 2.254 & 98.0\% & 1.58 & 62.0 	 
+		& \textbf{0.95} & 100.0 & 1.36 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.476 & 97.4\% & 1.42 & 68.3 	 
+		% rg2009 - 30% 
+		& 0.65 & 100.0 & 2.17 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 30% 
+		& 0.83 & 88.9 & 1.19 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.242 & 81.7\% & 1.65 & 49.6 	 
+		% lm_hc30 - 30% 
+		& 0.22 & 100.0 & 5.69 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.242 & 83.7\% & 1.66 & 50.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.699 & 80.4\% & 1.62 & 49.6 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 8.42	 & 1.06
 
 		% delta-h-c - 50% 
-		& 2.255 & 98.7\% & 1.11 & 88.8 	 
+		& \textbf{0.97} & 100.0 & 1.11 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 2.252 & 100.0\% & 1.26 & 79.3 	 
+		& \textbf{0.97} & 100.0 & 1.11 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 1.905 & 100.0\% & 1.16 & 86.4 	 
+		% rg2009 - 50% 
+		& 0.84 & 100.0 & 1.42 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 50% 
+		& 0.92 & 94.4 & 1.06 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.261 & 90.8\% & 1.18 & 76.8 	 
+		% lm_hc30 - 50% 
+		& 0.25 & 100.0 & 4.69 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.248 & 90.8\% & 1.18 & 76.8 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.667 & 93.5\% & 1.21 & 77.3 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 11.92	 & 1.0
 
 		% delta-h-c - 70% 
-		& 2.267 & 99.4\% & 1.1 & 89.9 	 
+		& 0.98 & 100.0 & 1.06 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 2.268 & 100.0\% & 1.19 & 84.1 	 
+		& 0.98 & 100.0 & 1.06 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 2.552 & 100.0\% & 1.05 & 95.0 	 
+		% rg2009 - 70% 
+		& 0.91 & 100.0 & 1.19 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 70% 
+		& \textbf{0.99} & 100.0 & 1.03 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.268 & 97.4\% & 1.07 & 90.9 	 
+		% lm_hc30 - 70% 
+		& 0.31 & 100.0 & 3.94 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.268 & 97.4\% & 1.07 & 90.9 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.673 & 91.5\% & 1.08 & 84.3 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 16.33	 & 1.0
 
 		% delta-h-c - 100% 
-		& 2.082 & 100.0\% & 1.03 & 96.8 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 2.083 & 100.0\% & 1.03 & 96.8 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 4.057 & 100.0\% & 1.0 & 100.0 	 
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.262 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.262 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.59 & 83.6\% & 1.1 & 76.1 	 
+		% lm_hc30 - 100% 
+		& 0.47 & 100.0 & 3.0 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{ferry}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{rovers}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.67	 & 2.28
 
 		% delta-h-c - 10% 
-		& 1.411 & 100.0\% & 3.17 & 31.6 	 
+		& \textbf{0.83} & 97.2 & 2.75 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 1.412 & 100.0\% & 3.2 & 31.2 	 
+		& \textbf{0.83} & 97.2 & 2.75 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 0.491 & 98.8\% & 3.37 & 29.3 	 
+		% rg2009 - 10% 
+		& 0.76 & 100.0 & 3.42 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 6.66 & 91.7\% & 6.65 & 13.8 	 
+		% lm_hc0 - 10% 
+		& 0.49 & 52.8 & 1.22 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.071 & 58.3\% & 1.26 & 46.2 	 
+		% lm_hc30 - 10% 
+		& 0.44 & 100.0 & 5.28 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.071 & 58.3\% & 1.18 & 49.5 	 
-
-		% mirroring_landmarks - 10% 
-		& 4.548 & 51.2\% & 1.35 & 38.1 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 3.67	 & 1.31
 
 		% delta-h-c - 30% 
-		& 1.419 & 100.0\% & 1.56 & 64.1 	 
+		& \textbf{0.94} & 100.0 & 1.44 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 1.418 & 100.0\% & 1.76 & 56.8 	 
+		& \textbf{0.94} & 100.0 & 1.44 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 0.677 & 100.0\% & 1.76 & 56.8 	 
+		% rg2009 - 30% 
+		& 0.88 & 100.0 & 1.69 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 6.801 & 100.0\% & 7.57 & 13.2 	 
+		% lm_hc0 - 30% 
+		& 0.76 & 83.3 & 1.19 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.06 & 85.7\% & 1.12 & 76.6 	 
+		% lm_hc30 - 30% 
+		& 0.37 & 100.0 & 3.89 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.06 & 83.3\% & 1.06 & 78.7 	 
-
-		% mirroring_landmarks - 30% 
-		& 4.393 & 73.8\% & 1.13 & 65.3 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 5.75	 & 1.19
 
 		% delta-h-c - 50% 
-		& 1.41 & 100.0\% & 1.29 & 77.8 	 
+		& \textbf{0.92} & 88.9 & 1.08 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 1.415 & 100.0\% & 1.44 & 69.4 	 
+		& \textbf{0.92} & 88.9 & 1.08 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 0.795 & 100.0\% & 1.42 & 70.6 	 
+		% rg2009 - 50% 
+		& 0.91 & 100.0 & 1.42 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 8.297 & 100.0\% & 7.57 & 13.2 	 
+		% lm_hc0 - 50% 
+		& 0.79 & 88.9 & 1.14 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.06 & 95.2\% & 1.07 & 88.9 	 
+		% lm_hc30 - 50% 
+		& 0.39 & 100.0 & 3.67 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.06 & 91.7\% & 1.01 & 90.6 	 
-
-		% mirroring_landmarks - 50% 
-		& 4.31 & 81.0\% & 1.12 & 72.3 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 8.17	 & 1.0
 
 		% delta-h-c - 70% 
-		& 1.415 & 100.0\% & 1.1 & 91.3 	 
+		& \textbf{0.99} & 100.0 & 1.03 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 1.417 & 100.0\% & 1.12 & 89.4 	 
+		& \textbf{0.99} & 100.0 & 1.03 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 1.253 & 98.8\% & 1.14 & 86.5 	 
+		% rg2009 - 70% 
+		& 0.97 & 100.0 & 1.08 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 10.65 & 100.0\% & 7.32 & 13.7 	 
+		% lm_hc0 - 70% 
+		& 0.93 & 97.2 & 1.11 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.071 & 100.0\% & 1.01 & 98.8 	 
+		% lm_hc30 - 70% 
+		& 0.37 & 100.0 & 3.44 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.071 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 70% 
-		& 4.274 & 96.4\% & 1.05 & 92.0 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 10.83	 & 1.0
 
 		% delta-h-c - 100% 
-		& 1.439 & 100.0\% & 1.07 & 93.3 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 1.421 & 100.0\% & 1.07 & 93.3 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 1.63 & 100.0\% & 1.07 & 93.3 	 
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 13.625 & 100.0\% & 1.07 & 93.3 	 
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.071 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.071 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 4.214 & 100.0\% & 1.0 & 100.0 	 
+		% lm_hc30 - 100% 
+		& 0.39 & 100.0 & 3.0 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{logistics}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{satellite}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.42	 & 3.53
 
 		% delta-h-c - 10% 
-		& 2.625 & 100.0\% & 2.5 & 39.9 	 
+		& 0.85 & 94.4 & 3.81 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 2.619 & 100.0\% & 2.8 & 35.7 	 
+		& 0.85 & 94.4 & 3.81 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.201 & 99.3\% & 2.98 & 33.3 	 
+		% rg2009 - 10% 
+		& \textbf{0.86} & 97.2 & 3.89 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 10% 
+		& 0.5 & 58.3 & 2.11 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.641 & 55.6\% & 1.73 & 32.2 	 
+		% lm_hc30 - 10% 
+		& 0.59 & 100.0 & 5.94 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.641 & 49.0\% & 1.24 & 39.5 	 
-
-		% mirroring_landmarks - 10% 
-		& 3.967 & 51.0\% & 1.63 & 31.3 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 3.42	 & 2.39
 
 		% delta-h-c - 30% 
-		& 2.614 & 98.0\% & 1.3 & 75.4 	 
+		& \textbf{0.86} & 91.7 & 2.44 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 2.623 & 98.0\% & 1.76 & 55.8 	 
+		& \textbf{0.86} & 91.7 & 2.44 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.799 & 98.7\% & 1.39 & 70.9 	 
+		% rg2009 - 30% 
+		& 0.72 & 94.4 & 3.44 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 30% 
+		& 0.64 & 83.3 & 2.03 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.621 & 80.4\% & 1.21 & 66.5 	 
+		% lm_hc30 - 30% 
+		& 0.44 & 100.0 & 5.39 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.634 & 76.5\% & 1.12 & 68.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 3.83 & 77.8\% & 1.46 & 53.4 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 5.75	 & 1.58
 
 		% delta-h-c - 50% 
-		& 2.591 & 98.7\% & 1.13 & 87.3 	 
+		& \textbf{0.93} & 97.2 & 1.53 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 2.609 & 98.7\% & 1.37 & 71.9 	 
+		& 0.91 & 97.2 & 1.58 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 2.509 & 98.7\% & 1.29 & 76.3 	 
+		% rg2009 - 50% 
+		& 0.79 & 94.4 & 2.25 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 50% 
+		& 0.73 & 88.9 & 1.28 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.641 & 90.2\% & 1.1 & 81.7 	 
+		% lm_hc30 - 50% 
+		& 0.35 & 100.0 & 4.81 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.647 & 86.3\% & 1.05 & 82.0 	 
-
-		% mirroring_landmarks - 50% 
-		& 5.085 & 88.9\% & 1.32 & 67.3 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 8.08	 & 1.31
 
 		% delta-h-c - 70% 
-		& 2.612 & 100.0\% & 1.08 & 92.7 	 
+		& \textbf{0.94} & 100.0 & 1.28 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 2.611 & 100.0\% & 1.15 & 86.9 	 
+		& \textbf{0.94} & 100.0 & 1.28 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 3.461 & 100.0\% & 1.13 & 88.4 	 
+		% rg2009 - 70% 
+		& 0.81 & 97.2 & 2.06 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 70% 
+		& 0.89 & 100.0 & 1.19 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.667 & 96.7\% & 1.06 & 91.4 	 
+		% lm_hc30 - 70% 
+		& 0.37 & 100.0 & 4.06 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.66 & 96.7\% & 1.02 & 94.9 	 
-
-		% mirroring_landmarks - 70% 
-		& 3.739 & 95.4\% & 1.3 & 73.4 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 10.75	 & 1.25
 
 		% delta-h-c - 100% 
-		& 2.456 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{0.96} & 100.0 & 1.17 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 2.447 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{0.96} & 100.0 & 1.17 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 4.832 & 100.0\% & 1.0 & 100.0 	 
+		% rg2009 - 100% 
+		& 0.88 & 100.0 & 1.75 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 100% 
+		& 0.88 & 100.0 & 1.17 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.607 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.607 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 3.213 & 100.0\% & 1.1 & 91.0 	 
+		% lm_hc30 - 100% 
+		& 0.5 & 100.0 & 3.33 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{miconic}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{sokoban}} } & \multirow{5}{*}{8.5} 
+	 & 10	 & 2.33	 & 2.11
 
 		% delta-h-c - 10% 
-		& 2.026 & 100.0\% & 2.12 & 47.2 	 
+		& 0.39 & 52.8 & 2.08 	 
 
 		% delta-h-c-uncertainty - 10% 
-		& 2.046 & 100.0\% & 2.29 & 43.8 	 
+		& 0.38 & 61.1 & 2.94 	 
 
-		% planrecognition-ramirezgeffner - 10% 
-		& 0.813 & 100.0\% & 3.26 & 30.7 	 
+		% rg2009 - 10% 
+		& \textbf{0.4} & 80.6 & 4.86 	 
 
-		% goal_recognition-yolanda - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 10% 
+		& 0.28 & 52.8 & 2.14 	 
 
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.464 & 67.9\% & 1.33 & 50.9 	 
+		% lm_hc30 - 10% 
+		& 0.26 & 97.2 & 7.0 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.352 & 54.8\% & 1.26 & 43.4 	 
-
-		% mirroring_landmarks - 10% 
-		& 9.548 & 58.3\% & 1.54 & 38.0 	 
-
-	\\ & & 30	 & 0.0
+	\\ & & 30	 & 6.5	 & 1.25
 
 		% delta-h-c - 30% 
-		& 2.009 & 100.0\% & 1.19 & 84.0 	 
+		& \textbf{0.75} & 80.6 & 1.25 	 
 
 		% delta-h-c-uncertainty - 30% 
-		& 2.026 & 100.0\% & 1.46 & 68.3 	 
+		& 0.64 & 91.7 & 2.06 	 
 
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.191 & 100.0\% & 1.58 & 63.2 	 
+		% rg2009 - 30% 
+		& 0.56 & 86.1 & 2.53 	 
 
-		% goal_recognition-yolanda - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 30% 
+		& 0.57 & 69.4 & 1.22 	 
 
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.452 & 96.4\% & 1.11 & 87.1 	 
+		% lm_hc30 - 30% 
+		& 0.23 & 94.4 & 5.17 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.364 & 90.5\% & 1.08 & 83.5 	 
-
-		% mirroring_landmarks - 30% 
-		& 9.286 & 77.4\% & 1.26 & 61.3 	 
-
-	\\ & & 50	 & 0.0
+	\\ & & 50	 & 10.33	 & 1.22
 
 		% delta-h-c - 50% 
-		& 2.032 & 100.0\% & 1.1 & 91.3 	 
+		& \textbf{0.92} & 100.0 & 1.19 	 
 
 		% delta-h-c-uncertainty - 50% 
-		& 2.042 & 100.0\% & 1.32 & 75.7 	 
+		& 0.83 & 100.0 & 1.39 	 
 
-		% planrecognition-ramirezgeffner - 50% 
-		& 1.722 & 100.0\% & 1.29 & 77.8 	 
+		% rg2009 - 50% 
+		& 0.61 & 86.1 & 2.14 	 
 
-		% goal_recognition-yolanda - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 50% 
+		& 0.61 & 69.4 & 1.42 	 
 
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.452 & 96.4\% & 1.01 & 95.3 	 
+		% lm_hc30 - 50% 
+		& 0.28 & 100.0 & 5.08 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.352 & 96.4\% & 1.0 & 96.4 	 
-
-		% mirroring_landmarks - 50% 
-		& 9.238 & 88.1\% & 1.21 & 72.5 	 
-
-	\\ & & 70	 & 0.0
+	\\ & & 70	 & 14.67	 & 1.03
 
 		% delta-h-c - 70% 
-		& 2.033 & 100.0\% & 1.01 & 98.8 	 
+		& \textbf{0.99} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 70% 
-		& 2.047 & 100.0\% & 1.02 & 97.7 	 
+		& 0.94 & 100.0 & 1.08 	 
 
-		% planrecognition-ramirezgeffner - 70% 
-		& 2.59 & 100.0\% & 1.04 & 96.6 	 
+		% rg2009 - 70% 
+		& 0.64 & 83.3 & 1.53 	 
 
-		% goal_recognition-yolanda - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 70% 
+		& 0.85 & 91.7 & 1.17 	 
 
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.452 & 100.0\% & 1.01 & 98.8 	 
+		% lm_hc30 - 70% 
+		& 0.36 & 100.0 & 3.64 	 
 
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.376 & 100.0\% & 1.01 & 98.8 	 
-
-		% mirroring_landmarks - 70% 
-		& 9.167 & 96.4\% & 1.12 & 86.2 	 
-
-	\\ & & 100	 & 0.0
+	\\ & & 100	 & 20.17	 & 1.0
 
 		% delta-h-c - 100% 
-		& 2.038 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
 		% delta-h-c-uncertainty - 100% 
-		& 2.039 & 100.0\% & 1.0 & 100.0 	 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-ramirezgeffner - 100% 
-		& 5.107 & 100.0\% & 1.0 & 100.0 	 
+		% rg2009 - 100% 
+		& 0.67 & 75.0 & 1.17 	 
 
-		% goal_recognition-yolanda - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
 
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.464 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.364 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 9.036 & 100.0\% & 1.0 & 100.0 	 
+		% lm_hc30 - 100% 
+		& 0.42 & 100.0 & 2.75 	 
  \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{rovers}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
-
-		% delta-h-c - 10% 
-		& 1.969 & 98.8\% & 2.71 & 36.4 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 1.963 & 100.0\% & 2.94 & 34.0 	 
-
-		% planrecognition-ramirezgeffner - 10% 
-		& 0.745 & 98.8\% & 2.86 & 34.6 	 
-
-		% goal_recognition-yolanda - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.348 & 64.3\% & 1.73 & 37.2 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.371 & 51.2\% & 1.11 & 46.2 	 
-
-		% mirroring_landmarks - 10% 
-		& 20.893 & 65.5\% & 1.85 & 35.5 	 
-
-	\\ & & 30	 & 0.0
-
-		% delta-h-c - 30% 
-		& 1.975 & 85.7\% & 1.17 & 73.5 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 1.949 & 91.7\% & 1.83 & 50.0 	 
-
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.03 & 100.0\% & 1.67 & 60.0 	 
-
-		% goal_recognition-yolanda - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.348 & 83.3\% & 1.24 & 67.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.348 & 69.0\% & 1.07 & 64.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 22.714 & 81.0\% & 1.42 & 57.1 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 1.976 & 98.8\% & 1.14 & 86.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 1.95 & 98.8\% & 1.44 & 68.6 	 
-
-		% planrecognition-ramirezgeffner - 50% 
-		& 1.345 & 100.0\% & 1.3 & 77.1 	 
-
-		% goal_recognition-yolanda - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.336 & 92.9\% & 1.08 & 85.7 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.348 & 85.7\% & 1.01 & 84.7 	 
-
-		% mirroring_landmarks - 50% 
-		& 17.119 & 90.5\% & 1.13 & 80.0 	 
-
-	\\ & & 70	 & 0.0
-
-		% delta-h-c - 70% 
-		& 1.975 & 98.8\% & 1.01 & 97.6 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 1.961 & 98.8\% & 1.06 & 93.3 	 
-
-		% planrecognition-ramirezgeffner - 70% 
-		& 1.177 & 100.0\% & 1.07 & 93.3 	 
-
-		% goal_recognition-yolanda - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.348 & 98.8\% & 1.01 & 97.6 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.36 & 91.7\% & 1.0 & 91.7 	 
-
-		% mirroring_landmarks - 70% 
-		& 17.095 & 98.8\% & 1.07 & 92.2 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 1.976 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 1.959 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-ramirezgeffner - 100% 
-		& 2.298 & 100.0\% & 1.07 & 93.3 	 
-
-		% goal_recognition-yolanda - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.371 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.571 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 16.571 & 100.0\% & 1.04 & 96.6 	 
- \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{satellite}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
-
-		% delta-h-c - 10% 
-		& 2.015 & 91.7\% & 2.73 & 33.6 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 2.011 & 92.9\% & 2.92 & 31.8 	 
-
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.076 & 97.6\% & 3.42 & 28.6 	 
-
-		% goal_recognition-yolanda - 10% 
-		& 14.82 & 89.3\% & 4.87 & 18.3 	 
-
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.45 & 57.1\% & 1.56 & 36.6 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.45 & 47.6\% & 1.21 & 39.2 	 
-
-		% mirroring_landmarks - 10% 
-		& 2.226 & 69.0\% & 2.05 & 33.7 	 
-
-	\\ & & 30	 & 0.0
-
-		% delta-h-c - 30% 
-		& 2.01 & 92.9\% & 1.76 & 52.7 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 1.992 & 96.4\% & 2.31 & 41.8 	 
-
-		% planrecognition-ramirezgeffner - 30% 
-		& 1.183 & 97.6\% & 2.4 & 40.6 	 
-
-		% goal_recognition-yolanda - 30% 
-		& 32.171 & 86.9\% & 4.21 & 20.6 	 
-
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.45 & 76.2\% & 1.31 & 58.2 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.414 & 69.0\% & 1.14 & 60.4 	 
-
-		% mirroring_landmarks - 30% 
-		& 2.024 & 83.3\% & 1.42 & 58.8 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 2.022 & 96.4\% & 1.32 & 73.0 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 2.013 & 98.8\% & 1.77 & 55.7 	 
-
-		% planrecognition-ramirezgeffner - 50% 
-		& 1.328 & 97.6\% & 1.69 & 57.7 	 
-
-		% goal_recognition-yolanda - 50% 
-		& 51.567 & 88.1\% & 3.65 & 24.1 	 
-
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.426 & 85.7\% & 1.1 & 78.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.414 & 81.0\% & 1.11 & 73.1 	 
-
-		% mirroring_landmarks - 50% 
-		& 1.905 & 92.9\% & 1.27 & 72.9 	 
-
-	\\ & & 70	 & 0.0
-
-		% delta-h-c - 70% 
-		& 2.006 & 97.6\% & 1.11 & 88.2 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 2.005 & 97.6\% & 1.21 & 80.4 	 
-
-		% planrecognition-ramirezgeffner - 70% 
-		& 1.841 & 96.4\% & 1.52 & 63.3 	 
-
-		% goal_recognition-yolanda - 70% 
-		& 75.363 & 92.9\% & 2.89 & 32.1 	 
-
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.402 & 97.6\% & 1.02 & 95.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.414 & 94.0\% & 1.04 & 90.8 	 
-
-		% mirroring_landmarks - 70% 
-		& 1.893 & 98.8\% & 1.06 & 93.3 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 2.022 & 100.0\% & 1.07 & 93.3 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 2.026 & 100.0\% & 1.07 & 93.3 	 
-
-		% planrecognition-ramirezgeffner - 100% 
-		& 2.045 & 96.4\% & 1.32 & 73.0 	 
-
-		% goal_recognition-yolanda - 100% 
-		& 113.381 & 100.0\% & 2.57 & 38.9 	 
-
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.414 & 100.0\% & 1.07 & 93.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.414 & 100.0\% & 1.07 & 93.3 	 
-
-		% mirroring_landmarks - 100% 
-		& 1.786 & 100.0\% & 1.04 & 96.6 	 
- \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{sokoban}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
-
-		% delta-h-c - 10% 
-		& 3.484 & 72.6\% & 1.61 & 45.2 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 3.498 & 78.6\% & 2.39 & 32.8 	 
-
-		% planrecognition-ramirezgeffner - 10% 
-		& 3.153 & 69.0\% & 4.02 & 17.2 	 
-
-		% goal_recognition-yolanda - 10% 
-		& 461.701 & 67.9\% & 2.99 & 22.7 	 
-
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.607 & 53.6\% & 2.06 & 26.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.607 & 51.2\% & 1.86 & 27.6 	 
-
-		% mirroring_landmarks - 10% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 30	 & 0.0
-
-		% delta-h-c - 30% 
-		& 3.381 & 89.3\% & 1.11 & 80.7 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 3.416 & 95.2\% & 1.75 & 54.4 	 
-
-		% planrecognition-ramirezgeffner - 30% 
-		& 4.622 & 89.3\% & 4.17 & 21.4 	 
-
-		% goal_recognition-yolanda - 30% 
-		& 370.413 & 83.3\% & 3.14 & 26.5 	 
-
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.595 & 57.1\% & 1.37 & 41.7 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.607 & 56.0\% & 1.21 & 46.1 	 
-
-		% mirroring_landmarks - 30% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 3.33 & 95.2\% & 1.08 & 87.9 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 3.335 & 100.0\% & 1.48 & 67.7 	 
-
-		% planrecognition-ramirezgeffner - 50% 
-		& 7.441 & 89.3\% & 4.11 & 21.7 	 
-
-		% goal_recognition-yolanda - 50% 
-		& 358.028 & 82.1\% & 2.27 & 36.1 	 
-
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.595 & 71.4\% & 1.32 & 54.1 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.607 & 69.0\% & 1.2 & 57.4 	 
-
-		% mirroring_landmarks - 50% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 70	 & 0.0
-
-		% delta-h-c - 70% 
-		& 3.308 & 97.6\% & 1.04 & 94.3 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 3.279 & 98.8\% & 1.19 & 83.0 	 
-
-		% planrecognition-ramirezgeffner - 70% 
-		& 9.877 & 89.3\% & 4.18 & 21.4 	 
-
-		% goal_recognition-yolanda - 70% 
-		& 353.721 & 85.7\% & 1.85 & 46.5 	 
-
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.607 & 83.3\% & 1.05 & 79.5 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.607 & 86.9\% & 1.08 & 80.2 	 
-
-		% mirroring_landmarks - 70% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 3.324 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 3.251 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-ramirezgeffner - 100% 
-		& 12.996 & 89.3\% & 4.54 & 19.7 	 
-
-		% goal_recognition-yolanda - 100% 
-		& 353.182 & 85.7\% & 1.04 & 82.8 	 
-
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.607 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.643 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 0.0 & 0.0\% & 0.0 & 0.0 	 
- \\ \hline
-\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{zeno}} \rotatebox[origin=c]{90}{(0)}} & \multirow{5}{*}{0.0} 
-	 & 10	 & 0.0
-
-		% delta-h-c - 10% 
-		& 2.962 & 86.9\% & 2.71 & 32.0 	 
-
-		% delta-h-c-uncertainty - 10% 
-		& 2.897 & 88.1\% & 3.12 & 28.2 	 
-
-		% planrecognition-ramirezgeffner - 10% 
-		& 1.814 & 96.4\% & 3.4 & 28.3 	 
-
-		% goal_recognition-yolanda - 10% 
-		& 93.918 & 66.7\% & 1.63 & 40.9 	 
-
-		% planrecognition-heuristic_completion-0 - 10% 
-		& 0.567 & 39.3\% & 1.11 & 35.5 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 10% 
-		& 0.555 & 36.9\% & 1.05 & 35.2 	 
-
-		% mirroring_landmarks - 10% 
-		& 13.119 & 41.7\% & 1.24 & 33.7 	 
-
-	\\ & & 30	 & 0.0
-
-		% delta-h-c - 30% 
-		& 2.959 & 90.5\% & 1.61 & 56.3 	 
-
-		% delta-h-c-uncertainty - 30% 
-		& 2.887 & 96.4\% & 2.56 & 37.7 	 
-
-		% planrecognition-ramirezgeffner - 30% 
-		& 2.539 & 88.1\% & 2.12 & 41.6 	 
-
-		% goal_recognition-yolanda - 30% 
-		& 88.285 & 78.6\% & 2.27 & 34.6 	 
-
-		% planrecognition-heuristic_completion-0 - 30% 
-		& 0.555 & 70.2\% & 1.15 & 60.8 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 30% 
-		& 0.531 & 60.7\% & 1.02 & 59.3 	 
-
-		% mirroring_landmarks - 30% 
-		& 12.881 & 76.2\% & 1.31 & 58.2 	 
-
-	\\ & & 50	 & 0.0
-
-		% delta-h-c - 50% 
-		& 2.979 & 95.2\% & 1.15 & 82.5 	 
-
-		% delta-h-c-uncertainty - 50% 
-		& 2.894 & 96.4\% & 1.83 & 52.6 	 
-
-		% planrecognition-ramirezgeffner - 50% 
-		& 3.079 & 92.9\% & 1.42 & 65.5 	 
-
-		% goal_recognition-yolanda - 50% 
-		& 105.814 & 91.7\% & 2.56 & 35.8 	 
-
-		% planrecognition-heuristic_completion-0 - 50% 
-		& 0.543 & 78.6\% & 1.07 & 73.3 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 50% 
-		& 0.555 & 76.2\% & 1.0 & 76.2 	 
-
-		% mirroring_landmarks - 50% 
-		& 12.5 & 83.3\% & 1.07 & 77.8 	 
-
-	\\ & & 70	 & 0.0
-
-		% delta-h-c - 70% 
-		& 3.004 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 70% 
-		& 2.929 & 100.0\% & 1.04 & 96.6 	 
-
-		% planrecognition-ramirezgeffner - 70% 
-		& 3.907 & 96.4\% & 1.13 & 85.3 	 
-
-		% goal_recognition-yolanda - 70% 
-		& 125.653 & 94.0\% & 2.58 & 36.4 	 
-
-		% planrecognition-heuristic_completion-0 - 70% 
-		& 0.567 & 97.6\% & 1.05 & 93.2 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 70% 
-		& 0.555 & 90.5\% & 1.0 & 90.5 	 
-
-		% mirroring_landmarks - 70% 
-		& 12.417 & 96.4\% & 1.02 & 94.2 	 
-
-	\\ & & 100	 & 0.0
-
-		% delta-h-c - 100% 
-		& 2.967 & 100.0\% & 1.0 & 100.0 	 
-
-		% delta-h-c-uncertainty - 100% 
-		& 2.918 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-ramirezgeffner - 100% 
-		& 4.866 & 100.0\% & 1.07 & 93.3 	 
-
-		% goal_recognition-yolanda - 100% 
-		& 168.675 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_completion-0 - 100% 
-		& 0.543 & 100.0\% & 1.0 & 100.0 	 
-
-		% planrecognition-heuristic_uniqueness-0 - 100% 
-		& 0.543 & 100.0\% & 1.0 & 100.0 	 
-
-		% mirroring_landmarks - 100% 
-		& 12.321 & 100.0\% & 1.0 & 100.0 	 
- \\ \hline
-
-Average & & & & 2.511 & 94.11\% & 1.55 & 72.53 & 2.497 & 96.96\% & 2.14 & 60.55 & 3.322 & 93.38\% & 2.30 & 53.62 & 61.862 & 50.98\% & 2.52 & 19.80 & 0.397 & 79.66\% & 1.18 & 71.11 & 0.400 & 75.87\% & 1.12 & 70.12 & 4.312 & 48.67\% & 0.74 & 40.63
- 
+Avg & & & &  & \textbf{0.88} & 95.38 & 1.81 & 0.87 & 96.29 & 1.97 & 0.81 & 96.43 & 2.38 & 0.71 & 81.94 & 1.34 & 0.43 & 99.62 & 5.4
 \\ \hline
-
 \end{tabular}
-\caption{Results comparing the state-of-the-art in goal recognition as planning for partial and full observability.}
+\caption{Results for each method, with optimal observations.}
 \end{table*}
+
+\begin{table*}[]
+\centering
+Previous Methods - Suboptimal\\
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{|c|c|ccc|ccc|ccc|ccc|ccc|ccc|}
+\hline
+% empty
+& % empty
+& \multicolumn{3}{c|}{}
+& \multicolumn{3}{c|}{\hdeltahc}
+& \multicolumn{3}{c|}{\hdeltahcu}
+& \multicolumn{3}{c|}{\rg}		   
+& \multicolumn{3}{c|}{\completion}
+& \multicolumn{3}{c|}{\completion 0.3}
+\\ \hline
+\# & $|\Gamma|$ & \textbf{\% Obs} & $|\Omega|$ & $|\Gamma^*|$ 
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+& \textbf{AGR} & \textbf{ACC} & \textbf{$|\Gamma^\textup{h}|$}
+\\ 
+\hline
+
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{blocks}} } & \multirow{5}{*}{20.1} 
+	 & 10	 & 1.42	 & 7.49
+
+		% delta-h-c - 10% 
+		& 0.41 & 86.1 & 6.86 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.42 & 88.9 & 7.42 	 
+
+		% rg2009 - 10% 
+		& \textbf{0.46} & 97.2 & 10.61 	 
+
+		% lm_hc0 - 10% 
+		& 0.06 & 19.4 & 1.19 	 
+
+		% lm_hc30 - 10% 
+		& 0.34 & 100.0 & 17.53 	 
+
+	\\ & & 30	 & 3.83	 & 3.55
+
+		% delta-h-c - 30% 
+		& 0.49 & 77.8 & 3.17 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.35 & 86.1 & 6.92 	 
+
+		% rg2009 - 30% 
+		& \textbf{0.54} & 100.0 & 4.86 	 
+
+		% lm_hc0 - 30% 
+		& 0.28 & 55.6 & 1.17 	 
+
+		% lm_hc30 - 30% 
+		& 0.26 & 100.0 & 13.47 	 
+
+	\\ & & 50	 & 5.92	 & 3.18
+
+		% delta-h-c - 50% 
+		& 0.55 & 86.1 & 3.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.42 & 94.4 & 5.61 	 
+
+		% rg2009 - 50% 
+		& \textbf{0.62} & 97.2 & 2.72 	 
+
+		% lm_hc0 - 50% 
+		& 0.39 & 72.2 & 1.08 	 
+
+		% lm_hc30 - 50% 
+		& 0.27 & 100.0 & 9.89 	 
+
+	\\ & & 70	 & 8.5	 & 2.53
+
+		% delta-h-c - 70% 
+		& \textbf{0.71} & 91.7 & 2.06 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.56 & 94.4 & 3.06 	 
+
+		% rg2009 - 70% 
+		& 0.68 & 100.0 & 2.44 	 
+
+		% lm_hc0 - 70% 
+		& 0.51 & 94.4 & 1.33 	 
+
+		% lm_hc30 - 70% 
+		& 0.26 & 100.0 & 8.61 	 
+
+	\\ & & 100	 & 11.83	 & 2.25
+
+		% delta-h-c - 100% 
+		& \textbf{0.84} & 100.0 & 1.67 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{0.84} & 100.0 & 1.67 	 
+
+		% rg2009 - 100% 
+		& 0.8 & 100.0 & 2.08 	 
+
+		% lm_hc0 - 100% 
+		& 0.51 & 100.0 & 1.67 	 
+
+		% lm_hc30 - 100% 
+		& 0.28 & 100.0 & 6.42 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{ipc-grid}} } & \multirow{5}{*}{7.5} 
+	 & 10	 & 2.06	 & 1.58
+
+		% delta-h-c - 10% 
+		& 0.77 & 91.7 & 1.81 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.75 & 97.9 & 2.4 	 
+
+		% rg2009 - 10% 
+		& \textbf{0.81} & 100.0 & 2.73 	 
+
+		% lm_hc0 - 10% 
+		& 0.64 & 87.5 & 2.23 	 
+
+		% lm_hc30 - 10% 
+		& 0.42 & 100.0 & 5.6 	 
+
+	\\ & & 30	 & 5.56	 & 1.4
+
+		% delta-h-c - 30% 
+		& 0.82 & 93.8 & 1.13 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.77 & 97.9 & 1.6 	 
+
+		% rg2009 - 30% 
+		& \textbf{0.9} & 100.0 & 1.27 	 
+
+		% lm_hc0 - 30% 
+		& 0.81 & 95.8 & 1.35 	 
+
+		% lm_hc30 - 30% 
+		& 0.67 & 95.8 & 2.23 	 
+
+	\\ & & 50	 & 8.88	 & 1.35
+
+		% delta-h-c - 50% 
+		& 0.84 & 93.8 & 1.13 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.84 & 100.0 & 1.56 	 
+
+		% rg2009 - 50% 
+		& \textbf{0.92} & 100.0 & 1.1 	 
+
+		% lm_hc0 - 50% 
+		& 0.87 & 100.0 & 1.08 	 
+
+		% lm_hc30 - 50% 
+		& 0.86 & 100.0 & 1.21 	 
+
+	\\ & & 70	 & 12.56	 & 1.31
+
+		% delta-h-c - 70% 
+		& 0.89 & 100.0 & 1.1 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.85 & 100.0 & 1.23 	 
+
+		% rg2009 - 70% 
+		& \textbf{0.93} & 100.0 & 1.02 	 
+
+		% lm_hc0 - 70% 
+		& 0.92 & 100.0 & 1.0 	 
+
+		% lm_hc30 - 70% 
+		& 0.92 & 100.0 & 1.0 	 
+
+	\\ & & 100	 & 17.25	 & 1.5
+
+		% delta-h-c - 100% 
+		& \textbf{0.94} & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{0.94} & 100.0 & 1.0 	 
+
+		% rg2009 - 100% 
+		& \textbf{0.94} & 100.0 & 1.0 	 
+
+		% lm_hc0 - 100% 
+		& \textbf{0.94} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 100% 
+		& \textbf{0.94} & 100.0 & 1.0 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{logistics}} } & \multirow{5}{*}{10.0} 
+	 & 10	 & 2.67	 & 2.0
+
+		% delta-h-c - 10% 
+		& \textbf{0.88} & 100.0 & 2.44 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.85 & 100.0 & 2.72 	 
+
+		% rg2009 - 10% 
+		& 0.72 & 91.7 & 3.11 	 
+
+		% lm_hc0 - 10% 
+		& 0.56 & 66.7 & 2.08 	 
+
+		% lm_hc30 - 10% 
+		& 0.21 & 100.0 & 9.75 	 
+
+	\\ & & 30	 & 7.5	 & 1.14
+
+		% delta-h-c - 30% 
+		& \textbf{0.91} & 100.0 & 1.33 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.75 & 100.0 & 2.14 	 
+
+		% rg2009 - 30% 
+		& 0.87 & 97.2 & 1.36 	 
+
+		% lm_hc0 - 30% 
+		& 0.85 & 91.7 & 1.22 	 
+
+		% lm_hc30 - 30% 
+		& 0.26 & 100.0 & 6.0 	 
+
+	\\ & & 50	 & 11.92	 & 1.06
+
+		% delta-h-c - 50% 
+		& 0.88 & 97.2 & 1.25 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.86 & 100.0 & 1.47 	 
+
+		% rg2009 - 50% 
+		& 0.91 & 100.0 & 1.25 	 
+
+		% lm_hc0 - 50% 
+		& \textbf{0.93} & 97.2 & 1.03 	 
+
+		% lm_hc30 - 50% 
+		& 0.39 & 100.0 & 3.69 	 
+
+	\\ & & 70	 & 16.67	 & 1.03
+
+		% delta-h-c - 70% 
+		& 0.97 & 100.0 & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.92 & 100.0 & 1.19 	 
+
+		% rg2009 - 70% 
+		& \textbf{0.99} & 100.0 & 1.06 	 
+
+		% lm_hc0 - 70% 
+		& \textbf{0.99} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 70% 
+		& 0.66 & 100.0 & 2.0 	 
+
+	\\ & & 100	 & 23.17	 & 1.0
+
+		% delta-h-c - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 100% 
+		& 0.72 & 100.0 & 1.67 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{miconic}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 3.0	 & 1.83
+
+		% delta-h-c - 10% 
+		& \textbf{0.76} & 100.0 & 2.67 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.74 & 100.0 & 3.0 	 
+
+		% rg2009 - 10% 
+		& 0.65 & 100.0 & 3.42 	 
+
+		% lm_hc0 - 10% 
+		& 0.54 & 55.6 & 1.36 	 
+
+		% lm_hc30 - 10% 
+		& 0.31 & 100.0 & 6.0 	 
+
+	\\ & & 30	 & 7.67	 & 1.25
+
+		% delta-h-c - 30% 
+		& \textbf{0.89} & 100.0 & 1.47 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.65 & 100.0 & 2.5 	 
+
+		% rg2009 - 30% 
+		& 0.66 & 100.0 & 2.17 	 
+
+		% lm_hc0 - 30% 
+		& 0.86 & 91.7 & 1.08 	 
+
+		% lm_hc30 - 30% 
+		& 0.23 & 100.0 & 5.58 	 
+
+	\\ & & 50	 & 12.25	 & 1.03
+
+		% delta-h-c - 50% 
+		& \textbf{0.98} & 100.0 & 1.08 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.82 & 100.0 & 1.5 	 
+
+		% rg2009 - 50% 
+		& 0.91 & 100.0 & 1.25 	 
+
+		% lm_hc0 - 50% 
+		& 0.97 & 97.2 & 1.03 	 
+
+		% lm_hc30 - 50% 
+		& 0.24 & 100.0 & 4.56 	 
+
+	\\ & & 70	 & 17.33	 & 1.0
+
+		% delta-h-c - 70% 
+		& 0.99 & 100.0 & 1.03 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.9 & 100.0 & 1.31 	 
+
+		% rg2009 - 70% 
+		& 0.94 & 100.0 & 1.11 	 
+
+		% lm_hc0 - 70% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 70% 
+		& 0.31 & 100.0 & 3.94 	 
+
+	\\ & & 100	 & 24.0	 & 1.0
+
+		% delta-h-c - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 100% 
+		& 0.47 & 100.0 & 3.0 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{rovers}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 1.83	 & 2.39
+
+		% delta-h-c - 10% 
+		& \textbf{0.83} & 88.9 & 2.89 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& \textbf{0.83} & 88.9 & 2.89 	 
+
+		% rg2009 - 10% 
+		& 0.82 & 100.0 & 3.42 	 
+
+		% lm_hc0 - 10% 
+		& 0.45 & 55.6 & 1.31 	 
+
+		% lm_hc30 - 10% 
+		& 0.48 & 100.0 & 5.14 	 
+
+	\\ & & 30	 & 4.5	 & 1.39
+
+		% delta-h-c - 30% 
+		& \textbf{0.88} & 88.9 & 1.39 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.81 & 88.9 & 1.75 	 
+
+		% rg2009 - 30% 
+		& 0.8 & 100.0 & 2.06 	 
+
+		% lm_hc0 - 30% 
+		& 0.7 & 80.6 & 1.14 	 
+
+		% lm_hc30 - 30% 
+		& 0.34 & 100.0 & 4.5 	 
+
+	\\ & & 50	 & 7.17	 & 1.11
+
+		% delta-h-c - 50% 
+		& \textbf{0.93} & 94.4 & 1.14 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.86 & 94.4 & 1.33 	 
+
+		% rg2009 - 50% 
+		& 0.89 & 100.0 & 1.36 	 
+
+		% lm_hc0 - 50% 
+		& 0.8 & 88.9 & 1.19 	 
+
+		% lm_hc30 - 50% 
+		& 0.34 & 100.0 & 3.92 	 
+
+	\\ & & 70	 & 10.0	 & 1.06
+
+		% delta-h-c - 70% 
+		& 0.94 & 94.4 & 1.08 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& 0.92 & 97.2 & 1.22 	 
+
+		% rg2009 - 70% 
+		& \textbf{0.98} & 100.0 & 1.11 	 
+
+		% lm_hc0 - 70% 
+		& 0.87 & 94.4 & 1.11 	 
+
+		% lm_hc30 - 70% 
+		& 0.38 & 100.0 & 3.53 	 
+
+	\\ & & 100	 & 13.67	 & 1.0
+
+		% delta-h-c - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% rg2009 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc0 - 100% 
+		& \textbf{1.0} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 100% 
+		& 0.39 & 100.0 & 3.0 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{satellite}} } & \multirow{5}{*}{6.0} 
+	 & 10	 & 2.0	 & 3.25
+
+		% delta-h-c - 10% 
+		& \textbf{0.9} & 97.2 & 3.44 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& \textbf{0.9} & 97.2 & 3.44 	 
+
+		% rg2009 - 10% 
+		& 0.73 & 97.2 & 4.47 	 
+
+		% lm_hc0 - 10% 
+		& 0.58 & 75.0 & 2.5 	 
+
+		% lm_hc30 - 10% 
+		& 0.57 & 100.0 & 5.72 	 
+
+	\\ & & 30	 & 4.33	 & 1.78
+
+		% delta-h-c - 30% 
+		& \textbf{0.8} & 94.4 & 2.22 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.78 & 94.4 & 2.33 	 
+
+		% rg2009 - 30% 
+		& 0.68 & 91.7 & 2.97 	 
+
+		% lm_hc0 - 30% 
+		& 0.6 & 80.6 & 1.53 	 
+
+		% lm_hc30 - 30% 
+		& 0.34 & 100.0 & 5.42 	 
+
+	\\ & & 50	 & 6.75	 & 1.36
+
+		% delta-h-c - 50% 
+		& \textbf{0.92} & 94.4 & 1.42 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.85 & 94.4 & 1.72 	 
+
+		% rg2009 - 50% 
+		& 0.7 & 97.2 & 2.53 	 
+
+		% lm_hc0 - 50% 
+		& 0.76 & 91.7 & 1.19 	 
+
+		% lm_hc30 - 50% 
+		& 0.33 & 100.0 & 4.92 	 
+
+	\\ & & 70	 & 9.42	 & 1.33
+
+		% delta-h-c - 70% 
+		& \textbf{0.94} & 100.0 & 1.36 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& \textbf{0.94} & 100.0 & 1.36 	 
+
+		% rg2009 - 70% 
+		& 0.78 & 97.2 & 2.06 	 
+
+		% lm_hc0 - 70% 
+		& 0.85 & 97.2 & 1.14 	 
+
+		% lm_hc30 - 70% 
+		& 0.41 & 100.0 & 4.14 	 
+
+	\\ & & 100	 & 12.75	 & 1.25
+
+		% delta-h-c - 100% 
+		& \textbf{0.96} & 100.0 & 1.17 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{0.96} & 100.0 & 1.17 	 
+
+		% rg2009 - 100% 
+		& 0.88 & 100.0 & 1.75 	 
+
+		% lm_hc0 - 100% 
+		& 0.88 & 100.0 & 1.17 	 
+
+		% lm_hc30 - 100% 
+		& 0.5 & 100.0 & 3.33 	 
+ \\ \hline
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{sokoban}} } & \multirow{5}{*}{8.5} 
+	 & 10	 & 3.33	 & 1.83
+
+		% delta-h-c - 10% 
+		& \textbf{0.52} & 61.1 & 1.78 	 
+
+		% delta-h-c-uncertainty - 10% 
+		& 0.44 & 72.2 & 3.17 	 
+
+		% rg2009 - 10% 
+		& 0.29 & 63.9 & 4.56 	 
+
+		% lm_hc0 - 10% 
+		& 0.35 & 63.9 & 2.47 	 
+
+		% lm_hc30 - 10% 
+		& 0.24 & 100.0 & 6.86 	 
+
+	\\ & & 30	 & 8.67	 & 1.28
+
+		% delta-h-c - 30% 
+		& \textbf{0.77} & 83.3 & 1.08 	 
+
+		% delta-h-c-uncertainty - 30% 
+		& 0.62 & 97.2 & 2.67 	 
+
+		% rg2009 - 30% 
+		& 0.43 & 75.0 & 2.92 	 
+
+		% lm_hc0 - 30% 
+		& 0.56 & 75.0 & 1.72 	 
+
+		% lm_hc30 - 30% 
+		& 0.24 & 97.2 & 5.5 	 
+
+	\\ & & 50	 & 13.75	 & 1.33
+
+		% delta-h-c - 50% 
+		& \textbf{0.79} & 91.7 & 1.17 	 
+
+		% delta-h-c-uncertainty - 50% 
+		& 0.66 & 100.0 & 2.58 	 
+
+		% rg2009 - 50% 
+		& 0.53 & 72.2 & 1.83 	 
+
+		% lm_hc0 - 50% 
+		& 0.58 & 75.0 & 1.39 	 
+
+		% lm_hc30 - 50% 
+		& 0.25 & 97.2 & 5.14 	 
+
+	\\ & & 70	 & 19.33	 & 1.36
+
+		% delta-h-c - 70% 
+		& 0.8 & 97.2 & 1.03 	 
+
+		% delta-h-c-uncertainty - 70% 
+		& \textbf{0.85} & 100.0 & 1.39 	 
+
+		% rg2009 - 70% 
+		& 0.54 & 61.1 & 1.28 	 
+
+		% lm_hc0 - 70% 
+		& 0.63 & 86.1 & 1.25 	 
+
+		% lm_hc30 - 70% 
+		& 0.3 & 100.0 & 4.11 	 
+
+	\\ & & 100	 & 27.0	 & 1.33
+
+		% delta-h-c - 100% 
+		& \textbf{0.83} & 100.0 & 1.0 	 
+
+		% delta-h-c-uncertainty - 100% 
+		& \textbf{0.83} & 100.0 & 1.0 	 
+
+		% rg2009 - 100% 
+		& 0.58 & 58.3 & 1.33 	 
+
+		% lm_hc0 - 100% 
+		& \textbf{0.83} & 100.0 & 1.0 	 
+
+		% lm_hc30 - 100% 
+		& 0.38 & 100.0 & 2.75 	 
+ \\ \hline
+Avg & & & &  & \textbf{0.84} & 94.4 & 1.73 & 0.78 & 96.71 & 2.27 & 0.77 & 94.21 & 2.32 & 0.72 & 85.4 & 1.32 & 0.42 & 99.72 & 5.18
+\\ \hline
+\end{tabular}
+\caption{Results for each method, with suboptimal observations.}
+\end{table*}
+
 \end{document}

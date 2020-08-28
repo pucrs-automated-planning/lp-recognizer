@@ -1,0 +1,47 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Comparing Constraint Sets)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{4}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{ccccccccccccccccccc}
+\toprule
+ & & & \multicolumn{8}{c}{Optimal} & \multicolumn{8}{c}{Suboptimal}\\
+\cmidrule(lr){4-11}\cmidrule(lr){12-19}
+ & & & & & \multicolumn{6}{c}{\textbf{AGR}} & & & \multicolumn{6}{c}{\textbf{AGR}}\\
+\cline{6-11} \cline{14-19}
+\# & $|\Gamma|$ & \textbf{\%} & $|\Omega|$ & $|\Gamma^\textup{*}|$ & S & L & P & (L, P) & (S, P) & (S, L) & $|\Omega|$ & $|\Gamma^\textup{*}|$ & S & L & P & (L, P) & (S, P) & (S, L)\\
+\midrule
+CONTENT
+Avg & & AVERAGE\\
+\bottomrule
+\end{tabular}\\
+\caption{Results for each contraint set. L for Landmarks, P for Post-hoc, and S for State equation.}
+\end{table*}
+
+\end{document}

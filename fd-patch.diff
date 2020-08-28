@@ -1,6 +1,6 @@
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
---- fast-downward-original/src/search/DownwardFiles.cmake	2020-07-10 18:09:53.958526600 -0300
-+++ fast-downward/src/search/DownwardFiles.cmake	2020-07-10 18:49:03.156381500 -0300
+--- fast-downward-original/src/search/DownwardFiles.cmake	2020-08-28 09:53:49.771113400 -0300
++++ fast-downward/src/search/DownwardFiles.cmake	2020-07-10 19:12:04.229579100 -0300
 @@ -703,6 +703,7 @@
          operator_counting/operator_counting_heuristic
          operator_counting/pho_constraints
@@ -11,8 +11,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-07-10 18:57:36.498036700 -0300
-@@ -0,0 +1,438 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-08-28 09:40:30.211810400 -0300
+@@ -0,0 +1,439 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -138,6 +138,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    }
 +
 +    if (calculate_h_c) {
++        filter = (int)(filter * 0.1 * observations.size());
 +        int k = max(0, filter - num_pruned_observations);
 +        lp::LPConstraint constraint(num_valid_observations - k, infinity);
 +        int var_id = task_proxy.get_operators().size();
@@ -453,7 +454,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-07-03 13:20:01.935927300 -0300
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-07-10 19:12:04.232594900 -0300
 @@ -0,0 +1,54 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
