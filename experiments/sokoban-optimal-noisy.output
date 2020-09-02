@@ -1,0 +1,6342 @@
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Real solution: [(at box0 f6-3f)(at box1 f5-7f), (at box0 f6-1f)(at box1 f8-2f)]
+Score: [1.0, 22.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [5.0, 29.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [5.0, 28.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 23.0, 0]
+UC=0 MC=0 MS=1 CG=10 O=3 S=2
+AR=0.0000 FPR=0.3333 FNR=0.6667 MSpread=1.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 1/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [6.0, 27.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [4.0, 27.0, 0]
+Score: [8.0, 32.0, 0]
+Score: [4.0, 27.0, 0]
+Score: [5.0, 28.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 26.0, 0]
+UC=0 MC=0 MS=5 CG=20 O=6 S=4
+AR=0.0000 FPR=1.0000 FNR=1.0000 MSpread=5.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 2/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 15.0, 0]
+UC=0 MC=0 MS=6 CG=28 O=8 S=5
+AR=0.0000 FPR=1.5000 FNR=1.5000 MSpread=6.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 3/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [10.0, 31.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [11.0, 42.0, 0]
+Score: [10.0, 33.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [10.0, 33.0, 0]
+Score: [11.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+UC=0 MC=0 MS=9 CG=38 O=11 S=6
+AR=0.0000 FPR=2.2500 FNR=1.7500 MSpread=9.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 4/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 31.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 26.0, 0]
+UC=0 MC=0 MS=10 CG=46 O=13 S=11
+AR=0.2000 FPR=2.2500 FNR=2.5500 MSpread=10.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 5/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=0 MC=0 MS=11 CG=54 O=15 S=14
+AR=0.2000 FPR=2.5000 FNR=3.3000 MSpread=11.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 6/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [5.0, 16.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 18.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 20.0, 0]
+UC=0 MC=1 MS=14 CG=62 O=17 S=15
+AR=0.5333 FPR=3.1667 FNR=3.3000 MSpread=14.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 7/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f)]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 16.0, 0]
+UC=0 MC=1 MS=16 CG=70 O=19 S=19
+AR=0.7333 FPR=3.3667 FNR=3.9000 MSpread=16.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 8/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [3.0, 26.0, 0]
+Score: [4.0, 28.0, 0]
+Score: [3.0, 26.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+UC=0 MC=1 MS=18 CG=80 O=22 S=20
+AR=0.7333 FPR=4.0333 FNR=4.2333 MSpread=18.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 9/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f), (at box0 f5-2f)(at box1 f1-5f)]
+Score: [0.0, 21.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [0.0, 22.0, 0]
+Score: [6.0, 37.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 28.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 28.0, 0]
+UC=0 MC=2 MS=20 CG=90 O=25 S=22
+AR=1.0667 FPR=4.3667 FNR=4.5667 MSpread=20.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 10/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 16.0, 0]
+UC=1 MC=3 MS=24 CG=98 O=27 S=23
+AR=1.3167 FPR=5.1167 FNR=4.5667 MSpread=24.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 11/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [6.0, 30.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+UC=1 MC=3 MS=25 CG=108 O=30 S=25
+AR=1.3167 FPR=5.4500 FNR=5.2333 MSpread=25.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 12/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [3.0, 24.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [6.0, 37.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [6.0, 30.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+UC=2 MC=4 MS=26 CG=118 O=33 S=26
+AR=2.3167 FPR=5.4500 FNR=5.2333 MSpread=26.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 13/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 27.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+UC=3 MC=5 MS=28 CG=126 O=35 S=28
+AR=3.3167 FPR=5.4500 FNR=5.2333 MSpread=28.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 14/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f1-2f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [2.0, 14.0, 0]
+h value not a number. Failed.
+Score: [2.0, 21.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=4 MC=6 MS=31 CG=134 O=37 S=31
+AR=4.3167 FPR=5.4500 FNR=5.2333 MSpread=31.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 15/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [2.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=5 MC=7 MS=33 CG=142 O=39 S=32
+AR=4.8167 FPR=5.9500 FNR=5.2333 MSpread=33.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 16/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f), (at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=5 MC=7 MS=35 CG=150 O=41 S=34
+AR=4.8167 FPR=6.4500 FNR=5.7333 MSpread=35.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 17/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [10.0, 31.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [8.0, 31.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [8.0, 31.0, 0]
+Score: [3.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+UC=6 MC=8 MS=37 CG=160 O=44 S=36
+AR=5.8167 FPR=6.4500 FNR=5.7333 MSpread=37.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 18/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [4.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 18.0, 0]
+UC=7 MC=9 MS=41 CG=168 O=46 S=38
+AR=6.3167 FPR=6.9500 FNR=5.7333 MSpread=41.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 19/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [2.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=8 MC=10 MS=45 CG=176 O=48 S=39
+AR=6.5667 FPR=7.7000 FNR=5.7333 MSpread=45.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 20/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [0.0, 11.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 15.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 15.0, 0]
+UC=8 MC=11 MS=52 CG=184 O=50 S=40
+AR=6.7095 FPR=8.5571 FNR=5.7333 MSpread=52.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=12 MS=62 CG=194 O=53 S=41
+AR=6.8095 FPR=9.4571 FNR=5.7333 MSpread=62.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 22/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [14.0, 35.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [11.0, 42.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+UC=8 MC=12 MS=63 CG=204 O=56 S=43
+AR=7.3095 FPR=9.4571 FNR=6.2333 MSpread=63.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 23/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+UC=8 MC=12 MS=66 CG=212 O=58 S=44
+AR=7.3095 FPR=10.2071 FNR=6.4833 MSpread=66.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 24/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f1-1f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [2.0, 13.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 16.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=8 MC=12 MS=69 CG=220 O=60 S=48
+AR=7.7095 FPR=10.4071 FNR=6.8833 MSpread=69.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 25/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f4-3f)(at box1 f2-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=8 MC=13 MS=75 CG=228 O=62 S=53
+AR=8.2810 FPR=10.6929 FNR=7.0262 MSpread=75.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 26/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [2.0, 23.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [5.0, 29.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+UC=8 MC=13 MS=76 CG=238 O=65 S=55
+AR=8.2810 FPR=11.0262 FNR=7.6929 MSpread=76.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 27/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f3-4f)(at box1 f1-1f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 16.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=8 MC=14 MS=80 CG=246 O=67 S=58
+AR=9.0310 FPR=11.2762 FNR=7.6929 MSpread=80.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 28/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [3.0, 24.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [8.0, 32.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+UC=8 MC=15 MS=82 CG=256 O=70 S=59
+AR=9.5310 FPR=11.7762 FNR=7.6929 MSpread=82.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 29/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f), (at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=8 MC=15 MS=84 CG=264 O=72 S=61
+AR=9.5310 FPR=12.2762 FNR=8.1929 MSpread=84.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 30/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [6.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+UC=9 MC=16 MS=85 CG=272 O=74 S=62
+AR=10.5310 FPR=12.2762 FNR=8.1929 MSpread=85.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [6.0, 22.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=9 MC=16 MS=86 CG=280 O=76 S=67
+AR=10.7310 FPR=12.2762 FNR=8.9929 MSpread=86.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 32/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f), (at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f1-2f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=9 MC=17 MS=94 CG=288 O=78 S=71
+AR=11.2310 FPR=12.7762 FNR=8.9929 MSpread=94.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 33/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [4.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+UC=10 MC=18 MS=95 CG=296 O=80 S=72
+AR=12.2310 FPR=12.7762 FNR=8.9929 MSpread=95.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 34/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+UC=10 MC=19 MS=98 CG=304 O=82 S=73
+AR=12.5643 FPR=13.4429 FNR=8.9929 MSpread=98.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 35/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 0]
+UC=10 MC=19 MS=100 CG=312 O=84 S=76
+AR=12.5643 FPR=13.8429 FNR=9.5929 MSpread=100.0000
+delta-h-c-f1:sokoban-optimal-noisy:10% - 36/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [3.0, 24.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [10.0, 34.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+UC=0 MC=0 MS=1 CG=10 O=8 S=1
+AR=0.0000 FPR=0.5000 FNR=0.5000 MSpread=1.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 1/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 19.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=1 MC=1 MS=2 CG=18 O=13 S=2
+AR=1.0000 FPR=0.5000 FNR=0.5000 MSpread=2.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 2/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [7.0, 28.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [18.0, 42.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [13.0, 36.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+UC=1 MC=1 MS=3 CG=28 O=21 S=3
+AR=1.0000 FPR=1.0000 FNR=1.0000 MSpread=3.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 3/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [14.0, 38.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 30.0, 0]
+UC=1 MC=1 MS=4 CG=38 O=29 S=4
+AR=1.0000 FPR=1.5000 FNR=1.5000 MSpread=4.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 4/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 29.0, 0]
+UC=2 MC=2 MS=5 CG=46 O=35 S=5
+AR=2.0000 FPR=1.5000 FNR=1.5000 MSpread=5.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 5/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [3.0, 14.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 18.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+UC=2 MC=3 MS=8 CG=54 O=40 S=7
+AR=2.6667 FPR=1.8333 FNR=1.5000 MSpread=8.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 6/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [8.0, 24.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+UC=2 MC=3 MS=9 CG=62 O=46 S=8
+AR=2.6667 FPR=2.3333 FNR=2.0000 MSpread=9.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 7/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [4.0, 20.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+UC=2 MC=3 MS=10 CG=70 O=52 S=9
+AR=2.6667 FPR=2.8333 FNR=2.5000 MSpread=10.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 8/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [2.0, 29.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+UC=3 MC=4 MS=13 CG=78 O=58 S=12
+AR=3.1667 FPR=3.0833 FNR=2.7500 MSpread=13.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 9/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 20.0, 0]
+h value not a number. Failed.
+Score: [8.0, 27.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=4 MC=5 MS=15 CG=86 O=63 S=14
+AR=4.1667 FPR=3.0833 FNR=2.7500 MSpread=15.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 10/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+Score: [7.0, 18.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+UC=5 MC=6 MS=18 CG=94 O=68 S=16
+AR=4.8333 FPR=3.4167 FNR=2.7500 MSpread=18.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 11/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [9.0, 20.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+UC=6 MC=7 MS=19 CG=102 O=73 S=17
+AR=5.8333 FPR=3.4167 FNR=2.7500 MSpread=19.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 12/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+UC=7 MC=8 MS=20 CG=110 O=79 S=20
+AR=6.1667 FPR=3.4167 FNR=3.4167 MSpread=20.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 13/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=7 MC=9 MS=28 CG=118 O=84 S=21
+AR=6.2917 FPR=4.2917 FNR=3.4167 MSpread=28.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 14/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 0]
+UC=7 MC=9 MS=29 CG=126 O=90 S=23
+AR=6.7917 FPR=4.2917 FNR=3.9167 MSpread=29.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 15/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [9.0, 24.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+UC=8 MC=10 MS=30 CG=134 O=95 S=24
+AR=7.7917 FPR=4.2917 FNR=3.9167 MSpread=30.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 16/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [14.0, 37.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [14.0, 37.0, 0]
+Score: [11.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 0]
+UC=9 MC=11 MS=31 CG=144 O=104 S=25
+AR=8.7917 FPR=4.2917 FNR=3.9167 MSpread=31.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [16.0, 47.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [12.0, 35.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+UC=10 MC=12 MS=32 CG=154 O=112 S=26
+AR=9.7917 FPR=4.2917 FNR=3.9167 MSpread=32.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 18/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+UC=11 MC=13 MS=34 CG=162 O=118 S=27
+AR=10.2917 FPR=4.7917 FNR=3.9167 MSpread=34.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 19/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [3.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+UC=12 MC=14 MS=35 CG=170 O=123 S=28
+AR=11.2917 FPR=4.7917 FNR=3.9167 MSpread=35.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 20/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [10.0, 41.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+UC=13 MC=15 MS=36 CG=180 O=131 S=29
+AR=12.2917 FPR=4.7917 FNR=3.9167 MSpread=36.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [8.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 31.0, 0]
+UC=14 MC=16 MS=37 CG=190 O=140 S=30
+AR=13.2917 FPR=4.7917 FNR=3.9167 MSpread=37.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 22/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [6.0, 27.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [9.0, 40.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [9.0, 32.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+UC=15 MC=17 MS=39 CG=200 O=148 S=31
+AR=13.7917 FPR=5.2917 FNR=3.9167 MSpread=39.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 23/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+Score: [2.0, 14.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=16 MC=18 MS=40 CG=208 O=153 S=32
+AR=14.7917 FPR=5.2917 FNR=3.9167 MSpread=40.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 24/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [10.0, 26.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 0]
+UC=17 MC=19 MS=41 CG=216 O=159 S=33
+AR=15.7917 FPR=5.2917 FNR=3.9167 MSpread=41.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 25/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [8.0, 24.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [11.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+UC=18 MC=20 MS=42 CG=224 O=165 S=34
+AR=16.7917 FPR=5.2917 FNR=3.9167 MSpread=42.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 26/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [10.0, 21.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 25.0, 0]
+UC=18 MC=20 MS=43 CG=232 O=170 S=35
+AR=16.7917 FPR=5.7917 FNR=4.4167 MSpread=43.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 27/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [10.0, 26.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+UC=19 MC=21 MS=44 CG=240 O=176 S=36
+AR=17.7917 FPR=5.7917 FNR=4.4167 MSpread=44.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 28/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [7.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=20 MC=22 MS=45 CG=248 O=181 S=37
+AR=18.7917 FPR=5.7917 FNR=4.4167 MSpread=45.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 29/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+Score: [7.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+UC=21 MC=23 MS=47 CG=256 O=186 S=38
+AR=19.2917 FPR=6.2917 FNR=4.4167 MSpread=47.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 30/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [19.0, 50.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [14.0, 37.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 36.0, 0]
+UC=22 MC=24 MS=48 CG=266 O=195 S=39
+AR=20.2917 FPR=6.2917 FNR=4.4167 MSpread=48.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 31/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [4.0, 25.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [11.0, 35.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 28.0, 0]
+UC=22 MC=24 MS=49 CG=276 O=204 S=40
+AR=20.2917 FPR=6.7917 FNR=4.9167 MSpread=49.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 32/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [12.0, 33.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [8.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 37.0, 0]
+UC=23 MC=25 MS=51 CG=286 O=213 S=41
+AR=20.7917 FPR=7.2917 FNR=4.9167 MSpread=51.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 33/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [4.0, 20.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 25.0, 0]
+UC=23 MC=25 MS=52 CG=294 O=219 S=42
+AR=20.7917 FPR=7.7917 FNR=5.4167 MSpread=52.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 34/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 0]
+Score: [4.0, 19.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [6.0, 33.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+UC=24 MC=26 MS=54 CG=302 O=225 S=44
+AR=21.1250 FPR=8.1250 FNR=5.7500 MSpread=54.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 35/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [13.0, 34.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [19.0, 50.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [10.0, 33.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 0]
+UC=25 MC=27 MS=55 CG=312 O=234 S=45
+AR=22.1250 FPR=8.1250 FNR=5.7500 MSpread=55.0000
+delta-h-c-f1:sokoban-optimal-noisy:30% - 36/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [18.0, 34.0, 0]
+Score: [19.0, 34.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [16.0, 43.0, 0]
+Score: [13.0, 28.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [20.0, 36.0, 0]
+UC=1 MC=1 MS=1 CG=8 O=9 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 1/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [16.0, 32.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [15.0, 32.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [17.0, 44.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 0]
+UC=1 MC=1 MS=2 CG=16 O=18 S=2
+AR=1.0000 FPR=0.5000 FNR=0.5000 MSpread=2.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 2/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [16.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 0]
+UC=2 MC=2 MS=4 CG=24 O=28 S=4
+AR=2.0000 FPR=0.5000 FNR=0.5000 MSpread=4.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 3/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 30.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=3 MC=3 MS=5 CG=34 O=42 S=5
+AR=3.0000 FPR=0.5000 FNR=0.5000 MSpread=5.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 4/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [17.0, 33.0, 0]
+Score: [19.0, 34.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [17.0, 31.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [17.0, 32.0, 1]
+Score: [18.0, 33.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 34.0, 1]
+UC=4 MC=4 MS=6 CG=42 O=52 S=6
+AR=4.0000 FPR=0.5000 FNR=0.5000 MSpread=6.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 5/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [13.0, 24.0, 0]
+Score: [10.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 0]
+UC=5 MC=5 MS=7 CG=50 O=60 S=8
+AR=4.5000 FPR=0.5000 FNR=1.0000 MSpread=7.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 6/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=5 MC=6 MS=15 CG=58 O=68 S=9
+AR=4.6250 FPR=1.3750 FNR=1.0000 MSpread=15.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 7/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [3.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [8.0, 22.0, 0]
+Score: [2.0, 29.0, 1]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 1]
+UC=6 MC=7 MS=17 CG=66 O=78 S=11
+AR=5.6250 FPR=1.3750 FNR=1.0000 MSpread=17.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 8/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [6.0, 17.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+UC=7 MC=8 MS=19 CG=74 O=86 S=12
+AR=6.1250 FPR=1.8750 FNR=1.0000 MSpread=19.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 9/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [11.0, 32.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [16.0, 47.0, 0]
+Score: [19.0, 42.0, 0]
+Score: [19.0, 43.0, 0]
+Score: [19.0, 42.0, 0]
+Score: [16.0, 39.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 1]
+UC=8 MC=9 MS=20 CG=84 O=99 S=13
+AR=7.1250 FPR=1.8750 FNR=1.0000 MSpread=20.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 10/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=10 MS=30 CG=94 O=113 S=14
+AR=7.2250 FPR=2.7750 FNR=1.0000 MSpread=30.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 11/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=11 MS=38 CG=102 O=121 S=15
+AR=7.3500 FPR=3.6500 FNR=1.0000 MSpread=38.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 12/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [8.0, 29.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [10.0, 32.0, 1]
+Score: [11.0, 33.0, 1]
+Score: [6.0, 37.0, 1]
+Score: [7.0, 30.0, 1]
+Score: [15.0, 39.0, 0]
+Score: [7.0, 30.0, 1]
+Score: [7.0, 30.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 34.0, 0]
+UC=9 MC=12 MS=39 CG=112 O=134 S=16
+AR=8.3500 FPR=3.6500 FNR=1.0000 MSpread=39.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 13/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=9 MC=13 MS=47 CG=120 O=142 S=17
+AR=8.4750 FPR=4.5250 FNR=1.0000 MSpread=47.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 14/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [11.0, 32.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [5.0, 27.0, 1]
+Score: [21.0, 52.0, 0]
+Score: [21.0, 44.0, 1]
+Score: [18.0, 42.0, 0]
+Score: [21.0, 44.0, 1]
+Score: [15.0, 38.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 36.0, 1]
+UC=10 MC=14 MS=48 CG=130 O=156 S=18
+AR=9.4750 FPR=4.5250 FNR=1.0000 MSpread=48.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 15/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [10.0, 26.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 0]
+UC=11 MC=15 MS=52 CG=138 O=165 S=19
+AR=9.7250 FPR=5.2750 FNR=1.0000 MSpread=52.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 16/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [11.0, 27.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [2.0, 19.0, 1]
+Score: [9.0, 23.0, 1]
+Score: [8.0, 35.0, 1]
+Score: [12.0, 27.0, 0]
+Score: [9.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 29.0, 1]
+UC=12 MC=16 MS=53 CG=146 O=175 S=20
+AR=10.7250 FPR=5.2750 FNR=1.0000 MSpread=53.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [14.0, 35.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [22.0, 53.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [22.0, 46.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [20.0, 43.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [20.0, 41.0, 0]
+UC=13 MC=17 MS=54 CG=156 O=188 S=21
+AR=11.7250 FPR=5.2750 FNR=1.0000 MSpread=54.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 18/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+UC=14 MC=18 MS=56 CG=164 O=196 S=22
+AR=12.2250 FPR=5.7750 FNR=1.0000 MSpread=56.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 19/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [11.0, 32.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [12.0, 34.0, 1]
+Score: [14.0, 36.0, 1]
+Score: [12.0, 43.0, 1]
+Score: [13.0, 36.0, 1]
+Score: [19.0, 43.0, 1]
+Score: [13.0, 36.0, 1]
+Score: [11.0, 34.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 34.0, 1]
+UC=15 MC=19 MS=58 CG=174 O=209 S=23
+AR=12.7250 FPR=6.2750 FNR=1.0000 MSpread=58.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 20/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+UC=16 MC=20 MS=59 CG=182 O=218 S=24
+AR=13.7250 FPR=6.2750 FNR=1.0000 MSpread=59.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [19.0, 40.0, 0]
+Score: [20.0, 42.0, 1]
+Score: [20.0, 42.0, 1]
+Score: [10.0, 32.0, 1]
+Score: [24.0, 55.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [22.0, 46.0, 0]
+Score: [23.0, 46.0, 1]
+Score: [20.0, 43.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 44.0, 0]
+UC=17 MC=21 MS=60 CG=192 O=232 S=25
+AR=14.7250 FPR=6.2750 FNR=1.0000 MSpread=60.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 22/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [10.0, 26.0, 0]
+Score: [9.0, 24.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [10.0, 37.0, 0]
+Score: [15.0, 30.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 0]
+UC=17 MC=21 MS=61 CG=200 O=241 S=28
+AR=14.7250 FPR=6.5250 FNR=1.7500 MSpread=61.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 23/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [25.0, 46.0, 0]
+Score: [25.0, 47.0, 0]
+Score: [16.0, 38.0, 0]
+Score: [20.0, 42.0, 0]
+Score: [28.0, 59.0, 0]
+Score: [27.0, 50.0, 0]
+Score: [31.0, 55.0, 0]
+Score: [27.0, 50.0, 0]
+Score: [17.0, 40.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 0]
+UC=18 MC=22 MS=62 CG=210 O=255 S=29
+AR=15.7250 FPR=6.5250 FNR=1.7500 MSpread=62.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 24/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=18 MC=23 MS=70 CG=218 O=263 S=30
+AR=15.8500 FPR=7.4000 FNR=1.7500 MSpread=70.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 25/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [12.0, 33.0, 1]
+Score: [8.0, 30.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [12.0, 43.0, 0]
+Score: [13.0, 36.0, 1]
+Score: [19.0, 43.0, 0]
+Score: [13.0, 36.0, 1]
+Score: [12.0, 35.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 38.0, 1]
+UC=19 MC=24 MS=71 CG=228 O=276 S=31
+AR=16.8500 FPR=7.4000 FNR=1.7500 MSpread=71.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 26/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [25.0, 46.0, 0]
+Score: [20.0, 42.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [22.0, 44.0, 0]
+Score: [22.0, 53.0, 0]
+Score: [25.0, 48.0, 0]
+Score: [25.0, 49.0, 0]
+Score: [25.0, 48.0, 0]
+Score: [20.0, 43.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 44.0, 0]
+UC=20 MC=25 MS=73 CG=238 O=289 S=32
+AR=17.3500 FPR=7.9000 FNR=1.7500 MSpread=73.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 27/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [19.0, 31.0, 0]
+Score: [15.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=20 MC=25 MS=74 CG=246 O=297 S=33
+AR=17.3500 FPR=8.4000 FNR=2.2500 MSpread=74.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 28/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=20 MC=26 MS=82 CG=254 O=305 S=34
+AR=17.4750 FPR=9.2750 FNR=2.2500 MSpread=82.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 29/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [15.0, 26.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 31.0, 0]
+UC=21 MC=27 MS=83 CG=262 O=313 S=35
+AR=18.4750 FPR=9.2750 FNR=2.2500 MSpread=83.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 30/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 1]
+Score: [4.0, 19.0, 0]
+Score: [9.0, 26.0, 1]
+Score: [10.0, 24.0, 0]
+Score: [4.0, 31.0, 1]
+Score: [8.0, 23.0, 1]
+Score: [10.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+UC=22 MC=28 MS=86 CG=270 O=323 S=37
+AR=19.1417 FPR=9.6083 FNR=2.2500 MSpread=86.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=22 MC=29 MS=94 CG=278 O=332 S=39
+AR=19.3917 FPR=10.3583 FNR=2.2500 MSpread=94.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 32/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [14.0, 35.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [16.0, 38.0, 0]
+Score: [4.0, 26.0, 1]
+Score: [22.0, 53.0, 0]
+Score: [22.0, 45.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [22.0, 45.0, 0]
+Score: [16.0, 39.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [19.0, 40.0, 0]
+UC=23 MC=30 MS=95 CG=288 O=346 S=40
+AR=20.3917 FPR=10.3583 FNR=2.2500 MSpread=95.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 33/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [3.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [9.0, 24.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 18.0, 0]
+UC=24 MC=31 MS=97 CG=296 O=354 S=41
+AR=20.8917 FPR=10.8583 FNR=2.2500 MSpread=97.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 34/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [13.0, 27.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [15.0, 30.0, 1]
+Score: [11.0, 26.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 1]
+UC=25 MC=32 MS=98 CG=304 O=364 S=42
+AR=21.8917 FPR=10.8583 FNR=2.2500 MSpread=98.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 35/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 16.0, 0]
+h value not a number. Failed.
+Score: [2.0, 21.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 22.0, 0]
+UC=25 MC=32 MS=99 CG=312 O=372 S=44
+AR=22.3917 FPR=10.8583 FNR=2.7500 MSpread=99.0000
+delta-h-c-f1:sokoban-optimal-noisy:50% - 36/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [12.0, 23.0, 1]
+Score: [9.0, 21.0, 1]
+Score: [16.0, 28.0, 1]
+Score: [13.0, 27.0, 1]
+Score: [14.0, 33.0, 1]
+Score: [11.0, 26.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 1]
+UC=1 MC=1 MS=1 CG=8 O=11 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 1/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [16.0, 37.0, 1]
+Score: [12.0, 34.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [18.0, 49.0, 1]
+Score: [22.0, 45.0, 1]
+Score: [22.0, 46.0, 1]
+Score: [22.0, 45.0, 1]
+Score: [16.0, 39.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 39.0, 1]
+UC=2 MC=2 MS=2 CG=18 O=30 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 2/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 20.0, 1]
+h value not a number. Failed.
+Score: [8.0, 27.0, 1]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=3 MC=3 MS=4 CG=26 O=41 S=3
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 3/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [6.0, 17.0, 1]
+Score: [3.0, 15.0, 0]
+Score: [10.0, 22.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [8.0, 27.0, 1]
+Score: [3.0, 18.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 1]
+UC=4 MC=4 MS=6 CG=34 O=52 S=4
+AR=3.0000 FPR=1.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 4/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [10.0, 32.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=5 MC=5 MS=7 CG=44 O=71 S=5
+AR=4.0000 FPR=1.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 5/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [11.0, 22.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 26.0, 0]
+UC=5 MC=5 MS=8 CG=52 O=83 S=6
+AR=4.0000 FPR=1.5000 FNR=0.5000 MSpread=8.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 6/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [9.0, 30.0, 1]
+Score: [6.0, 28.0, 1]
+Score: [16.0, 38.0, 1]
+Score: [17.0, 39.0, 1]
+Score: [14.0, 45.0, 1]
+Score: [17.0, 40.0, 1]
+Score: [19.0, 43.0, 1]
+Score: [17.0, 40.0, 1]
+Score: [15.0, 38.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 39.0, 1]
+UC=6 MC=6 MS=9 CG=62 O=102 S=7
+AR=5.0000 FPR=1.5000 FNR=0.5000 MSpread=9.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 7/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=6 MC=7 MS=17 CG=70 O=115 S=8
+AR=5.1250 FPR=2.3750 FNR=0.5000 MSpread=17.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 8/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [16.0, 32.0, 0]
+Score: [13.0, 28.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [13.0, 27.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [16.0, 31.0, 0]
+Score: [11.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 31.0, 0]
+UC=7 MC=8 MS=18 CG=78 O=129 S=9
+AR=6.1250 FPR=2.3750 FNR=0.5000 MSpread=18.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 9/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=7 MC=9 MS=26 CG=86 O=140 S=10
+AR=6.2500 FPR=3.2500 FNR=0.5000 MSpread=26.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 10/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [25.0, 46.0, 1]
+Score: [27.0, 49.0, 1]
+Score: [27.0, 49.0, 1]
+Score: [16.0, 38.0, 1]
+Score: [30.0, 61.0, 1]
+Score: [32.0, 55.0, 1]
+Score: [27.0, 51.0, 1]
+Score: [32.0, 55.0, 1]
+Score: [28.0, 51.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 1]
+UC=8 MC=10 MS=27 CG=96 O=159 S=11
+AR=7.2500 FPR=3.2500 FNR=0.5000 MSpread=27.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 11/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=11 MS=37 CG=106 O=178 S=12
+AR=7.3500 FPR=4.1500 FNR=0.5000 MSpread=37.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 12/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [20.0, 36.0, 0]
+Score: [19.0, 34.0, 1]
+Score: [17.0, 34.0, 1]
+Score: [12.0, 26.0, 1]
+Score: [14.0, 41.0, 1]
+Score: [19.0, 34.0, 1]
+Score: [16.0, 31.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [21.0, 37.0, 0]
+UC=9 MC=12 MS=38 CG=114 O=191 S=13
+AR=8.3500 FPR=4.1500 FNR=0.5000 MSpread=38.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 13/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [18.0, 34.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [18.0, 32.0, 0]
+Score: [18.0, 45.0, 0]
+Score: [21.0, 36.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 34.0, 0]
+UC=10 MC=13 MS=39 CG=122 O=205 S=14
+AR=9.3500 FPR=4.1500 FNR=0.5000 MSpread=39.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 14/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=11 MC=14 MS=40 CG=130 O=216 S=15
+AR=10.3500 FPR=4.1500 FNR=0.5000 MSpread=40.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 15/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=11 MC=15 MS=48 CG=138 O=229 S=16
+AR=10.4750 FPR=5.0250 FNR=0.5000 MSpread=48.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 16/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [10.0, 26.0, 0]
+Score: [8.0, 23.0, 1]
+Score: [20.0, 37.0, 1]
+Score: [21.0, 35.0, 1]
+Score: [10.0, 37.0, 1]
+Score: [10.0, 25.0, 1]
+Score: [24.0, 39.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 1]
+UC=12 MC=16 MS=49 CG=146 O=243 S=18
+AR=10.9750 FPR=5.0250 FNR=1.0000 MSpread=49.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=12 MC=17 MS=59 CG=156 O=262 S=19
+AR=11.0750 FPR=5.9250 FNR=1.0000 MSpread=59.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 18/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [6.0, 22.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [17.0, 34.0, 1]
+Score: [17.0, 31.0, 1]
+Score: [10.0, 37.0, 1]
+Score: [15.0, 30.0, 1]
+Score: [18.0, 33.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 1]
+UC=13 MC=18 MS=60 CG=164 O=275 S=20
+AR=12.0750 FPR=5.9250 FNR=1.0000 MSpread=60.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 19/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [26.0, 47.0, 0]
+Score: [27.0, 49.0, 0]
+Score: [30.0, 52.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [30.0, 61.0, 0]
+Score: [33.0, 56.0, 0]
+Score: [28.0, 52.0, 0]
+Score: [33.0, 56.0, 0]
+Score: [28.0, 51.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [30.0, 51.0, 0]
+UC=14 MC=19 MS=61 CG=174 O=294 S=21
+AR=13.0750 FPR=5.9250 FNR=1.0000 MSpread=61.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 20/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 1]
+Score: [8.0, 22.0, 1]
+Score: [4.0, 23.0, 1]
+Score: [9.0, 24.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 26.0, 1]
+UC=15 MC=20 MS=62 CG=182 O=305 S=22
+AR=14.0750 FPR=5.9250 FNR=1.0000 MSpread=62.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 21/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [17.0, 38.0, 0]
+Score: [18.0, 40.0, 0]
+Score: [22.0, 44.0, 0]
+Score: [18.0, 40.0, 0]
+Score: [24.0, 55.0, 0]
+Score: [23.0, 46.0, 0]
+Score: [26.0, 50.0, 0]
+Score: [23.0, 46.0, 0]
+Score: [21.0, 44.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 0]
+UC=16 MC=21 MS=63 CG=192 O=324 S=23
+AR=15.0750 FPR=5.9250 FNR=1.0000 MSpread=63.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 22/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [6.0, 28.0, 1]
+Score: [15.0, 37.0, 0]
+Score: [11.0, 33.0, 1]
+Score: [12.0, 43.0, 1]
+Score: [15.0, 38.0, 1]
+Score: [13.0, 37.0, 0]
+Score: [15.0, 38.0, 1]
+Score: [15.0, 38.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 37.0, 0]
+UC=17 MC=22 MS=64 CG=202 O=343 S=24
+AR=16.0750 FPR=5.9250 FNR=1.0000 MSpread=64.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 23/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [2.0, 19.0, 1]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [16.0, 31.0, 1]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 31.0, 0]
+UC=18 MC=23 MS=65 CG=210 O=357 S=25
+AR=17.0750 FPR=5.9250 FNR=1.0000 MSpread=65.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 24/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=18 MC=24 MS=73 CG=218 O=369 S=26
+AR=17.2000 FPR=6.8000 FNR=1.0000 MSpread=73.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 25/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [11.0, 27.0, 1]
+Score: [8.0, 23.0, 1]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [14.0, 29.0, 1]
+Score: [19.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 1]
+UC=19 MC=25 MS=74 CG=226 O=383 S=27
+AR=18.2000 FPR=6.8000 FNR=1.0000 MSpread=74.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 26/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [19.0, 30.0, 0]
+Score: [19.0, 31.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [15.0, 30.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [19.0, 34.0, 0]
+UC=20 MC=26 MS=75 CG=234 O=395 S=28
+AR=19.2000 FPR=6.8000 FNR=1.0000 MSpread=75.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 27/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [11.0, 22.0, 1]
+Score: [10.0, 22.0, 1]
+Score: [9.0, 21.0, 1]
+Score: [4.0, 18.0, 1]
+Score: [8.0, 27.0, 1]
+Score: [6.0, 21.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 1]
+UC=21 MC=27 MS=76 CG=242 O=407 S=29
+AR=20.2000 FPR=6.8000 FNR=1.0000 MSpread=76.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 28/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 0]
+Score: [19.0, 36.0, 1]
+Score: [26.0, 40.0, 1]
+Score: [15.0, 42.0, 0]
+Score: [14.0, 29.0, 0]
+Score: [26.0, 41.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 32.0, 1]
+UC=22 MC=28 MS=77 CG=250 O=421 S=30
+AR=21.2000 FPR=6.8000 FNR=1.0000 MSpread=77.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 29/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [9.0, 31.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=23 MC=29 MS=78 CG=260 O=440 S=31
+AR=22.2000 FPR=6.8000 FNR=1.0000 MSpread=78.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 30/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [18.0, 39.0, 1]
+Score: [19.0, 41.0, 1]
+Score: [11.0, 33.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [22.0, 53.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [24.0, 48.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [12.0, 35.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 1]
+UC=24 MC=30 MS=79 CG=270 O=459 S=32
+AR=23.2000 FPR=6.8000 FNR=1.0000 MSpread=79.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 1]
+Score: [10.0, 25.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [15.0, 29.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [11.0, 26.0, 0]
+Score: [16.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 1]
+UC=25 MC=31 MS=80 CG=278 O=472 S=33
+AR=24.2000 FPR=6.8000 FNR=1.0000 MSpread=80.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 32/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [20.0, 41.0, 1]
+Score: [23.0, 45.0, 1]
+Score: [24.0, 46.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [28.0, 59.0, 1]
+Score: [30.0, 53.0, 1]
+Score: [20.0, 44.0, 1]
+Score: [30.0, 53.0, 1]
+Score: [24.0, 47.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [26.0, 47.0, 1]
+UC=26 MC=32 MS=81 CG=288 O=491 S=34
+AR=25.2000 FPR=6.8000 FNR=1.0000 MSpread=81.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 33/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [12.0, 28.0, 1]
+Score: [13.0, 28.0, 0]
+Score: [9.0, 26.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [8.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 1]
+UC=27 MC=33 MS=82 CG=296 O=504 S=35
+AR=26.2000 FPR=6.8000 FNR=1.0000 MSpread=82.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 34/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [13.0, 24.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [16.0, 28.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 29.0, 0]
+UC=28 MC=34 MS=83 CG=304 O=516 S=36
+AR=27.2000 FPR=6.8000 FNR=1.0000 MSpread=83.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 35/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [7.0, 18.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+UC=29 MC=35 MS=84 CG=312 O=528 S=37
+AR=28.2000 FPR=6.8000 FNR=1.0000 MSpread=84.0000
+delta-h-c-f1:sokoban-optimal-noisy:70% - 36/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [13.0, 35.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=1 MC=1 MS=1 CG=10 O=27 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 1/12
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [22.0, 43.0, 2]
+Score: [14.0, 36.0, 2]
+Score: [25.0, 47.0, 2]
+Score: [21.0, 43.0, 2]
+Score: [22.0, 53.0, 2]
+Score: [25.0, 48.0, 2]
+Score: [23.0, 47.0, 2]
+Score: [25.0, 48.0, 2]
+Score: [24.0, 47.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 0]
+UC=2 MC=2 MS=2 CG=20 O=53 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 2/12
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 0]
+h value not a number. Failed.
+Score: [4.0, 23.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=3 MC=3 MS=3 CG=28 O=68 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 3/12
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [11.0, 22.0, 1]
+Score: [5.0, 17.0, 1]
+Score: [19.0, 31.0, 1]
+Score: [20.0, 34.0, 1]
+Score: [14.0, 33.0, 1]
+Score: [17.0, 32.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 25.0, 1]
+UC=4 MC=4 MS=4 CG=36 O=83 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 4/12
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [23.0, 39.0, 1]
+Score: [22.0, 37.0, 1]
+Score: [19.0, 36.0, 1]
+Score: [16.0, 30.0, 1]
+Score: [18.0, 45.0, 1]
+Score: [20.0, 35.0, 1]
+Score: [19.0, 34.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 39.0, 1]
+UC=5 MC=5 MS=5 CG=44 O=101 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 5/12
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [20.0, 32.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [19.0, 34.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+UC=6 MC=6 MS=6 CG=52 O=117 S=6
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 6/12
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [18.0, 34.0, 0]
+Score: [15.0, 30.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [17.0, 31.0, 0]
+Score: [14.0, 41.0, 0]
+Score: [21.0, 36.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 33.0, 0]
+UC=7 MC=7 MS=7 CG=60 O=136 S=7
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 7/12
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [8.0, 23.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+UC=8 MC=8 MS=8 CG=68 O=152 S=8
+AR=8.0000 FPR=0.0000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 8/12
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [19.0, 40.0, 2]
+Score: [23.0, 45.0, 2]
+Score: [30.0, 52.0, 2]
+Score: [30.0, 52.0, 2]
+Score: [30.0, 61.0, 2]
+Score: [30.0, 53.0, 2]
+Score: [31.0, 55.0, 1]
+Score: [30.0, 53.0, 2]
+Score: [31.0, 54.0, 2]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [30.0, 51.0, 2]
+UC=9 MC=9 MS=9 CG=78 O=178 S=9
+AR=9.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 9/12
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [21.0, 42.0, 2]
+Score: [25.0, 47.0, 2]
+Score: [22.0, 44.0, 2]
+Score: [11.0, 33.0, 2]
+Score: [27.0, 58.0, 1]
+Score: [27.0, 50.0, 2]
+Score: [27.0, 51.0, 2]
+Score: [27.0, 50.0, 2]
+Score: [23.0, 46.0, 2]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 2]
+UC=10 MC=10 MS=10 CG=88 O=205 S=10
+AR=10.0000 FPR=0.0000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 10/12
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [10.0, 26.0, 0]
+Score: [15.0, 30.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [14.0, 41.0, 0]
+Score: [19.0, 34.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 32.0, 0]
+UC=11 MC=11 MS=11 CG=96 O=223 S=11
+AR=11.0000 FPR=0.0000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 11/12
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [15.0, 31.0, 0]
+Score: [16.0, 31.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [13.0, 40.0, 0]
+Score: [18.0, 33.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 33.0, 0]
+UC=11 MC=11 MS=12 CG=104 O=242 S=12
+AR=11.0000 FPR=0.5000 FNR=0.5000 MSpread=12.0000
+delta-h-c-f1:sokoban-optimal-noisy:100% - 12/12
+Experiment Time: 591.542983s
+Real solution: [(at box0 f6-3f)(at box1 f5-7f), (at box0 f6-1f)(at box1 f8-2f)]
+Score: [1.0, 22.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [5.0, 29.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [5.0, 28.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 23.0, 0]
+Uncertainty: 1.86363636364
+UC=0 MC=0 MS=1 CG=10 O=3 S=2
+AR=0.0000 FPR=0.3333 FNR=0.6667 MSpread=1.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 1/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [6.0, 27.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [4.0, 27.0, 0]
+Score: [8.0, 32.0, 0]
+Score: [4.0, 27.0, 0]
+Score: [5.0, 28.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 26.0, 0]
+Uncertainty: 1.88461538462
+UC=0 MC=1 MS=10 CG=20 O=6 S=4
+AR=0.2222 FPR=1.1111 FNR=0.6667 MSpread=10.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 2/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 15.0, 0]
+Uncertainty: 1.93333333333
+UC=0 MC=1 MS=11 CG=28 O=8 S=5
+AR=0.2222 FPR=1.6111 FNR=1.1667 MSpread=11.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 3/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [10.0, 31.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [11.0, 42.0, 0]
+Score: [10.0, 33.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [10.0, 33.0, 0]
+Score: [11.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+Uncertainty: 1.90322580645
+UC=0 MC=2 MS=21 CG=38 O=11 S=6
+AR=0.3222 FPR=2.5111 FNR=1.1667 MSpread=21.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 4/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 31.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 26.0, 0]
+Uncertainty: 1.93548387097
+UC=0 MC=2 MS=22 CG=46 O=13 S=11
+AR=0.5222 FPR=2.5111 FNR=1.9667 MSpread=22.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 5/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.86666666667
+UC=0 MC=2 MS=23 CG=54 O=15 S=14
+AR=0.5222 FPR=2.7611 FNR=2.7167 MSpread=23.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 6/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [5.0, 16.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 18.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 20.0, 0]
+Uncertainty: 1.86666666667
+UC=0 MC=3 MS=29 CG=62 O=17 S=15
+AR=0.6889 FPR=3.5944 FNR=2.7167 MSpread=29.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 7/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f)]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 16.0, 0]
+Uncertainty: 1.875
+UC=0 MC=3 MS=31 CG=70 O=19 S=19
+AR=0.8889 FPR=3.7944 FNR=3.3167 MSpread=31.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 8/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [3.0, 26.0, 0]
+Score: [4.0, 28.0, 0]
+Score: [3.0, 26.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+Uncertainty: 1.88461538462
+UC=0 MC=4 MS=36 CG=80 O=22 S=20
+AR=1.0889 FPR=4.5944 FNR=3.3167 MSpread=36.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 9/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f), (at box0 f5-2f)(at box1 f1-5f)]
+Score: [0.0, 21.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [0.0, 22.0, 0]
+Score: [6.0, 37.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 28.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 28.0, 0]
+Uncertainty: 1.85714285714
+UC=0 MC=5 MS=38 CG=90 O=25 S=22
+AR=1.4222 FPR=4.9278 FNR=3.6500 MSpread=38.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 10/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 16.0, 0]
+Uncertainty: 1.85714285714
+UC=1 MC=6 MS=42 CG=98 O=27 S=23
+AR=1.6722 FPR=5.6778 FNR=3.6500 MSpread=42.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 11/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [6.0, 30.0, 0]
+Score: [6.0, 29.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+Uncertainty: 1.91428571429
+UC=1 MC=7 MS=52 CG=108 O=30 S=25
+AR=1.8722 FPR=6.4778 FNR=3.6500 MSpread=52.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 12/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [3.0, 24.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [6.0, 37.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [6.0, 30.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+Uncertainty: 1.875
+UC=2 MC=8 MS=56 CG=118 O=33 S=26
+AR=2.1222 FPR=7.2278 FNR=3.6500 MSpread=56.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 13/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 27.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+Uncertainty: 1.85714285714
+UC=3 MC=9 MS=58 CG=126 O=35 S=28
+AR=3.1222 FPR=7.2278 FNR=3.6500 MSpread=58.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 14/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f1-2f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [2.0, 14.0, 0]
+h value not a number. Failed.
+Score: [2.0, 21.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.85714285714
+UC=4 MC=10 MS=61 CG=134 O=37 S=31
+AR=4.1222 FPR=7.2278 FNR=3.6500 MSpread=61.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 15/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [2.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.84615384615
+UC=5 MC=11 MS=64 CG=142 O=39 S=32
+AR=4.4556 FPR=7.8944 FNR=3.6500 MSpread=64.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 16/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f), (at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.86666666667
+UC=5 MC=11 MS=66 CG=150 O=41 S=34
+AR=4.4556 FPR=8.3944 FNR=4.1500 MSpread=66.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 17/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [10.0, 31.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [8.0, 31.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [8.0, 31.0, 0]
+Score: [3.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+Uncertainty: 1.88
+UC=6 MC=12 MS=68 CG=160 O=44 S=36
+AR=5.4556 FPR=8.3944 FNR=4.1500 MSpread=68.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 18/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [4.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 18.0, 0]
+Uncertainty: 1.85714285714
+UC=7 MC=13 MS=73 CG=168 O=46 S=38
+AR=5.8556 FPR=8.9944 FNR=4.1500 MSpread=73.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 19/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [2.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.84615384615
+UC=8 MC=14 MS=80 CG=176 O=48 S=39
+AR=5.9984 FPR=9.8516 FNR=4.1500 MSpread=80.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 20/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [0.0, 11.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 15.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 15.0, 0]
+Uncertainty: 2.0
+UC=8 MC=15 MS=87 CG=184 O=50 S=40
+AR=6.1413 FPR=10.7087 FNR=4.1500 MSpread=87.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=16 MS=97 CG=194 O=53 S=41
+AR=6.2413 FPR=11.6087 FNR=4.1500 MSpread=97.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 22/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [14.0, 35.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [11.0, 42.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+Uncertainty: 1.89655172414
+UC=8 MC=17 MS=101 CG=204 O=56 S=43
+AR=6.7413 FPR=12.1087 FNR=4.1500 MSpread=101.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 23/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+Uncertainty: 1.89473684211
+UC=8 MC=18 MS=107 CG=212 O=58 S=44
+AR=6.9079 FPR=12.9421 FNR=4.1500 MSpread=107.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 24/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f1-1f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [2.0, 13.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 16.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.84615384615
+UC=8 MC=18 MS=110 CG=220 O=60 S=48
+AR=7.3079 FPR=13.1421 FNR=4.5500 MSpread=110.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 25/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f4-3f)(at box1 f2-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.875
+UC=8 MC=19 MS=116 CG=228 O=62 S=53
+AR=7.8794 FPR=13.4278 FNR=4.6929 MSpread=116.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 26/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f), (at box0 f5-1f)(at box1 f8-6f)]
+Score: [2.0, 23.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [5.0, 29.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+Uncertainty: 1.86956521739
+UC=8 MC=19 MS=117 CG=238 O=65 S=55
+AR=7.8794 FPR=13.7611 FNR=5.3595 MSpread=117.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 27/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f3-4f)(at box1 f1-1f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 16.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.83333333333
+UC=8 MC=20 MS=121 CG=246 O=67 S=58
+AR=8.6294 FPR=14.0111 FNR=5.3595 MSpread=121.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 28/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [3.0, 24.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [4.0, 35.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [8.0, 32.0, 0]
+Score: [5.0, 28.0, 0]
+Score: [4.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 27.0, 0]
+Uncertainty: 1.875
+UC=8 MC=21 MS=127 CG=256 O=70 S=59
+AR=8.7960 FPR=14.8444 FNR=5.3595 MSpread=127.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 29/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f), (at box0 f3-1f)(at box1 f3-4f)]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.86666666667
+UC=8 MC=21 MS=129 CG=264 O=72 S=61
+AR=8.7960 FPR=15.3444 FNR=5.8595 MSpread=129.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 30/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [6.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+Uncertainty: 1.89473684211
+UC=9 MC=22 MS=130 CG=272 O=74 S=62
+AR=9.7960 FPR=15.3444 FNR=5.8595 MSpread=130.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f), (at box0 f2-6f)(at box1 f5-4f), (at box0 f3-1f)(at box1 f1-1f)]
+Score: [6.0, 22.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.875
+UC=9 MC=22 MS=131 CG=280 O=76 S=67
+AR=9.9960 FPR=15.3444 FNR=6.6595 MSpread=131.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 32/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f), (at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f), (at box0 f1-2f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=9 MC=23 MS=139 CG=288 O=78 S=71
+AR=10.4960 FPR=15.8444 FNR=6.6595 MSpread=139.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 33/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [4.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+Uncertainty: 1.85714285714
+UC=10 MC=24 MS=140 CG=296 O=80 S=72
+AR=11.4960 FPR=15.8444 FNR=6.6595 MSpread=140.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 34/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [1.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 17.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 17.0, 0]
+Uncertainty: 1.91666666667
+UC=10 MC=25 MS=143 CG=304 O=82 S=73
+AR=11.8294 FPR=16.5111 FNR=6.6595 MSpread=143.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 35/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 0]
+Uncertainty: 1.86666666667
+UC=10 MC=25 MS=145 CG=312 O=84 S=76
+AR=11.8294 FPR=16.9111 FNR=7.2595 MSpread=145.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:10% - 36/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [3.0, 24.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [10.0, 34.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+Uncertainty: 1.70833333333
+UC=0 MC=1 MS=2 CG=10 O=8 S=1
+AR=0.5000 FPR=0.5000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 1/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 19.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.71428571429
+UC=1 MC=2 MS=3 CG=18 O=13 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 2/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [7.0, 28.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [18.0, 42.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [13.0, 36.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+Uncertainty: 1.71428571429
+UC=1 MC=3 MS=6 CG=28 O=21 S=3
+AR=1.8333 FPR=1.1667 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 3/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [6.0, 27.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [14.0, 38.0, 0]
+Score: [9.0, 32.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 30.0, 0]
+Uncertainty: 1.74074074074
+UC=1 MC=4 MS=15 CG=38 O=29 S=4
+AR=1.9444 FPR=2.0556 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 4/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 29.0, 0]
+Uncertainty: 1.66666666667
+UC=2 MC=5 MS=16 CG=46 O=35 S=5
+AR=2.9444 FPR=2.0556 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 5/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [3.0, 14.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 18.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+Uncertainty: 1.64285714286
+UC=2 MC=6 MS=21 CG=54 O=40 S=7
+AR=3.3444 FPR=2.6556 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 6/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [8.0, 24.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [8.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+Uncertainty: 1.71428571429
+UC=2 MC=7 MS=24 CG=62 O=46 S=8
+AR=3.6778 FPR=3.3222 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 7/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [4.0, 20.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+Uncertainty: 1.68421052632
+UC=2 MC=7 MS=26 CG=70 O=52 S=9
+AR=3.6778 FPR=3.9889 FNR=0.3333 MSpread=26.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 8/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [2.0, 29.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 18.0, 0]
+Uncertainty: 1.72222222222
+UC=3 MC=8 MS=29 CG=78 O=58 S=12
+AR=4.1778 FPR=4.2389 FNR=0.5833 MSpread=29.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 9/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 20.0, 0]
+h value not a number. Failed.
+Score: [8.0, 27.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.75
+UC=4 MC=9 MS=31 CG=86 O=63 S=14
+AR=5.1778 FPR=4.2389 FNR=0.5833 MSpread=31.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 10/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+Score: [7.0, 18.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+Uncertainty: 1.75
+UC=5 MC=10 MS=36 CG=94 O=68 S=16
+AR=5.5778 FPR=4.8389 FNR=0.5833 MSpread=36.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 11/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [9.0, 20.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+Uncertainty: 1.66666666667
+UC=6 MC=11 MS=37 CG=102 O=73 S=17
+AR=6.5778 FPR=4.8389 FNR=0.5833 MSpread=37.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 12/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+Uncertainty: 1.66666666667
+UC=7 MC=12 MS=38 CG=110 O=79 S=20
+AR=6.9111 FPR=4.8389 FNR=1.2500 MSpread=38.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 13/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=7 MC=13 MS=46 CG=118 O=84 S=21
+AR=7.0361 FPR=5.7139 FNR=1.2500 MSpread=46.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 14/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f)]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 0]
+Uncertainty: 1.66666666667
+UC=7 MC=13 MS=48 CG=126 O=90 S=23
+AR=7.3694 FPR=6.0472 FNR=1.5833 MSpread=48.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 15/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [9.0, 24.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+Uncertainty: 1.6875
+UC=8 MC=14 MS=51 CG=134 O=95 S=24
+AR=7.7028 FPR=6.7139 FNR=1.5833 MSpread=51.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 16/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [14.0, 37.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [14.0, 37.0, 0]
+Score: [11.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 0]
+Uncertainty: 1.65384615385
+UC=9 MC=15 MS=52 CG=144 O=104 S=25
+AR=8.7028 FPR=6.7139 FNR=1.5833 MSpread=52.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [16.0, 47.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [12.0, 35.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 32.0, 0]
+Uncertainty: 1.69230769231
+UC=10 MC=16 MS=54 CG=154 O=112 S=26
+AR=9.2028 FPR=7.2139 FNR=1.5833 MSpread=54.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 18/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 20.0, 0]
+Uncertainty: 1.7
+UC=11 MC=17 MS=57 CG=162 O=118 S=27
+AR=9.5361 FPR=7.8806 FNR=1.5833 MSpread=57.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 19/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [3.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 19.0, 0]
+Uncertainty: 1.64285714286
+UC=12 MC=18 MS=60 CG=170 O=123 S=28
+AR=9.8694 FPR=8.5472 FNR=1.5833 MSpread=60.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 20/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [10.0, 41.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [13.0, 37.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [7.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 29.0, 0]
+Uncertainty: 1.73076923077
+UC=13 MC=19 MS=66 CG=180 O=131 S=29
+AR=10.0361 FPR=9.3806 FNR=1.5833 MSpread=66.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [4.0, 26.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [15.0, 38.0, 0]
+Score: [8.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 31.0, 0]
+Uncertainty: 1.65384615385
+UC=14 MC=20 MS=67 CG=190 O=140 S=30
+AR=11.0361 FPR=9.3806 FNR=1.5833 MSpread=67.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 22/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [6.0, 27.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [9.0, 40.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [12.0, 36.0, 0]
+Score: [12.0, 35.0, 0]
+Score: [9.0, 32.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 33.0, 0]
+Uncertainty: 1.7037037037
+UC=15 MC=21 MS=73 CG=200 O=148 S=31
+AR=11.2028 FPR=10.2139 FNR=1.5833 MSpread=73.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 23/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+Score: [2.0, 14.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.64285714286
+UC=16 MC=22 MS=74 CG=208 O=153 S=32
+AR=12.2028 FPR=10.2139 FNR=1.5833 MSpread=74.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 24/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [10.0, 26.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 33.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 0]
+Uncertainty: 1.68421052632
+UC=17 MC=23 MS=75 CG=216 O=159 S=33
+AR=13.2028 FPR=10.2139 FNR=1.5833 MSpread=75.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 25/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [8.0, 24.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [11.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+Uncertainty: 1.73684210526
+UC=18 MC=24 MS=78 CG=224 O=165 S=34
+AR=13.5361 FPR=10.8806 FNR=1.5833 MSpread=78.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 26/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [10.0, 21.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 25.0, 0]
+Uncertainty: 1.73684210526
+UC=18 MC=24 MS=80 CG=232 O=170 S=35
+AR=13.5361 FPR=11.5472 FNR=1.9167 MSpread=80.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 27/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [10.0, 26.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 0]
+Uncertainty: 1.73913043478
+UC=19 MC=25 MS=85 CG=240 O=176 S=36
+AR=13.7361 FPR=12.3472 FNR=1.9167 MSpread=85.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 28/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [7.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.64285714286
+UC=20 MC=26 MS=86 CG=248 O=181 S=37
+AR=14.7361 FPR=12.3472 FNR=1.9167 MSpread=86.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 29/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+Score: [7.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+Uncertainty: 1.70588235294
+UC=21 MC=27 MS=93 CG=256 O=186 S=38
+AR=14.8790 FPR=13.2044 FNR=1.9167 MSpread=93.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 30/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [10.0, 31.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [14.0, 36.0, 0]
+Score: [7.0, 29.0, 0]
+Score: [19.0, 50.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [14.0, 37.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 36.0, 0]
+Uncertainty: 1.68965517241
+UC=22 MC=28 MS=95 CG=266 O=195 S=39
+AR=15.3790 FPR=13.7044 FNR=1.9167 MSpread=95.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 31/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [4.0, 25.0, 0]
+Score: [6.0, 28.0, 0]
+Score: [5.0, 27.0, 0]
+Score: [11.0, 33.0, 0]
+Score: [8.0, 39.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [11.0, 35.0, 0]
+Score: [11.0, 34.0, 0]
+Score: [6.0, 29.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 28.0, 0]
+Uncertainty: 1.64
+UC=22 MC=29 MS=99 CG=276 O=204 S=40
+AR=15.6290 FPR=14.4544 FNR=1.9167 MSpread=99.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 32/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [12.0, 33.0, 0]
+Score: [13.0, 35.0, 0]
+Score: [8.0, 30.0, 0]
+Score: [10.0, 32.0, 0]
+Score: [14.0, 45.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [17.0, 40.0, 0]
+Score: [8.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 37.0, 0]
+Uncertainty: 1.76666666667
+UC=23 MC=30 MS=105 CG=286 O=213 S=41
+AR=15.7956 FPR=15.2877 FNR=1.9167 MSpread=105.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 33/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [4.0, 20.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 29.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 25.0, 0]
+Uncertainty: 1.79310344828
+UC=23 MC=31 MS=107 CG=294 O=219 S=42
+AR=16.2956 FPR=15.7877 FNR=1.9167 MSpread=107.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 34/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 0]
+Score: [4.0, 19.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [6.0, 33.0, 0]
+Score: [8.0, 23.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+Uncertainty: 1.68421052632
+UC=24 MC=32 MS=111 CG=302 O=225 S=44
+AR=16.7956 FPR=16.2877 FNR=1.9167 MSpread=111.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 35/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [13.0, 34.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [9.0, 31.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [19.0, 50.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [10.0, 33.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 0]
+Uncertainty: 1.74193548387
+UC=25 MC=33 MS=117 CG=312 O=234 S=45
+AR=16.9623 FPR=17.1210 FNR=1.9167 MSpread=117.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:30% - 36/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [18.0, 34.0, 0]
+Score: [19.0, 34.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [16.0, 43.0, 0]
+Score: [13.0, 28.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [20.0, 36.0, 0]
+Uncertainty: 1.625
+UC=1 MC=1 MS=5 CG=8 O=9 S=1
+AR=0.2000 FPR=0.8000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 1/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [16.0, 32.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [15.0, 32.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [17.0, 44.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [10.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 0]
+Uncertainty: 1.64
+UC=1 MC=2 MS=10 CG=16 O=18 S=2
+AR=0.4000 FPR=1.6000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 2/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [4.0, 31.0, 0]
+Score: [10.0, 25.0, 0]
+Score: [16.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 0]
+Uncertainty: 1.52631578947
+UC=2 MC=3 MS=13 CG=24 O=28 S=4
+AR=1.0667 FPR=1.9333 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 3/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 30.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.56666666667
+UC=3 MC=4 MS=14 CG=34 O=42 S=5
+AR=2.0667 FPR=1.9333 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 4/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [17.0, 33.0, 0]
+Score: [19.0, 34.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [17.0, 31.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [17.0, 32.0, 1]
+Score: [18.0, 33.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 34.0, 1]
+Uncertainty: 1.64
+UC=4 MC=5 MS=16 CG=42 O=52 S=6
+AR=2.5667 FPR=2.4333 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 5/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f), (at box0 f2-4f)(at box1 f3-1f)]
+Score: [13.0, 24.0, 0]
+Score: [10.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 0]
+Uncertainty: 1.57894736842
+UC=5 MC=6 MS=18 CG=50 O=60 S=8
+AR=3.5667 FPR=2.4333 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 6/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=5 MC=7 MS=26 CG=58 O=68 S=9
+AR=3.6917 FPR=3.3083 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 7/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [3.0, 19.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [8.0, 22.0, 0]
+Score: [2.0, 29.0, 1]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 19.0, 1]
+Uncertainty: 1.41176470588
+UC=6 MC=8 MS=28 CG=66 O=78 S=11
+AR=4.6917 FPR=3.3083 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 8/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [6.0, 17.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+Uncertainty: 1.58823529412
+UC=7 MC=9 MS=32 CG=74 O=86 S=12
+AR=4.9417 FPR=4.0583 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 9/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [11.0, 32.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [16.0, 47.0, 0]
+Score: [19.0, 42.0, 0]
+Score: [19.0, 43.0, 0]
+Score: [19.0, 42.0, 0]
+Score: [16.0, 39.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 35.0, 1]
+Uncertainty: 1.625
+UC=8 MC=10 MS=39 CG=84 O=99 S=13
+AR=5.0845 FPR=4.9155 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 10/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=11 MS=49 CG=94 O=113 S=14
+AR=5.1845 FPR=5.8155 FNR=0.0000 MSpread=49.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 11/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=12 MS=57 CG=102 O=121 S=15
+AR=5.3095 FPR=6.6905 FNR=0.0000 MSpread=57.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 12/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [8.0, 29.0, 0]
+Score: [3.0, 25.0, 0]
+Score: [10.0, 32.0, 1]
+Score: [11.0, 33.0, 1]
+Score: [6.0, 37.0, 1]
+Score: [7.0, 30.0, 1]
+Score: [15.0, 39.0, 0]
+Score: [7.0, 30.0, 1]
+Score: [7.0, 30.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 34.0, 0]
+Uncertainty: 1.48
+UC=9 MC=13 MS=58 CG=112 O=134 S=16
+AR=6.3095 FPR=6.6905 FNR=0.0000 MSpread=58.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 13/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=9 MC=14 MS=66 CG=120 O=142 S=17
+AR=6.4345 FPR=7.5655 FNR=0.0000 MSpread=66.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 14/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [11.0, 32.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [5.0, 27.0, 1]
+Score: [21.0, 52.0, 0]
+Score: [21.0, 44.0, 1]
+Score: [18.0, 42.0, 0]
+Score: [21.0, 44.0, 1]
+Score: [15.0, 38.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 36.0, 1]
+Uncertainty: 1.51851851852
+UC=10 MC=15 MS=67 CG=130 O=156 S=18
+AR=7.4345 FPR=7.5655 FNR=0.0000 MSpread=67.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 15/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [10.0, 26.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 0]
+Uncertainty: 1.66666666667
+UC=11 MC=16 MS=75 CG=138 O=165 S=19
+AR=7.5595 FPR=8.4405 FNR=0.0000 MSpread=75.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 16/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [11.0, 27.0, 0]
+Score: [9.0, 24.0, 0]
+Score: [2.0, 19.0, 1]
+Score: [9.0, 23.0, 1]
+Score: [8.0, 35.0, 1]
+Score: [12.0, 27.0, 0]
+Score: [9.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 29.0, 1]
+Uncertainty: 1.52631578947
+UC=12 MC=17 MS=76 CG=146 O=175 S=20
+AR=8.5595 FPR=8.4405 FNR=0.0000 MSpread=76.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [14.0, 35.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [22.0, 53.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [22.0, 46.0, 0]
+Score: [20.0, 43.0, 0]
+Score: [20.0, 43.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [20.0, 41.0, 0]
+Uncertainty: 1.65714285714
+UC=13 MC=18 MS=86 CG=156 O=188 S=21
+AR=8.6595 FPR=9.3405 FNR=0.0000 MSpread=86.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 18/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [7.0, 22.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+Uncertainty: 1.5625
+UC=14 MC=19 MS=92 CG=164 O=196 S=22
+AR=8.8262 FPR=10.1738 FNR=0.0000 MSpread=92.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 19/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [11.0, 32.0, 0]
+Score: [12.0, 34.0, 0]
+Score: [12.0, 34.0, 1]
+Score: [14.0, 36.0, 1]
+Score: [12.0, 43.0, 1]
+Score: [13.0, 36.0, 1]
+Score: [19.0, 43.0, 1]
+Score: [13.0, 36.0, 1]
+Score: [11.0, 34.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 34.0, 1]
+Uncertainty: 1.59375
+UC=15 MC=20 MS=101 CG=174 O=209 S=23
+AR=8.9373 FPR=11.0627 FNR=0.0000 MSpread=101.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 20/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [8.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [12.0, 27.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+Uncertainty: 1.6
+UC=16 MC=21 MS=103 CG=182 O=218 S=24
+AR=9.4373 FPR=11.5627 FNR=0.0000 MSpread=103.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 21/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [19.0, 40.0, 0]
+Score: [20.0, 42.0, 1]
+Score: [20.0, 42.0, 1]
+Score: [10.0, 32.0, 1]
+Score: [24.0, 55.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [22.0, 46.0, 0]
+Score: [23.0, 46.0, 1]
+Score: [20.0, 43.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 44.0, 0]
+Uncertainty: 1.59375
+UC=17 MC=22 MS=104 CG=192 O=232 S=25
+AR=10.4373 FPR=11.5627 FNR=0.0000 MSpread=104.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 22/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [10.0, 26.0, 0]
+Score: [9.0, 24.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [10.0, 37.0, 0]
+Score: [15.0, 30.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 0]
+Uncertainty: 1.625
+UC=17 MC=23 MS=108 CG=200 O=241 S=28
+AR=11.1873 FPR=11.8127 FNR=0.0000 MSpread=108.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 23/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [25.0, 46.0, 0]
+Score: [25.0, 47.0, 0]
+Score: [16.0, 38.0, 0]
+Score: [20.0, 42.0, 0]
+Score: [28.0, 59.0, 0]
+Score: [27.0, 50.0, 0]
+Score: [31.0, 55.0, 0]
+Score: [27.0, 50.0, 0]
+Score: [17.0, 40.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 0]
+Uncertainty: 1.65789473684
+UC=18 MC=24 MS=114 CG=210 O=255 S=29
+AR=11.3540 FPR=12.6460 FNR=0.0000 MSpread=114.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 24/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=18 MC=25 MS=122 CG=218 O=263 S=30
+AR=11.4790 FPR=13.5210 FNR=0.0000 MSpread=122.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 25/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [12.0, 33.0, 1]
+Score: [8.0, 30.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [12.0, 43.0, 0]
+Score: [13.0, 36.0, 1]
+Score: [19.0, 43.0, 0]
+Score: [13.0, 36.0, 1]
+Score: [12.0, 35.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 38.0, 1]
+Uncertainty: 1.6
+UC=19 MC=26 MS=126 CG=228 O=276 S=31
+AR=11.7290 FPR=14.2710 FNR=0.0000 MSpread=126.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 26/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [25.0, 46.0, 0]
+Score: [20.0, 42.0, 0]
+Score: [21.0, 43.0, 0]
+Score: [22.0, 44.0, 0]
+Score: [22.0, 53.0, 0]
+Score: [25.0, 48.0, 0]
+Score: [25.0, 49.0, 0]
+Score: [25.0, 48.0, 0]
+Score: [20.0, 43.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 44.0, 0]
+Uncertainty: 1.71428571429
+UC=20 MC=27 MS=136 CG=238 O=289 S=32
+AR=11.8290 FPR=15.1710 FNR=0.0000 MSpread=136.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 27/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [19.0, 31.0, 0]
+Score: [15.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.7037037037
+UC=20 MC=27 MS=140 CG=246 O=297 S=33
+AR=11.8290 FPR=15.9710 FNR=0.2000 MSpread=140.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 28/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=20 MC=28 MS=148 CG=254 O=305 S=34
+AR=11.9540 FPR=16.8460 FNR=0.2000 MSpread=148.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 29/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [15.0, 26.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 31.0, 0]
+Uncertainty: 1.76923076923
+UC=21 MC=29 MS=155 CG=262 O=313 S=35
+AR=12.0968 FPR=17.7032 FNR=0.2000 MSpread=155.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 30/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [4.0, 20.0, 1]
+Score: [4.0, 19.0, 0]
+Score: [9.0, 26.0, 1]
+Score: [10.0, 24.0, 0]
+Score: [4.0, 31.0, 1]
+Score: [8.0, 23.0, 1]
+Score: [10.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 22.0, 0]
+Uncertainty: 1.47368421053
+UC=22 MC=30 MS=158 CG=270 O=323 S=37
+AR=12.7635 FPR=18.0365 FNR=0.2000 MSpread=158.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f), (at box0 f2-6f)(at box1 f3-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=22 MC=31 MS=166 CG=278 O=332 S=39
+AR=13.0135 FPR=18.7865 FNR=0.2000 MSpread=166.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 32/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [14.0, 35.0, 1]
+Score: [15.0, 37.0, 1]
+Score: [16.0, 38.0, 0]
+Score: [4.0, 26.0, 1]
+Score: [22.0, 53.0, 0]
+Score: [22.0, 45.0, 0]
+Score: [17.0, 41.0, 0]
+Score: [22.0, 45.0, 0]
+Score: [16.0, 39.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [19.0, 40.0, 0]
+Uncertainty: 1.5
+UC=23 MC=32 MS=167 CG=288 O=346 S=40
+AR=14.0135 FPR=18.7865 FNR=0.2000 MSpread=167.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 33/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [3.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [9.0, 24.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 18.0, 0]
+Uncertainty: 1.42857142857
+UC=24 MC=33 MS=169 CG=296 O=354 S=41
+AR=14.5135 FPR=19.2865 FNR=0.2000 MSpread=169.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 34/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [13.0, 27.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [15.0, 30.0, 1]
+Score: [11.0, 26.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 1]
+Uncertainty: 1.57142857143
+UC=25 MC=34 MS=170 CG=304 O=364 S=42
+AR=15.5135 FPR=19.2865 FNR=0.2000 MSpread=170.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 35/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f), (at box0 f3-4f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [4.0, 16.0, 0]
+h value not a number. Failed.
+Score: [2.0, 21.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 22.0, 0]
+Uncertainty: 1.61904761905
+UC=25 MC=34 MS=171 CG=312 O=372 S=44
+AR=16.0135 FPR=19.2865 FNR=0.7000 MSpread=171.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:50% - 36/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [12.0, 23.0, 1]
+Score: [9.0, 21.0, 1]
+Score: [16.0, 28.0, 1]
+Score: [13.0, 27.0, 1]
+Score: [14.0, 33.0, 1]
+Score: [11.0, 26.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 1]
+Uncertainty: 1.52380952381
+UC=1 MC=1 MS=5 CG=8 O=11 S=1
+AR=0.2000 FPR=0.8000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 1/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [16.0, 37.0, 1]
+Score: [12.0, 34.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [18.0, 49.0, 1]
+Score: [22.0, 45.0, 1]
+Score: [22.0, 46.0, 1]
+Score: [22.0, 45.0, 1]
+Score: [16.0, 39.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 39.0, 1]
+Uncertainty: 1.47058823529
+UC=2 MC=2 MS=8 CG=18 O=30 S=2
+AR=0.5333 FPR=1.4667 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 2/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [8.0, 20.0, 1]
+h value not a number. Failed.
+Score: [8.0, 27.0, 1]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.5
+UC=3 MC=3 MS=10 CG=26 O=41 S=3
+AR=1.0333 FPR=1.9667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 3/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [6.0, 17.0, 1]
+Score: [3.0, 15.0, 0]
+Score: [10.0, 22.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [8.0, 27.0, 1]
+Score: [3.0, 18.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 1]
+Uncertainty: 1.26666666667
+UC=4 MC=4 MS=12 CG=34 O=52 S=4
+AR=1.5333 FPR=2.4667 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 4/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [10.0, 32.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.46875
+UC=5 MC=5 MS=13 CG=44 O=71 S=5
+AR=2.5333 FPR=2.4667 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 5/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [11.0, 22.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 26.0, 0]
+Uncertainty: 1.62068965517
+UC=5 MC=6 MS=20 CG=52 O=83 S=6
+AR=2.6762 FPR=3.3238 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 6/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [9.0, 30.0, 1]
+Score: [6.0, 28.0, 1]
+Score: [16.0, 38.0, 1]
+Score: [17.0, 39.0, 1]
+Score: [14.0, 45.0, 1]
+Score: [17.0, 40.0, 1]
+Score: [19.0, 43.0, 1]
+Score: [17.0, 40.0, 1]
+Score: [15.0, 38.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 39.0, 1]
+Uncertainty: 1.35714285714
+UC=6 MC=7 MS=21 CG=62 O=102 S=7
+AR=3.6762 FPR=3.3238 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 7/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=6 MC=8 MS=29 CG=70 O=115 S=8
+AR=3.8012 FPR=4.1988 FNR=0.0000 MSpread=29.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 8/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [16.0, 32.0, 0]
+Score: [13.0, 28.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [13.0, 27.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [16.0, 31.0, 0]
+Score: [11.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 31.0, 0]
+Uncertainty: 1.31578947368
+UC=7 MC=9 MS=30 CG=78 O=129 S=9
+AR=4.8012 FPR=4.1988 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 9/36
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=7 MC=10 MS=38 CG=86 O=140 S=10
+AR=4.9262 FPR=5.0738 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 10/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [25.0, 46.0, 1]
+Score: [27.0, 49.0, 1]
+Score: [27.0, 49.0, 1]
+Score: [16.0, 38.0, 1]
+Score: [30.0, 61.0, 1]
+Score: [32.0, 55.0, 1]
+Score: [27.0, 51.0, 1]
+Score: [32.0, 55.0, 1]
+Score: [28.0, 51.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 1]
+Uncertainty: 1.52631578947
+UC=8 MC=11 MS=39 CG=96 O=159 S=11
+AR=5.9262 FPR=5.0738 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 11/36
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=8 MC=12 MS=49 CG=106 O=178 S=12
+AR=6.0262 FPR=5.9738 FNR=0.0000 MSpread=49.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 12/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [20.0, 36.0, 0]
+Score: [19.0, 34.0, 1]
+Score: [17.0, 34.0, 1]
+Score: [12.0, 26.0, 1]
+Score: [14.0, 41.0, 1]
+Score: [19.0, 34.0, 1]
+Score: [16.0, 31.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [21.0, 37.0, 0]
+Uncertainty: 1.53846153846
+UC=9 MC=13 MS=53 CG=114 O=191 S=13
+AR=6.2762 FPR=6.7238 FNR=0.0000 MSpread=53.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 13/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [18.0, 34.0, 0]
+Score: [18.0, 33.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [18.0, 32.0, 0]
+Score: [18.0, 45.0, 0]
+Score: [21.0, 36.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [18.0, 34.0, 0]
+Uncertainty: 1.48
+UC=10 MC=14 MS=54 CG=122 O=205 S=14
+AR=7.2762 FPR=6.7238 FNR=0.0000 MSpread=54.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 14/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 20.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.4
+UC=11 MC=15 MS=56 CG=130 O=216 S=15
+AR=7.7762 FPR=7.2238 FNR=0.0000 MSpread=56.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 15/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=11 MC=16 MS=64 CG=138 O=229 S=16
+AR=7.9012 FPR=8.0988 FNR=0.0000 MSpread=64.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 16/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f), (at box0 f5-6f)(at box1 f6-6f)]
+Score: [10.0, 26.0, 0]
+Score: [8.0, 23.0, 1]
+Score: [20.0, 37.0, 1]
+Score: [21.0, 35.0, 1]
+Score: [10.0, 37.0, 1]
+Score: [10.0, 25.0, 1]
+Score: [24.0, 39.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 30.0, 1]
+Uncertainty: 1.4347826087
+UC=12 MC=17 MS=68 CG=146 O=243 S=18
+AR=8.4012 FPR=8.5988 FNR=0.0000 MSpread=68.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 17/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=12 MC=18 MS=78 CG=156 O=262 S=19
+AR=8.5012 FPR=9.4988 FNR=0.0000 MSpread=78.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 18/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [6.0, 22.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [17.0, 34.0, 1]
+Score: [17.0, 31.0, 1]
+Score: [10.0, 37.0, 1]
+Score: [15.0, 30.0, 1]
+Score: [18.0, 33.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 1]
+Uncertainty: 1.45454545455
+UC=13 MC=19 MS=79 CG=164 O=275 S=20
+AR=9.5012 FPR=9.4988 FNR=0.0000 MSpread=79.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 19/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [26.0, 47.0, 0]
+Score: [27.0, 49.0, 0]
+Score: [30.0, 52.0, 0]
+Score: [15.0, 37.0, 0]
+Score: [30.0, 61.0, 0]
+Score: [33.0, 56.0, 0]
+Score: [28.0, 52.0, 0]
+Score: [33.0, 56.0, 0]
+Score: [28.0, 51.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [30.0, 51.0, 0]
+Uncertainty: 1.51351351351
+UC=14 MC=20 MS=80 CG=174 O=294 S=21
+AR=10.5012 FPR=9.4988 FNR=0.0000 MSpread=80.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 20/36
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 1]
+Score: [8.0, 22.0, 1]
+Score: [4.0, 23.0, 1]
+Score: [9.0, 24.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 26.0, 1]
+Uncertainty: 1.33333333333
+UC=15 MC=21 MS=82 CG=182 O=305 S=22
+AR=11.0012 FPR=9.9988 FNR=0.0000 MSpread=82.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 21/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [17.0, 38.0, 0]
+Score: [18.0, 40.0, 0]
+Score: [22.0, 44.0, 0]
+Score: [18.0, 40.0, 0]
+Score: [24.0, 55.0, 0]
+Score: [23.0, 46.0, 0]
+Score: [26.0, 50.0, 0]
+Score: [23.0, 46.0, 0]
+Score: [21.0, 44.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 0]
+Uncertainty: 1.52631578947
+UC=16 MC=22 MS=91 CG=192 O=324 S=23
+AR=11.1123 FPR=10.8877 FNR=0.0000 MSpread=91.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 22/36
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [5.0, 26.0, 0]
+Score: [6.0, 28.0, 1]
+Score: [15.0, 37.0, 0]
+Score: [11.0, 33.0, 1]
+Score: [12.0, 43.0, 1]
+Score: [15.0, 38.0, 1]
+Score: [13.0, 37.0, 0]
+Score: [15.0, 38.0, 1]
+Score: [15.0, 38.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 37.0, 0]
+Uncertainty: 1.26923076923
+UC=17 MC=23 MS=93 CG=202 O=343 S=24
+AR=11.6123 FPR=11.3877 FNR=0.0000 MSpread=93.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 23/36
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [2.0, 19.0, 1]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [16.0, 31.0, 1]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 31.0, 0]
+Uncertainty: 1.31578947368
+UC=18 MC=24 MS=94 CG=210 O=357 S=25
+AR=12.6123 FPR=11.3877 FNR=0.0000 MSpread=94.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 24/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+All hypotheses failed.
+None
+UC=18 MC=25 MS=102 CG=218 O=369 S=26
+AR=12.7373 FPR=12.2627 FNR=0.0000 MSpread=102.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 25/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [11.0, 27.0, 1]
+Score: [8.0, 23.0, 1]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [10.0, 37.0, 0]
+Score: [14.0, 29.0, 1]
+Score: [19.0, 34.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 27.0, 1]
+Uncertainty: 1.4347826087
+UC=19 MC=26 MS=106 CG=226 O=383 S=27
+AR=12.9873 FPR=13.0127 FNR=0.0000 MSpread=106.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 26/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [19.0, 30.0, 0]
+Score: [19.0, 31.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [15.0, 30.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [19.0, 34.0, 0]
+Uncertainty: 1.45
+UC=20 MC=27 MS=107 CG=234 O=395 S=28
+AR=13.9873 FPR=13.0127 FNR=0.0000 MSpread=107.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 27/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [11.0, 22.0, 1]
+Score: [10.0, 22.0, 1]
+Score: [9.0, 21.0, 1]
+Score: [4.0, 18.0, 1]
+Score: [8.0, 27.0, 1]
+Score: [6.0, 21.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 27.0, 1]
+Uncertainty: 1.38888888889
+UC=21 MC=28 MS=108 CG=242 O=407 S=29
+AR=14.9873 FPR=13.0127 FNR=0.0000 MSpread=108.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 28/36
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [14.0, 30.0, 1]
+Score: [12.0, 27.0, 0]
+Score: [19.0, 36.0, 1]
+Score: [26.0, 40.0, 1]
+Score: [15.0, 42.0, 0]
+Score: [14.0, 29.0, 0]
+Score: [26.0, 41.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 32.0, 1]
+Uncertainty: 1.48148148148
+UC=22 MC=29 MS=113 CG=250 O=421 S=30
+AR=15.1873 FPR=13.8127 FNR=0.0000 MSpread=113.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 29/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [9.0, 31.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.41935483871
+UC=23 MC=30 MS=114 CG=260 O=440 S=31
+AR=16.1873 FPR=13.8127 FNR=0.0000 MSpread=114.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 30/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+Score: [18.0, 39.0, 1]
+Score: [19.0, 41.0, 1]
+Score: [11.0, 33.0, 1]
+Score: [21.0, 43.0, 1]
+Score: [22.0, 53.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [24.0, 48.0, 1]
+Score: [23.0, 46.0, 1]
+Score: [12.0, 35.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [24.0, 45.0, 1]
+Uncertainty: 1.45454545455
+UC=24 MC=31 MS=116 CG=270 O=459 S=32
+AR=16.6873 FPR=14.3127 FNR=0.0000 MSpread=116.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 31/36
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [4.0, 20.0, 1]
+Score: [10.0, 25.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [15.0, 29.0, 0]
+Score: [10.0, 37.0, 1]
+Score: [11.0, 26.0, 0]
+Score: [16.0, 31.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 24.0, 1]
+Uncertainty: 1.4
+UC=25 MC=32 MS=117 CG=278 O=472 S=33
+AR=17.6873 FPR=14.3127 FNR=0.0000 MSpread=117.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 32/36
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [20.0, 41.0, 1]
+Score: [23.0, 45.0, 1]
+Score: [24.0, 46.0, 1]
+Score: [13.0, 35.0, 1]
+Score: [28.0, 59.0, 1]
+Score: [30.0, 53.0, 1]
+Score: [20.0, 44.0, 1]
+Score: [30.0, 53.0, 1]
+Score: [24.0, 47.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [26.0, 47.0, 1]
+Uncertainty: 1.48571428571
+UC=26 MC=33 MS=118 CG=288 O=491 S=34
+AR=18.6873 FPR=14.3127 FNR=0.0000 MSpread=118.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 33/36
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [12.0, 28.0, 1]
+Score: [13.0, 28.0, 0]
+Score: [9.0, 26.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [8.0, 35.0, 0]
+Score: [12.0, 27.0, 0]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 28.0, 1]
+Uncertainty: 1.25
+UC=27 MC=34 MS=119 CG=296 O=504 S=35
+AR=19.6873 FPR=14.3127 FNR=0.0000 MSpread=119.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 34/36
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+Score: [13.0, 24.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [16.0, 28.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 29.0, 0]
+Uncertainty: 1.5
+UC=28 MC=35 MS=120 CG=304 O=516 S=36
+AR=20.6873 FPR=14.3127 FNR=0.0000 MSpread=120.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 35/36
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [7.0, 18.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [15.0, 27.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [13.0, 28.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 23.0, 0]
+Uncertainty: 1.38888888889
+UC=29 MC=36 MS=122 CG=312 O=528 S=37
+AR=21.1873 FPR=14.8127 FNR=0.0000 MSpread=122.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:70% - 36/36
+Real solution: [(at box0 f5-1f)(at box1 f8-5f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [13.0, 35.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.28571428571
+UC=1 MC=1 MS=1 CG=10 O=27 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 1/12
+Real solution: [(at box0 f6-3f)(at box1 f5-7f)]
+Score: [22.0, 43.0, 2]
+Score: [14.0, 36.0, 2]
+Score: [25.0, 47.0, 2]
+Score: [21.0, 43.0, 2]
+Score: [22.0, 53.0, 2]
+Score: [25.0, 48.0, 2]
+Score: [23.0, 47.0, 2]
+Score: [25.0, 48.0, 2]
+Score: [24.0, 47.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 0]
+Uncertainty: 1.33333333333
+UC=2 MC=2 MS=2 CG=20 O=53 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 2/12
+Real solution: [(at box0 f2-4f)(at box1 f1-4f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [3.0, 15.0, 0]
+h value not a number. Failed.
+Score: [4.0, 23.0, 0]
+h value not a number. Failed.
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.06666666667
+UC=3 MC=3 MS=3 CG=28 O=68 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 3/12
+Real solution: [(at box0 f1-1f)(at box1 f4-2f)]
+Score: [11.0, 22.0, 1]
+Score: [5.0, 17.0, 1]
+Score: [19.0, 31.0, 1]
+Score: [20.0, 34.0, 1]
+Score: [14.0, 33.0, 1]
+Score: [17.0, 32.0, 1]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 25.0, 1]
+Uncertainty: 1.17647058824
+UC=4 MC=4 MS=4 CG=36 O=83 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 4/12
+Real solution: [(at box0 f3-1f)(at box1 f3-4f)]
+Score: [23.0, 39.0, 1]
+Score: [22.0, 37.0, 1]
+Score: [19.0, 36.0, 1]
+Score: [16.0, 30.0, 1]
+Score: [18.0, 45.0, 1]
+Score: [20.0, 35.0, 1]
+Score: [19.0, 34.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [23.0, 39.0, 1]
+Uncertainty: 1.43333333333
+UC=5 MC=5 MS=10 CG=44 O=101 S=5
+AR=4.1667 FPR=0.8333 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 5/12
+Real solution: [(at box0 f3-4f)(at box1 f1-1f)]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [20.0, 32.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [19.0, 34.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+h value not a number. Failed.
+Uncertainty: 1.375
+UC=6 MC=6 MS=11 CG=52 O=117 S=6
+AR=5.1667 FPR=0.8333 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 6/12
+Real solution: [(at box0 f4-3f)(at box1 f2-2f)]
+Score: [18.0, 34.0, 0]
+Score: [15.0, 30.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [17.0, 31.0, 0]
+Score: [14.0, 41.0, 0]
+Score: [21.0, 36.0, 0]
+Score: [15.0, 30.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 33.0, 0]
+Uncertainty: 1.14285714286
+UC=7 MC=7 MS=12 CG=60 O=136 S=7
+AR=6.1667 FPR=0.8333 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 7/12
+Real solution: [(at box0 f1-2f)(at box1 f2-3f)]
+Score: [5.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [8.0, 23.0, 0]
+Negative h value. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 21.0, 0]
+Uncertainty: 1.1875
+UC=8 MC=8 MS=13 CG=68 O=152 S=8
+AR=7.1667 FPR=0.8333 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 8/12
+Real solution: [(at box0 f6-3f)(at box1 f4-4f)]
+Score: [19.0, 40.0, 2]
+Score: [23.0, 45.0, 2]
+Score: [30.0, 52.0, 2]
+Score: [30.0, 52.0, 2]
+Score: [30.0, 61.0, 2]
+Score: [30.0, 53.0, 2]
+Score: [31.0, 55.0, 1]
+Score: [30.0, 53.0, 2]
+Score: [31.0, 54.0, 2]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [30.0, 51.0, 2]
+Uncertainty: 1.4
+UC=9 MC=9 MS=15 CG=78 O=178 S=9
+AR=7.6667 FPR=1.3333 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 9/12
+Real solution: [(at box0 f5-2f)(at box1 f1-5f)]
+Score: [21.0, 42.0, 2]
+Score: [25.0, 47.0, 2]
+Score: [22.0, 44.0, 2]
+Score: [11.0, 33.0, 2]
+Score: [27.0, 58.0, 1]
+Score: [27.0, 50.0, 2]
+Score: [27.0, 51.0, 2]
+Score: [27.0, 50.0, 2]
+Score: [23.0, 46.0, 2]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [28.0, 49.0, 2]
+Uncertainty: 1.24242424242
+UC=10 MC=10 MS=16 CG=88 O=205 S=10
+AR=8.6667 FPR=1.3333 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 10/12
+Real solution: [(at box0 f1-6f)(at box1 f3-3f)]
+Score: [10.0, 26.0, 0]
+Score: [15.0, 30.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [14.0, 41.0, 0]
+Score: [19.0, 34.0, 0]
+h value not a number. Failed.
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 32.0, 0]
+Uncertainty: 1.34615384615
+UC=11 MC=11 MS=17 CG=96 O=223 S=11
+AR=9.6667 FPR=1.3333 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 11/12
+Real solution: [(at box0 f2-6f)(at box1 f3-2f)]
+Score: [15.0, 31.0, 0]
+Score: [16.0, 31.0, 0]
+h value not a number. Failed.
+h value not a number. Failed.
+Score: [13.0, 40.0, 0]
+Score: [18.0, 33.0, 0]
+h value not a number. Failed.
+Score: [17.0, 33.0, 0]
+Uncertainty: 1.575
+UC=11 MC=12 MS=22 CG=104 O=242 S=12
+AR=9.8667 FPR=2.1333 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1-uncertainty:sokoban-optimal-noisy:100% - 12/12
+Experiment Time: 591.956413s

@@ -1,0 +1,5462 @@
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1)]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=1 MC=1 MS=4 CG=6 O=2 S=4
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 1/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [3.0, 17.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=1 MC=2 MS=9 CG=12 O=4 S=9
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 2/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1), (served p6)(served p7)(served p0)(served p1)(served p2)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=1 MC=3 MS=12 CG=18 O=6 S=12
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 3/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p2)(served p6)(served p3)(served p4)(served p7), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=1 MC=4 MS=15 CG=24 O=8 S=15
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 4/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=1 MC=5 MS=18 CG=30 O=10 S=19
+AR=4.4000 FPR=0.2000 FNR=0.4000 MSpread=18.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 5/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=1 MC=5 MS=20 CG=36 O=12 S=20
+AR=4.4000 FPR=0.8667 FNR=0.7333 MSpread=20.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 6/36
+Real solution: [(served p3)(served p1)(served p5)(served p4), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=2 MC=6 MS=24 CG=42 O=14 S=22
+AR=4.9000 FPR=1.3667 FNR=0.7333 MSpread=24.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 7/36
+Real solution: [(served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=3 MC=7 MS=28 CG=48 O=16 S=26
+AR=5.9000 FPR=1.3667 FNR=0.7333 MSpread=28.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 8/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1), (served p6)(served p7)(served p0)(served p1)(served p2)]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=3 MC=7 MS=30 CG=54 O=18 S=31
+AR=6.3000 FPR=1.3667 FNR=1.3333 MSpread=30.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 9/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=3 MC=7 MS=33 CG=60 O=20 S=33
+AR=6.5500 FPR=1.8667 FNR=1.5833 MSpread=33.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 10/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7), (served p5)(served p4)(served p0)(served p2)(served p3)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=4 MC=8 MS=35 CG=66 O=22 S=35
+AR=7.5500 FPR=1.8667 FNR=1.5833 MSpread=35.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 11/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=4 MC=9 MS=37 CG=72 O=24 S=37
+AR=8.5500 FPR=1.8667 FNR=1.5833 MSpread=37.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=5 MC=10 MS=38 CG=78 O=26 S=38
+AR=9.5500 FPR=1.8667 FNR=1.5833 MSpread=38.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=5 MC=11 MS=42 CG=84 O=28 S=42
+AR=10.5500 FPR=1.8667 FNR=1.5833 MSpread=42.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 14/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=5 MC=12 MS=47 CG=90 O=30 S=44
+AR=10.9500 FPR=2.4667 FNR=1.5833 MSpread=47.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 15/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=6 MC=13 MS=49 CG=96 O=32 S=46
+AR=11.9500 FPR=2.4667 FNR=1.5833 MSpread=49.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 16/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=7 MC=14 MS=50 CG=102 O=34 S=47
+AR=12.9500 FPR=2.4667 FNR=1.5833 MSpread=50.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 17/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=8 MC=15 MS=52 CG=108 O=36 S=49
+AR=13.9500 FPR=2.4667 FNR=1.5833 MSpread=52.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 18/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p4)(served p1)(served p2)(served p8)(served p5)]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=9 MC=16 MS=54 CG=114 O=38 S=51
+AR=14.9500 FPR=2.4667 FNR=1.5833 MSpread=54.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 19/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=9 MC=17 MS=58 CG=120 O=40 S=53
+AR=15.4500 FPR=2.9667 FNR=1.5833 MSpread=58.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 20/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=10 MC=18 MS=60 CG=126 O=42 S=54
+AR=15.9500 FPR=3.4667 FNR=1.5833 MSpread=60.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 21/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=11 MC=19 MS=64 CG=132 O=44 S=55
+AR=16.2000 FPR=4.2167 FNR=1.5833 MSpread=64.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 22/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=11 MC=20 MS=66 CG=138 O=46 S=58
+AR=16.4500 FPR=4.4667 FNR=2.0833 MSpread=66.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 23/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=12 MC=21 MS=67 CG=144 O=48 S=60
+AR=16.9500 FPR=4.4667 FNR=2.5833 MSpread=67.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 24/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=13 MC=22 MS=69 CG=150 O=50 S=62
+AR=17.9500 FPR=4.4667 FNR=2.5833 MSpread=69.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 25/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4), (served p1)(served p5)(served p6)(served p7)(served p8), (served p3)(served p1)(served p6)(served p5)(served p7), (served p4)(served p1)(served p2)(served p8)(served p5)]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [0.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=13 MC=23 MS=73 CG=156 O=52 S=66
+AR=18.9500 FPR=4.4667 FNR=2.5833 MSpread=73.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 26/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=14 MC=24 MS=77 CG=162 O=54 S=67
+AR=19.2000 FPR=5.2167 FNR=2.5833 MSpread=77.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 27/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=15 MC=25 MS=79 CG=168 O=56 S=69
+AR=20.2000 FPR=5.2167 FNR=2.5833 MSpread=79.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 28/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=16 MC=26 MS=80 CG=174 O=58 S=70
+AR=21.2000 FPR=5.2167 FNR=2.5833 MSpread=80.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 29/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=16 MC=27 MS=84 CG=180 O=60 S=74
+AR=22.2000 FPR=5.2167 FNR=2.5833 MSpread=84.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 30/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=17 MC=28 MS=86 CG=186 O=62 S=76
+AR=23.2000 FPR=5.2167 FNR=2.5833 MSpread=86.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 31/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=17 MC=29 MS=90 CG=192 O=64 S=81
+AR=24.0000 FPR=5.2167 FNR=2.7833 MSpread=90.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 32/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=18 MC=30 MS=94 CG=198 O=66 S=84
+AR=24.7500 FPR=5.4667 FNR=2.7833 MSpread=94.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 33/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=19 MC=31 MS=95 CG=204 O=68 S=85
+AR=25.7500 FPR=5.4667 FNR=2.7833 MSpread=95.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 34/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=20 MC=32 MS=100 CG=210 O=70 S=90
+AR=26.7500 FPR=5.4667 FNR=2.7833 MSpread=100.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 35/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=21 MC=33 MS=101 CG=216 O=72 S=91
+AR=27.7500 FPR=5.4667 FNR=2.7833 MSpread=101.0000
+delta-h-c-f1:miconic-optimal-noisy:10% - 36/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [6.0, 23.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=1 MC=1 MS=1 CG=6 O=5 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 1/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=2 MC=2 MS=2 CG=12 O=10 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 2/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=3 MC=3 MS=4 CG=18 O=15 S=3
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 3/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=4 MC=4 MS=5 CG=24 O=21 S=5
+AR=3.0000 FPR=0.5000 FNR=0.5000 MSpread=5.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 4/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=5 MC=5 MS=6 CG=30 O=26 S=6
+AR=4.0000 FPR=0.5000 FNR=0.5000 MSpread=6.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 5/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=5 MC=5 MS=9 CG=36 O=31 S=7
+AR=4.0000 FPR=1.2500 FNR=0.7500 MSpread=9.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 6/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [1.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=6 MC=6 MS=10 CG=42 O=37 S=8
+AR=5.0000 FPR=1.2500 FNR=0.7500 MSpread=10.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 7/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=7 MC=7 MS=11 CG=48 O=42 S=9
+AR=6.0000 FPR=1.2500 FNR=0.7500 MSpread=11.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 8/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=8 MC=8 MS=12 CG=54 O=48 S=10
+AR=7.0000 FPR=1.2500 FNR=0.7500 MSpread=12.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 9/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=8 MC=9 MS=14 CG=60 O=53 S=11
+AR=7.5000 FPR=1.7500 FNR=0.7500 MSpread=14.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 10/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=9 MC=10 MS=15 CG=66 O=59 S=13
+AR=8.0000 FPR=1.7500 FNR=1.2500 MSpread=15.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 11/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=9 MC=10 MS=16 CG=72 O=65 S=15
+AR=8.5000 FPR=1.7500 FNR=1.7500 MSpread=16.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=10 MC=11 MS=17 CG=78 O=71 S=16
+AR=9.5000 FPR=1.7500 FNR=1.7500 MSpread=17.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=11 MC=12 MS=18 CG=84 O=77 S=17
+AR=10.5000 FPR=1.7500 FNR=1.7500 MSpread=18.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 14/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=12 MC=13 MS=21 CG=90 O=82 S=18
+AR=10.8333 FPR=2.4167 FNR=1.7500 MSpread=21.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 15/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [3.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=13 MC=14 MS=22 CG=96 O=87 S=19
+AR=11.8333 FPR=2.4167 FNR=1.7500 MSpread=22.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 16/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=14 MC=15 MS=25 CG=102 O=92 S=20
+AR=12.1667 FPR=3.0833 FNR=1.7500 MSpread=25.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 17/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=14 MC=16 MS=27 CG=108 O=97 S=21
+AR=12.6667 FPR=3.5833 FNR=1.7500 MSpread=27.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 18/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=14 MC=17 MS=30 CG=114 O=103 S=23
+AR=13.3333 FPR=3.9167 FNR=1.7500 MSpread=30.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 19/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=15 MC=18 MS=31 CG=120 O=108 S=24
+AR=14.3333 FPR=3.9167 FNR=1.7500 MSpread=31.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 20/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=15 MC=18 MS=32 CG=126 O=114 S=25
+AR=14.3333 FPR=4.4167 FNR=2.2500 MSpread=32.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 21/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=16 MC=19 MS=34 CG=132 O=120 S=27
+AR=15.3333 FPR=4.4167 FNR=2.2500 MSpread=34.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 22/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=17 MC=20 MS=35 CG=138 O=125 S=28
+AR=16.3333 FPR=4.4167 FNR=2.2500 MSpread=35.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 23/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=17 MC=20 MS=37 CG=144 O=130 S=29
+AR=16.3333 FPR=5.0833 FNR=2.5833 MSpread=37.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 24/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=18 MC=21 MS=39 CG=150 O=136 S=31
+AR=17.3333 FPR=5.0833 FNR=2.5833 MSpread=39.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 25/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=18 MC=22 MS=42 CG=156 O=141 S=32
+AR=17.6667 FPR=5.7500 FNR=2.5833 MSpread=42.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 26/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=18 MC=23 MS=44 CG=162 O=147 S=33
+AR=18.1667 FPR=6.2500 FNR=2.5833 MSpread=44.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 27/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=19 MC=24 MS=45 CG=168 O=153 S=34
+AR=19.1667 FPR=6.2500 FNR=2.5833 MSpread=45.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 28/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=20 MC=25 MS=46 CG=174 O=159 S=35
+AR=20.1667 FPR=6.2500 FNR=2.5833 MSpread=46.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 29/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=20 MC=26 MS=48 CG=180 O=164 S=37
+AR=21.1667 FPR=6.2500 FNR=2.5833 MSpread=48.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 30/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=21 MC=27 MS=51 CG=186 O=169 S=38
+AR=21.5000 FPR=6.9167 FNR=2.5833 MSpread=51.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 31/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=22 MC=28 MS=52 CG=192 O=174 S=39
+AR=22.5000 FPR=6.9167 FNR=2.5833 MSpread=52.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 32/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=23 MC=29 MS=53 CG=198 O=179 S=40
+AR=23.5000 FPR=6.9167 FNR=2.5833 MSpread=53.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 33/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+UC=24 MC=30 MS=55 CG=204 O=184 S=42
+AR=24.5000 FPR=6.9167 FNR=2.5833 MSpread=55.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 34/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=25 MC=31 MS=56 CG=210 O=189 S=43
+AR=25.5000 FPR=6.9167 FNR=2.5833 MSpread=56.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 35/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=26 MC=32 MS=57 CG=216 O=195 S=44
+AR=26.5000 FPR=6.9167 FNR=2.5833 MSpread=57.0000
+delta-h-c-f1:miconic-optimal-noisy:30% - 36/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [4.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 1]
+UC=1 MC=1 MS=1 CG=6 O=10 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 1/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+UC=2 MC=2 MS=2 CG=12 O=20 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 2/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 0]
+UC=3 MC=3 MS=3 CG=18 O=28 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 3/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=4 MC=4 MS=4 CG=24 O=37 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 4/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [8.0, 22.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+UC=5 MC=5 MS=5 CG=30 O=45 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 5/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [8.0, 25.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=5 MC=6 MS=7 CG=36 O=53 S=7
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 6/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [7.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=6 MC=7 MS=8 CG=42 O=62 S=8
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 7/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [10.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=7 MC=8 MS=9 CG=48 O=70 S=9
+AR=8.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 8/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=8 MC=9 MS=10 CG=54 O=77 S=10
+AR=9.0000 FPR=0.0000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 9/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=9 MC=10 MS=11 CG=60 O=85 S=11
+AR=10.0000 FPR=0.0000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 10/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [7.0, 22.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=10 MC=11 MS=12 CG=66 O=93 S=12
+AR=11.0000 FPR=0.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 11/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=11 MC=12 MS=13 CG=72 O=102 S=13
+AR=12.0000 FPR=0.0000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 12/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=12 MC=13 MS=14 CG=78 O=110 S=14
+AR=13.0000 FPR=0.0000 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=13 MC=14 MS=15 CG=84 O=118 S=15
+AR=14.0000 FPR=0.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 14/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [9.0, 26.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=14 MC=15 MS=16 CG=90 O=127 S=16
+AR=15.0000 FPR=0.0000 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 15/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [8.0, 25.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=15 MC=16 MS=18 CG=96 O=135 S=17
+AR=15.5000 FPR=0.5000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 16/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=16 MC=17 MS=19 CG=102 O=144 S=18
+AR=16.5000 FPR=0.5000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 17/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=17 MC=18 MS=21 CG=108 O=152 S=19
+AR=17.0000 FPR=1.0000 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 18/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=18 MC=19 MS=23 CG=114 O=161 S=20
+AR=17.5000 FPR=1.5000 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 19/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+UC=19 MC=20 MS=24 CG=120 O=169 S=21
+AR=18.5000 FPR=1.5000 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 20/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [7.0, 21.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 0]
+UC=20 MC=21 MS=26 CG=126 O=176 S=22
+AR=19.0000 FPR=2.0000 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 21/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [9.0, 25.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=21 MC=22 MS=27 CG=132 O=184 S=23
+AR=20.0000 FPR=2.0000 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 22/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [5.0, 22.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+UC=22 MC=23 MS=28 CG=138 O=194 S=24
+AR=21.0000 FPR=2.0000 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 23/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=23 MC=24 MS=29 CG=144 O=202 S=25
+AR=22.0000 FPR=2.0000 FNR=0.0000 MSpread=29.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 24/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [8.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=24 MC=25 MS=31 CG=150 O=211 S=26
+AR=22.5000 FPR=2.5000 FNR=0.0000 MSpread=31.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 25/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+UC=24 MC=25 MS=32 CG=156 O=219 S=27
+AR=22.5000 FPR=3.0000 FNR=0.5000 MSpread=32.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 26/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 0]
+UC=25 MC=26 MS=33 CG=162 O=227 S=28
+AR=23.5000 FPR=3.0000 FNR=0.5000 MSpread=33.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 27/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [8.0, 25.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=26 MC=27 MS=34 CG=168 O=235 S=29
+AR=24.5000 FPR=3.0000 FNR=0.5000 MSpread=34.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 28/36
+Real solution: [(served p3)(served p1)(served p5)(served p4), (served p5)(served p1)(served p2)(served p3)]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=27 MC=28 MS=36 CG=174 O=242 S=31
+AR=25.5000 FPR=3.0000 FNR=0.5000 MSpread=36.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 29/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=28 MC=29 MS=37 CG=180 O=250 S=32
+AR=26.5000 FPR=3.0000 FNR=0.5000 MSpread=37.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 30/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [5.0, 22.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=29 MC=30 MS=38 CG=186 O=259 S=33
+AR=27.5000 FPR=3.0000 FNR=0.5000 MSpread=38.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 31/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+UC=30 MC=31 MS=39 CG=192 O=267 S=34
+AR=28.5000 FPR=3.0000 FNR=0.5000 MSpread=39.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 32/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [7.0, 24.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=31 MC=32 MS=40 CG=198 O=276 S=35
+AR=29.5000 FPR=3.0000 FNR=0.5000 MSpread=40.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 33/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=32 MC=33 MS=41 CG=204 O=285 S=36
+AR=30.5000 FPR=3.0000 FNR=0.5000 MSpread=41.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 34/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [9.0, 25.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=32 MC=33 MS=42 CG=210 O=294 S=37
+AR=30.5000 FPR=3.5000 FNR=1.0000 MSpread=42.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 35/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [5.0, 22.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=33 MC=34 MS=43 CG=216 O=303 S=38
+AR=31.5000 FPR=3.5000 FNR=1.0000 MSpread=43.0000
+delta-h-c-f1:miconic-optimal-noisy:50% - 36/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [6.0, 20.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [1.0, 16.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [1.0, 16.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+UC=1 MC=1 MS=3 CG=6 O=10 S=1
+AR=0.3333 FPR=0.6667 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 1/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [5.0, 22.0, 1]
+Score: [7.0, 23.0, 0]
+Score: [3.0, 18.0, 1]
+Score: [5.0, 21.0, 1]
+Score: [9.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 1]
+UC=2 MC=2 MS=4 CG=12 O=22 S=2
+AR=1.3333 FPR=0.6667 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 2/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [3.0, 17.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [0.0, 15.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 1]
+UC=3 MC=3 MS=5 CG=18 O=33 S=3
+AR=2.3333 FPR=0.6667 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 3/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+UC=4 MC=4 MS=6 CG=24 O=44 S=4
+AR=3.3333 FPR=0.6667 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 4/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [1.0, 17.0, 1]
+Score: [8.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 1]
+UC=5 MC=5 MS=7 CG=30 O=56 S=5
+AR=4.3333 FPR=0.6667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 5/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [7.0, 21.0, 1]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 1]
+UC=6 MC=6 MS=8 CG=36 O=67 S=6
+AR=5.3333 FPR=0.6667 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 6/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [8.0, 25.0, 1]
+Score: [4.0, 22.0, 1]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 1]
+UC=7 MC=7 MS=9 CG=42 O=81 S=7
+AR=6.3333 FPR=0.6667 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 7/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [13.0, 29.0, 1]
+Score: [5.0, 20.0, 1]
+Score: [10.0, 26.0, 1]
+Score: [11.0, 27.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 1]
+UC=8 MC=8 MS=10 CG=48 O=93 S=8
+AR=7.3333 FPR=0.6667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 8/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [0.0, 17.0, 1]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+UC=9 MC=9 MS=11 CG=54 O=106 S=9
+AR=8.3333 FPR=0.6667 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 9/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [0.0, 17.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+UC=10 MC=10 MS=12 CG=60 O=119 S=10
+AR=9.3333 FPR=0.6667 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 10/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [0.0, 15.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 1]
+UC=11 MC=11 MS=13 CG=66 O=130 S=11
+AR=10.3333 FPR=0.6667 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 11/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [6.0, 22.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 1]
+UC=12 MC=12 MS=14 CG=72 O=142 S=12
+AR=11.3333 FPR=0.6667 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 22.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [7.0, 20.0, 1]
+Score: [5.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 1]
+UC=13 MC=13 MS=15 CG=78 O=153 S=13
+AR=12.3333 FPR=0.6667 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 13/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [10.0, 27.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 1]
+UC=14 MC=14 MS=16 CG=84 O=167 S=14
+AR=13.3333 FPR=0.6667 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 14/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+UC=15 MC=15 MS=17 CG=90 O=181 S=15
+AR=14.3333 FPR=0.6667 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 15/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [10.0, 26.0, 1]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 1]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=16 MC=16 MS=18 CG=96 O=193 S=16
+AR=15.3333 FPR=0.6667 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 16/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [6.0, 23.0, 1]
+Score: [2.0, 19.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 1]
+UC=17 MC=17 MS=19 CG=102 O=205 S=17
+AR=16.3333 FPR=0.6667 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 17/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+UC=18 MC=18 MS=20 CG=108 O=215 S=18
+AR=17.3333 FPR=0.6667 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 18/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [3.0, 20.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=19 MC=19 MS=21 CG=114 O=228 S=19
+AR=18.3333 FPR=0.6667 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 19/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [4.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+UC=19 MC=20 MS=23 CG=120 O=240 S=20
+AR=18.8333 FPR=1.1667 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 20/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 1]
+Score: [11.0, 27.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [8.0, 24.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 1]
+UC=20 MC=21 MS=24 CG=126 O=252 S=21
+AR=19.8333 FPR=1.1667 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 21/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 1]
+Score: [1.0, 17.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [3.0, 19.0, 1]
+Score: [5.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 1]
+UC=21 MC=22 MS=25 CG=132 O=264 S=22
+AR=20.8333 FPR=1.1667 FNR=0.0000 MSpread=25.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 22/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [9.0, 26.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [7.0, 22.0, 1]
+Score: [2.0, 18.0, 1]
+Score: [9.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+UC=22 MC=23 MS=26 CG=138 O=276 S=23
+AR=21.8333 FPR=1.1667 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 23/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [10.0, 27.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 24.0, 1]
+Score: [7.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+UC=22 MC=23 MS=27 CG=144 O=289 S=24
+AR=21.8333 FPR=1.6667 FNR=0.5000 MSpread=27.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 24/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 1]
+Score: [5.0, 19.0, 1]
+Score: [4.0, 19.0, 1]
+Score: [6.0, 19.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+UC=23 MC=24 MS=28 CG=150 O=300 S=25
+AR=22.8333 FPR=1.6667 FNR=0.5000 MSpread=28.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 25/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [6.0, 20.0, 1]
+Score: [1.0, 15.0, 1]
+Score: [2.0, 17.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [2.0, 17.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+UC=24 MC=25 MS=29 CG=156 O=311 S=26
+AR=23.8333 FPR=1.6667 FNR=0.5000 MSpread=29.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 26/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 1]
+Score: [4.0, 18.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+UC=25 MC=26 MS=30 CG=162 O=322 S=27
+AR=24.8333 FPR=1.6667 FNR=0.5000 MSpread=30.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 27/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 0]
+Score: [4.0, 20.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [4.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 1]
+UC=26 MC=27 MS=32 CG=168 O=334 S=28
+AR=25.3333 FPR=2.1667 FNR=0.5000 MSpread=32.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 28/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [8.0, 25.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [4.0, 22.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=27 MC=28 MS=33 CG=174 O=347 S=29
+AR=26.3333 FPR=2.1667 FNR=0.5000 MSpread=33.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 29/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [9.0, 25.0, 1]
+Score: [3.0, 18.0, 0]
+Score: [6.0, 22.0, 1]
+Score: [6.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 1]
+UC=28 MC=29 MS=35 CG=180 O=359 S=30
+AR=26.8333 FPR=2.6667 FNR=0.5000 MSpread=35.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 30/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 19.0, 0]
+Score: [7.0, 22.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 1]
+UC=29 MC=30 MS=36 CG=186 O=371 S=31
+AR=27.8333 FPR=2.6667 FNR=0.5000 MSpread=36.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 31/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [5.0, 22.0, 1]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 22.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [5.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+UC=30 MC=31 MS=37 CG=192 O=383 S=32
+AR=28.8333 FPR=2.6667 FNR=0.5000 MSpread=37.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 32/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [1.0, 15.0, 1]
+Score: [2.0, 17.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+UC=31 MC=32 MS=38 CG=198 O=394 S=33
+AR=29.8333 FPR=2.6667 FNR=0.5000 MSpread=38.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 33/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+UC=32 MC=33 MS=40 CG=204 O=404 S=34
+AR=30.3333 FPR=3.1667 FNR=0.5000 MSpread=40.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 34/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [6.0, 22.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 28.0, 1]
+UC=33 MC=34 MS=41 CG=210 O=416 S=35
+AR=31.3333 FPR=3.1667 FNR=0.5000 MSpread=41.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 35/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [2.0, 19.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [6.0, 24.0, 1]
+Score: [7.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=34 MC=35 MS=42 CG=216 O=429 S=36
+AR=32.3333 FPR=3.1667 FNR=0.5000 MSpread=42.0000
+delta-h-c-f1:miconic-optimal-noisy:70% - 36/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [10.0, 26.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+UC=1 MC=1 MS=1 CG=6 O=16 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 1/12
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [9.0, 23.0, 1]
+Score: [5.0, 19.0, 1]
+Score: [5.0, 20.0, 0]
+Score: [8.0, 21.0, 1]
+Score: [7.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 1]
+UC=2 MC=2 MS=3 CG=12 O=31 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 2/12
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [12.0, 28.0, 0]
+Score: [6.0, 21.0, 1]
+Score: [10.0, 26.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=3 MC=3 MS=5 CG=18 O=47 S=3
+AR=2.0000 FPR=1.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 3/12
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [5.0, 22.0, 0]
+Score: [11.0, 28.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [8.0, 26.0, 1]
+Score: [10.0, 27.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 1]
+UC=4 MC=4 MS=6 CG=24 O=65 S=4
+AR=3.0000 FPR=1.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 4/12
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [10.0, 27.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [8.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=5 MC=5 MS=7 CG=30 O=82 S=5
+AR=4.0000 FPR=1.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 5/12
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [8.0, 22.0, 1]
+Score: [10.0, 24.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 24.0, 1]
+UC=6 MC=6 MS=9 CG=36 O=97 S=6
+AR=4.5000 FPR=1.5000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 6/12
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 19.0, 1]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+UC=7 MC=7 MS=10 CG=42 O=111 S=7
+AR=5.5000 FPR=1.5000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 7/12
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [12.0, 29.0, 0]
+Score: [4.0, 20.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 28.0, 1]
+UC=8 MC=8 MS=11 CG=48 O=127 S=8
+AR=6.5000 FPR=1.5000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 8/12
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [3.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=9 MC=9 MS=12 CG=54 O=145 S=9
+AR=7.5000 FPR=1.5000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 9/12
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [12.0, 28.0, 1]
+Score: [8.0, 23.0, 0]
+Score: [9.0, 25.0, 1]
+Score: [9.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=10 MC=10 MS=13 CG=60 O=162 S=10
+AR=8.5000 FPR=1.5000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 10/12
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [9.0, 23.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [4.0, 19.0, 1]
+Score: [7.0, 20.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 1]
+UC=11 MC=11 MS=14 CG=66 O=177 S=11
+AR=9.5000 FPR=1.5000 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 11/12
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [3.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+UC=12 MC=12 MS=15 CG=72 O=196 S=12
+AR=10.5000 FPR=1.5000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:miconic-optimal-noisy:100% - 12/12
+Experiment Time: 219.731819s
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1)]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=1 MC=1 MS=4 CG=6 O=2 S=4
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 1/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [3.0, 17.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.84615384615
+UC=1 MC=2 MS=9 CG=12 O=4 S=9
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 2/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1), (served p6)(served p7)(served p0)(served p1)(served p2)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88235294118
+UC=1 MC=3 MS=12 CG=18 O=6 S=12
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 3/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p2)(served p6)(served p3)(served p4)(served p7), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.86666666667
+UC=1 MC=4 MS=15 CG=24 O=8 S=15
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 4/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.88888888889
+UC=1 MC=5 MS=18 CG=30 O=10 S=19
+AR=4.4000 FPR=0.2000 FNR=0.4000 MSpread=18.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 5/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.88235294118
+UC=1 MC=5 MS=20 CG=36 O=12 S=20
+AR=4.4000 FPR=0.8667 FNR=0.7333 MSpread=20.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 6/36
+Real solution: [(served p3)(served p1)(served p5)(served p4), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.84615384615
+UC=2 MC=6 MS=24 CG=42 O=14 S=22
+AR=4.9000 FPR=1.3667 FNR=0.7333 MSpread=24.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 7/36
+Real solution: [(served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.84615384615
+UC=3 MC=7 MS=28 CG=48 O=16 S=26
+AR=5.9000 FPR=1.3667 FNR=0.7333 MSpread=28.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 8/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0), (served p5)(served p2)(served p7)(served p0)(served p1), (served p6)(served p7)(served p0)(served p1)(served p2)]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.88888888889
+UC=3 MC=7 MS=30 CG=54 O=18 S=31
+AR=6.3000 FPR=1.3667 FNR=1.3333 MSpread=30.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 9/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.88888888889
+UC=3 MC=7 MS=33 CG=60 O=20 S=33
+AR=6.5500 FPR=1.8667 FNR=1.5833 MSpread=33.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 10/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7), (served p5)(served p4)(served p0)(served p2)(served p3)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.875
+UC=4 MC=8 MS=35 CG=66 O=22 S=35
+AR=7.5500 FPR=1.8667 FNR=1.5833 MSpread=35.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 11/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=4 MC=9 MS=37 CG=72 O=24 S=37
+AR=8.5500 FPR=1.8667 FNR=1.5833 MSpread=37.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.88235294118
+UC=5 MC=10 MS=38 CG=78 O=26 S=38
+AR=9.5500 FPR=1.8667 FNR=1.5833 MSpread=38.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.85714285714
+UC=5 MC=11 MS=42 CG=84 O=28 S=42
+AR=10.5500 FPR=1.8667 FNR=1.5833 MSpread=42.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 14/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88235294118
+UC=5 MC=12 MS=47 CG=90 O=30 S=44
+AR=10.9500 FPR=2.4667 FNR=1.5833 MSpread=47.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 15/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.85714285714
+UC=6 MC=13 MS=49 CG=96 O=32 S=46
+AR=11.9500 FPR=2.4667 FNR=1.5833 MSpread=49.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 16/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.875
+UC=7 MC=14 MS=50 CG=102 O=34 S=47
+AR=12.9500 FPR=2.4667 FNR=1.5833 MSpread=50.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 17/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.875
+UC=8 MC=15 MS=52 CG=108 O=36 S=49
+AR=13.9500 FPR=2.4667 FNR=1.5833 MSpread=52.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 18/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p4)(served p1)(served p2)(served p8)(served p5)]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.875
+UC=9 MC=16 MS=54 CG=114 O=38 S=51
+AR=14.9500 FPR=2.4667 FNR=1.5833 MSpread=54.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 19/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.88888888889
+UC=9 MC=17 MS=58 CG=120 O=40 S=53
+AR=15.4500 FPR=2.9667 FNR=1.5833 MSpread=58.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 20/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.86666666667
+UC=10 MC=18 MS=60 CG=126 O=42 S=54
+AR=15.9500 FPR=3.4667 FNR=1.5833 MSpread=60.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 21/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.89473684211
+UC=11 MC=19 MS=64 CG=132 O=44 S=55
+AR=16.2000 FPR=4.2167 FNR=1.5833 MSpread=64.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 22/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.85714285714
+UC=11 MC=20 MS=66 CG=138 O=46 S=58
+AR=16.4500 FPR=4.4667 FNR=2.0833 MSpread=66.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 23/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=12 MC=21 MS=67 CG=144 O=48 S=60
+AR=16.9500 FPR=4.4667 FNR=2.5833 MSpread=67.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 24/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.88888888889
+UC=13 MC=22 MS=69 CG=150 O=50 S=62
+AR=17.9500 FPR=4.4667 FNR=2.5833 MSpread=69.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 25/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4), (served p1)(served p5)(served p6)(served p7)(served p8), (served p3)(served p1)(served p6)(served p5)(served p7), (served p4)(served p1)(served p2)(served p8)(served p5)]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [0.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.875
+UC=13 MC=23 MS=73 CG=156 O=52 S=66
+AR=18.9500 FPR=4.4667 FNR=2.5833 MSpread=73.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 26/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.875
+UC=14 MC=24 MS=77 CG=162 O=54 S=67
+AR=19.2000 FPR=5.2167 FNR=2.5833 MSpread=77.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 27/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.85714285714
+UC=15 MC=25 MS=79 CG=168 O=56 S=69
+AR=20.2000 FPR=5.2167 FNR=2.5833 MSpread=79.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 28/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=16 MC=26 MS=80 CG=174 O=58 S=70
+AR=21.2000 FPR=5.2167 FNR=2.5833 MSpread=80.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 29/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.85714285714
+UC=16 MC=27 MS=84 CG=180 O=60 S=74
+AR=22.2000 FPR=5.2167 FNR=2.5833 MSpread=84.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 30/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [0.0, 16.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.86666666667
+UC=17 MC=28 MS=86 CG=186 O=62 S=76
+AR=23.2000 FPR=5.2167 FNR=2.5833 MSpread=86.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 31/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.85714285714
+UC=17 MC=29 MS=90 CG=192 O=64 S=81
+AR=24.0000 FPR=5.2167 FNR=2.7833 MSpread=90.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 32/36
+Real solution: [(served p0)(served p1)(served p2)(served p3), (served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.85714285714
+UC=18 MC=30 MS=94 CG=198 O=66 S=84
+AR=24.7500 FPR=5.4667 FNR=2.7833 MSpread=94.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 33/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.86666666667
+UC=19 MC=31 MS=95 CG=204 O=68 S=85
+AR=25.7500 FPR=5.4667 FNR=2.7833 MSpread=95.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 34/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5), (served p3)(served p1)(served p5)(served p4), (served p4)(served p5)(served p3)(served p0), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.85714285714
+UC=20 MC=32 MS=100 CG=210 O=70 S=90
+AR=26.7500 FPR=5.4667 FNR=2.7833 MSpread=100.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 35/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [1.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=21 MC=33 MS=101 CG=216 O=72 S=91
+AR=27.7500 FPR=5.4667 FNR=2.7833 MSpread=101.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:10% - 36/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [6.0, 23.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.70588235294
+UC=1 MC=1 MS=1 CG=6 O=5 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 1/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.72222222222
+UC=2 MC=2 MS=3 CG=12 O=10 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 2/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [3.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.72222222222
+UC=3 MC=3 MS=8 CG=18 O=15 S=3
+AR=1.7000 FPR=1.3000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 3/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.7
+UC=4 MC=4 MS=11 CG=24 O=21 S=5
+AR=2.3667 FPR=1.6333 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 4/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.64285714286
+UC=5 MC=5 MS=12 CG=30 O=26 S=6
+AR=3.3667 FPR=1.6333 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 5/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.6875
+UC=5 MC=6 MS=17 CG=36 O=31 S=7
+AR=3.5667 FPR=2.4333 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 6/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [1.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.66666666667
+UC=6 MC=7 MS=18 CG=42 O=37 S=8
+AR=4.5667 FPR=2.4333 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 7/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.64285714286
+UC=7 MC=8 MS=19 CG=48 O=42 S=9
+AR=5.5667 FPR=2.4333 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 8/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.64705882353
+UC=8 MC=9 MS=20 CG=54 O=48 S=10
+AR=6.5667 FPR=2.4333 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 9/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.6875
+UC=8 MC=10 MS=23 CG=60 O=53 S=11
+AR=6.9000 FPR=3.1000 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 10/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.71428571429
+UC=9 MC=11 MS=26 CG=66 O=59 S=13
+AR=7.5667 FPR=3.4333 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 11/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.73913043478
+UC=9 MC=12 MS=32 CG=72 O=65 S=15
+AR=7.9000 FPR=4.1000 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.68421052632
+UC=10 MC=13 MS=33 CG=78 O=71 S=16
+AR=8.9000 FPR=4.1000 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.64705882353
+UC=11 MC=14 MS=34 CG=84 O=77 S=17
+AR=9.9000 FPR=4.1000 FNR=0.0000 MSpread=34.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 14/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.72222222222
+UC=12 MC=15 MS=39 CG=90 O=82 S=18
+AR=10.1000 FPR=4.9000 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 15/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [3.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.70588235294
+UC=13 MC=16 MS=40 CG=96 O=87 S=19
+AR=11.1000 FPR=4.9000 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 16/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.66666666667
+UC=14 MC=17 MS=45 CG=102 O=92 S=20
+AR=11.3000 FPR=5.7000 FNR=0.0000 MSpread=45.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 17/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.66666666667
+UC=14 MC=18 MS=47 CG=108 O=97 S=21
+AR=11.8000 FPR=6.2000 FNR=0.0000 MSpread=47.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 18/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.64705882353
+UC=14 MC=19 MS=50 CG=114 O=103 S=23
+AR=12.4667 FPR=6.5333 FNR=0.0000 MSpread=50.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 19/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.70588235294
+UC=15 MC=20 MS=51 CG=120 O=108 S=24
+AR=13.4667 FPR=6.5333 FNR=0.0000 MSpread=51.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 20/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.68421052632
+UC=15 MC=21 MS=55 CG=126 O=114 S=25
+AR=13.7167 FPR=7.2833 FNR=0.0000 MSpread=55.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 21/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6), (served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.64705882353
+UC=16 MC=22 MS=57 CG=132 O=120 S=27
+AR=14.7167 FPR=7.2833 FNR=0.0000 MSpread=57.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 22/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.6875
+UC=17 MC=23 MS=58 CG=138 O=125 S=28
+AR=15.7167 FPR=7.2833 FNR=0.0000 MSpread=58.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 23/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.70588235294
+UC=17 MC=24 MS=63 CG=144 O=130 S=29
+AR=15.9167 FPR=8.0833 FNR=0.0000 MSpread=63.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 24/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5), (served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [0.0, 17.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.64705882353
+UC=18 MC=25 MS=65 CG=150 O=136 S=31
+AR=16.9167 FPR=8.0833 FNR=0.0000 MSpread=65.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 25/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.70588235294
+UC=18 MC=26 MS=68 CG=156 O=141 S=32
+AR=17.2500 FPR=8.7500 FNR=0.0000 MSpread=68.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 26/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.68421052632
+UC=18 MC=27 MS=73 CG=162 O=147 S=33
+AR=17.4500 FPR=9.5500 FNR=0.0000 MSpread=73.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 27/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.68421052632
+UC=19 MC=28 MS=74 CG=168 O=153 S=34
+AR=18.4500 FPR=9.5500 FNR=0.0000 MSpread=74.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 28/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.66666666667
+UC=20 MC=29 MS=75 CG=174 O=159 S=35
+AR=19.4500 FPR=9.5500 FNR=0.0000 MSpread=75.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 29/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p2)(served p4)(served p3)(served p5)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.64285714286
+UC=20 MC=30 MS=77 CG=180 O=164 S=37
+AR=20.4500 FPR=9.5500 FNR=0.0000 MSpread=77.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 30/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.72222222222
+UC=21 MC=31 MS=81 CG=186 O=169 S=38
+AR=20.7000 FPR=10.3000 FNR=0.0000 MSpread=81.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 31/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.64285714286
+UC=22 MC=32 MS=82 CG=192 O=174 S=39
+AR=21.7000 FPR=10.3000 FNR=0.0000 MSpread=82.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 32/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [0.0, 14.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 18.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [1.0, 16.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.64285714286
+UC=23 MC=33 MS=83 CG=198 O=179 S=40
+AR=22.7000 FPR=10.3000 FNR=0.0000 MSpread=83.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 33/36
+Real solution: [(served p1)(served p2)(served p4)(served p5), (served p5)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 14.0, 0]
+Uncertainty: 1.64285714286
+UC=24 MC=34 MS=85 CG=204 O=184 S=42
+AR=23.7000 FPR=10.3000 FNR=0.0000 MSpread=85.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 34/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.6875
+UC=25 MC=35 MS=90 CG=210 O=189 S=43
+AR=23.9000 FPR=11.1000 FNR=0.0000 MSpread=90.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 35/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.7
+UC=26 MC=36 MS=93 CG=216 O=195 S=44
+AR=24.2333 FPR=11.7667 FNR=0.0000 MSpread=93.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:30% - 36/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [4.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 1]
+Uncertainty: 1.55
+UC=1 MC=1 MS=2 CG=6 O=10 S=1
+AR=0.5000 FPR=0.5000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 1/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+Uncertainty: 1.55
+UC=2 MC=2 MS=5 CG=12 O=20 S=2
+AR=0.8333 FPR=1.1667 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 2/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 0]
+Uncertainty: 1.55555555556
+UC=3 MC=3 MS=7 CG=18 O=28 S=3
+AR=1.3333 FPR=1.6667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 3/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.55
+UC=4 MC=4 MS=9 CG=24 O=37 S=4
+AR=1.8333 FPR=2.1667 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 4/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [8.0, 22.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+Uncertainty: 1.52941176471
+UC=5 MC=5 MS=10 CG=30 O=45 S=5
+AR=2.8333 FPR=2.1667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 5/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8), (served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [8.0, 25.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [1.0, 17.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.52941176471
+UC=5 MC=6 MS=12 CG=36 O=53 S=7
+AR=3.8333 FPR=2.1667 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 6/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [7.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.625
+UC=6 MC=7 MS=18 CG=42 O=62 S=8
+AR=4.0000 FPR=3.0000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 7/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [10.0, 26.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.57894736842
+UC=7 MC=8 MS=21 CG=48 O=70 S=9
+AR=4.3333 FPR=3.6667 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 8/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.5
+UC=8 MC=9 MS=22 CG=54 O=77 S=10
+AR=5.3333 FPR=3.6667 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 9/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [7.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.5
+UC=9 MC=10 MS=24 CG=60 O=85 S=11
+AR=5.8333 FPR=4.1667 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 10/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [7.0, 22.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.6
+UC=10 MC=11 MS=26 CG=66 O=93 S=12
+AR=6.3333 FPR=4.6667 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 11/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.52631578947
+UC=11 MC=12 MS=28 CG=72 O=102 S=13
+AR=6.8333 FPR=5.1667 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 12/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 16.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.5
+UC=12 MC=13 MS=29 CG=78 O=110 S=14
+AR=7.8333 FPR=5.1667 FNR=0.0000 MSpread=29.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 13/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.5
+UC=13 MC=14 MS=31 CG=84 O=118 S=15
+AR=8.3333 FPR=5.6667 FNR=0.0000 MSpread=31.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 14/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [9.0, 26.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.60869565217
+UC=14 MC=15 MS=37 CG=90 O=127 S=16
+AR=8.5000 FPR=6.5000 FNR=0.0000 MSpread=37.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 15/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [8.0, 25.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [11.0, 26.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.55555555556
+UC=15 MC=16 MS=39 CG=96 O=135 S=17
+AR=9.0000 FPR=7.0000 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 16/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.55
+UC=16 MC=17 MS=41 CG=102 O=144 S=18
+AR=9.5000 FPR=7.5000 FNR=0.0000 MSpread=41.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 17/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.61904761905
+UC=17 MC=18 MS=47 CG=108 O=152 S=19
+AR=9.6667 FPR=8.3333 FNR=0.0000 MSpread=47.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 18/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.55
+UC=18 MC=19 MS=50 CG=114 O=161 S=20
+AR=10.0000 FPR=9.0000 FNR=0.0000 MSpread=50.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 19/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 20.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 0]
+Uncertainty: 1.5
+UC=19 MC=20 MS=52 CG=120 O=169 S=21
+AR=10.5000 FPR=9.5000 FNR=0.0000 MSpread=52.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 20/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [7.0, 21.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [4.0, 19.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 0]
+Uncertainty: 1.53333333333
+UC=20 MC=21 MS=54 CG=126 O=176 S=22
+AR=11.0000 FPR=10.0000 FNR=0.0000 MSpread=54.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 21/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 26.0, 0]
+Score: [5.0, 20.0, 0]
+Score: [9.0, 25.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.6
+UC=21 MC=22 MS=58 CG=132 O=184 S=23
+AR=11.2500 FPR=10.7500 FNR=0.0000 MSpread=58.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 22/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [3.0, 20.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [5.0, 22.0, 1]
+Score: [2.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+Uncertainty: 1.55
+UC=22 MC=23 MS=61 CG=138 O=194 S=24
+AR=11.5833 FPR=11.4167 FNR=0.0000 MSpread=61.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 23/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 21.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.55555555556
+UC=23 MC=24 MS=62 CG=144 O=202 S=25
+AR=12.5833 FPR=11.4167 FNR=0.0000 MSpread=62.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 24/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [8.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.59090909091
+UC=24 MC=25 MS=67 CG=150 O=211 S=26
+AR=12.7833 FPR=12.2167 FNR=0.0000 MSpread=67.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 25/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [6.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+Uncertainty: 1.57894736842
+UC=24 MC=26 MS=71 CG=156 O=219 S=27
+AR=13.0333 FPR=12.9667 FNR=0.0000 MSpread=71.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 26/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [6.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 0]
+Uncertainty: 1.52941176471
+UC=25 MC=27 MS=73 CG=162 O=227 S=28
+AR=13.5333 FPR=13.4667 FNR=0.0000 MSpread=73.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 27/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [8.0, 25.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [6.0, 21.0, 0]
+Score: [4.0, 20.0, 0]
+Score: [5.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.55555555556
+UC=26 MC=28 MS=74 CG=168 O=235 S=29
+AR=14.5333 FPR=13.4667 FNR=0.0000 MSpread=74.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 28/36
+Real solution: [(served p3)(served p1)(served p5)(served p4), (served p5)(served p1)(served p2)(served p3)]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 17.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 17.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.5
+UC=27 MC=29 MS=76 CG=174 O=242 S=31
+AR=15.5333 FPR=13.4667 FNR=0.0000 MSpread=76.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 29/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 22.0, 0]
+Score: [8.0, 23.0, 0]
+Score: [3.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.57894736842
+UC=28 MC=30 MS=78 CG=180 O=250 S=32
+AR=16.0333 FPR=13.9667 FNR=0.0000 MSpread=78.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 30/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [5.0, 22.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.59090909091
+UC=29 MC=31 MS=81 CG=186 O=259 S=33
+AR=16.3667 FPR=14.6333 FNR=0.0000 MSpread=81.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 31/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 15.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 0]
+Uncertainty: 1.46666666667
+UC=30 MC=32 MS=82 CG=192 O=267 S=34
+AR=17.3667 FPR=14.6333 FNR=0.0000 MSpread=82.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 32/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [7.0, 24.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.52631578947
+UC=31 MC=33 MS=83 CG=198 O=276 S=35
+AR=18.3667 FPR=14.6333 FNR=0.0000 MSpread=83.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 33/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.5
+UC=32 MC=34 MS=84 CG=204 O=285 S=36
+AR=19.3667 FPR=14.6333 FNR=0.0000 MSpread=84.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 34/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [9.0, 25.0, 0]
+Score: [4.0, 19.0, 0]
+Score: [7.0, 23.0, 0]
+Score: [6.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.52631578947
+UC=32 MC=35 MS=86 CG=210 O=294 S=37
+AR=19.8667 FPR=15.1333 FNR=0.0000 MSpread=86.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 35/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [5.0, 22.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.47058823529
+UC=33 MC=36 MS=87 CG=216 O=303 S=38
+AR=20.8667 FPR=15.1333 FNR=0.0000 MSpread=87.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:50% - 36/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [6.0, 20.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [1.0, 16.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [1.0, 16.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+Uncertainty: 1.35714285714
+UC=1 MC=1 MS=3 CG=6 O=10 S=1
+AR=0.3333 FPR=0.6667 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 1/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [5.0, 22.0, 1]
+Score: [7.0, 23.0, 0]
+Score: [3.0, 18.0, 1]
+Score: [5.0, 21.0, 1]
+Score: [9.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 1]
+Uncertainty: 1.38888888889
+UC=2 MC=2 MS=4 CG=12 O=22 S=2
+AR=1.3333 FPR=0.6667 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 2/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [3.0, 17.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [0.0, 15.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 1]
+Uncertainty: 1.33333333333
+UC=3 MC=3 MS=5 CG=18 O=33 S=3
+AR=2.3333 FPR=0.6667 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 3/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [2.0, 16.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+Uncertainty: 1.375
+UC=4 MC=4 MS=6 CG=24 O=44 S=4
+AR=3.3333 FPR=0.6667 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 4/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [1.0, 17.0, 1]
+Score: [8.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 1]
+Uncertainty: 1.35294117647
+UC=5 MC=5 MS=7 CG=30 O=56 S=5
+AR=4.3333 FPR=0.6667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 5/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [7.0, 21.0, 1]
+Score: [3.0, 17.0, 0]
+Score: [2.0, 17.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 19.0, 1]
+Uncertainty: 1.41176470588
+UC=6 MC=6 MS=8 CG=36 O=67 S=6
+AR=5.3333 FPR=0.6667 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 6/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [8.0, 25.0, 1]
+Score: [4.0, 22.0, 1]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 1]
+Uncertainty: 1.40909090909
+UC=7 MC=7 MS=10 CG=42 O=81 S=7
+AR=5.8333 FPR=1.1667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 7/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [13.0, 29.0, 1]
+Score: [5.0, 20.0, 1]
+Score: [10.0, 26.0, 1]
+Score: [11.0, 27.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 1]
+Uncertainty: 1.45
+UC=8 MC=8 MS=13 CG=48 O=93 S=8
+AR=6.1667 FPR=1.8333 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 8/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [4.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [0.0, 17.0, 1]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 22.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+Uncertainty: 1.29411764706
+UC=9 MC=9 MS=14 CG=54 O=106 S=9
+AR=7.1667 FPR=1.8333 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 9/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [0.0, 17.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+Uncertainty: 1.29411764706
+UC=10 MC=10 MS=15 CG=60 O=119 S=10
+AR=8.1667 FPR=1.8333 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 10/36
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [0.0, 15.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 16.0, 1]
+Uncertainty: 1.33333333333
+UC=11 MC=11 MS=16 CG=66 O=130 S=11
+AR=9.1667 FPR=1.8333 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 11/36
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [6.0, 22.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 1]
+Uncertainty: 1.38888888889
+UC=12 MC=12 MS=17 CG=72 O=142 S=12
+AR=10.1667 FPR=1.8333 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 12/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [4.0, 18.0, 0]
+Score: [8.0, 22.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [7.0, 20.0, 1]
+Score: [5.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 1]
+Uncertainty: 1.38888888889
+UC=13 MC=13 MS=19 CG=78 O=153 S=13
+AR=10.6667 FPR=2.3333 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 13/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [10.0, 27.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 1]
+Uncertainty: 1.38095238095
+UC=14 MC=14 MS=21 CG=84 O=167 S=14
+AR=11.1667 FPR=2.8333 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 14/36
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+Uncertainty: 1.40909090909
+UC=15 MC=15 MS=23 CG=90 O=181 S=15
+AR=11.6667 FPR=3.3333 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 15/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [3.0, 20.0, 0]
+Score: [10.0, 26.0, 1]
+Score: [6.0, 21.0, 0]
+Score: [8.0, 24.0, 1]
+Score: [7.0, 23.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.4
+UC=16 MC=16 MS=24 CG=96 O=193 S=16
+AR=12.6667 FPR=3.3333 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 16/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [6.0, 23.0, 1]
+Score: [2.0, 19.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [3.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 1]
+Uncertainty: 1.42105263158
+UC=17 MC=17 MS=25 CG=102 O=205 S=17
+AR=13.6667 FPR=3.3333 FNR=0.0000 MSpread=25.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 17/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 1]
+Score: [3.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+Uncertainty: 1.35714285714
+UC=18 MC=18 MS=26 CG=108 O=215 S=18
+AR=14.6667 FPR=3.3333 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 18/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [3.0, 20.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.4
+UC=19 MC=19 MS=27 CG=114 O=228 S=19
+AR=15.6667 FPR=3.3333 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 19/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [4.0, 21.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+Uncertainty: 1.47619047619
+UC=19 MC=20 MS=30 CG=120 O=240 S=20
+AR=16.0000 FPR=4.0000 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 20/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 1]
+Score: [11.0, 27.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [8.0, 24.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 1]
+Uncertainty: 1.42105263158
+UC=20 MC=21 MS=31 CG=126 O=252 S=21
+AR=17.0000 FPR=4.0000 FNR=0.0000 MSpread=31.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 21/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 1]
+Score: [1.0, 17.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [3.0, 19.0, 1]
+Score: [5.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 1]
+Uncertainty: 1.35294117647
+UC=21 MC=22 MS=32 CG=132 O=264 S=22
+AR=18.0000 FPR=4.0000 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 22/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [9.0, 26.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [7.0, 22.0, 1]
+Score: [2.0, 18.0, 1]
+Score: [9.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+Uncertainty: 1.38888888889
+UC=22 MC=23 MS=33 CG=138 O=276 S=23
+AR=19.0000 FPR=4.0000 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 23/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [10.0, 27.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 24.0, 1]
+Score: [7.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+Uncertainty: 1.5
+UC=22 MC=24 MS=38 CG=144 O=289 S=24
+AR=19.2000 FPR=4.8000 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 24/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 1]
+Score: [5.0, 19.0, 1]
+Score: [4.0, 19.0, 1]
+Score: [6.0, 19.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+Uncertainty: 1.375
+UC=23 MC=25 MS=39 CG=150 O=300 S=25
+AR=20.2000 FPR=4.8000 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 25/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [6.0, 20.0, 1]
+Score: [1.0, 15.0, 1]
+Score: [2.0, 17.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [2.0, 17.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+Uncertainty: 1.33333333333
+UC=24 MC=26 MS=40 CG=156 O=311 S=26
+AR=21.2000 FPR=4.8000 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 26/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [2.0, 16.0, 1]
+Score: [4.0, 18.0, 1]
+Score: [6.0, 21.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 18.0, 1]
+Uncertainty: 1.375
+UC=25 MC=27 MS=41 CG=162 O=322 S=27
+AR=22.2000 FPR=4.8000 FNR=0.0000 MSpread=41.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 27/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 0]
+Score: [4.0, 20.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [4.0, 20.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 1]
+Uncertainty: 1.45
+UC=26 MC=28 MS=43 CG=168 O=334 S=28
+AR=22.7000 FPR=5.3000 FNR=0.0000 MSpread=43.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 28/36
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [8.0, 25.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [4.0, 22.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.4
+UC=27 MC=29 MS=45 CG=174 O=347 S=29
+AR=23.2000 FPR=5.8000 FNR=0.0000 MSpread=45.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 29/36
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [0.0, 17.0, 0]
+Score: [9.0, 25.0, 1]
+Score: [3.0, 18.0, 0]
+Score: [6.0, 22.0, 1]
+Score: [6.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 1]
+Uncertainty: 1.29411764706
+UC=28 MC=30 MS=47 CG=180 O=359 S=30
+AR=23.7000 FPR=6.3000 FNR=0.0000 MSpread=47.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 30/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [3.0, 19.0, 0]
+Score: [7.0, 22.0, 0]
+Score: [2.0, 18.0, 0]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 1]
+Uncertainty: 1.33333333333
+UC=29 MC=31 MS=48 CG=186 O=371 S=31
+AR=24.7000 FPR=6.3000 FNR=0.0000 MSpread=48.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 31/36
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [5.0, 22.0, 1]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 22.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [5.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 1]
+Uncertainty: 1.33333333333
+UC=30 MC=32 MS=49 CG=192 O=383 S=32
+AR=25.7000 FPR=6.3000 FNR=0.0000 MSpread=49.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 32/36
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [5.0, 19.0, 1]
+Score: [1.0, 15.0, 1]
+Score: [2.0, 17.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 17.0, 1]
+Uncertainty: 1.33333333333
+UC=31 MC=33 MS=50 CG=198 O=394 S=33
+AR=26.7000 FPR=6.3000 FNR=0.0000 MSpread=50.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 33/36
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 17.0, 1]
+Score: [3.0, 18.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [3.0, 18.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 15.0, 0]
+Uncertainty: 1.35714285714
+UC=32 MC=34 MS=52 CG=204 O=404 S=34
+AR=27.2000 FPR=6.8000 FNR=0.0000 MSpread=52.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 34/36
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [9.0, 26.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [6.0, 22.0, 1]
+Score: [7.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 28.0, 1]
+Uncertainty: 1.45
+UC=33 MC=35 MS=53 CG=210 O=416 S=35
+AR=28.2000 FPR=6.8000 FNR=0.0000 MSpread=53.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 35/36
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [2.0, 19.0, 1]
+Score: [7.0, 24.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [6.0, 24.0, 1]
+Score: [7.0, 24.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.36842105263
+UC=34 MC=36 MS=54 CG=216 O=429 S=36
+AR=29.2000 FPR=6.8000 FNR=0.0000 MSpread=54.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:70% - 36/36
+Real solution: [(served p3)(served p1)(served p6)(served p5)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [4.0, 20.0, 1]
+Score: [10.0, 26.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+Uncertainty: 1.25
+UC=1 MC=1 MS=1 CG=6 O=16 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 1/12
+Real solution: [(served p1)(served p2)(served p4)(served p5)]
+Score: [9.0, 23.0, 1]
+Score: [5.0, 19.0, 1]
+Score: [5.0, 20.0, 0]
+Score: [8.0, 21.0, 1]
+Score: [7.0, 22.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 1]
+Uncertainty: 1.26315789474
+UC=2 MC=2 MS=3 CG=12 O=31 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 2/12
+Real solution: [(served p2)(served p6)(served p3)(served p4)(served p7)]
+Score: [7.0, 24.0, 1]
+Score: [12.0, 28.0, 0]
+Score: [6.0, 21.0, 1]
+Score: [10.0, 26.0, 0]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.28571428571
+UC=3 MC=3 MS=6 CG=18 O=47 S=3
+AR=1.8333 FPR=1.1667 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 3/12
+Real solution: [(served p1)(served p2)(served p3)(served p4)(served p5)]
+Score: [5.0, 22.0, 0]
+Score: [11.0, 28.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [8.0, 26.0, 1]
+Score: [10.0, 27.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 1]
+Uncertainty: 1.18181818182
+UC=4 MC=4 MS=7 CG=24 O=65 S=4
+AR=2.8333 FPR=1.1667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 4/12
+Real solution: [(served p2)(served p3)(served p0)(served p5)(served p6)]
+Score: [10.0, 27.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [9.0, 26.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [8.0, 25.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.30434782609
+UC=5 MC=5 MS=8 CG=30 O=82 S=5
+AR=3.8333 FPR=1.1667 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 5/12
+Real solution: [(served p0)(served p1)(served p2)(served p3)]
+Score: [8.0, 22.0, 1]
+Score: [10.0, 24.0, 1]
+Score: [9.0, 24.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [8.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 24.0, 1]
+Uncertainty: 1.36363636364
+UC=6 MC=6 MS=14 CG=36 O=97 S=6
+AR=4.0000 FPR=2.0000 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 6/12
+Real solution: [(served p3)(served p1)(served p5)(served p4)]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [4.0, 19.0, 1]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 19.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 20.0, 0]
+Uncertainty: 1.125
+UC=7 MC=7 MS=15 CG=42 O=111 S=7
+AR=5.0000 FPR=2.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 7/12
+Real solution: [(served p1)(served p5)(served p6)(served p7)(served p8)]
+Score: [12.0, 29.0, 0]
+Score: [4.0, 20.0, 1]
+Score: [12.0, 27.0, 1]
+Score: [7.0, 23.0, 1]
+Score: [8.0, 24.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 28.0, 1]
+Uncertainty: 1.25
+UC=8 MC=8 MS=16 CG=48 O=127 S=8
+AR=6.0000 FPR=2.0000 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 8/12
+Real solution: [(served p3)(served p4)(served p5)(served p0)(served p7)]
+Score: [6.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [3.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.0
+UC=9 MC=9 MS=17 CG=54 O=145 S=9
+AR=7.0000 FPR=2.0000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 9/12
+Real solution: [(served p0)(served p1)(served p2)(served p3)(served p4)]
+Score: [2.0, 19.0, 0]
+Score: [12.0, 28.0, 1]
+Score: [8.0, 23.0, 0]
+Score: [9.0, 25.0, 1]
+Score: [9.0, 25.0, 0]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.10526315789
+UC=10 MC=10 MS=18 CG=60 O=162 S=10
+AR=8.0000 FPR=2.0000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 10/12
+Real solution: [(served p2)(served p4)(served p3)(served p5)]
+Score: [9.0, 23.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [4.0, 19.0, 1]
+Score: [7.0, 20.0, 1]
+Score: [6.0, 21.0, 1]
+./._domain.pddl
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 21.0, 1]
+Uncertainty: 1.26315789474
+UC=11 MC=11 MS=19 CG=66 O=177 S=11
+AR=9.0000 FPR=2.0000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 11/12
+Real solution: [(served p4)(served p5)(served p1)(served p7)(served p0)]
+Score: [9.0, 26.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [3.0, 21.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [8.0, 26.0, 1]
+Uncertainty: 1.14285714286
+UC=12 MC=12 MS=20 CG=72 O=196 S=12
+AR=10.0000 FPR=2.0000 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:miconic-optimal-noisy:100% - 12/12
+Experiment Time: 219.536386s

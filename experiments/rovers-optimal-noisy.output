@@ -1,0 +1,5150 @@
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=0 MC=1 MS=2 CG=6 O=2 S=2
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)(communicated_image_data objective1 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=0 MC=1 MS=3 CG=12 O=4 S=4
+AR=1.0000 FPR=0.3333 FNR=0.6667 MSpread=3.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 2/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=1 MC=2 MS=7 CG=18 O=5 S=8
+AR=2.0000 FPR=0.3333 FNR=0.6667 MSpread=7.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 3/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=2 MC=3 MS=11 CG=24 O=6 S=11
+AR=2.7500 FPR=0.5833 FNR=0.6667 MSpread=11.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+UC=3 MC=4 MS=15 CG=30 O=7 S=15
+AR=3.7500 FPR=0.5833 FNR=0.6667 MSpread=15.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=3 MC=5 MS=19 CG=36 O=9 S=17
+AR=4.2500 FPR=1.0833 FNR=0.6667 MSpread=19.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=3 MC=5 MS=21 CG=42 O=11 S=19
+AR=4.2500 FPR=1.5833 FNR=1.1667 MSpread=21.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 7/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=4 MC=6 MS=27 CG=48 O=13 S=20
+AR=4.4167 FPR=2.4167 FNR=1.1667 MSpread=27.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 8/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=4 MC=7 MS=31 CG=54 O=14 S=24
+AR=5.4167 FPR=2.4167 FNR=1.1667 MSpread=31.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 9/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+UC=4 MC=8 MS=35 CG=60 O=15 S=28
+AR=6.4167 FPR=2.4167 FNR=1.1667 MSpread=35.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 10/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+UC=4 MC=9 MS=41 CG=66 O=16 S=32
+AR=7.0833 FPR=2.7500 FNR=1.1667 MSpread=41.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 11/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+UC=4 MC=10 MS=47 CG=72 O=17 S=34
+AR=7.4167 FPR=3.4167 FNR=1.1667 MSpread=47.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=4 MC=10 MS=48 CG=78 O=19 S=35
+AR=7.4167 FPR=3.9167 FNR=1.6667 MSpread=48.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 13/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective1 low_res)(communicated_image_data objective2 low_res)]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=5 MC=11 MS=50 CG=84 O=21 S=37
+AR=8.4167 FPR=3.9167 FNR=1.6667 MSpread=50.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 14/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=5 MC=12 MS=52 CG=90 O=22 S=39
+AR=9.4167 FPR=3.9167 FNR=1.6667 MSpread=52.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 15/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=5 MC=13 MS=58 CG=96 O=24 S=41
+AR=9.7500 FPR=4.5833 FNR=1.6667 MSpread=58.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 16/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=5 MC=14 MS=64 CG=102 O=26 S=43
+AR=10.0833 FPR=5.2500 FNR=1.6667 MSpread=64.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 17/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=6 MC=15 MS=66 CG=108 O=28 S=45
+AR=11.0833 FPR=5.2500 FNR=1.6667 MSpread=66.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=6 MC=16 MS=68 CG=114 O=29 S=47
+AR=12.0833 FPR=5.2500 FNR=1.6667 MSpread=68.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 19/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=6 MC=16 MS=69 CG=120 O=31 S=49
+AR=12.0833 FPR=5.5833 FNR=2.3333 MSpread=69.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 20/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=7 MC=17 MS=71 CG=126 O=33 S=51
+AR=13.0833 FPR=5.5833 FNR=2.3333 MSpread=71.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=8 MC=18 MS=72 CG=132 O=34 S=52
+AR=14.0833 FPR=5.5833 FNR=2.3333 MSpread=72.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 22/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint1)(communicated_soil_data waypoint3)(communicated_image_data objective2 low_res)(communicated_image_data objective0 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=9 MC=19 MS=74 CG=138 O=36 S=55
+AR=14.7500 FPR=5.5833 FNR=2.6667 MSpread=74.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 23/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=10 MC=20 MS=75 CG=144 O=38 S=56
+AR=15.7500 FPR=5.5833 FNR=2.6667 MSpread=75.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=10 MC=21 MS=77 CG=150 O=39 S=57
+AR=16.2500 FPR=6.0833 FNR=2.6667 MSpread=77.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 25/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=11 MC=22 MS=78 CG=156 O=41 S=58
+AR=17.2500 FPR=6.0833 FNR=2.6667 MSpread=78.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=12 MC=23 MS=80 CG=162 O=43 S=59
+AR=17.7500 FPR=6.5833 FNR=2.6667 MSpread=80.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 27/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=12 MC=23 MS=81 CG=168 O=45 S=60
+AR=17.7500 FPR=7.0833 FNR=3.1667 MSpread=81.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=12 MC=24 MS=87 CG=174 O=47 S=61
+AR=17.9167 FPR=7.9167 FNR=3.1667 MSpread=87.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 29/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective2 high_res)(communicated_image_data objective0 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=13 MC=25 MS=89 CG=180 O=49 S=65
+AR=18.1167 FPR=8.1167 FNR=3.7667 MSpread=89.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+UC=13 MC=26 MS=95 CG=186 O=51 S=67
+AR=18.4500 FPR=8.7833 FNR=3.7667 MSpread=95.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 31/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=14 MC=27 MS=97 CG=192 O=53 S=69
+AR=19.4500 FPR=8.7833 FNR=3.7667 MSpread=97.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=15 MC=28 MS=98 CG=198 O=55 S=70
+AR=20.4500 FPR=8.7833 FNR=3.7667 MSpread=98.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 33/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=15 MC=28 MS=99 CG=204 O=57 S=74
+AR=20.7000 FPR=8.7833 FNR=4.5167 MSpread=99.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 34/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective2 high_res)(communicated_image_data objective0 low_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=15 MC=29 MS=103 CG=210 O=59 S=78
+AR=21.7000 FPR=8.7833 FNR=4.5167 MSpread=103.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 35/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=16 MC=30 MS=107 CG=216 O=60 S=82
+AR=22.7000 FPR=8.7833 FNR=4.5167 MSpread=107.0000
+delta-h-c-f1:rovers-optimal-noisy:10% - 36/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=1 MC=1 MS=1 CG=6 O=4 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=2 MC=2 MS=3 CG=12 O=8 S=3
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 2/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=2 MC=2 MS=5 CG=18 O=12 S=4
+AR=2.0000 FPR=0.6667 FNR=0.3333 MSpread=5.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 3/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=2 MC=2 MS=6 CG=24 O=16 S=5
+AR=2.0000 FPR=1.1667 FNR=0.8333 MSpread=6.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=2 MC=3 MS=9 CG=30 O=19 S=8
+AR=3.0000 FPR=1.1667 FNR=0.8333 MSpread=9.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=3 MC=4 MS=10 CG=36 O=22 S=9
+AR=4.0000 FPR=1.1667 FNR=0.8333 MSpread=10.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=4 MC=5 MS=12 CG=42 O=26 S=11
+AR=5.0000 FPR=1.1667 FNR=0.8333 MSpread=12.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 7/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=5 MC=6 MS=13 CG=48 O=30 S=12
+AR=6.0000 FPR=1.1667 FNR=0.8333 MSpread=13.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 8/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=5 MC=7 MS=16 CG=54 O=33 S=13
+AR=6.3333 FPR=1.8333 FNR=0.8333 MSpread=16.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 9/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=6 MC=8 MS=17 CG=60 O=37 S=14
+AR=7.3333 FPR=1.8333 FNR=0.8333 MSpread=17.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 10/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=6 MC=9 MS=19 CG=66 O=40 S=16
+AR=8.3333 FPR=1.8333 FNR=0.8333 MSpread=19.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 11/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=6 MC=9 MS=20 CG=72 O=44 S=17
+AR=8.3333 FPR=2.3333 FNR=1.3333 MSpread=20.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=7 MC=10 MS=21 CG=78 O=48 S=18
+AR=9.3333 FPR=2.3333 FNR=1.3333 MSpread=21.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 13/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=8 MC=11 MS=24 CG=84 O=52 S=21
+AR=10.3333 FPR=2.3333 FNR=1.3333 MSpread=24.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 14/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=9 MC=12 MS=25 CG=90 O=55 S=22
+AR=11.3333 FPR=2.3333 FNR=1.3333 MSpread=25.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 15/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=10 MC=13 MS=26 CG=96 O=58 S=23
+AR=12.3333 FPR=2.3333 FNR=1.3333 MSpread=26.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 16/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=11 MC=14 MS=27 CG=102 O=62 S=24
+AR=13.3333 FPR=2.3333 FNR=1.3333 MSpread=27.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 17/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=12 MC=15 MS=31 CG=108 O=66 S=25
+AR=13.5833 FPR=3.0833 FNR=1.3333 MSpread=31.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=12 MC=15 MS=32 CG=114 O=69 S=26
+AR=13.5833 FPR=3.5833 FNR=1.8333 MSpread=32.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 19/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=12 MC=16 MS=36 CG=120 O=72 S=29
+AR=14.3333 FPR=3.8333 FNR=1.8333 MSpread=36.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=13 MC=17 MS=39 CG=126 O=75 S=32
+AR=15.3333 FPR=3.8333 FNR=1.8333 MSpread=39.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=14 MC=18 MS=41 CG=132 O=79 S=33
+AR=15.8333 FPR=4.3333 FNR=1.8333 MSpread=41.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 22/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=15 MC=19 MS=42 CG=138 O=83 S=34
+AR=16.8333 FPR=4.3333 FNR=1.8333 MSpread=42.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 23/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=16 MC=20 MS=46 CG=144 O=87 S=35
+AR=17.0833 FPR=5.0833 FNR=1.8333 MSpread=46.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=16 MC=20 MS=48 CG=150 O=91 S=36
+AR=17.0833 FPR=5.7500 FNR=2.1667 MSpread=48.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 25/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=17 MC=21 MS=49 CG=156 O=95 S=37
+AR=18.0833 FPR=5.7500 FNR=2.1667 MSpread=49.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 26/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=18 MC=22 MS=50 CG=162 O=98 S=38
+AR=19.0833 FPR=5.7500 FNR=2.1667 MSpread=50.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 27/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=19 MC=23 MS=52 CG=168 O=102 S=39
+AR=19.5833 FPR=6.2500 FNR=2.1667 MSpread=52.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 28/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=20 MC=24 MS=53 CG=174 O=106 S=40
+AR=20.5833 FPR=6.2500 FNR=2.1667 MSpread=53.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 29/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=20 MC=24 MS=55 CG=180 O=110 S=41
+AR=20.5833 FPR=6.9167 FNR=2.5000 MSpread=55.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=21 MC=25 MS=56 CG=186 O=114 S=42
+AR=21.5833 FPR=6.9167 FNR=2.5000 MSpread=56.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 31/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=21 MC=25 MS=57 CG=192 O=117 S=43
+AR=21.5833 FPR=7.4167 FNR=3.0000 MSpread=57.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 32/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=22 MC=26 MS=58 CG=198 O=121 S=44
+AR=22.5833 FPR=7.4167 FNR=3.0000 MSpread=58.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 33/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=23 MC=27 MS=59 CG=204 O=125 S=45
+AR=23.5833 FPR=7.4167 FNR=3.0000 MSpread=59.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 34/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=24 MC=28 MS=60 CG=210 O=128 S=46
+AR=24.5833 FPR=7.4167 FNR=3.0000 MSpread=60.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 35/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=25 MC=29 MS=61 CG=216 O=132 S=47
+AR=25.5833 FPR=7.4167 FNR=3.0000 MSpread=61.0000
+delta-h-c-f1:rovers-optimal-noisy:30% - 36/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=1 MC=1 MS=1 CG=6 O=7 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 1/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=1 MC=1 MS=2 CG=12 O=13 S=3
+AR=1.5000 FPR=0.0000 FNR=0.5000 MSpread=2.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 2/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+UC=2 MC=2 MS=3 CG=18 O=19 S=4
+AR=2.5000 FPR=0.0000 FNR=0.5000 MSpread=3.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 3/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=3 MC=3 MS=4 CG=24 O=26 S=6
+AR=3.0000 FPR=0.0000 FNR=1.0000 MSpread=4.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=4 MC=4 MS=5 CG=30 O=32 S=7
+AR=4.0000 FPR=0.0000 FNR=1.0000 MSpread=5.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=4 MC=4 MS=6 CG=36 O=39 S=8
+AR=4.0000 FPR=0.5000 FNR=1.5000 MSpread=6.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=5 MC=5 MS=7 CG=42 O=46 S=9
+AR=5.0000 FPR=0.5000 FNR=1.5000 MSpread=7.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 7/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+UC=5 MC=5 MS=8 CG=48 O=53 S=10
+AR=5.0000 FPR=1.0000 FNR=2.0000 MSpread=8.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 8/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=6 MC=6 MS=9 CG=54 O=58 S=11
+AR=6.0000 FPR=1.0000 FNR=2.0000 MSpread=9.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 9/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=7 MC=7 MS=10 CG=60 O=62 S=12
+AR=7.0000 FPR=1.0000 FNR=2.0000 MSpread=10.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 10/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=8 MC=8 MS=11 CG=66 O=68 S=13
+AR=8.0000 FPR=1.0000 FNR=2.0000 MSpread=11.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 11/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=8 MC=8 MS=12 CG=72 O=74 S=15
+AR=8.5000 FPR=1.0000 FNR=2.5000 MSpread=12.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=9 MC=9 MS=14 CG=78 O=80 S=16
+AR=9.0000 FPR=1.5000 FNR=2.5000 MSpread=14.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 13/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=10 MC=10 MS=17 CG=84 O=85 S=18
+AR=9.6667 FPR=1.8333 FNR=2.5000 MSpread=17.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 14/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=11 MC=11 MS=18 CG=90 O=90 S=19
+AR=10.6667 FPR=1.8333 FNR=2.5000 MSpread=18.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 15/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=12 MC=12 MS=19 CG=96 O=97 S=20
+AR=11.6667 FPR=1.8333 FNR=2.5000 MSpread=19.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 16/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=13 MC=13 MS=20 CG=102 O=101 S=21
+AR=12.6667 FPR=1.8333 FNR=2.5000 MSpread=20.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 17/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+UC=14 MC=14 MS=21 CG=108 O=107 S=22
+AR=13.6667 FPR=1.8333 FNR=2.5000 MSpread=21.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 18/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+UC=15 MC=15 MS=22 CG=114 O=114 S=23
+AR=14.6667 FPR=1.8333 FNR=2.5000 MSpread=22.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 19/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=16 MC=16 MS=23 CG=120 O=119 S=24
+AR=15.6667 FPR=1.8333 FNR=2.5000 MSpread=23.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+UC=16 MC=16 MS=24 CG=126 O=126 S=25
+AR=15.6667 FPR=2.3333 FNR=3.0000 MSpread=24.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+UC=16 MC=17 MS=28 CG=132 O=131 S=26
+AR=15.9167 FPR=3.0833 FNR=3.0000 MSpread=28.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 22/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=17 MC=18 MS=29 CG=138 O=137 S=27
+AR=16.9167 FPR=3.0833 FNR=3.0000 MSpread=29.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 23/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=17 MC=19 MS=31 CG=144 O=142 S=29
+AR=17.9167 FPR=3.0833 FNR=3.0000 MSpread=31.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 24/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=18 MC=20 MS=33 CG=150 O=146 S=30
+AR=18.4167 FPR=3.5833 FNR=3.0000 MSpread=33.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 25/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=18 MC=20 MS=34 CG=156 O=150 S=31
+AR=18.4167 FPR=4.0833 FNR=3.5000 MSpread=34.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=18 MC=20 MS=35 CG=162 O=156 S=33
+AR=18.9167 FPR=4.0833 FNR=4.0000 MSpread=35.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 27/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+UC=19 MC=21 MS=37 CG=168 O=162 S=34
+AR=19.4167 FPR=4.5833 FNR=4.0000 MSpread=37.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=20 MC=22 MS=38 CG=174 O=169 S=35
+AR=20.4167 FPR=4.5833 FNR=4.0000 MSpread=38.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 29/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+UC=21 MC=23 MS=39 CG=180 O=173 S=36
+AR=21.4167 FPR=4.5833 FNR=4.0000 MSpread=39.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 30/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [8.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 0]
+UC=22 MC=24 MS=40 CG=186 O=179 S=37
+AR=22.4167 FPR=4.5833 FNR=4.0000 MSpread=40.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 31/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=23 MC=25 MS=41 CG=192 O=183 S=38
+AR=23.4167 FPR=4.5833 FNR=4.0000 MSpread=41.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=24 MC=26 MS=43 CG=198 O=189 S=39
+AR=23.9167 FPR=5.0833 FNR=4.0000 MSpread=43.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 33/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=24 MC=26 MS=44 CG=204 O=195 S=41
+AR=24.4167 FPR=5.0833 FNR=4.5000 MSpread=44.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 34/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=25 MC=27 MS=45 CG=210 O=201 S=42
+AR=25.4167 FPR=5.0833 FNR=4.5000 MSpread=45.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 35/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+UC=26 MC=28 MS=46 CG=216 O=207 S=43
+AR=26.4167 FPR=5.0833 FNR=4.5000 MSpread=46.0000
+delta-h-c-f1:rovers-optimal-noisy:50% - 36/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=1 MC=1 MS=1 CG=6 O=6 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=2 MC=2 MS=2 CG=12 O=15 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 2/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [7.0, 17.0, 1]
+Score: [5.0, 15.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+UC=3 MC=3 MS=3 CG=18 O=25 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 3/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [6.0, 18.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [2.0, 15.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+UC=4 MC=4 MS=4 CG=24 O=35 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 4/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [5.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=4 MC=4 MS=5 CG=30 O=43 S=5
+AR=4.0000 FPR=0.5000 FNR=0.5000 MSpread=5.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [8.0, 18.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=5 MC=5 MS=6 CG=36 O=53 S=6
+AR=5.0000 FPR=0.5000 FNR=0.5000 MSpread=6.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 6/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=6 MC=6 MS=9 CG=42 O=59 S=7
+AR=5.3333 FPR=1.1667 FNR=0.5000 MSpread=9.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 7/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [4.0, 16.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [12.0, 25.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 1]
+UC=7 MC=7 MS=10 CG=48 O=69 S=8
+AR=6.3333 FPR=1.1667 FNR=0.5000 MSpread=10.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 8/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 18.0, 0]
+UC=8 MC=8 MS=11 CG=54 O=76 S=9
+AR=7.3333 FPR=1.1667 FNR=0.5000 MSpread=11.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 9/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [9.0, 22.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+UC=9 MC=9 MS=12 CG=60 O=84 S=10
+AR=8.3333 FPR=1.1667 FNR=0.5000 MSpread=12.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 10/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+UC=10 MC=10 MS=13 CG=66 O=90 S=11
+AR=9.3333 FPR=1.1667 FNR=0.5000 MSpread=13.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 11/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=11 MC=11 MS=14 CG=72 O=99 S=12
+AR=10.3333 FPR=1.1667 FNR=0.5000 MSpread=14.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 12/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [9.0, 19.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [8.0, 20.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [5.0, 18.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 1]
+UC=12 MC=12 MS=15 CG=78 O=109 S=13
+AR=11.3333 FPR=1.1667 FNR=0.5000 MSpread=15.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 13/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+UC=13 MC=13 MS=16 CG=84 O=115 S=14
+AR=12.3333 FPR=1.1667 FNR=0.5000 MSpread=16.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 14/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [8.0, 18.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+UC=14 MC=14 MS=17 CG=90 O=125 S=15
+AR=13.3333 FPR=1.1667 FNR=0.5000 MSpread=17.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 15/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [9.0, 17.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+UC=15 MC=15 MS=18 CG=96 O=132 S=16
+AR=14.3333 FPR=1.1667 FNR=0.5000 MSpread=18.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 16/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+UC=16 MC=16 MS=19 CG=102 O=140 S=17
+AR=15.3333 FPR=1.1667 FNR=0.5000 MSpread=19.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 17/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=17 MC=17 MS=21 CG=108 O=149 S=18
+AR=15.8333 FPR=1.6667 FNR=0.5000 MSpread=21.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [1.0, 13.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [3.0, 16.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 1]
+UC=18 MC=18 MS=22 CG=114 O=159 S=19
+AR=16.8333 FPR=1.6667 FNR=0.5000 MSpread=22.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 19/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [9.0, 19.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=18 MC=18 MS=23 CG=120 O=167 S=20
+AR=16.8333 FPR=2.1667 FNR=1.0000 MSpread=23.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+UC=19 MC=19 MS=24 CG=126 O=176 S=21
+AR=17.8333 FPR=2.1667 FNR=1.0000 MSpread=24.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 21/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [0.0, 12.0, 1]
+Score: [6.0, 16.0, 1]
+Score: [6.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 1]
+UC=20 MC=20 MS=25 CG=132 O=186 S=22
+AR=18.8333 FPR=2.1667 FNR=1.0000 MSpread=25.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 22/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+UC=21 MC=21 MS=26 CG=138 O=193 S=23
+AR=19.8333 FPR=2.1667 FNR=1.0000 MSpread=26.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 23/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [10.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 0]
+UC=21 MC=21 MS=27 CG=144 O=201 S=24
+AR=19.8333 FPR=2.6667 FNR=1.5000 MSpread=27.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [10.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=22 MC=22 MS=28 CG=150 O=210 S=25
+AR=20.8333 FPR=2.6667 FNR=1.5000 MSpread=28.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 25/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+UC=23 MC=23 MS=29 CG=156 O=216 S=26
+AR=21.8333 FPR=2.6667 FNR=1.5000 MSpread=29.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [10.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+UC=24 MC=24 MS=30 CG=162 O=226 S=27
+AR=22.8333 FPR=2.6667 FNR=1.5000 MSpread=30.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 27/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=25 MC=25 MS=31 CG=168 O=235 S=28
+AR=23.8333 FPR=2.6667 FNR=1.5000 MSpread=31.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [8.0, 16.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 18.0, 0]
+UC=26 MC=26 MS=33 CG=174 O=242 S=29
+AR=24.3333 FPR=3.1667 FNR=1.5000 MSpread=33.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 29/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [8.0, 16.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 16.0, 0]
+UC=26 MC=26 MS=34 CG=180 O=249 S=30
+AR=24.3333 FPR=3.6667 FNR=2.0000 MSpread=34.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [8.0, 16.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=26 MC=26 MS=35 CG=186 O=256 S=31
+AR=24.3333 FPR=4.1667 FNR=2.5000 MSpread=35.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 31/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=27 MC=27 MS=37 CG=192 O=264 S=32
+AR=24.8333 FPR=4.6667 FNR=2.5000 MSpread=37.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=28 MC=28 MS=38 CG=198 O=272 S=33
+AR=25.8333 FPR=4.6667 FNR=2.5000 MSpread=38.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 33/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=29 MC=29 MS=39 CG=204 O=278 S=34
+AR=26.8333 FPR=4.6667 FNR=2.5000 MSpread=39.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 34/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+UC=30 MC=30 MS=40 CG=210 O=286 S=35
+AR=27.8333 FPR=4.6667 FNR=2.5000 MSpread=40.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 35/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+UC=31 MC=31 MS=41 CG=216 O=294 S=36
+AR=28.8333 FPR=4.6667 FNR=2.5000 MSpread=41.0000
+delta-h-c-f1:rovers-optimal-noisy:70% - 36/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [7.0, 16.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [7.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+UC=1 MC=1 MS=1 CG=6 O=8 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 1/12
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [1.0, 13.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [8.0, 21.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+UC=2 MC=2 MS=2 CG=12 O=21 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 2/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [12.0, 22.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [12.0, 24.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 1]
+UC=3 MC=3 MS=3 CG=18 O=34 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 3/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 1]
+Score: [9.0, 22.0, 1]
+Score: [6.0, 18.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [10.0, 23.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+UC=4 MC=4 MS=4 CG=24 O=45 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 4/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 1]
+Score: [1.0, 11.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [4.0, 16.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 1]
+UC=5 MC=5 MS=5 CG=30 O=57 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 5/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [11.0, 21.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [10.0, 22.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [7.0, 20.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 1]
+UC=6 MC=6 MS=6 CG=36 O=70 S=6
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 6/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [8.0, 18.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [3.0, 13.0, 1]
+Score: [9.0, 21.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 27.0, 1]
+UC=7 MC=7 MS=7 CG=42 O=81 S=7
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 7/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [6.0, 16.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [11.0, 24.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 24.0, 0]
+UC=8 MC=8 MS=8 CG=48 O=92 S=8
+AR=8.0000 FPR=0.0000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 8/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [9.0, 17.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 16.0, 0]
+UC=9 MC=9 MS=9 CG=54 O=101 S=9
+AR=9.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 9/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+UC=10 MC=10 MS=11 CG=60 O=113 S=10
+AR=9.5000 FPR=0.5000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 10/12
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+UC=11 MC=11 MS=12 CG=66 O=121 S=11
+AR=10.5000 FPR=0.5000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 11/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [6.0, 14.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 16.0, 0]
+UC=12 MC=12 MS=13 CG=72 O=130 S=12
+AR=11.5000 FPR=0.5000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1:rovers-optimal-noisy:100% - 12/12
+Experiment Time: 238.534153s
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.9
+UC=0 MC=1 MS=2 CG=6 O=2 S=2
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)(communicated_image_data objective1 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.84615384615
+UC=0 MC=1 MS=3 CG=12 O=4 S=4
+AR=1.0000 FPR=0.3333 FNR=0.6667 MSpread=3.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 2/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.875
+UC=1 MC=2 MS=7 CG=18 O=5 S=8
+AR=2.0000 FPR=0.3333 FNR=0.6667 MSpread=7.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 3/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.875
+UC=2 MC=3 MS=11 CG=24 O=6 S=11
+AR=2.7500 FPR=0.5833 FNR=0.6667 MSpread=11.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+Uncertainty: 1.88888888889
+UC=3 MC=4 MS=15 CG=30 O=7 S=15
+AR=3.7500 FPR=0.5833 FNR=0.6667 MSpread=15.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.8
+UC=3 MC=5 MS=19 CG=36 O=9 S=17
+AR=4.2500 FPR=1.0833 FNR=0.6667 MSpread=19.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.8
+UC=3 MC=5 MS=21 CG=42 O=11 S=19
+AR=4.2500 FPR=1.5833 FNR=1.1667 MSpread=21.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 7/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.91666666667
+UC=4 MC=6 MS=27 CG=48 O=13 S=20
+AR=4.4167 FPR=2.4167 FNR=1.1667 MSpread=27.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 8/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.875
+UC=4 MC=7 MS=31 CG=54 O=14 S=24
+AR=5.4167 FPR=2.4167 FNR=1.1667 MSpread=31.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 9/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+Uncertainty: 1.88888888889
+UC=4 MC=8 MS=35 CG=60 O=15 S=28
+AR=6.4167 FPR=2.4167 FNR=1.1667 MSpread=35.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 10/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+Uncertainty: 2.0
+UC=4 MC=9 MS=41 CG=66 O=16 S=32
+AR=7.0833 FPR=2.7500 FNR=1.1667 MSpread=41.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 11/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint3)(communicated_image_data objective1 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 10.0, 0]
+Uncertainty: 1.875
+UC=4 MC=10 MS=47 CG=72 O=17 S=34
+AR=7.4167 FPR=3.4167 FNR=1.1667 MSpread=47.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.8
+UC=4 MC=10 MS=48 CG=78 O=19 S=35
+AR=7.4167 FPR=3.9167 FNR=1.6667 MSpread=48.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 13/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective1 low_res)(communicated_image_data objective2 low_res)]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.8
+UC=5 MC=11 MS=50 CG=84 O=21 S=37
+AR=8.4167 FPR=3.9167 FNR=1.6667 MSpread=50.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 14/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.875
+UC=5 MC=12 MS=52 CG=90 O=22 S=39
+AR=9.4167 FPR=3.9167 FNR=1.6667 MSpread=52.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 15/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.8
+UC=5 MC=13 MS=58 CG=96 O=24 S=41
+AR=9.7500 FPR=4.5833 FNR=1.6667 MSpread=58.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 16/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.81818181818
+UC=5 MC=14 MS=64 CG=102 O=26 S=43
+AR=10.0833 FPR=5.2500 FNR=1.6667 MSpread=64.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 17/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.8
+UC=6 MC=15 MS=66 CG=108 O=28 S=45
+AR=11.0833 FPR=5.2500 FNR=1.6667 MSpread=66.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.875
+UC=6 MC=16 MS=68 CG=114 O=29 S=47
+AR=12.0833 FPR=5.2500 FNR=1.6667 MSpread=68.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 19/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.84615384615
+UC=6 MC=16 MS=69 CG=120 O=31 S=49
+AR=12.0833 FPR=5.5833 FNR=2.3333 MSpread=69.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 20/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.8
+UC=7 MC=17 MS=71 CG=126 O=33 S=51
+AR=13.0833 FPR=5.5833 FNR=2.3333 MSpread=71.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.88888888889
+UC=8 MC=18 MS=72 CG=132 O=34 S=52
+AR=14.0833 FPR=5.5833 FNR=2.3333 MSpread=72.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 22/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint1)(communicated_soil_data waypoint3)(communicated_image_data objective2 low_res)(communicated_image_data objective0 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.83333333333
+UC=9 MC=19 MS=74 CG=138 O=36 S=55
+AR=14.7500 FPR=5.5833 FNR=2.6667 MSpread=74.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 23/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.92307692308
+UC=10 MC=20 MS=75 CG=144 O=38 S=56
+AR=15.7500 FPR=5.5833 FNR=2.6667 MSpread=75.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.875
+UC=10 MC=21 MS=77 CG=150 O=39 S=57
+AR=16.2500 FPR=6.0833 FNR=2.6667 MSpread=77.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 25/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.8
+UC=11 MC=22 MS=78 CG=156 O=41 S=58
+AR=17.2500 FPR=6.0833 FNR=2.6667 MSpread=78.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.81818181818
+UC=12 MC=23 MS=80 CG=162 O=43 S=59
+AR=17.7500 FPR=6.5833 FNR=2.6667 MSpread=80.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 27/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.84615384615
+UC=12 MC=23 MS=81 CG=168 O=45 S=60
+AR=17.7500 FPR=7.0833 FNR=3.1667 MSpread=81.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.81818181818
+UC=12 MC=24 MS=87 CG=174 O=47 S=61
+AR=17.9167 FPR=7.9167 FNR=3.1667 MSpread=87.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 29/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective2 high_res)(communicated_image_data objective0 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.8
+UC=13 MC=25 MS=89 CG=180 O=49 S=65
+AR=18.1167 FPR=8.1167 FNR=3.7667 MSpread=89.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 13.0, 0]
+Uncertainty: 1.8
+UC=13 MC=26 MS=95 CG=186 O=51 S=67
+AR=18.4500 FPR=8.7833 FNR=3.7667 MSpread=95.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 31/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.8
+UC=14 MC=27 MS=97 CG=192 O=53 S=69
+AR=19.4500 FPR=8.7833 FNR=3.7667 MSpread=97.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.8
+UC=15 MC=28 MS=98 CG=198 O=55 S=70
+AR=20.4500 FPR=8.7833 FNR=3.7667 MSpread=98.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 33/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.84615384615
+UC=15 MC=28 MS=99 CG=204 O=57 S=74
+AR=20.7000 FPR=8.7833 FNR=4.5167 MSpread=99.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 34/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective2 high_res)(communicated_image_data objective0 low_res)]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.8
+UC=15 MC=29 MS=103 CG=210 O=59 S=78
+AR=21.7000 FPR=8.7833 FNR=4.5167 MSpread=103.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 35/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [0.0, 8.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.875
+UC=16 MC=30 MS=107 CG=216 O=60 S=82
+AR=22.7000 FPR=8.7833 FNR=4.5167 MSpread=107.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:10% - 36/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.69230769231
+UC=1 MC=1 MS=1 CG=6 O=4 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.6
+UC=2 MC=2 MS=3 CG=12 O=8 S=3
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 2/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.71428571429
+UC=2 MC=2 MS=5 CG=18 O=12 S=4
+AR=2.0000 FPR=0.6667 FNR=0.3333 MSpread=5.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 3/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.75
+UC=2 MC=2 MS=6 CG=24 O=16 S=5
+AR=2.0000 FPR=1.1667 FNR=0.8333 MSpread=6.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.66666666667
+UC=2 MC=3 MS=9 CG=30 O=19 S=8
+AR=3.0000 FPR=1.1667 FNR=0.8333 MSpread=9.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.66666666667
+UC=3 MC=4 MS=10 CG=36 O=22 S=9
+AR=4.0000 FPR=1.1667 FNR=0.8333 MSpread=10.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.6
+UC=4 MC=5 MS=12 CG=42 O=26 S=11
+AR=5.0000 FPR=1.1667 FNR=0.8333 MSpread=12.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 7/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.69230769231
+UC=5 MC=6 MS=13 CG=48 O=30 S=12
+AR=6.0000 FPR=1.1667 FNR=0.8333 MSpread=13.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 8/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.66666666667
+UC=5 MC=7 MS=16 CG=54 O=33 S=13
+AR=6.3333 FPR=1.8333 FNR=0.8333 MSpread=16.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 9/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.71428571429
+UC=6 MC=8 MS=17 CG=60 O=37 S=14
+AR=7.3333 FPR=1.8333 FNR=0.8333 MSpread=17.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 10/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.77777777778
+UC=6 MC=9 MS=19 CG=66 O=40 S=16
+AR=8.3333 FPR=1.8333 FNR=0.8333 MSpread=19.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 11/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.78571428571
+UC=6 MC=9 MS=20 CG=72 O=44 S=17
+AR=8.3333 FPR=2.3333 FNR=1.3333 MSpread=20.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.66666666667
+UC=7 MC=10 MS=23 CG=78 O=48 S=18
+AR=8.6667 FPR=3.0000 FNR=1.3333 MSpread=23.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 13/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.66666666667
+UC=8 MC=11 MS=26 CG=84 O=52 S=21
+AR=9.6667 FPR=3.0000 FNR=1.3333 MSpread=26.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 14/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.625
+UC=9 MC=12 MS=27 CG=90 O=55 S=22
+AR=10.6667 FPR=3.0000 FNR=1.3333 MSpread=27.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 15/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.7
+UC=10 MC=13 MS=28 CG=96 O=58 S=23
+AR=11.6667 FPR=3.0000 FNR=1.3333 MSpread=28.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 16/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.63636363636
+UC=11 MC=14 MS=29 CG=102 O=62 S=24
+AR=12.6667 FPR=3.0000 FNR=1.3333 MSpread=29.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 17/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.69230769231
+UC=12 MC=15 MS=33 CG=108 O=66 S=25
+AR=12.9167 FPR=3.7500 FNR=1.3333 MSpread=33.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.75
+UC=12 MC=15 MS=34 CG=114 O=69 S=26
+AR=12.9167 FPR=4.2500 FNR=1.8333 MSpread=34.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 19/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.8
+UC=12 MC=16 MS=38 CG=120 O=72 S=29
+AR=13.6667 FPR=4.5000 FNR=1.8333 MSpread=38.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 low_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.66666666667
+UC=13 MC=17 MS=41 CG=126 O=75 S=32
+AR=14.6667 FPR=4.5000 FNR=1.8333 MSpread=41.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [0.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.7
+UC=14 MC=18 MS=43 CG=132 O=79 S=33
+AR=15.1667 FPR=5.0000 FNR=1.8333 MSpread=43.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 22/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.6
+UC=15 MC=19 MS=44 CG=138 O=83 S=34
+AR=16.1667 FPR=5.0000 FNR=1.8333 MSpread=44.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 23/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.66666666667
+UC=16 MC=20 MS=48 CG=144 O=87 S=35
+AR=16.4167 FPR=5.7500 FNR=1.8333 MSpread=48.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.76923076923
+UC=16 MC=20 MS=50 CG=150 O=91 S=36
+AR=16.4167 FPR=6.4167 FNR=2.1667 MSpread=50.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 25/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.63636363636
+UC=17 MC=21 MS=51 CG=156 O=95 S=37
+AR=17.4167 FPR=6.4167 FNR=2.1667 MSpread=51.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 26/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.625
+UC=18 MC=22 MS=52 CG=162 O=98 S=38
+AR=18.4167 FPR=6.4167 FNR=2.1667 MSpread=52.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 27/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.63636363636
+UC=19 MC=23 MS=54 CG=168 O=102 S=39
+AR=18.9167 FPR=6.9167 FNR=2.1667 MSpread=54.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 28/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.75
+UC=20 MC=24 MS=55 CG=174 O=106 S=40
+AR=19.9167 FPR=6.9167 FNR=2.1667 MSpread=55.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 29/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.76923076923
+UC=20 MC=24 MS=57 CG=180 O=110 S=41
+AR=19.9167 FPR=7.5833 FNR=2.5000 MSpread=57.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.76923076923
+UC=21 MC=25 MS=58 CG=186 O=114 S=42
+AR=20.9167 FPR=7.5833 FNR=2.5000 MSpread=58.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 31/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.75
+UC=21 MC=26 MS=61 CG=192 O=117 S=43
+AR=21.2500 FPR=8.2500 FNR=2.5000 MSpread=61.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 32/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.66666666667
+UC=22 MC=27 MS=62 CG=198 O=121 S=44
+AR=22.2500 FPR=8.2500 FNR=2.5000 MSpread=62.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 33/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.6
+UC=23 MC=28 MS=63 CG=204 O=125 S=45
+AR=23.2500 FPR=8.2500 FNR=2.5000 MSpread=63.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 34/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.66666666667
+UC=24 MC=29 MS=64 CG=210 O=128 S=46
+AR=24.2500 FPR=8.2500 FNR=2.5000 MSpread=64.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 35/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.69230769231
+UC=25 MC=30 MS=65 CG=216 O=132 S=47
+AR=25.2500 FPR=8.2500 FNR=2.5000 MSpread=65.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:30% - 36/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.53846153846
+UC=1 MC=1 MS=1 CG=6 O=7 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 1/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.53846153846
+UC=1 MC=1 MS=2 CG=12 O=13 S=3
+AR=1.5000 FPR=0.0000 FNR=0.5000 MSpread=2.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 2/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+Uncertainty: 1.4
+UC=2 MC=2 MS=3 CG=18 O=19 S=4
+AR=2.5000 FPR=0.0000 FNR=0.5000 MSpread=3.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 3/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.53846153846
+UC=3 MC=3 MS=4 CG=24 O=26 S=6
+AR=3.0000 FPR=0.0000 FNR=1.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 4/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.4
+UC=4 MC=4 MS=5 CG=30 O=32 S=7
+AR=4.0000 FPR=0.0000 FNR=1.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.66666666667
+UC=4 MC=5 MS=11 CG=36 O=39 S=8
+AR=4.1667 FPR=0.8333 FNR=1.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 6/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.53846153846
+UC=5 MC=6 MS=12 CG=42 O=46 S=9
+AR=5.1667 FPR=0.8333 FNR=1.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 7/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 0]
+Uncertainty: 1.53333333333
+UC=5 MC=7 MS=14 CG=48 O=53 S=10
+AR=5.6667 FPR=1.3333 FNR=1.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 8/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.44444444444
+UC=6 MC=8 MS=15 CG=54 O=58 S=11
+AR=6.6667 FPR=1.3333 FNR=1.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 9/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.625
+UC=7 MC=9 MS=16 CG=60 O=62 S=12
+AR=7.6667 FPR=1.3333 FNR=1.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 10/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.45454545455
+UC=8 MC=10 MS=17 CG=66 O=68 S=13
+AR=8.6667 FPR=1.3333 FNR=1.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 11/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.625
+UC=8 MC=11 MS=20 CG=72 O=74 S=15
+AR=9.3333 FPR=1.6667 FNR=1.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 12/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [0.0, 10.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.6
+UC=9 MC=12 MS=22 CG=78 O=80 S=16
+AR=9.8333 FPR=2.1667 FNR=1.0000 MSpread=22.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 13/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.55555555556
+UC=10 MC=13 MS=25 CG=84 O=85 S=18
+AR=10.5000 FPR=2.5000 FNR=1.0000 MSpread=25.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 14/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.55555555556
+UC=11 MC=14 MS=26 CG=90 O=90 S=19
+AR=11.5000 FPR=2.5000 FNR=1.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 15/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [3.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.46153846154
+UC=12 MC=15 MS=27 CG=96 O=97 S=20
+AR=12.5000 FPR=2.5000 FNR=1.0000 MSpread=27.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 16/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.625
+UC=13 MC=16 MS=28 CG=102 O=101 S=21
+AR=13.5000 FPR=2.5000 FNR=1.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 17/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+Uncertainty: 1.5
+UC=14 MC=17 MS=30 CG=108 O=107 S=22
+AR=14.0000 FPR=3.0000 FNR=1.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 18/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [1.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+Uncertainty: 1.57142857143
+UC=15 MC=18 MS=31 CG=114 O=114 S=23
+AR=15.0000 FPR=3.0000 FNR=1.0000 MSpread=31.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 19/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.44444444444
+UC=16 MC=19 MS=32 CG=120 O=119 S=24
+AR=16.0000 FPR=3.0000 FNR=1.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 14.0, 0]
+Uncertainty: 1.57142857143
+UC=16 MC=19 MS=33 CG=126 O=126 S=25
+AR=16.0000 FPR=3.5000 FNR=1.5000 MSpread=33.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 21/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+Uncertainty: 1.58333333333
+UC=16 MC=20 MS=37 CG=132 O=131 S=26
+AR=16.2500 FPR=4.2500 FNR=1.5000 MSpread=37.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 22/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [2.0, 12.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.5
+UC=17 MC=21 MS=38 CG=138 O=137 S=27
+AR=17.2500 FPR=4.2500 FNR=1.5000 MSpread=38.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 23/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.44444444444
+UC=17 MC=22 MS=40 CG=144 O=142 S=29
+AR=18.2500 FPR=4.2500 FNR=1.5000 MSpread=40.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 24/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.55555555556
+UC=18 MC=23 MS=42 CG=150 O=146 S=30
+AR=18.7500 FPR=4.7500 FNR=1.5000 MSpread=42.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 25/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [1.0, 10.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.7
+UC=18 MC=23 MS=43 CG=156 O=150 S=31
+AR=18.7500 FPR=5.2500 FNR=2.0000 MSpread=43.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 17.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.53846153846
+UC=18 MC=23 MS=44 CG=162 O=156 S=33
+AR=19.2500 FPR=5.2500 FNR=2.5000 MSpread=44.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 27/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+Uncertainty: 1.53846153846
+UC=19 MC=24 MS=46 CG=168 O=162 S=34
+AR=19.7500 FPR=5.7500 FNR=2.5000 MSpread=46.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.53333333333
+UC=20 MC=25 MS=47 CG=174 O=169 S=35
+AR=20.7500 FPR=5.7500 FNR=2.5000 MSpread=47.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 29/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 11.0, 0]
+Uncertainty: 1.625
+UC=21 MC=26 MS=48 CG=180 O=173 S=36
+AR=21.7500 FPR=5.7500 FNR=2.5000 MSpread=48.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 30/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [8.0, 21.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [8.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 0]
+Uncertainty: 1.6
+UC=22 MC=27 MS=53 CG=186 O=179 S=37
+AR=21.9500 FPR=6.5500 FNR=2.5000 MSpread=53.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 31/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 9.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.625
+UC=23 MC=28 MS=54 CG=192 O=183 S=38
+AR=22.9500 FPR=6.5500 FNR=2.5000 MSpread=54.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.53846153846
+UC=24 MC=29 MS=57 CG=198 O=189 S=39
+AR=23.2833 FPR=7.2167 FNR=2.5000 MSpread=57.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 33/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res), (communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.61538461538
+UC=24 MC=29 MS=58 CG=204 O=195 S=41
+AR=23.7833 FPR=7.2167 FNR=3.0000 MSpread=58.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 34/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [2.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.45454545455
+UC=25 MC=30 MS=59 CG=210 O=201 S=42
+AR=24.7833 FPR=7.2167 FNR=3.0000 MSpread=59.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 35/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 17.0, 0]
+Uncertainty: 1.54545454545
+UC=26 MC=31 MS=60 CG=216 O=207 S=43
+AR=25.7833 FPR=7.2167 FNR=3.0000 MSpread=60.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:50% - 36/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.5
+UC=1 MC=1 MS=2 CG=6 O=6 S=1
+AR=0.5000 FPR=0.5000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 1/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.33333333333
+UC=2 MC=2 MS=3 CG=12 O=15 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 2/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [7.0, 17.0, 1]
+Score: [5.0, 15.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [4.0, 14.0, 0]
+Score: [7.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+Uncertainty: 1.30769230769
+UC=3 MC=3 MS=4 CG=18 O=25 S=3
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 3/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [6.0, 18.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [2.0, 15.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+Uncertainty: 1.30769230769
+UC=4 MC=4 MS=5 CG=24 O=35 S=4
+AR=3.5000 FPR=0.5000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 4/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [5.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.5
+UC=4 MC=5 MS=9 CG=30 O=43 S=5
+AR=3.7500 FPR=1.2500 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 5/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [8.0, 18.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.4375
+UC=5 MC=6 MS=10 CG=36 O=53 S=6
+AR=4.7500 FPR=1.2500 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 6/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [1.0, 9.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.33333333333
+UC=6 MC=7 MS=13 CG=42 O=59 S=7
+AR=5.0833 FPR=1.9167 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 7/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [4.0, 16.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [12.0, 25.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 1]
+Uncertainty: 1.4375
+UC=7 MC=8 MS=14 CG=48 O=69 S=8
+AR=6.0833 FPR=1.9167 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 8/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 18.0, 0]
+Uncertainty: 1.46153846154
+UC=8 MC=9 MS=17 CG=54 O=76 S=9
+AR=6.4167 FPR=2.5833 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 9/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [9.0, 22.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 0]
+Uncertainty: 1.27272727273
+UC=9 MC=10 MS=18 CG=60 O=84 S=10
+AR=7.4167 FPR=2.5833 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 10/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 14.0, 0]
+Uncertainty: 1.375
+UC=10 MC=11 MS=19 CG=66 O=90 S=11
+AR=8.4167 FPR=2.5833 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 11/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [6.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.25
+UC=11 MC=12 MS=20 CG=72 O=99 S=12
+AR=9.4167 FPR=2.5833 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 12/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [9.0, 19.0, 1]
+Score: [1.0, 14.0, 1]
+Score: [8.0, 20.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [5.0, 18.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 1]
+Uncertainty: 1.35714285714
+UC=12 MC=13 MS=21 CG=78 O=109 S=13
+AR=10.4167 FPR=2.5833 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 13/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [0.0, 8.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+Uncertainty: 1.25
+UC=13 MC=14 MS=22 CG=84 O=115 S=14
+AR=11.4167 FPR=2.5833 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 14/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [8.0, 18.0, 0]
+Score: [0.0, 13.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [5.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+Uncertainty: 1.38461538462
+UC=14 MC=15 MS=23 CG=90 O=125 S=15
+AR=12.4167 FPR=2.5833 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 15/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [1.0, 10.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [9.0, 17.0, 0]
+Score: [4.0, 13.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+Uncertainty: 1.3
+UC=15 MC=16 MS=24 CG=96 O=132 S=16
+AR=13.4167 FPR=2.5833 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 16/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [4.0, 14.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+Uncertainty: 1.33333333333
+UC=16 MC=17 MS=25 CG=102 O=140 S=17
+AR=14.4167 FPR=2.5833 FNR=0.0000 MSpread=25.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 17/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.42857142857
+UC=17 MC=18 MS=27 CG=108 O=149 S=18
+AR=14.9167 FPR=3.0833 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 18/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [5.0, 15.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [1.0, 13.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [3.0, 16.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 15.0, 1]
+Uncertainty: 1.30769230769
+UC=18 MC=19 MS=28 CG=114 O=159 S=19
+AR=15.9167 FPR=3.0833 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 19/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [9.0, 19.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [9.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.52941176471
+UC=18 MC=20 MS=30 CG=120 O=167 S=20
+AR=16.4167 FPR=3.5833 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 20/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [4.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 0]
+Uncertainty: 1.18181818182
+UC=19 MC=21 MS=31 CG=126 O=176 S=21
+AR=17.4167 FPR=3.5833 FNR=0.0000 MSpread=31.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 21/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [0.0, 12.0, 1]
+Score: [6.0, 16.0, 1]
+Score: [6.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 1]
+Uncertainty: 1.25
+UC=20 MC=22 MS=32 CG=132 O=186 S=22
+AR=18.4167 FPR=3.5833 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 22/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 13.0, 0]
+Uncertainty: 1.54545454545
+UC=21 MC=23 MS=35 CG=138 O=193 S=23
+AR=18.7500 FPR=4.2500 FNR=0.0000 MSpread=35.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 23/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [10.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 0]
+Uncertainty: 1.52941176471
+UC=21 MC=24 MS=37 CG=144 O=201 S=24
+AR=19.2500 FPR=4.7500 FNR=0.0000 MSpread=37.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 24/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [4.0, 17.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [10.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.30769230769
+UC=22 MC=25 MS=38 CG=150 O=210 S=25
+AR=20.2500 FPR=4.7500 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 25/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 12.0, 0]
+Uncertainty: 1.375
+UC=23 MC=26 MS=39 CG=156 O=216 S=26
+AR=21.2500 FPR=4.7500 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 26/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [10.0, 20.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [2.0, 15.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [10.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 20.0, 0]
+Uncertainty: 1.4
+UC=24 MC=27 MS=40 CG=162 O=226 S=27
+AR=22.2500 FPR=4.7500 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 27/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [2.0, 12.0, 0]
+Score: [3.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.25
+UC=25 MC=28 MS=41 CG=168 O=235 S=28
+AR=23.2500 FPR=4.7500 FNR=0.0000 MSpread=41.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 28/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [8.0, 16.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 18.0, 0]
+Uncertainty: 1.46153846154
+UC=26 MC=29 MS=43 CG=174 O=242 S=29
+AR=23.7500 FPR=5.2500 FNR=0.0000 MSpread=43.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 29/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [8.0, 16.0, 0]
+Score: [4.0, 13.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [7.0, 15.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 16.0, 0]
+Uncertainty: 1.41666666667
+UC=26 MC=30 MS=45 CG=180 O=249 S=30
+AR=24.2500 FPR=5.7500 FNR=0.0000 MSpread=45.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 30/36
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [4.0, 12.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [8.0, 16.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.36363636364
+UC=26 MC=30 MS=46 CG=186 O=256 S=31
+AR=24.2500 FPR=6.2500 FNR=0.5000 MSpread=46.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 31/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [3.0, 13.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [7.0, 17.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.38461538462
+UC=27 MC=31 MS=48 CG=192 O=264 S=32
+AR=24.7500 FPR=6.7500 FNR=0.5000 MSpread=48.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 32/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [5.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [3.0, 13.0, 0]
+Score: [8.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.27272727273
+UC=28 MC=32 MS=49 CG=198 O=272 S=33
+AR=25.7500 FPR=6.7500 FNR=0.5000 MSpread=49.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 33/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [3.0, 11.0, 0]
+Score: [5.0, 14.0, 0]
+Score: [2.0, 11.0, 0]
+Score: [0.0, 8.0, 0]
+Score: [5.0, 14.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.25
+UC=29 MC=33 MS=50 CG=204 O=278 S=34
+AR=26.7500 FPR=6.7500 FNR=0.5000 MSpread=50.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 34/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [1.0, 11.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [5.0, 15.0, 0]
+Score: [3.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 18.0, 0]
+Uncertainty: 1.36363636364
+UC=30 MC=34 MS=51 CG=210 O=286 S=35
+AR=27.7500 FPR=6.7500 FNR=0.5000 MSpread=51.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 35/36
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [1.0, 11.0, 0]
+Score: [6.0, 19.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [6.0, 16.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 16.0, 0]
+Uncertainty: 1.36363636364
+UC=31 MC=35 MS=52 CG=216 O=294 S=36
+AR=28.7500 FPR=6.7500 FNR=0.5000 MSpread=52.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:70% - 36/36
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint3)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [7.0, 16.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [3.0, 11.0, 0]
+Score: [7.0, 16.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 15.0, 0]
+Uncertainty: 1.36363636364
+UC=1 MC=1 MS=1 CG=6 O=8 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 1/12
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 1]
+Score: [10.0, 23.0, 1]
+Score: [1.0, 13.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [8.0, 21.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+Uncertainty: 1.07692307692
+UC=2 MC=2 MS=2 CG=12 O=21 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 2/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)(communicated_image_data objective1 high_res)]
+Score: [12.0, 22.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [0.0, 13.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [12.0, 24.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 21.0, 1]
+Uncertainty: 1.07692307692
+UC=3 MC=3 MS=3 CG=18 O=34 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 3/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 high_res)(communicated_image_data objective2 high_res)]
+Score: [4.0, 14.0, 1]
+Score: [9.0, 22.0, 1]
+Score: [6.0, 18.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [10.0, 23.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 19.0, 1]
+Uncertainty: 1.28571428571
+UC=4 MC=4 MS=4 CG=24 O=45 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 4/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [7.0, 17.0, 1]
+Score: [1.0, 11.0, 1]
+Score: [4.0, 17.0, 1]
+Score: [4.0, 14.0, 1]
+Score: [4.0, 16.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 1]
+Uncertainty: 1.0
+UC=5 MC=5 MS=5 CG=30 O=57 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 5/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [11.0, 21.0, 1]
+Score: [3.0, 16.0, 1]
+Score: [10.0, 22.0, 1]
+Score: [8.0, 18.0, 1]
+Score: [7.0, 20.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 23.0, 1]
+Uncertainty: 1.25
+UC=6 MC=6 MS=6 CG=36 O=70 S=6
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 6/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective0 high_res)]
+Score: [8.0, 18.0, 1]
+Score: [7.0, 17.0, 1]
+Score: [8.0, 21.0, 1]
+Score: [3.0, 13.0, 1]
+Score: [9.0, 21.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 27.0, 1]
+Uncertainty: 1.23076923077
+UC=7 MC=7 MS=7 CG=42 O=81 S=7
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 7/12
+Real solution: [(communicated_soil_data waypoint1)(communicated_rock_data waypoint0)(communicated_image_data objective0 low_res)(communicated_image_data objective2 low_res)]
+Score: [6.0, 16.0, 0]
+Score: [9.0, 19.0, 0]
+Score: [11.0, 24.0, 0]
+Score: [8.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 24.0, 0]
+Uncertainty: 1.375
+UC=8 MC=8 MS=10 CG=48 O=92 S=8
+AR=7.3333 FPR=0.6667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 8/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective1 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [9.0, 17.0, 0]
+Score: [3.0, 12.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 16.0, 0]
+Uncertainty: 1.11111111111
+UC=9 MC=9 MS=11 CG=54 O=101 S=9
+AR=8.3333 FPR=0.6667 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 9/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint0)(communicated_image_data objective1 high_res)(communicated_image_data objective2 high_res)]
+Score: [6.0, 16.0, 0]
+Score: [7.0, 20.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 14.0, 0]
+Score: [9.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 22.0, 0]
+Uncertainty: 1.21428571429
+UC=10 MC=10 MS=13 CG=60 O=113 S=10
+AR=8.8333 FPR=1.1667 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 10/12
+Real solution: [(communicated_soil_data waypoint3)(communicated_rock_data waypoint1)(communicated_image_data objective0 high_res)]
+Score: [2.0, 10.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [6.0, 15.0, 0]
+Score: [5.0, 13.0, 0]
+Score: [6.0, 15.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 17.0, 0]
+Uncertainty: 1.4
+UC=11 MC=11 MS=14 CG=66 O=121 S=11
+AR=9.8333 FPR=1.1667 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 11/12
+Real solution: [(communicated_soil_data waypoint2)(communicated_rock_data waypoint1)(communicated_image_data objective2 high_res)]
+Score: [6.0, 14.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [0.0, 9.0, 0]
+Score: [6.0, 14.0, 0]
+Score: [3.0, 12.0, 0]
+Score: [6.0, 16.0, 0]
+Uncertainty: 1.0
+UC=12 MC=12 MS=15 CG=72 O=130 S=12
+AR=10.8333 FPR=1.1667 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:rovers-optimal-noisy:100% - 12/12
+Experiment Time: 238.389514s

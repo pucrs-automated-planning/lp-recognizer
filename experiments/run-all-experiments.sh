@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 declare -a domains=(
-					"blocks-world"
-					"easy-ipc-grid"
-					"logistics"
-					"miconic"
-					"rovers"
-					"satellite"
-					"sokoban"
+					#"blocks-world"
+					"dwr"
+					#"easy-ipc-grid"
+					#"ferry"
+					#"logistics"
+					#"miconic"
+					#"rovers"
+					#"satellite"
+					#"sokoban"
 					)
 
 DATASETS=../goal-plan-recognition-dataset
@@ -33,14 +35,14 @@ run_domain() {
 }
 
 for domain in "${domains[@]}"; do
-	METHODS=$BASIC
+	METHODS="$BASIC"
 	run_domain $domain-optimal
-	run_domain $domain-suboptimal
-	METHODS="$BASIC $FILTERS" 
-	run_domain $domain-optimal-noisy
-	run_domain $domain-suboptimal-noisy
-	run_domain $domain-optimal-old-noisy
-	run_domain $domain-suboptimal-old-noisy
+#	run_domain $domain-suboptimal
+	METHODS="$BASIC $FILTERS"
+#	run_domain $domain-optimal-noisy
+#	run_domain $domain-suboptimal-noisy
+#	run_domain $domain-optimal-old-noisy
+#	run_domain $domain-suboptimal-old-noisy
 done
 
 popd

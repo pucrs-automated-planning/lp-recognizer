@@ -1,0 +1,6398 @@
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj12 pos21)(at obj22 pos12), (at obj12 pos23)(at obj22 pos12), (at obj13 pos23)(at obj22 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=1 MC=1 MS=4 CG=10 O=2 S=4
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 1/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=1 MC=2 MS=7 CG=20 O=4 S=5
+AR=1.3333 FPR=0.6667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos11), (at obj11 pos23)(at obj21 pos12), (at obj11 pos23)(at obj22 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=1 MC=3 MS=11 CG=30 O=6 S=9
+AR=2.3333 FPR=0.6667 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 3/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=2 MC=4 MS=12 CG=40 O=8 S=10
+AR=3.3333 FPR=0.6667 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 4/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=2 MC=5 MS=14 CG=50 O=10 S=11
+AR=3.8333 FPR=1.1667 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 5/36
+Real solution: [(at obj12 pos23)(at obj21 pos23), (at obj12 pos22)(at obj22 pos12), (at obj12 pos22)(at obj21 pos13)]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=3 MC=6 MS=17 CG=60 O=12 S=14
+AR=4.8333 FPR=1.1667 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 6/36
+Real solution: [(at obj11 pos21)(at obj23 pos11), (at obj11 pos23)(at obj21 pos12), (at obj11 pos23)(at obj22 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=3 MC=6 MS=20 CG=70 O=14 S=18
+AR=4.8333 FPR=1.5952 FNR=0.5714 MSpread=20.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 7/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=3 MC=7 MS=26 CG=80 O=16 S=24
+AR=5.8333 FPR=1.5952 FNR=0.5714 MSpread=26.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 8/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj11 pos21)(at obj22 pos12), (at obj11 pos22)(at obj21 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=3 MC=8 MS=29 CG=90 O=18 S=27
+AR=6.8333 FPR=1.5952 FNR=0.5714 MSpread=29.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 9/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=4 MC=9 MS=32 CG=100 O=20 S=28
+AR=7.1667 FPR=2.2619 FNR=0.5714 MSpread=32.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 10/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=5 MC=10 MS=33 CG=110 O=22 S=29
+AR=8.1667 FPR=2.2619 FNR=0.5714 MSpread=33.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 11/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj13 pos22)(at obj23 pos13), (at obj12 pos23)(at obj23 pos12), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=6 MC=11 MS=38 CG=120 O=24 S=34
+AR=9.1667 FPR=2.2619 FNR=0.5714 MSpread=38.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 12/36
+Real solution: [(at obj13 pos21)(at obj22 pos11), (at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=6 MC=12 MS=43 CG=130 O=26 S=39
+AR=10.1667 FPR=2.2619 FNR=0.5714 MSpread=43.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 13/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=7 MC=13 MS=49 CG=140 O=28 S=45
+AR=11.1667 FPR=2.2619 FNR=0.5714 MSpread=49.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 14/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=8 MC=14 MS=50 CG=150 O=30 S=46
+AR=12.1667 FPR=2.2619 FNR=0.5714 MSpread=50.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 15/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=8 MC=15 MS=58 CG=160 O=32 S=50
+AR=12.6667 FPR=2.7619 FNR=0.5714 MSpread=58.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 16/36
+Real solution: [(at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=9 MC=16 MS=68 CG=170 O=34 S=53
+AR=12.9667 FPR=3.4619 FNR=0.5714 MSpread=68.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 17/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=10 MC=17 MS=69 CG=180 O=36 S=54
+AR=13.9667 FPR=3.4619 FNR=0.5714 MSpread=69.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 18/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=11 MC=18 MS=70 CG=190 O=38 S=55
+AR=14.9667 FPR=3.4619 FNR=0.5714 MSpread=70.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 19/36
+Real solution: [(at obj13 pos11)(at obj22 pos11), (at obj12 pos22)(at obj22 pos12), (at obj11 pos23)(at obj22 pos13)]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=12 MC=19 MS=73 CG=200 O=40 S=58
+AR=15.9667 FPR=3.4619 FNR=0.5714 MSpread=73.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 20/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj12 pos22)(at obj22 pos12), (at obj13 pos11)(at obj23 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=12 MC=20 MS=83 CG=210 O=42 S=62
+AR=16.3667 FPR=4.0619 FNR=0.5714 MSpread=83.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 21/36
+Real solution: [(at obj13 pos11)(at obj22 pos11), (at obj12 pos22)(at obj22 pos12), (at obj11 pos23)(at obj22 pos13)]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=13 MC=21 MS=86 CG=220 O=44 S=65
+AR=17.3667 FPR=4.0619 FNR=0.5714 MSpread=86.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 22/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=13 MC=22 MS=90 CG=230 O=46 S=67
+AR=17.8667 FPR=4.5619 FNR=0.5714 MSpread=90.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 23/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=14 MC=23 MS=91 CG=240 O=48 S=68
+AR=18.8667 FPR=4.5619 FNR=0.5714 MSpread=91.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 24/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj11 pos23)(at obj21 pos13), (at obj13 pos22)(at obj21 pos11), (at obj11 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=14 MC=24 MS=95 CG=250 O=50 S=72
+AR=19.8667 FPR=4.5619 FNR=0.5714 MSpread=95.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 25/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=15 MC=25 MS=103 CG=260 O=52 S=73
+AR=19.9917 FPR=5.4369 FNR=0.5714 MSpread=103.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 26/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj21 pos11), (at obj11 pos22)(at obj21 pos13), (at obj13 pos22)(at obj23 pos11)]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=15 MC=26 MS=113 CG=270 O=54 S=77
+AR=20.3917 FPR=6.0369 FNR=0.5714 MSpread=113.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 27/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=16 MC=27 MS=114 CG=280 O=56 S=78
+AR=21.3917 FPR=6.0369 FNR=0.5714 MSpread=114.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 28/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj12 pos22)(at obj21 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=16 MC=28 MS=117 CG=290 O=58 S=81
+AR=22.3917 FPR=6.0369 FNR=0.5714 MSpread=117.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 29/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=16 MC=29 MS=125 CG=300 O=60 S=83
+AR=22.6417 FPR=6.7869 FNR=0.5714 MSpread=125.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 30/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=16 MC=30 MS=134 CG=310 O=62 S=85
+AR=22.8639 FPR=7.5647 FNR=0.5714 MSpread=134.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [1.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [4.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=16 MC=30 MS=136 CG=320 O=64 S=91
+AR=23.1972 FPR=7.5647 FNR=1.2381 MSpread=136.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 32/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=16 MC=31 MS=141 CG=330 O=66 S=97
+AR=24.0306 FPR=7.5647 FNR=1.4048 MSpread=141.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 33/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=17 MC=32 MS=142 CG=340 O=68 S=98
+AR=25.0306 FPR=7.5647 FNR=1.4048 MSpread=142.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 34/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj11 pos21)(at obj22 pos12), (at obj11 pos22)(at obj21 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=17 MC=33 MS=145 CG=350 O=70 S=101
+AR=26.0306 FPR=7.5647 FNR=1.4048 MSpread=145.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 35/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=18 MC=34 MS=146 CG=360 O=72 S=102
+AR=27.0306 FPR=7.5647 FNR=1.4048 MSpread=146.0000
+delta-h-c-f1:logistics-optimal-noisy:10% - 36/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=1 MC=1 MS=1 CG=10 O=6 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 1/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=1 MC=2 MS=3 CG=20 O=12 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 2/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=2 MC=3 MS=6 CG=30 O=18 S=5
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=3 MC=4 MS=7 CG=40 O=24 S=6
+AR=3.5000 FPR=0.5000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 4/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=3 MC=5 MS=9 CG=50 O=30 S=8
+AR=4.5000 FPR=0.5000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 5/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=4 MC=6 MS=10 CG=60 O=36 S=9
+AR=5.5000 FPR=0.5000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 6/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=5 MC=7 MS=11 CG=70 O=42 S=10
+AR=6.5000 FPR=0.5000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 7/36
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj13 pos23)(at obj22 pos12)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+UC=6 MC=8 MS=15 CG=80 O=48 S=12
+AR=7.0000 FPR=1.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 8/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=7 MC=9 MS=17 CG=90 O=52 S=13
+AR=7.5000 FPR=1.5000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 9/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=7 MC=10 MS=19 CG=100 O=58 S=15
+AR=8.5000 FPR=1.5000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 10/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=8 MC=11 MS=20 CG=110 O=64 S=16
+AR=9.5000 FPR=1.5000 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 11/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=8 MC=12 MS=22 CG=120 O=70 S=18
+AR=10.5000 FPR=1.5000 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 12/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=9 MC=13 MS=23 CG=130 O=75 S=19
+AR=11.5000 FPR=1.5000 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 13/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=9 MC=14 MS=25 CG=140 O=81 S=20
+AR=12.0000 FPR=2.0000 FNR=0.0000 MSpread=25.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 14/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=10 MC=15 MS=27 CG=150 O=87 S=21
+AR=12.5000 FPR=2.5000 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 15/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=11 MC=16 MS=33 CG=160 O=91 S=22
+AR=12.6667 FPR=3.3333 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 16/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=11 MC=17 MS=35 CG=170 O=97 S=23
+AR=13.1667 FPR=3.8333 FNR=0.0000 MSpread=35.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 17/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=12 MC=18 MS=36 CG=180 O=103 S=24
+AR=14.1667 FPR=3.8333 FNR=0.0000 MSpread=36.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 18/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=13 MC=19 MS=38 CG=190 O=109 S=25
+AR=14.6667 FPR=4.3333 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 19/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=13 MC=20 MS=40 CG=200 O=115 S=26
+AR=15.1667 FPR=4.8333 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 20/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=14 MC=21 MS=41 CG=210 O=121 S=27
+AR=16.1667 FPR=4.8333 FNR=0.0000 MSpread=41.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 21/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+UC=15 MC=22 MS=42 CG=220 O=127 S=28
+AR=17.1667 FPR=4.8333 FNR=0.0000 MSpread=42.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 22/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=15 MC=22 MS=46 CG=230 O=133 S=29
+AR=17.1667 FPR=5.6333 FNR=0.2000 MSpread=46.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 23/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=16 MC=23 MS=47 CG=240 O=139 S=30
+AR=18.1667 FPR=5.6333 FNR=0.2000 MSpread=47.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 24/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=16 MC=24 MS=50 CG=250 O=145 S=31
+AR=18.5000 FPR=6.3000 FNR=0.2000 MSpread=50.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 25/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj23 pos11)]
+Score: [5.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=17 MC=25 MS=53 CG=260 O=151 S=33
+AR=19.1667 FPR=6.6333 FNR=0.2000 MSpread=53.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 26/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=18 MC=26 MS=54 CG=270 O=157 S=34
+AR=20.1667 FPR=6.6333 FNR=0.2000 MSpread=54.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 27/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=19 MC=27 MS=55 CG=280 O=162 S=35
+AR=21.1667 FPR=6.6333 FNR=0.2000 MSpread=55.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 28/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=20 MC=28 MS=56 CG=290 O=168 S=36
+AR=22.1667 FPR=6.6333 FNR=0.2000 MSpread=56.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 29/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=21 MC=29 MS=57 CG=300 O=174 S=37
+AR=23.1667 FPR=6.6333 FNR=0.2000 MSpread=57.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 30/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=22 MC=30 MS=58 CG=310 O=180 S=38
+AR=24.1667 FPR=6.6333 FNR=0.2000 MSpread=58.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=23 MC=31 MS=59 CG=320 O=186 S=39
+AR=25.1667 FPR=6.6333 FNR=0.2000 MSpread=59.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 32/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=24 MC=32 MS=60 CG=330 O=190 S=40
+AR=26.1667 FPR=6.6333 FNR=0.2000 MSpread=60.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 33/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=25 MC=33 MS=61 CG=340 O=195 S=41
+AR=27.1667 FPR=6.6333 FNR=0.2000 MSpread=61.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 34/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=26 MC=34 MS=62 CG=350 O=201 S=42
+AR=28.1667 FPR=6.6333 FNR=0.2000 MSpread=62.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 35/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=27 MC=35 MS=64 CG=360 O=207 S=43
+AR=28.6667 FPR=7.1333 FNR=0.2000 MSpread=64.0000
+delta-h-c-f1:logistics-optimal-noisy:30% - 36/36
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj13 pos23)(at obj22 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [0.0, 18.0, 1]
+Score: [3.0, 22.0, 1]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=1 MC=1 MS=2 CG=10 O=10 S=2
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 1/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=2 MC=2 MS=3 CG=20 O=17 S=3
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=3 MC=3 MS=4 CG=30 O=27 S=4
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+UC=3 MC=4 MS=6 CG=40 O=37 S=6
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 4/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [5.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=4 MC=5 MS=7 CG=50 O=47 S=7
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 5/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+UC=5 MC=6 MS=10 CG=60 O=57 S=8
+AR=5.3333 FPR=0.6667 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 6/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [10.0, 29.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=6 MC=7 MS=11 CG=70 O=67 S=9
+AR=6.3333 FPR=0.6667 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 7/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=6 MC=8 MS=14 CG=80 O=77 S=10
+AR=6.6667 FPR=1.3333 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 8/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=7 MC=9 MS=15 CG=90 O=87 S=11
+AR=7.6667 FPR=1.3333 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 9/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=8 MC=10 MS=16 CG=100 O=97 S=12
+AR=8.6667 FPR=1.3333 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 10/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [6.0, 24.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=9 MC=11 MS=17 CG=110 O=104 S=13
+AR=9.6667 FPR=1.3333 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 11/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=9 MC=11 MS=18 CG=120 O=113 S=14
+AR=9.6667 FPR=1.8333 FNR=0.5000 MSpread=18.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 12/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [7.0, 25.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=10 MC=12 MS=19 CG=130 O=120 S=15
+AR=10.6667 FPR=1.8333 FNR=0.5000 MSpread=19.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 13/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=11 MC=13 MS=20 CG=140 O=130 S=16
+AR=11.6667 FPR=1.8333 FNR=0.5000 MSpread=20.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 14/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [0.0, 19.0, 0]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 28.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [8.0, 28.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 28.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=12 MC=14 MS=21 CG=150 O=140 S=17
+AR=12.6667 FPR=1.8333 FNR=0.5000 MSpread=21.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 15/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [5.0, 23.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+UC=12 MC=15 MS=23 CG=160 O=150 S=18
+AR=13.1667 FPR=2.3333 FNR=0.5000 MSpread=23.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 16/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=13 MC=16 MS=24 CG=170 O=160 S=19
+AR=14.1667 FPR=2.3333 FNR=0.5000 MSpread=24.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 17/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=14 MC=17 MS=25 CG=180 O=167 S=20
+AR=15.1667 FPR=2.3333 FNR=0.5000 MSpread=25.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 18/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=15 MC=18 MS=26 CG=190 O=174 S=21
+AR=16.1667 FPR=2.3333 FNR=0.5000 MSpread=26.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 19/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=16 MC=19 MS=29 CG=200 O=184 S=22
+AR=16.5000 FPR=3.0000 FNR=0.5000 MSpread=29.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 20/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+UC=17 MC=20 MS=30 CG=210 O=194 S=23
+AR=17.5000 FPR=3.0000 FNR=0.5000 MSpread=30.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 21/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=18 MC=21 MS=32 CG=220 O=203 S=24
+AR=18.0000 FPR=3.5000 FNR=0.5000 MSpread=32.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 22/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=19 MC=22 MS=33 CG=230 O=213 S=25
+AR=19.0000 FPR=3.5000 FNR=0.5000 MSpread=33.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 23/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=20 MC=23 MS=34 CG=240 O=223 S=26
+AR=20.0000 FPR=3.5000 FNR=0.5000 MSpread=34.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 24/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=21 MC=24 MS=35 CG=250 O=233 S=27
+AR=21.0000 FPR=3.5000 FNR=0.5000 MSpread=35.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 25/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+UC=21 MC=25 MS=37 CG=260 O=243 S=28
+AR=21.5000 FPR=4.0000 FNR=0.5000 MSpread=37.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 26/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=22 MC=26 MS=38 CG=270 O=250 S=29
+AR=22.5000 FPR=4.0000 FNR=0.5000 MSpread=38.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 27/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [7.0, 26.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=23 MC=27 MS=39 CG=280 O=260 S=30
+AR=23.5000 FPR=4.0000 FNR=0.5000 MSpread=39.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 28/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 0]
+UC=24 MC=28 MS=40 CG=290 O=269 S=31
+AR=24.5000 FPR=4.0000 FNR=0.5000 MSpread=40.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 29/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=25 MC=29 MS=41 CG=300 O=279 S=32
+AR=25.5000 FPR=4.0000 FNR=0.5000 MSpread=41.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 30/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 26.0, 1]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 22.0, 1]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 23.0, 1]
+Score: [5.0, 23.0, 0]
+Score: [1.0, 20.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+UC=26 MC=30 MS=42 CG=310 O=289 S=33
+AR=26.5000 FPR=4.0000 FNR=0.5000 MSpread=42.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [13.0, 33.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=27 MC=31 MS=43 CG=320 O=299 S=34
+AR=27.5000 FPR=4.0000 FNR=0.5000 MSpread=43.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 32/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=28 MC=32 MS=44 CG=330 O=309 S=35
+AR=28.5000 FPR=4.0000 FNR=0.5000 MSpread=44.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 33/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [14.0, 33.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=29 MC=33 MS=45 CG=340 O=319 S=36
+AR=29.5000 FPR=4.0000 FNR=0.5000 MSpread=45.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 34/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 0]
+UC=30 MC=34 MS=46 CG=350 O=329 S=37
+AR=30.5000 FPR=4.0000 FNR=0.5000 MSpread=46.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 35/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+UC=31 MC=35 MS=47 CG=360 O=339 S=38
+AR=31.5000 FPR=4.0000 FNR=0.5000 MSpread=47.0000
+delta-h-c-f1:logistics-optimal-noisy:50% - 36/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=1 MC=1 MS=1 CG=10 O=14 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 1/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 32.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=2 MC=2 MS=3 CG=20 O=27 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=3 MC=3 MS=4 CG=30 O=41 S=3
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+UC=4 MC=4 MS=5 CG=40 O=55 S=4
+AR=3.5000 FPR=0.5000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 4/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [11.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [12.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=5 MC=5 MS=6 CG=50 O=69 S=5
+AR=4.5000 FPR=0.5000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 5/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [17.0, 36.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [12.0, 30.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=6 MC=6 MS=7 CG=60 O=83 S=6
+AR=5.5000 FPR=0.5000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 6/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [13.0, 32.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=7 MC=7 MS=8 CG=70 O=97 S=7
+AR=6.5000 FPR=0.5000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 7/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [10.0, 29.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 0]
+UC=8 MC=8 MS=9 CG=80 O=111 S=8
+AR=7.5000 FPR=0.5000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 8/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [12.0, 31.0, 0]
+Score: [1.0, 19.0, 1]
+Score: [9.0, 28.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [9.0, 29.0, 1]
+Score: [8.0, 26.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=9 MC=9 MS=10 CG=90 O=125 S=9
+AR=8.5000 FPR=0.5000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 9/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [7.0, 26.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=10 MC=10 MS=12 CG=100 O=139 S=10
+AR=9.0000 FPR=1.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 10/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+UC=11 MC=11 MS=13 CG=110 O=153 S=11
+AR=10.0000 FPR=1.0000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 11/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [12.0, 32.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 34.0, 0]
+UC=12 MC=12 MS=14 CG=120 O=167 S=12
+AR=11.0000 FPR=1.0000 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 12/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [9.0, 29.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=13 MC=13 MS=15 CG=130 O=181 S=13
+AR=12.0000 FPR=1.0000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 13/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [7.0, 25.0, 1]
+Score: [0.0, 18.0, 1]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [11.0, 29.0, 0]
+Score: [1.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 1]
+UC=14 MC=14 MS=16 CG=140 O=195 S=14
+AR=13.0000 FPR=1.0000 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 14/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [9.0, 27.0, 1]
+Score: [10.0, 24.0, 1]
+Score: [3.0, 15.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [5.0, 22.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 27.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 1]
+UC=15 MC=15 MS=17 CG=150 O=205 S=15
+AR=14.0000 FPR=1.0000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 15/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=16 MC=16 MS=18 CG=160 O=219 S=16
+AR=15.0000 FPR=1.0000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 16/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=17 MC=17 MS=19 CG=170 O=233 S=17
+AR=16.0000 FPR=1.0000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 17/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [9.0, 27.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 0]
+UC=18 MC=18 MS=20 CG=180 O=243 S=18
+AR=17.0000 FPR=1.0000 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 18/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+UC=19 MC=19 MS=21 CG=190 O=257 S=19
+AR=18.0000 FPR=1.0000 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 19/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [8.0, 26.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=20 MC=20 MS=22 CG=200 O=267 S=20
+AR=19.0000 FPR=1.0000 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 20/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [11.0, 29.0, 0]
+Score: [15.0, 29.0, 0]
+Score: [18.0, 30.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [16.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=21 MC=21 MS=23 CG=210 O=281 S=21
+AR=20.0000 FPR=1.0000 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 21/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=22 MC=22 MS=25 CG=220 O=294 S=22
+AR=20.5000 FPR=1.5000 FNR=0.0000 MSpread=25.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 22/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 30.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 0]
+UC=23 MC=23 MS=26 CG=230 O=308 S=23
+AR=21.5000 FPR=1.5000 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 23/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [1.0, 20.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [13.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=24 MC=24 MS=27 CG=240 O=322 S=24
+AR=22.5000 FPR=1.5000 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 24/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [18.0, 35.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [15.0, 34.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [15.0, 35.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [17.0, 36.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=25 MC=25 MS=28 CG=250 O=336 S=25
+AR=23.5000 FPR=1.5000 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 25/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+UC=26 MC=26 MS=29 CG=260 O=346 S=26
+AR=24.5000 FPR=1.5000 FNR=0.0000 MSpread=29.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 26/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [15.0, 34.0, 1]
+Score: [4.0, 23.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [15.0, 33.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 33.0, 1]
+UC=27 MC=27 MS=30 CG=270 O=360 S=27
+AR=25.5000 FPR=1.5000 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 27/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+UC=27 MC=28 MS=32 CG=280 O=374 S=29
+AR=26.5000 FPR=1.5000 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 28/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [6.0, 24.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+UC=28 MC=29 MS=33 CG=290 O=384 S=30
+AR=27.5000 FPR=1.5000 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 29/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [15.0, 33.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+UC=29 MC=30 MS=34 CG=300 O=398 S=31
+AR=28.5000 FPR=1.5000 FNR=0.0000 MSpread=34.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 30/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [6.0, 25.0, 1]
+Score: [13.0, 30.0, 1]
+Score: [0.0, 19.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [11.0, 30.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [10.0, 30.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [11.0, 30.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 1]
+UC=30 MC=31 MS=35 CG=310 O=412 S=32
+AR=29.5000 FPR=1.5000 FNR=0.0000 MSpread=35.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 31/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [15.0, 34.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 0]
+UC=31 MC=32 MS=36 CG=320 O=426 S=33
+AR=30.5000 FPR=1.5000 FNR=0.0000 MSpread=36.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 32/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [10.0, 29.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [15.0, 34.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [15.0, 35.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=32 MC=33 MS=37 CG=330 O=439 S=34
+AR=31.5000 FPR=1.5000 FNR=0.0000 MSpread=37.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 33/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=33 MC=34 MS=38 CG=340 O=453 S=35
+AR=32.5000 FPR=1.5000 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 34/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [7.0, 25.0, 1]
+Score: [8.0, 22.0, 1]
+Score: [0.0, 12.0, 1]
+Score: [8.0, 26.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 20.0, 0]
+Score: [3.0, 20.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [7.0, 25.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+UC=34 MC=35 MS=39 CG=350 O=463 S=36
+AR=33.5000 FPR=1.5000 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 35/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [13.0, 32.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [13.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 31.0, 0]
+UC=35 MC=36 MS=40 CG=360 O=477 S=37
+AR=34.5000 FPR=1.5000 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1:logistics-optimal-noisy:70% - 36/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [14.0, 31.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [17.0, 36.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [16.0, 36.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+UC=1 MC=1 MS=1 CG=10 O=19 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 1/12
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [17.0, 31.0, 0]
+Score: [19.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [18.0, 35.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [14.0, 31.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [13.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 29.0, 0]
+UC=2 MC=2 MS=2 CG=20 O=38 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 2/12
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [10.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+UC=3 MC=3 MS=3 CG=30 O=58 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 3/12
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [2.0, 21.0, 1]
+Score: [15.0, 33.0, 0]
+Score: [15.0, 34.0, 1]
+Score: [10.0, 28.0, 0]
+Score: [14.0, 34.0, 1]
+Score: [14.0, 32.0, 0]
+Score: [15.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+UC=4 MC=4 MS=4 CG=40 O=78 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 4/12
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 29.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 32.0, 0]
+UC=5 MC=5 MS=5 CG=50 O=97 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 5/12
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [10.0, 28.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 0]
+UC=6 MC=6 MS=6 CG=60 O=111 S=6
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 6/12
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [10.0, 29.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [14.0, 34.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 32.0, 0]
+UC=7 MC=7 MS=7 CG=70 O=129 S=7
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 7/12
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [13.0, 32.0, 1]
+Score: [10.0, 29.0, 1]
+Score: [1.0, 19.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [13.0, 31.0, 1]
+Score: [10.0, 28.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 1]
+UC=8 MC=8 MS=8 CG=80 O=148 S=8
+AR=8.0000 FPR=0.0000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 8/12
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [10.0, 28.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [18.0, 30.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [16.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+UC=9 MC=9 MS=9 CG=90 O=167 S=9
+AR=9.0000 FPR=0.0000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 9/12
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [17.0, 36.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [18.0, 36.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [18.0, 36.0, 0]
+Score: [17.0, 35.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 35.0, 0]
+UC=10 MC=10 MS=10 CG=100 O=186 S=10
+AR=10.0000 FPR=0.0000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 10/12
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+UC=11 MC=11 MS=11 CG=110 O=205 S=11
+AR=11.0000 FPR=0.0000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 11/12
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [0.0, 12.0, 1]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 0]
+UC=12 MC=12 MS=12 CG=120 O=218 S=12
+AR=12.0000 FPR=0.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1:logistics-optimal-noisy:100% - 12/12
+Experiment Time: 342.713441s
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj12 pos21)(at obj22 pos12), (at obj12 pos23)(at obj22 pos12), (at obj13 pos23)(at obj22 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.88888888889
+UC=1 MC=1 MS=4 CG=10 O=2 S=4
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 1/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.94444444444
+UC=1 MC=2 MS=7 CG=20 O=4 S=5
+AR=1.3333 FPR=0.6667 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos11), (at obj11 pos23)(at obj21 pos12), (at obj11 pos23)(at obj22 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.94117647059
+UC=1 MC=3 MS=11 CG=30 O=6 S=9
+AR=2.3333 FPR=0.6667 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 3/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.89473684211
+UC=2 MC=4 MS=12 CG=40 O=8 S=10
+AR=3.3333 FPR=0.6667 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 4/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.94444444444
+UC=2 MC=5 MS=14 CG=50 O=10 S=11
+AR=3.8333 FPR=1.1667 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 5/36
+Real solution: [(at obj12 pos23)(at obj21 pos23), (at obj12 pos22)(at obj22 pos12), (at obj12 pos22)(at obj21 pos13)]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.85714285714
+UC=3 MC=6 MS=17 CG=60 O=12 S=14
+AR=4.8333 FPR=1.1667 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 6/36
+Real solution: [(at obj11 pos21)(at obj23 pos11), (at obj11 pos23)(at obj21 pos12), (at obj11 pos23)(at obj22 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.875
+UC=3 MC=6 MS=20 CG=70 O=14 S=18
+AR=4.8333 FPR=1.5952 FNR=0.5714 MSpread=20.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 7/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.89473684211
+UC=3 MC=7 MS=30 CG=80 O=16 S=24
+AR=5.4333 FPR=1.9952 FNR=0.5714 MSpread=30.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 8/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj11 pos21)(at obj22 pos12), (at obj11 pos22)(at obj21 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.94444444444
+UC=3 MC=8 MS=33 CG=90 O=18 S=27
+AR=6.4333 FPR=1.9952 FNR=0.5714 MSpread=33.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 9/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.85714285714
+UC=4 MC=9 MS=37 CG=100 O=20 S=28
+AR=6.6833 FPR=2.7452 FNR=0.5714 MSpread=37.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 10/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.88888888889
+UC=5 MC=10 MS=38 CG=110 O=22 S=29
+AR=7.6833 FPR=2.7452 FNR=0.5714 MSpread=38.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 11/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj13 pos22)(at obj23 pos13), (at obj12 pos23)(at obj23 pos12), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88888888889
+UC=6 MC=11 MS=43 CG=120 O=24 S=34
+AR=8.6833 FPR=2.7452 FNR=0.5714 MSpread=43.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 12/36
+Real solution: [(at obj13 pos21)(at obj22 pos11), (at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88888888889
+UC=6 MC=12 MS=48 CG=130 O=26 S=39
+AR=9.6833 FPR=2.7452 FNR=0.5714 MSpread=48.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 13/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88235294118
+UC=7 MC=13 MS=54 CG=140 O=28 S=45
+AR=10.6833 FPR=2.7452 FNR=0.5714 MSpread=54.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 14/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.88888888889
+UC=8 MC=14 MS=55 CG=150 O=30 S=46
+AR=11.6833 FPR=2.7452 FNR=0.5714 MSpread=55.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 15/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.94444444444
+UC=8 MC=15 MS=63 CG=160 O=32 S=50
+AR=12.1833 FPR=3.2452 FNR=0.5714 MSpread=63.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 16/36
+Real solution: [(at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.94117647059
+UC=9 MC=16 MS=73 CG=170 O=34 S=53
+AR=12.4833 FPR=3.9452 FNR=0.5714 MSpread=73.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 17/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.88888888889
+UC=10 MC=17 MS=74 CG=180 O=36 S=54
+AR=13.4833 FPR=3.9452 FNR=0.5714 MSpread=74.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 18/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.85714285714
+UC=11 MC=18 MS=75 CG=190 O=38 S=55
+AR=14.4833 FPR=3.9452 FNR=0.5714 MSpread=75.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 19/36
+Real solution: [(at obj13 pos11)(at obj22 pos11), (at obj12 pos22)(at obj22 pos12), (at obj11 pos23)(at obj22 pos13)]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.83333333333
+UC=12 MC=19 MS=78 CG=200 O=40 S=58
+AR=15.4833 FPR=3.9452 FNR=0.5714 MSpread=78.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 20/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj12 pos22)(at obj22 pos12), (at obj13 pos11)(at obj23 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.91666666667
+UC=12 MC=20 MS=88 CG=210 O=42 S=62
+AR=15.8833 FPR=4.5452 FNR=0.5714 MSpread=88.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 21/36
+Real solution: [(at obj13 pos11)(at obj22 pos11), (at obj12 pos22)(at obj22 pos12), (at obj11 pos23)(at obj22 pos13)]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [0.0, 17.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.83333333333
+UC=13 MC=21 MS=91 CG=220 O=44 S=65
+AR=16.8833 FPR=4.5452 FNR=0.5714 MSpread=91.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 22/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.9
+UC=13 MC=22 MS=95 CG=230 O=46 S=67
+AR=17.3833 FPR=5.0452 FNR=0.5714 MSpread=95.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 23/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.85714285714
+UC=14 MC=23 MS=96 CG=240 O=48 S=68
+AR=18.3833 FPR=5.0452 FNR=0.5714 MSpread=96.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 24/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj11 pos23)(at obj21 pos13), (at obj13 pos22)(at obj21 pos11), (at obj11 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88888888889
+UC=14 MC=24 MS=100 CG=250 O=50 S=72
+AR=19.3833 FPR=5.0452 FNR=0.5714 MSpread=100.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 25/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.88888888889
+UC=15 MC=25 MS=108 CG=260 O=52 S=73
+AR=19.5083 FPR=5.9202 FNR=0.5714 MSpread=108.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 26/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj21 pos11), (at obj11 pos22)(at obj21 pos13), (at obj13 pos22)(at obj23 pos11)]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.89473684211
+UC=15 MC=26 MS=118 CG=270 O=54 S=77
+AR=19.9083 FPR=6.5202 FNR=0.5714 MSpread=118.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 27/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.89473684211
+UC=16 MC=27 MS=119 CG=280 O=56 S=78
+AR=20.9083 FPR=6.5202 FNR=0.5714 MSpread=119.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 28/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj12 pos22)(at obj21 pos13), (at obj11 pos22)(at obj21 pos12)]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.88235294118
+UC=16 MC=28 MS=122 CG=290 O=58 S=81
+AR=21.9083 FPR=6.5202 FNR=0.5714 MSpread=122.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 29/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.94444444444
+UC=16 MC=29 MS=130 CG=300 O=60 S=83
+AR=22.1583 FPR=7.2702 FNR=0.5714 MSpread=130.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 30/36
+Real solution: [(at obj11 pos23)(at obj21 pos13), (at obj11 pos22)(at obj21 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.9
+UC=16 MC=30 MS=140 CG=310 O=62 S=85
+AR=22.3583 FPR=8.0702 FNR=0.5714 MSpread=140.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [1.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [4.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.89473684211
+UC=16 MC=30 MS=142 CG=320 O=64 S=91
+AR=22.6917 FPR=8.0702 FNR=1.2381 MSpread=142.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 32/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj23 pos12), (at obj13 pos22)(at obj22 pos13), (at obj13 pos22)(at obj21 pos11), (at obj13 pos23)(at obj23 pos11), (at obj13 pos23)(at obj22 pos12)]
+Score: [0.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.88888888889
+UC=16 MC=31 MS=147 CG=330 O=66 S=97
+AR=23.5250 FPR=8.0702 FNR=1.4048 MSpread=147.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 33/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 15.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.9
+UC=17 MC=32 MS=157 CG=340 O=68 S=98
+AR=23.6250 FPR=8.9702 FNR=1.4048 MSpread=157.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 34/36
+Real solution: [(at obj11 pos21)(at obj23 pos13), (at obj11 pos21)(at obj22 pos12), (at obj11 pos22)(at obj21 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.88888888889
+UC=17 MC=33 MS=160 CG=350 O=70 S=101
+AR=24.6250 FPR=8.9702 FNR=1.4048 MSpread=160.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 35/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.88888888889
+UC=18 MC=34 MS=161 CG=360 O=72 S=102
+AR=25.6250 FPR=8.9702 FNR=1.4048 MSpread=161.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:10% - 36/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.75
+UC=1 MC=1 MS=1 CG=10 O=6 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 1/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.75
+UC=1 MC=2 MS=11 CG=20 O=12 S=2
+AR=1.1000 FPR=0.9000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 2/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos23)(at obj23 pos11), (at obj13 pos22)(at obj23 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.72222222222
+UC=2 MC=3 MS=14 CG=30 O=18 S=5
+AR=2.1000 FPR=0.9000 FNR=0.0000 MSpread=14.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.68421052632
+UC=3 MC=4 MS=15 CG=40 O=24 S=6
+AR=3.1000 FPR=0.9000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 4/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.77777777778
+UC=3 MC=5 MS=17 CG=50 O=30 S=8
+AR=4.1000 FPR=0.9000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 5/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.7
+UC=4 MC=6 MS=23 CG=60 O=36 S=9
+AR=4.2667 FPR=1.7333 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 6/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.83333333333
+UC=5 MC=7 MS=24 CG=70 O=42 S=10
+AR=5.2667 FPR=1.7333 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 7/36
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj13 pos23)(at obj22 pos12)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [0.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 0]
+Uncertainty: 1.77777777778
+UC=6 MC=8 MS=28 CG=80 O=48 S=12
+AR=5.7667 FPR=2.2333 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 8/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.76923076923
+UC=7 MC=9 MS=30 CG=90 O=52 S=13
+AR=6.2667 FPR=2.7333 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 9/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 17.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.76470588235
+UC=7 MC=10 MS=32 CG=100 O=58 S=15
+AR=7.2667 FPR=2.7333 FNR=0.0000 MSpread=32.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 10/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.7619047619
+UC=8 MC=11 MS=33 CG=110 O=64 S=16
+AR=8.2667 FPR=2.7333 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 11/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.78947368421
+UC=8 MC=12 MS=36 CG=120 O=70 S=18
+AR=8.9333 FPR=3.0667 FNR=0.0000 MSpread=36.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 12/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.6875
+UC=9 MC=13 MS=39 CG=130 O=75 S=19
+AR=9.2667 FPR=3.7333 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 13/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.71428571429
+UC=9 MC=14 MS=43 CG=140 O=81 S=20
+AR=9.5167 FPR=4.4833 FNR=0.0000 MSpread=43.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 14/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.7
+UC=10 MC=15 MS=46 CG=150 O=87 S=21
+AR=9.8500 FPR=5.1500 FNR=0.0000 MSpread=46.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 15/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [1.0, 13.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [1.0, 15.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.69230769231
+UC=11 MC=16 MS=52 CG=160 O=91 S=22
+AR=10.0167 FPR=5.9833 FNR=0.0000 MSpread=52.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 16/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.66666666667
+UC=11 MC=17 MS=54 CG=170 O=97 S=23
+AR=10.5167 FPR=6.4833 FNR=0.0000 MSpread=54.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 17/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.72222222222
+UC=12 MC=18 MS=55 CG=180 O=103 S=24
+AR=11.5167 FPR=6.4833 FNR=0.0000 MSpread=55.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 18/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.71428571429
+UC=13 MC=19 MS=61 CG=190 O=109 S=25
+AR=11.6833 FPR=7.3167 FNR=0.0000 MSpread=61.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 19/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [3.0, 22.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.88888888889
+UC=13 MC=20 MS=63 CG=200 O=115 S=26
+AR=12.1833 FPR=7.8167 FNR=0.0000 MSpread=63.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 20/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.68421052632
+UC=14 MC=21 MS=64 CG=210 O=121 S=27
+AR=13.1833 FPR=7.8167 FNR=0.0000 MSpread=64.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 21/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 21.0, 0]
+Uncertainty: 1.77777777778
+UC=15 MC=22 MS=65 CG=220 O=127 S=28
+AR=14.1833 FPR=7.8167 FNR=0.0000 MSpread=65.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 22/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.85714285714
+UC=15 MC=23 MS=75 CG=230 O=133 S=29
+AR=14.2833 FPR=8.7167 FNR=0.0000 MSpread=75.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 23/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.7619047619
+UC=16 MC=24 MS=77 CG=240 O=139 S=30
+AR=14.7833 FPR=9.2167 FNR=0.0000 MSpread=77.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 24/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 17.0, 0]
+Score: [4.0, 16.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.66666666667
+UC=16 MC=25 MS=80 CG=250 O=145 S=31
+AR=15.1167 FPR=9.8833 FNR=0.0000 MSpread=80.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 25/36
+Real solution: [(at obj13 pos22)(at obj23 pos13), (at obj13 pos22)(at obj23 pos11)]
+Score: [5.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [1.0, 19.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.68421052632
+UC=17 MC=26 MS=83 CG=260 O=151 S=33
+AR=15.7833 FPR=10.2167 FNR=0.0000 MSpread=83.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 26/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.71428571429
+UC=18 MC=27 MS=84 CG=270 O=157 S=34
+AR=16.7833 FPR=10.2167 FNR=0.0000 MSpread=84.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 27/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.6875
+UC=19 MC=28 MS=86 CG=280 O=162 S=35
+AR=17.2833 FPR=10.7167 FNR=0.0000 MSpread=86.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 28/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.78947368421
+UC=20 MC=29 MS=87 CG=290 O=168 S=36
+AR=18.2833 FPR=10.7167 FNR=0.0000 MSpread=87.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 29/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 25.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.71428571429
+UC=21 MC=30 MS=89 CG=300 O=174 S=37
+AR=18.7833 FPR=11.2167 FNR=0.0000 MSpread=89.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 30/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [6.0, 25.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.68421052632
+UC=22 MC=31 MS=90 CG=310 O=180 S=38
+AR=19.7833 FPR=11.2167 FNR=0.0000 MSpread=90.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.73684210526
+UC=23 MC=32 MS=91 CG=320 O=186 S=39
+AR=20.7833 FPR=11.2167 FNR=0.0000 MSpread=91.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 32/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.75
+UC=24 MC=33 MS=92 CG=330 O=190 S=40
+AR=21.7833 FPR=11.2167 FNR=0.0000 MSpread=92.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 33/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [3.0, 21.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [6.0, 18.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.64285714286
+UC=25 MC=34 MS=93 CG=340 O=195 S=41
+AR=22.7833 FPR=11.2167 FNR=0.0000 MSpread=93.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 34/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.77777777778
+UC=26 MC=35 MS=94 CG=350 O=201 S=42
+AR=23.7833 FPR=11.2167 FNR=0.0000 MSpread=94.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 35/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 20.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.73684210526
+UC=27 MC=36 MS=96 CG=360 O=207 S=43
+AR=24.2833 FPR=11.7167 FNR=0.0000 MSpread=96.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:30% - 36/36
+Real solution: [(at obj13 pos22)(at obj22 pos13), (at obj13 pos23)(at obj22 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [0.0, 18.0, 1]
+Score: [3.0, 22.0, 1]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.5
+UC=1 MC=1 MS=2 CG=10 O=10 S=2
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 1/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [2.0, 14.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.64285714286
+UC=2 MC=2 MS=5 CG=20 O=17 S=3
+AR=1.3333 FPR=0.6667 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [1.0, 19.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.63157894737
+UC=3 MC=3 MS=6 CG=30 O=27 S=4
+AR=2.3333 FPR=0.6667 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos12), (at obj11 pos22)(at obj21 pos12)]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 17.0, 0]
+Uncertainty: 1.52941176471
+UC=3 MC=4 MS=8 CG=40 O=37 S=6
+AR=3.3333 FPR=0.6667 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 4/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [5.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [3.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.63636363636
+UC=4 MC=5 MS=9 CG=50 O=47 S=7
+AR=4.3333 FPR=0.6667 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 5/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [0.0, 18.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [0.0, 18.0, 0]
+Uncertainty: 1.5
+UC=5 MC=6 MS=12 CG=60 O=57 S=8
+AR=4.6667 FPR=1.3333 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 6/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [10.0, 29.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.52631578947
+UC=6 MC=7 MS=13 CG=70 O=67 S=9
+AR=5.6667 FPR=1.3333 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 7/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.7
+UC=6 MC=8 MS=16 CG=80 O=77 S=10
+AR=6.0000 FPR=2.0000 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 8/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.57894736842
+UC=7 MC=9 MS=17 CG=90 O=87 S=11
+AR=7.0000 FPR=2.0000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 9/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.5
+UC=8 MC=10 MS=18 CG=100 O=97 S=12
+AR=8.0000 FPR=2.0000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 10/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [6.0, 24.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.5
+UC=9 MC=11 MS=19 CG=110 O=104 S=13
+AR=9.0000 FPR=2.0000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 11/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.7
+UC=9 MC=11 MS=22 CG=120 O=113 S=14
+AR=9.0000 FPR=2.7500 FNR=0.2500 MSpread=22.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 12/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [7.0, 25.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.57142857143
+UC=10 MC=12 MS=23 CG=130 O=120 S=15
+AR=10.0000 FPR=2.7500 FNR=0.2500 MSpread=23.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 13/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.65
+UC=11 MC=13 MS=26 CG=140 O=130 S=16
+AR=10.3333 FPR=3.4167 FNR=0.2500 MSpread=26.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 14/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [4.0, 23.0, 1]
+Score: [11.0, 28.0, 1]
+Score: [0.0, 19.0, 0]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 28.0, 1]
+Score: [5.0, 23.0, 1]
+Score: [8.0, 28.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 28.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.47368421053
+UC=12 MC=14 MS=27 CG=150 O=140 S=17
+AR=11.3333 FPR=3.4167 FNR=0.2500 MSpread=27.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 15/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [5.0, 23.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 19.0, 0]
+Uncertainty: 1.63157894737
+UC=12 MC=15 MS=29 CG=160 O=150 S=18
+AR=11.8333 FPR=3.9167 FNR=0.2500 MSpread=29.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 16/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.68421052632
+UC=13 MC=16 MS=30 CG=170 O=160 S=19
+AR=12.8333 FPR=3.9167 FNR=0.2500 MSpread=30.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 17/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [4.0, 22.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.57142857143
+UC=14 MC=17 MS=31 CG=180 O=167 S=20
+AR=13.8333 FPR=3.9167 FNR=0.2500 MSpread=31.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 18/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.5
+UC=15 MC=18 MS=32 CG=190 O=174 S=21
+AR=14.8333 FPR=3.9167 FNR=0.2500 MSpread=32.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 19/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [4.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.63636363636
+UC=16 MC=19 MS=35 CG=200 O=184 S=22
+AR=15.1667 FPR=4.5833 FNR=0.2500 MSpread=35.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 20/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 23.0, 0]
+Uncertainty: 1.57142857143
+UC=17 MC=20 MS=36 CG=210 O=194 S=23
+AR=16.1667 FPR=4.5833 FNR=0.2500 MSpread=36.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 21/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [5.0, 24.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.57894736842
+UC=18 MC=21 MS=38 CG=220 O=203 S=24
+AR=16.6667 FPR=5.0833 FNR=0.2500 MSpread=38.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 22/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.57142857143
+UC=19 MC=22 MS=39 CG=230 O=213 S=25
+AR=17.6667 FPR=5.0833 FNR=0.2500 MSpread=39.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 23/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [8.0, 20.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.66666666667
+UC=20 MC=23 MS=40 CG=240 O=223 S=26
+AR=18.6667 FPR=5.0833 FNR=0.2500 MSpread=40.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 24/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.5
+UC=21 MC=24 MS=41 CG=250 O=233 S=27
+AR=19.6667 FPR=5.0833 FNR=0.2500 MSpread=41.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 25/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [0.0, 18.0, 0]
+Score: [4.0, 18.0, 0]
+Score: [7.0, 19.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [5.0, 19.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [5.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 18.0, 0]
+Uncertainty: 1.55555555556
+UC=21 MC=25 MS=43 CG=260 O=243 S=28
+AR=20.1667 FPR=5.5833 FNR=0.2500 MSpread=43.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 26/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.58333333333
+UC=22 MC=26 MS=44 CG=270 O=250 S=29
+AR=21.1667 FPR=5.5833 FNR=0.2500 MSpread=44.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 27/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [7.0, 26.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.61904761905
+UC=23 MC=27 MS=45 CG=280 O=260 S=30
+AR=22.1667 FPR=5.5833 FNR=0.2500 MSpread=45.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 28/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [6.0, 25.0, 0]
+Score: [2.0, 19.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [6.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 0]
+Uncertainty: 1.57894736842
+UC=24 MC=28 MS=47 CG=290 O=269 S=31
+AR=22.6667 FPR=6.0833 FNR=0.2500 MSpread=47.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 29/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.57142857143
+UC=25 MC=29 MS=48 CG=300 O=279 S=32
+AR=23.6667 FPR=6.0833 FNR=0.2500 MSpread=48.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 30/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 26.0, 1]
+Score: [0.0, 18.0, 0]
+Score: [3.0, 22.0, 1]
+Score: [4.0, 22.0, 0]
+Score: [3.0, 23.0, 1]
+Score: [5.0, 23.0, 0]
+Score: [1.0, 20.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 1]
+Uncertainty: 1.44444444444
+UC=26 MC=30 MS=49 CG=310 O=289 S=33
+AR=24.6667 FPR=6.0833 FNR=0.2500 MSpread=49.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 31/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [2.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [13.0, 33.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.61904761905
+UC=27 MC=31 MS=51 CG=320 O=299 S=34
+AR=25.1667 FPR=6.5833 FNR=0.2500 MSpread=51.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 32/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.52631578947
+UC=28 MC=32 MS=52 CG=330 O=309 S=35
+AR=26.1667 FPR=6.5833 FNR=0.2500 MSpread=52.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 33/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [14.0, 33.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.55
+UC=29 MC=33 MS=53 CG=340 O=319 S=36
+AR=27.1667 FPR=6.5833 FNR=0.2500 MSpread=53.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 34/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [3.0, 22.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [4.0, 23.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 0]
+Uncertainty: 1.59090909091
+UC=30 MC=34 MS=57 CG=350 O=329 S=37
+AR=27.4167 FPR=7.3333 FNR=0.2500 MSpread=57.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 35/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 0]
+Uncertainty: 1.57894736842
+UC=31 MC=35 MS=58 CG=360 O=339 S=38
+AR=28.4167 FPR=7.3333 FNR=0.2500 MSpread=58.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:50% - 36/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.47619047619
+UC=1 MC=1 MS=1 CG=10 O=14 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 1/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 32.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.45
+UC=2 MC=2 MS=3 CG=20 O=27 S=2
+AR=1.5000 FPR=0.5000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 2/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [2.0, 21.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.47619047619
+UC=3 MC=3 MS=4 CG=30 O=41 S=3
+AR=2.5000 FPR=0.5000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 3/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [5.0, 22.0, 0]
+Uncertainty: 1.35
+UC=4 MC=4 MS=5 CG=40 O=55 S=4
+AR=3.5000 FPR=0.5000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 4/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [11.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [12.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.42857142857
+UC=5 MC=5 MS=6 CG=50 O=69 S=5
+AR=4.5000 FPR=0.5000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 5/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [17.0, 36.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [12.0, 30.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.52173913043
+UC=6 MC=6 MS=7 CG=60 O=83 S=6
+AR=5.5000 FPR=0.5000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 6/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [13.0, 32.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.35
+UC=7 MC=7 MS=8 CG=70 O=97 S=7
+AR=6.5000 FPR=0.5000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 7/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [10.0, 29.0, 0]
+Score: [2.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [10.0, 28.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 0]
+Uncertainty: 1.42857142857
+UC=8 MC=8 MS=9 CG=80 O=111 S=8
+AR=7.5000 FPR=0.5000 FNR=0.0000 MSpread=9.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 8/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [8.0, 25.0, 1]
+Score: [12.0, 31.0, 0]
+Score: [1.0, 19.0, 1]
+Score: [9.0, 28.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [9.0, 29.0, 1]
+Score: [8.0, 26.0, 0]
+Score: [5.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.31578947368
+UC=9 MC=9 MS=10 CG=90 O=125 S=9
+AR=8.5000 FPR=0.5000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 9/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [7.0, 26.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 27.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [2.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.4
+UC=10 MC=10 MS=12 CG=100 O=139 S=10
+AR=9.0000 FPR=1.0000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 10/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [6.0, 24.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [13.0, 25.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 20.0, 0]
+Uncertainty: 1.27777777778
+UC=11 MC=11 MS=13 CG=110 O=153 S=11
+AR=10.0000 FPR=1.0000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 11/36
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [12.0, 32.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [16.0, 34.0, 0]
+Uncertainty: 1.47826086957
+UC=12 MC=12 MS=15 CG=120 O=167 S=12
+AR=10.5000 FPR=1.5000 FNR=0.0000 MSpread=15.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 12/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [7.0, 26.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [9.0, 29.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.42105263158
+UC=13 MC=13 MS=16 CG=130 O=181 S=13
+AR=11.5000 FPR=1.5000 FNR=0.0000 MSpread=16.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 13/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [4.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [7.0, 25.0, 1]
+Score: [0.0, 18.0, 1]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [11.0, 29.0, 0]
+Score: [1.0, 19.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [1.0, 19.0, 1]
+Uncertainty: 1.27777777778
+UC=14 MC=14 MS=17 CG=140 O=195 S=14
+AR=12.5000 FPR=1.5000 FNR=0.0000 MSpread=17.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 14/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [9.0, 27.0, 1]
+Score: [10.0, 24.0, 1]
+Score: [3.0, 15.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [6.0, 23.0, 1]
+Score: [7.0, 21.0, 1]
+Score: [5.0, 22.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [9.0, 27.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 1]
+Uncertainty: 1.4
+UC=15 MC=15 MS=18 CG=150 O=205 S=15
+AR=13.5000 FPR=1.5000 FNR=0.0000 MSpread=18.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 15/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [11.0, 30.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.36842105263
+UC=16 MC=16 MS=19 CG=160 O=219 S=16
+AR=14.5000 FPR=1.5000 FNR=0.0000 MSpread=19.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 16/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.44444444444
+UC=17 MC=17 MS=20 CG=170 O=233 S=17
+AR=15.5000 FPR=1.5000 FNR=0.0000 MSpread=20.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 17/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [9.0, 27.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [5.0, 22.0, 0]
+Score: [10.0, 24.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 0]
+Uncertainty: 1.5625
+UC=18 MC=18 MS=21 CG=180 O=243 S=18
+AR=16.5000 FPR=1.5000 FNR=0.0000 MSpread=21.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 18/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [6.0, 25.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [3.0, 21.0, 0]
+Uncertainty: 1.42105263158
+UC=19 MC=19 MS=22 CG=190 O=257 S=19
+AR=17.5000 FPR=1.5000 FNR=0.0000 MSpread=22.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 19/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [8.0, 26.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [11.0, 23.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.5
+UC=20 MC=20 MS=23 CG=200 O=267 S=20
+AR=18.5000 FPR=1.5000 FNR=0.0000 MSpread=23.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 20/36
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [11.0, 29.0, 0]
+Score: [15.0, 29.0, 0]
+Score: [18.0, 30.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [16.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.4347826087
+UC=21 MC=21 MS=24 CG=210 O=281 S=21
+AR=19.5000 FPR=1.5000 FNR=0.0000 MSpread=24.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 21/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [3.0, 22.0, 0]
+Score: [1.0, 18.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [8.0, 27.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [8.0, 28.0, 0]
+Score: [1.0, 19.0, 0]
+Score: [3.0, 22.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.5
+UC=22 MC=22 MS=26 CG=220 O=294 S=22
+AR=20.0000 FPR=2.0000 FNR=0.0000 MSpread=26.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 22/36
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [0.0, 18.0, 0]
+Score: [12.0, 26.0, 0]
+Score: [14.0, 26.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 30.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [9.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 26.0, 0]
+Uncertainty: 1.27777777778
+UC=23 MC=23 MS=27 CG=230 O=308 S=23
+AR=21.0000 FPR=2.0000 FNR=0.0000 MSpread=27.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 23/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [1.0, 20.0, 0]
+Score: [10.0, 27.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [2.0, 20.0, 0]
+Score: [13.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [8.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.4
+UC=24 MC=24 MS=28 CG=240 O=322 S=24
+AR=22.0000 FPR=2.0000 FNR=0.0000 MSpread=28.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 24/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [18.0, 35.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [15.0, 34.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [15.0, 35.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [17.0, 36.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.4347826087
+UC=25 MC=25 MS=29 CG=250 O=336 S=25
+AR=23.0000 FPR=2.0000 FNR=0.0000 MSpread=29.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 25/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 22.0, 0]
+Score: [0.0, 12.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [4.0, 21.0, 0]
+Score: [6.0, 20.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 0]
+Uncertainty: 1.33333333333
+UC=26 MC=26 MS=30 CG=260 O=346 S=26
+AR=24.0000 FPR=2.0000 FNR=0.0000 MSpread=30.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 26/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [15.0, 34.0, 1]
+Score: [4.0, 23.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [15.0, 33.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [15.0, 33.0, 1]
+Uncertainty: 1.4347826087
+UC=27 MC=27 MS=31 CG=270 O=360 S=27
+AR=25.0000 FPR=2.0000 FNR=0.0000 MSpread=31.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 27/36
+Real solution: [(at obj13 pos23)(at obj21 pos11), (at obj13 pos22)(at obj21 pos11)]
+Score: [0.0, 19.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [6.0, 25.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [10.0, 29.0, 0]
+Score: [0.0, 18.0, 0]
+Score: [10.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [6.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [4.0, 22.0, 0]
+Uncertainty: 1.33333333333
+UC=27 MC=28 MS=33 CG=280 O=374 S=29
+AR=26.0000 FPR=2.0000 FNR=0.0000 MSpread=33.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 28/36
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [6.0, 24.0, 0]
+Score: [0.0, 14.0, 0]
+Score: [9.0, 21.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [7.0, 21.0, 0]
+Score: [8.0, 25.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [7.0, 25.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 24.0, 0]
+Uncertainty: 1.35714285714
+UC=28 MC=29 MS=34 CG=290 O=384 S=30
+AR=27.0000 FPR=2.0000 FNR=0.0000 MSpread=34.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 29/36
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [8.0, 27.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [15.0, 33.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 26.0, 0]
+Uncertainty: 1.5
+UC=29 MC=30 MS=38 CG=300 O=398 S=31
+AR=27.2500 FPR=2.7500 FNR=0.0000 MSpread=38.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 30/36
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [6.0, 25.0, 1]
+Score: [13.0, 30.0, 1]
+Score: [0.0, 19.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [11.0, 30.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [10.0, 30.0, 1]
+Score: [11.0, 29.0, 1]
+Score: [11.0, 30.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [2.0, 20.0, 1]
+Uncertainty: 1.31578947368
+UC=30 MC=31 MS=39 CG=310 O=412 S=32
+AR=28.2500 FPR=2.7500 FNR=0.0000 MSpread=39.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 31/36
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [15.0, 34.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [3.0, 21.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [11.0, 29.0, 0]
+Uncertainty: 1.38095238095
+UC=31 MC=32 MS=40 CG=320 O=426 S=33
+AR=29.2500 FPR=2.7500 FNR=0.0000 MSpread=40.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 32/36
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [10.0, 29.0, 0]
+Score: [7.0, 24.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [15.0, 34.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [15.0, 35.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.54166666667
+UC=32 MC=33 MS=46 CG=330 O=439 S=34
+AR=29.4167 FPR=3.5833 FNR=0.0000 MSpread=46.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 33/36
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [12.0, 31.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.36842105263
+UC=33 MC=34 MS=47 CG=340 O=453 S=35
+AR=30.4167 FPR=3.5833 FNR=0.0000 MSpread=47.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 34/36
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [7.0, 25.0, 1]
+Score: [8.0, 22.0, 1]
+Score: [0.0, 12.0, 1]
+Score: [8.0, 26.0, 1]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 20.0, 0]
+Score: [3.0, 20.0, 1]
+Score: [7.0, 25.0, 1]
+Score: [7.0, 25.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [8.0, 25.0, 1]
+Uncertainty: 1.25
+UC=34 MC=35 MS=48 CG=350 O=463 S=36
+AR=31.4167 FPR=3.5833 FNR=0.0000 MSpread=48.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 35/36
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [13.0, 32.0, 0]
+Score: [0.0, 19.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [13.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [13.0, 31.0, 0]
+Uncertainty: 1.36842105263
+UC=35 MC=36 MS=49 CG=360 O=477 S=37
+AR=32.4167 FPR=3.5833 FNR=0.0000 MSpread=49.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:70% - 36/36
+Real solution: [(at obj13 pos23)(at obj21 pos11)]
+Score: [4.0, 23.0, 0]
+Score: [14.0, 31.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [17.0, 36.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [16.0, 36.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 30.0, 0]
+Uncertainty: 1.26086956522
+UC=1 MC=1 MS=1 CG=10 O=19 S=1
+AR=1.0000 FPR=0.0000 FNR=0.0000 MSpread=1.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 1/12
+Real solution: [(at obj11 pos21)(at obj23 pos11)]
+Score: [4.0, 22.0, 0]
+Score: [17.0, 31.0, 0]
+Score: [19.0, 31.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [18.0, 35.0, 0]
+Score: [14.0, 28.0, 0]
+Score: [14.0, 31.0, 0]
+Score: [16.0, 34.0, 0]
+Score: [13.0, 31.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [12.0, 29.0, 0]
+Uncertainty: 1.36363636364
+UC=2 MC=2 MS=2 CG=20 O=38 S=2
+AR=2.0000 FPR=0.0000 FNR=0.0000 MSpread=2.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 2/12
+Real solution: [(at obj13 pos22)(at obj23 pos13)]
+Score: [10.0, 29.0, 0]
+Score: [16.0, 35.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [8.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [7.0, 25.0, 0]
+Uncertainty: 1.21739130435
+UC=3 MC=3 MS=3 CG=30 O=58 S=3
+AR=3.0000 FPR=0.0000 FNR=0.0000 MSpread=3.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 3/12
+Real solution: [(at obj11 pos23)(at obj21 pos13)]
+Score: [9.0, 28.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [2.0, 21.0, 1]
+Score: [15.0, 33.0, 0]
+Score: [15.0, 34.0, 1]
+Score: [10.0, 28.0, 0]
+Score: [14.0, 34.0, 1]
+Score: [14.0, 32.0, 0]
+Score: [15.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 24.0, 0]
+Uncertainty: 1.14285714286
+UC=4 MC=4 MS=4 CG=40 O=78 S=4
+AR=4.0000 FPR=0.0000 FNR=0.0000 MSpread=4.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 4/12
+Real solution: [(at obj13 pos22)(at obj22 pos13)]
+Score: [11.0, 30.0, 0]
+Score: [11.0, 28.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [4.0, 22.0, 0]
+Score: [9.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 29.0, 0]
+Score: [12.0, 30.0, 0]
+Score: [7.0, 26.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 32.0, 0]
+Uncertainty: 1.27272727273
+UC=5 MC=5 MS=5 CG=50 O=97 S=5
+AR=5.0000 FPR=0.0000 FNR=0.0000 MSpread=5.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 5/12
+Real solution: [(at obj12 pos23)(at obj21 pos23)]
+Score: [10.0, 28.0, 0]
+Score: [2.0, 16.0, 0]
+Score: [12.0, 24.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [6.0, 23.0, 0]
+Score: [11.0, 25.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [6.0, 24.0, 0]
+Score: [11.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 27.0, 0]
+Uncertainty: 1.3125
+UC=6 MC=6 MS=6 CG=60 O=111 S=6
+AR=6.0000 FPR=0.0000 FNR=0.0000 MSpread=6.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 6/12
+Real solution: [(at obj13 pos22)(at obj23 pos12)]
+Score: [10.0, 29.0, 0]
+Score: [3.0, 20.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [14.0, 33.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [14.0, 34.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [10.0, 29.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [14.0, 32.0, 0]
+Uncertainty: 1.2
+UC=7 MC=7 MS=7 CG=70 O=129 S=7
+AR=7.0000 FPR=0.0000 FNR=0.0000 MSpread=7.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 7/12
+Real solution: [(at obj13 pos21)(at obj22 pos11)]
+Score: [13.0, 32.0, 1]
+Score: [10.0, 29.0, 1]
+Score: [1.0, 19.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [10.0, 28.0, 1]
+Score: [9.0, 27.0, 1]
+Score: [15.0, 33.0, 1]
+Score: [13.0, 31.0, 1]
+Score: [10.0, 28.0, 1]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [10.0, 28.0, 1]
+Uncertainty: 1.05263157895
+UC=8 MC=8 MS=8 CG=80 O=148 S=8
+AR=8.0000 FPR=0.0000 FNR=0.0000 MSpread=8.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 8/12
+Real solution: [(at obj11 pos23)(at obj21 pos12)]
+Score: [10.0, 28.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [18.0, 30.0, 0]
+Score: [5.0, 23.0, 0]
+Score: [16.0, 33.0, 0]
+Score: [16.0, 30.0, 0]
+Score: [12.0, 29.0, 0]
+Score: [11.0, 29.0, 0]
+Score: [16.0, 34.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [6.0, 23.0, 0]
+Uncertainty: 1.21739130435
+UC=9 MC=9 MS=10 CG=90 O=167 S=9
+AR=8.5000 FPR=0.5000 FNR=0.0000 MSpread=10.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 9/12
+Real solution: [(at obj12 pos23)(at obj22 pos13)]
+Score: [17.0, 36.0, 0]
+Score: [4.0, 23.0, 0]
+Score: [14.0, 32.0, 0]
+Score: [17.0, 35.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [18.0, 36.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [18.0, 36.0, 0]
+Score: [17.0, 35.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [17.0, 35.0, 0]
+Uncertainty: 1.26086956522
+UC=10 MC=10 MS=11 CG=100 O=186 S=10
+AR=9.5000 FPR=0.5000 FNR=0.0000 MSpread=11.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 10/12
+Real solution: [(at obj11 pos21)(at obj23 pos13)]
+Score: [0.0, 19.0, 0]
+Score: [13.0, 32.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [7.0, 25.0, 0]
+Score: [8.0, 26.0, 0]
+Score: [13.0, 31.0, 0]
+Score: [10.0, 28.0, 0]
+Score: [9.0, 27.0, 0]
+Score: [9.0, 27.0, 0]
+domain.pddl
+template.pddl
+hyps.dat
+obs.dat
+obs_noisy.dat
+real_hyp.dat
+Score: [9.0, 27.0, 0]
+Uncertainty: 1.10526315789
+UC=11 MC=11 MS=12 CG=110 O=205 S=11
+AR=10.5000 FPR=0.5000 FNR=0.0000 MSpread=12.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 11/12
+Real solution: [(at obj13 pos11)(at obj22 pos11)]
+Score: [8.0, 26.0, 0]
+Score: [9.0, 23.0, 0]
+Score: [0.0, 12.0, 1]
+Score: [9.0, 27.0, 0]
+Score: [4.0, 21.0, 1]
+Score: [6.0, 20.0, 1]
+Score: [3.0, 20.0, 1]
+Score: [8.0, 26.0, 0]
+Score: [7.0, 25.0, 1]
+Score: [9.0, 26.0, 0]
+Uncertainty: 1.0
+UC=12 MC=12 MS=13 CG=120 O=218 S=12
+AR=11.5000 FPR=0.5000 FNR=0.0000 MSpread=13.0000
+delta-h-c-f1-uncertainty:logistics-optimal-noisy:100% - 12/12
+Experiment Time: 343.425213s
