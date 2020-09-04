@@ -33,7 +33,7 @@ run_domain() {
 	cp -R ../lp-recognizer/*.py ../lp-recognizer-$1
 	pushd ../lp-recognizer-$1
 	echo "Running domain $1 at `pwd`"
-	screen -S $1 -dm bash -c "python2 test_domain.py $DATASETS $1 $METHODS"
+	screen -S $1 -dm bash -c "python2 test_domain.py $DATASETS $1 \"$METHODS\""
 	popd
 }
 

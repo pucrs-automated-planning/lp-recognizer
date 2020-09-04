@@ -84,17 +84,18 @@ class ExperimentH:
 def get_all_h_values():
     observabilities = [10, 30, 50, 70]
     constraint_sets = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
-    domains = ["blocks-world",
+    domains = [
+    #"blocks-world",
     #"depots",
     #"driverlog",
-    #"dwr",
-    "easy-ipc-grid",
-    #"ferry",
-    "logistics",
-    "miconic",
-    "rovers",
-    "satellite",
-    "sokoban",
+    "dwr",
+    #"easy-ipc-grid",
+    "ferry",
+    #"logistics",
+    #"miconic",
+    #"rovers",
+    #"satellite",
+    #"sokoban",
     #"zeno-travel",
     ]
     domain_types = [

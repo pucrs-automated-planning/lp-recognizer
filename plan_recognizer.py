@@ -10,7 +10,7 @@ class PlanRecognizer:
         self.observations = self.load_observations('obs.dat')
         self.hyps = self.load_hypotheses([options.hyp_max_time, options.max_memory, options.heuristics, \
             str(h).lower(), str(h_c).lower(), str(h_s).lower(), \
-            options.weight, options.filter])
+            options.weight, options.filter, options.solver])
         self.unique_goal = None
         self.accepted_hypotheses = set()
 

@@ -68,7 +68,7 @@ In order to run experiments for an entire domain organized in a folder named ```
 For example, to run all Sokoban experiments, using all the heuristics you need to run:
 
 ```bash
-./test_domain.py experiments sokoban v c dc ds
+./test_domain.py experiments sokoban "dc dcu dc-f2"
 ```
 
 ### Running plan recognition 

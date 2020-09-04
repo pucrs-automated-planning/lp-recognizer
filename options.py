@@ -14,7 +14,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "r:be:ht:m:T:F:H:",
+                                       "r:be:ht:m:T:F:H:S:",
                                        ["recognizer-name=",
                                         "batch",
                                         "experiment=",
@@ -23,7 +23,8 @@ class Program_Options:
                                         "max-memory=",
                                         "theta=",
                                         "filter=",
-                                        "heuristics="])
+                                        "heuristics=",
+                                        "solver="])
         except getopt.GetoptError:
             print("Missing or incorrect parameters specified!", file=sys.stderr)
             usage()
@@ -42,6 +43,7 @@ class Program_Options:
         self.filter = 0 # Obs filter
         self.weight = 3
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
+        self.solver = "soplex"
 
         for opcode, oparg in opts:
             if opcode in ('-b', '--batch'):
@@ -153,6 +155,7 @@ class Program_Options:
     def extract_exp_file(self, exp_file=None):
         if not exp_file:
             exp_file = self.exp_file
+        print(exp_file)
         os.system('tar jxvf %s' % exp_file)
         if not os.path.exists('domain.pddl'):
             os.system('tar -jxvf %s' % exp_file + ' --strip-components 1')

@@ -31,18 +31,18 @@ fi
 
 run_domain() {
 	echo "Running domain $1"
-	python2 test_domain.py $DATASETS $1 $METHODS > experiments/$1.output
+	python2 test_domain.py $DATASETS $1 "$METHODS" > experiments/$1.output
 }
 
 for domain in "${domains[@]}"; do
 	METHODS="$BASIC"
 	run_domain $domain-optimal
-#	run_domain $domain-suboptimal
+	run_domain $domain-suboptimal
 	METHODS="$BASIC $FILTERS"
-#	run_domain $domain-optimal-noisy
-#	run_domain $domain-suboptimal-noisy
-#	run_domain $domain-optimal-old-noisy
-#	run_domain $domain-suboptimal-old-noisy
+	run_domain $domain-optimal-noisy
+	run_domain $domain-suboptimal-noisy
+	run_domain $domain-optimal-old-noisy
+	run_domain $domain-suboptimal-old-noisy
 done
 
 popd
