@@ -102,6 +102,9 @@ class Program_Options:
                 self.heuristics = list(oparg.split(","))
                 print("LIST OF HEURISTICS: "+oparg)
                 print(self.heuristics)
+            if opcode in ('-S', '--solver'):
+                self.solver = oparg
+                print("Using LP solver: " + oparg)
 
             if opcode in ('-r', '--recognizer-name'):
                 if 'wdc' in oparg:

@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 declare -a domains=(
-					#"blocks-world"
+					"blocks-world"
 					"dwr"
-					#"easy-ipc-grid"
-					#"ferry"
-					#"logistics"
-					#"miconic"
-					#"rovers"
-					#"satellite"
-					#"sokoban"
+					"easy-ipc-grid"
+					"ferry"
+					"logistics"
+					"miconic"
+					"rovers"
+					"satellite"
+					"sokoban"
 					)
 
 DATASETS=../goal-plan-recognition-dataset
@@ -31,7 +31,7 @@ fi
 
 run_domain() {
 	echo "Running domain $1"
-	python2 test_domain.py $DATASETS $1 "$METHODS" > experiments/$1.output
+	python2 test_domain.py $DATASETS $1 "$METHODS" -S soplex > experiments/$1.output
 }
 
 for domain in "${domains[@]}"; do
