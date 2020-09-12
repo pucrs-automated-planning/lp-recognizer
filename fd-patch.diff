@@ -11,8 +11,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-08-28 09:40:30.211810400 -0300
-@@ -0,0 +1,439 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-09-12 12:15:59.926074900 -0300
+@@ -0,0 +1,448 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -54,6 +54,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +namespace operator_counting {
 +
++utils::Timer lp_timer;
++
 +OCSingleShotHeuristic::OCSingleShotHeuristic(const Options &opts)
 +    : Heuristic(opts),
 +      constraint_generators(
@@ -73,6 +75,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // Read observations from file and prune invalid
 +    load_observations();
 +    prune_observations();
++
++    lp_timer.reset();
++    lp_timer.resume();
 +
 +    // Create heuristic constraints
 +    double infinity = lp_h.get_infinity();
@@ -300,6 +305,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +    }
 +    cout << "obs-report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
++    cout << "time-report: " << lp_timer << endl;
 +    cout << "h-values: " << result << " " << result_c << " " << result_s << endl;
 +    cout << string(80, '*') << endl << endl;
 +    // Write result
@@ -307,6 +313,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    ofstream results;
 +    results.open("ocsingleshot_heuristic_result.dat");
 +    results << "obs-report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
++    results << "time-report: " << lp_timer << endl;
 +    results << "h-values: " << result << " " << result_c << " " << result_s << endl;
 +    // Write counts
 +    int var_i = 0;
@@ -385,6 +392,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +        cout << "h_s: " << result_s << endl;
 +    }
++
++    lp_timer.stop();
 +
 +    output_results(result, result_c, result_s);
 +

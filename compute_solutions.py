@@ -89,6 +89,7 @@ def compute_solution(hyps):
             return ["ERROR"]
         if hyp_ir <= real_hyp_ir:
             solution.append(' '.join(hyp.atoms))
+    return solution
 
 def write_file_solution(file):
     print(file)

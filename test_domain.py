@@ -15,6 +15,8 @@ class Experiment:
         self.num_obs = 0.0
         self.num_solutions = 0.0
         self.total_time = 0.0
+        self.lp_time = 0.0
+        self.fd_time = 0.0
         self.max_time = 0.0
         self.fpr = 0.0
         self.fnr = 0.0
@@ -29,6 +31,8 @@ class Experiment:
         recognizer.run_recognizer()
         experiment_time = time.time() - start_time
         self.total_time += experiment_time
+        self.lp_time += recognizer.lp_time
+        self.fd_time += recognizer.fd_time
         self.max_time = max(self.max_time, experiment_time)
         self.num_goals += len(recognizer.hyps)
         self.num_obs += len(recognizer.observations)
@@ -36,7 +40,9 @@ class Experiment:
         solution_set = set([h for h in recognizer.hyps if h.is_solution])
         self.num_solutions += len(solution_set)
 
-        print("=> Time: " + str(experiment_time))
+        print("=> LP-Solving Time: " + str(recognizer.lp_time))
+        print("=> Fast Downward Time: " + str(recognizer.fd_time))
+        print("=> Total Time: " + str(experiment_time))
         print("=> Recognized: " + str(list(solution_set)))
         if recognizer.get_real_hypothesis() == recognizer.unique_goal:
             self.unique_correct += 1
@@ -94,6 +100,8 @@ def do_experiments(base_path, domain_name, observability, recognizer, opt):
         file_content += "\t%2.4f" % (experiment.multi_correct / num_problems)
         file_content += "\t%2.4f" % (experiment.multi_spread / num_problems)
         file_content += "\t%2.4f" % (experiment.total_time / num_problems)
+        file_content += "\t%2.4f" % (experiment.lp_time / num_problems)
+        file_content += "\t%2.4f" % (experiment.fd_time / num_problems)
         file_content += "\n"
 
     table_file = open(exp_file, 'w')

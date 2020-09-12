@@ -32,9 +32,13 @@ class LPRecognizerHValue(PlanRecognizer):
         self.uncertainty_ratio = 1
 
     def run_recognizer(self):
+        self.fd_time = 0.0
+        self.lp_time = 0.0
         for i in range(0, len(self.hyps)):
             hyp = self.hyps[i]
             hyp.evaluate(i, self.observations)
+            self.fd_time += hyp.fd_time
+            self.lp_time += hyp.lp_time
             if not hyp.test_failed:
                 hyp.score = self.get_score(hyp)
                 print("Score: %s" % hyp.score)

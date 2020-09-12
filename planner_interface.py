@@ -20,17 +20,19 @@ class PRCommand:
         self.problem = problem
         self.opts = opts
         self.noext_problem = os.path.basename(self.problem).replace('.pddl', '')
+        self.log = None
         self.h_values = None
         self.obs_report = None
+        self.lp_time = 0
         self.op_counts = {}
         self.planner_string = self.make_planner_string()
 
     def make_planner_string(self):
-        translate_options = ' --translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
-        search_options_template = ' --search-options --search \"astar(ocsingleshot([{h}],' + \
+        translate_options = '--translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
+        search_options_template = '--search-options --search "astar(ocsingleshot([{h}],' + \
             'calculate_h={h_v},calculate_h_c={h_c},calculate_h_s={h_s},' + \
-            'weights={w},filter={f},lpsolver={s}))\"'
-        string = fd_path + '/fast-downward.py %s %s ' + translate_options
+            'weights={w},filter={f},lpsolver={s}))"'
+        string = fd_path + 'fast-downward.py %s %s ' + translate_options
         string += search_options_template.format(h=",".join(self.opts[2]), \
             h_v = self.opts[3], \
             h_c = self.opts[4], \
@@ -43,6 +45,7 @@ class PRCommand:
     def execute(self):
         cmd_string = self.planner_string % (self.domain, self.problem)
         self.log = benchmark.Log('%s.log' % self.noext_problem)
+        self.signal, self.time = 0, 0.0
         self.signal, self.time = benchmark.run(cmd_string, self.opts[0], self.opts[1], self.log, False)
         self.gather_data()
 
@@ -53,6 +56,8 @@ class PRCommand:
                 line = line.strip()
                 if 'obs-report' in line:
                     self.obs_report = [int(w) for w in line.split()[1:]]
+                elif 'time-report' in line:
+                    self.lp_time = float(line.split()[1].replace('s', ''))
                 elif 'h-values' in line:
                     self.h_values = [float(w) for w in line.split()[1:]]
                 else:
@@ -73,8 +78,8 @@ class Hypothesis:
         self.is_true = True
         self.is_solution = False
         self.test_failed = False
-        self.plan_time = 0
-        self.total_time = 0
+        self.fd_time = 0
+        self.lp_time = 0
         self.opts = opts
 
     def evaluate(self, index, observations):
@@ -82,8 +87,8 @@ class Hypothesis:
         self.generate_pddl_for_hyp_plan(hyp_problem)
         pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index, self.opts)
         pr_cmd.execute()
-        self.plan_time = pr_cmd.time
-        self.total_time = pr_cmd.time
+        self.fd_time = pr_cmd.time
+        self.lp_time = pr_cmd.lp_time
         pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
         if pr_cmd.signal != 0:
             print("signal error: %d" % pr_cmd.signal)
