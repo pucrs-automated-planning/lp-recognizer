@@ -127,8 +127,6 @@ class Hypothesis:
         self.h = pr_cmd.h_values[0]
         self.h_c = pr_cmd.h_values[1]
         self.h_s = pr_cmd.h_values[2]
-        if self.h_c == 0:
-            self.test_failed = True
 
     def load_plan(self, plan_name):
         instream = open(plan_name)

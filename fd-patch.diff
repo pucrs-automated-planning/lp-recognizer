@@ -131,8 +131,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-10-07 16:49:19.606487900 -0300
-@@ -0,0 +1,454 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-10-07 20:37:14.053293000 -0300
+@@ -0,0 +1,469 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -199,27 +199,21 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    lp_timer.reset();
 +    lp_timer.resume();
 +
-+    // Observation IDs
-+    vector<int> observation_ids;
-+    for (string obs : observations)
-+        observation_ids.push_back(op_indexes[obs]);
-+
-+    // Create heuristic constraints
 +    double infinity = lp_h.get_infinity();
-+    vector<lp::LPConstraint> constraints;
-+    for (const auto &generator : constraint_generators) {
-+        generator->set_observations(observation_ids);
-+        generator->initialize_constraints(task, constraints, infinity);
-+    }
 +
 +    // Create operator variables
 +    vector<lp::LPVariable> variables;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        variables.push_back(lp::LPVariable(0, infinity, op.get_cost()));
 +    }
-+
++    
 +    // Initialize LP problem without observation constraints
 +    if (calculate_h) {
++        // Create heuristic constraints
++        vector<lp::LPConstraint> constraints;
++        for (const auto &generator : constraint_generators) {
++            generator->initialize_constraints(task, constraints, infinity);
++        }
 +        lp_h.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 +    }
 +
@@ -250,36 +244,51 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +    }
 +
-+    // Create observation variables
-+    for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
-+        // Determine how many times the same observed operation occurs.
-+        string op = it->first;
-+        int count_obs = it->second;
-+        cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
-+        int var_id = variables.size();
-+        variables.push_back(lp::LPVariable(0, count_obs, -weights[op]));
-+        lp::LPConstraint lt_y(0, infinity);
-+        lt_y.insert(op_indexes[op], 1);
-+        lt_y.insert(var_id, -1);
-+        constraints.push_back(lt_y);
-+    }
++    if (calculate_h_c || calculate_h_s) {
++        // Observation IDs
++        vector<int> observation_ids;
++        for (const string &obs : observations)
++            observation_ids.push_back(op_indexes[obs]);
 +
-+    if (calculate_h_s) {
-+        lp_h_s.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
-+    }
-+
-+    if (calculate_h_c) {
-+        filter = (int)(filter * 0.1 * observations.size());
-+        int k = max(0, filter - num_pruned_observations);
-+        lp::LPConstraint constraint(num_valid_observations - k, infinity);
-+        int var_id = task_proxy.get_operators().size();
-+        for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
-+            constraint.insert(var_id, 1);
-+            variables[var_id].objective_coefficient = 0;
-+            var_id++;
++        // Create heuristic constraints
++        vector<lp::LPConstraint> constraints;
++        for (const auto &generator : constraint_generators) {
++            generator->set_observations(observation_ids);
++            generator->initialize_constraints(task, constraints, infinity);
 +        }
-+        constraints.push_back(constraint);
-+        lp_h_c.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++
++        // Create observation variables
++        for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
++            // Determine how many times the same observed operation occurs.
++            string op = it->first;
++            int count_obs = it->second;
++            cout << "constraint " << op << ": " << std::to_string(op_indexes[op]) << endl;
++            int var_id = variables.size();
++            variables.push_back(lp::LPVariable(0, count_obs, -weights[op]));
++            lp::LPConstraint lt_y(0, infinity);
++            lt_y.insert(op_indexes[op], 1);
++            lt_y.insert(var_id, -1);
++            constraints.push_back(lt_y);
++        }
++
++        if (calculate_h_s) {
++            lp_h_s.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++        }
++
++        if (calculate_h_c) {
++            filter = (int)(filter * 0.1 * observations.size());
++            int k = max(0, filter - num_pruned_observations);
++            lp::LPConstraint constraint(num_valid_observations - k, infinity);
++            int var_id = task_proxy.get_operators().size();
++            for (auto it = valid_obs_occurrences.begin(); it != valid_obs_occurrences.end(); ++it) {
++                constraint.insert(var_id, 1);
++                variables[var_id].objective_coefficient = 0;
++                var_id++;
++            }
++            constraints.push_back(constraint);
++            lp_h_c.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++        }
++
 +    }
 +
 +}
@@ -470,6 +479,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            lp_h.clear_temporary_constraints();
 +            result = DEAD_END;
 +            calculate_h = false;
++            calculate_h_c = false;
++            calculate_h_s = false;
 +        }
 +        if (calculate_h_c && generator->update_constraints(state, lp_h_c)) {
 +            lp_h_c.clear_temporary_constraints();
@@ -501,6 +512,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            double epsilon = 0.01;
 +            double objective_value = lp_h_c.get_objective_value();
 +            result_c = ceil(objective_value - epsilon);
++            if (result_c == 0)
++                result_c = 0.0 / 0.0;
 +        } else {
 +            result_c = 0.0 / 0.0;
 +        }
@@ -513,6 +526,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            double epsilon = 0.01;
 +            double objective_value = lp_h_s.get_objective_value();
 +            result_s = ceil(objective_value - epsilon) + max_weight;
++            if (result_s == 0)
++                result_s = 0.0 / 0.0;
 +        } else {
 +            result_s = 0.0 / 0.0;
 +        }
@@ -645,3 +660,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 +
 +#endif
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.cc fast-downward/src/search/operator_counting/pho_constraints.cc
+--- fast-downward-original/src/search/operator_counting/pho_constraints.cc	2020-08-28 09:53:48.390751100 -0300
++++ fast-downward/src/search/operator_counting/pho_constraints.cc	2020-10-07 19:00:30.341929900 -0300
+@@ -36,7 +36,7 @@
+       create pattern_generator locally and no longer need to explicitly reset
+       it.
+     */
+-    pattern_generator = nullptr;
++    //pattern_generator = nullptr;
+     pdbs = pattern_collection_info.get_pdbs();
+     TaskProxy task_proxy(*task);
+     constraint_offset = constraints.size();
