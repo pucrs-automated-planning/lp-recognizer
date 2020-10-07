@@ -9,10 +9,130 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
      DEPENDS LP_SOLVER LANDMARK_CUT_HEURISTIC PDBS TASK_PROPERTIES
  )
  
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc fast-downward/src/search/heuristics/lm_cut_landmarks.cc
+--- fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc	2020-08-28 09:53:47.994421700 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.cc	2020-10-07 16:44:39.392158800 -0300
+@@ -10,6 +10,54 @@
+ 
+ namespace lm_cut_heuristic {
+ // construction and destruction
++
++LandmarkCutLandmarks::LandmarkCutLandmarks(const TaskProxy &task_proxy, const vector<int> &observations) {
++    task_properties::verify_no_axioms(task_proxy);
++    task_properties::verify_no_conditional_effects(task_proxy);
++
++    // Build propositions.
++    num_propositions = 2; // artificial goal and artificial precondition
++    VariablesProxy variables = task_proxy.get_variables();
++    propositions.resize(variables.size());
++    for (FactProxy fact : variables.get_facts()) {
++        int var_id = fact.get_variable().get_id();
++        propositions[var_id].push_back(RelaxedProposition());
++        ++num_propositions;
++    }
++
++    // Build relaxed operators for operators and axioms.
++    for (OperatorProxy op : task_proxy.get_operators())
++        build_relaxed_operator(op);
++
++    // Simplify relaxed operators.
++    // simplify();
++    /* TODO: Put this back in and test if it makes sense,
++       but only after trying out whether and how much the change to
++       unary operators hurts. */
++
++    // Build artificial goal proposition and operator.
++    vector<RelaxedProposition *> goal_op_pre, goal_op_eff;
++    for (FactProxy goal : task_proxy.get_goals()) {
++        goal_op_pre.push_back(get_proposition(goal));
++    }
++    for (int op_id : observations) {
++        for (FactProxy goal : task_proxy.get_operators()[op_id].get_preconditions())
++            goal_op_pre.push_back(get_proposition(goal));
++    }
++    goal_op_eff.push_back(&artificial_goal);
++    /* Use the invalid operator ID -1 so accessing
++       the artificial operator will generate an error. */
++    add_relaxed_operator(move(goal_op_pre), move(goal_op_eff), -1, 0);
++
++    // Cross-reference relaxed operators.
++    for (RelaxedOperator &op : relaxed_operators) {
++        for (RelaxedProposition *pre : op.preconditions)
++            pre->precondition_of.push_back(&op);
++        for (RelaxedProposition *eff : op.effects)
++            eff->effect_of.push_back(&op);
++    }
++}
++
+ LandmarkCutLandmarks::LandmarkCutLandmarks(const TaskProxy &task_proxy) {
+     task_properties::verify_no_axioms(task_proxy);
+     task_properties::verify_no_conditional_effects(task_proxy);
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.h fast-downward/src/search/heuristics/lm_cut_landmarks.h
+--- fast-downward-original/src/search/heuristics/lm_cut_landmarks.h	2020-08-28 09:53:47.995418800 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.h	2020-10-07 16:45:11.309799900 -0300
+@@ -86,6 +86,7 @@
+     using LandmarkCallback = std::function<void (const Landmark &, int)>;
+ 
+     LandmarkCutLandmarks(const TaskProxy &task_proxy);
++    LandmarkCutLandmarks(const TaskProxy &task_proxy, const std::vector<int> &observations);
+     virtual ~LandmarkCutLandmarks();
+ 
+     /*
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.cc fast-downward/src/search/operator_counting/constraint_generator.cc
+--- fast-downward-original/src/search/operator_counting/constraint_generator.cc	2020-08-28 09:53:48.386358200 -0300
++++ fast-downward/src/search/operator_counting/constraint_generator.cc	2020-10-07 16:36:27.302469800 -0300
+@@ -9,6 +9,10 @@
+     const shared_ptr<AbstractTask> &, vector<lp::LPConstraint> &, double) {
+ }
+ 
++void ConstraintGenerator::set_observations(const vector<int>& observations) {
++	this->observations = observations;
++}
++
+ static PluginTypePlugin<ConstraintGenerator> _type_plugin(
+     "ConstraintGenerator",
+     // TODO: Replace empty string by synopsis for the wiki page.
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.h fast-downward/src/search/operator_counting/constraint_generator.h
+--- fast-downward-original/src/search/operator_counting/constraint_generator.h	2020-08-28 09:53:48.386358200 -0300
++++ fast-downward/src/search/operator_counting/constraint_generator.h	2020-10-07 16:46:14.503943100 -0300
+@@ -27,10 +27,11 @@
+       Example: constraints from landmarks generated for a given state, e.g.
+       using the LM-Cut method.
+ */
++
+ class ConstraintGenerator {
+ public:
++    std::vector<int> observations;
+     virtual ~ConstraintGenerator() = default;
+-
+     /*
+       Called upon initialization for the given task. Use this to add permanent
+       constraints and perform other initialization. The parameter "infinity"
+@@ -51,6 +52,8 @@
+     */
+     virtual bool update_constraints(const State &state,
+                                     lp::LPSolver &lp_solver) = 0;
++
++    void set_observations(const std::vector<int>& observations);
+ };
+ }
+ 
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
+--- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2020-08-28 09:53:48.387355400 -0300
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2020-10-07 16:45:31.585952500 -0300
+@@ -20,7 +20,7 @@
+     double /*infinity*/) {
+     TaskProxy task_proxy(*task);
+     landmark_generator =
+-        utils::make_unique_ptr<lm_cut_heuristic::LandmarkCutLandmarks>(task_proxy);
++        utils::make_unique_ptr<lm_cut_heuristic::LandmarkCutLandmarks>(task_proxy, observations);
+ }
+ 
+ 
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-09-12 12:15:59.926074900 -0300
-@@ -0,0 +1,448 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-10-07 16:49:19.606487900 -0300
+@@ -0,0 +1,454 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -79,10 +199,16 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    lp_timer.reset();
 +    lp_timer.resume();
 +
++    // Observation IDs
++    vector<int> observation_ids;
++    for (string obs : observations)
++        observation_ids.push_back(op_indexes[obs]);
++
 +    // Create heuristic constraints
 +    double infinity = lp_h.get_infinity();
 +    vector<lp::LPConstraint> constraints;
 +    for (const auto &generator : constraint_generators) {
++        generator->set_observations(observation_ids);
 +        generator->initialize_constraints(task, constraints, infinity);
 +    }
 +
