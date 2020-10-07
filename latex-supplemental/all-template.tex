@@ -1,0 +1,147 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{rotating} % <-- HERE
+\usepackage{subcaption}
+\usepackage{mathtools}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+\DeclareMathOperator{\planningtask}{\Pi}
+\DeclareMathOperator{\goalconditions}{\Gamma}
+\DeclareMathOperator{\plan}{\pi}
+\DeclareMathOperator{\optimalplan}{\pi^{*}}
+\DeclareMathOperator{\plancost}{\mathit{cost}}
+\DeclareMathOperator{\occur}{\mathit{occur}}
+\providecommand\initialstate{\ensuremath{s_{0}}}
+\providecommand\goalstate{\ensuremath{s^{*}}}
+
+\providecommand\h{\ensuremath{h}}
+\providecommand\hoptimal{\ensuremath{h^{*}}}
+\providecommand\hip{\ensuremath{h}^{\textup{IP}}}
+
+\DeclareMathOperator{\grtask}{\Pi_{\goalconditions}^{\observations}}
+\DeclareMathOperator{\grsolution}{\Gamma^{*}}
+\DeclareMathOperator{\observations}{\Omega}
+\DeclareMathOperator{\noisyobservations}{\Omega^{N}}
+\DeclareMathOperator{\obsevation}{o}
+\providecommand\varvalue[2]{\ensuremath{#1[#2]}}
+\providecommand\obs[1]{\ensuremath{\vec{#1}}}
+
+\providecommand\variableoccurrences{\ensuremath{\mathcal{K}}}
+\providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
+\providecommand\constraints{\ensuremath{C}}
+\providecommand\uncertainty{\ensuremath{\mu}}
+\providecommand\unreliability{\ensuremath{\epsilon}}
+
+\newcommand{\rg}{RG}
+\newcommand{\fgr}{FGR}
+\newcommand{\mirroring}{M+L}
+\newcommand{\dhc}{\ensuremath{\Gamma^{\text{LP}}}}
+\newcommand{\dhcu}{\ensuremath{\Gamma^{\uncertainty}}}
+\newcommand{\dhcf}{\ensuremath{\Gamma^{\text{\unreliability}}}}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Basic Dataset - Full Table)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+Optimal\\
+\fontsize{5.5}{6}\selectfont
+\setlength\tabcolsep{1.2pt}
+\begin{tabular}{c|c|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc}
+\toprule
+\multicolumn{2}{c}{}
+& \multicolumn{3}{c|}{\dhc}
+& \multicolumn{3}{c|}{\dhcu}
+& \multicolumn{3}{c|}{\dhcf}
+& \multicolumn{3}{c|}{\rg}
+& \multicolumn{3}{c|}{\pom}
+& \multicolumn{3}{c|}{\pomA}
+& \multicolumn{3}{c|}{\pomB}
+& \multicolumn{3}{c|}{\pomC}
+& \multicolumn{3}{c|}{\fgr}
+& \multicolumn{3}{c}{\mirroring}
+\\ \midrule
+\# & \%
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+\\ 
+\midrule
+<TABLE_LP_RESULTS>
+\multicolumn{2}{c|}{AVG} <AVG_APPROACH>
+\\ \bottomrule
+\end{tabular}
+\caption{Agreement ratio (AGR), accuracy (ACC) and spread (SPR) on optimal dataset.}
+\end{table*}
+\clearpage
+\begin{table*}[]
+\centering
+Sub-Optimal\\
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{c|c|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc}
+\toprule
+\multicolumn{2}{c}{}
+& \multicolumn{3}{c|}{\dhc}
+& \multicolumn{3}{c|}{\dhcu}
+& \multicolumn{3}{c|}{\dhcf}
+& \multicolumn{3}{c|}{\rg}
+& \multicolumn{3}{c|}{\pom}
+& \multicolumn{3}{c|}{\pomA}
+& \multicolumn{3}{c|}{\pomB}
+& \multicolumn{3}{c|}{\pomC}
+& \multicolumn{3}{c|}{\fgr}
+& \multicolumn{3}{c}{\mirroring}
+\\ \midrule
+\# & \%
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+& \textbf{AGR} & \textbf{ACC} & \textbf{SPR}
+\\ 
+\midrule
+<TABLE_LP_RESULTS_2>
+\multicolumn{2}{c|}{AVG} <AVG_APPROACH_2>
+\\ \bottomrule
+\end{tabular}
+\caption{Agreement ratio (AGR), accuracy (ACC) and spread (SPR) on sub-optimal dataset.}
+\end{table*}
+
+\end{document}

@@ -16,32 +16,39 @@
 \usepackage{subcaption}
 \newcommand{\timeout}{{\it Timeout}}
 \newcommand{\outofmemory}{{\it Out of Memory}}
-\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
-\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\dhc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\dhcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\dhcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\rg}{R\&G}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
 %---------------------------------------------------------------------------------------------------------------
 \pdfinfo{
-/Title (Comparing Constraint Sets)
+/Title (Noisy)
 /Author (?)
 }
 \begin{document}
 
 \begin{table*}[]
 \centering
-\fontsize{4}{6}\selectfont
+\fontsize{5}{6}\selectfont
 \setlength\tabcolsep{1.5pt}
-\begin{tabular}{ccccccccccccccccccc}
+\begin{tabular}{cc|cccc|cccc|}
 \toprule
- & & & \multicolumn{8}{c}{Optimal} & \multicolumn{8}{c}{Suboptimal}\\
-\cmidrule(lr){4-11}\cmidrule(lr){12-19}
- & & & & & \multicolumn{6}{c}{\textbf{AGR}} & & & \multicolumn{6}{c}{\textbf{AGR}}\\
-\cline{6-11} \cline{14-19}
-\# & $|\Gamma|$ & \textbf{\%} & $|\Omega|$ & $|\Gamma^\textup{*}|$ & S & L & P & (L, P) & (S, P) & (S, L) & $|\Omega|$ & $|\Gamma^\textup{*}|$ & S & L & P & (L, P) & (S, P) & (S, L)\\
+ \multicolumn{2}{c}{} & \multicolumn{4}{c}{Optimal} & \multicolumn{4}{c}{Suboptimal}\\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}
+%
+\# & \% & \dhc & \dhcf & \rg & \pom & \dhc & \dhcf & \rg & \pom\\%
+%
 \midrule
-CONTENT
-Avg & & AVERAGE\\
+%CONTENT
+%AVERAGE%
+\\
 \bottomrule
 \end{tabular}\\
-\caption{Results for each contraint set. L for Landmarks, P for Post-hoc, and S for State equation.}
+\caption{}
 \end{table*}
 
 \end{document}

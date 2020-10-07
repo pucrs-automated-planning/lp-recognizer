@@ -1,0 +1,54 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hc-U}}}}
+\newcommand{\hdeltahcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\hdeltahcfu}{\ensuremath{\delta_{\textsc{hcF-U}}}}
+\newcommand{\completion}{LM}
+\newcommand{\completiontetha}{LM 30\%}
+\newcommand{\rg}{R\&G}
+\newcommand{\fgr}{FGR 2015}
+\newcommand{\mirroring}{M+L 2018}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Comparing with Previous Methods - Noisy)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{4}{4}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{ccccccccccccccccccccc}
+\toprule
+ & & & \multicolumn{9}{c}{Optimal} & \multicolumn{9}{c}{Suboptimal}\\
+\cmidrule(lr){4-12}\cmidrule(lr){13-21}
+ & & & & & \multicolumn{7}{c}{\textbf{AGR}} & & & \multicolumn{7}{c}{\textbf{AGR}}\\
+\cline{6-12} \cline{15-21}
+\# & $|\Gamma|$ & \textbf{\%} & $|\Omega|$ & $|\Gamma^\textup{*}|$ & \hdeltahc & \hdeltahcu & \hdeltahcf & \hdeltahcfu & \rg & \completion & \completiontetha & $|\Omega|$ & $|\Gamma^\textup{*}|$ & \hdeltahc & \hdeltahcu & \hdeltahcf & \hdeltahcfu & \rg & \completion & \completiontetha \\
+\midrule
+CONTENT
+Avg & & AVERAGE\\
+\bottomrule
+\end{tabular}\\
+\caption{Results for each method.}
+\end{table*}
+
+\end{document}

@@ -1,0 +1,80 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\dhc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\dhcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\dhcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\rg}{R\&G}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Noisy)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{cc|cccc|cccc|}
+\toprule
+ \multicolumn{2}{c}{} & \multicolumn{4}{c}{Optimal} & \multicolumn{4}{c}{Suboptimal}\\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}
+%
+\# & \% & \dhc & \dhcf & \rg & \pom & \dhc & \dhcf & \rg & \pom\\%
+%
+\midrule
+\textsc{b}%
+ & AVG & 0.6 & \textbf{0.61} & 0.59 & 0.32 & 0.54 & 0.55 & \textbf{0.57} & 0.29\\\hline%
+\textsc{d}%
+ & AVG & \textbf{0.65} & \textbf{0.65} & 0.02 & 0.46 & 0.65 & \textbf{0.68} & 0.02 & 0.45\\\hline%
+\textsc{d}%
+ & AVG & 0.68 & \textbf{0.69} & 0.23 & 0.49 & 0.66 & \textbf{0.68} & 0.21 & 0.49\\\hline%
+\textsc{d}%
+ & AVG & 0.66 & \textbf{0.67} & 0.15 & 0.57 & 0.64 & \textbf{0.65} & 0.11 & 0.64\\\hline%
+\textsc{i}%
+ & AVG & \textbf{0.85} & \textbf{0.85} & 0.15 & 0.76 & \textbf{0.8} & \textbf{0.8} & 0.06 & 0.79\\\hline%
+\textsc{f}%
+ & AVG & 0.69 & \textbf{0.71} & 0.58 & 0.64 & 0.65 & \textbf{0.67} & 0.57 & 0.6\\\hline%
+\textsc{l}%
+ & AVG & \textbf{0.85} & \textbf{0.85} & 0.05 & 0.81 & 0.84 & \textbf{0.85} & 0.09 & 0.82\\\hline%
+\textsc{m}%
+ & AVG & 0.76 & \textbf{0.79} & 0.76 & 0.74 & 0.78 & \textbf{0.81} & 0.79 & 0.78\\\hline%
+\textsc{r}%
+ & AVG & \textbf{0.77} & 0.76 & 0.36 & 0.72 & \textbf{0.78} & 0.77 & 0.37 & 0.69\\\hline%
+\textsc{s}%
+ & AVG & \textbf{0.7} & \textbf{0.7} & 0.52 & 0.59 & 0.72 & \textbf{0.75} & 0.53 & 0.63\\\hline%
+\textsc{s}%
+ & AVG & 0.54 & \textbf{0.75} & 0.13 & 0.59 & 0.44 & \textbf{0.65} & 0.07 & 0.47\\\hline%
+\textsc{z}%
+ & AVG & 0.73 & \textbf{0.75} & 0.66 & 0.61 & 0.73 & \textbf{0.76} & 0.7 & 0.68\\\hline%
+
+\multicolumn{2}{c|}{AVG AGR} & 0.71 & \textbf{0.73} & 0.35 & 0.61 & 0.69 & \textbf{0.72} & 0.34 & 0.61\\\hline%
+\multicolumn{2}{c|}{AVG ACC} & 0.89 & \textbf{0.9} & 0.5 & 0.73 & 0.87 & \textbf{0.89} & 0.48 & 0.76\\\hline%
+\multicolumn{2}{c|}{AVG SPR} & 1.91 & 1.78 & 1.38 & \textbf{1.3} & 1.93 & 1.72 & 1.34 & \textbf{1.31}%
+\\
+\bottomrule
+\end{tabular}\\
+\caption{}
+\end{table*}
+
+\end{document}

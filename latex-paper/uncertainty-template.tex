@@ -1,0 +1,59 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\dhc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\dhcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\rg}{R\&G}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Uncertainty)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc|cc}
+\toprule
+ & & \multicolumn{14}{c}{Optimal} & \multicolumn{14}{c}{Suboptimal}\\
+\cmidrule(lr){3-16}\cmidrule(lr){17-30}
+%
+ & & \multicolumn{2}{c}{\dhc} & \multicolumn{2}{c}{\dhcu} & \multicolumn{2}{c}{\rg} & \multicolumn{2}{c}{\pom} & \multicolumn{2}{c}{\pomA} & \multicolumn{2}{c}{\pomB} & \multicolumn{2}{c}{\pomC}%
+  & \multicolumn{2}{c}{\dhc} & \multicolumn{2}{c}{\dhcu} & \multicolumn{2}{c}{\rg} & \multicolumn{2}{c}{\pom} & \multicolumn{2}{c}{\pomA} & \multicolumn{2}{c}{\pomB} & \multicolumn{2}{c}{\pomC}\\%
+%
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}\cmidrule(lr){13-14}\cmidrule(lr){15-16}%
+ \cmidrule(lr){17-18}\cmidrule(lr){19-20}\cmidrule(lr){21-22}\cmidrule(lr){23-24}\cmidrule(lr){25-26}\cmidrule(lr){27-28}\cmidrule(lr){29-30}\\
+%
+\# & \% & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR%
+ & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR & ACC & SPR\\
+\midrule
+%CONTENT
+\multicolumn{2}{c}{AVG} %AVERAGE%
+\\
+\bottomrule
+\end{tabular}\\
+\caption{}
+\end{table*}
+
+\end{document}

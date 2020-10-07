@@ -17,7 +17,7 @@ class DomainData:
 
 	def read_approach_data(self, file, approach):
 		file.readline() # Header
-		sum_values = [0] * 11
+		sum_values = [0] * 13
 		for obs in self.observabilities:
 			line = file.readline().strip().split('\t')
 			self.total_problems += int(line[0])
@@ -54,13 +54,14 @@ class DomainData:
 		return sum_s / problems if problems > 0 else float("nan")
 
 def average_values(all_domain_data, approach):
-	sum_values = [0] * 11
+	sum_values = [0] * 13
 	for domain_data in all_domain_data.values():
-		if approach in domain_data.avg_data:
-			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
+		if not approach in domain_data.avg_data:
+			return None
+		sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
 	return [x / len(all_domain_data.keys()) for x in sum_values]
 
-def collect_data(file, domains, approaches, basepaths, observabilities):
+def collect_data(domains, approaches, basepaths, observabilities):
 	all_domain_data = dict()
 	for domain_name in domains:
 		domain_data = DomainData(observabilities)
@@ -75,10 +76,11 @@ def collect_data(file, domains, approaches, basepaths, observabilities):
 	return all_domain_data
 
 
-def get_latex_content(file, domains, approaches, basepaths):
+def get_latex_content(domains, approaches, basepaths, full):
 	print("Tabulating data from %s for domains %s"%(basepaths,domains))
 	observabilities = ['10', '30', '50', '70', '100']
-	all_domain_data = collect_data(file, domains, approaches, basepaths, observabilities)
+	all_domain_data = collect_data(domains, approaches, basepaths, observabilities)
+	print(full)
 
 	content_table = ''
 
@@ -105,7 +107,7 @@ def get_latex_content(file, domains, approaches, basepaths):
 		for obs in observabilities:
 			len_obs = str(round(domain_data.get_avg_obs(obs), 2))
 			len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
-			content_table += '\n\t' + ('\\\\ & ' if (obs != '10') else ' & ') + obs + '\n'
+			content_table += '\n' + ('\\\\ & ' if (obs != '10') else ' & ') + obs + '\n'
 
 			# Find best
 			best_ar = 0
@@ -127,12 +129,18 @@ def get_latex_content(file, domains, approaches, basepaths):
 
 			# Write
 			for basepath, approach in zip(basepaths, approaches):
-				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
 				if (basepath + approach) not in domain_data.obs_data[obs]:
-					content_table += '\n\t\t& - & - & - & -\t \n'
+					content_table += '& - & - & -'
+					if full:
+						content_table += '& -'
 					continue
 				values = domain_data.obs_data[obs][basepath + approach]
-				time = round(values[10], 3)
+				if len(values) <= 11:
+					time = round(values[10], 3)
+				else:
+					py_time = values[10] - values[12]
+					lp_time = values[11]
+					time = round(lp_time + py_time, 3)
 				accuracy = round(values[8], 2)
 				spread = round(values[9], 2)
 				ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 1)
@@ -145,8 +153,10 @@ def get_latex_content(file, domains, approaches, basepaths):
 				#	accuracy = "\\textbf{%s}" % accuracy
 				#if spread == best_spread:
 				#	spread = "\\textbf{%s}" % spread
-				content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
-				content_table += ' \t \n'
+				if full:
+					content_table += '& {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
+				else:
+					content_table += '& {0} & {1} & {2}'.format(ar, accuracy, spread)
 		if domain_name == domains[-1]:
 			content_table += ' \\\\ \midrule'
 		else:
@@ -159,6 +169,8 @@ def get_latex_content(file, domains, approaches, basepaths):
 	best_spread = float("inf")
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
+		if not values:
+			continue
 		accuracy = round(values[8], 2)
 		if accuracy > best_acc:
 			best_acc = accuracy
@@ -171,7 +183,17 @@ def get_latex_content(file, domains, approaches, basepaths):
 
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
-		time = round(values[10], 3)
+		if not values:
+			content_avg += '& - & - & -'
+			if full:
+				content_avg += '& -'
+			continue
+		if len(values) <= 11:
+			time = round(values[10], 3)
+		else:
+			py_time = values[10] - values[12]
+			lp_time = values[11]
+			time = round(lp_time + py_time, 3)
 		accuracy = round(values[8], 2)
 		spread = round(values[9], 2)
 		ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 2)
@@ -184,15 +206,18 @@ def get_latex_content(file, domains, approaches, basepaths):
 		#	accuracy = "\\textbf{%s}" % accuracy
 		#if spread == best_spread:
 		#	spread = "\\textbf{%s}" % spread
-		content_avg += ' & {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
+		if full:
+			content_avg += '& {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
+		else:
+			content_avg += '& {0} & {1} & {2}'.format(ar, accuracy, spread)
 
 	return content_table, content_avg
 
 def main(template, file, domains, approaches, basepaths):
 	# Get content.
-	content_table, content_avg = get_latex_content(file, domains, approaches, basepaths)
+	content_table, content_avg = get_latex_content(domains, approaches, basepaths, 'full' in template)
 	domains = [name.replace("optimal", "suboptimal") for name in domains]
-	content_table_2, content_avg_2 = get_latex_content(file, domains, approaches, basepaths)
+	content_table_2, content_avg_2 = get_latex_content(domains, approaches, basepaths, 'full' in template)
 	# Write latex
 	latexContent = ''
 	with open(template, 'r') as latex:
@@ -210,13 +235,34 @@ def main(template, file, domains, approaches, basepaths):
 
 if __name__ == '__main__' :
 	default_path = '../results'
-	domains = ['blocks-world-optimal', 'depots-optimal', 'driverlog-optimal', 'dwr-optimal',\
-	 			'easy-ipc-grid-optimal', 'ferry-optimal', 'logistics-optimal',\
-	 			 'miconic-optimal', 'rovers-optimal', 'satellite-optimal', 'sokoban-optimal', 'zeno-travel-optimal']
+	domains = [
+		'blocks-world-optimal',
+		'depots-optimal',
+		'driverlog-optimal',
+		'dwr-optimal',
+		'easy-ipc-grid-optimal',
+		'ferry-optimal',
+		'logistics-optimal',
+	 	'miconic-optimal',
+	 	'rovers-optimal',
+	 	'satellite-optimal',
+	 	'sokoban-optimal',
+	 	'zeno-travel-optimal'
+	 ]
 	file = 'all.tex'
 	template = 'all-template.tex'
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f2', 'rg2009', 'lm_hc0', 'lm_hc10', 'lm_hc20', 'lm_hc30']
-	paths = [default_path] * 8
+	approaches = [
+		'delta-h-c', 
+		'delta-h-c-uncertainty', 
+		'delta-h-c-f2', 'rg2009', 
+		'lm_hc0', 
+		'lm_hc10', 
+		'lm_hc20', 
+		'lm_hc30', 
+		'fgr2015', 
+		'ml2018'
+	]
+	paths = [default_path] * 10
 
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
@@ -235,30 +281,5 @@ if __name__ == '__main__' :
 			domains = [name.replace("optimal", "optimal-noisy") for name in domains]
 	if args.domains:
 		domains = args.domains # Domains used
-
-	# Latex template file
-	if args.template:
-		template = args.template[0]
-		if 'previous' in template:
-			paths = [default_path] * 5
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'rg2009', 'lm_hc0', 'lm_hc30']
-		elif 'filters' in template:
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
-		elif 'variations' in template:
-			paths = [default_path] * 5
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty-max', 'weighted-c', 'weighted-c-uncertainty']
-		elif 'constraints' in template:
-			if 'single' in template:
-				approaches = ['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']
-			else:
-				approaches = ['delta-h-c-cps', 'delta-h-c-cps-uncertainty', 'delta-h-c-cls', 'delta-h-c-cls-uncertainty', 'delta-h-c-clp', 'delta-h-c-clp-uncertainty']
-	if args.approaches:
-		approaches = args.approaches # Approaches in template
-
-	if args.paths:
-		paths=args.paths
-	
-	if len(paths) < len(approaches):
-		paths += [default_path] * (len(approaches) - len(paths))
 
 	main(template, file, domains, approaches, paths)

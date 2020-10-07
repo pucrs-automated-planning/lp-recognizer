@@ -1,0 +1,1139 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hc-U}}}}
+\newcommand{\hdeltahcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\hdeltahcfu}{\ensuremath{\delta_{\textsc{hcF-U}}}}
+\newcommand{\completion}{LM}
+\newcommand{\completiontetha}{LM 30\%}
+\newcommand{\rg}{R\&G}
+\newcommand{\fgr}{FGR 2015}
+\newcommand{\mirroring}{M+L 2018}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Comparing with Previous Methods - Noisy)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{4}{4}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{ccccccccccccccccccccc}
+\toprule
+ & & & \multicolumn{9}{c}{Optimal} & \multicolumn{9}{c}{Suboptimal}\\
+\cmidrule(lr){4-12}\cmidrule(lr){13-21}
+ & & & & & \multicolumn{7}{c}{\textbf{AGR}} & & & \multicolumn{7}{c}{\textbf{AGR}}\\
+\cline{6-12} \cline{15-21}
+\# & $|\Gamma|$ & \textbf{\%} & $|\Omega|$ & $|\Gamma^\textup{*}|$ & \hdeltahc & \hdeltahcu & \hdeltahcf & \hdeltahcfu & \rg & \completion & \completiontetha & $|\Omega|$ & $|\Gamma^\textup{*}|$ & \hdeltahc & \hdeltahcu & \hdeltahcf & \hdeltahcfu & \rg & \completion & \completiontetha \\
+\midrule
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{blocks}} } & \multirow{5}{*}{20.2} 
+ & 10 & 2.25 & 7.93
+
+% delta-h-c - 10% 
+ & 0.32
+% delta-h-c-uncertainty - 10% 
+ & 0.33
+% delta-h-c-f2 - 10% 
+ & 0.32
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.4}
+% rg2009 - 10% 
+ & 0.31
+% lm_hc0 - 10% 
+ & 0.06
+% lm_hc30 - 10% 
+ & 0.35 & 2.42 & 7.53
+
+% delta-h-c - 10% 
+ & 0.38
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.42}
+% delta-h-c-f2 - 10% 
+ & 0.38
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.42}
+% rg2009 - 10% 
+ & \textbf{0.42}
+% lm_hc0 - 10% 
+ & 0.05
+% lm_hc30 - 10% 
+ & 0.36
+\\ & & 30 & 4.08 & 3.92
+
+% delta-h-c - 30% 
+ & 0.37
+% delta-h-c-uncertainty - 30% 
+ & 0.39
+% delta-h-c-f2 - 30% 
+ & 0.37
+% delta-h-c-f2-uncertainty - 30% 
+ & \textbf{0.41}
+% rg2009 - 30% 
+ & 0.39
+% lm_hc0 - 30% 
+ & 0.13
+% lm_hc30 - 30% 
+ & 0.25 & 4.92 & 3.56
+
+% delta-h-c - 30% 
+ & 0.36
+% delta-h-c-uncertainty - 30% 
+ & 0.34
+% delta-h-c-f2 - 30% 
+ & 0.37
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.36
+% rg2009 - 30% 
+ & \textbf{0.49}
+% lm_hc0 - 30% 
+ & 0.22
+% lm_hc30 - 30% 
+ & 0.23
+\\ & & 50 & 5.67 & 2.49
+
+% delta-h-c - 50% 
+ & \textbf{0.64}
+% delta-h-c-uncertainty - 50% 
+ & 0.52
+% delta-h-c-f2 - 50% 
+ & \textbf{0.64}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.53
+% rg2009 - 50% 
+ & 0.6
+% lm_hc0 - 50% 
+ & 0.37
+% lm_hc30 - 50% 
+ & 0.22 & 7.33 & 3.18
+
+% delta-h-c - 50% 
+ & 0.53
+% delta-h-c-uncertainty - 50% 
+ & 0.33
+% delta-h-c-f2 - 50% 
+ & 0.53
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.45
+% rg2009 - 50% 
+ & \textbf{0.55}
+% lm_hc0 - 50% 
+ & 0.28
+% lm_hc30 - 50% 
+ & 0.23
+\\ & & 70 & 8.42 & 1.94
+
+% delta-h-c - 70% 
+ & 0.79
+% delta-h-c-uncertainty - 70% 
+ & 0.58
+% delta-h-c-f2 - 70% 
+ & \textbf{0.81}
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.7
+% rg2009 - 70% 
+ & 0.77
+% lm_hc0 - 70% 
+ & 0.47
+% lm_hc30 - 70% 
+ & 0.22 & 10.67 & 2.53
+
+% delta-h-c - 70% 
+ & \textbf{0.67}
+% delta-h-c-uncertainty - 70% 
+ & 0.45
+% delta-h-c-f2 - 70% 
+ & \textbf{0.67}
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.53
+% rg2009 - 70% 
+ & 0.63
+% lm_hc0 - 70% 
+ & 0.38
+% lm_hc30 - 70% 
+ & 0.23
+\\ & & 100 & 11.08 & 1.83
+
+% delta-h-c - 100% 
+ & 0.88
+% delta-h-c-uncertainty - 100% 
+ & 0.8
+% delta-h-c-f2 - 100% 
+ & 0.88
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.88
+% rg2009 - 100% 
+ & \textbf{0.89}
+% lm_hc0 - 100% 
+ & 0.57
+% lm_hc30 - 100% 
+ & 0.24 & 14.42 & 2.25
+
+% delta-h-c - 100% 
+ & 0.78
+% delta-h-c-uncertainty - 100% 
+ & 0.7
+% delta-h-c-f2 - 100% 
+ & \textbf{0.82}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.79
+% rg2009 - 100% 
+ & 0.74
+% lm_hc0 - 100% 
+ & 0.51
+% lm_hc30 - 100% 
+ & 0.24 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{ipc-grid}} } & \multirow{5}{*}{7.5} 
+ & 10 & 2.63 & 2.71
+
+% delta-h-c - 10% 
+ & 0.57
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.61}
+% delta-h-c-f2 - 10% 
+ & 0.57
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.61}
+% rg2009 - 10% 
+ & 0.16
+% lm_hc0 - 10% 
+ & 0.38
+% lm_hc30 - 10% 
+ & 0.45 & 3.06 & 1.58
+
+% delta-h-c - 10% 
+ & \textbf{0.62}
+% delta-h-c-uncertainty - 10% 
+ & 0.53
+% delta-h-c-f2 - 10% 
+ & \textbf{0.62}
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.53
+% rg2009 - 10% 
+ & 0.12
+% lm_hc0 - 10% 
+ & 0.54
+% lm_hc30 - 10% 
+ & 0.41
+\\ & & 30 & 5.19 & 1.21
+
+% delta-h-c - 30% 
+ & \textbf{0.85}
+% delta-h-c-uncertainty - 30% 
+ & 0.83
+% delta-h-c-f2 - 30% 
+ & \textbf{0.85}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.83
+% rg2009 - 30% 
+ & 0.28
+% lm_hc0 - 30% 
+ & 0.71
+% lm_hc30 - 30% 
+ & 0.6 & 7.13 & 1.4
+
+% delta-h-c - 30% 
+ & 0.68
+% delta-h-c-uncertainty - 30% 
+ & 0.55
+% delta-h-c-f2 - 30% 
+ & 0.68
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.56
+% rg2009 - 30% 
+ & 0.08
+% lm_hc0 - 30% 
+ & \textbf{0.72}
+% lm_hc30 - 30% 
+ & 0.61
+\\ & & 50 & 7.81 & 1.13
+
+% delta-h-c - 50% 
+ & \textbf{0.89}
+% delta-h-c-uncertainty - 50% 
+ & 0.88
+% delta-h-c-f2 - 50% 
+ & \textbf{0.89}
+% delta-h-c-f2-uncertainty - 50% 
+ & \textbf{0.89}
+% rg2009 - 50% 
+ & 0.07
+% lm_hc0 - 50% 
+ & 0.81
+% lm_hc30 - 50% 
+ & 0.71 & 10.94 & 1.35
+
+% delta-h-c - 50% 
+ & 0.84
+% delta-h-c-uncertainty - 50% 
+ & 0.79
+% delta-h-c-f2 - 50% 
+ & 0.84
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.81
+% rg2009 - 50% 
+ & 0.04
+% lm_hc0 - 50% 
+ & \textbf{0.85}
+% lm_hc30 - 50% 
+ & 0.74
+\\ & & 70 & 10.75 & 1.04
+
+% delta-h-c - 70% 
+ & \textbf{0.95}
+% delta-h-c-uncertainty - 70% 
+ & \textbf{0.95}
+% delta-h-c-f2 - 70% 
+ & \textbf{0.95}
+% delta-h-c-f2-uncertainty - 70% 
+ & \textbf{0.95}
+% rg2009 - 70% 
+ & 0.15
+% lm_hc0 - 70% 
+ & 0.93
+% lm_hc30 - 70% 
+ & 0.81 & 15.56 & 1.31
+
+% delta-h-c - 70% 
+ & 0.89
+% delta-h-c-uncertainty - 70% 
+ & 0.87
+% delta-h-c-f2 - 70% 
+ & 0.89
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.86
+% rg2009 - 70% 
+ & 0.02
+% lm_hc0 - 70% 
+ & \textbf{0.9}
+% lm_hc30 - 70% 
+ & 0.86
+\\ & & 100 & 14.63 & 1.0
+
+% delta-h-c - 100% 
+ & \textbf{1.0}
+% delta-h-c-uncertainty - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & \textbf{1.0}
+% rg2009 - 100% 
+ & 0.08
+% lm_hc0 - 100% 
+ & 0.99
+% lm_hc30 - 100% 
+ & 0.97 & 21.13 & 1.5
+
+% delta-h-c - 100% 
+ & \textbf{0.94}
+% delta-h-c-uncertainty - 100% 
+ & \textbf{0.94}
+% delta-h-c-f2 - 100% 
+ & \textbf{0.94}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.78
+% rg2009 - 100% 
+ & 0.04
+% lm_hc0 - 100% 
+ & 0.92
+% lm_hc30 - 100% 
+ & 0.89 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{logistics}} } & \multirow{5}{*}{10.0} 
+ & 10 & 3.0 & 2.83
+
+% delta-h-c - 10% 
+ & \textbf{0.58}
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.58}
+% delta-h-c-f2 - 10% 
+ & \textbf{0.58}
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.58}
+% rg2009 - 10% 
+ & 0.13
+% lm_hc0 - 10% 
+ & 0.41
+% lm_hc30 - 10% 
+ & 0.29 & 3.67 & 2.0
+
+% delta-h-c - 10% 
+ & \textbf{0.55}
+% delta-h-c-uncertainty - 10% 
+ & 0.51
+% delta-h-c-f2 - 10% 
+ & \textbf{0.55}
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.51
+% rg2009 - 10% 
+ & 0.28
+% lm_hc0 - 10% 
+ & 0.41
+% lm_hc30 - 10% 
+ & 0.21
+\\ & & 30 & 7.58 & 1.19
+
+% delta-h-c - 30% 
+ & 0.82
+% delta-h-c-uncertainty - 30% 
+ & \textbf{0.84}
+% delta-h-c-f2 - 30% 
+ & 0.82
+% delta-h-c-f2-uncertainty - 30% 
+ & \textbf{0.84}
+% rg2009 - 30% 
+ & 0.06
+% lm_hc0 - 30% 
+ & 0.78
+% lm_hc30 - 30% 
+ & 0.24 & 9.33 & 1.14
+
+% delta-h-c - 30% 
+ & 0.8
+% delta-h-c-uncertainty - 30% 
+ & 0.7
+% delta-h-c-f2 - 30% 
+ & \textbf{0.82}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.74
+% rg2009 - 30% 
+ & 0.12
+% lm_hc0 - 30% 
+ & 0.81
+% lm_hc30 - 30% 
+ & 0.24
+\\ & & 50 & 11.42 & 1.06
+
+% delta-h-c - 50% 
+ & \textbf{0.9}
+% delta-h-c-uncertainty - 50% 
+ & 0.88
+% delta-h-c-f2 - 50% 
+ & \textbf{0.9}
+% delta-h-c-f2-uncertainty - 50% 
+ & \textbf{0.9}
+% rg2009 - 50% 
+ & 0.03
+% lm_hc0 - 50% 
+ & 0.89
+% lm_hc30 - 50% 
+ & 0.31 & 14.58 & 1.06
+
+% delta-h-c - 50% 
+ & \textbf{0.91}
+% delta-h-c-uncertainty - 50% 
+ & 0.7
+% delta-h-c-f2 - 50% 
+ & \textbf{0.91}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.85
+% rg2009 - 50% 
+ & 0.03
+% lm_hc0 - 50% 
+ & 0.9
+% lm_hc30 - 50% 
+ & 0.38
+\\ & & 70 & 16.08 & 1.03
+
+% delta-h-c - 70% 
+ & \textbf{0.97}
+% delta-h-c-uncertainty - 70% 
+ & 0.94
+% delta-h-c-f2 - 70% 
+ & \textbf{0.97}
+% delta-h-c-f2-uncertainty - 70% 
+ & \textbf{0.97}
+% rg2009 - 70% 
+ & 0.03
+% lm_hc0 - 70% 
+ & 0.94
+% lm_hc30 - 70% 
+ & 0.47 & 20.17 & 1.03
+
+% delta-h-c - 70% 
+ & 0.96
+% delta-h-c-uncertainty - 70% 
+ & 0.84
+% delta-h-c-f2 - 70% 
+ & 0.97
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.92
+% rg2009 - 70% 
+ & 0.0
+% lm_hc0 - 70% 
+ & \textbf{0.99}
+% lm_hc30 - 70% 
+ & 0.56
+\\ & & 100 & 22.0 & 1.0
+
+% delta-h-c - 100% 
+ & \textbf{1.0}
+% delta-h-c-uncertainty - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & \textbf{1.0}
+% rg2009 - 100% 
+ & 0.03
+% lm_hc0 - 100% 
+ & \textbf{1.0}
+% lm_hc30 - 100% 
+ & 0.64 & 28.17 & 1.0
+
+% delta-h-c - 100% 
+ & \textbf{1.0}
+% delta-h-c-uncertainty - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.86
+% rg2009 - 100% 
+ & 0.0
+% lm_hc0 - 100% 
+ & \textbf{1.0}
+% lm_hc30 - 100% 
+ & 0.63 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{miconic}} } & \multirow{5}{*}{6.0} 
+ & 10 & 3.0 & 2.53
+
+% delta-h-c - 10% 
+ & 0.39
+% delta-h-c-uncertainty - 10% 
+ & 0.37
+% delta-h-c-f2 - 10% 
+ & 0.39
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.37
+% rg2009 - 10% 
+ & \textbf{0.46}
+% lm_hc0 - 10% 
+ & 0.27
+% lm_hc30 - 10% 
+ & 0.42 & 4.0 & 1.83
+
+% delta-h-c - 10% 
+ & 0.43
+% delta-h-c-uncertainty - 10% 
+ & 0.41
+% delta-h-c-f2 - 10% 
+ & 0.43
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.41
+% rg2009 - 10% 
+ & \textbf{0.47}
+% lm_hc0 - 10% 
+ & 0.35
+% lm_hc30 - 10% 
+ & 0.31
+\\ & & 30 & 6.83 & 1.22
+
+% delta-h-c - 30% 
+ & 0.57
+% delta-h-c-uncertainty - 30% 
+ & 0.43
+% delta-h-c-f2 - 30% 
+ & \textbf{0.65}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.63
+% rg2009 - 30% 
+ & 0.55
+% lm_hc0 - 30% 
+ & 0.57
+% lm_hc30 - 30% 
+ & 0.23 & 9.67 & 1.25
+
+% delta-h-c - 30% 
+ & 0.75
+% delta-h-c-uncertainty - 30% 
+ & 0.36
+% delta-h-c-f2 - 30% 
+ & \textbf{0.78}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.62
+% rg2009 - 30% 
+ & 0.64
+% lm_hc0 - 30% 
+ & 0.69
+% lm_hc30 - 30% 
+ & 0.22
+\\ & & 50 & 10.42 & 1.06
+
+% delta-h-c - 50% 
+ & 0.93
+% delta-h-c-uncertainty - 50% 
+ & 0.76
+% delta-h-c-f2 - 50% 
+ & \textbf{0.94}
+% delta-h-c-f2-uncertainty - 50% 
+ & \textbf{0.94}
+% rg2009 - 50% 
+ & 0.87
+% lm_hc0 - 50% 
+ & 0.9
+% lm_hc30 - 50% 
+ & 0.24 & 15.25 & 1.03
+
+% delta-h-c - 50% 
+ & 0.86
+% delta-h-c-uncertainty - 50% 
+ & 0.45
+% delta-h-c-f2 - 50% 
+ & 0.89
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.77
+% rg2009 - 50% 
+ & 0.87
+% lm_hc0 - 50% 
+ & \textbf{0.93}
+% lm_hc30 - 50% 
+ & 0.23
+\\ & & 70 & 14.83 & 1.0
+
+% delta-h-c - 70% 
+ & 0.94
+% delta-h-c-uncertainty - 70% 
+ & 0.78
+% delta-h-c-f2 - 70% 
+ & \textbf{0.96}
+% delta-h-c-f2-uncertainty - 70% 
+ & \textbf{0.96}
+% rg2009 - 70% 
+ & 0.93
+% lm_hc0 - 70% 
+ & \textbf{0.96}
+% lm_hc30 - 70% 
+ & 0.32 & 21.25 & 1.0
+
+% delta-h-c - 70% 
+ & 0.9
+% delta-h-c-uncertainty - 70% 
+ & 0.45
+% delta-h-c-f2 - 70% 
+ & 0.93
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.85
+% rg2009 - 70% 
+ & \textbf{0.98}
+% lm_hc0 - 70% 
+ & 0.94
+% lm_hc30 - 70% 
+ & 0.24
+\\ & & 100 & 20.0 & 1.0
+
+% delta-h-c - 100% 
+ & 0.94
+% delta-h-c-uncertainty - 100% 
+ & 0.93
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & \textbf{1.0}
+% rg2009 - 100% 
+ & \textbf{1.0}
+% lm_hc0 - 100% 
+ & \textbf{1.0}
+% lm_hc30 - 100% 
+ & 0.37 & 29.25 & 1.0
+
+% delta-h-c - 100% 
+ & 0.97
+% delta-h-c-uncertainty - 100% 
+ & 0.78
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.5
+% rg2009 - 100% 
+ & \textbf{1.0}
+% lm_hc0 - 100% 
+ & \textbf{1.0}
+% lm_hc30 - 100% 
+ & 0.37 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{rovers}} } & \multirow{5}{*}{6.0} 
+ & 10 & 2.67 & 2.28
+
+% delta-h-c - 10% 
+ & \textbf{0.44}
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.44}
+% delta-h-c-f2 - 10% 
+ & \textbf{0.44}
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.44}
+% rg2009 - 10% 
+ & 0.18
+% lm_hc0 - 10% 
+ & 0.31
+% lm_hc30 - 10% 
+ & 0.4 & 2.83 & 2.39
+
+% delta-h-c - 10% 
+ & \textbf{0.46}
+% delta-h-c-uncertainty - 10% 
+ & 0.45
+% delta-h-c-f2 - 10% 
+ & \textbf{0.46}
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.45
+% rg2009 - 10% 
+ & 0.37
+% lm_hc0 - 10% 
+ & 0.44
+% lm_hc30 - 10% 
+ & 0.44
+\\ & & 30 & 4.67 & 1.31
+
+% delta-h-c - 30% 
+ & 0.7
+% delta-h-c-uncertainty - 30% 
+ & 0.68
+% delta-h-c-f2 - 30% 
+ & 0.7
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.68
+% rg2009 - 30% 
+ & 0.45
+% lm_hc0 - 30% 
+ & \textbf{0.75}
+% lm_hc30 - 30% 
+ & 0.35 & 5.75 & 1.39
+
+% delta-h-c - 30% 
+ & 0.65
+% delta-h-c-uncertainty - 30% 
+ & 0.53
+% delta-h-c-f2 - 30% 
+ & \textbf{0.66}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.58
+% rg2009 - 30% 
+ & 0.4
+% lm_hc0 - 30% 
+ & 0.51
+% lm_hc30 - 30% 
+ & 0.34
+\\ & & 50 & 7.42 & 1.19
+
+% delta-h-c - 50% 
+ & 0.8
+% delta-h-c-uncertainty - 50% 
+ & 0.79
+% delta-h-c-f2 - 50% 
+ & \textbf{0.82}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.8
+% rg2009 - 50% 
+ & 0.31
+% lm_hc0 - 50% 
+ & 0.71
+% lm_hc30 - 50% 
+ & 0.31 & 9.0 & 1.11
+
+% delta-h-c - 50% 
+ & \textbf{0.87}
+% delta-h-c-uncertainty - 50% 
+ & 0.77
+% delta-h-c-f2 - 50% 
+ & 0.85
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.8
+% rg2009 - 50% 
+ & 0.49
+% lm_hc0 - 50% 
+ & 0.72
+% lm_hc30 - 50% 
+ & 0.32
+\\ & & 70 & 10.17 & 1.0
+
+% delta-h-c - 70% 
+ & \textbf{0.93}
+% delta-h-c-uncertainty - 70% 
+ & 0.89
+% delta-h-c-f2 - 70% 
+ & 0.89
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.89
+% rg2009 - 70% 
+ & 0.49
+% lm_hc0 - 70% 
+ & 0.88
+% lm_hc30 - 70% 
+ & 0.34 & 12.42 & 1.06
+
+% delta-h-c - 70% 
+ & \textbf{0.93}
+% delta-h-c-uncertainty - 70% 
+ & 0.86
+% delta-h-c-f2 - 70% 
+ & 0.92
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.9
+% rg2009 - 70% 
+ & 0.26
+% lm_hc0 - 70% 
+ & 0.89
+% lm_hc30 - 70% 
+ & 0.33
+\\ & & 100 & 13.5 & 1.0
+
+% delta-h-c - 100% 
+ & \textbf{0.97}
+% delta-h-c-uncertainty - 100% 
+ & \textbf{0.97}
+% delta-h-c-f2 - 100% 
+ & 0.93
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.92
+% rg2009 - 100% 
+ & 0.39
+% lm_hc0 - 100% 
+ & \textbf{0.97}
+% lm_hc30 - 100% 
+ & 0.37 & 16.92 & 1.0
+
+% delta-h-c - 100% 
+ & \textbf{0.97}
+% delta-h-c-uncertainty - 100% 
+ & 0.96
+% delta-h-c-f2 - 100% 
+ & 0.93
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.86
+% rg2009 - 100% 
+ & 0.34
+% lm_hc0 - 100% 
+ & 0.9
+% lm_hc30 - 100% 
+ & 0.37 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{satellite}} } & \multirow{5}{*}{6.0} 
+ & 10 & 2.42 & 3.53
+
+% delta-h-c - 10% 
+ & 0.53
+% delta-h-c-uncertainty - 10% 
+ & 0.51
+% delta-h-c-f2 - 10% 
+ & 0.53
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.51
+% rg2009 - 10% 
+ & 0.41
+% lm_hc0 - 10% 
+ & 0.34
+% lm_hc30 - 10% 
+ & \textbf{0.6} & 3.0 & 3.25
+
+% delta-h-c - 10% 
+ & 0.49
+% delta-h-c-uncertainty - 10% 
+ & 0.47
+% delta-h-c-f2 - 10% 
+ & 0.49
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.47
+% rg2009 - 10% 
+ & 0.41
+% lm_hc0 - 10% 
+ & 0.29
+% lm_hc30 - 10% 
+ & \textbf{0.53}
+\\ & & 30 & 4.42 & 2.39
+
+% delta-h-c - 30% 
+ & 0.5
+% delta-h-c-uncertainty - 30% 
+ & \textbf{0.54}
+% delta-h-c-f2 - 30% 
+ & 0.48
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.49
+% rg2009 - 30% 
+ & 0.4
+% lm_hc0 - 30% 
+ & 0.41
+% lm_hc30 - 30% 
+ & 0.43 & 5.33 & 1.78
+
+% delta-h-c - 30% 
+ & 0.54
+% delta-h-c-uncertainty - 30% 
+ & 0.47
+% delta-h-c-f2 - 30% 
+ & \textbf{0.6}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.59
+% rg2009 - 30% 
+ & 0.54
+% lm_hc0 - 30% 
+ & 0.51
+% lm_hc30 - 30% 
+ & 0.32
+\\ & & 50 & 7.17 & 1.58
+
+% delta-h-c - 50% 
+ & 0.67
+% delta-h-c-uncertainty - 50% 
+ & 0.57
+% delta-h-c-f2 - 50% 
+ & \textbf{0.69}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.66
+% rg2009 - 50% 
+ & 0.42
+% lm_hc0 - 50% 
+ & 0.49
+% lm_hc30 - 50% 
+ & 0.3 & 8.75 & 1.36
+
+% delta-h-c - 50% 
+ & 0.78
+% delta-h-c-uncertainty - 50% 
+ & 0.56
+% delta-h-c-f2 - 50% 
+ & \textbf{0.81}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.71
+% rg2009 - 50% 
+ & 0.61
+% lm_hc0 - 50% 
+ & 0.66
+% lm_hc30 - 50% 
+ & 0.33
+\\ & & 70 & 10.08 & 1.31
+
+% delta-h-c - 70% 
+ & \textbf{0.87}
+% delta-h-c-uncertainty - 70% 
+ & 0.71
+% delta-h-c-f2 - 70% 
+ & \textbf{0.87}
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.83
+% rg2009 - 70% 
+ & 0.67
+% lm_hc0 - 70% 
+ & 0.81
+% lm_hc30 - 70% 
+ & 0.34 & 11.75 & 1.33
+
+% delta-h-c - 70% 
+ & 0.86
+% delta-h-c-uncertainty - 70% 
+ & 0.64
+% delta-h-c-f2 - 70% 
+ & \textbf{0.91}
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.85
+% rg2009 - 70% 
+ & 0.63
+% lm_hc0 - 70% 
+ & 0.78
+% lm_hc30 - 70% 
+ & 0.38
+\\ & & 100 & 13.17 & 1.25
+
+% delta-h-c - 100% 
+ & 0.92
+% delta-h-c-uncertainty - 100% 
+ & 0.88
+% delta-h-c-f2 - 100% 
+ & \textbf{0.94}
+% delta-h-c-f2-uncertainty - 100% 
+ & \textbf{0.94}
+% rg2009 - 100% 
+ & 0.69
+% lm_hc0 - 100% 
+ & 0.88
+% lm_hc30 - 100% 
+ & 0.46 & 15.75 & 1.25
+
+% delta-h-c - 100% 
+ & 0.92
+% delta-h-c-uncertainty - 100% 
+ & 0.88
+% delta-h-c-f2 - 100% 
+ & \textbf{0.94}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.83
+% rg2009 - 100% 
+ & 0.47
+% lm_hc0 - 100% 
+ & 0.92
+% lm_hc30 - 100% 
+ & 0.46 \\ \hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{sokoban}} } & \multirow{5}{*}{8.5} 
+ & 10 & 3.33 & 2.11
+
+% delta-h-c - 10% 
+ & 0.27
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.29}
+% delta-h-c-f2 - 10% 
+ & 0.27
+% delta-h-c-f2-uncertainty - 10% 
+ & \textbf{0.29}
+% rg2009 - 10% 
+ & 0.1
+% lm_hc0 - 10% 
+ & 0.24
+% lm_hc30 - 10% 
+ & 0.27 & 4.33 & 1.83
+
+% delta-h-c - 10% 
+ & 0.31
+% delta-h-c-uncertainty - 10% 
+ & \textbf{0.34}
+% delta-h-c-f2 - 10% 
+ & 0.32
+% delta-h-c-f2-uncertainty - 10% 
+ & 0.33
+% rg2009 - 10% 
+ & 0.13
+% lm_hc0 - 10% 
+ & 0.25
+% lm_hc30 - 10% 
+ & 0.24
+\\ & & 30 & 8.17 & 1.25
+
+% delta-h-c - 30% 
+ & 0.56
+% delta-h-c-uncertainty - 30% 
+ & 0.41
+% delta-h-c-f2 - 30% 
+ & \textbf{0.7}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.54
+% rg2009 - 30% 
+ & 0.2
+% lm_hc0 - 30% 
+ & 0.34
+% lm_hc30 - 30% 
+ & 0.2 & 11.0 & 1.28
+
+% delta-h-c - 30% 
+ & 0.48
+% delta-h-c-uncertainty - 30% 
+ & 0.29
+% delta-h-c-f2 - 30% 
+ & \textbf{0.56}
+% delta-h-c-f2-uncertainty - 30% 
+ & 0.42
+% rg2009 - 30% 
+ & 0.12
+% lm_hc0 - 30% 
+ & 0.29
+% lm_hc30 - 30% 
+ & 0.23
+\\ & & 50 & 12.67 & 1.22
+
+% delta-h-c - 50% 
+ & 0.61
+% delta-h-c-uncertainty - 50% 
+ & 0.47
+% delta-h-c-f2 - 50% 
+ & \textbf{0.82}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.7
+% rg2009 - 50% 
+ & 0.2
+% lm_hc0 - 50% 
+ & 0.57
+% lm_hc30 - 50% 
+ & 0.27 & 17.08 & 1.33
+
+% delta-h-c - 50% 
+ & 0.5
+% delta-h-c-uncertainty - 50% 
+ & 0.32
+% delta-h-c-f2 - 50% 
+ & \textbf{0.73}
+% delta-h-c-f2-uncertainty - 50% 
+ & 0.57
+% rg2009 - 50% 
+ & 0.01
+% lm_hc0 - 50% 
+ & 0.46
+% lm_hc30 - 50% 
+ & 0.27
+\\ & & 70 & 18.0 & 1.03
+
+% delta-h-c - 70% 
+ & 0.6
+% delta-h-c-uncertainty - 70% 
+ & 0.5
+% delta-h-c-f2 - 70% 
+ & \textbf{0.97}
+% delta-h-c-f2-uncertainty - 70% 
+ & 0.88
+% rg2009 - 70% 
+ & 0.08
+% lm_hc0 - 70% 
+ & 0.84
+% lm_hc30 - 70% 
+ & 0.33 & 23.58 & 1.36
+
+% delta-h-c - 70% 
+ & 0.54
+% delta-h-c-uncertainty - 70% 
+ & 0.36
+% delta-h-c-f2 - 70% 
+ & 0.8
+% delta-h-c-f2-uncertainty - 70% 
+ & \textbf{0.84}
+% rg2009 - 70% 
+ & 0.06
+% lm_hc0 - 70% 
+ & 0.58
+% lm_hc30 - 70% 
+ & 0.28
+\\ & & 100 & 24.67 & 1.0
+
+% delta-h-c - 100% 
+ & 0.66
+% delta-h-c-uncertainty - 100% 
+ & 0.55
+% delta-h-c-f2 - 100% 
+ & \textbf{1.0}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.92
+% rg2009 - 100% 
+ & 0.04
+% lm_hc0 - 100% 
+ & 0.96
+% lm_hc30 - 100% 
+ & 0.38 & 32.67 & 1.33
+
+% delta-h-c - 100% 
+ & 0.35
+% delta-h-c-uncertainty - 100% 
+ & 0.34
+% delta-h-c-f2 - 100% 
+ & \textbf{0.85}
+% delta-h-c-f2-uncertainty - 100% 
+ & 0.5
+% rg2009 - 100% 
+ & 0.04
+% lm_hc0 - 100% 
+ & 0.77
+% lm_hc30 - 100% 
+ & 0.33 \\ \hline
+Avg & &  & &  & 0.72 & 0.67 & \textbf{0.76} & 0.74 & 0.37 & 0.65 & 0.39 & &  & 0.7 & 0.58 & \textbf{0.74} & 0.65 & 0.35 & 0.64 & 0.38\\
+\bottomrule
+\end{tabular}\\
+\caption{Results for each method.}
+\end{table*}
+
+\end{document}

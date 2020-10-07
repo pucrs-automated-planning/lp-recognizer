@@ -1,0 +1,145 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{rotating} % <-- HERE
+\usepackage{subcaption}
+\usepackage{mathtools}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+\DeclareMathOperator{\planningtask}{\Pi}
+\DeclareMathOperator{\goalconditions}{\Gamma}
+\DeclareMathOperator{\plan}{\pi}
+\DeclareMathOperator{\optimalplan}{\pi^{*}}
+\DeclareMathOperator{\plancost}{\mathit{cost}}
+\DeclareMathOperator{\occur}{\mathit{occur}}
+\providecommand\initialstate{\ensuremath{s_{0}}}
+\providecommand\goalstate{\ensuremath{s^{*}}}
+
+\providecommand\h{\ensuremath{h}}
+\providecommand\hoptimal{\ensuremath{h^{*}}}
+\providecommand\hip{\ensuremath{h}^{\textup{IP}}}
+
+\DeclareMathOperator{\grtask}{\Pi_{\goalconditions}^{\observations}}
+\DeclareMathOperator{\grsolution}{\Gamma^{*}}
+\DeclareMathOperator{\observations}{\Omega}
+\DeclareMathOperator{\noisyobservations}{\Omega^{N}}
+\DeclareMathOperator{\obsevation}{o}
+\providecommand\varvalue[2]{\ensuremath{#1[#2]}}
+\providecommand\obs[1]{\ensuremath{\vec{#1}}}
+
+\providecommand\variableoccurrences{\ensuremath{\mathcal{K}}}
+\providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
+\providecommand\constraints{\ensuremath{C}}
+\providecommand\uncertainty{\ensuremath{\mu}}
+\providecommand\unreliability{\ensuremath{\epsilon}}
+
+\newcommand{\rg}{RG}
+\newcommand{\fgr}{FGR 2015}
+\newcommand{\mirroring}{M+L 2018}
+\newcommand{\dhc}{\ensuremath{\Gamma^{\text{LP}}}}
+\newcommand{\dhcu}{\ensuremath{\Gamma^{\uncertainty}}}
+\newcommand{\dhcf}{\ensuremath{\Gamma^{\text{\unreliability}}}}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+\newcommand{\seq}{$h^{\text{SEQ}}_{\observations}$}
+\newcommand{\lmc}{$h^{\text{LMC}}_{\observations}$}
+\newcommand{\pho}{$h^{\text{PhO}}_{\observations}$}
+
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Basic Dataset - Time Table)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+Optimal\\
+\fontsize{6}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{c|c|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc}
+\toprule
+\multicolumn{2}{c}{}
+& \multicolumn{3}{c|}{\dhc}
+& \multicolumn{3}{c|}{\dhcu}
+& \multicolumn{3}{c|}{\dhcf}
+& \multicolumn{3}{c|}{\seq}
+& \multicolumn{3}{c|}{\lmc}
+& \multicolumn{3}{c|}{\pho}
+& \multicolumn{3}{c|}{\seq, \lmc}
+& \multicolumn{3}{c|}{\lmc, \pho}
+& \multicolumn{3}{c}{\seq, \pho}
+\\\midrule
+\# & \%
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+\\ \midrule
+CONTENT
+\multicolumn{2}{c|}{AVG} AVERAGE
+\\ \bottomrule
+\end{tabular}
+\caption{Times spent on Python layer (Py), Fast-Downward preprocess (FD) and actual LP-solving (LP), on optimal dataset.}
+\end{table*}
+\clearpage
+\begin{table*}[]
+\centering
+Sub-Optimal\\
+\fontsize{6}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+% ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f2', 'rg2009', 'lm_hc0', 'lm_hc10', 'lm_hc20', 'lm_hc30']
+\begin{tabular}{c|c|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc|ccc}
+\toprule
+\multicolumn{2}{c}{}
+& \multicolumn{3}{c|}{\dhc}
+& \multicolumn{3}{c|}{\dhcu}
+& \multicolumn{3}{c|}{\dhcf}
+& \multicolumn{3}{c|}{\seq}
+& \multicolumn{3}{c|}{\lmc}
+& \multicolumn{3}{c|}{\pho}
+& \multicolumn{3}{c|}{\seq, \lmc}
+& \multicolumn{3}{c|}{\lmc, \pho}
+& \multicolumn{3}{c}{\seq, \pho}
+\\\midrule
+\# & \%
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+& \textbf{Py} & \textbf{h} & \textbf{Total}
+\\ \midrule
+CONTENT2
+\multicolumn{2}{c|}{AVG} AVERAGE2
+\\ \bottomrule
+\end{tabular}
+\caption{Times spent on Python layer (Py), Fast-Downward preprocess (FD) and actual LP-solving (LP), on sub-optimal dataset.}
+\end{table*}
+
+\end{document}

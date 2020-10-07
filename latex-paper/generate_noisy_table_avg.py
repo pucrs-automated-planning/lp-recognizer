@@ -60,32 +60,49 @@ def average_values(all_domain_data, approach, dt):
 			continue
 		if approach in domain_data.avg_data:
 			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
-	return [x / len(all_domain_data.keys()) for x in sum_values]
+	return [x / len(all_domain_data.keys()) * 2 for x in sum_values]
 
-def collect_data(file, domains, approaches, basepaths, observabilities):
+
+def collect_data(file, domains, approaches, observabilities):
 	all_domain_data = dict()
 	for domain in domains:
 		for dt in ['-optimal', '-suboptimal']:
+			# No noise
 			domain_name = domain+dt
 			domain_data = DomainData(observabilities)
 			all_domain_data[domain_name] = domain_data
-			for basepath, approach in zip(basepaths, approaches):
-				path = basepath + "/" + domain_name + '-' + approach + '.txt'
+			for approach in approaches:
+				path = '../results-new/' + domain_name + '-old-noisy-' + approach + '.txt'
 				if not os.path.isfile(path):
 					continue
 				with open(path) as f:
-					domain_data.read_approach_data(f, basepath + approach)
+					domain_data.read_approach_data(f, approach)
 			domain_data.total_problems /= len(approaches)
 	return all_domain_data
 
-
-def get_latex_content(file, domains, approaches, basepaths):
-	print("Tabulating data from %s for domains %s"%(basepaths,domains))
+def get_latex_content(file, domains):
+	print("Tabulating data for domains %s" % domains)
 	observabilities = ['10', '30', '50', '70', '100']
-	all_domain_data = collect_data(file, domains, approaches, basepaths, observabilities)
-
+	approaches = ['delta-h-c', 'delta-h-c-f2', 'rg2009', 'lm_hc0']
+	all_domain_data = collect_data(file, domains, approaches, observabilities)
 	content_table = ''
-
+	def print_agreements(domain_data, approaches):
+		content_line = ''
+		# Find best
+		best_ar = 0
+		for approach in approaches:
+			values = domain_data.avg_data[approach]
+			ar = round(values[5], 2)
+			if ar > best_ar:
+				best_ar = ar
+		# Write
+		for approach in approaches:
+			values = domain_data.avg_data[approach]
+			ar = round(values[5], 2)
+			if ar == best_ar:
+				ar = "\\textbf{%s}" % ar
+			content_line += ' & ' + str(ar)
+		return content_line
 	for domain_name in domains:
 		domain_name_4table = domain_name
 		if 'intrusion-detection' in domain_name:
@@ -96,93 +113,103 @@ def get_latex_content(file, domains, approaches, basepaths):
 			domain_name_4table = domain_name_4table.replace("-travel", "")
 		if 'easy-ipc-grid' in domain_name:
 			domain_name_4table = domain_name_4table.replace("easy-", "")
+		content_table += '\\textsc{%s}' % domain_name_4table[0]
+		content_table += '%\n'
 
-		domain_data = all_domain_data[domain_name+"-optimal"]
-		content_table += '\\multirow{%s}{*}{ \\rotatebox[origin=c]{90}{\\textsc{%s}} } & \\multirow{%s}{*}{%s} ' \
-			% (len(observabilities), domain_name_4table, len(observabilities), round(domain_data.get_avg_goals(), 1))
-
-		for obs in observabilities:
-			content_table += '\n'
-			if obs != '10':
-				content_table += '\\\\ &'
-			print_obs = True
-			for dt in ['-optimal', '-suboptimal']:
-				domain_data = all_domain_data[domain_name+dt]
-
-				if print_obs:
-					content_table += ' & ' + obs
-					print_obs = False
-
-				len_obs = str(round(domain_data.get_avg_obs(obs), 2))
-				len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
-				content_table +=' & ' + len_obs + ' & ' + len_solutions + '\n'
-
-				# Find best
-				best_ar = 0
-				for basepath, approach in zip(basepaths, approaches):
-					if (basepath + approach) not in domain_data.obs_data[obs]:
-						continue
-					values = domain_data.obs_data[obs][basepath + approach]
-					ar = round(values[5], 2)
-					if ar > best_ar:
-						best_ar = ar
-
-				# Write
-				for basepath, approach in zip(basepaths, approaches):
-					content_table += '\n% ' + approach + ' - ' + obs + '% \n'
-					values = domain_data.obs_data[obs][basepath + approach]
-					ar = round(values[5], 2)
-					if ar == best_ar:
-						ar = "\\textbf{%s}" % ar
-					content_table += ' & ' + str(ar)
-		content_table += ' \\\\ \hline'
+		content_table += ' & AVG'
+		content_table += print_agreements(all_domain_data[domain_name + '-optimal'], approaches)
+		content_table += print_agreements(all_domain_data[domain_name + '-suboptimal'], approaches)
+		content_table += "\\\\"
+		content_table += '\hline%\n'
 
 	content_avg = ''
-	for dt in ['-optimal', '-suboptimal']:
+	def print_avg(i, domain_data, dt, approaches):
+		content_line = ''
 		# Find best
-		content_avg += ' & & '
 		best_ar = 0
-		for basepath, approach in zip(basepaths, approaches):
-			values = average_values(all_domain_data, basepath + approach, dt)
-			ar = round(values[5], 2)
+		for approach in approaches:
+			values = average_values(domain_data, approach, dt)
+			ar = round(values[i], 2)
 			if ar > best_ar:
 				best_ar = ar
-		for basepath, approach in zip(basepaths, approaches):
-			values = average_values(all_domain_data, basepath + approach, dt)
-			ar = round(values[5], 2)
+		# Write
+		for approach in approaches:
+			values = average_values(domain_data, approach, dt)
+			ar = round(values[i], 2)
 			if ar == best_ar:
 				ar = "\\textbf{%s}" % ar
-			content_avg += ' & ' + str(ar)
+			content_line += ' & ' + str(ar)
+		return content_line
+
+	def print_avg_less(i, domain_data, dt, approaches):
+		content_line = ''
+		# Find best
+		best_ar = float('inf')
+		for approach in approaches:
+			values = average_values(domain_data, approach, dt)
+			ar = round(values[i], 2)
+			if ar < best_ar:
+				best_ar = ar
+		# Write
+		for approach in approaches:
+			values = average_values(domain_data, approach, dt)
+			ar = round(values[i], 2)
+			if ar == best_ar:
+				ar = "\\textbf{%s}" % ar
+			content_line += ' & ' + str(ar)
+		return content_line
+
+	content_avg += "\\multicolumn{2}{c|}{AVG AGR}"
+	content_avg += print_avg(5, all_domain_data, '-optimal', approaches)
+	content_avg += print_avg(5, all_domain_data, '-suboptimal', approaches)
+	content_avg += '\\\\\hline%\n'
+
+	content_avg += "\\multicolumn{2}{c|}{AVG ACC}"
+	content_avg += print_avg(8, all_domain_data, '-optimal', approaches)
+	content_avg += print_avg(8, all_domain_data, '-suboptimal', approaches)
+	content_avg += '\\\\\hline%\n'
+
+	content_avg += "\\multicolumn{2}{c|}{AVG SPR}"
+	content_avg += print_avg_less(9, all_domain_data, '-optimal', approaches)
+	content_avg += print_avg_less(9, all_domain_data, '-suboptimal', approaches)
 
 	return content_table, content_avg
 
-def main(template, file, domains, approaches, basepaths):
+def main(template, file, domains):
 	# Get content.
-	content_table, content_avg = get_latex_content(file, domains, approaches, basepaths)
+	content_table, content_avg = get_latex_content(file, domains)
 	# Write latex
 	latexContent = ''
 	with open(template, 'r') as latex:
 		latexContent = latex.read()
-	latexContent = latexContent.replace('CONTENT', content_table)
-	latexContent = latexContent.replace('AVERAGE', content_avg)
+	latexContent = latexContent.replace('%CONTENT', content_table)
+	latexContent = latexContent.replace('%AVERAGE', content_avg)
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
 	os.system("pdflatex " + file)
 
 if __name__ == '__main__' :
-	default_path = '../results-new'
-	domains = ['blocks-world', 'easy-ipc-grid', 'logistics', 'miconic', 'rovers', 'satellite', 'sokoban']
-	file = 'constraints.tex'
-	template = 'constraints-template.tex'
-	approaches = ['delta-h-c-cs', 'delta-h-c-cl', 'delta-h-c-cp', 'delta-h-c-clp', 'delta-h-c-cps', 'delta-h-c-cls']
-	paths = [default_path] * 6
+	domains = [
+	'blocks-world', 
+	'depots', 
+	'driverlog', 
+	'dwr', 
+	'easy-ipc-grid', 
+	'ferry', 
+	'logistics', 
+	'miconic', 
+	'rovers', 
+	'satellite', 
+	'sokoban',
+	'zeno-travel'
+	]
+	file = 'noisy-avg.tex'
+	template = 'noisy-template.tex'
 
 	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
 	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
-	parser.add_argument('-a', '--approaches', metavar="A", nargs='+', type=str, help="approaches to tabulate")
-	parser.add_argument('-p', '--paths', metavar="P", nargs='+', type=str, help="base path of data result files for each approach")
 	parser.add_argument('-t', '--template', metavar="T", nargs=1, type=str, help="template file")
 	parser.add_argument('-f', '--file', metavar="F", nargs=1, type=str, help="result file")
 	args = parser.parse_args()
 
-	main(template, file, domains, approaches, paths)
+	main(template, file, domains)

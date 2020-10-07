@@ -1,0 +1,61 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\hdeltahc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hc-U}}}}
+\newcommand{\hdeltahcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\hdeltahcfu}{\ensuremath{\delta_{\textsc{hcF-U}}}}
+\newcommand{\completion}{POM}
+\newcommand{\rg}{R\&G}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Comparing with Previous Methods)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{4}{4}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{cc|ccc|ccc|cccc|cccc}
+\toprule
+ & & \multicolumn{6}{c}{No Noise} & \multicolumn{8}{c}{Noisy}\\
+\cmidrule(lr){3-8}\cmidrule(lr){9-16}
+ & & \multicolumn{3}{c}{Optimal} & \multicolumn{3}{c}{Suboptimal} & \multicolumn{4}{c}{Optimal} & \multicolumn{4}{c}{Suboptimal}\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-12}\cmidrule(lr){13-16}
+\# & \% & \hdeltahc & \rg & \completion & \hdeltahc & \rg & \completion%
+& \hdeltahc & \hdeltahcf & \rg & \completion & \hdeltahc & \hdeltahcf & \rg & \completion\\
+\midrule
+\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{blocks}}}%
+ & 10 & 0.44 & \textbf{0.47} & 0.06 & 0.41 & \textbf{0.46} & 0.06 & \textbf{0.32} & \textbf{0.32} & 0.31 & 0.06 & 0.38 & 0.38 & \textbf{0.42} & 0.05\\ & 30 & \textbf{0.46} & 0.45 & 0.21 & 0.49 & \textbf{0.54} & 0.28 & 0.37 & 0.37 & \textbf{0.39} & 0.13 & 0.36 & 0.37 & \textbf{0.49} & 0.22\\ & 50 & 0.59 & \textbf{0.62} & 0.33 & 0.55 & \textbf{0.62} & 0.39 & \textbf{0.64} & \textbf{0.64} & 0.6 & 0.37 & 0.53 & 0.53 & \textbf{0.55} & 0.28\\ & 70 & \textbf{0.85} & 0.81 & 0.51 & \textbf{0.71} & 0.68 & 0.51 & 0.79 & \textbf{0.81} & 0.77 & 0.47 & \textbf{0.67} & \textbf{0.67} & 0.63 & 0.38\\ & 100 & \textbf{0.92} & 0.9 & 0.59 & \textbf{0.84} & 0.8 & 0.51 & 0.88 & 0.88 & \textbf{0.89} & 0.57 & 0.78 & \textbf{0.82} & 0.74 & 0.51\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{dwr}}}%
+ & 10 & \textbf{0.79} & 0.67 & 0.45 & \textbf{0.75} & 0.66 & 0.46 & \textbf{0.41} & \textbf{0.41} & 0.19 & 0.28 & \textbf{0.39} & \textbf{0.39} & 0.23 & 0.33\\ & 30 & \textbf{0.8} & 0.58 & 0.55 & \textbf{0.71} & 0.64 & 0.66 & 0.57 & \textbf{0.6} & 0.28 & 0.46 & 0.55 & 0.55 & 0.09 & \textbf{0.56}\\ & 50 & \textbf{0.91} & 0.71 & 0.76 & \textbf{0.84} & 0.68 & 0.76 & \textbf{0.63} & \textbf{0.63} & 0.1 & 0.58 & 0.63 & 0.63 & 0.11 & \textbf{0.75}\\ & 70 & \textbf{0.9} & 0.75 & 0.84 & 0.88 & 0.72 & \textbf{0.89} & \textbf{0.81} & \textbf{0.81} & 0.15 & 0.73 & \textbf{0.78} & \textbf{0.78} & 0.1 & 0.69\\ & 100 & 0.92 & 0.86 & \textbf{0.96} & 0.92 & 0.86 & \textbf{0.96} & 0.86 & \textbf{0.89} & 0.04 & 0.79 & 0.86 & \textbf{0.9} & 0.03 & 0.88\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{ipc-grid}}}%
+ & 10 & 0.87 & \textbf{0.91} & 0.47 & 0.77 & \textbf{0.81} & 0.64 & \textbf{0.57} & \textbf{0.57} & 0.16 & 0.38 & \textbf{0.62} & \textbf{0.62} & 0.12 & 0.54\\ & 30 & 0.93 & \textbf{0.99} & 0.85 & 0.82 & \textbf{0.9} & 0.81 & \textbf{0.85} & \textbf{0.85} & 0.28 & 0.71 & 0.68 & 0.68 & 0.08 & \textbf{0.72}\\ & 50 & 0.96 & \textbf{1.0} & 0.86 & 0.84 & \textbf{0.92} & 0.87 & \textbf{0.89} & \textbf{0.89} & 0.07 & 0.81 & 0.84 & 0.84 & 0.04 & \textbf{0.85}\\ & 70 & 0.97 & \textbf{1.0} & 0.97 & 0.89 & \textbf{0.93} & 0.92 & \textbf{0.95} & \textbf{0.95} & 0.15 & 0.93 & 0.89 & 0.89 & 0.02 & \textbf{0.9}\\ & 100 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{0.94} & \textbf{0.94} & \textbf{0.94} & \textbf{1.0} & \textbf{1.0} & 0.08 & 0.99 & \textbf{0.94} & \textbf{0.94} & 0.04 & 0.92\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{ferry}}}%
+ & 10 & \textbf{0.88} & \textbf{0.88} & 0.48 & \textbf{0.71} & \textbf{0.71} & 0.51 & \textbf{0.43} & \textbf{0.43} & 0.32 & 0.2 & \textbf{0.35} & \textbf{0.35} & 0.31 & 0.26\\ & 30 & \textbf{0.9} & 0.88 & 0.72 & \textbf{0.88} & 0.8 & 0.77 & \textbf{0.46} & \textbf{0.46} & 0.41 & 0.44 & \textbf{0.47} & \textbf{0.47} & \textbf{0.47} & 0.44\\ & 50 & \textbf{0.98} & 0.9 & 0.89 & \textbf{0.88} & 0.8 & 0.81 & 0.74 & \textbf{0.77} & 0.65 & 0.69 & \textbf{0.75} & \textbf{0.75} & 0.66 & 0.69\\ & 70 & \textbf{0.99} & 0.93 & 0.96 & \textbf{0.96} & 0.92 & 0.9 & 0.9 & \textbf{0.92} & 0.77 & 0.9 & 0.81 & \textbf{0.83} & 0.7 & 0.78\\ & 100 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{0.96} & \textbf{0.96} & \textbf{0.96} & 0.92 & \textbf{0.95} & 0.75 & 0.94 & 0.85 & \textbf{0.95} & 0.71 & 0.82\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{logistics}}}%
+ & 10 & \textbf{0.9} & 0.87 & 0.43 & \textbf{0.88} & 0.72 & 0.56 & \textbf{0.58} & \textbf{0.58} & 0.13 & 0.41 & \textbf{0.55} & \textbf{0.55} & 0.28 & 0.41\\ & 30 & \textbf{0.92} & 0.86 & 0.78 & \textbf{0.91} & 0.87 & 0.85 & \textbf{0.82} & \textbf{0.82} & 0.06 & 0.78 & 0.8 & \textbf{0.82} & 0.12 & 0.81\\ & 50 & \textbf{0.96} & 0.93 & 0.9 & 0.88 & 0.91 & \textbf{0.93} & \textbf{0.9} & \textbf{0.9} & 0.03 & 0.89 & \textbf{0.91} & \textbf{0.91} & 0.03 & 0.9\\ & 70 & 0.99 & 0.99 & \textbf{1.0} & 0.97 & \textbf{0.99} & \textbf{0.99} & \textbf{0.97} & \textbf{0.97} & 0.03 & 0.94 & 0.96 & 0.97 & 0.0 & \textbf{0.99}\\ & 100 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & 0.03 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & 0.0 & \textbf{1.0}\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{miconic}}}%
+ & 10 & \textbf{0.89} & 0.76 & 0.39 & \textbf{0.76} & 0.65 & 0.54 & 0.39 & 0.39 & \textbf{0.46} & 0.27 & 0.43 & 0.43 & \textbf{0.47} & 0.35\\ & 30 & \textbf{0.95} & 0.65 & 0.83 & \textbf{0.89} & 0.66 & 0.86 & 0.57 & \textbf{0.65} & 0.55 & 0.57 & 0.75 & \textbf{0.78} & 0.64 & 0.69\\ & 50 & \textbf{0.97} & 0.84 & 0.92 & \textbf{0.98} & 0.91 & 0.97 & 0.93 & \textbf{0.94} & 0.87 & 0.9 & 0.86 & 0.89 & 0.87 & \textbf{0.93}\\ & 70 & 0.98 & 0.91 & \textbf{0.99} & 0.99 & 0.94 & \textbf{1.0} & 0.94 & \textbf{0.96} & 0.93 & \textbf{0.96} & 0.9 & 0.93 & \textbf{0.98} & 0.94\\ & 100 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & 0.94 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & 0.97 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0}\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{rovers}}}%
+ & 10 & \textbf{0.83} & 0.76 & 0.49 & \textbf{0.83} & 0.82 & 0.45 & \textbf{0.44} & \textbf{0.44} & 0.18 & 0.31 & \textbf{0.46} & \textbf{0.46} & 0.37 & 0.44\\ & 30 & \textbf{0.94} & 0.88 & 0.76 & \textbf{0.88} & 0.8 & 0.7 & 0.7 & 0.7 & 0.45 & \textbf{0.75} & 0.65 & \textbf{0.66} & 0.4 & 0.51\\ & 50 & \textbf{0.92} & 0.91 & 0.79 & \textbf{0.93} & 0.89 & 0.8 & 0.8 & \textbf{0.82} & 0.31 & 0.71 & \textbf{0.87} & 0.85 & 0.49 & 0.72\\ & 70 & \textbf{0.99} & 0.97 & 0.93 & 0.94 & \textbf{0.98} & 0.87 & \textbf{0.93} & 0.89 & 0.49 & 0.88 & \textbf{0.93} & 0.92 & 0.26 & 0.89\\ & 100 & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{1.0} & \textbf{0.97} & 0.93 & 0.39 & \textbf{0.97} & \textbf{0.97} & 0.93 & 0.34 & 0.9\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{satellite}}}%
+ & 10 & 0.85 & \textbf{0.86} & 0.5 & \textbf{0.9} & 0.73 & 0.58 & \textbf{0.53} & \textbf{0.53} & 0.41 & 0.34 & \textbf{0.49} & \textbf{0.49} & 0.41 & 0.29\\ & 30 & \textbf{0.86} & 0.72 & 0.64 & \textbf{0.8} & 0.68 & 0.6 & \textbf{0.5} & 0.48 & 0.4 & 0.41 & 0.54 & \textbf{0.6} & 0.54 & 0.51\\ & 50 & \textbf{0.93} & 0.79 & 0.73 & \textbf{0.92} & 0.7 & 0.76 & 0.67 & \textbf{0.69} & 0.42 & 0.49 & 0.78 & \textbf{0.81} & 0.61 & 0.66\\ & 70 & \textbf{0.94} & 0.81 & 0.89 & \textbf{0.94} & 0.78 & 0.85 & \textbf{0.87} & \textbf{0.87} & 0.67 & 0.81 & 0.86 & \textbf{0.91} & 0.63 & 0.78\\ & 100 & \textbf{0.96} & 0.88 & 0.88 & \textbf{0.96} & 0.88 & 0.88 & 0.92 & \textbf{0.94} & 0.69 & 0.88 & 0.92 & \textbf{0.94} & 0.47 & 0.92\\\hline\multirow{5}{*}{ \rotatebox[origin=c]{90}{\textsc{sokoban}}}%
+ & 10 & 0.39 & \textbf{0.4} & 0.28 & \textbf{0.52} & 0.29 & 0.35 & \textbf{0.27} & \textbf{0.27} & 0.1 & 0.24 & 0.31 & \textbf{0.32} & 0.13 & 0.25\\ & 30 & \textbf{0.75} & 0.56 & 0.57 & \textbf{0.77} & 0.43 & 0.56 & 0.56 & \textbf{0.7} & 0.2 & 0.34 & 0.48 & \textbf{0.56} & 0.12 & 0.29\\ & 50 & \textbf{0.92} & 0.61 & 0.61 & \textbf{0.79} & 0.53 & 0.58 & 0.61 & \textbf{0.82} & 0.2 & 0.57 & 0.5 & \textbf{0.73} & 0.01 & 0.46\\ & 70 & \textbf{0.99} & 0.64 & 0.85 & \textbf{0.8} & 0.54 & 0.63 & 0.6 & \textbf{0.97} & 0.08 & 0.84 & 0.54 & \textbf{0.8} & 0.06 & 0.58\\ & 100 & \textbf{1.0} & 0.67 & \textbf{1.0} & \textbf{0.83} & 0.58 & \textbf{0.83} & 0.66 & \textbf{1.0} & 0.04 & 0.96 & 0.35 & \textbf{0.85} & 0.04 & 0.77\\\hline
+Avg &  & \textbf{0.89} & 0.81 & 0.72 & \textbf{0.84} & 0.77 & 0.73 & 0.71 & \textbf{0.74} & 0.37 & 0.64 & 0.69 & \textbf{0.72} & 0.35 & 0.63\\
+\bottomrule
+\end{tabular}\\
+\caption{Results for each method.}
+\end{table*}
+
+\end{document}

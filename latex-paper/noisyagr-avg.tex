@@ -1,0 +1,84 @@
+\def\year{2020}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai18}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+\newcommand{\dhc}{\ensuremath{\delta_{\textsc{hc}}}}
+\newcommand{\dhcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+\newcommand{\dhcf}{\ensuremath{\delta_{\textsc{hcF}}}}
+\newcommand{\rg}{R\&G}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+%---------------------------------------------------------------------------------------------------------------
+\pdfinfo{
+/Title (Uncertainty)
+/Author (?)
+}
+\begin{document}
+
+\begin{table*}[]
+\centering
+\fontsize{5}{6}\selectfont
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{cc|ccc|ccc|ccc|ccc||ccc|ccc|ccc|ccc}
+\toprule
+ \multicolumn{2}{c}{} & \multicolumn{12}{c}{Optimal} & \multicolumn{12}{c}{Suboptimal}\\
+\cmidrule(lr){3-14}\cmidrule(lr){15-26}
+%
+ \multicolumn{2}{c}{} & \multicolumn{3}{c}{\dhc} & \multicolumn{3}{c}{\dhcf} & \multicolumn{3}{c}{\rg} & \multicolumn{3}{c}{\pom}%
+  & \multicolumn{3}{c}{\dhc} & \multicolumn{3}{c}{\dhcf} & \multicolumn{3}{c}{\rg} & \multicolumn{3}{c}{\pom}\\%
+%
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}\cmidrule(lr){12-14}\cmidrule(lr){15-17}\cmidrule(lr){18-20}\cmidrule(lr){21-23}%
+ \cmidrule(lr){24-26}\\
+%
+\# & \% & AGR & ACC & SPR & AGR & ACC & SPR & AGR & ACC & SPR & AGR & ACC & SPR & AGR & ACC & SPR & AGR & ACC & SPR & AGR & ACC & SPR%
+ & AGR & ACC & SPR\\
+\midrule
+\textsc{b}%
+ & AVG & 0.6 & 0.82 & 3.11 & \textbf{0.61} & 0.83 & 3.13 & 0.59 & 0.88 & 4.15 & 0.32 & 0.52 & 1.34 & 0.54 & 0.79 & 3.29 & 0.55 & 0.81 & 3.32 & \textbf{0.57} & 0.91 & 4.32 & 0.29 & 0.57 & 1.33\\\hline%
+\textsc{d}%
+ & AVG & \textbf{0.65} & 0.84 & 2.08 & \textbf{0.65} & 0.84 & 2.08 & 0.02 & 0.06 & 0.23 & 0.46 & 0.54 & 1.31 & 0.65 & 0.81 & 1.71 & \textbf{0.68} & 0.83 & 1.71 & 0.02 & 0.05 & 0.2 & 0.45 & 0.57 & 1.48\\\hline%
+\textsc{d}%
+ & AVG & 0.68 & 0.86 & 1.68 & \textbf{0.69} & 0.87 & 1.7 & 0.23 & 0.47 & 1.73 & 0.49 & 0.67 & 1.43 & 0.66 & 0.81 & 1.56 & \textbf{0.68} & 0.84 & 1.59 & 0.21 & 0.41 & 1.49 & 0.49 & 0.78 & 1.66\\\hline%
+\textsc{d}%
+ & AVG & 0.66 & 0.93 & 1.81 & \textbf{0.67} & 0.93 & 1.81 & 0.15 & 0.26 & 0.82 & 0.57 & 0.69 & 1.17 & 0.64 & 0.88 & 1.87 & \textbf{0.65} & 0.89 & 1.87 & 0.11 & 0.19 & 0.63 & 0.64 & 0.76 & 1.14\\\hline%
+\textsc{i}%
+ & AVG & \textbf{0.85} & 0.96 & 1.19 & \textbf{0.85} & 0.96 & 1.19 & 0.15 & 0.17 & 0.28 & 0.76 & 0.88 & 1.34 & \textbf{0.8} & 0.95 & 1.33 & \textbf{0.8} & 0.95 & 1.34 & 0.06 & 0.09 & 0.17 & 0.79 & 0.9 & 1.18\\\hline%
+\textsc{f}%
+ & AVG & 0.69 & 0.92 & 2.13 & \textbf{0.71} & 0.93 & 2.11 & 0.58 & 0.78 & 1.74 & 0.64 & 0.72 & 1.23 & 0.65 & 0.87 & 2.06 & \textbf{0.67} & 0.88 & 2.02 & 0.57 & 0.76 & 1.67 & 0.6 & 0.73 & 1.28\\\hline%
+\textsc{l}%
+ & AVG & \textbf{0.85} & 0.97 & 1.43 & \textbf{0.85} & 0.97 & 1.43 & 0.05 & 0.07 & 0.21 & 0.81 & 0.91 & 1.32 & 0.84 & 0.98 & 1.39 & \textbf{0.85} & 0.98 & 1.38 & 0.09 & 0.13 & 0.32 & 0.82 & 0.88 & 1.11\\\hline%
+\textsc{m}%
+ & AVG & 0.76 & 0.89 & 1.42 & \textbf{0.79} & 0.93 & 1.44 & 0.76 & 0.96 & 1.73 & 0.74 & 0.81 & 1.14 & 0.78 & 0.92 & 1.36 & \textbf{0.81} & 0.93 & 1.33 & 0.79 & 0.97 & 1.7 & 0.78 & 0.88 & 1.21\\\hline%
+\textsc{r}%
+ & AVG & \textbf{0.77} & 0.91 & 1.48 & 0.76 & 0.91 & 1.52 & 0.36 & 0.48 & 0.82 & 0.72 & 0.8 & 1.13 & \textbf{0.78} & 0.92 & 1.44 & 0.77 & 0.91 & 1.44 & 0.37 & 0.48 & 0.93 & 0.69 & 0.78 & 1.14\\\hline%
+\textsc{s}%
+ & AVG & \textbf{0.7} & 0.87 & 2.03 & \textbf{0.7} & 0.87 & 2.02 & 0.52 & 0.74 & 2.2 & 0.59 & 0.77 & 1.58 & 0.72 & 0.88 & 1.87 & \textbf{0.75} & 0.93 & 1.92 & 0.53 & 0.76 & 2.19 & 0.63 & 0.83 & 1.66\\\hline%
+\textsc{s}%
+ & AVG & 0.54 & 0.85 & 3.11 & \textbf{0.75} & 0.88 & 1.49 & 0.13 & 0.22 & 0.77 & 0.59 & 0.69 & 1.27 & 0.44 & 0.84 & 3.98 & \textbf{0.65} & 0.82 & 1.43 & 0.07 & 0.14 & 0.67 & 0.47 & 0.64 & 1.32\\\hline%
+\textsc{z}%
+ & AVG & 0.73 & 0.87 & 1.46 & \textbf{0.75} & 0.88 & 1.43 & 0.66 & 0.89 & 1.87 & 0.61 & 0.74 & 1.31 & 0.73 & 0.85 & 1.34 & \textbf{0.76} & 0.89 & 1.34 & 0.7 & 0.9 & 1.8 & 0.68 & 0.77 & 1.25\\\hline%
+
+\multicolumn{2}{c}{AVG}  & 0.71 & 0.89 & 1.91 & \textbf{0.73} & 0.9 & 1.78 & 0.35 & 0.5 & 1.38 & 0.61 & 0.73 & 1.3 & 0.69 & 0.87 & 1.93 & \textbf{0.72} & 0.89 & 1.72 & 0.34 & 0.48 & 1.34 & 0.61 & 0.76 & 1.31%
+\\
+\bottomrule
+\end{tabular}\\
+\caption{}
+\end{table*}
+
+\end{document}
