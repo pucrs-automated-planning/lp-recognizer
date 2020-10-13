@@ -14,7 +14,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "r:be:ht:m:T:F:H:S:",
+                                       "r:be:ht:m:T:F:H:oS:",
                                        ["recognizer-name=",
                                         "batch",
                                         "experiment=",
@@ -24,6 +24,7 @@ class Program_Options:
                                         "theta=",
                                         "filter=",
                                         "heuristics=",
+                                        "h-obs"
                                         "solver="])
         except getopt.GetoptError:
             print("Missing or incorrect parameters specified!", file=sys.stderr)
@@ -43,6 +44,7 @@ class Program_Options:
         self.filter = 0 # Obs filter
         self.weight = 3
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
+        self.h_obs = False
         self.solver = "soplex"
 
         for opcode, oparg in opts:
@@ -102,6 +104,9 @@ class Program_Options:
                 self.heuristics = list(oparg.split(","))
                 print("LIST OF HEURISTICS: "+oparg)
                 print(self.heuristics)
+            if opcode in ('-o', '--h-obs'):
+                self.h_obs = True
+                print("Enable observations inside heuristic constraints!")
             if opcode in ('-S', '--solver'):
                 self.solver = oparg
                 print("Using LP solver: " + oparg)
@@ -111,6 +116,8 @@ class Program_Options:
                     self.recognizer_name = "weighted-delta-h-c"
                 elif 'w' in oparg:
                     self.recognizer_name = "weighted-c"
+                elif 'dco' in oparg:
+                    self.recognizer_name = "delta-h-c-o"
                 elif 'dc' in oparg:
                     self.recognizer_name = "delta-h-c"
                 elif 'vc' in oparg:

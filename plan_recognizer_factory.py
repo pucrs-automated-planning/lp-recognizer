@@ -51,6 +51,11 @@ class PlanRecognizerFactory(object):
             name = name.replace("-f2", "")
             options.filter = 2
 
+        # Observation constraints
+        if "-o" in name:
+            name = name.replace("-o", "")
+            options.h_obs = True
+
         # Heuristic options
         if "-cps" in name:
             name = name.replace("-cps", "")
