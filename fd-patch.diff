@@ -131,8 +131,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-10-13 18:46:06.761078700 -0300
-@@ -0,0 +1,485 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-10-14 10:54:01.367741300 -0300
+@@ -0,0 +1,480 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -460,8 +460,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                double epsilon = 0.01;
 +                double objective_value = lp_h_s.get_objective_value();
 +                result_s = ceil(objective_value - epsilon) + max_weight;
-+                if (result_s == 0)
-+                    result_s = 0.0 / 0.0;
 +            }
 +        }
 +        cout << "h_s: " << result_s << endl;
@@ -476,9 +474,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        cout << "Loaded problem with hard constraints." << endl;
 +        // Update constraints
 +        for (const auto &generator : constraint_generators) {
-+            if (calculate_h_c && generator->update_constraints(state, lp_h_c)) {
++            if (generator->update_constraints(state, lp_h_c)) {
 +                lp_h_c.clear_temporary_constraints();
-+                result_c = DEAD_END;
 +                calculate_h_c = false;
 +            }
 +        }
@@ -489,8 +486,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                double epsilon = 0.01;
 +                double objective_value = lp_h_c.get_objective_value();
 +                result_c = ceil(objective_value - epsilon);
-+                if (result_c == 0)
-+                    result_c = 0.0 / 0.0;
 +            }
 +        }
 +        cout << "h_c: " << result_c << endl;

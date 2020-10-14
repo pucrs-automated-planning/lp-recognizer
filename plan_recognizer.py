@@ -19,7 +19,7 @@ class PlanRecognizer:
         instream = open(file)
         for line in instream:
             observations.append(line.strip().lower())
-        print("observations: %s" % observations)
+        print("Observations: %s" % observations)
         return observations
 
     def load_hypotheses(self, opts):
@@ -31,7 +31,8 @@ class PlanRecognizer:
             H = Hypothesis(opts, atoms)
             H.check_if_actual()
             hyps.append(H)
-        print("Real solution: %s" % [hyp for hyp in hyps if hyp.is_solution])
+        print("Hypothesis: %s" % hyps)
+        print("Real hypothesis: %s" % [hyp for hyp in hyps if hyp.is_solution])
         instream.close()
         return hyps
 

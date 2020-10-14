@@ -41,7 +41,7 @@ class LPRecognizerHValue(PlanRecognizer):
             self.lp_time += hyp.lp_time
             if not hyp.test_failed:
                 hyp.score = self.get_score(hyp)
-                print("Score %s: %s" % (' '.join(hyp.atoms), hyp.score))
+                print("Score %s %s: %s" % (i, ' '.join(hyp.atoms), hyp.score))
         # Select unique goal (choose the goal with the smallest score)
         for h in self.hyps:
             if not h.test_failed:

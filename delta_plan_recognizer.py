@@ -11,6 +11,8 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
         LPRecognizerHValue.__init__(self, options, h = True, h_c = True, h_s = False)
 
     def get_score(self, h):
+        if h.h_c < h.h or h.h_c == 0:
+            h.test_failed = True
         return [h.h_c - h.h, h.h_c, h.obs_misses]
 
     def accept_hypothesis(self, h):
@@ -48,6 +50,8 @@ class LPRecognizerDeltaHCUncertaintyMax(LPRecognizerDeltaHCUncertainty):
         LPRecognizerDeltaHCUncertainty.__init__(self, options)
 
     def get_score(self, h):
+        if h.h_c < h.h or h.h_c == 0:
+            h.test_failed = True
         return [h.h_c - h.h, -h.h_c, h.obs_misses]
 
 class LPRecognizerWeightedDeltaHC(LPRecognizerDeltaHC):
