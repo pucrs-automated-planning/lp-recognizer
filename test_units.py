@@ -46,9 +46,17 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_lmcut_obs2(self):
         print("Testing delta-h-c modified")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", '-o']
         options = Program_Options(args)
-        recognizer_c = self.factory.get_recognizer("delta-h-c-o", options)
+        recognizer_c = self.factory.get_recognizer("delta-h-c", options)
+        recognizer_c.run_recognizer()
+
+    def test_relaxation(self):
+        print("Testing delta-h-c with delete relaxation")
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()"]
+        args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        options = Program_Options(args)
+        recognizer_c = self.factory.get_recognizer("delta-h-c", options)
         recognizer_c.run_recognizer()
 
     def test_deltahc_filter_recognizer(self):
