@@ -69,8 +69,12 @@ def collect_data(file, domains, approaches, basepaths, observabilities):
 			path = basepath + "/" + domain_name + '-' + approach + '.txt'
 			if not os.path.isfile(path):
 				continue
-			with open(path) as f:
-				domain_data.read_approach_data(f, basepath + approach)
+			try:
+				with open(path) as f:
+					domain_data.read_approach_data(f, basepath + approach)
+			except:
+				print(path)
+				exit()
 		domain_data.total_problems /= len(approaches)
 	return all_domain_data
 
@@ -87,7 +91,6 @@ def get_latex_content(file, domains, approaches, basepaths):
 		domain_name_4table = domain_name_4table.replace('-optimal', '')
 		domain_name_4table = domain_name_4table.replace('-suboptimal', '')
 		domain_name_4table = domain_name_4table.replace('-noisy', '')
-		domain_name_4table = domain_name_4table.replace('-old', '')
 		if 'intrusion-detection' in domain_name:
 			domain_name_4table = domain_name_4table.replace("-detection", "")
 		if 'blocks-world' in domain_name:
@@ -99,91 +102,40 @@ def get_latex_content(file, domains, approaches, basepaths):
 
 		domain_data = all_domain_data[domain_name]
 		
-		content_table += '\n\\multirow{%s}{*}{ \\rotatebox[origin=c]{90}{\\textsc{%s}} } ' \
-			% (len(observabilities), domain_name_4table)
+		content_table += '\n\\multirow{%s}{*}{\\rotatebox[origin=c]{90}{\\textsc{%s}} \\rotatebox[origin=c]{90}{(%s)}} & \\multirow{%s}{*}{%s} ' \
+			% (len(observabilities), domain_name_4table, domain_data.total_problems, len(observabilities), round(domain_data.get_avg_goals(), 1))
 
 		for obs in observabilities:
 			len_obs = str(round(domain_data.get_avg_obs(obs), 2))
 			len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
-			content_table += '\n\t' + ('\\\\ & ' if (obs != '10') else ' & ') + obs + '\n'
-
-			# Find best
-			best_ar = 0
-			best_acc = 0
-			best_spread = float("inf")
-			for basepath, approach in zip(basepaths, approaches):
-				if (basepath + approach) not in domain_data.obs_data[obs]:
-					continue
-				values = domain_data.obs_data[obs][basepath + approach]
-				accuracy = round(values[8], 2)
-				if accuracy > best_acc:
-					best_acc = accuracy
-				spread = round(values[9], 2)
-				if spread < best_spread:
-					best_spread = spread
-				ar = round(values[5], 2)
-				if ar > best_ar:
-					best_ar = ar
-
-			# Write
+			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + len_obs + '\t & ' + len_solutions + '\n'
 			for basepath, approach in zip(basepaths, approaches):
 				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
 				if (basepath + approach) not in domain_data.obs_data[obs]:
-					content_table += '\n\t\t& - & - & - & -\t \n'
+					content_table += '\n\t\t& - & - & - & - \t \n'
 					continue
 				values = domain_data.obs_data[obs][basepath + approach]
 				time = round(values[10], 3)
-				accuracy = round(values[8], 2)
+				accuracy = round(values[8] * 100, 1)
 				spread = round(values[9], 2)
 				ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 1)
 				ar = round(values[5], 2)
 				fpr = round(values[6], 2)
 				fnr = round(values[7], 2)
-				if ar == best_ar:
-					ar = "\\textbf{%s}" % ar
-				#if accuracy == best_acc:
-				#	accuracy = "\\textbf{%s}" % accuracy
-				#if spread == best_spread:
-				#	spread = "\\textbf{%s}" % spread
 				content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
 				content_table += ' \t \n'
-		if domain_name == domains[-1]:
-			content_table += ' \\\\ \midrule'
-		else:
-			content_table += ' \\\\ \hline'
+		content_table += ' \\\\ \hline'
 
 	content_avg = ''
-	# Find best
-	best_ar = 0
-	best_acc = 0
-	best_spread = float("inf")
-	for basepath, approach in zip(basepaths, approaches):
-		values = average_values(all_domain_data, basepath + approach)
-		accuracy = round(values[8], 2)
-		if accuracy > best_acc:
-			best_acc = accuracy
-		spread = round(values[9], 2)
-		if spread < best_spread:
-			best_spread = spread
-		ar = round(values[5], 2)
-		if ar > best_ar:
-			best_ar = ar
-
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
 		time = round(values[10], 3)
-		accuracy = round(values[8], 2)
+		accuracy = round(values[8] * 100, 2)
 		spread = round(values[9], 2)
 		ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 2)
 		ar = round(values[5], 2)
 		fpr = round(values[6], 2)
 		fnr = round(values[7], 2)
-		if ar == best_ar:
-			ar = "\\textbf{%s}" % ar
-		#if accuracy == best_acc:
-		#	accuracy = "\\textbf{%s}" % accuracy
-		#if spread == best_spread:
-		#	spread = "\\textbf{%s}" % spread
 		content_avg += ' & {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
 
 	return content_table, content_avg
@@ -210,9 +162,20 @@ def main(template, file, domains, approaches, basepaths):
 
 if __name__ == '__main__' :
 	default_path = '../results'
-	domains = ['blocks-world-optimal', 'depots-optimal', 'driverlog-optimal', 'dwr-optimal',\
-	 			'easy-ipc-grid-optimal', 'ferry-optimal', 'logistics-optimal',\
-	 			 'miconic-optimal', 'rovers-optimal', 'satellite-optimal', 'sokoban-optimal', 'zeno-travel-optimal']
+	domains = [
+	'blocks-world-optimal',
+	'depots-optimal',
+	'driverlog-optimal',
+	'dwr-optimal',
+	'easy-ipc-grid-optimal',
+	'ferry-optimal',
+	'logistics-optimal',
+	'miconic-optimal',
+	'rovers-optimal',
+	'satellite-optimal',
+	'sokoban-optimal', 
+	'zeno-travel-optimal'
+	]
 	file = 'all.tex'
 	template = 'all-template.tex'
 	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f2', 'rg2009', 'lm_hc0', 'lm_hc10', 'lm_hc20', 'lm_hc30']
@@ -243,15 +206,34 @@ if __name__ == '__main__' :
 			paths = [default_path] * 5
 			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'rg2009', 'lm_hc0', 'lm_hc30']
 		elif 'filters' in template:
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f1', 'delta-h-c-f1-uncertainty', 'delta-h-c-f2', 'delta-h-c-f2-uncertainty']
+			paths = [default_path] * 6
+			approaches = [
+			'delta-h-c', 'delta-h-c-uncertainty',
+			'delta-h-c-f1', 'delta-h-c-f1-uncertainty',
+			'delta-h-c-f2', 'delta-h-c-f2-uncertainty'
+			]
 		elif 'variations' in template:
-			paths = [default_path] * 5
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-uncertainty-max', 'weighted-c', 'weighted-c-uncertainty']
+			paths = [default_path] * 4
+			approaches = [
+			'delta-h-c', 'delta-h-c-o',
+			'delta-h-c-cl', 'delta-h-c-o-cl'
+			]
 		elif 'constraints' in template:
 			if 'single' in template:
-				approaches = ['delta-h-c-cl', 'delta-h-c-cl-uncertainty', 'delta-h-c-cp', 'delta-h-c-cp-uncertainty', 'delta-h-c-cs', 'delta-h-c-cs-uncertainty']
+				paths = [default_path] * 8
+				approaches = [
+				'delta-h-c-cl', 'delta-h-c-cl-uncertainty',
+				'delta-h-c-cp', 'delta-h-c-cp-uncertainty',
+				'delta-h-c-cs', 'delta-h-c-cs-uncertainty',
+				'delta-h-c-cd', 'delta-h-c-cd-uncertainty',
+				]
 			else:
-				approaches = ['delta-h-c-cps', 'delta-h-c-cps-uncertainty', 'delta-h-c-cls', 'delta-h-c-cls-uncertainty', 'delta-h-c-clp', 'delta-h-c-clp-uncertainty']
+				paths = [default_path] * 6
+				approaches = [
+				'delta-h-c-cps', 'delta-h-c-cps-uncertainty',
+				'delta-h-c-cls', 'delta-h-c-cls-uncertainty',
+				'delta-h-c-clp', 'delta-h-c-clp-uncertainty',
+				]
 	if args.approaches:
 		approaches = args.approaches # Approaches in template
 

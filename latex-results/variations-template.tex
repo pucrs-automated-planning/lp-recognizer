@@ -30,30 +30,28 @@
 Weighted by Observations - Optimal\\
 \fontsize{4}{6}\selectfont
 \setlength\tabcolsep{1.5pt}
-\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\begin{tabular}{|c|c|ccc|cccc|cccc|cccc|cccc|}
 \hline
 % empty
 & % empty
 & \multicolumn{3}{c|}{}
-& \multicolumn{6}{c|}{No weight (original)}
-& \multicolumn{6}{c|}{No weight-U (original)}
-& \multicolumn{6}{c|}{No weight-U-Max (original)}
-& \multicolumn{6}{c|}{Weighted}
-& \multicolumn{6}{c|}{Weighted-U}
+& \multicolumn{4}{c|}{Original (all)}
+& \multicolumn{4}{c|}{Modified (all)}
+& \multicolumn{4}{c|}{Original (LM-only)}
+& \multicolumn{4}{c|}{Modified (LM-only)}
 \\ \hline
 \# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$  & $|G^*|$ 
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
 <TABLE_LP_RESULTS>
 Average & & & & <AVG_APPROACH>
 \\ \hline
 \end{tabular}
-\caption{Results for weighted observation sequences, with optimal observations. Each observation $\omega_i$ receives weight $i$.}
+\caption{Results for optimal dataset.}
 \end{table*}
 
 \begin{table*}[]
@@ -61,30 +59,28 @@ Average & & & & <AVG_APPROACH>
 Weighted by Observations - Suboptimal\\
 \fontsize{4}{6}\selectfont
 \setlength\tabcolsep{1.5pt}
-\begin{tabular}{|c|c|ccc|cccccc|cccccc|cccccc|cccccc|cccccc|}
+\begin{tabular}{|c|c|ccc|cccc|cccc|cccc|cccc|}
 \hline
 % empty
 & % empty
 & \multicolumn{3}{c|}{}
-& \multicolumn{6}{c|}{No weight (original)}
-& \multicolumn{6}{c|}{No weight-U (original)}
-& \multicolumn{6}{c|}{No weight-U-Max (original)}
-& \multicolumn{6}{c|}{Weighted}
-& \multicolumn{6}{c|}{Weighted-U}
+& \multicolumn{4}{c|}{Original (all)}
+& \multicolumn{4}{c|}{Modified (all)}
+& \multicolumn{4}{c|}{Original (LM-only)}
+& \multicolumn{4}{c|}{Modified (LM-only)}
 \\ \hline
 \# & $|\mathcal{G}|$ & \textbf{\% Obs} & $|O|$ & $|G^*|$ 
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
-& \textbf{Time} & \textbf{AR} & \textbf{FPR} & \textbf{FNR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
+& \textbf{Time} & \textbf{AR} & \textbf{Acc} & \textbf{$|S|$}
 \\ 
 \hline
 <TABLE_LP_RESULTS_2>
 Average & & & & <AVG_APPROACH_2>
 \\ \hline
 \end{tabular}
-\caption{Results for weighted observation sequences, with suboptimal observations. Each observation $\omega_i$ receives weight $i$.}
+\caption{Results for sub-optimal dataset.}
 \end{table*}
 
 \end{document}
