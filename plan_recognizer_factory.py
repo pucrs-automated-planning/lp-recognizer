@@ -2,7 +2,7 @@
 
 import h_plan_recognizer
 import const_plan_recognizer
-import delta_plan_recognizer 
+import delta_plan_recognizer
 
 import importlib
 import copy
@@ -57,7 +57,10 @@ class PlanRecognizerFactory(object):
             options.h_obs = True
 
         # Heuristic options
-        if "-cps" in name:
+        if "-clpsd" in name:
+            name = name.replace("-clpsd", "")
+            options.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()", "delete_relaxation_constraints()"]
+        elif "-cps" in name:
             name = name.replace("-cps", "")
             options.heuristics = ["pho_constraints()", "state_equation_constraints()"]
         elif "-cls" in name:
@@ -75,6 +78,9 @@ class PlanRecognizerFactory(object):
         elif "-cs" in name:
             name = name.replace("-cs", "")
             options.heuristics = ["state_equation_constraints()"]
+        elif "-cd" in name:
+            name = name.replace("-cd", "")
+            options.heuristics = ["delete_relaxation_constraints()"]
 
 
         recognizer = self.recognizers[name](options)

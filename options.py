@@ -134,7 +134,9 @@ class Program_Options:
                 elif '-f2' in oparg:
                     self.recognizer_name += "-f2"
 
-                if '-cps' in oparg:
+                if '-clpsd' in oparg:
+                    self.recognizer_name += "-clpsd"
+                elif '-cps' in oparg:
                     self.recognizer_name += "-cps"
                 elif '-cls' in oparg:
                     self.recognizer_name += "-cls"
@@ -146,6 +148,8 @@ class Program_Options:
                     self.recognizer_name += "-cp"
                 elif '-cs' in oparg:
                     self.recognizer_name += "-cs"
+                elif '-cd' in oparg:
+                    self.recognizer_name += "-cd"
 
                 if 'um' in oparg:
                     self.recognizer_name += "-uncertainty-max"
