@@ -16,7 +16,7 @@ install:
 script: 
   - ./test_units.py
   - ./test_instance.py -r dc -e experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2
-  - ./test_domain.py experiments small-sokoban "v vc dc dcu dc-f1 dcu-f1 dc-f2 dcu-f2 w wu wdc wdcu" -S soplex
+  - ./test_domain.py experiments small-sokoban "v vc dc dcu dc-f1 dcu-f1 dc-f2 dcu-f2 dc-cl dc-cp dc-cs dc-cd" -S soplex
 branches:
   only:
     - master
