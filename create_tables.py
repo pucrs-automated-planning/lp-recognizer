@@ -181,29 +181,27 @@ if __name__ == '__main__':
 	base_path = 'experiments'
 	method = sys.argv[1]
 	domains = [
-	#'blocks-world',
-	#'depots',
-	#'driverlog',
-	#'dwr',
+	'blocks-world',
+	'depots',
+	'driverlog',
+	'dwr',
 	#'easy-ipc-grid',
 	#'ferry',
 	#'logistics',
 	#'miconic',
-	#'rovers',
+	'rovers',
 	#'satellite',
-	#'sokoban',
-	#'zeno-travel',
-	"small-sokoban"
+	'sokoban',
+	#'zeno-travel'
 	]
 	observabilities = ['10', '30', '50', '70', '100']
 	domain_types = [
-	#'-optimal',
+	'-optimal',
 	#'-optimal-noisy',
-	#'-optimal-old-noisy',
-	#'-suboptimal',
+	'-optimal-old-noisy',
+	'-suboptimal',
 	#'-suboptimal-noisy',
-	#'-suboptimal-old-noisy',
-	""
+	'-suboptimal-old-noisy'
 	]
 	for domain in domains:
 		for dt in domain_types:
