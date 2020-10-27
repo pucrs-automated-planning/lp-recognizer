@@ -3,7 +3,7 @@
 from plan_recognizer import PlanRecognizer
 
 class LPRecognizerHValue(PlanRecognizer):
-    name = "h-value"
+    name = "hvalue"
 
     def __init__(self, options, h = True, h_c = False, h_s = False):
         PlanRecognizer.__init__(self, options, h, h_c, h_s)

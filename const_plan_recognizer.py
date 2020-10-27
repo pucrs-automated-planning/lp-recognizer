@@ -4,7 +4,7 @@ import math
 from h_plan_recognizer import LPRecognizerHValue
 
 class LPRecognizerHValueC(LPRecognizerHValue):
-    name = "h-value-c"
+    name = "hvaluec"
 
     def __init__(self, options):
         # Set to hard constraints.
@@ -15,7 +15,7 @@ class LPRecognizerHValueC(LPRecognizerHValue):
         return [h.h_c, h.obs_misses]
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
-    name = "h-value-c-uncertainty"
+    name = "hvaluecu"
 
     def __init__(self, options):
         LPRecognizerHValueC.__init__(self, options)
@@ -32,7 +32,7 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
             
 
 class LPRecognizerSoftC(LPRecognizerHValue):
-    name = "soft-c"
+    name = "softc"
 
     def __init__(self, options):
         # Set to soft constraints.
@@ -52,7 +52,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
         return False
 
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
-    name = "soft-c-uncertainty"
+    name = "softcu"
 
     def __init__(self, options):
         LPRecognizerSoftC.__init__(self, options)
@@ -64,7 +64,7 @@ class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
 
 
 class LPRecognizerWeightedC(LPRecognizerHValue):
-    name = "weighted-c"
+    name = "weightedc"
 
     def __init__(self, options):
         # Set to soft (weighted) constraints.
@@ -81,7 +81,7 @@ class LPRecognizerWeightedC(LPRecognizerHValue):
 
 
 class LPRecognizerWeightedCUncertainty(LPRecognizerWeightedC):
-    name = "weighted-c-uncertainty"
+    name = "weightedcu"
 
     def __init__(self, options):
         LPRecognizerWeightedC.__init__(self, options)

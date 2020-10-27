@@ -3,7 +3,7 @@
 from const_plan_recognizer import LPRecognizerHValue, LPRecognizerHValueC, LPRecognizerSoftC, LPRecognizerHValueCUncertainty
 
 class LPRecognizerDeltaHC(LPRecognizerHValue):
-    name = "delta-h-c"
+    name = "delta"
 
     def __init__(self, options):
         # Set to hard constraints.
@@ -25,7 +25,7 @@ class LPRecognizerDeltaHC(LPRecognizerHValue):
 
 
 class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
-    name = "delta-h-c-uncertainty"
+    name = "deltau"
 
     def __init__(self, options):
         LPRecognizerDeltaHC.__init__(self, options)
@@ -44,7 +44,7 @@ class LPRecognizerDeltaHCUncertainty(LPRecognizerDeltaHC):
 
 
 class LPRecognizerDeltaHCUncertaintyMax(LPRecognizerDeltaHCUncertainty):
-    name = "delta-h-c-uncertainty-max"
+    name = "deltaum"
 
     def __init__(self, options):
         LPRecognizerDeltaHCUncertainty.__init__(self, options)
@@ -55,7 +55,7 @@ class LPRecognizerDeltaHCUncertaintyMax(LPRecognizerDeltaHCUncertainty):
         return [h.h_c - h.h, -h.h_c, h.obs_misses]
 
 class LPRecognizerWeightedDeltaHC(LPRecognizerDeltaHC):
-    name = "weighted-delta-h-c"
+    name = "deltaw"
 
     def __init__(self, options):
         # Set to hard constraints.
@@ -77,7 +77,7 @@ class LPRecognizerWeightedDeltaHC(LPRecognizerDeltaHC):
                     self.last_obs = h.last_obs
 
 class LPRecognizerWeightedDeltaHUncertainty(LPRecognizerDeltaHCUncertainty, LPRecognizerWeightedDeltaHC):
-    name = "weighted-delta-h-c-uncertainty"
+    name = "deltawu"
 
     def __init__(self, options):
         LPRecognizerWeightedDeltaHC.__init__(self, options)
