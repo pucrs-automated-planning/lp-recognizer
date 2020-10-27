@@ -1,6 +1,9 @@
+#!/usr/bin/env python2.7
+#./create_tables.py "delta-h-c-cd" "delta-h-c-clp" "delta-h-c-clp-uncertainty" "delta-h-c-cls" "delta-h-c-cl" "delta-h-c-cls-uncertainty" "delta-h-c-cl-uncertainty" "delta-h-c-cps" "delta-h-c-cp" "delta-h-c-cps-uncertainty" "delta-h-c-cp-uncertainty" "delta-h-c-cs" "delta-h-c-cs-uncertainty" "delta-h-c-o-cd" "delta-h-c-o-cl" "delta-h-c-o" "delta-h-c" "delta-h-c-uncertainty"
+
 import os, sys, re
 
-EXP_FILTER = False
+EXP_FILTER = True
 
 def unpack(exp_file):
 	os.system('tar jxvf %s' % exp_file)
@@ -81,6 +84,11 @@ class RawResults:
 			self.solutions[problem] = set()
 		self.num_problems = len(files)
 
+	def clear(self):
+		self.total_time = 0
+		for problem in self.solutions.keys():
+			self.solutions[problem] = set()
+
 class Experiment:
 	def __init__(self, obs, results):
 		self.multi_correct = 0.0
@@ -97,8 +105,6 @@ class Experiment:
 		self.total_time = results.total_time / self.num_problems
 
 	def add_problem(self, raw_obs_results, problem):
-		if EXP_FILTER and ("_2.tar" in problem or "_3.tar" in problem):
-			return
 		print(problem)
 
 		self.num_goals += len(raw_obs_results.hyps[problem])
@@ -130,18 +136,25 @@ class Experiment:
 		file_content += "\n"
 		return file_content
 
-def read_experiments(base_path, domain, method, observabilities):
+def read_raw_results(base_path, domain):
 	raw_results = {}
 	for obs in observabilities:
 		raw_results[obs] = RawResults()
 		raw_results[obs].read_problems(base_path, domain, obs)
+	return raw_results
+
+def read_experiments(raw_results, domain, method, observabilities):
+	for obs in observabilities:
+		raw_results[obs].clear()
 	current_results = None
 	current_file = None
 	reading_obs = 0
 	print(domain + "-" + method + ".txt")
-	with open(domain + "-" + method + ".success") as f:
+	with open("solutions/" + domain + "-" + method + ".success") as f:
 		for line in f:
 			if line.startswith(">"):
+				if current_file is None:
+					continue
 				atoms = frozenset([tok.strip() for tok in line.replace("> ", "").split(',')])
 				for hyp in current_results.hyps[current_file]:
 					if atoms == hyp:
@@ -150,6 +163,9 @@ def read_experiments(base_path, domain, method, observabilities):
 				continue
 			line = line.split(":")
 			current_file = line[0].strip().replace("pb", "p")
+			if EXP_FILTER and ("_2.tar" in current_file or "_3.tar" in current_file):
+				current_file = None
+				continue
 			if current_file[0].isdigit():
 				raw_results[observabilities[reading_obs]].total_time += float(line) * current_results.num_problems
 				reading_obs += 1
@@ -171,15 +187,13 @@ def read_experiments(base_path, domain, method, observabilities):
 	return experiments
 
 def write_table(experiments, observabilities, file_name):
-	with open("results-" + file_name, 'w') as f:
+	with open("results-small/" + file_name, 'w') as f:
 		f.write("#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tTime\n")
 		for experiment in experiments:
 			f.write(experiment.print_content())
 
 if __name__ == '__main__':
-	#base_path = '../goal-plan-recognition-dataset'
-	base_path = 'experiments'
-	method = sys.argv[1]
+	base_path = '../goal-plan-recognition-dataset'
 	domains = [
 	'blocks-world',
 	'depots',
@@ -198,13 +212,22 @@ if __name__ == '__main__':
 	domain_types = [
 	'-optimal',
 	#'-optimal-noisy',
-	'-optimal-old-noisy',
+	#'-optimal-old-noisy',
 	'-suboptimal',
 	#'-suboptimal-noisy',
-	'-suboptimal-old-noisy'
+	#'-suboptimal-old-noisy'
 	]
+	methods = sys.argv[1:]
+	if methods[0] == 'test':
+		base_path = 'experiments'
+		domains = ['small-sokoban']
+		domain_types = ['']
+		methods = ['delta-h-c-o-cd', 'delta-h-c-cl']
+
 	for domain in domains:
 		for dt in domain_types:
 			print(domain + dt)
-			experiments = read_experiments(base_path + "/", domain + dt, method, observabilities)
-			write_table(experiments, observabilities, domain + dt + "-" + method + ".txt")
+			raw_results = read_raw_results(base_path + "/", domain + dt)
+			for method in methods:
+				experiments = read_experiments(raw_results, domain + dt, method, observabilities)
+				write_table(experiments, observabilities, domain + dt + "-" + method + ".txt")

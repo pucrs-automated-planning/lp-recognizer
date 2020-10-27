@@ -5,6 +5,8 @@ DEVNULL = open(os.devnull,"r+b")
 from options import Program_Options
 from plan_recognizer_factory import PlanRecognizerFactory
 
+EXP_FILTER = True
+
 class Experiment:
 
     def __init__(self):
@@ -86,6 +88,8 @@ def do_experiments(base_path, domain_name, observability, recognizer, opt):
         current_problem = 0
         exp_dir = domain_name + '/' + obs + '/'
         files = [file for file in os.listdir(base_path + exp_dir) if file.endswith(".tar.bz2")]
+	if EXP_FILTER:
+	    files = [file for file in files if "_2.tar" not in file and "_3.tar" not in file]
         experiment = Experiment()
         for file_name in files:
             exp_file = exp_dir + file_name

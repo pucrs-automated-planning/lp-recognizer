@@ -93,7 +93,7 @@ class Hypothesis:
         pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
         if pr_cmd.signal != 0:
             print("signal error: %d" % pr_cmd.signal)
-            exit()
+            #exit()
             self.test_failed = True
             return
         if pr_cmd.h_values == None:

@@ -36,8 +36,8 @@ class Program_Options:
         self.domain_name = None
         self.instance_names = []
         self.goal_file = None
-        self.max_time = 1800
-        self.hyp_max_time = 120
+        self.max_time = 120
+        self.hyp_max_time = 10
         self.max_memory = 1024
         self.recognizer_name = None
         self.theta = 1 # Multiplier for any slack parameter
