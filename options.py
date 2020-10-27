@@ -150,6 +150,14 @@ class Program_Options:
                     self.recognizer_name += "-cs"
                 elif '-cd' in oparg:
                     self.recognizer_name += "-cd"
+                elif '-cf1' in oparg:
+                    self.recognizer_name += "-cf1"
+                elif '-cf2' in oparg:
+                    self.recognizer_name += "-cf2"
+                elif '-cf3' in oparg:
+                    self.recognizer_name += "-cf3"
+                elif '-cf' in oparg:
+                    self.recognizer_name += "-cf1"
 
                 if 'um' in oparg:
                     self.recognizer_name += "-uncertainty-max"

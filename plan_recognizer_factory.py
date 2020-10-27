@@ -81,7 +81,15 @@ class PlanRecognizerFactory(object):
         elif "-cd" in name:
             name = name.replace("-cd", "")
             options.heuristics = ["delete_relaxation_constraints()"]
-
+        elif '-cf1' in name:
+            name = name.replace("-cf1", "")
+            options.heuristics = ["flow_constraints(systematic(1))"]
+        elif '-cf2' in name:
+            name = name.replace("-cf2", "")
+            options.heuristics = ["flow_constraints(systematic(2))"]
+        elif '-cf3' in name:
+            name = name.replace("-cf3", "")
+            options.heuristics = ["flow_constraints(systematic(3))"]
 
         recognizer = self.recognizers[name](options)
         return recognizer

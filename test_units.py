@@ -31,36 +31,52 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHCUncertainty)
 
     def test_lmcut(self):
-        print("Testing h-value")
+        print("\nTesting h-value with lmcut")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()"]
         options = Program_Options(args)
         recognizer_c = self.factory.get_recognizer("h-value", options)
         recognizer_c.run_recognizer()
 
     def test_lmcut_obs(self):
-        print("Testing delta-h-c")
+        print("\nTesting delta-h-c with lmcut")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()"]
         options = Program_Options(args)
         recognizer_c = self.factory.get_recognizer("delta-h-c", options)
         recognizer_c.run_recognizer()
 
     def test_lmcut_obs2(self):
-        print("Testing delta-h-c modified")
+        print("\nTesting delta-h-c modified with lmcut")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", '-o']
         options = Program_Options(args)
         recognizer_c = self.factory.get_recognizer("delta-h-c", options)
         recognizer_c.run_recognizer()
 
+    def test_flow(self):
+        print("\nTesting h-value with flow")
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
+        #args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        options = Program_Options(args)
+        recognizer_c = self.factory.get_recognizer("h-value", options)
+        recognizer_c.run_recognizer()
+
+    def test_flow_obs(self):
+        print("\nTesting delta-h-c with flow")
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
+        #args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        options = Program_Options(args)
+        recognizer_c = self.factory.get_recognizer("delta-h-c", options)
+        recognizer_c.run_recognizer()
+
     def test_relaxation(self):
-        print("Testing delta-h-c with delete relaxation")
+        print("\nTesting delta-h-c with delete relaxation")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()"]
-        args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        #args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
         options = Program_Options(args)
         recognizer_c = self.factory.get_recognizer("delta-h-c", options)
         recognizer_c.run_recognizer()
 
     def test_deltahc_filter_recognizer(self):
-        print("Testing delta-h-c with filter")
+        print("\nTesting delta-h-c with filter")
         args = ["-e", "experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c", options)
@@ -70,7 +86,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
             self.assertEqual(h.score[0], 0)
 
     def test_deltahc_uncertainty_recognizer(self):
-        print("Testing delta-h-c-uncertainty")
+        print("\nTesting delta-h-c-uncertainty")
         args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c-uncertainty", options)
@@ -81,7 +97,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         self.assertGreater(recognizer.uncertainty_ratio, 1)
 
     def test_deltahc_recognizer(self):
-        print("Testing delta-h-c")
+        print("\nTesting delta-h-c")
         args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta-h-c", options)
@@ -91,7 +107,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
             self.assertGreaterEqual(h.score[0], 0)
 
     def test_hvalue_recognizer(self):
-        print("Testing h-value")
+        print("\nTesting h-value")
         args = ["-e", "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("h-value", options)
