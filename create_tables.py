@@ -31,13 +31,13 @@ def read_hyps():
 	hyps = set()
 	with open("hyps.dat") as f:
 		for line in f:
-			atoms = [tok.strip() for tok in line.split(',')]
+			atoms = [tok.strip().lower() for tok in line.split(',')]
 			hyps.add(frozenset(atoms))
 	return hyps
 
 def read_real_hyp(hyps):
 	with open("real_hyp.dat") as f:
-		atoms = frozenset([tok.strip() for tok in f.readline().split(',')])
+		atoms = frozenset([tok.strip().lower() for tok in f.readline().split(',')])
 		for hyp in hyps:
 			if hyp == atoms:
 				return hyp
@@ -49,6 +49,7 @@ def read_solutions(hyps):
 	with open("solution.dat") as f:
 		for line in f:
 			atoms = re.findall("\(.*?\)", line)
+			atoms = [tok.strip().lower() for tok in atoms]
 			goals.add(frozenset(atoms))
 	return set([hyp for hyp in hyps if hyp in goals])
 
@@ -100,6 +101,7 @@ class Experiment:
 		self.fpr = 0.0
 		self.fnr = 0.0
 		self.agreement = 0.0
+		self.perfect_agr = 0
 		self.obs = obs
 		self.num_problems = results.num_problems
 		self.total_time = results.total_time / self.num_problems
@@ -123,16 +125,22 @@ class Experiment:
 		self.fpr += fp / total
 		self.fnr += fn / total
 		self.agreement += (total - fp - fn) / total
+		if total == len(solution_set) and total == len(raw_obs_results.solutions[problem]):
+				self.perfect_agr += 1
 
 	def print_content(self):
 		num_problems = self.num_problems
-		file_content = "%s\t%s\t%s\t%s\t%s" % (int(num_problems), self.obs, self.num_obs / num_problems, self.num_goals / num_problems, self.num_solutions / num_problems)
-		file_content += "\t%2.4f" % (self.agreement / num_problems)
-		file_content += "\t%2.4f" % (self.fpr / num_problems)
-		file_content += "\t%2.4f" % (self.fnr / num_problems)
-		file_content += "\t%2.4f" % (self.multi_correct / num_problems)
-		file_content += "\t%2.4f" % (self.multi_spread / num_problems)
-		file_content += "\t%2.4f" % (self.total_time / num_problems)
+		file_content = "%s\t%s" % (int(num_problems), self.obs)
+		file_content += "\t%2.2f" % (self.num_obs / num_problems)
+		file_content += "\t%2.2f" % (self.num_goals / num_problems)
+		file_content += "\t%2.2f" % (self.num_solutions / num_problems)
+		file_content += "\t%2.2f" % (self.agreement / num_problems)
+		file_content += "\t%2.2f" % (self.fpr / num_problems)
+		file_content += "\t%2.2f" % (self.fnr / num_problems)
+		file_content += "\t%2.2f" % (self.multi_correct / num_problems)
+		file_content += "\t%2.2f" % (self.multi_spread / num_problems)
+		file_content += "\t%2.2f" % (self.perfect_agr)
+		file_content += "\t%2.2f" % (self.total_time / num_problems)
 		file_content += "\n"
 		return file_content
 
@@ -155,7 +163,7 @@ def read_experiments(raw_results, domain, method, observabilities):
 			if line.startswith(">"):
 				if current_file is None:
 					continue
-				atoms = frozenset([tok.strip() for tok in line.replace("> ", "").split(',')])
+				atoms = frozenset([tok.strip().lower() for tok in line.replace("> ", "").split(',')])
 				for hyp in current_results.hyps[current_file]:
 					if atoms == hyp:
 						current_results.solutions[current_file].add(hyp)
@@ -188,7 +196,7 @@ def read_experiments(raw_results, domain, method, observabilities):
 
 def write_table(experiments, observabilities, file_name):
 	with open("results-small/" + file_name, 'w') as f:
-		f.write("#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tTime\n")
+		f.write("#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tPER\tTime\n")
 		for experiment in experiments:
 			f.write(experiment.print_content())
 
@@ -231,3 +239,4 @@ if __name__ == '__main__':
 			for method in methods:
 				experiments = read_experiments(raw_results, domain + dt, method, observabilities)
 				write_table(experiments, observabilities, domain + dt + "-" + method + ".txt")
+
