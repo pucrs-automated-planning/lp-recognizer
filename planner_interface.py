@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-import sys, os, csv, time, math, re
+import sys, os, csv, time, math
 import benchmark
 
 fd_path = "../fast-downward/"
@@ -152,29 +152,6 @@ class Hypothesis:
                 for atom in self.atoms:
                     print >> outstream, atom
         outstream.close()
-        instream.close()
-
-    def check_if_equal(self, atoms):
-        for atom in atoms:
-            if not atom in self.atoms:
-                return False
-        return True
-
-    def check_if_actual(self):
-        instream = open('real_hyp.dat')
-        for line in instream:
-            atoms = [tok.strip().lower() for tok in line.split(',')]
-            self.is_true = self.check_if_equal(atoms)
-        instream.close()
-        if self.is_true:
-            self.is_solution = True
-            return
-        instream = open('solution.dat')
-        for line in instream:
-            atoms = [tok.strip().lower() for tok in re.findall("\(.*?\)", line)]
-            self.is_solution = self.check_if_equal(atoms)
-            if self.is_solution:
-                break
         instream.close()
 
     def __str__(self):

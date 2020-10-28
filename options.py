@@ -112,57 +112,8 @@ class Program_Options:
                 print("Using LP solver: " + oparg)
 
             if opcode in ('-r', '--recognizer-name'):
-                if 'wdc' in oparg:
-                    self.recognizer_name = "weighted-delta-h-c"
-                elif 'w' in oparg:
-                    self.recognizer_name = "weighted-c"
-                elif 'dco' in oparg:
-                    self.recognizer_name = "delta-h-c-o"
-                elif 'dc' in oparg:
-                    self.recognizer_name = "delta-h-c"
-                elif 'vc' in oparg:
-                    self.recognizer_name = "h-value-c"
-                elif 'sc' in oparg:
-                    self.recognizer_name = "soft-c"
-                elif 'v' in oparg:
-                    self.recognizer_name = "h-value"
-                else:
-                    self.recogniszer_name = oparg
-
-                if '-f1' in oparg:
-                    self.recognizer_name += "-f1"
-                elif '-f2' in oparg:
-                    self.recognizer_name += "-f2"
-
-                if '-clpsd' in oparg:
-                    self.recognizer_name += "-clpsd"
-                elif '-cps' in oparg:
-                    self.recognizer_name += "-cps"
-                elif '-cls' in oparg:
-                    self.recognizer_name += "-cls"
-                elif '-clp' in oparg:
-                    self.recognizer_name += "-clp"
-                elif '-cl' in oparg:
-                    self.recognizer_name += "-cl"
-                elif '-cp' in oparg:
-                    self.recognizer_name += "-cp"
-                elif '-cs' in oparg:
-                    self.recognizer_name += "-cs"
-                elif '-cd' in oparg:
-                    self.recognizer_name += "-cd"
-                elif '-cf1' in oparg:
-                    self.recognizer_name += "-cf1"
-                elif '-cf2' in oparg:
-                    self.recognizer_name += "-cf2"
-                elif '-cf3' in oparg:
-                    self.recognizer_name += "-cf3"
-                elif '-cf' in oparg:
-                    self.recognizer_name += "-cf1"
-
-                if 'um' in oparg:
-                    self.recognizer_name += "-uncertainty-max"
-                elif 'u' in oparg:
-                    self.recognizer_name += "-uncertainty"
+                self.recognizer_name = oparg
+                print("Using recognizer: " + oparg)
 
 
         # TODO Code below is currently useless because we set parameters manually in run experimennts (need to thoroughly clean this up)

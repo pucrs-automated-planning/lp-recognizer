@@ -1,6 +1,7 @@
 #!/usr/bin/env python2.7
 
 from planner_interface import Hypothesis
+import re
 
 class PlanRecognizer:
     name = None
@@ -23,17 +24,32 @@ class PlanRecognizer:
         return observations
 
     def load_hypotheses(self, opts):
+        # Read true hyp
+        real_hyp = None
+        instream = open('real_hyp.dat')
+        for line in instream:
+            real_hyp = frozenset([tok.strip().lower() for tok in line.split(',')])
+            break
+        instream.close()
+        # Read correct solution
+        solution = set()
+        instream = open('solution.dat')
+        for line in instream:
+            atoms = frozenset([tok.strip().lower() for tok in re.findall("\(.*?\)", line)])
+            solution.add(atoms)
+        instream.close()
+        # Read all hyps
         hyps = []
         instream = open('hyps.dat')
         for line in instream:
-            line = line.strip()
-            atoms = [tok.strip().lower() for tok in line.split(',')]
-            H = Hypothesis(opts, atoms)
-            H.check_if_actual()
-            hyps.append(H)
-        print("Hypothesis: %s" % hyps)
-        print("Real hypothesis: %s" % [hyp for hyp in hyps if hyp.is_solution])
+            atoms = frozenset([tok.strip().lower() for tok in line.split(',')])
+            h = Hypothesis(opts, atoms)
+            h.is_true = atoms == real_hyp
+            h.is_solution = atoms in solution
+            hyps.append(h)
         instream.close()
+        print("Hypothesis: %s" % hyps)
+        print("Real hypothesis: %s" % real_hyp)
         return hyps
 
     def get_real_hypothesis(self):

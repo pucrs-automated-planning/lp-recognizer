@@ -521,8 +521,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2020-10-26 20:16:59.949734500 -0300
-@@ -0,0 +1,251 @@
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2020-10-28 01:00:07.966697100 -0300
+@@ -0,0 +1,255 @@
 +#include "delete_relaxation_constraints.h"
 +
 +#include "../option_parser.h"
@@ -693,12 +693,16 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +
 +        // New (add observations):
-+        for (uint i = 1; i < observations.size(); i++) {
-+            OperatorProxy op0 = task_proxy.get_operators()[observations[i-1]];
-+            OperatorProxy op1 = task_proxy.get_operators()[observations[i]];
++        vector<int> var_op_times;
++        for (int obs : observations) {
++            int var = get_var_op_time(task_proxy.get_operators()[obs]);
++            if (find(var_op_times.begin(), var_op_times.end(), var) == var_op_times.end())
++                var_op_times.push_back(var);
++        }
++        for (uint i = 1; i < var_op_times.size(); i++) {
 +            lp::LPConstraint constraint(1, infinity);
-+            constraint.insert(get_var_op_time(op0), -1);
-+            constraint.insert(get_var_op_time(op1), 1);
++            constraint.insert(var_op_times[i], 1);
++            constraint.insert(var_op_times[i-1], -1);
 +            constraints.push_back(constraint);
 +        }
 +
