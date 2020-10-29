@@ -135,3 +135,5 @@ constraint-values/*.pgf
 constraint-values/*.pdf
 constraint-values/*.png
 constraint-values/*.dat
+latex-*/*.pdf
+latex-*/*.aux

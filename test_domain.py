@@ -58,10 +58,11 @@ class Experiment:
         total = float(len(exact_solution_set | solution_set))
         fp = float(len(solution_set - exact_solution_set))
         fn = float(len(exact_solution_set - solution_set))
+        agr = (total - fp - fn) / total
         self.fpr += fp / total
         self.fnr += fn / total
-        self.agreement += (total - fp - fn) / total
-        if total == len(exact_solution_set) and total == len(solution_set):
+        self.agreement += agr
+        if agr == 1:
             self.perfect_agr += 1
 
         print("=> LP-Solving Time: " + str(recognizer.lp_time))
