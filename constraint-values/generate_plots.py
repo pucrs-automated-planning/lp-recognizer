@@ -50,7 +50,7 @@ class Results:
             for c, name in zip(self.constraint_sets, self.constraint_names):
                 instances = Instances(name)
                 for domain in self.domains:
-                    with open("%s_%s_%s.txt" % (domain, obs, c)) as f:
+                    with open("%s-%s-%s.txt" % (domain, c, obs)) as f:
                         real_h_values = ast.literal_eval(f.readline())
                         h_values = ast.literal_eval(f.readline())
                         spread = ast.literal_eval(f.readline())
@@ -276,13 +276,13 @@ if __name__ == '__main__':
     # Create files
     if basic:
         generate_all(dat, png, domains,
-            ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()", "delete_relaxation_constraints()"],
+            ["delta-cl", "delta-cp", "delta-cs", "delta-cd"],
             ["LMC", "PH", "SEQ", "DEL"])
     if lmc:
         generate_all(dat, png, domains,
-            ["lmcut_constraints()", "lmcut_constraints_o()"], 
+            ["delta-cl", "delta-o-cl"], 
             ["LMC", "LMC+"])
     if dr:
         generate_all(dat, png, domains,
-            ["delete_relaxation_constraints()", "delete_relaxation_constraints_o()"],
+            ["delta-cd", "delta-o-cd"],
             ["DEL", "DEL+"])
