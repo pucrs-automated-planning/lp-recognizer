@@ -169,7 +169,6 @@ if __name__ == '__main__':
     approaches = sys.argv[3]
     options = sys.argv[4:]
     if '-fast' in options:
-        global EXP_FILTER
         EXP_FILTER = True
         options.remove('-fast')
     for approach in approaches.split():
