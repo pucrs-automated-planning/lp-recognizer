@@ -1168,8 +1168,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.cc fast-downward/src/search/operator_counting/flow_constraints.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.cc	2020-10-26 21:12:41.073570600 -0300
-@@ -0,0 +1,336 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.cc	2020-10-29 15:39:00.762046000 -0300
+@@ -0,0 +1,331 @@
 +#include "flow_constraints.h"
 +
 +#include "../option_parser.h"
@@ -1185,100 +1185,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +using namespace std;
 +
 +namespace operator_counting {
-+
-+bool detect_unrepresented_features(const vector<lp::LPVariable> &variables,
-+                                   const vector<lp::LPConstraint> &constraints,
-+                                   const TaskProxy &task_proxy,
-+                                   double lp_solve_time_limit,
-+                                   const utils::CountdownTimer &remaining_time,
-+                                   vector<bool> &operator_handled,
-+                                   int feature_size,
-+                                   vector<vector<FactPair>> &required_features,
-+                                   bool &found_operator_above_feature_size) {
-+    // HACK: hard-coded CPLEX for now.
-+    lp::LPSolver lp_solver(lp::LPSolverType::CPLEX);
-+    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
-+    utils::Timer lp_solve_timer;
-+    lp_solver.solve();
-+    vector<double> solution = lp_solver.extract_solution();
-+    if (lp_solve_timer() > lp_solve_time_limit) {
-+        cout << "Solving the LP took " << lp_solve_timer << " which exceeds the time limit of "
-+             << lp_solve_time_limit << "s. Stopping feature detection."<< endl;
-+        return false;
-+    }
-+
-+
-+    double EPSILON = 0.001;
-+    OperatorsProxy operators = task_proxy.get_operators();
-+    VariablesProxy vars = task_proxy.get_variables();
-+    int num_variables = vars.size();
-+    assert(solution.size() >= operators.size());
-+    bool added_feature = false;
-+    for (OperatorProxy op : operators) {
-+        if (remaining_time.is_expired()) {
-+            cout << "Time limit for partial merges exceeded."<< endl;
-+            return false;
-+        }
-+
-+        if (solution[op.get_id()] > EPSILON && !operator_handled[op.get_id()]) {
-+            operator_handled[op.get_id()] = true;
-+            vector<int> effect_on_var(num_variables, -1);
-+            for (EffectProxy effect : op.get_effects()) {
-+                int var = effect.get_fact().get_variable().get_id();
-+                effect_on_var[var] = effect.get_fact().get_value();
-+            }
-+            vector<FactPair> prevail_conditions;
-+            vector<FactPair> real_preconditions;
-+            vector<FactPair> all_preconditions;
-+            for (FactProxy precondition : op.get_preconditions()) {
-+                int var = precondition.get_variable().get_id();
-+                int pre = precondition.get_value();
-+                int post = effect_on_var[var];
-+                if (post == -1 || post == pre) {
-+                    prevail_conditions.emplace_back(var, pre);
-+                    all_preconditions.emplace_back(var, pre);
-+                } else {
-+                    real_preconditions.emplace_back(var, pre);
-+                    all_preconditions.emplace_back(var, pre);
-+                }
-+            }
-+
-+            int num_preconditions = all_preconditions.size();
-+            if (num_preconditions > feature_size && !prevail_conditions.empty()) {
-+                found_operator_above_feature_size = true;
-+            }
-+            for (FactPair prevail : prevail_conditions) {
-+                for (FactPair pre : real_preconditions) {
-+                    int num_extra_features = min(feature_size - 2, num_preconditions - 2);
-+                    Combinations<FactPair> combos;
-+
-+                    for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
-+                        // HACK: could remove both from all_preconditions before, but meh.
-+                        bool useful_feature = true;
-+                        for (FactPair f : feature) {
-+                            if (f == prevail || f == pre) {
-+                                useful_feature = false;
-+                                break;
-+                            }
-+                        }
-+                        if (!useful_feature) {
-+                            continue;
-+                        }
-+
-+                        feature.push_back(prevail);
-+                        feature.push_back(pre);
-+                        sort(feature.begin(), feature.end());
-+                        required_features.push_back(feature);
-+                        added_feature = true;
-+                    }
-+                }
-+            }
-+        }
-+    }
-+    return added_feature;
-+}
-+
-+
 +
 +FlowConstraints::FlowConstraints(const options::Options &opts)
 +    : pattern_generator(opts.get<shared_ptr<pdbs::PatternCollectionGenerator>>("patterns")),
@@ -1322,7 +1228,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        settings.use_mutexes = use_mutexes;
 +        sub_constraints.emplace_back(*task, variables, constraints, infinity, settings);
 +
-+
 +        int num_abstract_states = 1;
 +        for (int v : pattern) {
 +            num_abstract_states *= vars[v].get_domain_size();
@@ -1330,7 +1235,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        num_maximal_abstract_states += num_abstract_states;
 +        num_actual_abstract_states += sub_constraints.back().get_num_abstract_states();
 +    }
-+
 +
 +    if (partial_merges) {
 +        add_partial_merge_features(*task, variables, constraints, infinity);
@@ -1351,6 +1255,97 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        return key;
 +    }
 +};
++
++bool detect_unrepresented_features(const vector<lp::LPVariable> &variables,
++                                   const vector<lp::LPConstraint> &constraints,
++                                   const TaskProxy &task_proxy,
++                                   double lp_solve_time_limit,
++                                   const utils::CountdownTimer &remaining_time,
++                                   vector<bool> &operator_handled,
++                                   int feature_size,
++                                   vector<vector<FactPair>> &required_features,
++                                   bool &found_operator_above_feature_size) {
++    // HACK: hard-coded for now.
++#ifdef COIN_HAS_CPX
++    lp::LPSolver lp_solver(lp::LPSolverType::CPLEX);
++#else
++    lp::LPSolver lp_solver(lp::LPSolverType::SOPLEX);
++#endif
++    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
++    utils::Timer lp_solve_timer;
++    lp_solver.solve();
++    vector<double> solution = lp_solver.extract_solution();
++    if (lp_solve_timer() > lp_solve_time_limit) {
++        cout << "Solving the LP took " << lp_solve_timer << " which exceeds the time limit of "
++             << lp_solve_time_limit << "s. Stopping feature detection."<< endl;
++        return false;
++    }
++    double EPSILON = 0.001;
++    OperatorsProxy operators = task_proxy.get_operators();
++    VariablesProxy vars = task_proxy.get_variables();
++    int num_variables = vars.size();
++    assert(solution.size() >= operators.size());
++    bool added_feature = false;
++    for (OperatorProxy op : operators) {
++        if (remaining_time.is_expired()) {
++            cout << "Time limit for partial merges exceeded."<< endl;
++            return false;
++        }
++        if (solution[op.get_id()] > EPSILON && !operator_handled[op.get_id()]) {
++            operator_handled[op.get_id()] = true;
++            vector<int> effect_on_var(num_variables, -1);
++            for (EffectProxy effect : op.get_effects()) {
++                int var = effect.get_fact().get_variable().get_id();
++                effect_on_var[var] = effect.get_fact().get_value();
++            }
++            vector<FactPair> prevail_conditions;
++            vector<FactPair> real_preconditions;
++            vector<FactPair> all_preconditions;
++            for (FactProxy precondition : op.get_preconditions()) {
++                int var = precondition.get_variable().get_id();
++                int pre = precondition.get_value();
++                int post = effect_on_var[var];
++                if (post == -1 || post == pre) {
++                    prevail_conditions.emplace_back(var, pre);
++                    all_preconditions.emplace_back(var, pre);
++                } else {
++                    real_preconditions.emplace_back(var, pre);
++                    all_preconditions.emplace_back(var, pre);
++                }
++            }
++            int num_preconditions = all_preconditions.size();
++            if (num_preconditions > feature_size && !prevail_conditions.empty()) {
++                found_operator_above_feature_size = true;
++            }
++            for (FactPair prevail : prevail_conditions) {
++                for (FactPair pre : real_preconditions) {
++                    int num_extra_features = min(feature_size - 2, num_preconditions - 2);
++                    Combinations<FactPair> combos;
++                    for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++                        // HACK: could remove both from all_preconditions before, but meh.
++                        bool useful_feature = true;
++                        for (FactPair f : feature) {
++                            if (f == prevail || f == pre) {
++                                useful_feature = false;
++                                break;
++                            }
++                        }
++                        if (!useful_feature) {
++                            continue;
++                        }
++                        feature.push_back(prevail);
++                        feature.push_back(pre);
++                        sort(feature.begin(), feature.end());
++                        required_features.push_back(feature);
++                        added_feature = true;
++                    }
++                }
++            }
++        }
++    }
++    return added_feature;
++}
++
 +
 +void FlowConstraints::add_partial_merge_features(
 +    const AbstractTask &task,

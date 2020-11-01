@@ -71,7 +71,7 @@ class ExperimentH:
 			files = os.listdir(problems_path)
 			files.sort()
 			for problem_file in files:
-				if not problem_file.endswith(".tar.bz2") or filter(problem_file):
+				if filter(problem_file) or not problem_file.endswith(".tar.bz2"):
 					continue
 				print(problem_file)
 				path = problems_path + problem_file
@@ -100,7 +100,11 @@ def get_all_h_values():
 	constraint_sets = ["pho_constraints()", "state_equation_constraints()"]
 	constraint_sets_obs = ["lmcut_constraints()", "delete_relaxation_constraints()"]
 
+	constraint_sets = ["flow_constraints()"]
+	constraint_sets_obs = []	
+
 	if len(sys.argv) > 1 and sys.argv[1] == '-fast':
+		print("fast mode")
 		EXP_FILTER = True
 		domains = [
 		'blocks-world',

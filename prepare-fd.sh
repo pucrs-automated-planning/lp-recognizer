@@ -50,6 +50,7 @@ pushd ..
 
 	pushd $FD_ROOT
 		echo "Fast Downward Present"
+		git reset --hard
 		git clean -fd .
 		git checkout $FD_REV
 	popd
