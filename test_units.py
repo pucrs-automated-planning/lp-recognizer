@@ -120,7 +120,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         for h in recognizer.accepted_hypotheses:
             self.assertEqual(h.score[0], 0)
 
-    def test_r_hvalue(self):
+    def ttest_r_hvalue(self):
         print("\nTesting hvalue")
         args = ["-e", "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
         options = Program_Options(args)
