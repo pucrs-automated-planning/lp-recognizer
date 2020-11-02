@@ -65,7 +65,13 @@ class Results:
         return per_obs
 
     def get_mean_h_values(self):
-        return [[np.mean(y.real_h_values) for y in x] for x in self.instances]
+        mean_values = []
+        for obs_instance in self.instances:
+            per_c = []
+            for obs_c_instance in obs_instance:
+                per_c.append(np.mean(obs_c_instance.real_hc_values))
+            mean_values.append(per_c)
+        return mean_values
 
 
 # Functions to draw png plots.
@@ -73,30 +79,11 @@ class Plot:
 
     def get_name(self, x, y, obs = None):
         title = '{} vs {}'.format(x.name, y.name)
+        file = title.replace(" ", "-")
         if obs != None:
-            title = str(obs) + "% - " + title
-        return title, title.replace("% - ", "-").replace(" ", "-")
-
-    def scatter_plot(self, x, y, obs = None):    
-        fig, ax = plt.subplots()
-        plt.xlabel(x.name)
-        plt.ylabel(y.name)
-        title, file = self.get_name(x, y, obs)
-        plt.title(title)
-        x = x.real_h_values
-        y = y.real_h_values
-        xy = [(i, j) for i, j in zip(x, y)]
-        sizes = [xy.count(p) + 4 for p in xy]
-        max_h_value = max(max(x), max(y))
-        ax.plot([0, max_h_value], [0, max_h_value], ls="--", c=".3")
-        ax.scatter(x, y, s=sizes)
-        ax.set_xlim((0,max_h_value))
-        ax.set_ylim((0,max_h_value))
-        x0,x1 = ax.get_xlim()
-        y0,y1 = ax.get_ylim()
-        ax.set_aspect(abs(x1-x0)/abs(y1-y0))
-        fig.set_size_inches(w=3.2, h=2.5)
-        fig.savefig(file + '-scatter.png')
+            title = title + " - " + str(obs) + "%"
+            file = file + "-" + str(obs)
+        return title, file
            
     def mean_chart(self, h_values, observabilities, constraint_sets):
         df = pd.DataFrame(h_values,
@@ -105,31 +92,54 @@ class Plot:
         title = "Average h-values per contraint set per obs%"
         ax = df.plot(kind='bar', figsize=(10,4), title=title)
         fig = ax.get_figure()
-        fig.set_size_inches(w=3.2, h=1.8)
-        fig.savefig("mean-h.png")
+        fig.savefig("mean-%s.png" % '-'.join(constraint_sets))
+
+    def scatter_plot(self, x, y, obs = None):    
+        fig, ax = plt.subplots()
+        plt.xlabel(x.name)
+        plt.ylabel(y.name)
+        title, file = self.get_name(x, y, obs)
+        plt.title(title)
+        x = x.real_hc_values
+        y = y.real_hc_values
+        xy = [(i, j) for i, j in zip(x, y)]
+        sizes = [xy.count(p) * 4 + 8 for p in xy]
+        max_h_value = max(max(x), max(y))
+        ax.plot([0, max_h_value], [0, max_h_value], ls="--", c=".3")
+        ax.scatter(x, y, s=sizes)
+        ax.set_xlim((0,max_h_value))
+        ax.set_ylim((0,max_h_value))
+        x0,x1 = ax.get_xlim()
+        y0,y1 = ax.get_ylim()
+        ax.set_aspect(abs(x1-x0)/abs(y1-y0))
+        fig.savefig('scatter-' + file + '.png')
 
     def agr_plot(self, i1, i2, obs = None):    
         fig, ax = plt.subplots()
         plt.xlabel("h1 - h2")
         plt.ylabel("Agr1 - Agr2")
         title, file = self.get_name(i1, i2, obs)
-        x = [h1 - h2 for h1, h2 in zip(i1.real_h_values, i2.real_h_values)]
+        x = [h1 - h2 for h1, h2 in zip(i1.real_hc_values, i2.real_hc_values)]
         y = [s1 - s2 for s1, s2 in zip(i1.agreement, i2.agreement)]
         xy = [(i, j) for i, j in zip(x, y)]
-        sizes = [xy.count(p) + 4 for p in xy]
+        sizes = [xy.count(p) * 4 + 8 for p in xy]
         ax.axvline(x=0, ls="--", c=".1")
         ax.axhline(y=0, ls="--", c=".1")
         ax.scatter(x, y, s=sizes, c=".4")
+        xabs_max = abs(max(ax.get_xlim(), key=abs))
+        ax.set_xlim(xmin=-xabs_max, xmax=xabs_max)
+        yabs_max = abs(max(ax.get_ylim(), key=abs))
+        ax.set_ylim(ymin=-yabs_max, ymax=yabs_max)
         x0,x1 = ax.get_xlim()
         y0,y1 = ax.get_ylim()
         ax.set_aspect(abs(x1-x0)/abs(y1-y0))
         ax.set_title(title)
-        fig.savefig(file + '-agr.png')
+        fig.savefig('agr-' + file + '.png')
 
     def plot_all(self, results, observabilities, constraint_sets):
         # Mean h-value Plot
-        #mean_values = results.get_mean_h_values()
-        #self.mean_chart(mean_values, observabilities, constraint_names)
+        mean_values = results.get_mean_h_values()
+        self.mean_chart(mean_values, observabilities, results.constraint_names)
         # Scatter & Quad Plots
         pairs = list(it.combinations(range(len(constraint_sets)), 2))
         for obs, instance in zip(observabilities, results.instances):
@@ -146,8 +156,8 @@ class Dat:
     def get_name(self, x, y, obs = None):
         file = '{}-vs-{}'.format(x.name, y.name)
         if obs != None:
-            file = str(obs) + "-" + file
-        return file
+            file = file + "-" + str(obs)
+        return title, file
 
     def agr_plot(self, i1, i2, obs = None):    
         x = [h1 - h2 for h1, h2 in zip(i1.real_hc_values, i2.real_hc_values)]
@@ -229,6 +239,7 @@ if __name__ == '__main__':
     # Constraint set
     lmc = False
     dr = False
+    flow = False
     basic = False
     # Files
     png = False
@@ -243,6 +254,8 @@ if __name__ == '__main__':
             lmc = True
         elif arg == '-del':
             dr = True
+        elif arg == '-flow':
+            flow = True
         elif arg == '-basic':
             basic = True
         elif arg == '-png':
@@ -276,8 +289,8 @@ if __name__ == '__main__':
     # Create files
     if basic:
         generate_all(dat, png, domains,
-            ["delta-cl", "delta-cp", "delta-cs", "delta-cd"],
-            ["LMC", "PH", "SEQ", "DEL"])
+            ["delta-cl", "delta-cp", "delta-cs", "delta-cd", "delta-cf1"],
+            ["LMC", "PH", "SEQ", "DEL", "F1"])
     if lmc:
         generate_all(dat, png, domains,
             ["delta-cl", "delta-o-cl"], 
@@ -286,3 +299,7 @@ if __name__ == '__main__':
         generate_all(dat, png, domains,
             ["delta-cd", "delta-o-cd"],
             ["DEL", "DEL+"])
+    if flow:
+        generate_all(dat, png, domains,
+            ["delta-cf1", "delta-cf2"],
+            ["F1", "F2"])

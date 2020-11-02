@@ -8,9 +8,9 @@ from const_plan_recognizer import *
 from delta_plan_recognizer import *
 
 class TestPlanRecognizerFactory(unittest.TestCase):
-    
+
     def setUp(self):
-        options = Program_Options([])
+        options = Program_Options(["-e", "experiments/example/example.tar.bz2"])
         self.factory = PlanRecognizerFactory(options)
 
     def test_factory(self):
@@ -95,7 +95,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
-        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses) 
+        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses)
         for h in recognizer.accepted_hypotheses:
             self.assertGreaterEqual(h.score[0], 0)
 
@@ -105,7 +105,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("deltau", options)
         recognizer.run_recognizer()
-        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses) 
+        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses)
         for h in recognizer.accepted_hypotheses:
             self.assertGreaterEqual(h.score[0], 0)
         self.assertGreater(recognizer.uncertainty_ratio, 1)
@@ -116,21 +116,20 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
-        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses) 
+        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses)
         for h in recognizer.accepted_hypotheses:
             self.assertEqual(h.score[0], 0)
 
-    def ttest_r_hvalue(self):
+    def test_r_hvalue(self):
         print("\nTesting hvalue")
         args = ["-e", "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
-        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses) 
+        self.assertTrue(recognizer.unique_goal in recognizer.accepted_hypotheses)
         for hyp in recognizer.accepted_hypotheses:
             self.assertGreaterEqual(hyp.num_obs, hyp.h)
             self.assertGreaterEqual(hyp.num_obs, hyp.obs_hits)
 
 if __name__ == '__main__':
     unittest.main()
-    

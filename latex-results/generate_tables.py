@@ -1,8 +1,5 @@
 #!/usr/bin/python
-import sys
-import os
-import math
-import argparse
+import sys, os, math
 
 class DomainData:
 
@@ -17,7 +14,7 @@ class DomainData:
 
 	def read_approach_data(self, file, approach):
 		file.readline() # Header
-		sum_values = [0] * 11
+		sum_values = [0] * 12
 		for obs in self.observabilities:
 			line = file.readline().strip().split('\t')
 			self.total_problems += int(line[0])
@@ -54,7 +51,7 @@ class DomainData:
 		return sum_s / problems if problems > 0 else float("nan")
 
 def average_values(all_domain_data, approach):
-	sum_values = [0] * 11
+	sum_values = [0] * 12
 	for domain_data in all_domain_data.values():
 		if approach in domain_data.avg_data:
 			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
@@ -67,6 +64,7 @@ def collect_data(file, domains, approaches, basepaths, observabilities):
 		all_domain_data[domain_name] = domain_data
 		for basepath, approach in zip(basepaths, approaches):
 			path = basepath + "/" + domain_name + '-' + approach + '.txt'
+			print(path)
 			if not os.path.isfile(path):
 				continue
 			try:
@@ -80,7 +78,6 @@ def collect_data(file, domains, approaches, basepaths, observabilities):
 
 
 def get_latex_content(file, domains, approaches, basepaths):
-	print("Tabulating data from %s for domains %s"%(basepaths,domains))
 	observabilities = ['10', '30', '50', '70', '100']
 	all_domain_data = collect_data(file, domains, approaches, basepaths, observabilities)
 
@@ -111,47 +108,62 @@ def get_latex_content(file, domains, approaches, basepaths):
 			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + len_obs + '\t & ' + len_solutions + '\n'
 			for basepath, approach in zip(basepaths, approaches):
 				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
+				print(domain_name, basepath, approach)
 				if (basepath + approach) not in domain_data.obs_data[obs]:
-					content_table += '\n\t\t& - & - & - & - \t \n'
+					content_table += '\n\t\t& - & - & - & - & -\t \n'
 					continue
 				values = domain_data.obs_data[obs][basepath + approach]
-				time = round(values[10], 3)
+				time = round(values[11], 3)
 				accuracy = round(values[8] * 100, 1)
 				spread = round(values[9], 2)
+				per = int(values[10])
 				ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 1)
 				ar = round(values[5], 2)
 				fpr = round(values[6], 2)
 				fnr = round(values[7], 2)
-				content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
+				content_table += '\n\t\t& {0} & {1} & {2} & {3} & {4}'.format(time, ar, accuracy, spread, per)
 				content_table += ' \t \n'
 		content_table += ' \\\\ \hline'
 
 	content_avg = ''
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
-		time = round(values[10], 3)
+		time = round(values[11], 3)
 		accuracy = round(values[8] * 100, 2)
 		spread = round(values[9], 2)
+		per = round(values[10], 1)
 		ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], 2)
 		ar = round(values[5], 2)
 		fpr = round(values[6], 2)
 		fnr = round(values[7], 2)
-		content_avg += ' & {0} & {1} & {2} & {3}'.format(time, ar, accuracy, spread)
+		content_avg += ' & {0} & {1} & {2} & {3} & {4}'.format(time, ar, accuracy, spread, per)
 
 	return content_table, content_avg
 
-def main(template, file, domains, approaches, basepaths):
-	# Get content.
+def main(title, file, domains, approaches, basepaths, names=None, caption=''):
+	# Get names
+	if names is None:
+		name = approaches
+	names = ["& \\multicolumn{5}{c|}{%s}" % name for name in names]
+	# Get content
 	content_table, content_avg = get_latex_content(file, domains, approaches, basepaths)
 	domains = [name.replace("optimal", "suboptimal") for name in domains]
 	content_table_2, content_avg_2 = get_latex_content(file, domains, approaches, basepaths)
-	# Write latex
+
+	# Read template
 	latexContent = ''
-	with open(template, 'r') as latex:
+	with open('template.tex', 'r') as latex:
 		latexContent = latex.read()
+	# Write header
+	latexContent = latexContent.replace("<TITLE>", title)
+	latexContent = latexContent.replace("<ALIGN>", "ccccc|" * len(approaches))
+	latexContent = latexContent.replace("<NAMES>", '\n'.join(names))
 	if "noisy" in domains[0]:
 		latexContent = latexContent.replace("Optimal", "Optimal, Noisy")
 		latexContent = latexContent.replace("Basic", "Noisy")
+	latexContent = latexContent.replace("<METRICS>", '& \\textbf{Time} & \\textbf{Agr} & \\textbf{Acc} & \\textbf{Spr} & *\n' * len(approaches))
+	latexContent = latexContent.replace("<CAPTION>", caption)
+	# Write content
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
 	latexContent = latexContent.replace('<AVG_APPROACH>', content_avg)
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS_2>', content_table_2)
@@ -159,6 +171,7 @@ def main(template, file, domains, approaches, basepaths):
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
 	os.system("pdflatex " + file)
+
 
 if __name__ == '__main__' :
 	default_path = '../results'
@@ -176,71 +189,81 @@ if __name__ == '__main__' :
 	'sokoban-optimal', 
 	'zeno-travel-optimal'
 	]
-	file = 'all.tex'
-	template = 'all-template.tex'
-	approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'delta-h-c-f2', 'rg2009', 'lm_hc0', 'lm_hc10', 'lm_hc20', 'lm_hc30']
-	paths = [default_path] * 8
 
-	parser = argparse.ArgumentParser(description="Generates LaTeX tables for plan recognition experiments")
-	parser.add_argument('-d', '--domains', metavar="D", nargs='+', type=str, help="list of domains to tabulate data")
-	parser.add_argument('-a', '--approaches', metavar="A", nargs='+', type=str, help="approaches to tabulate")
-	parser.add_argument('-p', '--paths', metavar="P", nargs='+', type=str, help="base path of data result files for each approach")
-	parser.add_argument('-t', '--template', metavar="T", nargs=1, type=str, help="template file")
-	parser.add_argument('-f', '--file', metavar="F", nargs=1, type=str, help="result file")
-	args = parser.parse_args()
+	file = 'variations.tex'
+	if len(sys.argv) > 1:
+		file = sys.argv[1] + ".tex"
+	if len(sys.argv) > 2 and sys.argv[2] == '-fast':
+		default_path = '../results-small'
+		domains = [
+		'blocks-world-optimal',
+		'depots-optimal',
+		'driverlog-optimal',
+		'dwr-optimal',
+		'rovers-optimal',
+		'sokoban-optimal'
+		]
 
 	# Latex resulting files
-	if args.file:
-		file = args.file[0]
-		if 'old-noisy' in file:
-			domains = [name.replace("optimal", "optimal-old-noisy") for name in domains]
-		elif 'noisy' in file:
-			domains = [name.replace("optimal", "optimal-noisy") for name in domains]
-	if args.domains:
-		domains = args.domains # Domains used
+	if 'old-noisy' in file:
+		domains = [name.replace("optimal", "optimal-old-noisy") for name in domains]
+	elif 'noisy' in file:
+		domains = [name.replace("optimal", "optimal-noisy") for name in domains]
 
-	# Latex template file
-	if args.template:
-		template = args.template[0]
-		if 'previous' in template:
-			paths = [default_path] * 5
-			approaches = ['delta-h-c', 'delta-h-c-uncertainty', 'rg2009', 'lm_hc0', 'lm_hc30']
-		elif 'filters' in template:
+	if 'previous' in file:
+		paths = [default_path] * 6
+		title = 'Previous Methods'
+		caption = "Results comparing our method with previous methods."
+		approaches = ['delta', 'deltau', 'delta-f2', 'rg2009', 'lm_hc0', 'lm_hc30']
+		names = ['\\dhc', '\\dhcu', '\\dhcf', '\\rg', '\\pom', '\\pomC']
+	elif 'filters' in file:
+		paths = [default_path] * 6
+		title = 'Filters'
+		caption = "Results for filtering \\epsilon = 0, 0.1 and 0.2."
+		approaches = [
+		'delta', 'deltau',
+		'delta-f1', 'deltau-f1',
+		'delta-f2', 'deltau-f2'
+		]
+		names = [
+		'\\dhc \\unreliability = 0', '\\dhcu \\unreliability = 0',
+		'\\dhc \\unreliability = 0.1', '\\dhcu \\unreliability = 0.1',
+		'\\dhc \\unreliability = 0.2', '\\dhcu \\unreliability = 0.2'
+		]
+	elif 'variations' in file:
+		paths = [default_path] * 4
+		title = 'Variations'
+		caption = 'L for landmarks, P for post-hoc, S for state equation.'
+		approaches = ['delta-cl', 'delta-o-cl', 'delta', 'delta-o']
+		names = ['L', 'L+', 'L, P, S', 'L+, P, S']
+	elif 'constraints' in file:
+		if 'single' in file:
+			paths = [default_path] * 8
+			title = 'Constraints - Single'
+			caption = 'L for landmarks, D for delete relaxation, P for post-hoc, S for state equation, $F^i$ for flow(sys(i)).'
+			approaches = [
+			'delta-cp', 'delta-cs',
+			'delta-cl', 'delta-o-cl',
+			'delta-cd', 'delta-o-cd',
+			'delta-cf1', 'delta-cf2',
+			]
+			names = [
+			'P', 'S',
+			'L', 'L+',
+			'D', 'D+',
+			'$F^1$', '$F^2$'
+			]
+		elif 'pairs' in file:
 			paths = [default_path] * 6
+			title = 'Constraints - Pairs'
+			caption = 'L for landmarks, P for post-hoc, S for state equation, D for delete relaxation.'
 			approaches = [
-			'delta-h-c', 'delta-h-c-uncertainty',
-			'delta-h-c-f1', 'delta-h-c-f1-uncertainty',
-			'delta-h-c-f2', 'delta-h-c-f2-uncertainty'
+			'delta-clp', 'delta-cls', 'delta-cld',
+			'delta-cps', 'delta-cpd', 'delta-csd'
 			]
-		elif 'variations' in template:
-			paths = [default_path] * 4
-			approaches = [
-			'delta-h-c', 'delta-h-c-o',
-			'delta-h-c-cl', 'delta-h-c-o-cl'
+			names = [
+			'L, P', 'L, S', 'L, D'
+			'P, S', 'P, D', 'S, D'
 			]
-		elif 'constraints' in template:
-			if 'single' in template:
-				paths = [default_path] * 8
-				approaches = [
-				'delta-h-c-cl', 'delta-h-c-cl-uncertainty',
-				'delta-h-c-cp', 'delta-h-c-cp-uncertainty',
-				'delta-h-c-cs', 'delta-h-c-cs-uncertainty',
-				'delta-h-c-cd', 'delta-h-c-cd-uncertainty',
-				]
-			else:
-				paths = [default_path] * 6
-				approaches = [
-				'delta-h-c-cps', 'delta-h-c-cps-uncertainty',
-				'delta-h-c-cls', 'delta-h-c-cls-uncertainty',
-				'delta-h-c-clp', 'delta-h-c-clp-uncertainty',
-				]
-	if args.approaches:
-		approaches = args.approaches # Approaches in template
 
-	if args.paths:
-		paths=args.paths
-	
-	if len(paths) < len(approaches):
-		paths += [default_path] * (len(approaches) - len(paths))
-
-	main(template, file, domains, approaches, paths)
+	main(title, file, domains, approaches, paths, names, caption)
