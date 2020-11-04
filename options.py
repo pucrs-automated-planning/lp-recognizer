@@ -46,6 +46,7 @@ class Program_Options:
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
         self.h_obs = False
         self.solver = "soplex"
+        self.mip = False
 
         for opcode, oparg in opts:
             if opcode in ('-b', '--batch'):

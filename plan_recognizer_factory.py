@@ -47,7 +47,9 @@ class PlanRecognizerFactory(object):
         name = args[0]
 
         for arg in args[1:]:
-            if arg[0] == 'f':
+            if arg[0] == 'i':
+                options.mip = True
+            elif arg[0] == 'f':
                 options.filter = int(arg[1:])
             elif arg[0] == 'o':
                 options.h_obs = True

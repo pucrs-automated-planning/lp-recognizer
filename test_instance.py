@@ -14,6 +14,7 @@ if __name__ == '__main__':
     realHyp = recognizer.get_real_hypothesis()
     print("Real Goal is: %s" % str(realHyp))
     print("Recognized: %s" % str(recognizer.unique_goal))
+    print("Spread: %s" % len(recognizer.accepted_hypotheses))
     if recognizer.unique_goal == None:
         print("No goal recognized!")
     elif realHyp == recognizer.unique_goal:

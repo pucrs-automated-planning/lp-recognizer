@@ -31,7 +31,7 @@ class PRCommand:
         translate_options = '--translate-options --add-implied-preconditions --keep-unimportant-variables --keep-unreachable-facts '
         search_options_template = '--search-options --search "astar(ocsingleshot([{h}],' + \
             'calculate_h={h_v},calculate_h_c={h_c},calculate_h_s={h_s},' + \
-            'weights={w},filter={f},h_obs={o},lpsolver={s}))"'
+            'weights={w},filter={f},h_obs={o},lpsolver={s},mip={i}))"'
         string = fd_path + 'fast-downward.py %s %s ' + translate_options
         string += search_options_template.format(h=",".join(self.opts[2]), \
             h_v = self.opts[3], \
@@ -40,7 +40,8 @@ class PRCommand:
             w = self.opts[6], \
             f = self.opts[7], \
             o = self.opts[8], \
-            s = self.opts[9])
+            s = self.opts[9], \
+            i = self.opts[10])
         return string
 
     def execute(self):
