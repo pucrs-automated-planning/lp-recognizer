@@ -7,6 +7,9 @@
 #  Copyright 2019 Felipe Meneguzzi. All rights reserved.
 #
 
+## Alternative repo
+# EXPERIMENTS_REPO="https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset-lp.git"
+
 EXPERIMENTS_REPO="https://github.com/luisaras/goal-plan-recognition-dataset.git"
 
 pushd ../../

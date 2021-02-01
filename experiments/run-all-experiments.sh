@@ -24,6 +24,7 @@ FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
 WEIGHTED="deltaw deltawu"
 
 if [[ ! -d ../$DATASETS ]]; then
+	echo "Datasets not found at ../$DATASETS"
 	source get-all-experiments.sh
 fi
 
