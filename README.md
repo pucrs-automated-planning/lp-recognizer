@@ -2,7 +2,17 @@
 
 [![Build Status](https://travis-ci.com/pucrs-automated-planning/lp-recognizer.svg?token=wcNhPPzeYu4Vp7Wds6rN&branch=master)](https://travis-ci.com/pucrs-automated-planning/lp-recognizer)
 
-A goal recognizer that uses Linear Programming Heuristics from Automated planning to compute most likely goals.
+A goal recognizer that uses Linear Programming Heuristics from Automated planning to compute most likely goals. If you find this research useful in your research, place cite the following paper:
+
+```
+@inproceedings{Santos2021,
+author = {Lu\'{i}sa R. de A. Santos and Felipe Meneguzzi and Ramon F. Pereira and Andr\'{e} Pereira},
+title = {{An LP-Based Approach for Goal Recognition as Planning}},
+booktitle = {Proceedings of the 35th AAAI Conference on Artificial Intelligence (AAAI)},
+year = {2021},
+publisher = {AAAI Press}
+}
+```
 
 ## Installation
 
@@ -15,17 +25,11 @@ We use a customized build of Fast Downward, so we provide automated scripts to d
 
 ```bash
 git clone https://github.com/pucrs-automated-planning/lp-recognizer.git
-bash prepare-fd.sh #This should download Fast Downward apply patches and compile
+cd lp-recognizer
+bash prepare-fd.sh #This should download Fast Downward (and dependencies) apply patches and compile
 ```
 
-## Commit hacks (changes) to Fast Downward here
-
-We store our changes to Fast Downward in the ```fd-patch.diff``` patch file in this repository. Whenever you change Fast Downward for LP-Recognizer, ensure these changes are stored here by running:
-```bash
-bash make-fd-patch.sh
-git commit -m "Storing patches to Fast Downward" fd-patch.diff fd-patch-rev.txt
-git push
-```  
+Note that the above command will download many dependencies, including the [Open Solver Interface (OSI)](https://www.coin-or.org) and [SoPlex](https://soplex.zib.de), compile them, and link them to Fast Downward.
 
 ## Running LP-Recognizer
 
@@ -71,6 +75,20 @@ For example, to run all Sokoban experiments, using all the heuristics you need t
 ./test_domain.py experiments sokoban "delta deltau delta-f2"
 ```
 
-### Running plan recognition 
+### Running plan recognition experiments from AAAI paper
 
-In order to run all of the experiments in our paper ```replace with citation```, you need to run ```experiments/run-all-experiments.sh```, which will run every single domain for all approaches. 
+In order to run all of the experiments in our paper ```replace with citation```, you need to run ```run-all-experiments.sh``` from the [experiments](experiments) folder, which will run every single domain for all approaches. 
+``` 
+cd experiments;./run-all-experiments.sh
+```
+
+Note that since the dataset is pretty large, this takes a very long time to finish. 
+
+## Commit hacks (changes) to Fast Downward here
+
+We store our changes to Fast Downward in the ```fd-patch.diff``` patch file in this repository. Whenever you change Fast Downward for LP-Recognizer, ensure these changes are stored here by running:
+```bash
+bash make-fd-patch.sh
+git commit -m "Storing patches to Fast Downward" fd-patch.diff fd-patch-rev.txt
+git push
+```  

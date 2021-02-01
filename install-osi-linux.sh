@@ -12,6 +12,7 @@ pushd ..
 # Install soplex
 if [[ ! -d "$DOWNWARD_SOPLEX_ROOT" ]]; then
 	# Install soplex
+	echo "Installing SoPlex"
 	wget -c  https://soplex.zib.de/download/release/soplex-3.1.1.tgz
 	tar xvzf soplex-3.1.1.tgz
 	pushd soplex-3.1.1
@@ -31,7 +32,7 @@ pushd Osi-0.107.9
 if [[ -d "$DOWNWARD_CPLEX_ROOT" ]]; then
 	# Configure with CPLEX
 	./configure CC="gcc"  CFLAGS="-pthread -Wno-long-long" \
-	            CXX="g++" CXXFLAGS="-pthread -Wno-long-long" \
+	            CXX="g++" CXXFLAGS="-std=c++11 -pthread -Wno-long-long" \
 	            LDFLAGS="-L$DOWNWARD_CPLEX_ROOT/lib/x86-64_linux/static_pic \
 	                     -L$DOWNWARD_SOPLEX_ROOT/lib" \
 	            --without-lapack --enable-static=no \
@@ -44,7 +45,7 @@ if [[ -d "$DOWNWARD_CPLEX_ROOT" ]]; then
 else
 	# Configure without CPLEX
 	./configure CC="gcc"  CFLAGS="-m64 -pthread -Wno-long-long" \
-	            CXX="g++" CXXFLAGS="-m64 -pthread -Wno-long-long" \
+	            CXX="g++" CXXFLAGS="-std=c++11 -m64 -pthread -Wno-long-long" \
 	            LDFLAGS="-L$DOWNWARD_SOPLEX_ROOT/lib" \
 	            --without-lapack --enable-static=yes \
 	            --prefix="$DOWNWARD_COIN_ROOT" \

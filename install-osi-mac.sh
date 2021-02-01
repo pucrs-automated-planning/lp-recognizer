@@ -14,6 +14,7 @@ pushd ..
 # Install soplex
 if [[ ! -d "$DOWNWARD_SOPLEX_ROOT" ]]; then
 	# Install soplex
+	echo "Installing SoPlex"
 	wget -c  https://soplex.zib.de/download/release/soplex-3.1.1.tgz
 	tar xvzf soplex-3.1.1.tgz
 	pushd soplex-3.1.1
