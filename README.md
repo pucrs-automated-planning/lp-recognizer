@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/pucrs-automated-planning/lp-recognizer.svg?token=wcNhPPzeYu4Vp7Wds6rN&branch=master)](https://travis-ci.com/pucrs-automated-planning/lp-recognizer)
 
+[![DOI](https://zenodo.org/badge/163009224.svg)](https://zenodo.org/badge/latestdoi/163009224)
+
 A goal recognizer that uses Linear Programming Heuristics from Automated planning to compute most likely goals. If you find this research useful in your research, place cite the following paper:
 
 ```
