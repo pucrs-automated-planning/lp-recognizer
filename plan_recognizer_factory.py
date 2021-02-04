@@ -52,7 +52,10 @@ class PlanRecognizerFactory(object):
             elif arg[0] == 'f':
                 options.filter = int(arg[1:])
             elif arg[0] == 'o':
-                options.h_obs = True
+                if len(arg) == 1:
+                    options.h_obs = 1
+                else:
+                    options.h_obs = int(arg[1:]) + 1
             elif arg[0] == 'c':
                 options.heuristics = []
                 if 'l' in arg:
@@ -62,13 +65,45 @@ class PlanRecognizerFactory(object):
                 if 's' in arg:
                     options.heuristics.append("state_equation_constraints()")
                 if 'd' in arg:
-                    options.heuristics.append("delete_relaxation_constraints()")
+                    time_vars = not ('tr' in arg)
+                    if 'd1' in arg: # use_integer_vars_op
+                        options.heuristics.append("delete_relaxation_constraints(%s, 1, 0, 0, 0)" % time_vars)
+                    elif 'd2' in arg: # use_integer_vars_facts
+                        options.heuristics.append("delete_relaxation_constraints(%s, 0, 1, 0, 0)" % time_vars)
+                    elif 'd3' in arg: # use_integer_vars_achiever
+                        options.heuristics.append("delete_relaxation_constraints(%s, 0, 0, 1, 0)" % time_vars)
+                    elif 'd4' in arg: # use_integer_vars_time
+                        options.heuristics.append("delete_relaxation_constraints(%s, 0, 0, 0, 1)" % time_vars)
+                    elif 'd5' in arg: # use_integer_vars_op (obs only)
+                        options.heuristics.append("delete_relaxation_constraints(%s, 2, 0, 0, 0)" % time_vars)
+                    else: # use all integer_vars
+                        options.heuristics.append("delete_relaxation_constraints(%s)" % time_vars)
                 if 'f1' in arg:
-                    options.heuristics.append("flow_constraints(systematic(1))")
+                    if '1a' in arg:
+                        options.heuristics.append("flow_constraints(systematic(1), partial_merge_time_limit=10)")
+                    elif '1b' in arg:
+                        options.heuristics.append("flow_constraints(systematic(1), partial_merge_time_limit=10, max_merge_feature_size=4)")
+                    elif '1c' in arg:
+                        options.heuristics.append("flow_constraints(systematic(1), max_merge_feature_size=4)")
+                    elif '1d' in arg:
+                        options.heuristics.append("flow_constraints(systematic(1), partial_merges=0)")
+                    elif '1e' in arg:
+                        options.heuristics.append("flow_constraints(systematic(1), partial_merges=2)")
+                    else:
+                        options.heuristics.append("flow_constraints(systematic(1))")
                 if 'f2' in arg:
-                    options.heuristics.append("flow_constraints(systematic(2))")
+                    if '2a' in arg:
+                        options.heuristics.append("flow_constraints(systematic(2), partial_merge_time_limit=10)")
+                    elif '2b' in arg:
+                        options.heuristics.append("flow_constraints(systematic(2), partial_merge_time_limit=10, max_merge_feature_size=4)")
+                    elif '2c' in arg:
+                        options.heuristics.append("flow_constraints(systematic(2), max_merge_feature_size=4)")
+                    elif '2d' in arg:
+                        options.heuristics.append("flow_constraints(systematic(2), partial_merges=0)")
+                    else:
+                        options.heuristics.append("flow_constraints(systematic(2))")
                 if 'f3' in arg:
-                    options.heuristics.append("flow_constraints(systematic(3))")
+                    options.heuristics.append("flow_constraints(systematic(3), partial_merges=0)")
             else:
                 print("Recognizer option unknown: " + arg)
                 exit()

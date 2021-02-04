@@ -14,7 +14,7 @@ class Program_Options:
     def __init__(self, args):
         try:
             opts, args = getopt.getopt(args,
-                                       "r:be:ht:m:T:F:H:oS:",
+                                       "r:be:ht:m:T:F:H:oS:i",
                                        ["recognizer-name=",
                                         "batch",
                                         "experiment=",
@@ -24,8 +24,9 @@ class Program_Options:
                                         "theta=",
                                         "filter=",
                                         "heuristics=",
-                                        "h-obs"
-                                        "solver="])
+                                        "h-obs",
+                                        "solver=",
+                                        "mip"])
         except getopt.GetoptError:
             print("Missing or incorrect parameters specified!", file=sys.stderr)
             usage()
@@ -44,7 +45,7 @@ class Program_Options:
         self.filter = 0 # Obs filter
         self.weight = 3
         self.heuristics = ["lmcut_constraints()", "pho_constraints()", "state_equation_constraints()"]
-        self.h_obs = False
+        self.h_obs = 0
         self.solver = "soplex"
         self.mip = False
 
@@ -106,11 +107,13 @@ class Program_Options:
                 print("LIST OF HEURISTICS: "+oparg)
                 print(self.heuristics)
             if opcode in ('-o', '--h-obs'):
-                self.h_obs = True
+                self.h_obs = 1
                 print("Enable observations inside heuristic constraints!")
             if opcode in ('-S', '--solver'):
                 self.solver = oparg
                 print("Using LP solver: " + oparg)
+            if opcode in ('-i', '--mip'):
+                self.mip = True
 
             if opcode in ('-r', '--recognizer-name'):
                 self.recognizer_name = oparg

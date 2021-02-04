@@ -30,6 +30,8 @@ class Experiment:
         self.fd_time = 0.0
         self.total_time = 0.0
         self.max_time = 0.0
+        self.num_lp_vars = []
+        self.num_lp_consts = []
         self.real_h_values = []
         self.h_values = []
         self.real_hc_values = []
@@ -70,6 +72,8 @@ class Experiment:
         self.fnr.append(fn / total)
         self.agreement.append(agr)
         self.spread.append(len(solution_set))
+        self.num_lp_vars.append(hyp.num_lp_vars)
+        self.num_lp_consts.append(hyp.num_lp_consts)
 
         if agr == 1:
             self.perfect_agr += 1
@@ -99,7 +103,7 @@ def do_experiments(base_path, domain_name, observability, recognizer, opt):
     file_outputs = open(base_filename + ".success", "w")
     file_failures = open(base_filename + ".fail", "w")
 
-    file_content = "#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tPER\tTime\tTimeLP\tTimeFD\n"
+    file_content = "#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tPER\tTime\tTimeLP\tTimeFD\tVars\tConsts\n"
     for obs in observability:
         current_problem = 1
         exp_dir = domain_name + '/' + obs + '/'
@@ -138,6 +142,8 @@ def do_experiments(base_path, domain_name, observability, recognizer, opt):
         file_content += "\t%2.4f" % (experiment.total_time / num_problems)
         file_content += "\t%2.4f" % (sum(experiment.lp_time) / num_problems)
         file_content += "\t%2.4f" % (experiment.fd_time / num_problems)
+        file_content += "\t%2.4f" % (sum(experiment.num_lp_vars) / num_problems)
+        file_content += "\t%2.4f" % (sum(experiment.num_lp_consts) / num_problems)
         file_content += "\n"
 
         file_hvalues = open("constraint-values/" + base_filename + "-" + obs + ".txt", "w")

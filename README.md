@@ -44,12 +44,17 @@ Our Python code was based off of Ramirez and Geffner's original recognizer, so e
 - A number of hypotheses (possible goal formulas)
 - A PDDL Problem Template (containing the initial state)
 
-This recognizer is compatible with all the domains in this publicly available dataset of [Goal and Plan Recognition Datasets](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset). We currently implement four different approaches to goal recognition based on operator counts:
+This recognizer is compatible with all the domains in this publicly available dataset of [Goal and Plan Recognition Datasets](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset-lp). We currently implement three different approaches to goal recognition based on operator counts:
 
-1.  Comparing overlap of observations and operator counts, accessible with the ```v``` heuristic
-2.  Minimizing the operator counts subject to constraints derived from the observations (i.e. all observations must be included in the counts), accessible with the ```c``` heuristic
-3. Minimizing the difference between the operator counts with the observation constraints and the operator counts with then, accessible with the ```dc``` heuristic
-4. Minimizing the operator counts subject to soft constraints on the observations (i.e. trying to include as many observations in the counts while minimizing total count), accessible with the ```s``` heuristic
+1.  Comparing overlap of observations and operator counts, accessible with the ```hvalue``` heuristic
+2.  Minimizing the operator counts subject to constraints derived from the observations (i.e. all observations must be included in the counts), accessible with the ```hvaluec``` and ```hvaluecu``` (measuring uncertainty) heuristics
+3. Minimizing the difference between the operator counts with the observation constraints and the operator counts with then, accessible with the ```delta``` and ```deltau``` (measuring uncertainty) heuristics
+
+It is also possible to add parameters in the heuristic name:
+
+1.  Using noisy filters by adding ```-f``` followed by 1 (filter 10%) or 2 (filter 20%). Example: ```delta-f2```
+2.  Change the constraint sets by adding ```-c``` followed by ```l``` (landmarks), ```s``` (state equation), ```p``` (post-hoc), or combations. Example: ```delta-clp```
+3.  Use IP instead of LP by adding ```-i```. Example: ```delta-i-cs```
 
 To run any experiment, just run:
 ```bash
@@ -60,7 +65,7 @@ Where ```<experiment_file>``` is one of the experiments in your dataset.
 For example, with the experiments we provide here, we could run sokoban with the hard constraints strategy as follows:
 
 ```bash
-./test_instance.py -r dc -e experiments/sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2
+./test_instance.py -r deltac -e experiments/sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments 

@@ -62,6 +62,8 @@ class PRCommand:
                     self.lp_time = float(line.split()[1].replace('s', ''))
                 elif 'h-values' in line:
                     self.h_values = [float(w) for w in line.split()[1:]]
+                elif 'lp-size' in line:
+                    self.lp_size = [float(w) for w in line.split()[1:]]
                 else:
                     operator,count = line.split('=')
                     self.op_counts[operator.strip()] = float(count.strip())
@@ -114,6 +116,9 @@ class Hypothesis:
                 print("h value not a number. Failed.")
                 self.test_failed = True
                 return
+        # LP size
+        self.num_lp_vars = pr_cmd.lp_size[0]
+        self.num_lp_consts = pr_cmd.lp_size[1]
         # obs
         self.num_obs = pr_cmd.obs_report[0] - pr_cmd.obs_report[1]
         self.num_invalid_obs = pr_cmd.obs_report[1]

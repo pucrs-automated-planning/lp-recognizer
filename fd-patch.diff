@@ -481,8 +481,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
        The LP has to be solved with a call to solve() and has to have an optimal
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.cc fast-downward/src/search/operator_counting/constraint_generator.cc
 --- fast-downward-original/src/search/operator_counting/constraint_generator.cc	2020-10-26 22:55:33.057730200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.cc	2020-10-26 20:16:59.937799100 -0300
-@@ -6,7 +6,11 @@
++++ fast-downward/src/search/operator_counting/constraint_generator.cc	2020-12-09 22:48:13.835269100 -0200
+@@ -6,7 +6,12 @@
  
  namespace operator_counting {
  void ConstraintGenerator::initialize_constraints(
@@ -490,14 +490,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    const shared_ptr<AbstractTask> &, vector<lp::LPVariable> &, vector<lp::LPConstraint> &, double) {
 +}
 +
-+void ConstraintGenerator::set_observations(const vector<int>& observations) {
++void ConstraintGenerator::set_observations(const vector<int>& observations, int obs_info) {
++	this->obs_info = obs_info;
 +	this->observations = observations;
  }
  
  static PluginTypePlugin<ConstraintGenerator> _type_plugin(
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.h fast-downward/src/search/operator_counting/constraint_generator.h
 --- fast-downward-original/src/search/operator_counting/constraint_generator.h	2020-10-26 22:55:33.062373200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.h	2020-10-26 20:16:59.945479800 -0300
++++ fast-downward/src/search/operator_counting/constraint_generator.h	2020-12-09 22:48:00.835725000 -0200
 @@ -10,6 +10,12 @@
  namespace lp {
  class LPConstraint;
@@ -511,7 +512,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
  
  namespace operator_counting {
-@@ -27,10 +33,11 @@
+@@ -27,10 +33,12 @@
        Example: constraints from landmarks generated for a given state, e.g.
        using the LM-Cut method.
  */
@@ -519,12 +520,13 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  class ConstraintGenerator {
  public:
 +    std::vector<int> observations;
++    int obs_info = 0;
      virtual ~ConstraintGenerator() = default;
 -
      /*
        Called upon initialization for the given task. Use this to add permanent
        constraints and perform other initialization. The parameter "infinity"
-@@ -39,6 +46,7 @@
+@@ -39,6 +47,7 @@
      */
      virtual void initialize_constraints(
          const std::shared_ptr<AbstractTask> &task,
@@ -532,19 +534,19 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
          std::vector<lp::LPConstraint> &constraints,
          double infinity);
  
-@@ -51,6 +59,8 @@
+@@ -51,6 +60,8 @@
      */
      virtual bool update_constraints(const State &state,
                                      lp::LPSolver &lp_solver) = 0;
 +
-+    void set_observations(const std::vector<int>& observations);
++    void set_observations(const std::vector<int>& observations, int obs_info = 0);
  };
  }
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2020-11-04 02:19:03.541305000 -0200
-@@ -0,0 +1,255 @@
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2020-12-13 09:13:31.763888300 -0200
+@@ -0,0 +1,306 @@
 +#include "delete_relaxation_constraints.h"
 +
 +#include "../option_parser.h"
@@ -560,24 +562,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +namespace operator_counting {
 +
-+void add_lp_variables(int count,
-+                      vector<lp::LPVariable> &variables, vector<int> &indices,
-+                      double lower, double upper, double objective, bool is_integer) {
-+    for (int i = 0; i < count; ++i) {
-+        indices.push_back(variables.size());
-+        variables.emplace_back(lower, upper, objective, is_integer);
-+    }
-+}
-+
-+
 +DeleteRelaxationConstraints::DeleteRelaxationConstraints(const Options &opts)
 +    : use_time_vars(opts.get<bool>("use_time_vars")),
-+      use_integer_vars(opts.get<bool>("use_integer_vars")) {
++    use_integer_vars_op(opts.get<int>("use_integer_vars_op")),
++    use_integer_vars_facts(opts.get<int>("use_integer_vars_facts")),
++    use_integer_vars_achiever(opts.get<int>("use_integer_vars_achiever")),
++    use_integer_vars_time(opts.get<int>("use_integer_vars_time")) {
 +}
-+
 +
 +int DeleteRelaxationConstraints::get_var_op_used(OperatorProxy op) {
 +    return lp_var_id_op_used[op.get_id()];
++}
++
++int DeleteRelaxationConstraints::get_var_op_used2(OperatorProxy op) {
++    return lp_var_id_op_used2[op.get_id()];
 +}
 +
 +int DeleteRelaxationConstraints::get_var_fact_reached(FactProxy f) {
@@ -592,12 +590,25 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    return lp_var_id_op_time[op.get_id()];
 +}
 +
++int DeleteRelaxationConstraints::get_var_op_time2(OperatorProxy op) {
++    return lp_var_id_op_time2[op.get_id()];
++}
++
 +int DeleteRelaxationConstraints::get_var_fact_time(FactProxy f) {
 +    return lp_var_id_fact_time[f.get_variable().get_id()][f.get_value()];
 +}
 +
 +int DeleteRelaxationConstraints::get_constraint_id(FactProxy f) {
 +    return constraint_ids[f.get_variable().get_id()][f.get_value()];
++}
++
++void add_lp_variables(int count, vector<bool>& obs_used,
++        vector<lp::LPVariable> &variables, vector<int> &indices,
++        double lower, double upper, double objective, int is_integer) {
++    for (int i = 0; i < count; ++i) {
++        indices.push_back(variables.size());
++        variables.emplace_back(lower, upper, objective, is_integer == 1 || is_integer == 2 && obs_used[i]);
++    }
 +}
 +
 +void DeleteRelaxationConstraints::create_auxiliary_variables(
@@ -607,38 +618,45 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    VariablesProxy vars = task_proxy.get_variables();
 +    int num_vars = vars.size();
 +
++    vector<bool> obs_used(num_ops, false);
++    for (int id : observations)
++        obs_used[id] = true;
++
 +    // op_used
-+    add_lp_variables(num_ops, variables, lp_var_id_op_used, 0, 1, 0, use_integer_vars);
++    add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_used, 0, 1, 0, use_integer_vars_op);
++    if (obs_info)
++        add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_used2, 0, 1, 0, use_integer_vars_op);
 +
 +    // fact_reached
 +    lp_var_id_fact_reached.resize(num_vars);
 +    for (VariableProxy var : vars) {
-+        add_lp_variables(var.get_domain_size(), variables,
++        add_lp_variables(var.get_domain_size(), obs_used, variables,
 +                         lp_var_id_fact_reached[var.get_id()],
-+                         0, 1, 0, use_integer_vars);
++                         0, 1, 0, use_integer_vars_facts == 1);
 +    }
 +
 +    // first_achiever
 +    lp_var_id_first_achiever.resize(num_ops);
 +    for (OperatorProxy op : ops) {
++        bool is_integer = use_integer_vars_achiever == 1 || use_integer_vars_achiever == 2 && obs_used[op.get_id()];
 +        lp_var_id_first_achiever[op.get_id()].resize(num_vars);
 +        for (VariableProxy var : vars) {
-+            add_lp_variables(var.get_domain_size(), variables,
++            add_lp_variables(var.get_domain_size(), obs_used, variables,
 +                             lp_var_id_first_achiever[op.get_id()][var.get_id()],
-+                             0, 1, 0, use_integer_vars);
++                             0, 1, 0, is_integer);
 +        }
 +    }
 +
 +    if (use_time_vars) {
 +        // op_time
-+        add_lp_variables(num_ops, variables, lp_var_id_op_time, 0, num_ops, 0, use_integer_vars);
++        add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_time, 0, num_ops, 0, use_integer_vars_time);
 +
 +        // fact_time
 +        lp_var_id_fact_time.resize(num_vars);
 +        for (VariableProxy var : vars) {
-+            add_lp_variables(var.get_domain_size(), variables,
++            add_lp_variables(var.get_domain_size(), obs_used, variables,
 +                             lp_var_id_fact_time[var.get_id()],
-+                             0, num_ops, 0, use_integer_vars);
++                             0, num_ops, 0, use_integer_vars_time == 1);
 +        }
 +    }
 +}
@@ -653,6 +671,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // R_f = 1 for all goal facts f.
 +    for (FactProxy goal : task_proxy.get_goals()) {
 +        variables[get_var_fact_reached(goal)].lower_bound = 1;
++        //cout << "Goal fact reached: " << goal.get_name() << endl;
 +    }
 +
 +    // A fact is reached if it has a first achiever or is true in the current state.
@@ -676,8 +695,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            FactProxy f = eff.get_fact();
 +            lp::LPConstraint &constraint = constraints[get_constraint_id(f)];
 +            constraint.insert(get_var_first_achiever(op, f), 1);
++            //cout << "Fact achievers: " << f.get_name() << " " << op.get_name() << endl;
 +        }
 +    }
++
 +
 +    // If an operator is a first achiever, it must be used.
 +    // U_o >= F_{o,f} for each operator o and each of its effects f.
@@ -688,6 +709,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            constraint.insert(get_var_op_used(op), 1);
 +            constraint.insert(get_var_first_achiever(op, f), -1);
 +            constraints.push_back(constraint);
++            //cout << "First achieved used: " << f.get_name() << " " << op.get_name() << endl;
 +        }
 +    }
 +
@@ -699,7 +721,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            constraint.insert(get_var_fact_reached(f), 1);
 +            constraint.insert(get_var_op_used(op), -1);
 +            constraints.push_back(constraint);
++            //cout << "Precondition: " << op.get_name() << " " << f.get_name() << endl;
 +        }
++    }
++
++    // Observed operators
++    for (int obs : observations) {
++        int var = get_var_op_used(ops[obs]);
++        variables[var].lower_bound = 1;
 +    }
 +
 +    if (use_time_vars) {
@@ -714,18 +743,21 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            }
 +        }
 +
-+        // New (add observations):
-+        vector<int> var_op_times;
-+        for (int obs : observations) {
-+            int var = get_var_op_time(task_proxy.get_operators()[obs]);
-+            if (find(var_op_times.begin(), var_op_times.end(), var) == var_op_times.end())
-+                var_op_times.push_back(var);
-+        }
-+        for (uint i = 1; i < var_op_times.size(); i++) {
-+            lp::LPConstraint constraint(1, infinity);
-+            constraint.insert(var_op_times[i], 1);
-+            constraint.insert(var_op_times[i-1], -1);
-+            constraints.push_back(constraint);
++        if (obs_info) {
++            int N = ops.size();
++            vector<int> first_obs;
++            for (int obs : observations)
++                if (find(first_obs.begin(), first_obs.end(), obs) == first_obs.end())
++                    first_obs.push_back(obs);
++            for (uint i = 1; i < first_obs.size(); i++) {
++                OperatorProxy op1 = ops[first_obs[i-1]];
++                OperatorProxy op2 = ops[first_obs[i]];
++                lp::LPConstraint constraint(1, infinity);
++                constraint.insert(get_var_op_time(op2), 1);
++                constraint.insert(get_var_op_time(op1), -1);
++                constraint.insert(get_var_op_used2(op2), N);
++                constraints.push_back(constraint);
++            }
 +        }
 +
 +        // If an operator is a first achiever, its effects are reached in the time step following its use.
@@ -750,7 +782,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        lp::LPConstraint constraint(0, infinity);
 +        constraint.insert(op.get_id(), 1);
 +        constraint.insert(get_var_op_used(op), -1);
++        if (obs_info)
++            constraint.insert(get_var_op_used2(op), -1);
 +        constraints.push_back(constraint);
++
++        //lp::LPConstraint constraint_inv(0, infinity);
++        //constraint.insert(op.get_id(), -1);
++        //constraint.insert(get_var_op_used(op), 10000000);
++        //constraints.push_back(constraint);
 +    }
 +}
 +
@@ -785,11 +824,25 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        "use variables for time steps (setting this to false is the time relaxation by Imai and Fukunaga)",
 +        "true"
 +    );
-+
-+    parser.add_option<bool>(
-+        "use_integer_vars",
++    parser.add_option<int>(
++        "use_integer_vars_op",
 +        "auxilliary variables will be restricted to integer values",
-+        "true"
++        "1"
++    );
++    parser.add_option<int>(
++        "use_integer_vars_facts",
++        "auxilliary variables will be restricted to integer values",
++        "1"
++    );
++    parser.add_option<int>(
++        "use_integer_vars_achiever",
++        "auxilliary variables will be restricted to integer values",
++        "1"
++    );
++    parser.add_option<int>(
++        "use_integer_vars_time",
++        "auxilliary variables will be restricted to integer values",
++        "1"
 +    );
 +    Options opts = parser.parse();
 +
@@ -802,8 +855,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h fast-downward/src/search/operator_counting/delete_relaxation_constraints.h
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2020-10-26 20:16:59.954734800 -0300
-@@ -0,0 +1,68 @@
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2020-12-13 01:01:30.626632600 -0200
+@@ -0,0 +1,72 @@
 +#ifndef OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
 +
@@ -820,10 +873,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +namespace operator_counting {
 +class DeleteRelaxationConstraints : public ConstraintGenerator {
 +    bool use_time_vars;
-+    bool use_integer_vars;
++    int use_integer_vars_op, use_integer_vars_facts, use_integer_vars_achiever, use_integer_vars_time;
 +
 +    // [U_o] Is op part of the relaxed plan? Binary, indexed with op.id.
 +    std::vector<int> lp_var_id_op_used;
++    std::vector<int> lp_var_id_op_used2;
 +
 +    // [R_f] Is fact <V,v> reached by the relaxed plan? Binary, indexed with var.id, value
 +    std::vector<std::vector<int>> lp_var_id_fact_reached;
@@ -833,6 +887,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +    // [T_o] At what time is o used first? {0, ..., |O|}, indexed with op.id
 +    std::vector<int> lp_var_id_op_time;
++    std::vector<int> lp_var_id_op_time2;
 +
 +    // [T_f] At what time is <V,v> first achieved? {0, ..., |O|}, indexed with var.id, value
 +    std::vector<std::vector<int>> lp_var_id_fact_time;
@@ -845,9 +900,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    std::vector<FactProxy> last_state;
 +
 +    int get_var_op_used(OperatorProxy op);
++    int get_var_op_used2(OperatorProxy op);
 +    int get_var_fact_reached(FactProxy f);
 +    int get_var_first_achiever(OperatorProxy op, FactProxy f);
 +    int get_var_op_time(OperatorProxy op);
++    int get_var_op_time2(OperatorProxy op);
 +    int get_var_fact_time(FactProxy f);
 +
 +    int get_constraint_id(FactProxy f);
@@ -1190,8 +1247,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.cc fast-downward/src/search/operator_counting/flow_constraints.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.cc	2020-10-29 15:39:00.762046000 -0300
-@@ -0,0 +1,331 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.cc	2020-12-12 20:12:13.739078500 -0200
+@@ -0,0 +1,452 @@
 +#include "flow_constraints.h"
 +
 +#include "../option_parser.h"
@@ -1215,7 +1272,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +      self_loop_optimization(opts.get<bool>("self_loop_optimization")),
 +      weak_linking_constraints(opts.get<bool>("weak_linking_constraints")),
 +      use_mutexes(opts.get<bool>("use_mutexes")),
-+      partial_merges(opts.get<bool>("partial_merges")),
++      partial_merges(opts.get<int>("partial_merges")),
 +      max_merge_feature_size(opts.get<int>("max_merge_feature_size")),
 +      partial_merge_time_limit(opts.get<double>("partial_merge_time_limit")),
 +      lp_solve_time_limit(opts.get<double>("merge_lp_solve_time_limit")){
@@ -1230,7 +1287,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    pdbs::PatternCollectionInformation pattern_collection_info =
 +        pattern_generator->generate(task);
 +    shared_ptr<pdbs::PatternCollection> patterns = pattern_collection_info.get_patterns();
-+    pattern_generator = nullptr;
++    //pattern_generator = nullptr;
 +
 +    int num_maximal_abstract_states = 0;
 +    int num_actual_abstract_states = 0;
@@ -1258,8 +1315,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        num_actual_abstract_states += sub_constraints.back().get_num_abstract_states();
 +    }
 +
-+    if (partial_merges) {
++    if (partial_merges == 1) {
 +        add_partial_merge_features(*task, variables, constraints, infinity);
++    } else if (partial_merges == 2) {
++        add_full_merge_features(*task, variables, constraints, infinity);
++    } else {
++        add_obs_merge_features(*task, variables, constraints, infinity);
 +    }
 +
 +    cout << "Flow constraints abstract states for original patterns: " << num_maximal_abstract_states << endl;
@@ -1293,10 +1354,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#else
 +    lp::LPSolver lp_solver(lp::LPSolverType::SOPLEX);
 +#endif
++    vector<double> solution;
 +    lp_solver.load_problem(lp::LPObjectiveSense::MINIMIZE, variables, constraints);
 +    utils::Timer lp_solve_timer;
 +    lp_solver.solve();
-+    vector<double> solution = lp_solver.extract_solution();
++    solution = lp_solver.extract_solution();
 +    if (lp_solve_timer() > lp_solve_time_limit) {
 +        cout << "Solving the LP took " << lp_solve_timer << " which exceeds the time limit of "
 +             << lp_solve_time_limit << "s. Stopping feature detection."<< endl;
@@ -1368,7 +1430,6 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    return added_feature;
 +}
 +
-+
 +void FlowConstraints::add_partial_merge_features(
 +    const AbstractTask &task,
 +    vector<lp::LPVariable> &variables,
@@ -1395,11 +1456,18 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        vector<bool> operator_handled(task_proxy.get_operators().size(), false);
 +
 +        bool found_operator_above_feature_size = false;
-+        while (detect_unrepresented_features(variables, constraints, task_proxy, lp_solve_time_limit,
++        do {
++            // Search for new features
++            bool added_feature = detect_unrepresented_features(variables, constraints, task_proxy, lp_solve_time_limit,
 +                                             partial_merge_remaining_time,
 +                                             operator_handled, feature_size, required_features,
-+                                             found_operator_above_feature_size)) {
++                                             found_operator_above_feature_size);
++            if (!added_feature || partial_merge_remaining_time.is_expired())
++                break;
++
 +            ++num_iterations;
++
++            // Remove duplicates
 +            for (const vector<FactPair> &feature : required_features) {
 +                pdbs::Pattern pattern;
 +                vector<int> state;
@@ -1415,10 +1483,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            }
 +            required_features.clear();
 +
++            // Erase old constraints 
 +            variables.erase(variables.begin() + num_base_variables, variables.end());
 +            constraints.erase(constraints.begin() + num_base_constraints, constraints.end());
 +            sub_constraints.erase(sub_constraints.begin() + num_base_sub_constraints, sub_constraints.end());
 +
++            // Add constraints to represented features
 +            for (const auto &entry : represented_features) {
 +                if (partial_merge_remaining_time.is_expired()) {
 +                    break;
@@ -1433,12 +1503,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                settings.weak_linking_constraints = weak_linking_constraints;
 +                settings.use_mutexes = use_mutexes;
 +                settings.partial_merge_states = states;
++                // Magic done here
 +                sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
 +            }
-+        }
-+        if (!found_operator_above_feature_size || partial_merge_remaining_time.is_expired()) {
-+            break;
-+        }
++        } while (found_operator_above_feature_size);
 +        ++feature_size;
 +    }
 +
@@ -1446,6 +1514,116 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << "Flow constraints partial merge added features: " << num_added_features << endl;
 +    cout << "Flow constraints partial merge time: " << partial_merge_timer << endl;
 +}
++
++void FlowConstraints::add_full_merge_features(
++        const AbstractTask &task,
++        vector<lp::LPVariable> &variables,
++        vector<lp::LPConstraint> &constraints,
++        double infinity) {
++    TaskProxy task_proxy(task);
++    FlowConstraintSettings settings;
++    settings.remove_dead_states = remove_dead_states;
++    settings.single_transition_optimization = single_transition_optimization;
++    settings.self_loop_optimization = self_loop_optimization;
++    settings.weak_linking_constraints = weak_linking_constraints;
++    settings.use_mutexes = use_mutexes;
++    unordered_map<pdbs::Pattern, vector<vector<int>>, HashPattern> represented_features;
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        // Get precondition variables
++        vector<FactPair> all_preconditions;
++        for (FactProxy pre : op.get_preconditions()) {
++            all_preconditions.push_back(pre.get_pair());
++        }
++        if (all_preconditions.size() > 0) {
++            // Create patterns
++            Combinations<FactPair> combos;
++            int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
++            for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++                pdbs::Pattern pattern;
++                vector<int> state;
++                for (FactPair fact : feature) {
++                    pattern.push_back(fact.var);
++                    state.push_back(fact.value);
++                }
++                vector<vector<int>> &represented_pattern_features = represented_features[pattern];
++                if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
++                    represented_pattern_features.push_back(state);
++                }
++            }
++        }
++        // Add constraints to represented features
++        for (const auto &entry : represented_features) {
++            const pdbs::Pattern &pattern = entry.first;
++            const vector<vector<int>> &states = entry.second;
++            FlowConstraintSettings settings;
++            settings.pattern = pattern;
++            settings.remove_dead_states = remove_dead_states;
++            settings.single_transition_optimization = single_transition_optimization;
++            settings.self_loop_optimization = self_loop_optimization;
++            settings.weak_linking_constraints = weak_linking_constraints;
++            settings.use_mutexes = use_mutexes;
++            //settings.partial_merge_states = states;
++            // Magic done here
++            sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
++        }
++    }
++}
++
++void FlowConstraints::add_obs_merge_features(
++        const AbstractTask &task,
++        vector<lp::LPVariable> &variables,
++        vector<lp::LPConstraint> &constraints,
++        double infinity) {
++    TaskProxy task_proxy(task);
++    OperatorsProxy ops = task_proxy.get_operators();
++    FlowConstraintSettings settings;
++    settings.remove_dead_states = remove_dead_states;
++    settings.single_transition_optimization = single_transition_optimization;
++    settings.self_loop_optimization = self_loop_optimization;
++    settings.weak_linking_constraints = weak_linking_constraints;
++    settings.use_mutexes = use_mutexes;
++    unordered_map<pdbs::Pattern, vector<vector<int>>, HashPattern> represented_features;
++    for (int id : observations) {
++        // Get precondition variables
++        vector<FactPair> all_preconditions;
++        for (FactProxy pre : ops[id].get_preconditions()) {
++            all_preconditions.push_back(pre.get_pair());
++        }
++        if (all_preconditions.size() > 0) {
++            // Create patterns
++            Combinations<FactPair> combos;
++            int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
++            for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++                pdbs::Pattern pattern;
++                vector<int> state;
++                for (FactPair fact : feature) {
++                    pattern.push_back(fact.var);
++                    state.push_back(fact.value);
++                }
++                vector<vector<int>> &represented_pattern_features = represented_features[pattern];
++                if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
++                    represented_pattern_features.push_back(state);
++                }
++            }
++        }
++        // Add constraints to represented features
++        for (const auto &entry : represented_features) {
++            const pdbs::Pattern &pattern = entry.first;
++            const vector<vector<int>> &states = entry.second;
++            FlowConstraintSettings settings;
++            settings.pattern = pattern;
++            settings.remove_dead_states = remove_dead_states;
++            settings.single_transition_optimization = single_transition_optimization;
++            settings.self_loop_optimization = self_loop_optimization;
++            settings.weak_linking_constraints = weak_linking_constraints;
++            settings.use_mutexes = use_mutexes;
++            settings.partial_merge_states = states;
++            // Magic done here
++            sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
++        }
++    }
++}
++
 +
 +bool FlowConstraints::update_constraints(
 +    const State &state, lp::LPSolver &lp_solver) {
@@ -1492,10 +1670,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        "remove states from abstract transition systems that violate mutex information",
 +        "true");
 +
-+    parser.add_option<bool>(
++    parser.add_option<int>(
 +        "partial_merges",
 +        "incremental detection of partial merges",
-+        "true");
++        "1");
 +
 +    parser.add_option<int>(
 +        "max_merge_feature_size",
@@ -1525,8 +1703,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.h fast-downward/src/search/operator_counting/flow_constraints.h
 --- fast-downward-original/src/search/operator_counting/flow_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.h	2020-10-26 21:12:44.715346800 -0300
-@@ -0,0 +1,47 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.h	2020-12-11 15:36:51.289644100 -0200
+@@ -0,0 +1,57 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +
@@ -1549,13 +1727,23 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    bool self_loop_optimization;
 +    bool weak_linking_constraints;
 +    bool use_mutexes;
-+    bool partial_merges;
++    int partial_merges;
 +    int max_merge_feature_size;
 +    double partial_merge_time_limit;
 +    double lp_solve_time_limit;
 +
 +    std::vector<FlowConstraintInternals> sub_constraints;
 +    void add_partial_merge_features(
++        const AbstractTask &task,
++        std::vector<lp::LPVariable> &variables,
++        std::vector<lp::LPConstraint> &constraints,
++        double infinity);
++    void add_full_merge_features(
++        const AbstractTask &task,
++        std::vector<lp::LPVariable> &variables,
++        std::vector<lp::LPConstraint> &constraints,
++        double infinity);
++    void add_obs_merge_features(
 +        const AbstractTask &task,
 +        std::vector<lp::LPVariable> &variables,
 +        std::vector<lp::LPConstraint> &constraints,
@@ -1657,8 +1845,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      virtual bool update_constraints(const State &state,
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-11-04 02:17:20.263449000 -0200
-@@ -0,0 +1,485 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-12-14 08:18:53.934406100 -0200
+@@ -0,0 +1,494 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -1713,7 +1901,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +      calculate_h_c(opts.get<bool>("calculate_h_c")),
 +      calculate_h_s(opts.get<bool>("calculate_h_s")),
 +      filter(opts.get<int>("filter")),
-+      h_obs(opts.get<bool>("h_obs")),
++      h_obs(opts.get<int>("h_obs")),
 +      mip(opts.get<bool>("mip")),
 +      soft_weight(opts.get<int>("weights")) {
 +    // Initialize map to convert operator name to operator ID
@@ -1966,7 +2154,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        constraints.clear();
 +        constraints.push_back(dummy_constraint);
 +        for (const auto &generator : constraint_generators) {
-+            generator->set_observations(observation_ids);
++            generator->set_observations(observation_ids, h_obs);
 +            generator->initialize_constraints(task, variables, constraints, infinity);
 +        }
 +    }
@@ -2033,12 +2221,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << "Writing solutions..." << endl;
 +    cout << endl << string(80, '*') << endl;
 +    vector<double> solution;
-+    if (calculate_h_s)
++    int num_vars, num_const;
++    if (calculate_h_s) {
 +        solution = lp_h_s.extract_solution();
-+    else if (calculate_h_c)
++        num_vars = lp_h_s.get_num_variables();
++        num_const = lp_h_s.get_num_constraints();
++    } else if (calculate_h_c) {
 +        solution = lp_h_c.extract_solution();
-+    else
++        num_vars = lp_h_c.get_num_variables();
++        num_const = lp_h_c.get_num_constraints();
++    } else {
 +        solution = lp_h.extract_solution();
++        num_vars = lp_h.get_num_variables();
++        num_const = lp_h.get_num_constraints();
++    }
 +    for (int i = 0; i < (int) solution.size(); ++i) {
 +        cout << "X[" << i << "] = " << solution[i] << endl;
 +    }
@@ -2066,6 +2262,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    results << "obs-report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
 +    results << "time-report: " << lp_timer << endl;
 +    results << "h-values: " << result << " " << result_c << " " << result_s << endl;
++    results << "lp-size: " <<  num_vars << " " << num_const << endl;
 +    // Write counts
 +    int var_i = 0;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
@@ -2123,12 +2320,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    parser.add_list_option<shared_ptr<ConstraintGenerator>>(
 +        "constraint_generators",
 +        "methods that generate constraints over operator counting variables");
-+    parser.add_option<bool>("calculate_h", "calculate h-value", "true");
++    parser.add_option<bool>("calculate_h", "calculate h-value", "false");
 +    parser.add_option<bool>("calculate_h_c", "calculate h-value with hard observation constraints", "true");
-+    parser.add_option<bool>("calculate_h_s", "calculate h-value with soft observation constraints", "true");
++    parser.add_option<bool>("calculate_h_s", "calculate h-value with soft observation constraints", "false");
 +    parser.add_option<int>("weights", "weight type for soft constraints", "1");
 +    parser.add_option<int>("filter", "observation filter", "0");
-+    parser.add_option<bool>("h_obs", "enable observations inside heuristic constraints", "false");
++    parser.add_option<int>("h_obs", "enable observations inside heuristic constraints", "0");
 +    parser.add_option<bool>("mip", "use MIP solver", "false");
 +    lp::add_lp_solver_option_to_parser(parser);
 +    Heuristic::add_options_to_parser(parser);
@@ -2146,7 +2343,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-11-03 19:27:24.744586100 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-12-02 00:46:02.994255800 -0200
 @@ -0,0 +1,59 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
@@ -2174,7 +2371,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    lp::LPSolver lp_h_s;
 +    bool calculate_h, calculate_h_c, calculate_h_s;
 +    int filter;
-+    bool h_obs;
++    int h_obs;
 +    bool mip;
 +
 +    std::unordered_map<std::string,int> op_indexes;

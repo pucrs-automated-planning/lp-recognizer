@@ -21,7 +21,6 @@ CONSTRAINT_PAIRS="delta-cps delta-cls delta-clp deltau-cps deltau-cls deltau-clp
 CONSTRAINT_SINGLE="delta-cl delta-cp delta-cs deltau-cl deltau-cp deltau-cs"
 CONSTRAINT_NEW="delta-cd delta-o-cd delta-o-cl delta-cf1 delta-cf2"
 FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
-WEIGHTED="deltaw deltawu"
 
 if [[ ! -d ../$DATASETS ]]; then
 	echo "Datasets not found at ../$DATASETS"
