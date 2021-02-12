@@ -52,9 +52,9 @@ This recognizer is compatible with all the domains in this publicly available da
 
 It is also possible to add parameters in the heuristic name:
 
-1.  Using noisy filters by adding ```-f``` followed by 1 (filter 10%) or 2 (filter 20%). Example: ```delta-f2```
-2.  Change the constraint sets by adding ```-c``` followed by ```l``` (landmarks), ```s``` (state equation), ```p``` (post-hoc), or combations. Example: ```delta-clp```
-3.  Use IP instead of LP by adding ```-i```. Example: ```delta-i-cs```
+1.  Using noisy filters by adding ```-f``` followed by a number x that means 0.x of noise. Example: ```delta-f2``` for 20% of noise
+2.  Change the constraint sets by adding ```-c``` followed by ```l``` (landmarks), ```s``` (state equation), ```p``` (post-hoc), or combations. Example: ```delta-clp``` for landmarks with post-hoc constraints
+3.  Use IP instead of LP by adding ```-i```. Example: ```delta-i-cs``` for IP using only state equation constraints
 
 To run any experiment, just run:
 ```bash

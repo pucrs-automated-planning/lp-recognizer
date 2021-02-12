@@ -1247,8 +1247,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.cc fast-downward/src/search/operator_counting/flow_constraints.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.cc	2020-12-12 20:12:13.739078500 -0200
-@@ -0,0 +1,452 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.cc	2021-02-09 19:39:55.048460600 -0200
+@@ -0,0 +1,513 @@
 +#include "flow_constraints.h"
 +
 +#include "../option_parser.h"
@@ -1275,7 +1275,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +      partial_merges(opts.get<int>("partial_merges")),
 +      max_merge_feature_size(opts.get<int>("max_merge_feature_size")),
 +      partial_merge_time_limit(opts.get<double>("partial_merge_time_limit")),
-+      lp_solve_time_limit(opts.get<double>("merge_lp_solve_time_limit")){
++      lp_solve_time_limit(opts.get<double>("merge_lp_solve_time_limit")),
++      merge_goal_only(opts.get<bool>("merge_goal_only")),
++      merge_preconditions(opts.get<int>("merge_preconditions")),
++      merge_effects(opts.get<int>("merge_effects")){
 +}
 +
 +void FlowConstraints::initialize_constraints(
@@ -1318,9 +1321,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    if (partial_merges == 1) {
 +        add_partial_merge_features(*task, variables, constraints, infinity);
 +    } else if (partial_merges == 2) {
-+        add_full_merge_features(*task, variables, constraints, infinity);
++        vector<int> all_operators (task->get_num_operators());
++        for (int i = 0; i < task->get_num_operators(); i++)
++            all_operators[i] = i;
++        add_op_merge_features(*task, variables, constraints, all_operators, infinity);
 +    } else {
-+        add_obs_merge_features(*task, variables, constraints, infinity);
++        add_op_merge_features(*task, variables, constraints, observations, infinity);
 +    }
 +
 +    cout << "Flow constraints abstract states for original patterns: " << num_maximal_abstract_states << endl;
@@ -1515,64 +1521,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << "Flow constraints partial merge time: " << partial_merge_timer << endl;
 +}
 +
-+void FlowConstraints::add_full_merge_features(
-+        const AbstractTask &task,
-+        vector<lp::LPVariable> &variables,
-+        vector<lp::LPConstraint> &constraints,
-+        double infinity) {
-+    TaskProxy task_proxy(task);
-+    FlowConstraintSettings settings;
-+    settings.remove_dead_states = remove_dead_states;
-+    settings.single_transition_optimization = single_transition_optimization;
-+    settings.self_loop_optimization = self_loop_optimization;
-+    settings.weak_linking_constraints = weak_linking_constraints;
-+    settings.use_mutexes = use_mutexes;
-+    unordered_map<pdbs::Pattern, vector<vector<int>>, HashPattern> represented_features;
-+    for (OperatorProxy op : task_proxy.get_operators()) {
-+        // Get precondition variables
-+        vector<FactPair> all_preconditions;
-+        for (FactProxy pre : op.get_preconditions()) {
-+            all_preconditions.push_back(pre.get_pair());
-+        }
-+        if (all_preconditions.size() > 0) {
-+            // Create patterns
-+            Combinations<FactPair> combos;
-+            int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
-+            for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
-+                pdbs::Pattern pattern;
-+                vector<int> state;
-+                for (FactPair fact : feature) {
-+                    pattern.push_back(fact.var);
-+                    state.push_back(fact.value);
-+                }
-+                vector<vector<int>> &represented_pattern_features = represented_features[pattern];
-+                if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
-+                    represented_pattern_features.push_back(state);
-+                }
-+            }
-+        }
-+        // Add constraints to represented features
-+        for (const auto &entry : represented_features) {
-+            const pdbs::Pattern &pattern = entry.first;
-+            const vector<vector<int>> &states = entry.second;
-+            FlowConstraintSettings settings;
-+            settings.pattern = pattern;
-+            settings.remove_dead_states = remove_dead_states;
-+            settings.single_transition_optimization = single_transition_optimization;
-+            settings.self_loop_optimization = self_loop_optimization;
-+            settings.weak_linking_constraints = weak_linking_constraints;
-+            settings.use_mutexes = use_mutexes;
-+            //settings.partial_merge_states = states;
-+            // Magic done here
-+            sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
-+        }
-+    }
-+}
 +
-+void FlowConstraints::add_obs_merge_features(
++void FlowConstraints::add_op_merge_features(
 +        const AbstractTask &task,
 +        vector<lp::LPVariable> &variables,
 +        vector<lp::LPConstraint> &constraints,
++        const vector<int> &operator_ids,
 +        double infinity) {
 +    TaskProxy task_proxy(task);
 +    OperatorsProxy ops = task_proxy.get_operators();
@@ -1583,11 +1537,48 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    settings.weak_linking_constraints = weak_linking_constraints;
 +    settings.use_mutexes = use_mutexes;
 +    unordered_map<pdbs::Pattern, vector<vector<int>>, HashPattern> represented_features;
-+    for (int id : observations) {
-+        // Get precondition variables
++
++    vector<bool> goal_vars(task_proxy.get_variables().size(), false);
++    if (merge_goal_only) {
++        for (FactProxy goal : task_proxy.get_goals()) {
++            goal_vars[goal.get_variable().get_id()] = true;
++        }
++    }
++
++    if (merge_preconditions == 1) {
++        // Intra-operator
++        for (int id : operator_ids) {
++            vector<FactPair> all_preconditions;
++            for (FactProxy pre : ops[id].get_preconditions()) {
++                if (!merge_goal_only || goal_vars[pre.get_variable().get_id()])
++                    all_preconditions.push_back(pre.get_pair());
++            }
++            if (all_preconditions.size() > 0) {
++                // Create patterns
++                Combinations<FactPair> combos;
++                int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
++                for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++                    pdbs::Pattern pattern;
++                    vector<int> state;
++                    for (FactPair fact : feature) {
++                        pattern.push_back(fact.var);
++                        state.push_back(fact.value);
++                    }
++                    vector<vector<int>> &represented_pattern_features = represented_features[pattern];
++                    if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
++                        represented_pattern_features.push_back(state);
++                    }
++                }
++            }
++        }
++    } else if (merge_preconditions == 2) {
++        // Inter-operator
 +        vector<FactPair> all_preconditions;
-+        for (FactProxy pre : ops[id].get_preconditions()) {
-+            all_preconditions.push_back(pre.get_pair());
++        for (int id : operator_ids) {
++            for (FactProxy pre : ops[id].get_preconditions()) {
++                if (!merge_goal_only || goal_vars[pre.get_variable().get_id()])
++                    all_preconditions.push_back(pre.get_pair());
++            }
 +        }
 +        if (all_preconditions.size() > 0) {
 +            // Create patterns
@@ -1606,21 +1597,74 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                }
 +            }
 +        }
-+        // Add constraints to represented features
-+        for (const auto &entry : represented_features) {
-+            const pdbs::Pattern &pattern = entry.first;
-+            const vector<vector<int>> &states = entry.second;
-+            FlowConstraintSettings settings;
-+            settings.pattern = pattern;
-+            settings.remove_dead_states = remove_dead_states;
-+            settings.single_transition_optimization = single_transition_optimization;
-+            settings.self_loop_optimization = self_loop_optimization;
-+            settings.weak_linking_constraints = weak_linking_constraints;
-+            settings.use_mutexes = use_mutexes;
-+            settings.partial_merge_states = states;
-+            // Magic done here
-+            sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
++    }
++
++    if (merge_effects == 1) {
++        for (int id : operator_ids) {
++            vector<FactPair> all_effects;
++            for (EffectProxy eff : ops[id].get_effects()) {
++                if (!merge_goal_only || goal_vars[eff.get_fact().get_variable().get_id()])
++                    all_effects.push_back(eff.get_fact().get_pair());
++            }
++            if (all_effects.size() > 0) {
++                // Create patterns
++                Combinations<FactPair> combos;
++                int num_extra_features = min(max_merge_feature_size, (int) all_effects.size());
++                for (vector<FactPair> feature : combos.get_combinations(all_effects, num_extra_features)) {
++                    pdbs::Pattern pattern;
++                    vector<int> state;
++                    for (FactPair fact : feature) {
++                        pattern.push_back(fact.var);
++                        state.push_back(fact.value);
++                    }
++                    vector<vector<int>> &represented_pattern_features = represented_features[pattern];
++                    if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
++                        represented_pattern_features.push_back(state);
++                    }
++                }
++            }
 +        }
++    } else if (merge_effects == 2) {
++        vector<FactPair> all_effects;
++        for (int id : operator_ids) {
++            for (EffectProxy eff : ops[id].get_effects()) {
++                if (!merge_goal_only || goal_vars[eff.get_fact().get_variable().get_id()])
++                    all_effects.push_back(eff.get_fact().get_pair());
++            }
++        }
++        if (all_effects.size() > 0) {
++            // Create patterns
++            Combinations<FactPair> combos;
++            int num_extra_features = min(max_merge_feature_size, (int) all_effects.size());
++            for (vector<FactPair> feature : combos.get_combinations(all_effects, num_extra_features)) {
++                pdbs::Pattern pattern;
++                vector<int> state;
++                for (FactPair fact : feature) {
++                    pattern.push_back(fact.var);
++                    state.push_back(fact.value);
++                }
++                vector<vector<int>> &represented_pattern_features = represented_features[pattern];
++                if (find(represented_pattern_features.begin(), represented_pattern_features.end(), state) == represented_pattern_features.end()) {
++                    represented_pattern_features.push_back(state);
++                }
++            }
++        }
++    }
++
++    // Add constraints to represented features
++    for (const auto &entry : represented_features) {
++        const pdbs::Pattern &pattern = entry.first;
++        const vector<vector<int>> &states = entry.second;
++        FlowConstraintSettings settings;
++        settings.pattern = pattern;
++        settings.remove_dead_states = remove_dead_states;
++        settings.single_transition_optimization = single_transition_optimization;
++        settings.self_loop_optimization = self_loop_optimization;
++        settings.weak_linking_constraints = weak_linking_constraints;
++        settings.use_mutexes = use_mutexes;
++        settings.partial_merge_states = states;
++        // Creates projection
++        sub_constraints.emplace_back(task, variables, constraints, infinity, settings);
 +    }
 +}
 +
@@ -1693,6 +1737,23 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        "infinity",
 +        Bounds("0.0", "infinity"));
 +
++    parser.add_option<bool>(
++        "merge_goal_only",
++        "Include only variables that are mentioned in the goal",
++        "false");
++
++    parser.add_option<int>(
++        "merge_preconditions",
++        "Include features mentioned in preconditions",
++        "0",
++        Bounds("0", "2"));
++
++    parser.add_option<int>(
++        "merge_effects",
++        "Include features mentioned in effects",
++        "0",
++        Bounds("0", "2"));
++
 +    Options opts = parser.parse();
 +    if (parser.dry_run())
 +        return nullptr;
@@ -1703,8 +1764,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.h fast-downward/src/search/operator_counting/flow_constraints.h
 --- fast-downward-original/src/search/operator_counting/flow_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.h	2020-12-11 15:36:51.289644100 -0200
-@@ -0,0 +1,57 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.h	2021-02-09 19:35:10.185557000 -0200
+@@ -0,0 +1,58 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +
@@ -1727,10 +1788,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    bool self_loop_optimization;
 +    bool weak_linking_constraints;
 +    bool use_mutexes;
++
 +    int partial_merges;
 +    int max_merge_feature_size;
 +    double partial_merge_time_limit;
 +    double lp_solve_time_limit;
++
++    bool merge_goal_only;
++    int merge_preconditions;
++    int merge_effects;
 +
 +    std::vector<FlowConstraintInternals> sub_constraints;
 +    void add_partial_merge_features(
@@ -1738,15 +1804,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        std::vector<lp::LPVariable> &variables,
 +        std::vector<lp::LPConstraint> &constraints,
 +        double infinity);
-+    void add_full_merge_features(
++    void add_op_merge_features(
 +        const AbstractTask &task,
 +        std::vector<lp::LPVariable> &variables,
 +        std::vector<lp::LPConstraint> &constraints,
-+        double infinity);
-+    void add_obs_merge_features(
-+        const AbstractTask &task,
-+        std::vector<lp::LPVariable> &variables,
-+        std::vector<lp::LPConstraint> &constraints,
++        const std::vector<int> &operator_ids,
 +        double infinity);
 +public:
 +    explicit FlowConstraints(const options::Options &opts);
