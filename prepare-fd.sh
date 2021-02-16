@@ -4,11 +4,11 @@ if [[ $DIR == "." ]]; then
 	DIR=`pwd`
 fi
 
-if [[ -z "data-charts" ]]; then
+if [[ ! -d "data-charts" ]]; then
 	mkdir data-charts
 fi
 
-if [[ -z "data-latex" ]]; then
+if [[ ! -d "data-latex" ]]; then
 	mkdir data-latex
 fi
 
