@@ -41,8 +41,12 @@ class PlanRecognizer:
         # Read all hyps
         hyps = []
         instream = open('hyps.dat')
+        hyp_check = set()
         for line in instream:
             atoms = frozenset([tok.strip().lower() for tok in line.split(',')])
+            if atoms in hyp_check:
+                continue
+            hyp_check.add(atoms)
             h = Hypothesis(opts, atoms)
             h.is_true = atoms == real_hyp
             h.is_solution = atoms in solution

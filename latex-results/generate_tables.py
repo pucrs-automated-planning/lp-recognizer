@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import sys, os, math
 
+TIME_TABLE = False
+
 class DomainData:
 
 	def __init__(self, observabilities):
@@ -14,7 +16,7 @@ class DomainData:
 
 	def read_approach_data(self, file, approach):
 		file.readline() # Header
-		sum_values = [0] * 12
+		sum_values = [0] * 18
 		for obs in self.observabilities:
 			line = file.readline().strip().split('\t')
 			self.total_problems += int(line[0])
@@ -51,7 +53,7 @@ class DomainData:
 		return sum_s / problems if problems > 0 else float("nan")
 
 def average_values(all_domain_data, approach):
-	sum_values = [0] * 12
+	sum_values = [0] * 18
 	for domain_data in all_domain_data.values():
 		if approach in domain_data.avg_data:
 			sum_values = [x + y for x, y in zip(sum_values, domain_data.avg_data[approach])]
@@ -99,21 +101,35 @@ def get_latex_content(file, domains, approaches, basepaths):
 
 		domain_data = all_domain_data[domain_name]
 		
-		content_table += '\n\\multirow{%s}{*}{\\rotatebox[origin=c]{90}{\\textsc{%s}} \\rotatebox[origin=c]{90}{(%s)}} & \\multirow{%s}{*}{%s} ' \
-			% (len(observabilities), domain_name_4table, domain_data.total_problems, len(observabilities), round(domain_data.get_avg_goals(), 1))
+		content_table += '\n\\multirow{%s}{*}{\\rotatebox[origin=c]{90}{\\textsc{%s}}} ' \
+			% (len(observabilities), domain_name_4table)
 
 		for obs in observabilities:
 			len_obs = str(round(domain_data.get_avg_obs(obs), 2))
 			len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
-			content_table += '\n\t' + ('\\\\ & & ' if (obs != '10') else ' & ') + obs + '\t & ' + len_obs + '\t & ' + len_solutions + '\n'
+			content_table += '\n\t' + ('\\\\ & ' if (obs != '10') else ' & ') + obs + '\n'
 			for basepath, approach in zip(basepaths, approaches):
 				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% '
 				print(domain_name, basepath, approach)
 				if (basepath + approach) not in domain_data.obs_data[obs]:
-					content_table += '\n\t\t& - & - & - & - & -\t \n'
+					if TIME_TABLE:
+						content_table += '\n\t\t& - & - & - & -\t \n'
+					else:
+						content_table += '\n\t\t& - & - & - & - & -\t \n'
 					continue
 				values = domain_data.obs_data[obs][basepath + approach]
-				time = round(values[11], 3)
+				if 'old' in basepath:
+					time = round(values[10], 3)
+					timelp = round(values[11], 3)
+					timefd = round(values[12], 3)
+					const = '-'
+					hc = '-'
+				else:
+					time = round(values[11], 3)
+					timelp = round(values[12], 3)
+					timefd = round(values[13], 3)
+					const = round(values[15], 1)
+					hc = round(values[17], 1)
 				accuracy = round(values[8] * 100, 1)
 				spread = round(values[9], 2)
 				per = int(values[10])
@@ -121,14 +137,28 @@ def get_latex_content(file, domains, approaches, basepaths):
 				ar = round(values[5], 2)
 				fpr = round(values[6], 2)
 				fnr = round(values[7], 2)
-				content_table += '\n\t\t& {0} & {1} & {2} & {3} & {4}'.format(time, ar, accuracy, spread, per)
+				if TIME_TABLE:
+					content_table += '\n\t\t& {0} & {1} & {2} & {3}'.format(time, timefd, timelp, timefd-timelp)
+				else:
+					content_table += '\n\t\t& {0} & {1} & {2} & {3} & {4}'.format(ar, accuracy, spread, const, hc)
 				content_table += ' \t \n'
 		content_table += ' \\\\ \hline'
 
 	content_avg = ''
 	for basepath, approach in zip(basepaths, approaches):
 		values = average_values(all_domain_data, basepath + approach)
-		time = round(values[11], 3)
+		if 'old' in basepath:
+			time = round(values[10], 3)
+			timelp = round(values[11], 3)
+			timefd = round(values[12], 3)
+			const = '-'
+			hc = '-'
+		else:
+			time = round(values[11], 3)
+			timelp = round(values[12], 3)
+			timefd = round(values[13], 3)
+			const = round(values[15], 1)
+			hc = round(values[17], 1)
 		accuracy = round(values[8] * 100, 2)
 		spread = round(values[9], 2)
 		per = round(values[10], 1)
@@ -136,15 +166,19 @@ def get_latex_content(file, domains, approaches, basepaths):
 		ar = round(values[5], 2)
 		fpr = round(values[6], 2)
 		fnr = round(values[7], 2)
-		content_avg += ' & {0} & {1} & {2} & {3} & {4}'.format(time, ar, accuracy, spread, per)
+		if TIME_TABLE:
+			content_avg += '& {0} & {1} & {2} & {3}'.format(time, timefd, timelp, timefd-timelp)
+		else:
+			content_avg += '& {0} & {1} & {2} & {3} & {4}'.format(ar, accuracy, spread, const, hc)
 
 	return content_table, content_avg
 
-def main(title, file, domains, approaches, basepaths, names=None, caption=''):
+
+def create_tex_files(title, file, domains, approaches, basepaths, names=None, caption=''):
 	# Get names
 	if names is None:
 		name = approaches
-	names = ["& \\multicolumn{5}{c|}{%s}" % name for name in names]
+	
 	# Get content
 	content_table, content_avg = get_latex_content(file, domains, approaches, basepaths)
 	domains = [name.replace("optimal", "suboptimal") for name in domains]
@@ -156,13 +190,19 @@ def main(title, file, domains, approaches, basepaths, names=None, caption=''):
 		latexContent = latex.read()
 	# Write header
 	latexContent = latexContent.replace("<TITLE>", title)
-	latexContent = latexContent.replace("<ALIGN>", "ccccc|" * len(approaches))
-	latexContent = latexContent.replace("<NAMES>", '\n'.join(names))
+	latexContent = latexContent.replace("<CAPTION>", caption)
 	if "noisy" in domains[0]:
 		latexContent = latexContent.replace("Optimal", "Optimal, Noisy")
 		latexContent = latexContent.replace("Basic", "Noisy")
-	latexContent = latexContent.replace("<METRICS>", '& \\textbf{Time} & \\textbf{Agr} & \\textbf{Acc} & \\textbf{Spr} & *\n' * len(approaches))
-	latexContent = latexContent.replace("<CAPTION>", caption)
+	if TIME_TABLE:
+		names = ["& \\multicolumn{4}{c|}{%s}" % name for name in names]
+		latexContent = latexContent.replace("<ALIGN>", "cccc|" * len(approaches))
+		latexContent = latexContent.replace("<METRICS>", '& \\textbf{Total} & \\textbf{FD} & \\textbf{LP} & \\textbf{Prep}\n' * len(approaches))
+	else:
+		names = ["& \\multicolumn{5}{c|}{%s}" % name for name in names]
+		latexContent = latexContent.replace("<ALIGN>", "ccccc|" * len(approaches))
+		latexContent = latexContent.replace("<METRICS>", '& \\textbf{Agr} & \\textbf{Acc} & \\textbf{Spr} & \\textbf{Rows} & \\textbf{HC}\n' * len(approaches))
+	latexContent = latexContent.replace("<NAMES>", '\n'.join(names))
 	# Write content
 	latexContent = latexContent.replace('<TABLE_LP_RESULTS>', content_table)
 	latexContent = latexContent.replace('<AVG_APPROACH>', content_avg)
@@ -174,7 +214,7 @@ def main(title, file, domains, approaches, basepaths, names=None, caption=''):
 
 
 if __name__ == '__main__' :
-	default_path = '../results'
+	default_path = '../results-old'
 	domains = [
 	'blocks-world-optimal',
 	'depots-optimal',
@@ -193,8 +233,8 @@ if __name__ == '__main__' :
 	file = 'variations.tex'
 	if len(sys.argv) > 1:
 		file = sys.argv[1] + ".tex"
-	if len(sys.argv) > 2 and sys.argv[2] == '-fast':
-		default_path = '../results-small'
+	if '-fast' in sys.argv:
+		default_path = '../data-latex'
 		domains = [
 		'blocks-world-optimal',
 		'depots-optimal',
@@ -203,6 +243,9 @@ if __name__ == '__main__' :
 		'rovers-optimal',
 		'sokoban-optimal'
 		]
+	if '-time' in sys.argv:
+		TIME_TABLE = True
+		file = file.replace(".tex", "-time.tex")
 
 	# Latex resulting files
 	if 'old-noisy' in file:
@@ -265,5 +308,59 @@ if __name__ == '__main__' :
 			'L, P', 'L, S', 'L, D'
 			'P, S', 'P, D', 'S, D'
 			]
-
-	main(title, file, domains, approaches, paths, names, caption)
+		elif 'mip' in file:
+			paths = [default_path] * 8
+			title = 'Constraints - MIP'
+			caption = 'L for landmarks, P for post-hoc, S for state equation. (i) marks when MIP was used.'
+			approaches = [
+			'delta-cl', 'delta-cp', 'delta-cs', 'delta-cd',
+			'delta-i-cl', 'delta-i-cp', 'delta-i-cs', 'delta-i-cd'
+			]
+			names = [
+			'L', 'P', 'S', 'D',
+			'L(i)', 'P(i)', 'S(i)', 'D(i)'
+			]
+		elif 'delo' in file:
+			paths = [default_path] * 7
+			title = 'Constraints - Delete Relaxation with Observations'
+			caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
+			approaches = [
+			'delta-o-csd', 'delta-o-cd', 'delta-i-o-cd', 'delta-i-o-cd1', 'delta-i-o-cd5', 'delta-i-o1-cd', 'delta-i-o1-cd1'
+			]
+			names = [
+			'D+, S', 'D+', 'D+(i)', 'D+(i ops)', 'D+(i obs)', 'D+ Order(i)', 'D+ Order(i ops)'
+			]
+		elif 'del' in file:
+			paths = [default_path] * 7
+			title = 'Constraints - Delete Relaxation'
+			caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
+			approaches = [
+			'delta-cd', 'delta-i-cd', 'delta-i-cd1', 'delta-i-cd2', 'delta-i-cd3', 'delta-i-cd4', 'delta-csd'
+			]
+			names = [
+			'D', 'D(i)', 'D(i ops)', 'D(i facts)', 'D(i achiever)', 'D (i time)', 'D, S'
+			]
+		elif 'flowo' in file:
+			paths = [default_path] * 10
+			title = 'Constraints - Flow with Observations'
+			caption = ''
+			approaches = [
+			'delta-cf1', 'delta-o-cf14', 'delta-o-cf15', 'delta-o-cf13'
+			]
+			names = [
+			'$F^1$', '$F^1O$ (pre)', '$F^1O$ (eff)', '$F^1O$ (pre+eff)'
+			]
+		elif 'flow' in file:
+			paths = [default_path] * 10
+			title = 'Constraints - Flow'
+			caption = ''
+			approaches = [
+			'delta-cf1', 'delta-cf1ab', 'delta-cf1bb', 'delta-cf1cb', 'delta-cf1db',\
+			'delta-o-cf14', 'delta-o-cf15', 'delta-o-cf13', 'delta-cf1f3', 'delta-cf2'
+			]
+			names = [
+			'$F^1$', '$F^1$ (size 2)', '$F^1$ (size 4)', '$F^1$ (size 8)', '$F^1$ (size 16)', \
+			'$F^1O$ (pre)', '$F^1O$ (eff)', '$F^1O$ (pre+eff)', '$F^1$ (pre)', '$F^2$'
+			]
+			
+	create_tex_files(title, file, domains, approaches, paths, names, caption)

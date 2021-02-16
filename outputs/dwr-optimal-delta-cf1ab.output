@@ -1,0 +1,230 @@
+dwr-optimal/10/dwr_p02_hyp-1_10_1.tar.bz2:2.09872698784:0.078125:1.8
+> (in cc q2),(in cb p2),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cc q2),(in cb q1),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc p2),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb p2),(in ca q1),(in cc q2):True:3.0,5.0:232.0,55.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q1),(in ca p2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q2),(in ca q1):True:3.0,5.0:232.0,55.0
+dwr-optimal/10/dwr_p02_hyp-2_10_1.tar.bz2:2.03647089005:0.046875:1.77
+> (in cc q2),(in cb p2),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cc q2),(in cb q1),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc p2),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb p2),(in ca q1),(in cc q2):True:3.0,5.0:232.0,55.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q1),(in ca p2):True:3.0,5.0:232.0,55.0
+> (in cb q2),(in cc q2),(in ca q1):True:3.0,5.0:232.0,55.0
+dwr-optimal/10/dwr_p04_hyp-1_10_1.tar.bz2:1.50111293793:0.046875:1.29
+> (in cb p2),(in ca q2):True:2.0,4.0:240.0,46.0
+> (in cb q2),(in cc q2):True:2.0,4.0:240.0,46.0
+> (in cc q2),(in ca q2):True:2.0,4.0:240.0,46.0
+> (in ca p2),(in cb p2):True:2.0,4.0:240.0,46.0
+> (in cc p2),(in cb p2):True:2.0,4.0:240.0,46.0
+> (in ca p2),(in cc q2):True:2.0,4.0:240.0,46.0
+dwr-optimal/10/dwr_p04_hyp-2_10_1.tar.bz2:1.45886182785:0.03125:1.29
+> (in cb p2),(in ca q2):True:2.0,4.0:240.0,46.0
+> (in cb q2),(in cc q2):True:2.0,4.0:240.0,46.0
+> (in cc q2),(in ca q2):True:2.0,4.0:240.0,46.0
+> (in ca p2),(in cb p2):True:2.0,4.0:240.0,46.0
+> (in cc p2),(in cb p2):True:2.0,4.0:240.0,46.0
+> (in ca p2),(in cc q2):True:2.0,4.0:240.0,46.0
+dwr-optimal/10/dwr_p05_hyp-1_10_1.tar.bz2:1.68154001236:0.046875:1.42
+> (in ce p3),(in ca p2),(in cc p3):False:3.0,8.0:425.0,73.0
+> (in cc p2),(in cb p2),(in cf p3):True:3.0,7.0:425.0,73.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,8.0:425.0,73.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,8.0:425.0,73.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,8.0:425.0,73.0
+> (in cc p2),(in ca p2),(in cf p3):True:3.0,7.0:425.0,73.0
+dwr-optimal/10/dwr_p05_hyp-2_10_1.tar.bz2:1.61627984047:0.078125:1.38
+> (in ce p3),(in ca p2),(in cc p3):False:3.0,8.0:425.0,73.0
+> (in cc p2),(in cb p2),(in cf p3):True:3.0,7.0:425.0,73.0
+> (in cc p2),(in cd p3),(in cb p2):True:3.0,7.0:425.0,73.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,8.0:425.0,73.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,8.0:425.0,73.0
+> (in cc p2),(in ca p2),(in cf p3):False:3.0,8.0:425.0,73.0
+dwr-optimal/30/dwr_p02_hyp-1_30_1.tar.bz2:1.96684789658:0.09375:1.74
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,7.0:234.0,57.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,7.0:234.0,57.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,6.0:234.0,57.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,7.0:234.0,57.0
+> (in cc p2),(in ca p2),(in cb q1):False:3.0,7.0:234.0,57.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,5.0:234.0,57.0
+> (in cb q2),(in cc q1),(in ca p2):True:3.0,5.0:234.0,57.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,6.0:234.0,57.0
+dwr-optimal/30/dwr_p02_hyp-2_30_1.tar.bz2:2.01173210144:0.09375:1.69
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,7.0:234.0,57.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,7.0:234.0,57.0
+> (in cb q2),(in cc p2),(in ca q2):True:3.0,6.0:234.0,57.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,7.0:234.0,57.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,6.0:234.0,57.0
+> (in cb q2),(in cc q1),(in ca q2):False:3.0,7.0:234.0,57.0
+> (in cb q2),(in cc q1),(in ca p2):False:3.0,7.0:234.0,57.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,7.0:234.0,57.0
+dwr-optimal/30/dwr_p04_hyp-1_30_1.tar.bz2:1.5424489975:0.0625:1.35
+> (in cb p2),(in ca q2):False:2.0,6.0:242.0,48.0
+> (in cb q2),(in cc q2):True:2.0,5.0:242.0,48.0
+> (in cc q2),(in ca q2):True:2.0,5.0:242.0,48.0
+> (in ca p2),(in cb p2):False:2.0,6.0:242.0,48.0
+> (in cc p2),(in cb p2):False:2.0,6.0:242.0,48.0
+> (in ca p2),(in cc q2):True:2.0,5.0:242.0,48.0
+dwr-optimal/30/dwr_p04_hyp-2_30_1.tar.bz2:1.47983002663:0.015625:1.35
+> (in cb p2),(in ca q2):True:2.0,6.0:241.0,47.0
+> (in cb q2),(in cc q2):True:2.0,6.0:241.0,47.0
+> (in cc q2),(in ca q2):True:2.0,6.0:241.0,47.0
+> (in ca p2),(in cb p2):True:2.0,6.0:241.0,47.0
+> (in cc p2),(in cb p2):True:2.0,6.0:241.0,47.0
+> (in ca p2),(in cc q2):True:2.0,6.0:241.0,47.0
+dwr-optimal/30/dwr_p05_hyp-1_30_1.tar.bz2:1.65049290657:0.046875:1.34
+> (in ce p3),(in ca p2),(in cc p3):False:3.0,17.0:434.0,82.0
+> (in cc p2),(in cb p2),(in cf p3):True:3.0,16.0:434.0,82.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,17.0:434.0,82.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,17.0:434.0,82.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,17.0:434.0,82.0
+> (in cc p2),(in ca p2),(in cf p3):True:3.0,16.0:434.0,82.0
+dwr-optimal/30/dwr_p05_hyp-2_30_1.tar.bz2:1.57878708839:0.046875:1.34
+> (in ce p3),(in ca p2),(in cc p3):True:3.0,15.0:433.0,81.0
+> (in cc p2),(in cb p2),(in cf p3):False:3.0,16.0:433.0,81.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,16.0:433.0,81.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,17.0:433.0,81.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,17.0:433.0,81.0
+> (in cc p2),(in ca p2),(in cf p3):False:3.0,16.0:433.0,81.0
+dwr-optimal/50/dwr_p02_hyp-1_50_1.tar.bz2:1.99542784691:0.046875:1.64
+> (in cc q2),(in cb p2),(in ca q2):True:3.0,9.0:237.0,60.0
+> (in cc q2),(in cb q1),(in ca q2):True:3.0,9.0:237.0,60.0
+> (in cb q2),(in cc p2),(in ca q2):True:3.0,9.0:237.0,60.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,10.0:237.0,60.0
+> (in cc p2),(in ca p2),(in cb q1):False:3.0,10.0:237.0,60.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,9.0:237.0,60.0
+> (in cb q2),(in cc q1),(in ca p2):False:3.0,10.0:237.0,60.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,10.0:237.0,60.0
+dwr-optimal/50/dwr_p02_hyp-2_50_1.tar.bz2:2.00107002258:0.03125:1.74
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,10.0:237.0,60.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,10.0:237.0,60.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,10.0:237.0,60.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,10.0:237.0,60.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,9.0:237.0,60.0
+> (in cb q2),(in cc q1),(in ca q2):False:3.0,10.0:237.0,60.0
+> (in cb q2),(in cc q1),(in ca p2):True:3.0,9.0:237.0,60.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,10.0:237.0,60.0
+dwr-optimal/50/dwr_p04_hyp-1_50_1.tar.bz2:1.45717406273:0.0625:1.26
+> (in cb p2),(in ca q2):True:2.0,8.0:243.0,49.0
+> (in cb q2),(in cc q2):True:2.0,8.0:243.0,49.0
+> (in cc q2),(in ca q2):True:2.0,8.0:243.0,49.0
+> (in ca p2),(in cb p2):True:2.0,8.0:243.0,49.0
+> (in cc p2),(in cb p2):True:2.0,8.0:243.0,49.0
+> (in ca p2),(in cc q2):True:2.0,8.0:243.0,49.0
+dwr-optimal/50/dwr_p04_hyp-2_50_1.tar.bz2:1.47042298317:0.0625:1.31
+> (in cb p2),(in ca q2):True:2.0,8.0:245.0,51.0
+> (in cb q2),(in cc q2):False:2.0,9.0:245.0,51.0
+> (in cc q2),(in ca q2):True:2.0,8.0:245.0,51.0
+> (in ca p2),(in cb p2):False:2.0,9.0:245.0,51.0
+> (in cc p2),(in cb p2):False:2.0,9.0:245.0,51.0
+> (in ca p2),(in cc q2):False:2.0,9.0:245.0,51.0
+dwr-optimal/50/dwr_p05_hyp-1_50_1.tar.bz2:1.60742688179:0.03125:1.39
+> (in ce p3),(in ca p2),(in cc p3):False:3.0,25.0:437.0,85.0
+> (in cc p2),(in cb p2),(in cf p3):False:3.0,25.0:437.0,85.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,25.0:437.0,85.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,25.0:437.0,85.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,26.0:437.0,85.0
+> (in cc p2),(in ca p2),(in cf p3):True:3.0,24.0:437.0,85.0
+dwr-optimal/50/dwr_p05_hyp-2_50_1.tar.bz2:1.58995008469:0.09375:1.45
+> (in ce p3),(in ca p2),(in cc p3):True:3.0,24.0:436.0,84.0
+> (in cc p2),(in cb p2),(in cf p3):False:3.0,25.0:436.0,84.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,25.0:436.0,84.0
+> (in cd p2),(in ca p3),(in ce p2):True:3.0,24.0:436.0,84.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,25.0:436.0,84.0
+> (in cc p2),(in ca p2),(in cf p3):False:3.0,25.0:436.0,84.0
+dwr-optimal/70/dwr_p02_hyp-1_70_1.tar.bz2:2.02801799774:0.0625:1.79
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,13.0:239.0,62.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,13.0:239.0,62.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,13.0:239.0,62.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,13.0:239.0,62.0
+> (in cc p2),(in ca p2),(in cb q1):False:3.0,13.0:239.0,62.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,12.0:239.0,62.0
+> (in cb q2),(in cc q1),(in ca p2):True:3.0,12.0:239.0,62.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,13.0:239.0,62.0
+dwr-optimal/70/dwr_p02_hyp-2_70_1.tar.bz2:2.07332801819:0.046875:1.68
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,13.0:240.0,63.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,12.0:240.0,63.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,12.0:240.0,63.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,13.0:240.0,63.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,10.0:240.0,63.0
+> (in cb q2),(in cc q1),(in ca q2):False:3.0,13.0:240.0,63.0
+> (in cb q2),(in cc q1),(in ca p2):False:3.0,12.0:240.0,63.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,13.0:240.0,63.0
+dwr-optimal/70/dwr_p04_hyp-1_70_1.tar.bz2:1.57972311974:0.03125:1.36
+> (in cb p2),(in ca q2):False:2.0,10.0:246.0,52.0
+> (in cb q2),(in cc q2):False:2.0,9.0:246.0,52.0
+> (in cc q2),(in ca q2):False:2.0,9.0:246.0,52.0
+> (in ca p2),(in cb p2):False:2.0,9.0:246.0,52.0
+> (in cc p2),(in cb p2):False:2.0,10.0:246.0,52.0
+> (in ca p2),(in cc q2):True:2.0,8.0:246.0,52.0
+dwr-optimal/70/dwr_p04_hyp-2_70_1.tar.bz2:1.61624002457:0.046875:1.42
+> (in cb p2),(in ca q2):True:2.0,11.0:248.0,54.0
+> (in cb q2),(in cc q2):False:2.0,12.0:248.0,54.0
+> (in cc q2),(in ca q2):False:2.0,12.0:248.0,54.0
+> (in ca p2),(in cb p2):True:2.0,11.0:248.0,54.0
+> (in cc p2),(in cb p2):True:2.0,11.0:248.0,54.0
+> (in ca p2),(in cc q2):False:2.0,12.0:248.0,54.0
+dwr-optimal/70/dwr_p05_hyp-1_70_1.tar.bz2:1.81941103935:0.0625:1.67
+> (in ce p3),(in ca p2),(in cc p3):True:3.0,34.0:444.0,92.0
+> (in cc p2),(in cb p2),(in cf p3):True:3.0,34.0:444.0,92.0
+> (in cc p2),(in cd p3),(in cb p2):True:3.0,34.0:444.0,92.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,36.0:444.0,92.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,36.0:444.0,92.0
+> (in cc p2),(in ca p2),(in cf p3):True:3.0,34.0:444.0,92.0
+dwr-optimal/70/dwr_p05_hyp-2_70_1.tar.bz2:1.92229104042:0.0625:1.74
+> (in ce p3),(in ca p2),(in cc p3):True:3.0,31.0:443.0,91.0
+> (in cc p2),(in cb p2),(in cf p3):False:3.0,33.0:443.0,91.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,33.0:443.0,91.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,33.0:443.0,91.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,33.0:443.0,91.0
+> (in cc p2),(in ca p2),(in cf p3):False:3.0,33.0:443.0,91.0
+dwr-optimal/100/dwr_p02_hyp-1_full.tar.bz2:2.42681789398:0.09375:2.14
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,15.0:242.0,65.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,15.0:242.0,65.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,14.0:242.0,65.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,16.0:242.0,65.0
+> (in cc p2),(in ca p2),(in cb q1):False:3.0,16.0:242.0,65.0
+> (in cb q2),(in cc q1),(in ca q2):True:3.0,13.0:242.0,65.0
+> (in cb q2),(in cc q1),(in ca p2):False:3.0,14.0:242.0,65.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,15.0:242.0,65.0
+dwr-optimal/100/dwr_p02_hyp-2_full.tar.bz2:2.51719999313:0.09375:2.27
+> (in cc q2),(in cb p2),(in ca q2):False:3.0,16.0:242.0,65.0
+> (in cc q2),(in cb q1),(in ca q2):False:3.0,15.0:242.0,65.0
+> (in cb q2),(in cc p2),(in ca q2):False:3.0,15.0:242.0,65.0
+> (in cb p2),(in ca q1),(in cc q2):False:3.0,16.0:242.0,65.0
+> (in cc p2),(in ca p2),(in cb q1):True:3.0,13.0:242.0,65.0
+> (in cb q2),(in cc q1),(in ca q2):False:3.0,16.0:242.0,65.0
+> (in cb q2),(in cc q1),(in ca p2):False:3.0,15.0:242.0,65.0
+> (in cb q2),(in cc q2),(in ca q1):False:3.0,16.0:242.0,65.0
+dwr-optimal/100/dwr_p04_hyp-1_full.tar.bz2:1.99476194382:0.078125:1.85
+> (in cb p2),(in ca q2):False:2.0,13.0:248.0,54.0
+> (in cb q2),(in cc q2):False:2.0,12.0:248.0,54.0
+> (in cc q2),(in ca q2):False:2.0,12.0:248.0,54.0
+> (in ca p2),(in cb p2):False:2.0,12.0:248.0,54.0
+> (in cc p2),(in cb p2):False:2.0,13.0:248.0,54.0
+> (in ca p2),(in cc q2):True:2.0,11.0:248.0,54.0
+dwr-optimal/100/dwr_p04_hyp-2_full.tar.bz2:2.32092690468:0.046875:1.95
+> (in cb p2),(in ca q2):True:2.0,13.0:250.0,56.0
+> (in cb q2),(in cc q2):False:2.0,15.0:250.0,56.0
+> (in cc q2),(in ca q2):False:2.0,14.0:250.0,56.0
+> (in ca p2),(in cb p2):False:2.0,14.0:250.0,56.0
+> (in cc p2),(in cb p2):False:2.0,14.0:250.0,56.0
+> (in ca p2),(in cc q2):False:2.0,15.0:250.0,56.0
+dwr-optimal/100/dwr_p05_hyp-1_full.tar.bz2:2.20861697197:0.0625:1.93
+> (in ce p3),(in ca p2),(in cc p3):False:3.0,47.0:449.0,97.0
+> (in cc p2),(in cb p2),(in cf p3):True:3.0,46.0:449.0,97.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,47.0:449.0,97.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,48.0:449.0,97.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,49.0:449.0,97.0
+> (in cc p2),(in ca p2),(in cf p3):True:3.0,46.0:449.0,97.0
+dwr-optimal/100/dwr_p05_hyp-2_full.tar.bz2:2.40834498405:0.09375:2.21
+> (in ce p3),(in ca p2),(in cc p3):True:3.0,44.0:447.0,95.0
+> (in cc p2),(in cb p2),(in cf p3):False:3.0,46.0:447.0,95.0
+> (in cc p2),(in cd p3),(in cb p2):False:3.0,46.0:447.0,95.0
+> (in cd p2),(in ca p3),(in ce p2):False:3.0,46.0:447.0,95.0
+> (in cb p3),(in cc p3),(in ce p2):False:3.0,46.0:447.0,95.0
+> (in cc p2),(in ca p2),(in cf p3):False:3.0,46.0:447.0,95.0

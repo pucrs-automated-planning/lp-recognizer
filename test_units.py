@@ -34,7 +34,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         recognizer = self.factory.get_recognizer("delta-cp")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         self.assertEqual(recognizer.options.heuristics[0], "pho_constraints()")
-        recognizer = self.factory.get_recognizer("delta-clpf1d")
+        recognizer = self.factory.get_recognizer("delta-clpdf1")
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         self.assertEqual(len(recognizer.options.heuristics), 4)
 

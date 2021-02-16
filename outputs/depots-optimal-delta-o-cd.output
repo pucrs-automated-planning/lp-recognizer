@@ -1,0 +1,270 @@
+depots-optimal/10/depots_p03_hyp-1_10_1.tar.bz2:2.74235200882:0.15625:2.36
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,5.0:18981.0,1053.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,4.0:18981.0,1053.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,4.0:18981.0,1053.0
+> (on crate0 crate1),(on crate1 pallet3):True:4.0,4.0:18981.0,1053.0
+> (on crate1 pallet0),(on crate0 crate1):True:2.0,2.0:18981.0,1053.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,6.0:18981.0,1053.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,4.0:18981.0,1053.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,6.0:18981.0,1053.0
+depots-optimal/10/depots_p03_hyp-2_10_1.tar.bz2:2.62374901772:0.15625:2.44
+> (on crate1 crate0),(on crate0 pallet0):True:4.0,5.0:18981.0,1053.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,5.0:18981.0,1053.0
+> (on crate1 crate0),(on crate0 pallet1):True:2.0,3.0:18981.0,1053.0
+> (on crate0 crate1),(on crate1 pallet3):True:4.0,5.0:18981.0,1053.0
+> (on crate1 pallet0),(on crate0 crate1):True:2.0,3.0:18981.0,1053.0
+> (on crate1 crate0),(on crate0 pallet3):True:4.0,5.0:18981.0,1053.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,5.0:18981.0,1053.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,5.0:18981.0,1053.0
+depots-optimal/10/depots_p04_hyp-1_10_1.tar.bz2:2.79788208008:0.203125:2.54
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,5.0:22137.0,1179.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,5.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,6.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,7.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,7.0:22137.0,1179.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,7.0:22137.0,1179.0
+depots-optimal/10/depots_p04_hyp-2_10_1.tar.bz2:2.88895106316:0.1875:2.64
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,5.0:22137.0,1179.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,5.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,7.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,7.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,7.0:22137.0,1179.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,6.0:22137.0,1179.0
+depots-optimal/10/depots_p05_hyp-1_10_1.tar.bz2:3.14634895325:0.203125:2.73
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,5.0:22137.0,1179.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,5.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,7.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,7.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,7.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,7.0:22137.0,1179.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,6.0:22137.0,1179.0
+depots-optimal/10/depots_p05_hyp-2_10_1.tar.bz2:3.04837703705:0.21875:2.73
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,4.0:22137.0,1179.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,4.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,5.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,6.0:22137.0,1179.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,6.0:22137.0,1179.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,6.0:22137.0,1179.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,6.0:22137.0,1179.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,6.0:22137.0,1179.0
+depots-optimal/30/depots_p03_hyp-1_30_1.tar.bz2:3.23315215111:0.234375:2.97
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,8.0:18982.0,1054.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,7.0:18982.0,1054.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,6.0:18982.0,1054.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,8.0:18982.0,1054.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,6.0:18982.0,1054.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,8.0:18982.0,1054.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,8.0:18982.0,1054.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,8.0:18982.0,1054.0
+depots-optimal/30/depots_p03_hyp-2_30_1.tar.bz2:3.46508407593:0.171875:3.01
+> (on crate1 crate0),(on crate0 pallet0):True:4.0,8.0:18983.0,1055.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,8.0:18983.0,1055.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,7.0:18983.0,1055.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,9.0:18983.0,1055.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,7.0:18983.0,1055.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,9.0:18983.0,1055.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,9.0:18983.0,1055.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,9.0:18983.0,1055.0
+depots-optimal/30/depots_p04_hyp-1_30_1.tar.bz2:3.9020049572:0.234375:3.58
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,5.0:22139.0,1181.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,5.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,7.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,7.0:22139.0,1181.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,5.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,7.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,7.0:22139.0,1181.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,7.0:22139.0,1181.0
+depots-optimal/30/depots_p04_hyp-2_30_1.tar.bz2:3.80421304703:0.265625:3.48
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,7.0:22139.0,1181.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,7.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,8.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,8.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,8.0:22139.0,1181.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,8.0:22139.0,1181.0
+depots-optimal/30/depots_p05_hyp-1_30_1.tar.bz2:3.66629600525:0.21875:3.17
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,7.0:22139.0,1181.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,7.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,9.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,8.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,8.0:22139.0,1181.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,9.0:22139.0,1181.0
+depots-optimal/30/depots_p05_hyp-2_30_1.tar.bz2:3.57928299904:0.28125:3.35
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,7.0:22139.0,1181.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,7.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,8.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,8.0:22139.0,1181.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,9.0:22139.0,1181.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,9.0:22139.0,1181.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,9.0:22139.0,1181.0
+depots-optimal/50/depots_p03_hyp-1_50_1.tar.bz2:3.38776111603:0.234375:3.09
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,8.0:18983.0,1055.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,7.0:18983.0,1055.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,6.0:18983.0,1055.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,8.0:18983.0,1055.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,6.0:18983.0,1055.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,8.0:18983.0,1055.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,8.0:18983.0,1055.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,8.0:18983.0,1055.0
+depots-optimal/50/depots_p03_hyp-2_50_1.tar.bz2:3.33258199692:0.21875:3.05
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,12.0:18985.0,1057.0
+> (on crate1 pallet1),(on crate0 crate1):False:4.0,12.0:18985.0,1057.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,10.0:18985.0,1057.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:18985.0,1057.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,10.0:18985.0,1057.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,12.0:18985.0,1057.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:18985.0,1057.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:18985.0,1057.0
+depots-optimal/50/depots_p04_hyp-1_50_1.tar.bz2:3.82308316231:0.25:3.49
+> (on crate1 crate0),(on crate0 pallet0):True:2.0,6.0:22141.0,1183.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,7.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,8.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,9.0:22141.0,1183.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,8.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet3):True:4.0,8.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,9.0:22141.0,1183.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,8.0:22141.0,1183.0
+depots-optimal/50/depots_p04_hyp-2_50_1.tar.bz2:3.35043692589:0.21875:3.05
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,9.0:22141.0,1183.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,9.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,11.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,11.0:22141.0,1183.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,11.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,11.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22141.0,1183.0
+> (on crate0 pallet2),(on crate1 crate0):True:4.0,10.0:22141.0,1183.0
+depots-optimal/50/depots_p05_hyp-1_50_1.tar.bz2:2.85978484154:0.203125:2.56
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22141.0,1183.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,12.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22141.0,1183.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22141.0,1183.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:22141.0,1183.0
+depots-optimal/50/depots_p05_hyp-2_50_1.tar.bz2:2.90133905411:0.171875:2.67
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,9.0:22141.0,1183.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,8.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,10.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,10.0:22141.0,1183.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,9.0:22141.0,1183.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,11.0:22141.0,1183.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,10.0:22141.0,1183.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:22141.0,1183.0
+depots-optimal/70/depots_p03_hyp-1_70_1.tar.bz2:2.69882822037:0.1875:2.47
+> (on crate1 crate0),(on crate0 pallet0):True:4.0,8.0:18985.0,1057.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,8.0:18985.0,1057.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,7.0:18985.0,1057.0
+> (on crate0 crate1),(on crate1 pallet3):True:4.0,8.0:18985.0,1057.0
+> (on crate1 pallet0),(on crate0 crate1):True:2.0,6.0:18985.0,1057.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,9.0:18985.0,1057.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,8.0:18985.0,1057.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,9.0:18985.0,1057.0
+depots-optimal/70/depots_p03_hyp-2_70_1.tar.bz2:2.73114395142:0.1875:2.49
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,12.0:18987.0,1059.0
+> (on crate1 pallet1),(on crate0 crate1):False:4.0,12.0:18987.0,1059.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,10.0:18987.0,1059.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:18987.0,1059.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,10.0:18987.0,1059.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,12.0:18987.0,1059.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:18987.0,1059.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:18987.0,1059.0
+depots-optimal/70/depots_p04_hyp-1_70_1.tar.bz2:2.96326208115:0.1875:2.67
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,10.0:22143.0,1185.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,9.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,12.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,11.0:22143.0,1185.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,9.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,12.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,11.0:22143.0,1185.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,12.0:22143.0,1185.0
+depots-optimal/70/depots_p04_hyp-2_70_1.tar.bz2:2.80989193916:0.234375:2.63
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22143.0,1185.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,12.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22143.0,1185.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22143.0,1185.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:22143.0,1185.0
+depots-optimal/70/depots_p05_hyp-1_70_1.tar.bz2:2.82179784775:0.171875:2.55
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,10.0:22143.0,1185.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,12.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22143.0,1185.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,12.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22143.0,1185.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,11.0:22143.0,1185.0
+depots-optimal/70/depots_p05_hyp-2_70_1.tar.bz2:2.92063808441:0.1875:2.73
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22143.0,1185.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,11.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,11.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,13.0:22143.0,1185.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22143.0,1185.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22143.0,1185.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,13.0:22143.0,1185.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,13.0:22143.0,1185.0
+depots-optimal/100/depots_p03_hyp-1_full.tar.bz2:2.75899100304:0.203125:2.57
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,9.0:18986.0,1058.0
+> (on crate1 pallet1),(on crate0 crate1):True:4.0,8.0:18986.0,1058.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,8.0:18986.0,1058.0
+> (on crate0 crate1),(on crate1 pallet3):True:4.0,8.0:18986.0,1058.0
+> (on crate1 pallet0),(on crate0 crate1):True:2.0,6.0:18986.0,1058.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,10.0:18986.0,1058.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,8.0:18986.0,1058.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,10.0:18986.0,1058.0
+depots-optimal/100/depots_p03_hyp-2_full.tar.bz2:2.82027697563:0.203125:2.6
+> (on crate1 crate0),(on crate0 pallet0):False:4.0,13.0:18990.0,1062.0
+> (on crate1 pallet1),(on crate0 crate1):False:4.0,12.0:18990.0,1062.0
+> (on crate1 crate0),(on crate0 pallet1):False:2.0,11.0:18990.0,1062.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:18990.0,1062.0
+> (on crate1 pallet0),(on crate0 crate1):False:2.0,10.0:18990.0,1062.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:18990.0,1062.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:18990.0,1062.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,12.0:18990.0,1062.0
+depots-optimal/100/depots_p04_hyp-1_full.tar.bz2:2.81700086594:0.171875:2.59
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22146.0,1188.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22146.0,1188.0
+> (on crate1 pallet0),(on crate0 crate1):True:4.0,10.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,12.0:22146.0,1188.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,13.0:22146.0,1188.0
+depots-optimal/100/depots_p04_hyp-2_full.tar.bz2:2.91537904739:0.1875:2.72
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22146.0,1188.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22146.0,1188.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22146.0,1188.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,12.0:22146.0,1188.0
+depots-optimal/100/depots_p05_hyp-1_full.tar.bz2:3.02825808525:0.21875:2.8
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22146.0,1188.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,10.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet1):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,12.0:22146.0,1188.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet2):True:4.0,10.0:22146.0,1188.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,12.0:22146.0,1188.0
+depots-optimal/100/depots_p05_hyp-2_full.tar.bz2:2.8562951088:0.171875:2.5
+> (on crate1 crate0),(on crate0 pallet0):False:2.0,11.0:22146.0,1188.0
+> (on crate1 pallet1),(on crate0 crate1):False:2.0,11.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet1):True:4.0,11.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet3):False:4.0,13.0:22146.0,1188.0
+> (on crate1 pallet0),(on crate0 crate1):False:4.0,12.0:22146.0,1188.0
+> (on crate1 crate0),(on crate0 pallet3):False:4.0,13.0:22146.0,1188.0
+> (on crate0 crate1),(on crate1 pallet2):False:4.0,13.0:22146.0,1188.0
+> (on crate0 pallet2),(on crate1 crate0):False:4.0,13.0:22146.0,1188.0

@@ -1,0 +1,210 @@
+rovers-optimal/10/rovers_p01_hyp-1_10_1.tar.bz2:1.77048301697:0.03125:1.59
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):True:8.0,8.0:87.0,78.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:87.0,76.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,9.0:87.0,78.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):True:9.0,9.0:87.0,76.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,11.0:87.0,77.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:87.0,76.0
+rovers-optimal/10/rovers_p01_hyp-2_10_1.tar.bz2:1.7184779644:0.03125:1.57
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):False:8.0,10.0:87.0,78.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:87.0,76.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,10.0:87.0,78.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,11.0:87.0,76.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,12.0:87.0,77.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,11.0:87.0,76.0
+rovers-optimal/10/rovers_p02_hyp-1_10_1.tar.bz2:1.76206493378:0.015625:1.6
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,15.0:146.0,100.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,11.0:146.0,99.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,13.0:146.0,100.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,14.0:146.0,99.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:13.0,15.0:146.0,100.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,10.0:146.0,99.0
+rovers-optimal/10/rovers_p02_hyp-2_10_1.tar.bz2:1.78779196739:0.015625:1.56
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):True:13.0,13.0:146.0,100.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,10.0:146.0,99.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):True:12.0,12.0:146.0,100.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):True:13.0,13.0:146.0,99.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:146.0,100.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,10.0:146.0,99.0
+rovers-optimal/10/rovers_p03_hyp-1_10_1.tar.bz2:1.78049206734:0.046875:1.55
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,11.0:146.0,99.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,11.0:146.0,99.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,10.0:146.0,99.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,13.0:146.0,100.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,14.0:146.0,100.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):True:13.0,13.0:146.0,100.0
+rovers-optimal/10/rovers_p03_hyp-2_10_1.tar.bz2:1.58765292168:0.015625:1.39
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,10.0:146.0,99.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,10.0:146.0,99.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,10.0:146.0,99.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):True:12.0,12.0:146.0,100.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,14.0:146.0,100.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,14.0:146.0,100.0
+rovers-optimal/30/rovers_p01_hyp-1_30_1.tar.bz2:1.57510399818:0.0:1.35
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):True:8.0,8.0:89.0,80.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:89.0,78.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,12.0:89.0,80.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,12.0:89.0,78.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,15.0:89.0,79.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:89.0,78.0
+rovers-optimal/30/rovers_p01_hyp-2_30_1.tar.bz2:1.46346187592:0.046875:1.28
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):False:8.0,10.0:89.0,80.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:89.0,78.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,12.0:89.0,80.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,10.0:89.0,78.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,13.0:89.0,79.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,10.0:89.0,78.0
+rovers-optimal/30/rovers_p02_hyp-1_30_1.tar.bz2:1.50226807594:0.015625:1.33
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,16.0:148.0,102.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,11.0:148.0,101.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,13.0:148.0,102.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,15.0:148.0,101.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:13.0,15.0:148.0,102.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,10.0:148.0,101.0
+rovers-optimal/30/rovers_p02_hyp-2_30_1.tar.bz2:1.62575912476:0.015625:1.33
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,16.0:148.0,102.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,12.0:148.0,101.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,15.0:148.0,102.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,18.0:148.0,101.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:148.0,102.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,13.0:148.0,101.0
+rovers-optimal/30/rovers_p03_hyp-1_30_1.tar.bz2:1.45074295998:0.015625:1.32
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,11.0:148.0,101.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,11.0:148.0,101.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,10.0:148.0,101.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,13.0:148.0,102.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,16.0:148.0,102.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,15.0:148.0,102.0
+rovers-optimal/30/rovers_p03_hyp-2_30_1.tar.bz2:1.36300683022:0.015625:1.19
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,10.0:148.0,101.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,12.0:148.0,101.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):False:10.0,13.0:148.0,101.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,15.0:148.0,102.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:148.0,102.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,16.0:148.0,102.0
+rovers-optimal/50/rovers_p01_hyp-1_50_1.tar.bz2:1.33889102936:0.0:1.17
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):True:8.0,8.0:90.0,81.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:90.0,79.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,11.0:90.0,81.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,12.0:90.0,79.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,14.0:90.0,80.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:90.0,79.0
+rovers-optimal/50/rovers_p01_hyp-2_50_1.tar.bz2:1.41856503487:0.015625:1.17
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):False:8.0,10.0:91.0,82.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:91.0,80.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,11.0:91.0,82.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,10.0:91.0,80.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,12.0:91.0,81.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:91.0,80.0
+rovers-optimal/50/rovers_p02_hyp-1_50_1.tar.bz2:1.35816693306:0.0:1.17
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,18.0:150.0,104.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,12.0:150.0,103.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,13.0:150.0,104.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,15.0:150.0,103.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:13.0,18.0:150.0,104.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,10.0:150.0,103.0
+rovers-optimal/50/rovers_p02_hyp-2_50_1.tar.bz2:1.64212203026:0.046875:1.41
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,16.0:151.0,105.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,14.0:151.0,104.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,17.0:151.0,105.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,20.0:151.0,104.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:151.0,105.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,15.0:151.0,104.0
+rovers-optimal/50/rovers_p03_hyp-1_50_1.tar.bz2:1.3920788765:0.03125:1.26
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,15.0:150.0,103.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,12.0:150.0,103.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,10.0:150.0,103.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,16.0:150.0,104.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,20.0:150.0,104.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,19.0:150.0,104.0
+rovers-optimal/50/rovers_p03_hyp-2_50_1.tar.bz2:1.40161395073:0.03125:1.23
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,10.0:150.0,103.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,13.0:150.0,103.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):False:10.0,13.0:150.0,103.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,15.0:150.0,104.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,16.0:150.0,104.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,19.0:150.0,104.0
+rovers-optimal/70/rovers_p01_hyp-1_70_1.tar.bz2:1.348954916:0.0:1.16
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):True:8.0,8.0:92.0,83.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:92.0,81.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,12.0:92.0,83.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,13.0:92.0,81.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,17.0:92.0,82.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:92.0,81.0
+rovers-optimal/70/rovers_p01_hyp-2_70_1.tar.bz2:1.44530797005:0.015625:1.29
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):False:8.0,13.0:93.0,84.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:93.0,82.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,14.0:93.0,84.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,12.0:93.0,82.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,15.0:93.0,83.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:93.0,82.0
+rovers-optimal/70/rovers_p02_hyp-1_70_1.tar.bz2:1.54859018326:0.015625:1.27
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,21.0:152.0,106.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,15.0:152.0,105.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,15.0:152.0,106.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,16.0:152.0,105.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:13.0,18.0:152.0,106.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,11.0:152.0,105.0
+rovers-optimal/70/rovers_p02_hyp-2_70_1.tar.bz2:1.47801685333:0.046875:1.28
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,18.0:154.0,108.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,15.0:154.0,107.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,19.0:154.0,108.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,21.0:154.0,107.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:154.0,108.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,17.0:154.0,107.0
+rovers-optimal/70/rovers_p03_hyp-1_70_1.tar.bz2:1.51343917847:0.015625:1.31
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,16.0:152.0,105.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,15.0:152.0,105.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,11.0:152.0,105.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,15.0:152.0,106.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,22.0:152.0,106.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,20.0:152.0,106.0
+rovers-optimal/70/rovers_p03_hyp-2_70_1.tar.bz2:1.6137111187:0.0:1.49
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,11.0:153.0,106.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,14.0:153.0,106.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):False:10.0,15.0:153.0,106.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,16.0:153.0,107.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,18.0:153.0,107.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,21.0:153.0,107.0
+rovers-optimal/100/rovers_p01_hyp-1_full.tar.bz2:1.57332205772:0.0:1.32
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):True:8.0,8.0:94.0,85.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:9.0,14.0:94.0,83.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,14.0:94.0,85.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,14.0:94.0,83.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,18.0:94.0,84.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,14.0:94.0,83.0
+rovers-optimal/100/rovers_p01_hyp-2_full.tar.bz2:1.44809794426:0.015625:1.28
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint1):False:8.0,14.0:95.0,86.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):True:9.0,9.0:95.0,84.0
+> (communicated_rock_data waypoint3),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3):False:8.0,17.0:95.0,86.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:9.0,12.0:95.0,84.0
+> (communicated_soil_data waypoint2),(communicated_rock_data waypoint3),(communicated_image_data objective1 low_res):False:10.0,16.0:95.0,85.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:9.0,12.0:95.0,84.0
+rovers-optimal/100/rovers_p02_hyp-1_full.tar.bz2:1.46638202667:0.015625:1.32
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,25.0:155.0,109.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,16.0:155.0,108.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,15.0:155.0,109.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,18.0:155.0,108.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):False:13.0,22.0:155.0,109.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):True:10.0,11.0:155.0,108.0
+rovers-optimal/100/rovers_p02_hyp-2_full.tar.bz2:1.52258205414:0.03125:1.25
+> (communicated_image_data objective1 high_res),(communicated_soil_data waypoint3),(communicated_image_data objective0 low_res),(communicated_rock_data waypoint1):False:13.0,21.0:157.0,111.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,16.0:157.0,110.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0):False:12.0,22.0:157.0,111.0
+> (communicated_image_data objective0 high_res),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_image_data objective2 low_res):False:13.0,25.0:157.0,110.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint1):True:13.0,13.0:157.0,111.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,20.0:157.0,110.0
+rovers-optimal/100/rovers_p03_hyp-1_full.tar.bz2:1.53201985359:0.015625:1.37
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):False:10.0,19.0:154.0,107.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,16.0:154.0,107.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):True:10.0,11.0:154.0,107.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,18.0:154.0,108.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,25.0:154.0,108.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,22.0:154.0,108.0
+rovers-optimal/100/rovers_p03_hyp-2_full.tar.bz2:1.86961293221:0.015625:1.52
+> (communicated_soil_data waypoint2),(communicated_image_data objective1 high_res),(communicated_image_data objective2 high_res),(communicated_rock_data waypoint0):True:10.0,12.0:156.0,109.0
+> (communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1):False:10.0,16.0:156.0,109.0
+> (communicated_image_data objective2 low_res),(communicated_rock_data waypoint0),(communicated_soil_data waypoint1),(communicated_image_data objective0 low_res):False:10.0,19.0:156.0,109.0
+> (communicated_image_data objective2 high_res),(communicated_soil_data waypoint3),(communicated_rock_data waypoint0),(communicated_image_data objective0 low_res):False:12.0,18.0:156.0,110.0
+> (communicated_soil_data waypoint2),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_rock_data waypoint1):False:13.0,19.0:156.0,110.0
+> (communicated_image_data objective1 low_res),(communicated_soil_data waypoint3),(communicated_image_data objective2 low_res),(communicated_rock_data waypoint1):False:13.0,25.0:156.0,110.0

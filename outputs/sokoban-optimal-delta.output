@@ -1,0 +1,240 @@
+sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2:4.41077280045:0.921875:3.92
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,25.0:653.0,554.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,32.0:653.0,556.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,25.0:653.0,555.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,26.0:653.0,554.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,27.0:653.0,554.0
+> (at box1 f1-5f),(at box0 f5-2f):True:22.0,24.0:653.0,552.0
+> (at box1 f4-4f),(at box0 f6-3f):False:21.0,25.0:653.0,552.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,26.0:653.0,555.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,35.0:653.0,557.0
+sokoban-optimal/10/sokoban_p01_hyp-2_10_1.tar.bz2:4.655356884:1.03125:4.29
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,25.0:653.0,554.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,29.0:653.0,556.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,23.0:653.0,555.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,27.0:653.0,554.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,29.0:653.0,554.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,26.0:653.0,552.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,22.0:653.0,552.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,28.0:653.0,555.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,35.0:653.0,557.0
+sokoban-optimal/10/sokoban_p02_hyp-1_10_1.tar.bz2:2.3260910511:0.125:2.03
+> (at box0 f1-2f),(at box1 f4-4f):True:15.0,17.0:148.0,174.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,25.0:148.0,176.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,18.0:148.0,173.0
+> (at box0 f1-2f),(at box1 f2-3f):True:11.0,13.0:148.0,172.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,20.0:148.0,175.0
+> (at box1 f4-2f),(at box0 f1-1f):False:12.0,15.0:148.0,172.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,18.0:148.0,175.0
+sokoban-optimal/10/sokoban_p02_hyp-2_10_1.tar.bz2:2.20201611519:0.09375:2.0
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,19.0:148.0,174.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,23.0:148.0,176.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,16.0:148.0,173.0
+> (at box0 f1-2f),(at box1 f2-3f):False:11.0,13.0:148.0,172.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,17.0:148.0,175.0
+> (at box1 f4-2f),(at box0 f1-1f):True:12.0,13.0:148.0,172.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,17.0:148.0,175.0
+sokoban-optimal/10/sokoban_p03_hyp-1_10_1.tar.bz2:2.85898900032:0.34375:2.58
+> (at box1 f3-4f),(at box0 f3-1f):False:14.0,18.0:368.0,329.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,19.0:368.0,328.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,17.0:368.0,328.0
+> (at box0 f4-3f),(at box1 f2-2f):False:17.0,21.0:368.0,330.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,29.0:368.0,335.0
+> (at box1 f3-3f),(at box0 f1-6f):False:16.0,18.0:368.0,330.0
+> (at box1 f1-1f),(at box0 f1-6f):True:16.0,16.0:368.0,329.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,19.0:368.0,327.0
+sokoban-optimal/10/sokoban_p03_hyp-2_10_1.tar.bz2:2.96750879288:0.359375:2.62
+> (at box1 f3-4f),(at box0 f3-1f):True:14.0,15.0:368.0,329.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,19.0:368.0,328.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,17.0:368.0,328.0
+> (at box0 f4-3f),(at box1 f2-2f):True:17.0,18.0:368.0,330.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,29.0:368.0,335.0
+> (at box1 f3-3f),(at box0 f1-6f):False:16.0,18.0:368.0,330.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,19.0:368.0,329.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,17.0:368.0,327.0
+sokoban-optimal/30/sokoban_p01_hyp-1_30_1.tar.bz2:3.52573490143:0.71875:3.24
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,30.0:658.0,559.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,37.0:658.0,561.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,31.0:658.0,560.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,28.0:658.0,559.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,36.0:658.0,559.0
+> (at box1 f1-5f),(at box0 f5-2f):True:22.0,26.0:658.0,557.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,25.0:658.0,557.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,30.0:658.0,560.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,43.0:658.0,562.0
+sokoban-optimal/30/sokoban_p01_hyp-2_30_1.tar.bz2:3.35675096512:0.6875:2.96
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,25.0:658.0,559.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,34.0:658.0,561.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,27.0:658.0,560.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,27.0:658.0,559.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,30.0:658.0,559.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,29.0:658.0,557.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,23.0:658.0,557.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,27.0:658.0,560.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,35.0:658.0,562.0
+sokoban-optimal/30/sokoban_p02_hyp-1_30_1.tar.bz2:1.83566594124:0.09375:1.57
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,19.0:151.0,177.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,25.0:151.0,179.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,21.0:151.0,176.0
+> (at box0 f1-2f),(at box1 f2-3f):True:11.0,14.0:151.0,175.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,22.0:151.0,178.0
+> (at box1 f4-2f),(at box0 f1-1f):False:12.0,19.0:151.0,175.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,23.0:151.0,178.0
+sokoban-optimal/30/sokoban_p02_hyp-2_30_1.tar.bz2:2.18161201477:0.09375:1.68
+> (at box1 f4-2f),(at box0 f1-1f):True:12.0,14.0:151.0,175.0
+sokoban-optimal/30/sokoban_p03_hyp-1_30_1.tar.bz2:2.2617650032:0.28125:2.0
+> (at box1 f3-4f),(at box0 f3-1f):False:14.0,20.0:372.0,333.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,21.0:372.0,332.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,19.0:372.0,332.0
+> (at box0 f4-3f),(at box1 f2-2f):False:17.0,25.0:372.0,334.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,33.0:372.0,339.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,18.0:372.0,334.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,20.0:372.0,333.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,22.0:372.0,331.0
+sokoban-optimal/30/sokoban_p03_hyp-2_30_1.tar.bz2:2.21788692474:0.25:1.99
+> (at box1 f3-4f),(at box0 f3-1f):False:14.0,21.0:372.0,333.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,25.0:372.0,332.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,19.0:372.0,332.0
+> (at box0 f4-3f),(at box1 f2-2f):False:17.0,22.0:372.0,334.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,33.0:372.0,339.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,18.0:372.0,334.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,19.0:372.0,333.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,22.0:372.0,331.0
+sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2:3.2623770237:0.59375:2.84
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,30.0:663.0,564.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,40.0:663.0,566.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,34.0:663.0,565.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,39.0:663.0,564.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,42.0:663.0,564.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,36.0:663.0,562.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,25.0:663.0,562.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,41.0:663.0,565.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,47.0:663.0,567.0
+sokoban-optimal/50/sokoban_p01_hyp-2_50_1.tar.bz2:3.23400187492:0.640625:2.92
+> (at box1 f5-7f),(at box0 f6-3f):True:22.0,25.0:663.0,564.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,41.0:663.0,566.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,37.0:663.0,565.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,36.0:663.0,564.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,32.0:663.0,564.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,36.0:663.0,562.0
+> (at box1 f4-4f),(at box0 f6-3f):False:21.0,31.0:663.0,562.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,34.0:663.0,565.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,39.0:663.0,567.0
+sokoban-optimal/50/sokoban_p02_hyp-1_50_1.tar.bz2:1.84128189087:0.09375:1.61
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,21.0:154.0,180.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,25.0:154.0,182.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,21.0:154.0,179.0
+> (at box0 f1-2f),(at box1 f2-3f):True:11.0,16.0:154.0,178.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,23.0:154.0,181.0
+> (at box1 f4-2f),(at box0 f1-1f):False:12.0,22.0:154.0,178.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,22.0:154.0,181.0
+sokoban-optimal/50/sokoban_p02_hyp-2_50_1.tar.bz2:1.82533192635:0.09375:1.66
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,23.0:154.0,180.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,31.0:154.0,182.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,27.0:154.0,179.0
+> (at box0 f1-2f),(at box1 f2-3f):False:11.0,18.0:154.0,178.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,24.0:154.0,181.0
+> (at box1 f4-2f),(at box0 f1-1f):True:12.0,15.0:154.0,178.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,26.0:154.0,181.0
+sokoban-optimal/50/sokoban_p03_hyp-1_50_1.tar.bz2:2.33401608467:0.25:2.03
+> (at box1 f3-4f),(at box0 f3-1f):False:14.0,24.0:375.0,336.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,26.0:375.0,335.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,19.0:375.0,335.0
+> (at box0 f4-3f),(at box1 f2-2f):False:17.0,25.0:375.0,337.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,35.0:375.0,342.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,18.0:375.0,337.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,20.0:375.0,336.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,27.0:375.0,334.0
+sokoban-optimal/50/sokoban_p03_hyp-2_50_1.tar.bz2:2.38366794586:0.265625:2.05
+> (at box1 f3-4f),(at box0 f3-1f):False:14.0,24.0:376.0,337.0
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,23.0:376.0,336.0
+> (at box0 f2-6f),(at box1 f3-2f):True:15.0,19.0:376.0,336.0
+> (at box0 f4-3f),(at box1 f2-2f):False:17.0,27.0:376.0,338.0
+> (at box0 f5-6f),(at box1 f6-6f):True:27.0,31.0:376.0,343.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,20.0:376.0,338.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,24.0:376.0,337.0
+> (at box0 f3-1f),(at box1 f1-1f):False:15.0,26.0:376.0,335.0
+sokoban-optimal/70/sokoban_p01_hyp-1_70_1.tar.bz2:3.69620895386:0.71875:3.33
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,30.0:669.0,570.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,40.0:669.0,572.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,37.0:669.0,571.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,36.0:669.0,570.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,41.0:669.0,570.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,36.0:669.0,568.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,26.0:669.0,568.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,38.0:669.0,571.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,45.0:669.0,573.0
+sokoban-optimal/70/sokoban_p01_hyp-2_70_1.tar.bz2:4.20605707169:0.765625:3.86
+> (at box1 f5-7f),(at box0 f6-3f):True:22.0,26.0:669.0,570.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,45.0:669.0,572.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,37.0:669.0,571.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,40.0:669.0,570.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,38.0:669.0,570.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,40.0:669.0,568.0
+> (at box1 f4-4f),(at box0 f6-3f):False:21.0,31.0:669.0,568.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,38.0:669.0,571.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,43.0:669.0,573.0
+sokoban-optimal/70/sokoban_p02_hyp-1_70_1.tar.bz2:2.38838410378:0.125:2.13
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,21.0:158.0,184.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,29.0:158.0,186.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,25.0:158.0,183.0
+> (at box0 f1-2f),(at box1 f2-3f):True:11.0,16.0:158.0,182.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,26.0:158.0,185.0
+> (at box1 f4-2f),(at box0 f1-1f):False:12.0,23.0:158.0,182.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,28.0:158.0,185.0
+sokoban-optimal/70/sokoban_p02_hyp-2_70_1.tar.bz2:2.29940199852:0.109375:2.03
+> (at box1 f4-2f),(at box0 f1-1f):True:12.0,15.0:157.0,181.0
+sokoban-optimal/70/sokoban_p03_hyp-1_70_1.tar.bz2:2.85566592216:0.265625:2.59
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,27.0:379.0,339.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,18.0:379.0,341.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,23.0:379.0,339.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,34.0:379.0,346.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,25.0:379.0,340.0
+sokoban-optimal/70/sokoban_p03_hyp-2_70_1.tar.bz2:2.87989115715:0.28125:2.55
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,25.0:380.0,340.0
+> (at box1 f3-3f),(at box0 f1-6f):False:16.0,22.0:380.0,342.0
+> (at box0 f2-6f),(at box1 f3-2f):True:15.0,19.0:380.0,340.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,35.0:380.0,347.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,24.0:380.0,341.0
+sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2:4.15982818604:0.765625:3.75
+> (at box1 f5-7f),(at box0 f6-3f):False:22.0,33.0:676.0,577.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,41.0:676.0,579.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,41.0:676.0,578.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,40.0:676.0,577.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,44.0:676.0,577.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,38.0:676.0,575.0
+> (at box1 f4-4f),(at box0 f6-3f):True:21.0,26.0:676.0,575.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,42.0:676.0,578.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,49.0:676.0,580.0
+sokoban-optimal/100/sokoban_p01_hyp-2_full.tar.bz2:4.15742588043:0.703125:3.67
+> (at box1 f5-7f),(at box0 f6-3f):True:22.0,26.0:676.0,577.0
+> (at box0 f7-8f),(at box1 f1-3f):False:24.0,45.0:676.0,579.0
+> (at box1 f8-2f),(at box0 f6-1f):False:21.0,43.0:676.0,578.0
+> (at box0 f5-1f),(at box1 f8-5f):False:22.0,40.0:676.0,577.0
+> (at box1 f7-8f),(at box0 f5-6f):False:23.0,39.0:676.0,577.0
+> (at box1 f1-5f),(at box0 f5-2f):False:22.0,40.0:676.0,575.0
+> (at box1 f4-4f),(at box0 f6-3f):False:21.0,33.0:676.0,575.0
+> (at box0 f5-1f),(at box1 f8-6f):False:23.0,38.0:676.0,578.0
+> (at box0 f7-8f),(at box1 f8-8f):False:31.0,43.0:676.0,580.0
+sokoban-optimal/100/sokoban_p02_hyp-1_full.tar.bz2:2.33990883827:0.109375:1.99
+> (at box0 f1-2f),(at box1 f4-4f):False:15.0,21.0:162.0,188.0
+> (at box0 f3-4f),(at box1 f4-4f):False:19.0,29.0:162.0,190.0
+> (at box0 f2-4f),(at box1 f1-4f):False:12.0,25.0:162.0,187.0
+> (at box0 f1-2f),(at box1 f2-3f):True:11.0,16.0:162.0,186.0
+> (at box1 f3-1f),(at box0 f2-4f):False:15.0,26.0:162.0,189.0
+> (at box1 f4-2f),(at box0 f1-1f):False:12.0,23.0:162.0,186.0
+> (at box0 f3-4f),(at box1 f1-1f):False:14.0,28.0:162.0,189.0
+sokoban-optimal/100/sokoban_p02_hyp-2_full.tar.bz2:2.65595698357:0.125:2.33
+> (at box1 f4-2f),(at box0 f1-1f):True:12.0,15.0:161.0,185.0
+sokoban-optimal/100/sokoban_p03_hyp-1_full.tar.bz2:3.08049106598:0.328125:2.75
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,27.0:384.0,344.0
+> (at box1 f3-3f),(at box0 f1-6f):True:16.0,18.0:384.0,346.0
+> (at box0 f2-6f),(at box1 f3-2f):False:15.0,23.0:384.0,344.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,35.0:384.0,351.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,25.0:384.0,345.0
+sokoban-optimal/100/sokoban_p03_hyp-2_full.tar.bz2:3.00592088699:0.34375:2.68
+> (at box0 f2-6f),(at box1 f5-4f):False:15.0,27.0:385.0,345.0
+> (at box1 f3-3f),(at box0 f1-6f):False:16.0,23.0:385.0,347.0
+> (at box0 f2-6f),(at box1 f3-2f):True:15.0,19.0:385.0,345.0
+> (at box0 f5-6f),(at box1 f6-6f):False:27.0,35.0:385.0,352.0
+> (at box1 f1-1f),(at box0 f1-6f):False:16.0,27.0:385.0,346.0

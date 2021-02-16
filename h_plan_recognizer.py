@@ -1,6 +1,7 @@
 #!/usr/bin/env python2.7
 
 from plan_recognizer import PlanRecognizer
+import time
 
 class LPRecognizerHValue(PlanRecognizer):
     name = "hvalue"
@@ -32,6 +33,7 @@ class LPRecognizerHValue(PlanRecognizer):
         self.uncertainty_ratio = 1
 
     def run_recognizer(self):
+        self.total_time = time.time()
         self.fd_time = 0.0
         self.lp_time = 0.0
         for i in range(0, len(self.hyps)):
@@ -39,7 +41,9 @@ class LPRecognizerHValue(PlanRecognizer):
             hyp.evaluate(i, self.observations)
             self.fd_time += hyp.fd_time
             self.lp_time += hyp.lp_time
-            if not hyp.test_failed:
+            if hyp.test_failed:
+                print("Score %s %s: Failed" % (i, ' '.join(hyp.atoms)))
+            else:
                 hyp.score = self.get_score(hyp)
                 print("Score %s %s: %s" % (i, ' '.join(hyp.atoms), hyp.score))
         # Select unique goal (choose the goal with the smallest score)
@@ -50,3 +54,4 @@ class LPRecognizerHValue(PlanRecognizer):
         # Select other goals
         self.calculate_uncertainty()
         self.verify_hypothesis()
+        self.total_time = time.time() - self.total_time

@@ -4,6 +4,14 @@ if [[ $DIR == "." ]]; then
 	DIR=`pwd`
 fi
 
+if [[ -z "data-charts" ]]; then
+	mkdir data-charts
+fi
+
+if [[ -z "data-latex" ]]; then
+	mkdir data-latex
+fi
+
 # Verifying paths
 pushd ..
 	FD_ROOT=`pwd`/fast-downward

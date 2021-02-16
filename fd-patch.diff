@@ -1,6 +1,24 @@
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/fast-downward fast-downward/fast-downward
+--- fast-downward-original/fast-downward	1969-12-31 21:00:00.000000000 -0300
++++ fast-downward/fast-downward	2021-02-12 12:24:13.727986000 -0200
+@@ -0,0 +1,13 @@
++#!/usr/bin/env bash
++DIR=`dirname $0`
++DOMAIN=$1
++shift
++PROBLEM=$1
++shift
++# ${DIR}/fast-downward.py $DOMAIN $PROBLEM --search "astar(lmcut())" "$@"
++# ${DIR}/fast-downward.py $DOMAIN $PROBLEM --search "astar(seq())" "$@"
++# ${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints()], lpsolver=CPLEX, transform=no_transform(), cache_estimates=true))" "$@"
++# ${DIR}/fast-downward.py --build=release64 $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))" "$@"
++${DIR}/fast-downward.py --build=release $DOMAIN $PROBLEM --search "astar(operatorcounting([lmcut_constraints(), pho_constraints(), state_equation_constraints()]))" "$@"
++
++# ${DIR}/fast-downward.py $DOMAIN $PROBLEM --alias seq-opt-lmcut "$@"
+\ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/DownwardFiles.cmake fast-downward/src/search/DownwardFiles.cmake
 --- fast-downward-original/src/search/DownwardFiles.cmake	2020-10-26 22:55:32.995391700 -0300
-+++ fast-downward/src/search/DownwardFiles.cmake	2020-10-26 21:10:31.712498700 -0300
++++ fast-downward/src/search/DownwardFiles.cmake	2021-02-12 12:23:27.293375700 -0200
 @@ -703,6 +703,10 @@
          operator_counting/operator_counting_heuristic
          operator_counting/pho_constraints
@@ -22,7 +40,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/Dow
          pdbs/max_cliques
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/algorithms/combinations.h fast-downward/src/search/algorithms/combinations.h
 --- fast-downward-original/src/search/algorithms/combinations.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/algorithms/combinations.h	2020-10-25 02:39:18.318163300 -0300
++++ fast-downward/src/search/algorithms/combinations.h	2021-02-12 12:23:27.324571500 -0200
 @@ -0,0 +1,45 @@
 +#ifndef ALGORITHMS_COMBINATIONS_H
 +#define ALGORITHMS_COMBINATIONS_H
@@ -71,7 +89,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/alg
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc fast-downward/src/search/heuristics/lm_cut_landmarks.cc
 --- fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc	2020-10-26 22:55:30.681229000 -0300
-+++ fast-downward/src/search/heuristics/lm_cut_landmarks.cc	2020-10-26 20:16:59.901192600 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.cc	2021-02-12 12:23:27.355849000 -0200
 @@ -10,6 +10,60 @@
  
  namespace lm_cut_heuristic {
@@ -135,7 +153,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heu
      task_properties::verify_no_conditional_effects(task_proxy);
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.h fast-downward/src/search/heuristics/lm_cut_landmarks.h
 --- fast-downward-original/src/search/heuristics/lm_cut_landmarks.h	2020-10-26 22:55:30.685249200 -0300
-+++ fast-downward/src/search/heuristics/lm_cut_landmarks.h	2020-10-26 20:16:59.911140400 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.h	2021-02-12 12:23:27.355849000 -0200
 @@ -86,6 +86,7 @@
      using LandmarkCallback = std::function<void (const Landmark &, int)>;
  
@@ -146,7 +164,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heu
      /*
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/ip.patch fast-downward/src/search/lp/ip.patch
 --- fast-downward-original/src/search/lp/ip.patch	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/lp/ip.patch	2020-10-25 02:39:19.958435800 -0300
++++ fast-downward/src/search/lp/ip.patch	2021-02-12 12:23:27.371075000 -0200
 @@ -0,0 +1,86 @@
 +diff -r 69ad07c0e8c6 -r b106ec3b48b5 src/search/lp/lp_solver.cc
 +--- a/src/search/lp/lp_solver.cc	Thu Feb 25 15:37:36 2016 +0100
@@ -236,7 +254,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
 +       Return true if the solving the LP showed that it is bounded feasible and
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_internals.cc fast-downward/src/search/lp/lp_internals.cc
 --- fast-downward-original/src/search/lp/lp_internals.cc	2020-10-26 22:55:33.018182500 -0300
-+++ fast-downward/src/search/lp/lp_internals.cc	2020-10-25 02:39:19.974025300 -0300
++++ fast-downward/src/search/lp/lp_internals.cc	2021-02-12 12:23:27.449630900 -0200
 @@ -11,25 +11,31 @@
  #pragma GCC diagnostic ignored "-Woverflow"
  #pragma GCC diagnostic ignored "-Wsign-compare"
@@ -271,7 +289,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.cc fast-downward/src/search/lp/lp_solver.cc
 --- fast-downward-original/src/search/lp/lp_solver.cc	2020-10-26 22:55:33.021390200 -0300
-+++ fast-downward/src/search/lp/lp_solver.cc	2020-11-04 02:09:07.048309500 -0200
++++ fast-downward/src/search/lp/lp_solver.cc	2021-02-12 12:23:27.464836900 -0200
 @@ -21,6 +21,8 @@
  #endif
  
@@ -417,7 +435,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
 +}  // namespace lp
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/lp_solver.h fast-downward/src/search/lp/lp_solver.h
 --- fast-downward-original/src/search/lp/lp_solver.h	2020-10-26 22:55:33.025379300 -0300
-+++ fast-downward/src/search/lp/lp_solver.h	2020-11-04 02:09:57.386714900 -0200
++++ fast-downward/src/search/lp/lp_solver.h	2021-02-12 12:23:27.464836900 -0200
 @@ -46,6 +46,7 @@
      std::vector<double> coefficients;
      double lower_bound;
@@ -481,7 +499,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
        The LP has to be solved with a call to solve() and has to have an optimal
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.cc fast-downward/src/search/operator_counting/constraint_generator.cc
 --- fast-downward-original/src/search/operator_counting/constraint_generator.cc	2020-10-26 22:55:33.057730200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.cc	2020-12-09 22:48:13.835269100 -0200
++++ fast-downward/src/search/operator_counting/constraint_generator.cc	2021-02-12 12:23:27.496493600 -0200
 @@ -6,7 +6,12 @@
  
  namespace operator_counting {
@@ -498,7 +516,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  static PluginTypePlugin<ConstraintGenerator> _type_plugin(
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.h fast-downward/src/search/operator_counting/constraint_generator.h
 --- fast-downward-original/src/search/operator_counting/constraint_generator.h	2020-10-26 22:55:33.062373200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.h	2020-12-09 22:48:00.835725000 -0200
++++ fast-downward/src/search/operator_counting/constraint_generator.h	2021-02-12 12:23:27.496493600 -0200
 @@ -10,6 +10,12 @@
  namespace lp {
  class LPConstraint;
@@ -545,7 +563,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2020-12-13 09:13:31.763888300 -0200
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2021-02-12 12:23:27.496493600 -0200
 @@ -0,0 +1,306 @@
 +#include "delete_relaxation_constraints.h"
 +
@@ -855,7 +873,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h fast-downward/src/search/operator_counting/delete_relaxation_constraints.h
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2020-12-13 01:01:30.626632600 -0200
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2021-02-12 12:23:27.511666600 -0200
 @@ -0,0 +1,72 @@
 +#ifndef OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
@@ -931,7 +949,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraint_internals.cc fast-downward/src/search/operator_counting/flow_constraint_internals.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraint_internals.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraint_internals.cc	2020-11-04 01:58:30.065758600 -0200
++++ fast-downward/src/search/operator_counting/flow_constraint_internals.cc	2021-02-12 12:23:27.511666600 -0200
 @@ -0,0 +1,242 @@
 +#include "flow_constraint_internals.h"
 +
@@ -1177,7 +1195,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraint_internals.h fast-downward/src/search/operator_counting/flow_constraint_internals.h
 --- fast-downward-original/src/search/operator_counting/flow_constraint_internals.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraint_internals.h	2020-10-26 20:16:59.961721000 -0300
++++ fast-downward/src/search/operator_counting/flow_constraint_internals.h	2021-02-12 12:23:27.511666600 -0200
 @@ -0,0 +1,66 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINT_INTERNALS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINT_INTERNALS_H
@@ -1247,8 +1265,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.cc fast-downward/src/search/operator_counting/flow_constraints.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.cc	2021-02-09 19:39:55.048460600 -0200
-@@ -0,0 +1,513 @@
++++ fast-downward/src/search/operator_counting/flow_constraints.cc	2021-02-16 15:43:16.900293200 -0200
+@@ -0,0 +1,530 @@
 +#include "flow_constraints.h"
 +
 +#include "../option_parser.h"
@@ -1548,16 +1566,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    if (merge_preconditions == 1) {
 +        // Intra-operator
 +        for (int id : operator_ids) {
-+            vector<FactPair> all_preconditions;
++            vector<FactPair> all_facts;
 +            for (FactProxy pre : ops[id].get_preconditions()) {
 +                if (!merge_goal_only || goal_vars[pre.get_variable().get_id()])
-+                    all_preconditions.push_back(pre.get_pair());
++                    all_facts.push_back(pre.get_pair());
 +            }
-+            if (all_preconditions.size() > 0) {
++            if (all_facts.size() > 0) {
++                /*sort (all_facts.begin(), all_facts.end(), [](FactPair &a, FactPair &b) {
++                    return a.var < b.var;
++                });*/
 +                // Create patterns
 +                Combinations<FactPair> combos;
-+                int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
-+                for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++                int num_extra_features = min(max_merge_feature_size, (int) all_facts.size());
++                for (vector<FactPair> feature : combos.get_combinations(all_facts, num_extra_features)) {
++                    sort(feature.begin(), feature.end());
 +                    pdbs::Pattern pattern;
 +                    vector<int> state;
 +                    for (FactPair fact : feature) {
@@ -1573,18 +1595,22 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        }
 +    } else if (merge_preconditions == 2) {
 +        // Inter-operator
-+        vector<FactPair> all_preconditions;
++        vector<FactPair> all_facts;
 +        for (int id : operator_ids) {
 +            for (FactProxy pre : ops[id].get_preconditions()) {
 +                if (!merge_goal_only || goal_vars[pre.get_variable().get_id()])
-+                    all_preconditions.push_back(pre.get_pair());
++                    all_facts.push_back(pre.get_pair());
 +            }
 +        }
-+        if (all_preconditions.size() > 0) {
++        if (all_facts.size() > 0) {
++            /*sort (all_facts.begin(), all_facts.end(), [](FactPair &a, FactPair &b) {
++                return a.var < b.var;
++            });*/
 +            // Create patterns
 +            Combinations<FactPair> combos;
-+            int num_extra_features = min(max_merge_feature_size, (int) all_preconditions.size());
-+            for (vector<FactPair> feature : combos.get_combinations(all_preconditions, num_extra_features)) {
++            int num_extra_features = min(max_merge_feature_size, (int) all_facts.size());
++            for (vector<FactPair> feature : combos.get_combinations(all_facts, num_extra_features)) {
++                sort(feature.begin(), feature.end());
 +                pdbs::Pattern pattern;
 +                vector<int> state;
 +                for (FactPair fact : feature) {
@@ -1601,16 +1627,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +    if (merge_effects == 1) {
 +        for (int id : operator_ids) {
-+            vector<FactPair> all_effects;
++            vector<FactPair> all_facts;
 +            for (EffectProxy eff : ops[id].get_effects()) {
 +                if (!merge_goal_only || goal_vars[eff.get_fact().get_variable().get_id()])
-+                    all_effects.push_back(eff.get_fact().get_pair());
++                    all_facts.push_back(eff.get_fact().get_pair());
 +            }
-+            if (all_effects.size() > 0) {
++            if (all_facts.size() > 0) {
++                /*sort (all_facts.begin(), all_facts.end(), [](FactPair &a, FactPair &b) {
++                    return a.var < b.var;
++                });*/
 +                // Create patterns
 +                Combinations<FactPair> combos;
-+                int num_extra_features = min(max_merge_feature_size, (int) all_effects.size());
-+                for (vector<FactPair> feature : combos.get_combinations(all_effects, num_extra_features)) {
++                int num_extra_features = min(max_merge_feature_size, (int) all_facts.size());
++                for (vector<FactPair> feature : combos.get_combinations(all_facts, num_extra_features)) {
++                    sort(feature.begin(), feature.end());
 +                    pdbs::Pattern pattern;
 +                    vector<int> state;
 +                    for (FactPair fact : feature) {
@@ -1625,18 +1655,22 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            }
 +        }
 +    } else if (merge_effects == 2) {
-+        vector<FactPair> all_effects;
++        vector<FactPair> all_facts;
 +        for (int id : operator_ids) {
 +            for (EffectProxy eff : ops[id].get_effects()) {
 +                if (!merge_goal_only || goal_vars[eff.get_fact().get_variable().get_id()])
-+                    all_effects.push_back(eff.get_fact().get_pair());
++                    all_facts.push_back(eff.get_fact().get_pair());
 +            }
 +        }
-+        if (all_effects.size() > 0) {
++        if (all_facts.size() > 0) {
++            /*sort (all_facts.begin(), all_facts.end(), [](FactPair &a, FactPair &b) {
++                return a.var < b.var;
++            });*/
 +            // Create patterns
 +            Combinations<FactPair> combos;
-+            int num_extra_features = min(max_merge_feature_size, (int) all_effects.size());
-+            for (vector<FactPair> feature : combos.get_combinations(all_effects, num_extra_features)) {
++            int num_extra_features = min(max_merge_feature_size, (int) all_facts.size());
++            for (vector<FactPair> feature : combos.get_combinations(all_facts, num_extra_features)) {
++                sort(feature.begin(), feature.end());
 +                pdbs::Pattern pattern;
 +                vector<int> state;
 +                for (FactPair fact : feature) {
@@ -1652,6 +1686,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    }
 +
 +    // Add constraints to represented features
++    //sub_constraints.reserve(patterns->size());
 +    for (const auto &entry : represented_features) {
 +        const pdbs::Pattern &pattern = entry.first;
 +        const vector<vector<int>> &states = entry.second;
@@ -1764,7 +1799,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.h fast-downward/src/search/operator_counting/flow_constraints.h
 --- fast-downward-original/src/search/operator_counting/flow_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.h	2021-02-09 19:35:10.185557000 -0200
++++ fast-downward/src/search/operator_counting/flow_constraints.h	2021-02-12 12:23:27.527288000 -0200
 @@ -0,0 +1,58 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
@@ -1826,7 +1861,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2020-10-26 22:55:33.066597400 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2020-10-26 20:16:59.975700900 -0300
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2021-02-12 12:23:27.527288000 -0200
 @@ -16,11 +16,12 @@
  
  namespace operator_counting {
@@ -1896,7 +1931,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  static shared_ptr<ConstraintGenerator> _parse(OptionParser &parser) {
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.h fast-downward/src/search/operator_counting/lm_cut_constraints.h
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.h	2020-10-26 22:55:33.069747000 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.h	2020-10-26 20:16:59.981323000 -0300
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.h	2021-02-12 12:23:27.542910900 -0200
 @@ -15,6 +15,7 @@
  public:
      virtual void initialize_constraints(
@@ -1907,7 +1942,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      virtual bool update_constraints(const State &state,
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2020-12-14 08:18:53.934406100 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2021-02-12 12:23:27.542910900 -0200
 @@ -0,0 +1,494 @@
 +#include "oc_single_shot_heuristic.h"
 +
@@ -2405,7 +2440,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2020-12-02 00:46:02.994255800 -0200
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2021-02-12 12:23:27.542910900 -0200
 @@ -0,0 +1,59 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
@@ -2468,7 +2503,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc fast-downward/src/search/operator_counting/operator_counting_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/operator_counting_heuristic.cc	2020-10-26 22:55:33.073739400 -0300
-+++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc	2020-10-26 20:16:59.996557800 -0300
++++ fast-downward/src/search/operator_counting/operator_counting_heuristic.cc	2021-02-12 12:23:27.558572300 -0200
 @@ -25,7 +25,7 @@
      }
      vector<lp::LPConstraint> constraints;
@@ -2480,7 +2515,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.cc fast-downward/src/search/operator_counting/pho_constraints.cc
 --- fast-downward-original/src/search/operator_counting/pho_constraints.cc	2020-10-26 22:55:33.078752500 -0300
-+++ fast-downward/src/search/operator_counting/pho_constraints.cc	2020-10-26 20:17:00.007530900 -0300
++++ fast-downward/src/search/operator_counting/pho_constraints.cc	2021-02-12 12:23:27.558572300 -0200
 @@ -25,6 +25,7 @@
  
  void PhOConstraints::initialize_constraints(
@@ -2500,7 +2535,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      constraint_offset = constraints.size();
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/pho_constraints.h fast-downward/src/search/operator_counting/pho_constraints.h
 --- fast-downward-original/src/search/operator_counting/pho_constraints.h	2020-10-26 22:55:33.082762100 -0300
-+++ fast-downward/src/search/operator_counting/pho_constraints.h	2020-10-26 20:17:00.013544500 -0300
++++ fast-downward/src/search/operator_counting/pho_constraints.h	2021-02-12 12:23:27.558572300 -0200
 @@ -26,6 +26,7 @@
  
      virtual void initialize_constraints(
@@ -2511,7 +2546,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      virtual bool update_constraints(
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/state_equation_constraints.cc fast-downward/src/search/operator_counting/state_equation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/state_equation_constraints.cc	2020-10-26 22:55:33.086734100 -0300
-+++ fast-downward/src/search/operator_counting/state_equation_constraints.cc	2020-10-26 20:17:00.021516500 -0300
++++ fast-downward/src/search/operator_counting/state_equation_constraints.cc	2021-02-12 12:23:27.574152000 -0200
 @@ -68,7 +68,9 @@
  }
  
@@ -2525,7 +2560,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      TaskProxy task_proxy(*task);
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/state_equation_constraints.h fast-downward/src/search/operator_counting/state_equation_constraints.h
 --- fast-downward-original/src/search/operator_counting/state_equation_constraints.h	2020-10-26 22:55:33.090722200 -0300
-+++ fast-downward/src/search/operator_counting/state_equation_constraints.h	2020-10-26 20:17:00.030467300 -0300
++++ fast-downward/src/search/operator_counting/state_equation_constraints.h	2021-02-12 12:23:27.574152000 -0200
 @@ -34,6 +34,7 @@
      void add_constraints(std::vector<lp::LPConstraint> &constraints, double infinity);
  public:
@@ -2536,7 +2571,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      virtual bool update_constraints(const State &state, lp::LPSolver &lp_solver);
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdbs/explicit_projection.cc fast-downward/src/search/pdbs/explicit_projection.cc
 --- fast-downward-original/src/search/pdbs/explicit_projection.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/pdbs/explicit_projection.cc	2020-10-25 02:39:21.911105400 -0300
++++ fast-downward/src/search/pdbs/explicit_projection.cc	2021-02-12 12:23:27.605587800 -0200
 @@ -0,0 +1,513 @@
 +#include "explicit_projection.h"
 +
@@ -3053,7 +3088,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdb
 +}  // namespace pdbs
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdbs/explicit_projection.h fast-downward/src/search/pdbs/explicit_projection.h
 --- fast-downward-original/src/search/pdbs/explicit_projection.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/pdbs/explicit_projection.h	2020-10-25 02:39:21.926725200 -0300
++++ fast-downward/src/search/pdbs/explicit_projection.h	2021-02-12 12:23:27.621033500 -0200
 @@ -0,0 +1,52 @@
 +#ifndef PDBS_EXPLICIT_PROJECTION_H
 +#define PDBS_EXPLICIT_PROJECTION_H
