@@ -159,12 +159,14 @@ class DomainData:
 if __name__ == '__main__':
 	observabilities = ['10', '30', '50', '70', '100']
 	base_path = '../goal-plan-recognition-dataset/'
-	domain_data = DomainData(sys.argv[1], observabilities)
 	if '-fast' in sys.argv:
 		EXP_FILTER = True
-	if os.path.exists(sys.argv[1] + ".txt") and False:
-		domain_data.read()
-		print(domain_data.print_problems())
-	else:
-		domain_data.load(base_path)
-		domain_data.write()
+		sys.argv.remove('-fast')
+	for domain in sys.argv[1:]:
+		domain_data = DomainData(domain, observabilities)
+		if os.path.exists(sys.argv[1] + ".txt") and False:
+			domain_data.read()
+			print(domain_data.print_problems())
+		else:
+			domain_data.load(base_path)
+			domain_data.write()

@@ -19,7 +19,11 @@ def parse_constraints(arg):
     i = 1
     while i < len(arg):
         if arg[i] == 'l':
-            h = "lmcut_constraints()"
+            n = 0# Noisy
+            if len(arg) > i+1 and arg[i+1].isdigit():
+                i += 1
+                n = int(arg[i])
+            h = "lmcut_constraints(%s)" % n
         if arg[i] == 'p':
             h = "pho_constraints()"
         if arg[i] == 's':
@@ -48,9 +52,14 @@ def parse_constraints(arg):
             else: # use all integer_vars
                 h = "delete_relaxation_constraints(%s)" % time_vars
         if arg[i] == 'f':
-            # Systematic patterns size
-            s = arg[i+1]
             i += 1
+            # Systematic patterns size
+            s = arg[i]
+            # Naive systematic
+            n = False
+            if len(arg) > i+1 and arg[i+1] == 'n':
+                i += 1
+                n = True
             # Partial merge type
             m = 0
             if len(arg) > i+1 and arg[i+1] == 'f':
@@ -64,17 +73,18 @@ def parse_constraints(arg):
             # Partial merges parameters
             if len(arg) > i+1 and arg[i+1].isdigit():
                 i += 1
-                if arg[i] == '0': # O
+                # 0 -> no merges, 1 -> merges within operator, 2 -> merges inter-operators
+                if arg[i] == '0': # Preconditions + effects
                     param = "merge_preconditions=2, merge_effects=2"
-                elif arg[i] == '1': # OP
+                elif arg[i] == '1': # Preconditions
                     param = "merge_preconditions=2, merge_effects=0"
-                elif arg[i] == '2': # OE
+                elif arg[i] == '2': # Effects
                     param = "merge_preconditions=0, merge_effects=2"
-                elif arg[i] == '3': # OI
+                elif arg[i] == '3': # Preconditions + effects (intra)
                     param = "merge_preconditions=1, merge_effects=1"
-                elif arg[i] == '4': # OPI
+                elif arg[i] == '4': # Preconditions (intra)
                     param = "merge_preconditions=1, merge_effects=0"
-                elif arg[i] == '5': # OEI
+                elif arg[i] == '5': # Effects (intra)
                     param = "merge_preconditions=0, merge_effects=1"
             # Old partial merges
             elif len(arg) > i+1 and arg[i+1] >= 'a' and arg[i+1] <= 'd':
@@ -94,7 +104,7 @@ def parse_constraints(arg):
                 m = 1
             else:
                 param = "merge_preconditions=2, merge_effects=2"
-            h = "flow_constraints(systematic(%s), partial_merges=%s, merge_goal_only=%s, %s)" % (s, m, g, param)
+            h = "flow_constraints(systematic(%s, only_interesting_patterns=%s), partial_merges=%s, merge_goal_only=%s, %s)" % (s, not n, m, g, param)
         print(h)
         heuristics.append(h)
         i += 1

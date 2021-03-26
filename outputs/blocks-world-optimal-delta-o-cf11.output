@@ -1,0 +1,65 @@
+blocks-world-optimal/10/blocks-world_p01_hyp-1_10_1.tar.bz2:5.03176093102:0.046875:3.78
+> (clear w),(on a r),(ontable r),(on w a):True:6.0,8.0:353.0,262.0
+> (ontable w),(clear d),(on a w),(on d r),(on r a):True:6.0,8.0:353.0,271.0
+> (clear d),(on a r),(ontable r),(on e a),(on d e):True:8.0,10.0:353.0,271.0
+> (on c o),(on o r),(clear c),(on r e),(ontable e):True:7.0,9.0:353.0,271.0
+> (clear c),(ontable r),(on c o),(on e r),(on o w),(on w e):True:11.0,13.0:353.0,280.0
+> (on a r),(ontable r),(on e a),(clear e):True:6.0,8.0:353.0,262.0
+> (on p e),(on a r),(ontable r),(on e a),(clear p):True:8.0,10.0:353.0,271.0
+> (ontable w),(on o w),(on r o),(clear r):True:4.0,6.0:353.0,262.0
+> (ontable p),(on a p),(on e a),(on r e),(clear r):True:6.0,8.0:353.0,271.0
+> (clear d),(on p e),(on o p),(ontable e),(on d o):True:6.0,8.0:353.0,271.0
+> (on p e),(on r a),(on a p),(ontable e),(clear r):True:6.0,8.0:353.0,271.0
+> (on p e),(on r o),(on o p),(ontable e),(clear r):True:6.0,8.0:353.0,271.0
+> (clear w),(on a d),(ontable d),(on w a):True:6.0,8.0:353.0,262.0
+> (clear w),(on a d),(on w a),(ontable e),(on d e):True:6.0,8.0:353.0,271.0
+> (clear w),(on w o),(on o r),(on r e),(ontable e):True:6.0,8.0:353.0,271.0
+> (ontable w),(clear p),(on a w),(on p a):True:5.0,7.0:353.0,262.0
+> (ontable w),(on r a),(on a w),(clear r):True:4.0,6.0:353.0,262.0
+> (ontable w),(on o w),(on r o),(clear c),(on c r):True:7.0,9.0:353.0,271.0
+> (clear w),(on a r),(on w e),(ontable r),(on e a):True:8.0,10.0:353.0,271.0
+> (on r e),(on o r),(clear p),(ontable e),(on p o):True:6.0,8.0:353.0,271.0
+> (ontable r),(on e r),(on p o),(on o w),(on w e),(clear p):True:10.0,12.0:353.0,280.0
+blocks-world-optimal/10/blocks-world_p01_hyp-2_10_1.tar.bz2:4.70010900497:0.109375:3.81
+> (clear w),(on a r),(ontable r),(on w a):True:6.0,6.0:353.0,262.0
+> (ontable w),(clear d),(on a w),(on d r),(on r a):False:6.0,8.0:353.0,271.0
+> (clear d),(on a r),(ontable r),(on e a),(on d e):False:8.0,9.0:353.0,271.0
+> (on c o),(on o r),(clear c),(on r e),(ontable e):False:7.0,8.0:353.0,271.0
+> (clear c),(ontable r),(on c o),(on e r),(on o w),(on w e):True:11.0,11.0:353.0,280.0
+> (on a r),(ontable r),(on e a),(clear e):False:6.0,7.0:353.0,262.0
+> (on p e),(on a r),(ontable r),(on e a),(clear p):False:8.0,9.0:353.0,271.0
+> (ontable w),(on o w),(on r o),(clear r):False:4.0,6.0:353.0,262.0
+> (ontable p),(on a p),(on e a),(on r e),(clear r):False:6.0,7.0:353.0,271.0
+> (clear d),(on p e),(on o p),(ontable e),(on d o):False:6.0,7.0:353.0,271.0
+> (on p e),(on r a),(on a p),(ontable e),(clear r):False:6.0,7.0:353.0,271.0
+> (on p e),(on r o),(on o p),(ontable e),(clear r):False:6.0,7.0:353.0,271.0
+> (clear w),(on a d),(ontable d),(on w a):True:6.0,6.0:353.0,262.0
+> (clear w),(on a d),(on w a),(ontable e),(on d e):True:6.0,6.0:353.0,271.0
+> (clear w),(on w o),(on o r),(on r e),(ontable e):True:6.0,6.0:353.0,271.0
+> (ontable w),(clear p),(on a w),(on p a):False:5.0,7.0:353.0,262.0
+> (ontable w),(on r a),(on a w),(clear r):False:4.0,6.0:353.0,262.0
+> (ontable w),(on o w),(on r o),(clear c),(on c r):False:7.0,9.0:353.0,271.0
+> (clear w),(on a r),(on w e),(ontable r),(on e a):True:8.0,8.0:353.0,271.0
+> (on r e),(on o r),(clear p),(ontable e),(on p o):False:6.0,7.0:353.0,271.0
+> (ontable r),(on e r),(on p o),(on o w),(on w e),(clear p):True:10.0,10.0:353.0,280.0
+blocks-world-optimal/10/blocks-world_p02_hyp-1_10_1.tar.bz2:4.62092804909:0.09375:3.58
+> (on c k),(ontable k),(on s a),(clear s),(on a c):False:4.0,6.0:419.0,343.0
+> (on r t),(clear c),(ontable t),(on c u),(on u r):False:6.0,8.0:419.0,343.0
+> (on c k),(on r u),(ontable k),(on u c),(clear t),(on t r):False:8.0,10.0:419.0,352.0
+> (on s t),(on r u),(ontable t),(on u s),(clear r):True:6.0,6.0:419.0,343.0
+> (clear c),(on r u),(ontable h),(on c r),(on s h),(on u s):False:8.0,10.0:419.0,352.0
+> (on c k),(ontable k),(on r u),(on u c),(clear r):False:6.0,8.0:419.0,343.0
+> (clear t),(on t u),(on s h),(on u s),(ontable h):False:6.0,8.0:419.0,343.0
+> (ontable h),(clear a),(on a s),(on s h):False:4.0,6.0:419.0,334.0
+> (on t a),(ontable r),(clear s),(on s t),(on a r):True:6.0,6.0:419.0,343.0
+> (on c k),(on a c),(ontable k),(clear h),(on h a):False:6.0,8.0:419.0,343.0
+> (on a s),(ontable h),(on s h),(clear t),(on t r),(on r a):False:8.0,10.0:419.0,352.0
+> (on c k),(clear t),(ontable k),(on u c),(on t u):False:6.0,8.0:419.0,343.0
+> (clear c),(ontable t),(on c u),(on u t):False:4.0,6.0:419.0,334.0
+> (on s h),(on h u),(clear s),(ontable t),(on u t):False:6.0,8.0:419.0,343.0
+> (ontable h),(on c a),(clear c),(on a s),(on s h):False:6.0,8.0:419.0,343.0
+> (on u t),(on r u),(ontable t),(clear r):False:4.0,6.0:419.0,334.0
+> (on c k),(ontable k),(clear s),(on u c),(on s u):False:6.0,8.0:419.0,343.0
+> (ontable h),(on s h),(on r u),(on u s),(clear r):False:6.0,8.0:419.0,343.0
+> (ontable h),(on a s),(on s h),(on r a),(clear r):False:6.0,8.0:419.0,343.0
+> (on a s),(clear c),(ontable h),(on c r),(on s h),(on r a):False:8.0,10.0:419.0,352.0

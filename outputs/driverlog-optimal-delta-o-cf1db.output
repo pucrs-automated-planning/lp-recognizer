@@ -1,0 +1,230 @@
+driverlog-optimal/10/driverlog_p03_hyp-1_10_1.tar.bz2:2.26292705536:0.453125:1.96
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):True:6.0,7.0:381.0,181.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,11.0:457.0,209.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,7.0:287.0,169.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):True:9.0,10.0:405.0,181.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):True:5.0,6.0:241.0,128.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):True:7.0,8.0:351.0,161.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,10.0:399.0,186.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):True:4.0,5.0:211.0,103.0
+driverlog-optimal/10/driverlog_p03_hyp-2_10_1.tar.bz2:2.1005320549:0.40625:1.85
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,9.0:358.0,162.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,10.0:434.0,188.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,8.0:214.0,94.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):False:9.0,10.0:406.0,185.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,7.0:202.0,86.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):True:7.0,7.0:330.0,139.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,9.0:378.0,170.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,6.0:190.0,83.0
+driverlog-optimal/10/driverlog_p04_hyp-1_10_1.tar.bz2:1.94428515434:0.609375:1.73
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):True:13.0,14.0:730.0,320.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,14.0:720.0,306.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,12.0:530.0,217.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):False:10.0,14.0:532.0,230.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):True:11.0,12.0:658.0,269.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,13.0:716.0,314.0
+driverlog-optimal/10/driverlog_p04_hyp-2_10_1.tar.bz2:1.93602800369:0.625:1.79
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,15.0:774.0,361.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):True:12.0,13.0:704.0,301.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,12.0:582.0,273.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):True:10.0,11.0:562.0,256.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):False:11.0,14.0:710.0,325.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):True:11.0,12.0:740.0,329.0
+driverlog-optimal/10/driverlog_p05_hyp-1_10_1.tar.bz2:1.93350100517:0.625:1.81
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,9.0:622.0,251.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:11.0,12.0:916.0,388.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,10.0:682.0,301.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,13.0:780.0,272.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,11.0:906.0,321.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,13.0:676.0,289.0
+driverlog-optimal/10/driverlog_p05_hyp-2_10_1.tar.bz2:2.14092493057:0.671875:1.79
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,9.0:622.0,251.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,11.0:894.0,379.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,10.0:662.0,279.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,13.0:876.0,361.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,11.0:1030.0,438.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,13.0:676.0,289.0
+driverlog-optimal/30/driverlog_p03_hyp-1_30_1.tar.bz2:2.09202504158:0.40625:1.84
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,9.0:359.0,163.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,12.0:439.0,195.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,8.0:215.0,95.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):True:9.0,11.0:407.0,186.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):True:5.0,7.0:203.0,87.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):True:7.0,9.0:331.0,140.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,11.0:379.0,169.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,7.0:187.0,78.0
+driverlog-optimal/30/driverlog_p03_hyp-2_30_1.tar.bz2:2.11141395569:0.375:1.81
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,11.0:360.0,164.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,13.0:440.0,196.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,10.0:216.0,96.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):True:9.0,12.0:408.0,187.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,10.0:204.0,88.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):True:7.0,10.0:332.0,141.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):True:8.0,11.0:380.0,170.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,9.0:188.0,79.0
+driverlog-optimal/30/driverlog_p04_hyp-1_30_1.tar.bz2:2.1665790081:0.671875:1.85
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,15.0:732.0,322.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,18.0:716.0,293.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,12.0:532.0,220.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):False:10.0,17.0:542.0,234.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):True:11.0,12.0:660.0,273.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,16.0:722.0,316.0
+driverlog-optimal/30/driverlog_p04_hyp-2_30_1.tar.bz2:1.92350697517:0.609375:1.74
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,17.0:738.0,321.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,13.0:700.0,290.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,15.0:536.0,223.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):True:10.0,10.0:528.0,224.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):False:11.0,16.0:668.0,282.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,13.0:704.0,303.0
+driverlog-optimal/30/driverlog_p05_hyp-1_30_1.tar.bz2:2.21514296532:0.75:1.86
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,15.0:759.0,374.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,15.0:1025.0,469.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,16.0:777.0,393.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,17.0:871.0,372.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,15.0:1121.0,505.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,18.0:767.0,382.0
+driverlog-optimal/30/driverlog_p05_hyp-2_30_1.tar.bz2:2.03805303574:0.71875:1.8
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,15.0:713.0,329.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,15.0:945.0,428.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,14.0:713.0,328.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,16.0:825.0,327.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,15.0:1075.0,464.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,17.0:721.0,338.0
+driverlog-optimal/50/driverlog_p03_hyp-1_50_1.tar.bz2:2.09761810303:0.390625:1.88
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,10.0:360.0,164.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,13.0:442.0,200.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,9.0:220.0,102.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):True:9.0,12.0:368.0,140.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,9.0:208.0,94.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):False:7.0,11.0:336.0,147.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,12.0:380.0,171.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):True:4.0,7.0:188.0,79.0
+driverlog-optimal/50/driverlog_p03_hyp-2_50_1.tar.bz2:2.13803815842:0.390625:1.87
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,12.0:387.0,188.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,12.0:439.0,193.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,14.0:287.0,173.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):True:9.0,11.0:411.0,190.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,13.0:243.0,130.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):True:7.0,9.0:335.0,144.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,12.0:395.0,184.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,14.0:227.0,126.0
+driverlog-optimal/50/driverlog_p04_hyp-1_50_1.tar.bz2:1.90386509895:0.609375:1.72
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,16.0:735.0,324.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,17.0:705.0,287.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,14.0:535.0,222.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):False:10.0,17.0:557.0,252.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):True:11.0,12.0:663.0,275.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,16.0:733.0,327.0
+driverlog-optimal/50/driverlog_p04_hyp-2_50_1.tar.bz2:1.97350597382:0.609375:1.79
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,16.0:778.0,365.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,14.0:704.0,299.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,14.0:602.0,293.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):True:10.0,11.0:566.0,260.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):False:11.0,15.0:730.0,345.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,15.0:744.0,334.0
+driverlog-optimal/50/driverlog_p05_hyp-1_50_1.tar.bz2:2.08286213875:0.75:1.91
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,14.0:708.0,330.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:11.0,15.0:978.0,441.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,14.0:716.0,330.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,18.0:850.0,353.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,14.0:1078.0,476.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,17.0:746.0,361.0
+driverlog-optimal/50/driverlog_p05_hyp-2_50_1.tar.bz2:2.04516220093:0.6875:1.84
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,17.0:703.0,315.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,13.0:947.0,429.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,12.0:715.0,329.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,18.0:845.0,336.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):False:11.0,15.0:1077.0,466.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,16.0:733.0,344.0
+driverlog-optimal/70/driverlog_p03_hyp-1_70_1.tar.bz2:2.26221203804:0.421875:1.86
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,14.0:402.0,201.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):False:10.0,15.0:468.0,217.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,9.0:292.0,174.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):False:9.0,17.0:432.0,204.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,9.0:250.0,134.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):False:7.0,15.0:380.0,187.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,14.0:422.0,206.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):True:4.0,7.0:216.0,108.0
+driverlog-optimal/70/driverlog_p03_hyp-2_70_1.tar.bz2:2.1905670166:0.421875:1.87
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,19.0:396.0,194.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,12.0:442.0,196.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,16.0:302.0,180.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):False:9.0,18.0:418.0,186.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,17.0:260.0,142.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):False:7.0,15.0:366.0,174.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,12.0:402.0,190.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,17.0:246.0,138.0
+driverlog-optimal/70/driverlog_p04_hyp-1_70_1.tar.bz2:1.92737007141:0.59375:1.8
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,17.0:802.0,379.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,21.0:740.0,320.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,15.0:582.0,266.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):False:10.0,20.0:602.0,285.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):True:11.0,13.0:718.0,313.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,19.0:774.0,353.0
+driverlog-optimal/70/driverlog_p04_hyp-2_70_1.tar.bz2:2.13211512566:0.609375:1.64
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,19.0:786.0,368.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,15.0:734.0,332.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,18.0:614.0,301.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):True:10.0,11.0:568.0,262.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):False:11.0,18.0:742.0,353.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,16.0:746.0,335.0
+driverlog-optimal/70/driverlog_p05_hyp-1_70_1.tar.bz2:2.05715203285:0.734375:1.87
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,15.0:715.0,328.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,14.0:985.0,441.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,16.0:739.0,345.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,17.0:873.0,359.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):False:11.0,16.0:1089.0,484.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,20.0:769.0,374.0
+driverlog-optimal/70/driverlog_p05_hyp-2_70_1.tar.bz2:2.15176010132:0.765625:1.94
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,19.0:750.0,367.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,16.0:992.0,465.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:9.0,14.0:766.0,377.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,21.0:908.0,401.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,16.0:1122.0,500.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,21.0:784.0,388.0
+driverlog-optimal/100/driverlog_p03_hyp-1_full.tar.bz2:2.11336708069:0.421875:1.87
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,16.0:404.0,203.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):False:10.0,16.0:470.0,219.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,10.0:294.0,176.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):False:9.0,18.0:434.0,206.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,10.0:252.0,136.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):False:7.0,16.0:382.0,189.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,15.0:424.0,208.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):True:4.0,8.0:218.0,110.0
+driverlog-optimal/100/driverlog_p03_hyp-2_full.tar.bz2:2.17799115181:0.390625:1.81
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s0):False:6.0,20.0:399.0,196.0
+> (at truck1 s2),(at driver1 s1),(at package1 s2),(at package2 s1):True:10.0,13.0:453.0,206.0
+> (at truck1 s2),(at driver1 s2),(at package1 s1),(at package2 s0):False:5.0,19.0:305.0,183.0
+> (at driver1 s0),(at package2 s2),(at package1 s0),(at truck1 s2):False:9.0,19.0:423.0,194.0
+> (at driver1 s2),(at truck1 s1),(at package1 s1),(at package2 s0):False:5.0,20.0:263.0,145.0
+> (at driver1 s1),(at truck1 s1),(at package2 s1),(at package1 s0):False:7.0,16.0:369.0,177.0
+> (at driver1 s1),(at package1 s2),(at package2 s1),(at truck1 s0):False:8.0,14.0:407.0,194.0
+> (at package2 s0),(at driver1 s2),(at package1 s1),(at truck1 s0):False:4.0,20.0:251.0,142.0
+driverlog-optimal/100/driverlog_p04_hyp-1_full.tar.bz2:2.00055980682:0.625:1.76
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,17.0:805.0,382.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,24.0:749.0,324.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,16.0:585.0,269.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):False:10.0,24.0:617.0,295.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):True:11.0,13.0:721.0,316.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,22.0:789.0,363.0
+driverlog-optimal/100/driverlog_p04_hyp-2_full.tar.bz2:2.0717279911:0.640625:1.85
+> (at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s2),(at driver3 s2),(at truck2 s0):False:13.0,21.0:795.0,372.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package3 s0),(at package1 s1),(at truck1 s1):False:12.0,15.0:709.0,304.0
+> (at driver2 s0),(at package1 s2),(at package3 s1),(at package2 s1),(at truck1 s0),(at truck2 s1):False:10.0,21.0:619.0,301.0
+> (at driver2 s1),(at truck1 s1),(at package3 s0),(at package1 s1),(at package2 s0),(at truck2 s0):True:10.0,11.0:571.0,265.0
+> (at package1 s2),(at package3 s1),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck2 s1):False:11.0,21.0:747.0,353.0
+> (at truck2 s2),(at driver2 s2),(at package3 s0),(at package2 s0),(at package1 s1),(at truck1 s0):False:11.0,16.0:749.0,338.0
+driverlog-optimal/100/driverlog_p05_hyp-1_full.tar.bz2:2.11413908005:0.8125:1.94
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,21.0:803.0,403.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,15.0:997.0,460.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):False:9.0,17.0:791.0,395.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,23.0:939.0,420.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):False:11.0,18.0:1135.0,520.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,25.0:827.0,427.0
+driverlog-optimal/100/driverlog_p05_hyp-2_full.tar.bz2:2.06995797157:0.75:1.9
+> (at driver3 s0),(at package1 s2),(at truck1 s1),(at package2 s2),(at truck3 s1),(at truck2 s0):False:7.0,21.0:782.0,389.0
+> (at package1 s2),(at driver2 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:11.0,16.0:996.0,469.0
+> (at driver2 s0),(at package1 s2),(at package2 s1),(at truck1 s2),(at truck3 s0),(at truck2 s1):True:9.0,14.0:770.0,381.0
+> (at package2 s2),(at truck2 s0),(at driver2 s2),(at package1 s1),(at truck3 s1),(at truck1 s1):False:10.0,24.0:918.0,404.0
+> (at package1 s2),(at package2 s1),(at truck3 s2),(at truck1 s2),(at driver3 s2),(at truck2 s1):True:11.0,16.0:1126.0,504.0
+> (at driver1 s0),(at package2 s2),(at truck2 s2),(at package1 s1),(at truck3 s2),(at truck1 s1):False:9.0,24.0:782.0,397.0
