@@ -18,7 +18,10 @@ class DomainData:
 		file.readline() # Header
 		sum_values = [0] * 18
 		for obs in self.observabilities:
-			line = file.readline().strip().split('\t')
+			line = file.readline()
+			if line == '':
+				break
+			line = line.strip().split('\t')
 			self.total_problems += int(line[0])
 			values = [float(x) for x in line]
 			self.obs_data[obs][approach] = values
@@ -89,6 +92,7 @@ def get_latex_content(file, domains, approaches, basepaths):
 		domain_name_4table = domain_name
 		domain_name_4table = domain_name_4table.replace('-optimal', '')
 		domain_name_4table = domain_name_4table.replace('-suboptimal', '')
+		domain_name_4table = domain_name_4table.replace('-old-noisy', '')
 		domain_name_4table = domain_name_4table.replace('-noisy', '')
 		if 'intrusion-detection' in domain_name:
 			domain_name_4table = domain_name_4table.replace("-detection", "")
@@ -320,47 +324,90 @@ if __name__ == '__main__' :
 			'L', 'P', 'S', 'D',
 			'L(i)', 'P(i)', 'S(i)', 'D(i)'
 			]
-		elif 'delo' in file:
-			paths = [default_path] * 7
-			title = 'Constraints - Delete Relaxation with Observations'
-			caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
-			approaches = [
-			'delta-o-csd', 'delta-o-cd', 'delta-i-o-cd', 'delta-i-o-cd1', 'delta-i-o-cd5', 'delta-i-o1-cd', 'delta-i-o1-cd1'
-			]
-			names = [
-			'D+, S', 'D+', 'D+(i)', 'D+(i ops)', 'D+(i obs)', 'D+ Order(i)', 'D+ Order(i ops)'
-			]
+		elif 'lm' in file:
+			if 'lmf2' in file:
+				paths = [default_path] * 7
+				title = 'Constraints - Landmarks with noise filter ($\\epsilon = 0.2$)'
+				caption = "Results for landmark variations using noise filter with $\\epsilon = 0.2$. 'I' marks when variables $Y_o$ and $Y_{\\vec{o}}$ are integer. The soft version uses $Y_{\\vec{o}}/occur(\\vec{o})$ instead of 1 for minimum landmark sum. Variables $B_{\\vec{o}}$ are always integer."
+				approaches = [
+				'delta-cl-f2', 'delta-i-cl-f2', 'delta-o-cl-f2', 'delta-i-o-cl-f2', 'delta-o-cl1-f2', 'delta-i-o-cl1-f2', 'delta-o-cl2-f2'
+				]
+				names = [
+				'$L$', '$L_I$', '$L^+$', '$L_I^+$', '$L^+$ (soft)', '$L_I^+$ (soft)', '$L^+$ (B-var)'
+				]
+			else:
+				paths = [default_path] * 7
+				title = 'Constraints - Landmarks'
+				caption = "Results for landmark variations. 'I' marks when variables $Y_o$ and $Y_{\\vec{o}}$ are integer. The soft version uses $Y_{\\vec{o}}/occur(\\vec{o})$ instead of 1 for minimum landmark sum. Variables $B_{\\vec{o}}$ are always integer."
+				approaches = [
+				'delta-cl', 'delta-i-cl', 'delta-o-cl', 'delta-i-o-cl', 'delta-o-cl1', 'delta-i-o-cl1', 'delta-o-cl2'
+				]
+				names = [
+				'$L$', '$L_I$', '$L^+$', '$L_I^+$', '$L^+$ (soft)', '$L_I^+$ (soft)', '$L^+$ (B-var)'
+				]
 		elif 'del' in file:
-			paths = [default_path] * 7
-			title = 'Constraints - Delete Relaxation'
-			caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
-			approaches = [
-			'delta-cd', 'delta-i-cd', 'delta-i-cd1', 'delta-i-cd2', 'delta-i-cd3', 'delta-i-cd4', 'delta-csd'
-			]
-			names = [
-			'D', 'D(i)', 'D(i ops)', 'D(i facts)', 'D(i achiever)', 'D (i time)', 'D, S'
-			]
-		elif 'flowo' in file:
-			paths = [default_path] * 10
-			title = 'Constraints - Flow with Observations'
-			caption = ''
-			approaches = [
-			'delta-cf1', 'delta-o-cf14', 'delta-o-cf15', 'delta-o-cf13'
-			]
-			names = [
-			'$F^1$', '$F^1O$ (pre)', '$F^1O$ (eff)', '$F^1O$ (pre+eff)'
-			]
+			if 'delo' in file:
+				paths = [default_path] * 8
+				title = 'Constraints - Delete Relaxation with Observations'
+				caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
+				approaches = [
+				'delta-o-csdt', 'delta-o-cdt', 'delta-i-o-cdt', 'delta-i-o-cdt1', 'delta-i-o-cdt5', 'delta-o1-cdu', 'delta-i-o1-cdt', 'delta-i-o1-cdt1'
+				]
+				names = [
+				'D+, S', 'D+', 'D+(i)', 'D+(i ops)', 'D+(i obs)', 'D+ Order hard', 'D+ Order(i) soft', 'D+ Order(i ops) soft'
+				]
+			elif 'deln' in file:
+				paths = [default_path] * 5
+				title = 'Constraints - Delete Relaxation with Observations'
+				caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
+				approaches = [
+				'delta-o-cdt', 'delta-i-o-cdt1', 'delta-o-cdto', 'delta-o-i-cdto1', 'delta-i-o-cdts1'
+				]
+				names = [
+				'$D+$', '$D+$(i ops)', '$D^2+$', '$D^2+$(i ops)', '$D^3+$(i ops)'
+				]
+			else:
+				paths = [default_path] * 7
+				title = 'Constraints - Delete Relaxation'
+				caption = 'Different versions of Delete Relaxation. (i) marks when MIP was used.'
+				approaches = [
+				'delta-cdt', 'delta-i-cdt', 'delta-i-cdt1', 'delta-i-cdt2', 'delta-i-cdt3', 'delta-i-cdt4', 'delta-csdt'
+				]
+				names = [
+				'D', 'D(i)', 'D(i ops)', 'D(i facts)', 'D(i achiever)', 'D (i time)', 'D, S'
+				]
 		elif 'flow' in file:
-			paths = [default_path] * 10
-			title = 'Constraints - Flow'
-			caption = ''
-			approaches = [
-			'delta-cf1', 'delta-cf1ab', 'delta-cf1bb', 'delta-cf1cb', 'delta-cf1db',\
-			'delta-o-cf14', 'delta-o-cf15', 'delta-o-cf13', 'delta-cf1f3', 'delta-cf2'
-			]
-			names = [
-			'$F^1$', '$F^1$ (size 2)', '$F^1$ (size 4)', '$F^1$ (size 8)', '$F^1$ (size 16)', \
-			'$F^1O$ (pre)', '$F^1O$ (eff)', '$F^1O$ (pre+eff)', '$F^1$ (pre)', '$F^2$'
-			]
+			if 'flowo2' in file:
+				paths = [default_path] * 4
+				title = 'Constraints - Flow with Observations 2'
+				caption = ''
+				approaches = [
+				'delta-o-cf1ab', 'delta-o-cf1db', 'delta-o-cf13a', 'delta-o-cf10a'
+				]
+				names = [
+				'$F^1O$ (size 2)', '$F^1O$ (size 16)', '$F^1O$ (pre+eff)3 (intra)', '$F^1O$ (pre+eff)3'
+				]
+			elif 'flowo' in file:
+				paths = [default_path] * 8
+				title = 'Constraints - Flow with Observations'
+				caption = ''
+				approaches = [
+				'delta-o-cf14', 'delta-o-cf15', 'delta-o-cf13', 'delta-o-cf17', 
+				'delta-o-cf11', 'delta-o-cf12', 'delta-o-cf10', 'delta-o-cf16'
+				]
+				names = [
+				'$F^1O$ (pre) (intra)', '$F^1O$ (eff) (intra)', '$F^1O$ (pre+eff) (intra)', '$F^1O$ (preXeff) (intra)',
+				'$F^1O$ (pre)', '$F^1O$ (eff)', '$F^1O$ (pre+eff)', '$F^1O$ (preXeff)'
+				]
+			else:
+				paths = [default_path] * 7
+				title = 'Constraints - Flow'
+				caption = ''
+				approaches = [
+				'delta-cf1', 'delta-cf1ab', 'delta-cf1db', 'delta-cf1f3', 'delta-cf2', 'delta-cf2n'
+				]
+				names = [
+				'$F^1$', '$F^1$ (size 2)', '$F^1$ (size 16)', '$F^1$ (pre+eff, intra)', '$F^2$', '$F^2$ (full)'
+				]
 			
 	create_tex_files(title, file, domains, approaches, paths, names, caption)

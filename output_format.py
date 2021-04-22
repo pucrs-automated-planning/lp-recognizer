@@ -56,16 +56,27 @@ class ProblemOutput:
 				self.scores[h.atoms] = [h.h, h.h_c]
 				self.lp_sizes[h.atoms] = [h.num_lp_vars, h.num_lp_consts]
 		# Chosen hyp
-		self.num_lp_vars = hyp.num_lp_vars
-		self.num_lp_consts = hyp.num_lp_consts
-		self.h_value = hyp.h
-		self.hc_value = hyp.h_c
+		if hyp:
+			self.num_lp_vars = hyp.num_lp_vars
+			self.num_lp_consts = hyp.num_lp_consts
+			self.h_value = hyp.h
+			self.hc_value = hyp.h_c
+		else:
+			self.num_lp_vars = 0
+			self.num_lp_consts = 0
+			self.h_value = 0
+			self.hc_value = 0
 		# Reference hyp
 		if not real_hyp.test_failed:
 			self.real_num_lp_vars = real_hyp.num_lp_vars
 			self.real_num_lp_consts = real_hyp.num_lp_consts
 			self.real_h_value = real_hyp.h
 			self.real_hc_value = real_hyp.h_c
+		else:
+			self.real_num_lp_vars = 0
+			self.real_num_lp_consts = 0
+			self.real_h_value = 0
+			self.real_hc_value = 0
 
 	def load(self, problem_data, raw_problem):
 		# Time results
@@ -109,10 +120,16 @@ class ProblemOutput:
 		self.scores = raw_problem.scores
 		self.lp_sizes = raw_problem.lp_sizes
 		# Chosen hyp
-		self.num_lp_vars = raw_problem.lp_sizes[hyp][0]
-		self.num_lp_consts = raw_problem.lp_sizes[hyp][1]
-		self.h_value = raw_problem.scores[hyp][0]
-		self.hc_value = raw_problem.scores[hyp][1]
+		if hyp:
+			self.num_lp_vars = raw_problem.lp_sizes[hyp][0]
+			self.num_lp_consts = raw_problem.lp_sizes[hyp][1]
+			self.h_value = raw_problem.scores[hyp][0]
+			self.hc_value = raw_problem.scores[hyp][1]
+		else:
+			self.num_lp_vars = 0
+			self.num_lp_consts = 0
+			self.h_value = 0
+			self.hc_value = 0
 		# Reference hyp
 		if real_hyp in raw_problem.goals:
 			self.real_num_lp_vars = raw_problem.lp_sizes[real_hyp][0]
@@ -272,7 +289,7 @@ class RawExperiment:
 def read_output(base_path, domain_data, method):
 	raw_experiment = RawExperiment(domain_data.name + "-" + method, domain_data.observabilities)
 	experiments = []
-	for obs in observabilities:
+	for obs in domain_data.observabilities:
 		experiment = ExperimentOutput(obs)
 		experiment.load(domain_data, raw_experiment)
 		experiments.append(experiment)

@@ -19,7 +19,7 @@ def parse_constraints(arg):
     i = 1
     while i < len(arg):
         if arg[i] == 'l':
-            n = 0# Noisy
+            n = 0 # Noisy
             if len(arg) > i+1 and arg[i+1].isdigit():
                 i += 1
                 n = int(arg[i])
@@ -29,28 +29,43 @@ def parse_constraints(arg):
         if arg[i] == 's':
             h = "state_equation_constraints()"
         if arg[i] == 'd':
-            # Time-relaxed
-            time_vars = False
+            # Use time variables
+            time_vars = 0
             if len(arg) > i+1 and arg[i+1] == 't':
-                time_vars = True
                 i += 1
+                time_vars = 1 # Soft time order
+            elif len(arg) > i+1 and arg[i+1] == 'u':
+                i += 1
+                time_vars = 2 # Hard time order
+            # Noise filter
+            noisy = 0
+            if len(arg) > i+1 and arg[i+1] == 's': # Soft
+                i += 1
+                noisy = 2
+            elif len(arg) > i+1 and arg[i+1] == 'o': # Soft for obs only
+                i += 1
+                noisy = 1
             # MIP vars
             param = 0
             if len(arg) > i+1 and arg[i+1].isdigit():
-                param = arg[i+1]
                 i += 1
+                param = arg[i]
             if param == '1': # use_integer_vars_op
-                h = "delete_relaxation_constraints(%s, 1, 0, 0, 0)" % time_vars
-            elif param == '2' in arg: # use_integer_vars_facts
-                h = "delete_relaxation_constraints(%s, 0, 1, 0, 0)" % time_vars
-            elif param == '3' in arg: # use_integer_vars_achiever
-                h = "delete_relaxation_constraints(%s, 0, 0, 1, 0)" % time_vars
-            elif param == '4' in arg: # use_integer_vars_time
-                h = "delete_relaxation_constraints(%s, 0, 0, 0, 1)" % time_vars
-            elif param == '5' in arg: # use_integer_vars_op (obs only)
-                h = "delete_relaxation_constraints(%s, 2, 0, 0, 0)" % time_vars
+                h = "delete_relaxation_constraints(%s, 1, 0, 0, 0, %s)" % (time_vars, noisy)
+            elif param == '2': # use_integer_vars_facts
+                h = "delete_relaxation_constraints(%s, 0, 1, 0, 0, %s)" % (time_vars, noisy)
+            elif param == '3': # use_integer_vars_achiever
+                h = "delete_relaxation_constraints(%s, 0, 0, 1, 0, %s)" % (time_vars, noisy)
+            elif param == '4': # use_integer_vars_time
+                h = "delete_relaxation_constraints(%s, 0, 0, 0, 1, %s)" % (time_vars, noisy)
+            elif param == '5': # use_integer_vars_op (obs only)
+                h = "delete_relaxation_constraints(%s, 2, 0, 0, 0, %s)" % (time_vars, noisy)
+            elif param == '6': # 
+                h = "delete_relaxation_constraints(%s, 1, 1, 1, 1, %s)" % (time_vars, noisy)
+            elif param == '7': # use_integer_vars_op (u' only)
+                h = "delete_relaxation_constraints(%s, 3, 0, 0, 0, %s)" % (time_vars, noisy)
             else: # use all integer_vars
-                h = "delete_relaxation_constraints(%s)" % time_vars
+                h = "delete_relaxation_constraints(%s, 0, 0, 0, 0, %s)" % (time_vars, noisy)
         if arg[i] == 'f':
             i += 1
             # Systematic patterns size
@@ -75,36 +90,48 @@ def parse_constraints(arg):
                 i += 1
                 # 0 -> no merges, 1 -> merges within operator, 2 -> merges inter-operators
                 if arg[i] == '0': # Preconditions + effects
-                    param = "merge_preconditions=2, merge_effects=2"
+                    param = ", merge_preconditions=2, merge_effects=2, use_mutexes=false"
                 elif arg[i] == '1': # Preconditions
-                    param = "merge_preconditions=2, merge_effects=0"
+                    param = ", merge_preconditions=2, merge_effects=0, use_mutexes=false"
                 elif arg[i] == '2': # Effects
-                    param = "merge_preconditions=0, merge_effects=2"
+                    param = ", merge_preconditions=0, merge_effects=2, use_mutexes=false"
                 elif arg[i] == '3': # Preconditions + effects (intra)
-                    param = "merge_preconditions=1, merge_effects=1"
+                    param = ", merge_preconditions=1, merge_effects=1"
                 elif arg[i] == '4': # Preconditions (intra)
-                    param = "merge_preconditions=1, merge_effects=0"
+                    param = ", merge_preconditions=1, merge_effects=0"
                 elif arg[i] == '5': # Effects (intra)
-                    param = "merge_preconditions=0, merge_effects=1"
+                    param = ", merge_preconditions=0, merge_effects=1"
+                elif arg[i] == '6': # Preconditions x effects
+                    param = ", merge_preconditions=4, merge_effects=0, use_mutexes=false"
+                elif arg[i] == '7': # Preconditions x effects (intra)
+                    param = ", merge_preconditions=3, merge_effects=0, use_mutexes=false"
+                else:
+                    param = ", merge_preconditions=2, merge_effects=2, use_mutexes=false"
+                if len(arg) > i+1 and arg[i+1] >= 'a' and arg[i+1] <= 'd':
+                    i += 1
+                    if arg[i] == 'a':
+                        param += ", max_merge_feature_size=3"
+                    else:
+                        param += ", max_merge_feature_size=4"
             # Old partial merges
             elif len(arg) > i+1 and arg[i+1] >= 'a' and arg[i+1] <= 'd':
                 i += 1
                 if arg[i] == 'a':
-                    param = "max_merge_feature_size=2"
+                    param = ", max_merge_feature_size=2"
                 elif arg[i] == 'b':
-                    param = "max_merge_feature_size=4"
+                    param = ", max_merge_feature_size=4"
                 elif arg[i] == 'c':
-                    param = "max_merge_feature_size=8"
+                    param = ", max_merge_feature_size=8"
                 else:
-                    param = "max_merge_feature_size=16"
+                    param = ", max_merge_feature_size=16"
                 if len(arg) > i+1 and arg[i+1] >= 'a' and arg[i+1] <= 'b':
                     i += 1
                     if arg[i] == 'a':
                         param += ", partial_merge_time_limit=10"
                 m = 1
             else:
-                param = "merge_preconditions=2, merge_effects=2"
-            h = "flow_constraints(systematic(%s, only_interesting_patterns=%s), partial_merges=%s, merge_goal_only=%s, %s)" % (s, not n, m, g, param)
+                param = ""
+            h = "flow_constraints(systematic(%s, only_interesting_patterns=%s), partial_merges=%s, merge_goal_only=%s%s)" % (s, not n, m, g, param)
         print(h)
         heuristics.append(h)
         i += 1
