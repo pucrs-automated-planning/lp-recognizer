@@ -24,8 +24,8 @@ FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
 
 LM="delta-cl delta-o-cl delta-o-cl1"
 LM_NOISY="$LM delta-o-cl2"
-DR="delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
-DR_NOISY="delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1 delta-o-cdta1"
+DR="delta-cdt delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
+DR_NOISY="$DR delta-o-cdta1"
 FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
 
 if [[ ! -d ../$DATASETS ]]; then
@@ -34,16 +34,6 @@ if [[ ! -d ../$DATASETS ]]; then
 fi
 
 pushd ..
-
-if [[ ! -d outputs ]]; then
-	mkdir outputs
-fi
-if [[ ! -d data-latex ]]; then
-	mkdir data-latex
-fi
-if [[ ! -d data-charts ]]; then
-	mkdir data-charts
-fi
 
 run_domain() {
 	echo "Running domain $1"

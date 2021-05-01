@@ -12,6 +12,10 @@ if [[ ! -d "data-latex" ]]; then
 	mkdir data-latex
 fi
 
+if [[ ! -d "outputs" ]]; then
+	mkdir outputs
+fi
+
 # Verifying paths
 pushd ..
 	FD_ROOT=`pwd`/fast-downward
