@@ -36,16 +36,15 @@ class LPRecognizerHValue(PlanRecognizer):
         self.total_time = time.time()
         self.fd_time = 0.0
         self.lp_time = 0.0
-        for i in range(0, len(self.hyps)):
-            hyp = self.hyps[i]
-            hyp.evaluate(i, self.observations)
+        for hyp in self.hyps:
+            hyp.evaluate(self.observations)
             self.fd_time += hyp.fd_time
             self.lp_time += hyp.lp_time
             if hyp.test_failed:
-                print("Score %s %s: Failed" % (i, ' '.join(hyp.atoms)))
+                print("Score %s %s: Failed" % (hyp.index, ' '.join(hyp.atoms)))
             else:
                 hyp.score = self.get_score(hyp)
-                print("Score %s %s: %s" % (i, ' '.join(hyp.atoms), hyp.score))
+                print("Score %s %s: %s" % (hyp.index, ' '.join(hyp.atoms), hyp.score))
         # Select unique goal (choose the goal with the smallest score)
         for h in self.hyps:
             if not h.test_failed:

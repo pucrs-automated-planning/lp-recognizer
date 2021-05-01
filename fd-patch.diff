@@ -504,25 +504,34 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/lp/
        The LP has to be solved with a call to solve() and has to have an optimal
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.cc fast-downward/src/search/operator_counting/constraint_generator.cc
 --- fast-downward-original/src/search/operator_counting/constraint_generator.cc	2020-10-26 22:55:33.057730200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.cc	2021-03-18 23:58:06.126212800 -0300
-@@ -6,7 +6,12 @@
++++ fast-downward/src/search/operator_counting/constraint_generator.cc	2021-04-23 13:41:31.314064500 -0300
+@@ -6,9 +6,16 @@
  
  namespace operator_counting {
  void ConstraintGenerator::initialize_constraints(
 -    const shared_ptr<AbstractTask> &, vector<lp::LPConstraint> &, double) {
 +    const shared_ptr<AbstractTask> &, vector<lp::LPVariable> &, vector<lp::LPConstraint> &, double) {
-+}
-+
+ }
+ 
 +void ConstraintGenerator::set_observations(const vector<int>& observations, int obs_info) {
 +	this->obs_info = obs_info;
 +	this->observations = observations;
- }
- 
++}
++
++void ConstraintGenerator::log_info(const TaskProxy&, const vector<double>&, vector<double>&) {}
++
  static PluginTypePlugin<ConstraintGenerator> _type_plugin(
+     "ConstraintGenerator",
+     // TODO: Replace empty string by synopsis for the wiki page.
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.h fast-downward/src/search/operator_counting/constraint_generator.h
 --- fast-downward-original/src/search/operator_counting/constraint_generator.h	2020-10-26 22:55:33.062373200 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.h	2021-03-18 23:58:06.126212800 -0300
-@@ -10,6 +10,12 @@
++++ fast-downward/src/search/operator_counting/constraint_generator.h	2021-04-23 13:44:26.705376500 -0300
+@@ -6,10 +6,17 @@
+ 
+ class AbstractTask;
+ class State;
++class TaskProxy;
+ 
  namespace lp {
  class LPConstraint;
  class LPSolver;
@@ -535,7 +544,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
  
  namespace operator_counting {
-@@ -27,10 +33,12 @@
+@@ -27,10 +34,12 @@
        Example: constraints from landmarks generated for a given state, e.g.
        using the LM-Cut method.
  */
@@ -549,7 +558,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      /*
        Called upon initialization for the given task. Use this to add permanent
        constraints and perform other initialization. The parameter "infinity"
-@@ -39,6 +47,7 @@
+@@ -39,6 +48,7 @@
      */
      virtual void initialize_constraints(
          const std::shared_ptr<AbstractTask> &task,
@@ -557,19 +566,20 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
          std::vector<lp::LPConstraint> &constraints,
          double infinity);
  
-@@ -51,6 +60,8 @@
+@@ -51,6 +61,9 @@
      */
      virtual bool update_constraints(const State &state,
                                      lp::LPSolver &lp_solver) = 0;
 +
 +    void set_observations(const std::vector<int>& observations, int obs_info = 0);
++    virtual void log_info(const TaskProxy &task_proxy, const std::vector<double>& solution, std::vector<double>& info);
  };
  }
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2021-04-21 16:49:44.811144700 -0300
-@@ -0,0 +1,345 @@
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2021-04-30 19:58:11.424823400 -0300
+@@ -0,0 +1,374 @@
 +#include "delete_relaxation_constraints.h"
 +
 +#include "../option_parser.h"
@@ -589,6 +599,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +DeleteRelaxationConstraints::DeleteRelaxationConstraints(const Options &opts)
 +    : use_time_vars(opts.get<int>("use_time_vars")),
 +    use_integer_vars_op(opts.get<int>("use_integer_vars_op")),
++    use_integer_vars_op2(opts.get<int>("use_integer_vars_op2")),
 +    use_integer_vars_facts(opts.get<int>("use_integer_vars_facts")),
 +    use_integer_vars_achiever(opts.get<int>("use_integer_vars_achiever")),
 +    use_integer_vars_time(opts.get<int>("use_integer_vars_time")),
@@ -653,7 +664,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // op_used
 +    add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_used, 0, 1, 0, use_integer_vars_op);
 +    if (obs_info)
-+        add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_used2, 0, 1, 0, use_integer_vars_op);
++        add_lp_variables(num_ops, obs_used, variables, lp_var_id_op_used2, 0, 1, 0, use_integer_vars_op2);
 +
 +    // fact_reached
 +    lp_var_id_fact_reached.resize(num_vars);
@@ -751,10 +762,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    }
 +
 +    // Observed operators
++    map<int, int> occur;
++    for (int obs_id : observations)
++        occur[obs_id]++;
 +    if (noisy == 1) {
-+        map<int, int> occur;
-+        for (int obs_id : observations)
-+            occur[obs_id]++;
++        cout << "Soft restrictions for observation variables." << endl;
 +        int var_id = task_proxy.get_operators().size();
 +        for (auto it = occur.begin(); it != occur.end(); it++) {
 +            lp::LPConstraint constraint_inv(0, infinity);
@@ -764,6 +776,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            var_id++;
 +        }
 +    } else if (noisy == 0) {
++        cout << "Hard restrictions for operator variables." << endl;
 +        for (int obs : observations) {
 +            int var = get_var_op_used(ops[obs]);
 +            variables[var].lower_bound = 1;
@@ -782,7 +795,16 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +            }
 +        }
 +
-+        if (obs_info) {
++        if (obs_info == 0)
++            cout << "No observations." << endl;
++        else if (obs_info == 1)
++            cout << "No observation order." << endl;
++        else if (obs_info == 2)
++            cout << "Soft observation order." << endl;
++        else if (obs_info == 3)
++            cout << "Hard observation order." << endl;
++
++        if (obs_info > 1) {
 +            int N = ops.size();
 +            vector<int> first_obs;
 +            for (int obs : observations)
@@ -794,7 +816,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                lp::LPConstraint constraint(1, infinity);
 +                constraint.insert(get_var_op_time(op2), 1);
 +                constraint.insert(get_var_op_time(op1), -1);
-+                if (use_time_vars == 1)
++                if (obs_info == 2) // Soft observation order
 +                    constraint.insert(get_var_op_used2(op2), N);
 +                constraints.push_back(constraint);
 +            }
@@ -822,10 +844,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        lp::LPConstraint constraint(0, infinity);
 +        constraint.insert(op.get_id(), 1);
 +        constraint.insert(get_var_op_used(op), -1);
-+        if (obs_info)
++        if (obs_info == 2) // Soft observation order
 +            constraint.insert(get_var_op_used2(op), -1);
 +        constraints.push_back(constraint);
-+        if (noisy == 2) {
++        if (noisy == 3 || noisy == 2 && occur[op.get_id()] > 0) {
 +            lp::LPConstraint constraint_inv(0, infinity);
 +            constraint_inv.insert(op.get_id(), -1);
 +            constraint_inv.insert(get_var_op_used(op), 10000);
@@ -875,6 +897,18 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    return false;
 +}
 +
++void DeleteRelaxationConstraints::log_info(const TaskProxy &task_proxy, const vector<double> &solution, vector<double> &info) {
++    if (obs_info != 2)
++        return;
++    int u2 = 0;
++    for (OperatorProxy op : task_proxy.get_operators()) {
++        int var_id = get_var_op_used2(op);
++        if (solution[var_id] > 0)
++            u2++;
++    }
++    info.push_back(u2);
++}
++
 +static shared_ptr<ConstraintGenerator> _parse(OptionParser &parser) {
 +    parser.add_option<int>(
 +        "use_time_vars",
@@ -883,6 +917,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    );
 +    parser.add_option<int>(
 +        "use_integer_vars_op",
++        "auxilliary variables will be restricted to integer values",
++        "0"
++    );
++    parser.add_option<int>(
++        "use_integer_vars_op2",
 +        "auxilliary variables will be restricted to integer values",
 +        "0"
 +    );
@@ -917,8 +956,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h fast-downward/src/search/operator_counting/delete_relaxation_constraints.h
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2021-04-16 18:50:34.157703500 -0300
-@@ -0,0 +1,73 @@
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2021-04-23 15:53:02.340710000 -0300
+@@ -0,0 +1,75 @@
 +#ifndef OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_DELETE_RELAXATION_CONSTRAINTS_H
 +
@@ -935,7 +974,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +namespace operator_counting {
 +class DeleteRelaxationConstraints : public ConstraintGenerator {
 +    int use_time_vars;
-+    int use_integer_vars_op, use_integer_vars_facts, use_integer_vars_achiever, use_integer_vars_time;
++    int use_integer_vars_op, use_integer_vars_op2, use_integer_vars_facts, use_integer_vars_achiever, use_integer_vars_time;
 +    int noisy;
 +
 +    // [U_o] Is op part of the relaxed plan? Binary, indexed with op.id.
@@ -988,6 +1027,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        double infinity) override;
 +    virtual bool update_constraints(
 +        const State &state, lp::LPSolver &lp_solver) override;
++
++    virtual void log_info(const TaskProxy &task_proxy, const std::vector<double>& solution, std::vector<double>& info) override;
 +};
 +}
 +
@@ -2068,8 +2109,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      virtual bool update_constraints(const State &state,
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2021-04-22 11:18:17.348154700 -0300
-@@ -0,0 +1,509 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2021-04-27 21:54:27.262491000 -0300
+@@ -0,0 +1,528 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -2476,6 +2517,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    for (int i = 0; i < (int) solution.size(); ++i) {
 +        cout << "X[" << i << "] = " << solution[i] << endl;
 +    }
++    vector<double> lp_info;
++    for (const auto &generator : constraint_generators)
++        generator->log_info(task_proxy, solution, lp_info);
 +    // Get hits/misses
 +    double obs_hits = 0, obs_miss = 0;
 +    unordered_map<string, double> counts;
@@ -2492,6 +2536,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    cout << "obs-report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
 +    cout << "time-report: " << lp_timer << endl;
 +    cout << "h-values: " << result << " " << result_c << " " << result_s << endl;
++    cout << "lp-info: " <<  num_vars << " " << num_const;
++    for (double i : lp_info)
++        cout << " " << i; 
++    cout << endl;
 +    cout << string(80, '*') << endl << endl;
 +    // Write result
 +    cout << "Writing results...";
@@ -2500,7 +2548,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    results << "obs-report: " << observations.size() << " " << num_pruned_observations << " " << obs_hits << " " << obs_miss << endl;
 +    results << "time-report: " << lp_timer << endl;
 +    results << "h-values: " << result << " " << result_c << " " << result_s << endl;
-+    results << "lp-size: " <<  num_vars << " " << num_const << endl;
++    results << "lp-info: " <<  num_vars << " " << num_const;
++    for (double i : lp_info)
++        results << " " << i; 
++    results << endl;
 +    // Write counts
 +    int var_i = 0;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
@@ -2516,6 +2567,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +OCSingleShotHeuristic::~OCSingleShotHeuristic() {
 +}
++
 +
 +static shared_ptr<Heuristic> _parse(OptionParser &parser) {
 +    parser.document_synopsis(
@@ -2561,10 +2613,18 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    parser.add_option<bool>("calculate_h", "calculate h-value", "false");
 +    parser.add_option<bool>("calculate_h_c", "calculate h-value with hard observation constraints", "true");
 +    parser.add_option<bool>("calculate_h_s", "calculate h-value with soft observation constraints", "false");
-+    parser.add_option<int>("weights", "weight type for soft constraints", "0");
-+    parser.add_option<int>("filter", "observation filter", "0");
-+    parser.add_option<int>("h_obs", "enable observations inside heuristic constraints", "0");
-+    parser.add_option<bool>("mip", "use MIP solver", "false");
++    parser.add_option<int>("weights",
++        "weight type for soft constraints",
++        "0");
++    parser.add_option<int>("filter",
++        "observation filter F; it allows to ignore F*0.1 of the observations",
++        "0");
++    parser.add_option<int>("h_obs", 
++        "enable observations inside heuristic constraints; 0 to do not consider observations, 1 to consider as a set, 2+ to consider as a list",
++        "0");
++    parser.add_option<bool>("mip",
++        "use MIP solver",
++        "false");
 +    lp::add_lp_solver_option_to_parser(parser);
 +    Heuristic::add_options_to_parser(parser);
 +    Options opts = parser.parse();

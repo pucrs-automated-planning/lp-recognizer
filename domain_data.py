@@ -81,6 +81,16 @@ class ProblemData:
 				observations.append(line.strip().lower())
 		return observations
 
+	def get_solution_indexes(self):
+		solution = [] # list of indexes
+		for i in range(0, len(self.hyps)):
+			if self.hyps[i] in self.solution:
+				solution.append(i)
+		return solution
+
+	def get_true_hyp_index(self):
+		return self.hyps.index(self.true_hyp)
+
 	def print_header(self):
 		return "{0} {1} {2} {3}".format(self.name, len(self.obs), len(self.hyps), len(self.solution))
 

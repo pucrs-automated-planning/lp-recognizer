@@ -33,13 +33,13 @@ def parse_constraints(arg):
             time_vars = 0
             if len(arg) > i+1 and arg[i+1] == 't':
                 i += 1
-                time_vars = 1 # Soft time order
-            elif len(arg) > i+1 and arg[i+1] == 'u':
-                i += 1
-                time_vars = 2 # Hard time order
+                time_vars = 1
             # Noise filter
             noisy = 0
-            if len(arg) > i+1 and arg[i+1] == 's': # Soft
+            if len(arg) > i+1 and arg[i+1] == 'a': # Soft for all + inv
+                i += 1
+                noisy = 3
+            if len(arg) > i+1 and arg[i+1] == 'b': # Soft for obs only + inv
                 i += 1
                 noisy = 2
             elif len(arg) > i+1 and arg[i+1] == 'o': # Soft for obs only
@@ -50,22 +50,22 @@ def parse_constraints(arg):
             if len(arg) > i+1 and arg[i+1].isdigit():
                 i += 1
                 param = arg[i]
-            if param == '1': # use_integer_vars_op
-                h = "delete_relaxation_constraints(%s, 1, 0, 0, 0, %s)" % (time_vars, noisy)
+            if param == '1': # use_integer_vars_op 
+                h = "delete_relaxation_constraints(%s, 1, 0, 0, 0, 0, %s)" % (time_vars, noisy)
             elif param == '2': # use_integer_vars_facts
-                h = "delete_relaxation_constraints(%s, 0, 1, 0, 0, %s)" % (time_vars, noisy)
+                h = "delete_relaxation_constraints(%s, 0, 0, 1, 0, 0, %s)" % (time_vars, noisy)
             elif param == '3': # use_integer_vars_achiever
-                h = "delete_relaxation_constraints(%s, 0, 0, 1, 0, %s)" % (time_vars, noisy)
+                h = "delete_relaxation_constraints(%s, 0, 0, 0, 1, 0, %s)" % (time_vars, noisy)
             elif param == '4': # use_integer_vars_time
-                h = "delete_relaxation_constraints(%s, 0, 0, 0, 1, %s)" % (time_vars, noisy)
+                h = "delete_relaxation_constraints(%s, 0, 0, 0, 0, 1, %s)" % (time_vars, noisy)
             elif param == '5': # use_integer_vars_op (obs only)
-                h = "delete_relaxation_constraints(%s, 2, 0, 0, 0, %s)" % (time_vars, noisy)
-            elif param == '6': # 
-                h = "delete_relaxation_constraints(%s, 1, 1, 1, 1, %s)" % (time_vars, noisy)
-            elif param == '7': # use_integer_vars_op (u' only)
-                h = "delete_relaxation_constraints(%s, 3, 0, 0, 0, %s)" % (time_vars, noisy)
+                h = "delete_relaxation_constraints(%s, 2, 0, 0, 0, 0, %s)" % (time_vars, noisy)
+            elif param == '6': # use_integer_vars_op2
+                h = "delete_relaxation_constraints(%s, 0, 1, 0, 0, 0, %s)" % (time_vars, noisy)
+            elif param == '7': # all integer
+                h = "delete_relaxation_constraints(%s, 1, 1, 1, 1, 1, %s)" % (time_vars, noisy)
             else: # use all integer_vars
-                h = "delete_relaxation_constraints(%s, 0, 0, 0, 0, %s)" % (time_vars, noisy)
+                h = "delete_relaxation_constraints(%s, 0, 0, 0, 0, 0, %s)" % (time_vars, noisy)
         if arg[i] == 'f':
             i += 1
             # Systematic patterns size

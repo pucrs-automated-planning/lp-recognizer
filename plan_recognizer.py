@@ -47,7 +47,7 @@ class PlanRecognizer:
             if atoms in hyp_check:
                 continue
             hyp_check.add(atoms)
-            h = Hypothesis(opts, atoms)
+            h = Hypothesis(len(hyps), opts, atoms)
             h.is_true = atoms == real_hyp
             h.is_solution = atoms in solution
             hyps.append(h)

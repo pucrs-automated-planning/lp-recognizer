@@ -62,8 +62,8 @@ class PRCommand:
                     self.lp_time = float(line.split()[1].replace('s', ''))
                 elif 'h-values' in line:
                     self.h_values = [float(w) for w in line.split()[1:]]
-                elif 'lp-size' in line:
-                    self.lp_size = [float(w) for w in line.split()[1:]]
+                elif 'lp-info' in line:
+                    self.lp_info = [float(w) for w in line.split()[1:]]
                 else:
                     operator,count = line.split('=')
                     self.op_counts[operator.strip()] = float(count.strip())
@@ -76,7 +76,8 @@ class PRCommand:
 
 class Hypothesis:
 
-    def __init__(self, opts, atoms):
+    def __init__(self, index, opts, atoms):
+        self.index = index
         self.atoms = atoms
         self.plan = []
         self.is_true = True
@@ -86,14 +87,14 @@ class Hypothesis:
         self.lp_time = 0
         self.opts = opts
 
-    def evaluate(self, index, observations):
-        hyp_problem = 'hyp_%d_problem.pddl' % index
+    def evaluate(self, observations):
+        hyp_problem = 'hyp_%d_problem.pddl' % self.index
         self.generate_pddl_for_hyp_plan(hyp_problem)
-        pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % index, self.opts)
+        pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % self.index, self.opts)
         pr_cmd.execute()
         self.fd_time = pr_cmd.time
         self.lp_time = pr_cmd.lp_time
-        pr_cmd.write_result('hyp_%d_planning_H.csv' % index)
+        pr_cmd.write_result('hyp_%d_planning_H.csv' % self.index)
         if pr_cmd.signal != 0:
             print("signal error: %d" % pr_cmd.signal)
             #exit()
@@ -117,8 +118,9 @@ class Hypothesis:
                 self.test_failed = True
                 return
         # LP size
-        self.num_lp_vars = pr_cmd.lp_size[0]
-        self.num_lp_consts = pr_cmd.lp_size[1]
+        self.num_lp_vars = pr_cmd.lp_info[0]
+        self.num_lp_consts = pr_cmd.lp_info[1]
+        self.lp_info = pr_cmd.lp_info
         # obs
         self.num_obs = pr_cmd.obs_report[0] - pr_cmd.obs_report[1]
         self.num_invalid_obs = pr_cmd.obs_report[1]

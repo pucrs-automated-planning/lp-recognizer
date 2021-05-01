@@ -18,13 +18,16 @@ class ProblemOutput:
 	def __init__(self, name, recognizer = None):
 		self.name = name
 		self.scores = {}
-		self.lp_sizes = {}
+		self.lp_infos = {}
 		if recognizer is None:
 			return
 
+		# Problem data
+		self.hyp_atoms = [h.atoms for h in recognizer.hyps]
+
 		# Get solution
-		self.solution_set = frozenset([h.atoms for h in recognizer.accepted_hypotheses])
-		exact_solution_set = frozenset([h.atoms for h in recognizer.hyps if h.is_solution])
+		self.solution_set = frozenset([h.index for h in recognizer.accepted_hypotheses])
+		exact_solution_set = frozenset([h.index for h in recognizer.hyps if h.is_solution])
 		real_hyp = recognizer.get_real_hypothesis()
 		hyp = recognizer.unique_goal
 
@@ -47,38 +50,37 @@ class ProblemOutput:
 		self.fnr = fn / total
 		self.agreement = agr
 		self.spread = len(self.solution_set)
-		self.accuracy = 1 if recognizer.get_real_hypothesis().atoms in self.solution_set else 0
+		self.accuracy = 1 if recognizer.get_real_hypothesis().index in self.solution_set else 0
 		self.perfect_agr = 1 if agr == 1 else 0
 
 		# Hyp data
 		for h in recognizer.hyps:
 			if not h.test_failed:
-				self.scores[h.atoms] = [h.h, h.h_c]
-				self.lp_sizes[h.atoms] = [h.num_lp_vars, h.num_lp_consts]
+				self.scores[h.index] = [h.h, h.h_c]
+				self.lp_infos[h.index] = h.lp_info
 		# Chosen hyp
 		if hyp:
-			self.num_lp_vars = hyp.num_lp_vars
-			self.num_lp_consts = hyp.num_lp_consts
-			self.h_value = hyp.h
-			self.hc_value = hyp.h_c
+			self.lp_info_best = hyp.lp_info
+			self.h_value_best = hyp.h
+			self.hc_value_best = hyp.h_c
 		else:
-			self.num_lp_vars = 0
-			self.num_lp_consts = 0
-			self.h_value = 0
-			self.hc_value = 0
+			self.lp_info_best = [0, 0]
+			self.h_value_best = 0
+			self.hc_value_best = 0
 		# Reference hyp
 		if not real_hyp.test_failed:
-			self.real_num_lp_vars = real_hyp.num_lp_vars
-			self.real_num_lp_consts = real_hyp.num_lp_consts
-			self.real_h_value = real_hyp.h
-			self.real_hc_value = real_hyp.h_c
+			self.lp_info_real = real_hyp.lp_info
+			self.h_value_real = real_hyp.h
+			self.hc_value_real = real_hyp.h_c
 		else:
-			self.real_num_lp_vars = 0
-			self.real_num_lp_consts = 0
-			self.real_h_value = 0
-			self.real_hc_value = 0
+			self.lp_info_real = [0, 0]
+			self.h_value_real = 0
+			self.hc_value_real = 0
 
 	def load(self, problem_data, raw_problem):
+		# Problem data
+		self.hyp_atoms = problem_data.hyps
+
 		# Time results
 		if len(raw_problem.times) > 0:
 			self.total_time = raw_problem.times[0]
@@ -94,15 +96,15 @@ class ProblemOutput:
 
 		# Get solution
 		min_score = [float("inf")]
-		hyp = None
+		hyp = None # index
 		for goal in raw_problem.goals:
 			score = raw_problem.scores[goal][1] - raw_problem.scores[goal][0]
 			if score < min_score:
 				min_score = score
 				hyp = goal
-		self.solution_set = frozenset([atoms for atoms in raw_problem.goals if raw_problem.accepted[atoms] == True])
-		exact_solution_set = frozenset(problem_data.solution)
-		real_hyp = problem_data.true_hyp
+		self.solution_set = frozenset([i for i in raw_problem.goals if raw_problem.accepted[i] == True])
+		exact_solution_set = frozenset(problem_data.get_solution_indexes())
+		real_hyp = problem_data.get_true_hyp_index()
 
 		# Results
 		total = float(len(exact_solution_set | self.solution_set))
@@ -118,38 +120,36 @@ class ProblemOutput:
 
 		# Hyp data
 		self.scores = raw_problem.scores
-		self.lp_sizes = raw_problem.lp_sizes
+		self.lp_infos = raw_problem.lp_infos
 		# Chosen hyp
 		if hyp:
-			self.num_lp_vars = raw_problem.lp_sizes[hyp][0]
-			self.num_lp_consts = raw_problem.lp_sizes[hyp][1]
-			self.h_value = raw_problem.scores[hyp][0]
-			self.hc_value = raw_problem.scores[hyp][1]
+			self.lp_info_best = raw_problem.lp_infos[hyp]
+			self.h_value_best = raw_problem.scores[hyp][0]
+			self.hc_value_best = raw_problem.scores[hyp][1]
 		else:
-			self.num_lp_vars = 0
-			self.num_lp_consts = 0
-			self.h_value = 0
-			self.hc_value = 0
+			self.lp_info_best = [0, 0]
+			self.h_value_best = 0
+			self.hc_value_best = 0
 		# Reference hyp
 		if real_hyp in raw_problem.goals:
-			self.real_num_lp_vars = raw_problem.lp_sizes[real_hyp][0]
-			self.real_num_lp_consts = raw_problem.lp_sizes[real_hyp][1]
-			self.real_h_value = raw_problem.scores[real_hyp][0]
-			self.real_hc_value = raw_problem.scores[real_hyp][1]
+			self.lp_info_real = raw_problem.lp_infos[real_hyp]
+			self.h_value_real = raw_problem.scores[real_hyp][0]
+			self.hc_value_real = raw_problem.scores[real_hyp][1]
 		else:
-			self.real_num_lp_vars = 0
-			self.real_num_lp_consts = 0
-			self.real_h_value = 0
-			self.real_hc_value = 0
+			self.lp_info_real = [0, 0]
+			self.h_value_real = 0
+			self.hc_value_real = 0
 
 	def print_content(self):
 		content = self.name + ":" + str(self.total_time) + ":" + str(self.lp_time) + ":" + str(self.fd_time) + "\n"
-		for h in self.scores.keys():
-			atoms = ','.join(h)
-			score = ','.join([str(x) for x in self.scores[h]])
-			lp_size = ','.join([str(x) for x in self.lp_sizes[h]])
+		hyps = list(self.scores.keys())
+		for h in hyps:
+			#atoms = ','.join(self.hyp_atoms[h])
+			atoms = str(h)
+			score = ','.join([str(int(x)) for x in self.scores[h]])
+			lp_info = ','.join([str(int(x)) for x in self.lp_infos[h]])
 			accepted = str(h in self.solution_set)
-			content += "> " + atoms + ":" + accepted + ":" + score + ":" + lp_size + "\n"
+			content += "> " + atoms + ":" + accepted + ":" + score + ":" + lp_info + "\n"
 		return content
 
 
@@ -178,11 +178,11 @@ class ExperimentOutput:
 
 	def print_hdata(self):
 		content = self.obs + '\n'
-		content += str([x.real_h_value for x in self.problem_outputs.values()]) + '\n'
-		content += str([x.h_value for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.h_value_real for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.h_value_best for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.spread for x in self.problem_outputs.values()]) + '\n'
-		content += str([x.real_hc_value for x in self.problem_outputs.values()]) + '\n'
-		content += str([x.hc_value for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.hc_value_real for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.hc_value_best for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.fpr for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.fnr for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.agreement for x in self.problem_outputs.values()]) + '\n'
@@ -205,10 +205,14 @@ class ExperimentOutput:
 		self.total_time / n, \
 		sum([p.lp_time for p in problems]) / n, \
 		sum([p.fd_time for p in problems]) / n, \
-		sum([p.real_num_lp_vars for p in problems]) / n, \
-		sum([p.real_num_lp_consts for p in problems]) / n, \
-		sum([p.real_h_value for p in problems]) / n, \
-		sum([p.real_hc_value for p in problems]) / n]
+		sum([p.lp_info_real[0] for p in problems]) / n, \
+		sum([p.lp_info_real[1] for p in problems]) / n, \
+		sum([p.h_value_real for p in problems]) / n, \
+		sum([p.hc_value_real for p in problems]) / n, \
+		sum([cmp(p.hc_value_real, 0) for p in problems])]
+		for i in range(2, len(problems[0].lp_info_real)):
+			values.append(sum([p.lp_info_real[i] for p in problems]) / n) # Avg U'
+			values.append(sum([cmp(p.lp_info_real[i], 0) for p in problems])) # U' > 0 
 		content = "%s\t%s\t" % (len(problems), self.obs)
 		content += '\t'.join(["%2.4f" % x for x in values])
 		content += '\n'
@@ -222,25 +226,26 @@ class RawProblem:
 		self.goals = []
 		self.accepted = {}
 		self.scores = {}
-		self.lp_sizes = {}
+		self.lp_infos = {}
 		self.times = []
 
 	def add_goal(self, line):
 		line = line.strip().replace("> ", "").split(":")
-		atoms = frozenset([tok.strip().lower() for tok in line[0].split(',')])
-		self.goals.append(atoms)
+		#hyp = frozenset([tok.strip().lower() for tok in line[0].split(',')])
+		hyp = int(line[0])
+		self.goals.append(hyp)
 		if len(line) > 1:
-			self.accepted[atoms] = line[1] == 'True'
+			self.accepted[hyp] = line[1] == 'True'
 		else:
-			self.accepted[atoms] = True
+			self.accepted[hyp] = True
 		if len(line) > 2:
-			self.scores[atoms] = [float(x) for x in line[2].split(',')]
+			self.scores[hyp] = [float(x) for x in line[2].split(',')]
 		else:
-			self.scores[atoms] = [0, 0]
+			self.scores[hyp] = [0, 0]
 		if len(line) > 3:
-			self.lp_sizes[atoms] = [float(x) for x in line[3].split(',')]
+			self.lp_infos[hyp] = [float(x) for x in line[3].split(',')]
 		else:
-			self.lp_sizes[atoms] = [0, 0]
+			self.lp_infos[hyp] = [0, 0]
 
 	def add_times(self, line):
 		self.times = [float(x) for x in line[1:]]
