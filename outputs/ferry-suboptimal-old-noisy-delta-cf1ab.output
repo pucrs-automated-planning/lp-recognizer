@@ -1,0 +1,1320 @@
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-1_10_1.tar.bz2:0.39311003685:0.02636512:0.4
+> 0:True:12,13:123,60
+> 1:False:10,13:119,59
+> 2:False:8,10:115,58
+> 3:False:8,12:115,58
+> 4:False:8,12:115,56
+> 5:False:10,13:119,59
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-1_10_2.tar.bz2:0.394880056381:0.02689197:0.39
+> 0:True:12,13:122,59
+> 1:True:10,11:118,58
+> 2:True:8,9:114,57
+> 3:False:8,11:114,57
+> 4:False:8,10:114,55
+> 5:False:10,12:118,58
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-1_10_3.tar.bz2:0.39512181282:0.02664246:0.4
+> 0:True:12,13:123,60
+> 1:False:10,12:119,59
+> 2:True:8,9:115,58
+> 3:False:8,11:115,58
+> 4:True:8,9:115,56
+> 5:False:10,13:119,59
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-2_10_1.tar.bz2:0.391891956329:0.02679414:0.39
+> 0:True:12,14:124,61
+> 1:True:10,12:120,60
+> 2:False:8,12:116,59
+> 3:False:8,13:116,59
+> 4:True:8,10:116,57
+> 5:False:10,15:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-2_10_2.tar.bz2:0.395089864731:0.02692217:0.4
+> 0:True:12,14:123,60
+> 1:False:10,13:119,59
+> 2:False:8,12:115,58
+> 3:False:8,12:115,58
+> 4:False:8,12:115,56
+> 5:False:10,14:119,59
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-2_10_3.tar.bz2:0.394744157791:0.02702552:0.4
+> 0:True:12,16:124,61
+> 1:True:10,14:120,60
+> 2:True:8,12:116,59
+> 3:False:8,13:116,59
+> 4:False:8,14:116,57
+> 5:True:10,14:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-3_10_1.tar.bz2:0.392629146576:0.02645544:0.38
+> 0:False:12,16:124,61
+> 1:True:10,13:120,60
+> 2:False:8,12:116,59
+> 3:False:8,13:116,59
+> 4:False:8,12:116,57
+> 5:False:10,14:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-3_10_2.tar.bz2:0.39529299736:0.02734112:0.39
+> 0:True:12,15:124,61
+> 1:True:10,13:120,60
+> 2:False:8,12:116,59
+> 3:False:8,12:116,59
+> 4:False:8,12:116,57
+> 5:False:10,14:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-3_10_3.tar.bz2:0.394956827164:0.0265981:0.4
+> 0:True:12,14:124,61
+> 1:True:10,12:120,60
+> 2:False:8,11:116,59
+> 3:True:8,10:116,59
+> 4:False:8,12:116,57
+> 5:True:10,12:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-4_10_1.tar.bz2:0.39409995079:0.02655717:0.39
+> 0:False:12,14:123,60
+> 1:False:10,12:119,59
+> 2:True:8,9:115,58
+> 3:False:8,11:115,58
+> 4:False:8,12:115,56
+> 5:False:10,12:119,59
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-4_10_2.tar.bz2:0.393043041229:0.02659364:0.4
+> 0:False:12,16:124,61
+> 1:True:10,12:120,60
+> 2:False:8,12:116,59
+> 3:False:8,11:116,59
+> 4:False:8,12:116,57
+> 5:True:10,12:120,60
+ferry-suboptimal-old-noisy/10/ferry_noisy_p00_hyp-4_10_3.tar.bz2:0.394534111023:0.02639157:0.39
+> 0:False:12,15:123,60
+> 1:False:10,12:119,59
+> 2:False:8,10:115,58
+> 3:False:8,10:115,58
+> 4:False:8,11:115,56
+> 5:True:10,11:119,59
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-1_10_1.tar.bz2:0.555227994919:0.04681774:0.56
+> 0:True:10,13:238,96
+> 1:False:10,14:238,94
+> 2:False:12,16:244,97
+> 3:False:12,18:228,88
+> 4:False:14,18:250,98
+> 5:False:14,20:250,98
+> 6:False:14,18:250,98
+> 7:False:12,16:244,97
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-1_10_2.tar.bz2:0.554833889008:0.04655417:0.56
+> 0:True:10,13:238,96
+> 1:False:10,14:238,94
+> 2:True:12,15:244,97
+> 3:True:12,15:228,88
+> 4:True:14,17:250,98
+> 5:True:14,17:250,98
+> 6:True:14,17:250,98
+> 7:True:12,15:244,97
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-1_10_3.tar.bz2:0.555006027222:0.04754856:0.56
+> 0:True:10,13:238,96
+> 1:False:10,14:238,94
+> 2:True:12,15:244,97
+> 3:False:12,16:228,88
+> 4:False:14,18:250,98
+> 5:False:14,18:250,98
+> 6:False:14,18:250,98
+> 7:False:12,17:244,97
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-2_10_1.tar.bz2:0.556642055511:0.04677382:0.56
+> 0:False:10,14:238,96
+> 1:True:10,12:238,94
+> 2:False:12,15:244,97
+> 3:False:12,16:228,88
+> 4:False:14,18:250,98
+> 5:False:14,18:250,98
+> 6:False:14,17:250,98
+> 7:False:12,16:244,97
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-2_10_2.tar.bz2:0.555877923965:0.04658139:0.56
+> 0:True:10,13:237,95
+> 1:True:10,13:237,93
+> 2:False:12,17:243,96
+> 3:False:12,16:227,87
+> 4:True:14,17:249,97
+> 5:False:14,19:249,97
+> 6:True:14,17:249,97
+> 7:False:12,16:243,96
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-2_10_3.tar.bz2:0.555453062057:0.04660877:0.55
+> 0:False:10,14:238,96
+> 1:False:10,14:238,94
+> 2:True:12,15:244,97
+> 3:True:12,15:228,88
+> 4:True:14,17:250,98
+> 5:True:14,17:250,98
+> 6:True:14,17:250,98
+> 7:True:12,15:244,97
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-3_10_1.tar.bz2:0.555312871933:0.04656201:0.56
+> 0:False:10,14:239,97
+> 1:False:10,15:239,95
+> 2:True:12,15:245,98
+> 3:True:12,15:229,89
+> 4:True:14,17:251,99
+> 5:True:14,17:251,99
+> 6:True:14,17:251,99
+> 7:True:12,15:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-3_10_2.tar.bz2:0.550723075867:0.04636918:0.56
+> 0:False:10,13:239,97
+> 1:False:10,13:239,95
+> 2:False:12,13:245,98
+> 3:False:12,13:229,89
+> 4:False:14,16:251,99
+> 5:True:14,14:251,99
+> 6:False:14,16:251,99
+> 7:False:12,15:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-3_10_3.tar.bz2:0.555264949799:0.04685389:0.55
+> 0:False:10,17:239,97
+> 1:False:10,15:239,95
+> 2:True:12,15:245,98
+> 3:True:12,15:229,89
+> 4:False:14,19:251,99
+> 5:True:14,17:251,99
+> 6:False:14,18:251,99
+> 7:True:12,15:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-4_10_1.tar.bz2:0.555171012878:0.0464137:0.55
+> 0:False:10,13:239,97
+> 1:False:10,14:239,95
+> 2:False:12,15:245,98
+> 3:False:12,16:229,89
+> 4:True:14,16:251,99
+> 5:False:14,18:251,99
+> 6:False:14,18:251,99
+> 7:False:12,16:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-4_10_2.tar.bz2:0.555415153503:0.04714069:0.55
+> 0:False:10,15:239,97
+> 1:False:10,16:239,95
+> 2:False:12,16:245,98
+> 3:True:12,15:229,89
+> 4:False:14,19:251,99
+> 5:False:14,18:251,99
+> 6:False:14,19:251,99
+> 7:False:12,17:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p02_hyp-4_10_3.tar.bz2:0.556581020355:0.04725917:0.56
+> 0:False:10,15:239,97
+> 1:False:10,16:239,95
+> 2:True:12,15:245,98
+> 3:True:12,15:229,89
+> 4:False:14,19:251,99
+> 5:False:14,18:251,99
+> 6:False:14,19:251,99
+> 7:False:12,17:245,98
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-1_10_1.tar.bz2:0.324059963226:0.01824085:0.32
+> 0:False:12,14:124,61
+> 1:False:12,14:124,61
+> 2:False:12,14:124,61
+> 3:True:12,13:124,61
+> 4:True:12,13:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-1_10_2.tar.bz2:0.323310136795:0.01807628:0.32
+> 0:True:12,16:124,61
+> 1:True:12,16:124,61
+> 2:True:12,16:124,61
+> 3:True:12,16:124,61
+> 4:True:12,16:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-1_10_3.tar.bz2:0.326503992081:0.0187104:0.31
+> 0:False:12,14:124,61
+> 1:True:12,13:124,61
+> 2:True:12,13:124,61
+> 3:True:12,13:124,61
+> 4:True:12,13:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-2_10_1.tar.bz2:0.322993993759:0.01821613:0.32
+> 0:True:12,14:125,62
+> 1:True:12,14:125,62
+> 2:True:12,14:125,62
+> 3:True:12,14:125,62
+> 4:False:12,15:125,62
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-2_10_2.tar.bz2:0.324023962021:0.01821516:0.32
+> 0:True:12,17:125,62
+> 1:True:12,17:125,62
+> 2:True:12,17:125,62
+> 3:True:12,17:125,62
+> 4:False:12,18:125,62
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-2_10_3.tar.bz2:0.322484970093:0.01839913:0.32
+> 0:True:12,17:124,61
+> 1:True:12,17:124,61
+> 2:True:12,17:124,61
+> 3:True:12,17:124,61
+> 4:False:12,18:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-3_10_1.tar.bz2:0.321773052216:0.01812761:0.32
+> 0:False:12,16:125,62
+> 1:False:12,16:125,62
+> 2:False:12,16:125,62
+> 3:True:12,15:125,62
+> 4:False:12,16:125,62
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-3_10_2.tar.bz2:0.318953990936:0.01814853:0.32
+> 0:False:12,17:124,61
+> 1:True:12,16:124,61
+> 2:True:12,16:124,61
+> 3:False:12,17:124,61
+> 4:False:12,18:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-3_10_3.tar.bz2:0.322458028793:0.01834221:0.32
+> 0:True:12,16:125,62
+> 1:False:12,17:125,62
+> 2:False:12,17:125,62
+> 3:False:12,17:125,62
+> 4:False:12,17:125,62
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-4_10_1.tar.bz2:0.323267936707:0.01839743:0.33
+> 0:True:12,14:125,62
+> 1:False:12,15:125,62
+> 2:False:12,15:125,62
+> 3:False:12,15:125,62
+> 4:False:12,16:125,62
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-4_10_2.tar.bz2:0.324079036713:0.01841757:0.32
+> 0:True:12,16:124,61
+> 1:False:12,17:124,61
+> 2:False:12,17:124,61
+> 3:False:12,17:124,61
+> 4:False:12,17:124,61
+ferry-suboptimal-old-noisy/10/ferry_noisy_p03_hyp-4_10_3.tar.bz2:0.325134992599:0.01844944:0.34
+> 0:True:12,15:125,62
+> 1:True:12,15:125,62
+> 2:False:12,16:125,62
+> 3:False:12,16:125,62
+> 4:False:12,17:125,62
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-1_30_1.tar.bz2:0.394696950912:0.02680341:0.39
+> 0:True:12,14:126,63
+> 1:False:10,15:122,62
+> 2:False:8,13:118,61
+> 3:False:8,15:118,61
+> 4:False:8,13:118,59
+> 5:False:10,17:122,62
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-1_30_2.tar.bz2:0.396589994431:0.02708149:0.4
+> 0:True:12,18:128,65
+> 1:False:10,17:124,64
+> 2:False:8,16:120,63
+> 3:False:8,17:120,63
+> 4:True:8,14:120,61
+> 5:False:10,19:124,64
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-1_30_3.tar.bz2:0.394683122635:0.02672962:0.39
+> 0:True:12,17:127,64
+> 1:False:10,16:123,63
+> 2:False:8,17:119,62
+> 3:False:8,16:119,62
+> 4:False:8,14:119,60
+> 5:False:10,19:123,63
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-2_30_1.tar.bz2:0.394910812378:0.02728469:0.39
+> 0:True:12,18:128,65
+> 1:False:10,17:124,64
+> 2:False:8,15:120,63
+> 3:False:8,17:120,63
+> 4:False:8,16:120,61
+> 5:False:10,19:124,64
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-2_30_2.tar.bz2:0.394428014755:0.02693862:0.39
+> 0:False:12,18:128,65
+> 1:True:10,14:124,64
+> 2:False:8,14:120,63
+> 3:False:8,15:120,63
+> 4:False:8,14:120,61
+> 5:False:10,16:124,64
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-2_30_3.tar.bz2:0.394945144653:0.0276168:0.39
+> 0:False:12,20:129,66
+> 1:True:10,17:125,65
+> 2:False:8,18:121,64
+> 3:False:8,17:121,64
+> 4:False:8,19:121,62
+> 5:False:10,18:125,65
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-3_30_1.tar.bz2:0.392132043839:0.02628518:0.39
+> 0:False:12,18:128,65
+> 1:True:10,15:124,64
+> 2:False:8,14:120,63
+> 3:True:8,13:120,63
+> 4:False:8,16:120,61
+> 5:True:10,15:124,64
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-3_30_2.tar.bz2:0.394879817963:0.02692115:0.39
+> 0:False:12,20:129,66
+> 1:True:10,16:125,65
+> 2:False:8,15:121,64
+> 3:True:8,14:121,64
+> 4:False:8,17:121,62
+> 5:True:10,16:125,65
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-3_30_3.tar.bz2:0.395910978317:0.02674972:0.4
+> 0:True:12,17:127,64
+> 1:True:10,15:123,63
+> 2:False:8,14:119,62
+> 3:True:8,13:119,62
+> 4:False:8,16:119,60
+> 5:True:10,15:123,63
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-4_30_1.tar.bz2:0.395967006683:0.02777184:0.41
+> 0:False:12,19:129,66
+> 1:True:10,16:125,65
+> 2:True:8,14:121,64
+> 3:False:8,16:121,64
+> 4:False:8,16:121,62
+> 5:False:10,17:125,65
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-4_30_2.tar.bz2:0.394459962845:0.02734101:0.39
+> 0:False:12,20:128,65
+> 1:True:10,16:124,64
+> 2:True:8,14:120,63
+> 3:True:8,14:120,63
+> 4:False:8,17:120,61
+> 5:True:10,16:124,64
+ferry-suboptimal-old-noisy/30/ferry_noisy_p00_hyp-4_30_3.tar.bz2:0.394708871841:0.02723809:0.39
+> 0:False:12,16:127,64
+> 1:True:10,12:123,63
+> 2:False:8,14:119,62
+> 3:False:8,14:119,62
+> 4:False:8,16:119,60
+> 5:False:10,14:123,63
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-1_30_1.tar.bz2:0.551875114441:0.04764057:0.56
+> 0:True:10,18:245,103
+> 1:False:10,22:245,101
+> 2:False:12,21:251,104
+> 3:False:12,23:235,95
+> 4:False:14,23:257,105
+> 5:False:14,24:257,105
+> 6:False:14,25:257,105
+> 7:False:12,23:251,104
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-1_30_2.tar.bz2:0.55800485611:0.04786597:0.56
+> 0:False:10,19:245,103
+> 1:False:10,21:245,101
+> 2:True:12,20:251,104
+> 3:False:12,23:235,95
+> 4:False:14,23:257,105
+> 5:False:14,24:257,105
+> 6:False:14,24:257,105
+> 7:False:12,23:251,104
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-1_30_3.tar.bz2:0.554235935211:0.04752747:0.55
+> 0:True:10,18:245,103
+> 1:False:10,21:245,101
+> 2:False:12,22:251,104
+> 3:False:12,21:235,95
+> 4:False:14,23:257,105
+> 5:False:14,23:257,105
+> 6:False:14,24:257,105
+> 7:False:12,22:251,104
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-2_30_1.tar.bz2:0.556771039963:0.04785568:0.56
+> 0:False:10,19:244,102
+> 1:False:10,17:244,100
+> 2:False:12,18:250,103
+> 3:False:12,21:234,94
+> 4:False:14,20:256,104
+> 5:False:14,21:256,104
+> 6:True:14,19:256,104
+> 7:False:12,18:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-2_30_2.tar.bz2:0.555902004242:0.04695183:0.56
+> 0:False:10,20:244,102
+> 1:False:10,17:244,100
+> 2:False:12,20:250,103
+> 3:False:12,20:234,94
+> 4:False:14,20:256,104
+> 5:True:14,19:256,104
+> 6:True:14,19:256,104
+> 7:True:12,17:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-2_30_3.tar.bz2:0.554784059525:0.04760776:0.56
+> 0:False:10,18:244,102
+> 1:False:10,18:244,100
+> 2:True:12,19:250,103
+> 3:False:12,21:234,94
+> 4:False:14,22:256,104
+> 5:True:14,21:256,104
+> 6:True:14,21:256,104
+> 7:False:12,20:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-3_30_1.tar.bz2:0.551841020584:0.04716018:0.55
+> 0:False:10,20:244,102
+> 1:False:10,20:244,100
+> 2:True:12,20:250,103
+> 3:False:12,23:234,94
+> 4:False:14,23:256,104
+> 5:False:14,23:256,104
+> 6:False:14,23:256,104
+> 7:True:12,20:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-3_30_2.tar.bz2:0.555463790894:0.04811973:0.55
+> 0:False:10,22:244,102
+> 1:False:10,23:244,100
+> 2:True:12,20:250,103
+> 3:False:12,21:234,94
+> 4:True:14,22:256,104
+> 5:True:14,22:256,104
+> 6:False:14,24:256,104
+> 7:True:12,20:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-3_30_3.tar.bz2:0.558110952377:0.04812467:0.56
+> 0:False:10,21:243,101
+> 1:False:10,20:243,99
+> 2:False:12,21:249,102
+> 3:False:12,22:233,93
+> 4:True:14,22:255,103
+> 5:True:14,22:255,103
+> 6:True:14,22:255,103
+> 7:True:12,20:249,102
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-4_30_1.tar.bz2:0.557033061981:0.04827283:0.56
+> 0:False:10,19:245,103
+> 1:False:10,19:245,101
+> 2:True:12,17:251,104
+> 3:False:12,18:235,95
+> 4:False:14,20:257,105
+> 5:True:14,19:257,105
+> 6:False:14,21:257,105
+> 7:False:12,19:251,104
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-4_30_2.tar.bz2:0.558714866638:0.04765473:0.56
+> 0:False:10,20:244,102
+> 1:False:10,21:244,100
+> 2:True:12,20:250,103
+> 3:True:12,20:234,94
+> 4:False:14,24:256,104
+> 5:True:14,22:256,104
+> 6:False:14,24:256,104
+> 7:False:12,22:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p02_hyp-4_30_3.tar.bz2:0.554878950119:0.04743101:0.55
+> 0:False:10,21:244,102
+> 1:False:10,23:244,100
+> 2:False:12,22:250,103
+> 3:False:12,19:234,94
+> 4:False:14,23:256,104
+> 5:True:14,20:256,104
+> 6:False:14,23:256,104
+> 7:False:12,19:250,103
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-1_30_1.tar.bz2:0.324342012405:0.01873736:0.33
+> 0:True:12,19:131,68
+> 1:True:12,19:131,68
+> 2:False:12,22:131,68
+> 3:False:12,20:131,68
+> 4:False:12,22:131,68
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-1_30_2.tar.bz2:0.321957111359:0.01861236:0.31
+> 0:False:12,20:130,67
+> 1:True:12,19:130,67
+> 2:True:12,19:130,67
+> 3:False:12,20:130,67
+> 4:False:12,21:130,67
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-1_30_3.tar.bz2:0.324179887772:0.01850303:0.32
+> 0:False:12,17:130,67
+> 1:False:12,17:130,67
+> 2:True:12,16:130,67
+> 3:True:12,16:130,67
+> 4:False:12,18:130,67
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-2_30_1.tar.bz2:0.323394060135:0.01902104:0.32
+> 0:False:12,23:132,69
+> 1:True:12,22:132,69
+> 2:True:12,22:132,69
+> 3:False:12,23:132,69
+> 4:False:12,24:132,69
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-2_30_2.tar.bz2:0.324198961258:0.01872385:0.32
+> 0:False:12,22:132,69
+> 1:False:12,21:132,69
+> 2:True:12,20:132,69
+> 3:False:12,22:132,69
+> 4:False:12,23:132,69
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-2_30_3.tar.bz2:0.322943925858:0.01882995:0.32
+> 0:False:12,26:133,70
+> 1:True:12,24:133,70
+> 2:False:12,25:133,70
+> 3:False:12,25:133,70
+> 4:False:12,25:133,70
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-3_30_1.tar.bz2:0.322968959808:0.01851784:0.32
+> 0:True:12,21:131,68
+> 1:False:12,22:131,68
+> 2:True:12,21:131,68
+> 3:True:12,21:131,68
+> 4:True:12,21:131,68
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-3_30_2.tar.bz2:0.322201013565:0.01830239:0.32
+> 0:False:12,22:132,69
+> 1:False:12,21:132,69
+> 2:True:12,19:132,69
+> 3:False:12,22:132,69
+> 4:False:12,22:132,69
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-3_30_3.tar.bz2:0.32288813591:0.01860588:0.31
+> 0:False:12,20:130,67
+> 1:False:12,20:130,67
+> 2:True:12,18:130,67
+> 3:False:12,20:130,67
+> 4:False:12,21:130,67
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-4_30_1.tar.bz2:0.322772979736:0.01856543:0.33
+> 0:False:12,22:132,69
+> 1:True:12,21:132,69
+> 2:False:12,23:132,69
+> 3:False:12,22:132,69
+> 4:False:12,23:132,69
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-4_30_2.tar.bz2:0.324814081192:0.01872111:0.33
+> 0:False:12,20:130,67
+> 1:False:12,21:130,67
+> 2:False:12,20:130,67
+> 3:False:12,20:130,67
+> 4:True:12,19:130,67
+ferry-suboptimal-old-noisy/30/ferry_noisy_p03_hyp-4_30_3.tar.bz2:0.325006008148:0.01918928:0.32
+> 0:False:12,21:132,69
+> 1:True:12,19:132,69
+> 2:False:12,20:132,69
+> 3:False:12,22:132,69
+> 4:False:12,23:132,69
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-1_50_1.tar.bz2:0.395397901535:0.02728079:0.4
+> 0:True:12,18:132,69
+> 1:False:10,21:128,68
+> 2:False:8,19:124,67
+> 3:False:8,20:124,67
+> 4:False:8,20:124,65
+> 5:False:10,21:128,68
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-1_50_2.tar.bz2:0.392843961716:0.02662174:0.39
+> 0:True:12,21:130,67
+> 1:False:10,21:126,66
+> 2:False:8,19:122,65
+> 3:False:8,21:122,65
+> 4:False:8,20:122,63
+> 5:False:10,22:126,66
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-1_50_3.tar.bz2:0.395001173019:0.02741686:0.4
+> 0:True:12,19:130,67
+> 1:False:10,18:126,66
+> 2:False:8,21:122,65
+> 3:False:8,19:122,65
+> 4:False:8,19:122,63
+> 5:False:10,22:126,66
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-2_50_1.tar.bz2:0.395963907242:0.02763833:0.4
+> 0:True:12,24:132,69
+> 1:True:10,22:128,68
+> 2:False:8,23:124,67
+> 3:False:8,23:124,67
+> 4:False:8,23:124,65
+> 5:False:10,25:128,68
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-2_50_2.tar.bz2:0.394341945648:0.02724524:0.4
+> 0:False:12,23:132,69
+> 1:True:10,20:128,68
+> 2:False:8,22:124,67
+> 3:False:8,21:124,67
+> 4:False:8,21:124,65
+> 5:False:10,23:128,68
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-2_50_3.tar.bz2:0.394322156906:0.02708811:0.39
+> 0:False:12,25:133,70
+> 1:True:10,22:129,69
+> 2:True:8,20:125,68
+> 3:False:8,22:125,68
+> 4:False:8,24:125,66
+> 5:False:10,23:129,69
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-3_50_1.tar.bz2:0.39374089241:0.0271667:0.39
+> 0:False:12,23:132,69
+> 1:False:10,20:128,68
+> 2:False:8,21:124,67
+> 3:True:8,17:124,67
+> 4:False:8,23:124,65
+> 5:False:10,21:128,68
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-3_50_2.tar.bz2:0.39485502243:0.02668242:0.39
+> 0:False:12,22:128,65
+> 1:True:10,18:124,64
+> 2:False:8,19:120,63
+> 3:False:8,18:120,63
+> 4:False:8,19:120,61
+> 5:False:10,20:124,64
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-3_50_3.tar.bz2:0.394329071045:0.02701869:0.4
+> 0:False:12,23:131,68
+> 1:False:10,21:127,67
+> 2:False:8,20:123,66
+> 3:True:8,18:123,66
+> 4:False:8,23:123,64
+> 5:True:10,20:127,67
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-4_50_1.tar.bz2:0.394160032272:0.02722907:0.39
+> 0:True:12,21:132,69
+> 1:False:10,20:128,68
+> 2:False:8,18:124,67
+> 3:False:8,19:124,67
+> 4:False:8,21:124,65
+> 5:True:10,19:128,68
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-4_50_2.tar.bz2:0.395380020142:0.02725812:0.4
+> 0:False:12,25:131,68
+> 1:False:10,22:127,67
+> 2:False:8,19:123,66
+> 3:False:8,21:123,66
+> 4:False:8,24:123,64
+> 5:True:10,20:127,67
+ferry-suboptimal-old-noisy/50/ferry_noisy_p00_hyp-4_50_3.tar.bz2:0.393996953964:0.02745865:0.39
+> 0:False:12,23:131,68
+> 1:False:10,19:127,67
+> 2:False:8,19:123,66
+> 3:False:8,18:123,66
+> 4:False:8,24:123,64
+> 5:True:10,17:127,67
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-1_50_1.tar.bz2:0.557598114014:0.04863324:0.56
+> 0:False:10,24:251,109
+> 1:False:10,27:251,107
+> 2:False:12,26:257,110
+> 3:False:12,26:241,101
+> 4:True:14,26:263,111
+> 5:False:14,28:263,111
+> 6:False:14,28:263,111
+> 7:False:12,27:257,110
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-1_50_2.tar.bz2:0.556549072266:0.04802179:0.55
+> 0:True:10,26:249,107
+> 1:False:10,29:249,105
+> 2:False:12,29:255,108
+> 3:True:12,28:239,99
+> 4:False:14,31:261,109
+> 5:False:14,31:261,109
+> 6:False:14,32:261,109
+> 7:False:12,31:255,108
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-1_50_3.tar.bz2:0.557259082794:0.04840808:0.55
+> 0:True:10,25:252,110
+> 1:False:10,29:252,108
+> 2:False:12,28:258,111
+> 3:False:12,30:242,102
+> 4:True:14,29:264,112
+> 5:False:14,31:264,112
+> 6:False:14,31:264,112
+> 7:False:12,31:258,111
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-2_50_1.tar.bz2:0.553868055344:0.04739765:0.56
+> 0:False:10,23:246,104
+> 1:False:10,21:246,102
+> 2:False:12,23:252,105
+> 3:False:12,25:236,96
+> 4:False:14,24:258,106
+> 5:False:14,25:258,106
+> 6:True:14,23:258,106
+> 7:False:12,23:252,105
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-2_50_2.tar.bz2:0.554247140884:0.04735359:0.56
+> 0:False:10,23:248,106
+> 1:False:10,20:248,104
+> 2:False:12,24:254,107
+> 3:False:12,26:238,98
+> 4:False:14,25:260,108
+> 5:False:14,24:260,108
+> 6:True:14,23:260,108
+> 7:False:12,24:254,107
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-2_50_3.tar.bz2:0.554179191589:0.04778452:0.55
+> 0:False:10,27:247,105
+> 1:False:10,25:247,103
+> 2:True:12,25:253,106
+> 3:True:12,25:237,97
+> 4:False:14,28:259,107
+> 5:True:14,27:259,107
+> 6:False:14,28:259,107
+> 7:False:12,27:253,106
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-3_50_1.tar.bz2:0.55714392662:0.04800222:0.55
+> 0:False:10,27:249,107
+> 1:False:10,27:249,105
+> 2:False:12,26:255,108
+> 3:False:12,29:239,99
+> 4:False:14,28:261,109
+> 5:True:14,27:261,109
+> 6:False:14,29:261,109
+> 7:False:12,28:255,108
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-3_50_2.tar.bz2:0.557901144028:0.04811313:0.56
+> 0:False:10,27:251,109
+> 1:False:10,30:251,107
+> 2:True:12,25:257,110
+> 3:False:12,28:241,101
+> 4:False:14,30:263,111
+> 5:True:14,27:263,111
+> 6:False:14,33:263,111
+> 7:False:12,31:257,110
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-3_50_3.tar.bz2:0.556618928909:0.04743545:0.55
+> 0:False:10,27:248,106
+> 1:False:10,28:248,104
+> 2:True:12,26:254,107
+> 3:True:12,26:238,98
+> 4:False:14,29:260,108
+> 5:False:14,29:260,108
+> 6:False:14,31:260,108
+> 7:False:12,30:254,107
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-4_50_1.tar.bz2:0.556443929672:0.04775566:0.56
+> 0:False:10,29:253,111
+> 1:False:10,30:253,109
+> 2:True:12,26:259,112
+> 3:True:12,26:243,103
+> 4:False:14,31:265,113
+> 5:False:14,29:265,113
+> 6:False:14,30:265,113
+> 7:False:12,28:259,112
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-4_50_2.tar.bz2:0.558536052704:0.04856359:0.56
+> 0:False:10,27:251,109
+> 1:False:10,26:251,107
+> 2:False:12,26:257,110
+> 3:False:12,26:241,101
+> 4:False:14,28:263,111
+> 5:True:14,27:263,111
+> 6:True:14,27:263,111
+> 7:False:12,26:257,110
+ferry-suboptimal-old-noisy/50/ferry_noisy_p02_hyp-4_50_3.tar.bz2:0.558036088943:0.04836112:0.56
+> 0:False:10,29:250,108
+> 1:False:10,31:250,106
+> 2:False:12,30:256,109
+> 3:True:12,26:240,100
+> 4:False:14,30:262,110
+> 5:False:14,30:262,110
+> 6:False:14,33:262,110
+> 7:False:12,30:256,109
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-1_50_1.tar.bz2:0.323201179504:0.01915335:0.32
+> 0:True:12,25:137,74
+> 1:False:12,26:137,74
+> 2:False:12,26:137,74
+> 3:False:12,26:137,74
+> 4:False:12,27:137,74
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-1_50_2.tar.bz2:0.323647022247:0.01850293:0.34
+> 0:True:12,24:134,71
+> 1:False:12,25:134,71
+> 2:False:12,25:134,71
+> 3:True:12,24:134,71
+> 4:False:12,25:134,71
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-1_50_3.tar.bz2:0.32443189621:0.01863362:0.32
+> 0:True:12,24:134,71
+> 1:False:12,25:134,71
+> 2:False:12,25:134,71
+> 3:False:12,25:134,71
+> 4:False:12,26:134,71
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-2_50_1.tar.bz2:0.324893951416:0.01902529:0.32
+> 0:False:12,33:137,74
+> 1:True:12,32:137,74
+> 2:False:12,34:137,74
+> 3:False:12,34:137,74
+> 4:False:12,34:137,74
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-2_50_2.tar.bz2:0.326014041901:0.01923011:0.33
+> 0:False:12,27:138,75
+> 1:True:12,26:138,75
+> 2:False:12,28:138,75
+> 3:False:12,28:138,75
+> 4:False:12,29:138,75
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-2_50_3.tar.bz2:0.322038888931:0.01858348:0.32
+> 0:False:12,29:138,75
+> 1:True:12,28:138,75
+> 2:True:12,28:138,75
+> 3:False:12,29:138,75
+> 4:False:12,30:138,75
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-3_50_1.tar.bz2:0.321755170822:0.0185405:0.32
+> 0:False:12,29:136,73
+> 1:False:12,27:136,73
+> 2:True:12,26:136,73
+> 3:False:12,29:136,73
+> 4:False:12,30:136,73
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-3_50_2.tar.bz2:0.322597026825:0.01922946:0.32
+> 0:False:12,27:135,72
+> 1:False:12,26:135,72
+> 2:True:12,24:135,72
+> 3:False:12,26:135,72
+> 4:False:12,28:135,72
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-3_50_3.tar.bz2:0.324158906937:0.01871189:0.33
+> 0:False:12,33:137,74
+> 1:False:12,31:137,74
+> 2:True:12,29:137,74
+> 3:False:12,32:137,74
+> 4:False:12,33:137,74
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-4_50_1.tar.bz2:0.325187206268:0.01867963:0.33
+> 0:False:12,29:136,73
+> 1:True:12,27:136,73
+> 2:False:12,30:136,73
+> 3:False:12,30:136,73
+> 4:False:12,31:136,73
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-4_50_2.tar.bz2:0.325232982635:0.01892061:0.32
+> 0:False:12,29:137,74
+> 1:True:12,27:137,74
+> 2:False:12,28:137,74
+> 3:False:12,28:137,74
+> 4:False:12,29:137,74
+ferry-suboptimal-old-noisy/50/ferry_noisy_p03_hyp-4_50_3.tar.bz2:0.323114871979:0.01882167:0.32
+> 0:True:12,27:136,73
+> 1:True:12,27:136,73
+> 2:False:12,28:136,73
+> 3:True:12,27:136,73
+> 4:True:12,27:136,73
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-1_70_1.tar.bz2:0.396703958511:0.02719883:0.39
+> 0:True:12,18:133,70
+> 1:False:10,22:129,69
+> 2:False:8,21:125,68
+> 3:False:8,23:125,68
+> 4:False:8,20:125,66
+> 5:False:10,24:129,69
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-1_70_2.tar.bz2:0.395087957382:0.02779427:0.39
+> 0:True:12,23:136,73
+> 1:False:10,24:132,72
+> 2:False:8,24:128,71
+> 3:False:8,23:128,71
+> 4:False:8,24:128,69
+> 5:False:10,26:132,72
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-1_70_3.tar.bz2:0.395879030228:0.02778341:0.39
+> 0:True:12,23:135,72
+> 1:False:10,24:131,71
+> 2:False:8,23:127,70
+> 3:False:8,25:127,70
+> 4:False:8,24:127,68
+> 5:False:10,25:131,71
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-2_70_1.tar.bz2:0.394295930862:0.0269853:0.4
+> 0:False:12,23:135,72
+> 1:True:10,17:131,71
+> 2:False:8,22:127,70
+> 3:False:8,18:127,70
+> 4:False:8,21:127,68
+> 5:False:10,21:131,71
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-2_70_2.tar.bz2:0.395648956299:0.02733768:0.4
+> 0:False:12,26:137,74
+> 1:True:10,19:133,73
+> 2:False:8,26:129,72
+> 3:False:8,23:129,72
+> 4:False:8,25:129,70
+> 5:False:10,24:133,73
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-2_70_3.tar.bz2:0.39762711525:0.02788149:0.39
+> 0:False:12,28:137,74
+> 1:True:10,23:133,73
+> 2:False:8,26:129,72
+> 3:False:8,25:129,72
+> 4:False:8,26:129,70
+> 5:False:10,26:133,73
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-3_70_1.tar.bz2:0.393772125244:0.02707308:0.4
+> 0:False:12,25:132,69
+> 1:False:10,23:128,68
+> 2:False:8,24:124,67
+> 3:True:8,20:124,67
+> 4:False:8,26:124,65
+> 5:False:10,24:128,68
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-3_70_2.tar.bz2:0.39498090744:0.02662821:0.39
+> 0:False:12,23:133,70
+> 1:True:10,19:129,69
+> 2:False:8,21:125,68
+> 3:True:8,17:125,68
+> 4:False:8,24:125,66
+> 5:True:10,19:129,69
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-3_70_3.tar.bz2:0.39587020874:0.02728281:0.4
+> 0:False:12,27:134,71
+> 1:False:10,25:130,70
+> 2:False:8,23:126,69
+> 3:True:8,21:126,69
+> 4:False:8,26:126,67
+> 5:False:10,24:130,70
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-4_70_1.tar.bz2:0.396174907684:0.02752157:0.39
+> 0:True:12,27:137,74
+> 1:True:10,25:133,73
+> 2:False:8,26:129,72
+> 3:False:8,27:129,72
+> 4:False:8,30:129,70
+> 5:True:10,25:133,73
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-4_70_2.tar.bz2:0.396418809891:0.02736596:0.39
+> 0:False:12,28:137,74
+> 1:False:10,26:133,73
+> 2:False:8,22:129,72
+> 3:False:8,23:129,72
+> 4:False:8,27:129,70
+> 5:True:10,23:133,73
+ferry-suboptimal-old-noisy/70/ferry_noisy_p00_hyp-4_70_3.tar.bz2:0.393704175949:0.02671325:0.4
+> 0:False:12,25:136,73
+> 1:False:10,21:132,72
+> 2:False:8,21:128,71
+> 3:False:8,20:128,71
+> 4:False:8,26:128,69
+> 5:True:10,19:132,72
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-1_70_1.tar.bz2:0.556910991669:0.04811018:0.56
+> 0:False:10,31:257,115
+> 1:False:10,34:257,113
+> 2:False:12,33:263,116
+> 3:True:12,32:247,107
+> 4:True:14,34:269,117
+> 5:False:14,35:269,117
+> 6:False:14,36:269,117
+> 7:False:12,35:263,116
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-1_70_2.tar.bz2:0.557649850845:0.04813403:0.56
+> 0:True:10,28:256,114
+> 1:False:10,31:256,112
+> 2:False:12,33:262,115
+> 3:False:12,33:246,106
+> 4:True:14,32:268,116
+> 5:False:14,35:268,116
+> 6:False:14,35:268,116
+> 7:False:12,34:262,115
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-1_70_3.tar.bz2:0.555790901184:0.04883415:0.56
+> 0:True:10,31:255,113
+> 1:False:10,36:255,111
+> 2:False:12,36:261,114
+> 3:False:12,36:245,105
+> 4:False:14,36:267,115
+> 5:False:14,38:267,115
+> 6:False:14,39:267,115
+> 7:False:12,37:261,114
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-2_70_1.tar.bz2:0.556994915009:0.04799365:0.55
+> 0:False:10,29:251,109
+> 1:True:10,27:251,107
+> 2:False:12,31:257,110
+> 3:False:12,32:241,101
+> 4:False:14,33:263,111
+> 5:False:14,33:263,111
+> 6:True:14,31:263,111
+> 7:False:12,34:257,110
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-2_70_2.tar.bz2:0.557518959045:0.0486859:0.55
+> 0:False:10,31:251,109
+> 1:False:10,29:251,107
+> 2:False:12,32:257,110
+> 3:False:12,34:241,101
+> 4:True:14,32:263,111
+> 5:False:14,34:263,111
+> 6:True:14,32:263,111
+> 7:False:12,34:257,110
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-2_70_3.tar.bz2:0.556258916855:0.04858546:0.57
+> 0:False:10,32:251,109
+> 1:False:10,28:251,107
+> 2:False:12,31:257,110
+> 3:False:12,32:241,101
+> 4:False:14,33:263,111
+> 5:False:14,33:263,111
+> 6:True:14,30:263,111
+> 7:False:12,32:257,110
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-3_70_1.tar.bz2:0.557178974152:0.04807333:0.56
+> 0:False:10,35:254,112
+> 1:False:10,35:254,110
+> 2:True:12,33:260,113
+> 3:False:12,36:244,104
+> 4:False:14,36:266,114
+> 5:False:14,37:266,114
+> 6:False:14,38:266,114
+> 7:False:12,36:260,113
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-3_70_2.tar.bz2:0.559247970581:0.04893694:0.56
+> 0:False:10,37:254,112
+> 1:False:10,38:254,110
+> 2:False:12,35:260,113
+> 3:False:12,36:244,104
+> 4:False:14,37:266,114
+> 5:True:14,35:266,114
+> 6:False:14,38:266,114
+> 7:False:12,37:260,113
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-3_70_3.tar.bz2:0.559064149857:0.04866869:0.56
+> 0:False:10,34:255,113
+> 1:False:10,34:255,111
+> 2:True:12,29:261,114
+> 3:False:12,34:245,105
+> 4:False:14,34:267,115
+> 5:False:14,33:267,115
+> 6:False:14,36:267,115
+> 7:False:12,33:261,114
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-4_70_1.tar.bz2:0.559350013733:0.04872064:0.56
+> 0:False:10,39:255,113
+> 1:False:10,41:255,111
+> 2:False:12,37:261,114
+> 3:True:12,32:245,105
+> 4:False:14,39:267,115
+> 5:False:14,37:267,115
+> 6:False:14,41:267,115
+> 7:False:12,38:261,114
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-4_70_2.tar.bz2:0.558530092239:0.04883028:0.56
+> 0:False:10,32:256,114
+> 1:False:10,34:256,112
+> 2:False:12,34:262,115
+> 3:False:12,31:246,106
+> 4:False:14,33:268,116
+> 5:True:14,32:268,116
+> 6:False:14,34:268,116
+> 7:False:12,32:262,115
+ferry-suboptimal-old-noisy/70/ferry_noisy_p02_hyp-4_70_3.tar.bz2:0.555290937424:0.04815511:0.56
+> 0:False:10,36:256,114
+> 1:False:10,36:256,112
+> 2:False:12,32:262,115
+> 3:True:12,29:246,106
+> 4:False:14,37:268,116
+> 5:False:14,33:268,116
+> 6:False:14,35:268,116
+> 7:False:12,34:262,115
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-1_70_1.tar.bz2:0.32231593132:0.01843272:0.32
+> 0:True:12,31:137,74
+> 1:False:12,32:137,74
+> 2:False:12,32:137,74
+> 3:False:12,32:137,74
+> 4:False:12,33:137,74
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-1_70_2.tar.bz2:0.319936037064:0.01858922:0.32
+> 0:True:12,30:140,77
+> 1:False:12,32:140,77
+> 2:False:12,33:140,77
+> 3:False:12,32:140,77
+> 4:False:12,31:140,77
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-1_70_3.tar.bz2:0.323282003403:0.0186032:0.33
+> 0:True:12,28:141,78
+> 1:False:12,29:141,78
+> 2:False:12,32:141,78
+> 3:False:12,29:141,78
+> 4:False:12,31:141,78
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-2_70_1.tar.bz2:0.324282884598:0.01859857:0.32
+> 0:True:12,34:140,77
+> 1:True:12,34:140,77
+> 2:False:12,36:140,77
+> 3:False:12,35:140,77
+> 4:False:12,37:140,77
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-2_70_2.tar.bz2:0.325189113617:0.0193858:0.32
+> 0:True:12,36:141,78
+> 1:True:12,36:141,78
+> 2:True:12,36:141,78
+> 3:False:12,37:141,78
+> 4:False:12,39:141,78
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-2_70_3.tar.bz2:0.325917959213:0.0192653:0.33
+> 0:True:12,34:140,77
+> 1:True:12,34:140,77
+> 2:False:12,35:140,77
+> 3:True:12,34:140,77
+> 4:False:12,35:140,77
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-3_70_1.tar.bz2:0.325084924698:0.01899465:0.33
+> 0:False:12,36:140,77
+> 1:False:12,34:140,77
+> 2:True:12,33:140,77
+> 3:False:12,35:140,77
+> 4:False:12,36:140,77
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-3_70_2.tar.bz2:0.327013969421:0.01880473:0.32
+> 0:False:12,37:143,80
+> 1:False:12,34:143,80
+> 2:True:12,31:143,80
+> 3:False:12,35:143,80
+> 4:False:12,36:143,80
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-3_70_3.tar.bz2:0.324621915817:0.01924548:0.33
+> 0:False:12,36:141,78
+> 1:False:12,35:141,78
+> 2:True:12,34:141,78
+> 3:False:12,36:141,78
+> 4:False:12,38:141,78
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-4_70_1.tar.bz2:0.323390960693:0.01883017:0.32
+> 0:False:12,32:141,78
+> 1:True:12,31:141,78
+> 2:True:12,31:141,78
+> 3:False:12,32:141,78
+> 4:False:12,34:141,78
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-4_70_2.tar.bz2:0.324913978577:0.01883613:0.33
+> 0:False:12,33:143,80
+> 1:True:12,32:143,80
+> 2:False:12,33:143,80
+> 3:True:12,32:143,80
+> 4:False:12,35:143,80
+ferry-suboptimal-old-noisy/70/ferry_noisy_p03_hyp-4_70_3.tar.bz2:0.324151039124:0.01869348:0.32
+> 0:False:12,33:141,78
+> 1:True:12,32:141,78
+> 2:False:12,34:141,78
+> 3:False:12,34:141,78
+> 4:False:12,35:141,78
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-1_full_1.tar.bz2:0.398105859756:0.02784175:0.4
+> 0:True:12,25:140,77
+> 1:False:10,29:136,76
+> 2:False:8,30:132,75
+> 3:False:8,30:132,75
+> 4:False:8,29:132,73
+> 5:False:10,31:136,76
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-1_full_2.tar.bz2:0.396296977997:0.02760074:0.41
+> 0:True:12,26:141,78
+> 1:False:10,30:137,77
+> 2:False:8,30:133,76
+> 3:False:8,30:133,76
+> 4:False:8,29:133,74
+> 5:False:10,31:137,77
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-1_full_3.tar.bz2:0.396577835083:0.02770912:0.4
+> 0:True:12,28:141,78
+> 1:False:10,32:137,77
+> 2:False:8,33:133,76
+> 3:False:8,34:133,76
+> 4:False:8,30:133,74
+> 5:False:10,35:137,77
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-2_full_1.tar.bz2:0.396410942078:0.02750716:0.39
+> 0:True:12,29:141,78
+> 1:True:10,27:137,77
+> 2:False:8,30:133,76
+> 3:False:8,28:133,76
+> 4:False:8,31:133,74
+> 5:False:10,30:137,77
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-2_full_2.tar.bz2:0.395011901855:0.02695768:0.4
+> 0:False:12,30:140,77
+> 1:True:10,26:136,76
+> 2:False:8,29:132,75
+> 3:False:8,28:132,75
+> 4:False:8,29:132,73
+> 5:False:10,28:136,76
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-2_full_3.tar.bz2:0.395766973495:0.02746968:0.39
+> 0:False:12,32:141,78
+> 1:True:10,28:137,77
+> 2:False:8,31:133,76
+> 3:False:8,30:133,76
+> 4:False:8,31:133,74
+> 5:False:10,31:137,77
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-3_full_1.tar.bz2:0.396594047546:0.02733049:0.39
+> 0:False:12,35:139,76
+> 1:False:10,32:135,75
+> 2:False:8,33:131,74
+> 3:True:8,29:131,74
+> 4:False:8,35:131,72
+> 5:False:10,32:135,75
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-3_full_2.tar.bz2:0.397583961487:0.02777223:0.4
+> 0:False:12,32:138,75
+> 1:False:10,29:134,74
+> 2:False:8,30:130,73
+> 3:False:8,27:130,73
+> 4:False:8,33:130,71
+> 5:True:10,28:134,74
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-3_full_3.tar.bz2:0.396301984787:0.02729559:0.39
+> 0:False:12,30:136,73
+> 1:True:10,26:132,72
+> 2:False:8,29:128,71
+> 3:True:8,24:128,71
+> 4:False:8,31:128,69
+> 5:True:10,26:132,72
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-4_full_1.tar.bz2:0.396977186203:0.02771335:0.39
+> 0:False:12,33:140,77
+> 1:False:10,30:136,76
+> 2:False:8,30:132,75
+> 3:False:8,30:132,75
+> 4:False:8,34:132,73
+> 5:True:10,29:136,76
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-4_full_2.tar.bz2:0.396890878677:0.02750069:0.39
+> 0:False:12,35:140,77
+> 1:False:10,32:136,76
+> 2:False:8,31:132,75
+> 3:False:8,32:132,75
+> 4:False:8,36:132,73
+> 5:True:10,29:136,76
+ferry-suboptimal-old-noisy/100/ferry_noisy_p00_hyp-4_full_3.tar.bz2:0.396944046021:0.02737482:0.4
+> 0:False:12,33:141,78
+> 1:False:10,30:137,77
+> 2:False:8,31:133,76
+> 3:False:8,30:133,76
+> 4:False:8,34:133,74
+> 5:True:10,29:137,77
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-1_full_1.tar.bz2:0.557875156403:0.048269:0.56
+> 0:True:10,36:260,118
+> 1:False:10,42:260,116
+> 2:False:12,40:266,119
+> 3:False:12,42:250,110
+> 4:False:14,41:272,120
+> 5:False:14,43:272,120
+> 6:False:14,44:272,120
+> 7:False:12,44:266,119
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-1_full_2.tar.bz2:0.557961940765:0.04897606:0.55
+> 0:False:10,38:260,118
+> 1:False:10,41:260,116
+> 2:False:12,41:266,119
+> 3:False:12,42:250,110
+> 4:True:14,40:272,120
+> 5:False:14,42:272,120
+> 6:False:14,42:272,120
+> 7:False:12,44:266,119
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-1_full_3.tar.bz2:0.557363986969:0.048954:0.56
+> 0:False:10,38:261,119
+> 1:False:10,41:261,117
+> 2:False:12,40:267,120
+> 3:False:12,41:251,111
+> 4:True:14,41:273,121
+> 5:False:14,42:273,121
+> 6:False:14,42:273,121
+> 7:False:12,44:267,120
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-2_full_1.tar.bz2:0.55843091011:0.04914163:0.57
+> 0:False:10,40:257,115
+> 1:False:10,36:257,113
+> 2:False:12,40:263,116
+> 3:False:12,42:247,107
+> 4:False:14,42:269,117
+> 5:False:14,42:269,117
+> 6:True:14,38:269,117
+> 7:False:12,42:263,116
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-2_full_2.tar.bz2:0.560539960861:0.04919885:0.57
+> 0:False:10,41:257,115
+> 1:False:10,37:257,113
+> 2:False:12,40:263,116
+> 3:False:12,43:247,107
+> 4:False:14,43:269,117
+> 5:False:14,42:269,117
+> 6:True:14,39:269,117
+> 7:False:12,42:263,116
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-2_full_3.tar.bz2:0.560328960419:0.0496784:0.56
+> 0:False:10,42:257,115
+> 1:False:10,38:257,113
+> 2:True:12,39:263,116
+> 3:False:12,42:247,107
+> 4:False:14,42:269,117
+> 5:True:14,41:269,117
+> 6:True:14,41:269,117
+> 7:False:12,43:263,116
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-3_full_1.tar.bz2:0.557577848434:0.0488218:0.56
+> 0:False:10,46:262,120
+> 1:False:10,47:262,118
+> 2:True:12,41:268,121
+> 3:False:12,45:252,112
+> 4:False:14,47:274,122
+> 5:False:14,44:274,122
+> 6:False:14,47:274,122
+> 7:False:12,46:268,121
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-3_full_2.tar.bz2:0.559145212173:0.04926772:0.56
+> 0:False:10,43:262,120
+> 1:False:10,41:262,118
+> 2:True:12,39:268,121
+> 3:False:12,43:252,112
+> 4:False:14,45:274,122
+> 5:False:14,44:274,122
+> 6:False:14,43:274,122
+> 7:False:12,45:268,121
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-3_full_3.tar.bz2:0.558996915817:0.0485241:0.56
+> 0:False:10,47:262,120
+> 1:False:10,46:262,118
+> 2:True:12,41:268,121
+> 3:False:12,45:252,112
+> 4:False:14,47:274,122
+> 5:False:14,45:274,122
+> 6:False:14,45:274,122
+> 7:False:12,45:268,121
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-4_full_1.tar.bz2:0.558291912079:0.04819709:0.55
+> 0:False:10,45:263,121
+> 1:False:10,45:263,119
+> 2:False:12,42:269,122
+> 3:True:12,39:253,113
+> 4:False:14,44:275,123
+> 5:True:14,41:275,123
+> 6:False:14,44:275,123
+> 7:False:12,42:269,122
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-4_full_2.tar.bz2:0.559386968613:0.04848072:0.55
+> 0:False:10,46:263,121
+> 1:False:10,46:263,119
+> 2:False:12,45:269,122
+> 3:True:12,40:253,113
+> 4:False:14,45:275,123
+> 5:False:14,43:275,123
+> 6:False:14,44:275,123
+> 7:False:12,45:269,122
+ferry-suboptimal-old-noisy/100/ferry_noisy_p02_hyp-4_full_3.tar.bz2:0.557000875473:0.04941574:0.55
+> 0:False:10,48:263,121
+> 1:False:10,48:263,119
+> 2:False:12,45:269,122
+> 3:True:12,40:253,113
+> 4:False:14,46:275,123
+> 5:False:14,43:275,123
+> 6:False:14,45:275,123
+> 7:False:12,44:269,122
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-1_full_1.tar.bz2:0.322950839996:0.01845977:0.32
+> 0:True:12,39:144,81
+> 1:True:12,39:144,81
+> 2:False:12,42:144,81
+> 3:False:12,41:144,81
+> 4:False:12,42:144,81
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-1_full_2.tar.bz2:0.324712991714:0.01885716:0.32
+> 0:True:12,38:144,81
+> 1:False:12,39:144,81
+> 2:False:12,41:144,81
+> 3:False:12,39:144,81
+> 4:False:12,40:144,81
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-1_full_3.tar.bz2:0.324746847153:0.01855953:0.33
+> 0:True:12,38:143,80
+> 1:False:12,40:143,80
+> 2:False:12,41:143,80
+> 3:False:12,40:143,80
+> 4:False:12,41:143,80
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-2_full_1.tar.bz2:0.325500965118:0.01913658:0.32
+> 0:False:12,45:146,83
+> 1:True:12,44:146,83
+> 2:False:12,47:146,83
+> 3:False:12,46:146,83
+> 4:False:12,47:146,83
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-2_full_2.tar.bz2:0.325506925583:0.0191263:0.33
+> 0:True:12,45:146,83
+> 1:True:12,45:146,83
+> 2:False:12,47:146,83
+> 3:False:12,46:146,83
+> 4:False:12,47:146,83
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-2_full_3.tar.bz2:0.322635889053:0.01848265:0.32
+> 0:False:12,43:147,84
+> 1:True:12,41:147,84
+> 2:False:12,43:147,84
+> 3:False:12,43:147,84
+> 4:False:12,45:147,84
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-3_full_1.tar.bz2:0.323913097382:0.01904058:0.32
+> 0:False:12,46:148,85
+> 1:False:12,46:148,85
+> 2:True:12,44:148,85
+> 3:False:12,46:148,85
+> 4:False:12,46:148,85
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-3_full_2.tar.bz2:0.324382066727:0.01905021:0.33
+> 0:False:12,45:146,83
+> 1:False:12,44:146,83
+> 2:True:12,42:146,83
+> 3:False:12,44:146,83
+> 4:False:12,45:146,83
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-3_full_3.tar.bz2:0.31965303421:0.01883686:0.33
+> 0:False:12,48:147,84
+> 1:False:12,48:147,84
+> 2:True:12,44:147,84
+> 3:False:12,47:147,84
+> 4:False:12,46:147,84
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-4_full_1.tar.bz2:0.32319188118:0.01867346:0.32
+> 0:False:12,43:148,85
+> 1:True:12,42:148,85
+> 2:False:12,43:148,85
+> 3:False:12,43:148,85
+> 4:False:12,44:148,85
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-4_full_2.tar.bz2:0.323040008545:0.01834369:0.33
+> 0:False:12,42:145,82
+> 1:True:12,41:145,82
+> 2:False:12,43:145,82
+> 3:False:12,42:145,82
+> 4:False:12,44:145,82
+ferry-suboptimal-old-noisy/100/ferry_noisy_p03_hyp-4_full_3.tar.bz2:0.319740056992:0.01865721:0.32
+> 0:True:12,41:147,84
+> 1:True:12,41:147,84
+> 2:False:12,44:147,84
+> 3:False:12,43:147,84
+> 4:False:12,45:147,84

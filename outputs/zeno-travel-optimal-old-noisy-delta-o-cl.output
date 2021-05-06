@@ -1,0 +1,1260 @@
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_1.tar.bz2:0.496958971024:0.00809902:0.51
+> 0:False:8,10:296,13
+> 1:False:8,11:296,14
+> 2:True:10,11:296,15
+> 3:False:10,13:296,15
+> 4:False:10,12:296,15
+> 5:False:10,12:296,15
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_2.tar.bz2:0.497391939163:0.0081432:0.5
+> 0:False:8,9:296,12
+> 1:False:8,10:296,12
+> 2:False:10,12:296,15
+> 3:True:10,10:296,14
+> 4:False:10,12:296,15
+> 5:True:10,10:296,14
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_3.tar.bz2:0.496341943741:0.00783455:0.49
+> 0:False:8,14:296,17
+> 1:True:8,13:296,16
+> 2:False:10,17:296,19
+> 3:False:10,16:296,18
+> 4:False:10,18:296,20
+> 5:False:10,16:296,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_1.tar.bz2:0.495564937592:0.00823006:0.49
+> 0:True:8,9:296,12
+> 1:True:8,9:296,12
+> 2:False:10,13:296,16
+> 3:False:10,12:296,15
+> 4:False:10,13:296,16
+> 5:False:10,12:296,15
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_2.tar.bz2:0.501080036163:0.00813634:0.5
+> 0:True:8,9:296,12
+> 1:True:8,9:296,12
+> 2:True:10,11:296,14
+> 3:True:10,11:296,14
+> 4:True:10,11:296,14
+> 5:True:10,11:296,14
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_3.tar.bz2:0.49608707428:0.00810433:0.5
+> 0:True:8,11:296,14
+> 1:True:8,11:296,14
+> 2:False:10,14:296,16
+> 3:False:10,15:296,17
+> 4:False:10,14:296,16
+> 5:False:10,15:296,17
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_1.tar.bz2:0.495072841644:0.00810681:0.5
+> 0:False:8,11:297,14
+> 1:False:8,12:297,14
+> 2:False:10,13:297,17
+> 3:True:10,12:297,16
+> 4:False:10,13:297,17
+> 5:True:10,12:297,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_2.tar.bz2:0.499548196793:0.00789614:0.5
+> 0:False:8,11:297,13
+> 1:False:8,12:297,14
+> 2:True:10,12:297,15
+> 3:False:10,13:297,15
+> 4:False:10,13:297,15
+> 5:True:10,12:297,15
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_3.tar.bz2:0.498002052307:0.00827666:0.5
+> 0:False:8,17:297,19
+> 1:False:8,18:297,20
+> 2:True:10,18:297,21
+> 3:False:10,19:297,21
+> 4:False:10,19:297,21
+> 5:True:10,18:297,21
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_1.tar.bz2:0.497778892517:0.00812328:0.5
+> 0:False:8,10:297,13
+> 1:False:8,10:297,13
+> 2:False:10,12:297,15
+> 3:True:10,11:297,15
+> 4:False:10,12:297,15
+> 5:True:10,11:297,15
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_2.tar.bz2:0.499032020569:0.0082784:0.49
+> 0:True:8,15:297,19
+> 1:False:8,17:297,20
+> 2:False:10,19:297,21
+> 3:True:10,17:297,21
+> 4:False:10,18:297,21
+> 5:False:10,18:297,21
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_3.tar.bz2:0.497186899185:0.00812823:0.5
+> 0:False:8,15:297,18
+> 1:False:8,17:297,19
+> 2:False:10,17:297,20
+> 3:True:10,16:297,20
+> 4:True:10,16:297,20
+> 5:False:10,17:297,20
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_1.tar.bz2:0.499823093414:0.00830281:0.5
+> 0:True:13,14:297,18
+> 1:True:12,13:297,18
+> 2:False:12,15:297,19
+> 3:False:11,15:297,19
+> 4:False:12,15:297,18
+> 5:False:11,14:297,19
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_2.tar.bz2:0.495561122894:0.00787167:0.49
+> 0:True:13,14:297,18
+> 1:False:12,14:297,18
+> 2:False:12,15:297,17
+> 3:False:11,13:297,17
+> 4:False:12,15:297,17
+> 5:False:11,16:297,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_3.tar.bz2:0.496011018753:0.00795134:0.49
+> 0:True:13,14:297,18
+> 1:True:12,13:297,17
+> 2:False:12,14:297,18
+> 3:False:11,14:297,18
+> 4:False:12,14:297,18
+> 5:False:11,14:297,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_1.tar.bz2:0.495403051376:0.00807808:0.49
+> 0:True:13,14:297,18
+> 1:True:12,13:297,17
+> 2:True:12,13:297,17
+> 3:True:11,12:297,16
+> 4:True:12,13:297,17
+> 5:True:11,12:297,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_2.tar.bz2:0.491662025452:0.007772:0.49
+> 0:True:13,13:297,18
+> 1:True:12,12:297,17
+> 2:False:12,13:297,17
+> 3:False:11,12:297,16
+> 4:True:12,12:297,17
+> 5:False:11,12:297,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_3.tar.bz2:0.498352050781:0.00825147:0.5
+> 0:True:13,19:297,23
+> 1:True:12,18:297,22
+> 2:True:12,18:297,22
+> 3:True:11,17:297,21
+> 4:True:12,18:297,22
+> 5:True:11,17:297,21
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_1.tar.bz2:0.496210098267:0.00822417:0.5
+> 0:False:13,19:297,23
+> 1:True:12,17:297,21
+> 2:True:12,17:297,21
+> 3:False:11,18:297,21
+> 4:False:12,19:297,23
+> 5:False:11,17:297,21
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_2.tar.bz2:0.498991012573:0.00822298:0.49
+> 0:True:13,15:297,18
+> 1:True:12,14:297,17
+> 2:False:12,15:297,18
+> 3:False:11,15:297,18
+> 4:False:12,16:297,18
+> 5:False:11,14:297,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_3.tar.bz2:0.491683959961:0.00775927:0.48
+> 0:True:13,15:297,18
+> 1:True:12,14:297,17
+> 2:True:12,14:297,17
+> 3:False:11,14:297,17
+> 4:True:12,14:297,18
+> 5:False:11,15:297,17
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_1.tar.bz2:0.495904922485:0.0081528:0.5
+> 0:True:13,17:297,21
+> 1:True:12,16:297,20
+> 2:True:12,16:297,20
+> 3:True:11,15:297,19
+> 4:False:12,17:297,21
+> 5:True:11,15:297,19
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_2.tar.bz2:0.49666595459:0.00819193:0.49
+> 0:True:13,16:297,19
+> 1:False:12,16:297,19
+> 2:True:12,15:297,18
+> 3:False:11,15:297,18
+> 4:True:12,15:297,18
+> 5:False:11,16:297,19
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_3.tar.bz2:0.496198892593:0.00782509:0.5
+> 0:True:13,14:297,18
+> 1:False:12,14:297,17
+> 2:False:12,14:297,17
+> 3:True:11,12:297,16
+> 4:False:12,14:297,18
+> 5:False:11,13:297,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_1.tar.bz2:0.528220891953:0.00893504:0.53
+> 0:False:7,10:381,14
+> 1:True:11,13:381,18
+> 2:False:7,11:381,14
+> 3:False:9,12:381,16
+> 4:False:6,9:381,13
+> 5:False:7,11:381,14
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_2.tar.bz2:0.533707141876:0.00929446:0.53
+> 0:True:7,12:381,16
+> 1:True:11,16:381,20
+> 2:False:7,13:381,16
+> 3:True:9,14:381,18
+> 4:True:6,11:381,14
+> 5:False:7,13:381,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_3.tar.bz2:0.533182859421:0.00908303:0.52
+> 0:False:7,17:381,19
+> 1:True:11,19:381,22
+> 2:True:7,15:381,18
+> 3:False:9,19:381,21
+> 4:False:6,15:381,17
+> 5:True:7,15:381,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_1.tar.bz2:0.530814170837:0.00897148:0.54
+> 0:True:7,14:381,18
+> 1:True:11,18:381,22
+> 2:False:7,16:381,19
+> 3:True:9,16:381,20
+> 4:False:6,14:381,17
+> 5:False:7,16:381,19
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_2.tar.bz2:0.526615142822:0.00883759:0.52
+> 0:False:7,11:381,14
+> 1:True:11,14:381,17
+> 2:False:7,12:381,14
+> 3:True:9,12:381,15
+> 4:False:6,10:381,12
+> 5:False:7,12:381,14
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_3.tar.bz2:0.528398036957:0.0086658:0.53
+> 0:False:7,13:381,16
+> 1:True:11,15:381,18
+> 2:False:7,13:381,16
+> 3:True:9,13:381,16
+> 4:False:6,11:381,14
+> 5:False:7,13:381,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_1.tar.bz2:0.529412031174:0.00896525:0.53
+> 0:False:7,9:380,13
+> 1:False:11,13:380,16
+> 2:False:7,9:380,13
+> 3:False:9,11:380,14
+> 4:True:6,7:380,11
+> 5:False:7,9:380,13
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_2.tar.bz2:0.532510995865:0.00875241:0.53
+> 0:True:7,11:380,14
+> 1:False:11,17:380,20
+> 2:True:7,11:380,14
+> 3:False:9,15:380,18
+> 4:False:6,11:380,14
+> 5:False:7,13:380,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_3.tar.bz2:0.530170917511:0.00866:0.52
+> 0:False:7,10:380,13
+> 1:True:11,12:380,15
+> 2:False:7,10:380,13
+> 3:True:9,10:380,13
+> 4:False:6,8:380,11
+> 5:False:7,10:380,13
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_1.tar.bz2:0.527004003525:0.00915777:0.52
+> 0:False:7,13:381,16
+> 1:True:11,15:381,19
+> 2:False:7,12:381,16
+> 3:False:9,14:381,17
+> 4:False:6,11:381,14
+> 5:False:7,12:381,16
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_2.tar.bz2:0.531617164612:0.00896509:0.54
+> 0:False:7,15:381,18
+> 1:False:11,19:381,22
+> 2:False:7,15:381,18
+> 3:False:9,17:381,20
+> 4:True:6,13:381,16
+> 5:False:7,15:381,18
+zeno-travel-optimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_3.tar.bz2:0.532439947128:0.00917043:0.53
+> 0:False:7,12:381,14
+> 1:True:11,14:381,17
+> 2:False:7,11:381,14
+> 3:False:9,13:381,15
+> 4:False:6,10:381,12
+> 5:False:7,11:381,14
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_1.tar.bz2:0.49453997612:0.00798367:0.49
+> 0:True:8,8:298,14
+> 1:True:8,8:298,14
+> 2:False:10,12:298,17
+> 3:False:10,11:298,16
+> 4:False:10,12:298,17
+> 5:False:10,11:298,16
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_2.tar.bz2:0.495836019516:0.00805532:0.51
+> 0:False:8,11:298,15
+> 1:False:8,12:298,15
+> 2:True:10,12:298,16
+> 3:False:10,14:298,18
+> 4:True:10,12:298,16
+> 5:False:10,14:298,18
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_3.tar.bz2:0.497987985611:0.00835967:0.49
+> 0:True:8,11:298,17
+> 1:False:8,13:298,17
+> 2:True:10,13:298,19
+> 3:False:10,15:298,19
+> 4:True:10,13:298,19
+> 5:False:10,14:298,19
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_1.tar.bz2:0.498564004898:0.00792771:0.49
+> 0:True:8,12:298,16
+> 1:True:8,12:298,16
+> 2:False:10,16:298,19
+> 3:False:10,15:298,18
+> 4:False:10,16:298,19
+> 5:False:10,15:298,18
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_2.tar.bz2:0.499265909195:0.00800365:0.5
+> 0:False:8,11:298,14
+> 1:True:8,10:298,14
+> 2:False:10,13:298,16
+> 3:True:10,12:298,16
+> 4:False:10,13:298,16
+> 5:True:10,12:298,16
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_3.tar.bz2:0.500296831131:0.00801355:0.5
+> 0:True:8,10:298,14
+> 1:True:8,10:298,14
+> 2:False:10,14:298,17
+> 3:False:10,13:298,16
+> 4:False:10,14:298,17
+> 5:False:10,13:298,16
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_1.tar.bz2:0.498297929764:0.0082766:0.5
+> 0:False:8,18:299,21
+> 1:False:8,17:299,21
+> 2:True:10,18:299,23
+> 3:False:10,20:299,24
+> 4:True:10,18:299,23
+> 5:False:10,20:299,24
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_2.tar.bz2:0.495719909668:0.00820776:0.5
+> 0:False:8,15:299,18
+> 1:False:8,15:299,18
+> 2:True:10,13:299,19
+> 3:False:10,15:299,19
+> 4:False:10,15:299,19
+> 5:False:10,14:299,19
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_3.tar.bz2:0.499341964722:0.00813333:0.5
+> 0:False:8,12:299,15
+> 1:False:8,13:299,16
+> 2:True:10,12:299,17
+> 3:False:10,14:299,17
+> 4:False:10,13:299,17
+> 5:False:10,13:299,17
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_1.tar.bz2:0.496362924576:0.00792049:0.5
+> 0:False:8,10:299,15
+> 1:False:8,11:299,15
+> 2:False:10,13:299,18
+> 3:True:10,11:299,17
+> 4:False:10,13:299,18
+> 5:True:10,11:299,17
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_2.tar.bz2:0.497068166733:0.00824543:0.5
+> 0:False:8,18:299,22
+> 1:False:8,16:299,21
+> 2:False:10,19:299,23
+> 3:True:10,17:299,23
+> 4:False:10,18:299,23
+> 5:True:10,17:299,23
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_3.tar.bz2:0.494500160217:0.00798227:0.49
+> 0:False:8,13:299,17
+> 1:False:8,13:299,17
+> 2:False:10,14:299,17
+> 3:False:10,14:299,19
+> 4:True:10,12:299,17
+> 5:False:10,15:299,19
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_1.tar.bz2:0.494482040405:0.00798671:0.49
+> 0:True:13,15:299,20
+> 1:True:12,14:299,19
+> 2:False:12,16:299,20
+> 3:False:11,16:299,20
+> 4:False:12,16:299,20
+> 5:False:11,15:299,20
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_2.tar.bz2:0.495591163635:0.00822206:0.5
+> 0:True:13,14:299,21
+> 1:False:12,15:299,20
+> 2:False:12,16:299,21
+> 3:False:11,14:299,21
+> 4:False:12,15:299,21
+> 5:False:11,15:299,21
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_3.tar.bz2:0.495197057724:0.00809066:0.5
+> 0:True:13,14:299,20
+> 1:False:12,14:299,20
+> 2:False:12,16:299,21
+> 3:False:11,15:299,21
+> 4:False:12,15:299,20
+> 5:False:11,16:299,21
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_1.tar.bz2:0.49885892868:0.00825133:0.5
+> 0:False:13,17:300,22
+> 1:True:12,15:300,21
+> 2:False:12,17:300,22
+> 3:False:11,18:300,22
+> 4:False:12,17:300,22
+> 5:False:11,17:300,22
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_2.tar.bz2:0.494824886322:0.00808533:0.49
+> 0:False:13,17:300,22
+> 1:True:12,15:300,21
+> 2:False:12,17:300,22
+> 3:False:11,16:300,22
+> 4:False:12,19:300,22
+> 5:False:11,17:300,22
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_3.tar.bz2:0.498525857925:0.00832848:0.49
+> 0:True:13,18:300,25
+> 1:True:12,17:300,24
+> 2:False:12,19:300,24
+> 3:False:11,19:300,24
+> 4:False:12,19:300,25
+> 5:False:11,19:300,24
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_1.tar.bz2:0.495938062668:0.00811359:0.49
+> 0:False:13,18:299,21
+> 1:False:12,16:299,20
+> 2:True:12,15:299,20
+> 3:False:11,17:299,20
+> 4:False:12,17:299,21
+> 5:False:11,15:299,20
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_2.tar.bz2:0.500052928925:0.0082587:0.49
+> 0:False:13,19:299,23
+> 1:False:12,18:299,22
+> 2:True:12,16:299,22
+> 3:False:11,17:299,21
+> 4:False:12,17:299,23
+> 5:True:11,15:299,21
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_3.tar.bz2:0.497371912003:0.00849421:0.5
+> 0:False:13,22:299,25
+> 1:False:12,20:299,24
+> 2:True:12,18:299,24
+> 3:False:11,21:299,24
+> 4:False:12,19:299,25
+> 5:False:11,19:299,24
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_1.tar.bz2:0.498850107193:0.00840208:0.5
+> 0:True:13,16:300,22
+> 1:False:12,16:300,21
+> 2:False:12,16:300,23
+> 3:True:11,14:300,21
+> 4:False:12,17:300,23
+> 5:False:11,16:300,23
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_2.tar.bz2:0.497541904449:0.00826763:0.5
+> 0:False:13,18:300,23
+> 1:False:12,16:300,21
+> 2:True:12,15:300,21
+> 3:False:11,15:300,21
+> 4:False:12,17:300,23
+> 5:False:11,16:300,21
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_3.tar.bz2:0.499211072922:0.00817917:0.5
+> 0:True:13,16:300,21
+> 1:True:12,15:300,20
+> 2:True:12,15:300,20
+> 3:True:11,14:300,19
+> 4:True:12,15:300,20
+> 5:True:11,14:300,19
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_1.tar.bz2:0.524713039398:0.00857427:0.52
+> 0:False:7,15:384,19
+> 1:False:11,17:384,22
+> 2:False:7,15:384,19
+> 3:False:9,17:384,21
+> 4:True:6,11:384,15
+> 5:False:7,15:384,19
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_2.tar.bz2:0.531640052795:0.00912788:0.54
+> 0:False:7,17:384,22
+> 1:True:11,19:384,25
+> 2:False:7,17:384,22
+> 3:False:9,19:384,24
+> 4:False:6,17:384,21
+> 5:False:7,17:384,22
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_3.tar.bz2:0.530467033386:0.00916222:0.54
+> 0:False:7,15:384,21
+> 1:True:11,16:384,23
+> 2:False:7,15:384,21
+> 3:False:9,17:384,22
+> 4:False:6,16:384,20
+> 5:False:7,15:384,21
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_1.tar.bz2:0.526235103607:0.0091351:0.52
+> 0:False:7,14:383,18
+> 1:False:11,15:383,19
+> 2:True:7,9:383,14
+> 3:False:9,13:383,18
+> 4:False:6,13:383,17
+> 5:True:7,9:383,14
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_2.tar.bz2:0.530679941177:0.00923515:0.53
+> 0:False:7,10:383,16
+> 1:True:11,13:383,19
+> 2:False:7,14:383,18
+> 3:True:9,11:383,17
+> 4:False:6,12:383,16
+> 5:False:7,14:383,18
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_3.tar.bz2:0.53001999855:0.00925071:0.52
+> 0:False:7,14:383,18
+> 1:False:11,18:383,22
+> 2:False:7,16:383,20
+> 3:True:9,15:383,20
+> 4:False:6,16:383,19
+> 5:False:7,16:383,20
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_1.tar.bz2:0.527521133423:0.00891535:0.52
+> 0:False:7,12:382,15
+> 1:False:11,15:382,19
+> 2:False:7,12:382,15
+> 3:False:9,14:382,17
+> 4:True:6,9:382,13
+> 5:False:7,12:382,15
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_2.tar.bz2:0.530042171478:0.00891762:0.53
+> 0:False:7,12:382,15
+> 1:False:11,14:382,17
+> 2:False:7,12:382,15
+> 3:False:9,14:382,17
+> 4:True:6,8:382,12
+> 5:False:7,12:382,15
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_3.tar.bz2:0.528322935104:0.00845948:0.53
+> 0:False:7,13:382,15
+> 1:True:11,16:382,19
+> 2:False:7,13:382,15
+> 3:False:9,15:382,17
+> 4:True:6,11:382,14
+> 5:False:7,13:382,15
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_1.tar.bz2:0.527944087982:0.00866474:0.53
+> 0:False:7,14:383,18
+> 1:True:11,17:383,20
+> 2:False:7,14:383,18
+> 3:True:9,15:383,18
+> 4:True:6,12:383,16
+> 5:False:7,14:383,18
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_2.tar.bz2:0.530257940292:0.00917827:0.53
+> 0:False:7,16:383,19
+> 1:False:11,18:383,22
+> 2:True:7,11:383,16
+> 3:False:9,16:383,20
+> 4:False:6,15:383,18
+> 5:True:7,11:383,16
+zeno-travel-optimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_3.tar.bz2:0.528929948807:0.00862427:0.53
+> 0:False:7,14:383,18
+> 1:False:11,17:383,21
+> 2:False:7,13:383,18
+> 3:False:9,15:383,19
+> 4:True:6,11:383,16
+> 5:False:7,13:383,18
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_1.tar.bz2:0.497905015945:0.00838573:0.5
+> 0:True:8,16:300,22
+> 1:False:8,18:300,23
+> 2:False:10,21:300,25
+> 3:False:10,19:300,24
+> 4:False:10,20:300,25
+> 5:False:10,20:300,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_2.tar.bz2:0.49783706665:0.00797879:0.5
+> 0:True:8,14:300,19
+> 1:False:8,16:300,20
+> 2:False:10,18:300,20
+> 3:False:10,17:300,21
+> 4:False:10,17:300,20
+> 5:False:10,18:300,21
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_3.tar.bz2:0.496937036514:0.0081215:0.51
+> 0:True:8,9:300,16
+> 1:False:8,11:300,17
+> 2:False:10,14:300,19
+> 3:False:10,14:300,19
+> 4:False:10,14:300,19
+> 5:False:10,14:300,19
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_1.tar.bz2:0.499265909195:0.0081489:0.49
+> 0:False:8,13:300,18
+> 1:True:8,11:300,17
+> 2:False:10,14:300,19
+> 3:False:10,14:300,19
+> 4:False:10,14:300,19
+> 5:False:10,14:300,19
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_2.tar.bz2:0.497016906738:0.00820192:0.5
+> 0:False:8,17:300,22
+> 1:True:8,15:300,21
+> 2:False:10,21:300,24
+> 3:False:10,20:300,24
+> 4:False:10,20:300,24
+> 5:False:10,20:300,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_3.tar.bz2:0.499534845352:0.00835267:0.49
+> 0:False:8,12:300,18
+> 1:True:8,10:300,17
+> 2:False:10,14:300,19
+> 3:False:10,13:300,19
+> 4:False:10,13:300,19
+> 5:False:10,13:300,19
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_1.tar.bz2:0.498090982437:0.00844898:0.5
+> 0:False:8,18:302,24
+> 1:False:8,18:302,24
+> 2:True:10,18:302,25
+> 3:False:10,20:302,25
+> 4:True:10,18:302,25
+> 5:False:10,19:302,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_2.tar.bz2:0.497783899307:0.00835822:0.5
+> 0:False:8,16:302,22
+> 1:False:8,17:302,22
+> 2:True:10,15:302,22
+> 3:False:10,18:302,24
+> 4:True:10,15:302,22
+> 5:False:10,17:302,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_3.tar.bz2:0.499037027359:0.00810144:0.5
+> 0:False:8,19:302,24
+> 1:False:8,19:302,25
+> 2:True:10,18:302,25
+> 3:False:10,20:302,28
+> 4:True:10,18:302,25
+> 5:False:10,20:302,27
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_1.tar.bz2:0.493322849274:0.00824034:0.5
+> 0:False:8,19:302,25
+> 1:False:8,18:302,24
+> 2:False:10,20:302,25
+> 3:True:10,17:302,25
+> 4:False:10,19:302,25
+> 5:False:10,18:302,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_2.tar.bz2:0.497627019882:0.00849437:0.49
+> 0:False:8,20:302,26
+> 1:False:8,20:302,27
+> 2:False:10,21:302,26
+> 3:True:10,18:302,26
+> 4:False:10,19:302,26
+> 5:False:10,20:302,26
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_3.tar.bz2:0.50007390976:0.00827347:0.5
+> 0:False:8,17:302,24
+> 1:False:8,17:302,24
+> 2:False:10,18:302,25
+> 3:True:10,17:302,25
+> 4:False:10,18:302,25
+> 5:False:10,18:302,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_1.tar.bz2:0.49782705307:0.00840246:0.51
+> 0:True:13,17:303,26
+> 1:False:12,18:303,24
+> 2:False:12,19:303,25
+> 3:False:11,17:303,25
+> 4:False:12,18:303,26
+> 5:False:11,18:303,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_2.tar.bz2:0.500930070877:0.0086116:0.5
+> 0:True:13,17:303,25
+> 1:False:12,18:303,25
+> 2:False:12,20:303,26
+> 3:False:11,18:303,26
+> 4:False:12,19:303,26
+> 5:False:11,19:303,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_3.tar.bz2:0.499265909195:0.00842655:0.51
+> 0:True:13,20:303,28
+> 1:False:12,20:303,28
+> 2:False:12,22:303,29
+> 3:False:11,21:303,29
+> 4:False:12,22:303,28
+> 5:False:11,21:303,29
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_1.tar.bz2:0.494848966599:0.00835564:0.49
+> 0:False:13,23:303,30
+> 1:True:12,20:303,28
+> 2:False:12,23:303,29
+> 3:False:11,23:303,29
+> 4:False:12,24:303,30
+> 5:False:11,24:303,29
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_2.tar.bz2:0.493094921112:0.00836703:0.51
+> 0:False:13,19:303,27
+> 1:True:12,16:303,25
+> 2:False:12,18:303,25
+> 3:False:11,19:303,26
+> 4:False:12,19:303,26
+> 5:False:11,18:303,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_3.tar.bz2:0.495141029358:0.00824696:0.49
+> 0:True:13,20:303,27
+> 1:True:12,19:303,26
+> 2:False:12,20:303,26
+> 3:False:11,20:303,26
+> 4:False:12,21:303,27
+> 5:False:11,19:303,26
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_1.tar.bz2:0.496114015579:0.00808193:0.5
+> 0:False:13,19:303,25
+> 1:False:12,16:303,23
+> 2:True:12,14:303,23
+> 3:False:11,18:303,24
+> 4:False:12,16:303,25
+> 5:False:11,15:303,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_2.tar.bz2:0.496934890747:0.00827482:0.5
+> 0:False:13,21:303,28
+> 1:False:12,19:303,27
+> 2:True:12,18:303,27
+> 3:False:11,19:303,27
+> 4:False:12,20:303,28
+> 5:False:11,20:303,28
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_3.tar.bz2:0.500723838806:0.00860432:0.5
+> 0:False:13,22:303,28
+> 1:False:12,21:303,27
+> 2:True:12,19:303,27
+> 3:False:11,22:303,27
+> 4:False:12,20:303,28
+> 5:False:11,19:303,27
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_1.tar.bz2:0.499396085739:0.00819147:0.5
+> 0:False:13,19:303,25
+> 1:False:12,18:303,23
+> 2:True:12,17:303,23
+> 3:True:11,16:303,23
+> 4:False:12,18:303,25
+> 5:False:11,18:303,23
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_2.tar.bz2:0.498852014542:0.00842979:0.5
+> 0:True:13,18:303,26
+> 1:False:12,18:303,24
+> 2:False:12,18:303,24
+> 3:True:11,16:303,24
+> 4:False:12,19:303,26
+> 5:False:11,17:303,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_3.tar.bz2:0.499129056931:0.00816157:0.49
+> 0:True:13,17:303,25
+> 1:False:12,17:303,24
+> 2:False:12,18:303,24
+> 3:False:11,16:303,24
+> 4:False:12,18:303,25
+> 5:False:11,18:303,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_1.tar.bz2:0.530853033066:0.00898631:0.53
+> 0:False:7,21:387,25
+> 1:True:11,19:387,25
+> 2:False:7,21:387,25
+> 3:False:9,21:387,25
+> 4:False:6,20:387,23
+> 5:False:7,21:387,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_2.tar.bz2:0.529388904572:0.00905982:0.53
+> 0:False:7,17:387,24
+> 1:True:11,17:387,25
+> 2:False:7,19:387,25
+> 3:False:9,17:387,24
+> 4:False:6,19:387,24
+> 5:False:7,19:387,25
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_3.tar.bz2:0.533295869827:0.00892817:0.53
+> 0:False:7,18:387,24
+> 1:True:11,18:387,25
+> 2:False:7,19:387,24
+> 3:False:9,18:387,24
+> 4:False:6,19:387,23
+> 5:False:7,19:387,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_1.tar.bz2:0.529742956161:0.00921514:0.53
+> 0:False:7,14:386,20
+> 1:False:11,16:386,22
+> 2:False:7,14:386,20
+> 3:True:9,13:386,20
+> 4:False:6,14:386,19
+> 5:False:7,14:386,20
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_2.tar.bz2:0.529006958008:0.00881783:0.53
+> 0:False:7,17:386,21
+> 1:False:11,19:386,23
+> 2:False:7,18:386,21
+> 3:True:9,15:386,20
+> 4:False:6,18:386,20
+> 5:False:7,18:386,21
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_3.tar.bz2:0.533263921738:0.00903719:0.54
+> 0:False:7,16:386,23
+> 1:False:11,20:386,27
+> 2:False:7,18:386,24
+> 3:True:9,17:386,25
+> 4:False:6,17:386,22
+> 5:False:7,18:386,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_1.tar.bz2:0.52946805954:0.00876975:0.53
+> 0:False:7,17:384,21
+> 1:False:11,19:384,22
+> 2:False:7,17:384,21
+> 3:False:9,18:384,21
+> 4:True:6,13:384,18
+> 5:False:7,17:384,21
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_2.tar.bz2:0.531526088715:0.00923021:0.53
+> 0:False:7,12:384,17
+> 1:False:11,16:384,21
+> 2:False:7,12:384,17
+> 3:False:9,14:384,19
+> 4:True:6,10:384,15
+> 5:False:7,12:384,17
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_3.tar.bz2:0.531697034836:0.00880773:0.53
+> 0:False:7,15:384,19
+> 1:True:11,18:384,23
+> 2:False:7,15:384,19
+> 3:False:9,17:384,21
+> 4:True:6,13:384,18
+> 5:False:7,15:384,19
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_1.tar.bz2:0.530508041382:0.00907525:0.53
+> 0:False:7,24:386,28
+> 1:False:11,26:386,31
+> 2:True:7,21:386,27
+> 3:False:9,25:386,30
+> 4:False:6,21:386,26
+> 5:True:7,21:386,27
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_2.tar.bz2:0.530954122543:0.00902762:0.54
+> 0:False:7,20:386,24
+> 1:False:11,22:386,27
+> 2:True:7,17:386,24
+> 3:False:9,21:386,26
+> 4:False:6,18:386,23
+> 5:True:7,17:386,24
+zeno-travel-optimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_3.tar.bz2:0.530957937241:0.00885624:0.53
+> 0:False:7,20:386,25
+> 1:False:11,23:386,28
+> 2:False:7,18:386,24
+> 3:True:9,19:386,25
+> 4:False:6,18:386,23
+> 5:False:7,18:386,24
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_1.tar.bz2:0.495636940002:0.00822566:0.49
+> 0:True:8,14:303,22
+> 1:False:8,16:303,23
+> 2:False:10,19:303,24
+> 3:False:10,18:303,25
+> 4:False:10,18:303,24
+> 5:False:10,19:303,25
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_2.tar.bz2:0.498362064362:0.00809392:0.5
+> 0:True:8,15:303,22
+> 1:False:8,16:303,22
+> 2:False:10,19:303,24
+> 3:False:10,19:303,24
+> 4:False:10,19:303,24
+> 5:False:10,19:303,24
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_3.tar.bz2:0.496891975403:0.00820491:0.5
+> 0:True:8,10:303,19
+> 1:False:8,12:303,21
+> 2:False:10,16:303,23
+> 3:False:10,15:303,22
+> 4:False:10,15:303,22
+> 5:False:10,16:303,23
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_1.tar.bz2:0.497843980789:0.00804932:0.5
+> 0:False:8,11:303,19
+> 1:True:8,10:303,19
+> 2:False:10,15:303,22
+> 3:False:10,15:303,22
+> 4:False:10,15:303,22
+> 5:False:10,15:303,22
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_2.tar.bz2:0.498601198196:0.00830646:0.5
+> 0:True:8,13:303,21
+> 1:True:8,13:303,21
+> 2:False:10,18:303,24
+> 3:False:10,17:303,24
+> 4:False:10,18:303,24
+> 5:False:10,18:303,24
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_3.tar.bz2:0.494375944138:0.00793493:0.49
+> 0:False:8,17:303,23
+> 1:True:8,16:303,23
+> 2:False:10,19:303,25
+> 3:False:10,20:303,25
+> 4:False:10,19:303,25
+> 5:False:10,19:303,25
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_1.tar.bz2:0.497009992599:0.00813094:0.5
+> 0:False:8,14:304,21
+> 1:False:8,14:304,21
+> 2:True:10,13:304,22
+> 3:False:10,16:304,23
+> 4:False:10,15:304,22
+> 5:False:10,15:304,23
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_2.tar.bz2:0.498815774918:0.00853923:0.49
+> 0:False:8,19:304,24
+> 1:False:8,18:304,24
+> 2:True:10,14:304,24
+> 3:False:10,19:304,25
+> 4:False:10,17:304,24
+> 5:False:10,17:304,25
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_3.tar.bz2:0.499150037766:0.00859949:0.5
+> 0:False:8,19:304,26
+> 1:False:8,19:304,24
+> 2:True:10,16:304,25
+> 3:False:10,20:304,26
+> 4:False:10,17:304,25
+> 5:False:10,19:304,26
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_1.tar.bz2:0.497149944305:0.00849725:0.49
+> 0:False:8,21:304,27
+> 1:False:8,20:304,26
+> 2:False:10,22:304,28
+> 3:True:10,18:304,27
+> 4:False:10,21:304,28
+> 5:False:10,19:304,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_2.tar.bz2:0.500834941864:0.00841145:0.51
+> 0:False:8,21:304,28
+> 1:False:8,22:304,29
+> 2:False:10,23:304,29
+> 3:True:10,20:304,29
+> 4:False:10,22:304,29
+> 5:False:10,22:304,29
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_3.tar.bz2:0.496547937393:0.0080941:0.5
+> 0:False:8,17:304,23
+> 1:False:8,16:304,22
+> 2:False:10,18:304,24
+> 3:True:10,14:304,23
+> 4:False:10,17:304,24
+> 5:False:10,15:304,23
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_1.tar.bz2:0.4973320961:0.00841956:0.5
+> 0:True:13,18:306,29
+> 1:False:12,20:306,29
+> 2:False:12,22:306,30
+> 3:False:11,19:306,30
+> 4:False:12,20:306,29
+> 5:False:11,21:306,30
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_2.tar.bz2:0.499274015427:0.00852657:0.5
+> 0:True:13,15:306,27
+> 1:False:12,17:306,27
+> 2:False:12,21:306,28
+> 3:False:11,17:306,28
+> 4:False:12,19:306,27
+> 5:False:11,19:306,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_3.tar.bz2:0.499736070633:0.00845258:0.5
+> 0:True:13,18:306,29
+> 1:False:12,20:306,29
+> 2:False:12,23:306,29
+> 3:False:11,19:306,29
+> 4:False:12,22:306,29
+> 5:False:11,21:306,29
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_1.tar.bz2:0.498304128647:0.00859046:0.5
+> 0:True:13,22:306,32
+> 1:True:12,21:306,31
+> 2:False:12,24:306,31
+> 3:False:11,22:306,31
+> 4:False:12,25:306,32
+> 5:False:11,23:306,31
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_2.tar.bz2:0.496980905533:0.00848587:0.5
+> 0:True:13,21:306,31
+> 1:True:12,20:306,30
+> 2:False:12,23:306,30
+> 3:False:11,22:306,30
+> 4:False:12,24:306,31
+> 5:False:11,22:306,30
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_3.tar.bz2:0.497262001038:0.00808022:0.49
+> 0:False:13,19:306,27
+> 1:True:12,16:306,26
+> 2:False:12,18:306,27
+> 3:False:11,20:306,27
+> 4:False:12,19:306,27
+> 5:False:11,18:306,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_1.tar.bz2:0.49595785141:0.00843575:0.49
+> 0:False:13,24:306,31
+> 1:False:12,22:306,30
+> 2:True:12,18:306,29
+> 3:False:11,23:306,30
+> 4:False:12,20:306,31
+> 5:False:11,21:306,30
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_2.tar.bz2:0.49688911438:0.00842508:0.49
+> 0:False:13,20:306,29
+> 1:False:12,17:306,28
+> 2:True:12,15:306,27
+> 3:False:11,18:306,28
+> 4:False:12,18:306,29
+> 5:False:11,18:306,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_3.tar.bz2:0.497930049896:0.00844852:0.51
+> 0:False:13,25:306,32
+> 1:False:12,22:306,31
+> 2:True:12,19:306,30
+> 3:False:11,22:306,31
+> 4:False:12,22:306,32
+> 5:False:11,22:306,31
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_1.tar.bz2:0.497205018997:0.00836477:0.5
+> 0:True:13,19:306,29
+> 1:False:12,19:306,28
+> 2:False:12,19:306,28
+> 3:True:11,17:306,28
+> 4:False:12,19:306,29
+> 5:False:11,20:306,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_2.tar.bz2:0.499455928802:0.00829369:0.5
+> 0:True:13,17:306,28
+> 1:False:12,17:306,27
+> 2:False:12,18:306,27
+> 3:True:11,15:306,27
+> 4:False:12,19:306,28
+> 5:False:11,18:306,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_3.tar.bz2:0.494607925415:0.0079902:0.49
+> 0:True:13,17:306,28
+> 1:False:12,18:306,27
+> 2:False:12,19:306,27
+> 3:True:11,15:306,27
+> 4:False:12,19:306,28
+> 5:False:11,19:306,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_1.tar.bz2:0.529794931412:0.00915054:0.53
+> 0:False:7,23:390,29
+> 1:True:11,24:390,32
+> 2:False:7,25:390,31
+> 3:False:9,25:390,31
+> 4:False:6,23:390,28
+> 5:False:7,25:390,31
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_2.tar.bz2:0.530649900436:0.00911587:0.52
+> 0:False:7,23:390,29
+> 1:True:11,21:390,29
+> 2:False:7,23:390,29
+> 3:False:9,23:390,29
+> 4:False:6,22:390,27
+> 5:False:7,23:390,29
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_3.tar.bz2:0.52848315239:0.00920781:0.53
+> 0:False:7,19:390,28
+> 1:True:11,18:390,29
+> 2:False:7,19:390,28
+> 3:False:9,21:390,29
+> 4:False:6,19:390,26
+> 5:False:7,19:390,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_1.tar.bz2:0.530025005341:0.00942809:0.53
+> 0:True:7,16:389,24
+> 1:True:11,20:389,28
+> 2:False:7,21:389,27
+> 3:True:9,18:389,26
+> 4:False:6,19:389,25
+> 5:False:7,21:389,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_2.tar.bz2:0.531580924988:0.00931234:0.54
+> 0:False:7,16:389,26
+> 1:False:11,20:389,30
+> 2:False:7,19:389,28
+> 3:True:9,17:389,28
+> 4:False:6,18:389,26
+> 5:False:7,19:389,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_3.tar.bz2:0.531378984451:0.00929287:0.53
+> 0:True:7,15:389,24
+> 1:True:11,19:389,28
+> 2:False:7,20:389,27
+> 3:True:9,17:389,26
+> 4:False:6,18:389,25
+> 5:False:7,20:389,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_1.tar.bz2:0.533492803574:0.00935208:0.54
+> 0:False:7,22:386,27
+> 1:False:11,25:386,31
+> 2:False:7,22:386,27
+> 3:False:9,24:386,29
+> 4:True:6,19:386,25
+> 5:False:7,22:386,27
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_2.tar.bz2:0.532992124557:0.00920827:0.53
+> 0:False:7,22:387,28
+> 1:False:11,25:387,32
+> 2:False:7,22:387,28
+> 3:False:9,24:387,30
+> 4:True:6,19:387,26
+> 5:False:7,22:387,28
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_3.tar.bz2:0.528991937637:0.00856628:0.52
+> 0:False:7,17:386,21
+> 1:False:11,19:386,23
+> 2:False:7,16:386,21
+> 3:False:9,18:386,22
+> 4:True:6,12:386,18
+> 5:False:7,16:386,21
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_1.tar.bz2:0.528685092926:0.00883635:0.52
+> 0:False:7,19:389,25
+> 1:True:11,20:389,26
+> 2:True:7,16:389,24
+> 3:False:9,19:389,25
+> 4:False:6,17:389,23
+> 5:True:7,16:389,24
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_2.tar.bz2:0.529942035675:0.00931936:0.53
+> 0:False:7,21:389,28
+> 1:False:11,23:389,31
+> 2:True:7,17:389,26
+> 3:False:9,21:389,29
+> 4:False:6,19:389,26
+> 5:True:7,17:389,26
+zeno-travel-optimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_3.tar.bz2:0.528957128525:0.00892264:0.53
+> 0:False:7,20:389,27
+> 1:False:11,23:389,31
+> 2:True:7,17:389,26
+> 3:False:9,20:389,28
+> 4:False:6,18:389,25
+> 5:True:7,17:389,26
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_1.tar.bz2:0.496905088425:0.00815504:0.5
+> 0:True:8,15:306,25
+> 1:False:8,17:306,27
+> 2:False:10,20:306,28
+> 3:False:10,19:306,27
+> 4:False:10,19:306,27
+> 5:False:10,20:306,28
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_2.tar.bz2:0.496703147888:0.00804469:0.5
+> 0:True:8,13:306,24
+> 1:False:8,15:306,25
+> 2:False:10,17:306,26
+> 3:False:10,17:306,26
+> 4:False:10,16:306,26
+> 5:False:10,17:306,26
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_3.tar.bz2:0.49702000618:0.00821332:0.49
+> 0:True:8,17:306,27
+> 1:False:8,19:306,28
+> 2:False:10,23:306,30
+> 3:False:10,22:306,30
+> 4:False:10,22:306,30
+> 5:False:10,23:306,30
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_1.tar.bz2:0.497629165649:0.00833182:0.5
+> 0:False:8,20:306,29
+> 1:True:8,18:306,28
+> 2:False:10,24:306,31
+> 3:False:10,23:306,31
+> 4:False:10,23:306,31
+> 5:False:10,23:306,31
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_2.tar.bz2:0.496892929077:0.00829272:0.51
+> 0:False:8,16:306,25
+> 1:True:8,14:306,24
+> 2:False:10,20:306,27
+> 3:False:10,18:306,26
+> 4:False:10,19:306,27
+> 5:False:10,19:306,27
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_3.tar.bz2:0.496896028519:0.00847792:0.5
+> 0:False:8,21:306,30
+> 1:True:8,19:306,29
+> 2:False:10,25:306,32
+> 3:False:10,24:306,32
+> 4:False:10,24:306,32
+> 5:False:10,24:306,32
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_1.tar.bz2:0.498486042023:0.00859064:0.5
+> 0:False:8,25:308,33
+> 1:False:8,25:308,33
+> 2:True:10,21:308,33
+> 3:False:10,26:308,34
+> 4:False:10,23:308,33
+> 5:False:10,24:308,34
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_2.tar.bz2:0.498623132706:0.00851129:0.5
+> 0:False:8,23:308,32
+> 1:False:8,23:308,32
+> 2:True:10,19:308,32
+> 3:False:10,24:308,33
+> 4:False:10,21:308,32
+> 5:False:10,22:308,33
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_3.tar.bz2:0.496012926102:0.00841535:0.5
+> 0:False:8,24:308,32
+> 1:False:8,24:308,32
+> 2:True:10,20:308,32
+> 3:False:10,25:308,33
+> 4:False:10,22:308,32
+> 5:False:10,23:308,33
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_1.tar.bz2:0.497617006302:0.00823214:0.49
+> 0:False:8,22:308,32
+> 1:False:8,22:308,32
+> 2:False:10,24:308,32
+> 3:True:10,19:308,31
+> 4:False:10,22:308,32
+> 5:False:10,21:308,31
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_2.tar.bz2:0.497496128082:0.00851576:0.49
+> 0:False:8,23:308,32
+> 1:False:8,23:308,32
+> 2:False:10,25:308,33
+> 3:True:10,20:308,32
+> 4:False:10,23:308,33
+> 5:False:10,22:308,32
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_3.tar.bz2:0.493729114532:0.007879:0.49
+> 0:False:8,16:308,26
+> 1:False:8,16:308,26
+> 2:False:10,19:308,27
+> 3:True:10,14:308,26
+> 4:False:10,17:308,27
+> 5:False:10,16:308,26
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_1.tar.bz2:0.493324995041:0.00851539:0.5
+> 0:True:13,22:310,36
+> 1:False:12,24:310,36
+> 2:False:12,27:310,36
+> 3:False:11,23:310,36
+> 4:False:12,26:310,36
+> 5:False:11,25:310,36
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_2.tar.bz2:0.500298023224:0.00870021:0.51
+> 0:True:13,20:310,35
+> 1:False:12,22:310,35
+> 2:False:12,25:310,35
+> 3:False:11,21:310,35
+> 4:False:12,24:310,35
+> 5:False:11,23:310,35
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_3.tar.bz2:0.499469995499:0.00837477:0.5
+> 0:True:13,18:310,32
+> 1:False:12,20:310,32
+> 2:False:12,24:310,33
+> 3:False:11,20:310,33
+> 4:False:12,22:310,32
+> 5:False:11,22:310,33
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_1.tar.bz2:0.498194217682:0.00853407:0.5
+> 0:False:13,25:311,37
+> 1:True:12,22:311,36
+> 2:False:12,25:311,36
+> 3:False:11,25:311,36
+> 4:False:12,27:311,37
+> 5:False:11,25:311,36
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_2.tar.bz2:0.499569892883:0.00844073:0.49
+> 0:False:13,22:311,34
+> 1:True:12,19:311,33
+> 2:False:12,21:311,33
+> 3:False:11,22:311,34
+> 4:False:12,23:311,34
+> 5:False:11,21:311,32
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_3.tar.bz2:0.498852968216:0.00871344:0.5
+> 0:False:13,25:311,38
+> 1:True:12,23:311,37
+> 2:False:12,26:311,37
+> 3:False:11,26:311,37
+> 4:False:12,27:311,38
+> 5:False:11,26:311,37
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_1.tar.bz2:0.499166965485:0.00852489:0.5
+> 0:False:13,24:310,35
+> 1:False:12,22:310,34
+> 2:True:12,19:310,34
+> 3:False:11,22:310,34
+> 4:False:12,20:310,35
+> 5:False:11,21:310,34
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_2.tar.bz2:0.49933886528:0.00854546:0.49
+> 0:False:13,25:310,35
+> 1:False:12,23:310,35
+> 2:True:12,20:310,35
+> 3:False:11,24:310,35
+> 4:False:12,21:310,35
+> 5:False:11,22:310,35
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_3.tar.bz2:0.500544071198:0.00879939:0.5
+> 0:False:13,27:310,37
+> 1:False:12,25:310,36
+> 2:True:12,21:310,35
+> 3:False:11,25:310,37
+> 4:False:12,23:310,36
+> 5:False:11,24:310,37
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_1.tar.bz2:0.497282028198:0.00850936:0.49
+> 0:True:13,21:311,34
+> 1:False:12,22:311,33
+> 2:False:12,23:311,33
+> 3:True:11,19:311,33
+> 4:False:12,23:311,34
+> 5:False:11,23:311,33
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_2.tar.bz2:0.499924898148:0.00852979:0.49
+> 0:True:13,23:311,37
+> 1:False:12,25:311,36
+> 2:False:12,26:311,36
+> 3:True:11,21:311,35
+> 4:False:12,25:311,37
+> 5:False:11,26:311,36
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_3.tar.bz2:0.497868061066:0.00859624:0.51
+> 0:False:13,25:311,38
+> 1:False:12,26:311,37
+> 2:False:12,27:311,37
+> 3:True:11,22:311,36
+> 4:False:12,27:311,38
+> 5:False:11,27:311,37
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_1.tar.bz2:0.528362989426:0.00897976:0.53
+> 0:False:7,23:395,33
+> 1:True:11,21:395,33
+> 2:False:7,25:395,34
+> 3:False:9,23:395,33
+> 4:False:6,24:395,32
+> 5:False:7,25:395,34
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_2.tar.bz2:0.529831886292:0.00955192:0.52
+> 0:False:7,28:395,39
+> 1:True:11,28:395,41
+> 2:False:7,30:395,40
+> 3:False:9,30:395,41
+> 4:False:6,29:395,38
+> 5:False:7,30:395,40
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_3.tar.bz2:0.52977514267:0.00930485:0.53
+> 0:False:7,27:395,38
+> 1:True:11,27:395,40
+> 2:False:7,29:395,39
+> 3:False:9,29:395,40
+> 4:False:6,28:395,37
+> 5:False:7,29:395,39
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_1.tar.bz2:0.529031991959:0.00934678:0.53
+> 0:False:7,25:393,35
+> 1:False:11,29:393,39
+> 2:False:7,27:393,36
+> 3:True:9,25:393,36
+> 4:False:6,27:393,35
+> 5:False:7,27:393,36
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_2.tar.bz2:0.528012990952:0.00893475:0.53
+> 0:False:7,21:393,31
+> 1:False:11,24:393,34
+> 2:False:7,23:393,32
+> 3:True:9,21:393,32
+> 4:False:6,22:393,30
+> 5:False:7,23:393,32
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_3.tar.bz2:0.531209945679:0.00920303:0.53
+> 0:False:7,25:393,34
+> 1:False:11,28:393,37
+> 2:False:7,26:393,34
+> 3:True:9,24:393,34
+> 4:False:6,26:393,33
+> 5:False:7,26:393,34
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_1.tar.bz2:0.529897928238:0.00937775:0.53
+> 0:False:7,18:389,24
+> 1:False:11,20:389,26
+> 2:False:7,17:389,24
+> 3:False:9,20:389,26
+> 4:True:6,14:389,21
+> 5:False:7,17:389,24
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_2.tar.bz2:0.527941942215:0.00858803:0.53
+> 0:False:7,18:389,23
+> 1:False:11,20:389,25
+> 2:False:7,17:389,23
+> 3:False:9,19:389,24
+> 4:True:6,13:389,20
+> 5:False:7,17:389,23
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_3.tar.bz2:0.531445026398:0.009191:0.53
+> 0:False:7,17:389,24
+> 1:False:11,18:389,24
+> 2:False:7,17:389,23
+> 3:False:9,18:389,25
+> 4:True:6,12:389,19
+> 5:False:7,17:389,23
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_1.tar.bz2:0.529638051987:0.0091992:0.53
+> 0:False:7,26:393,35
+> 1:False:11,28:393,38
+> 2:True:7,22:393,33
+> 3:False:9,26:393,36
+> 4:False:6,24:393,33
+> 5:True:7,22:393,33
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_2.tar.bz2:0.528429031372:0.00923993:0.52
+> 0:False:7,22:393,31
+> 1:False:11,24:393,34
+> 2:True:7,18:393,28
+> 3:False:9,22:393,32
+> 4:False:6,20:393,30
+> 5:True:7,18:393,28
+zeno-travel-optimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_3.tar.bz2:0.533926963806:0.00913794:0.53
+> 0:False:7,22:393,30
+> 1:False:11,23:393,32
+> 2:True:7,18:393,28
+> 3:False:9,21:393,30
+> 4:False:6,20:393,28
+> 5:True:7,18:393,28
