@@ -1,0 +1,1260 @@
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-1_10_1.tar.bz2:0.545997858047:0.1101476:0.55
+> 0:True:9,10:1314,773
+> 1:True:7,8:1042,589
+> 2:True:8,9:1314,773
+> 3:True:9,10:1314,773
+> 4:True:9,10:1314,773
+> 5:True:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-1_10_2.tar.bz2:0.545961141586:0.1104778:0.54
+> 0:True:9,10:1314,773
+> 1:False:7,9:1042,589
+> 2:False:8,10:1314,773
+> 3:False:9,11:1314,773
+> 4:False:9,11:1314,773
+> 5:False:9,11:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-1_10_3.tar.bz2:0.528958082199:0.0946779:0.52
+> 0:False:9,10:1314,773
+> 1:False:7,8:1042,589
+> 2:True:8,8:1314,773
+> 3:True:9,9:1314,773
+> 4:False:9,10:1314,773
+> 5:True:9,9:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-2_10_1.tar.bz2:0.534916877747:0.0995087:0.53
+> 0:False:9,10:1314,773
+> 1:True:7,7:1042,589
+> 2:False:8,9:1314,773
+> 3:True:9,9:1314,773
+> 4:True:9,9:1314,773
+> 5:False:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-2_10_2.tar.bz2:0.533051967621:0.0991768:0.53
+> 0:False:9,10:1314,773
+> 1:True:7,7:1042,589
+> 2:False:8,9:1314,773
+> 3:True:9,9:1314,773
+> 4:True:9,9:1314,773
+> 5:False:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-2_10_3.tar.bz2:0.530910015106:0.0960878:0.53
+> 0:True:9,10:1314,773
+> 1:True:7,8:1042,589
+> 2:True:8,9:1314,773
+> 3:True:9,10:1314,773
+> 4:True:9,10:1314,773
+> 5:True:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-3_10_1.tar.bz2:0.552456855774:0.1167156:0.56
+> 0:False:9,11:1314,773
+> 1:False:7,9:1042,589
+> 2:True:8,8:1314,773
+> 3:False:9,11:1314,773
+> 4:False:9,10:1314,773
+> 5:False:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-3_10_2.tar.bz2:0.529794931412:0.0953306:0.52
+> 0:True:9,9:1314,773
+> 1:False:7,8:1042,589
+> 2:True:8,8:1314,773
+> 3:True:9,9:1314,773
+> 4:False:9,10:1314,773
+> 5:False:9,10:1314,773
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-3_10_3.tar.bz2:0.561182975769:0.1248897:0.56
+> 0:True:9,10:1313,772
+> 1:True:7,8:1041,588
+> 2:True:8,9:1313,772
+> 3:True:9,10:1313,772
+> 4:True:9,10:1313,772
+> 5:True:9,10:1313,772
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-4_10_1.tar.bz2:0.528312921524:0.0947214:0.52
+> 0:True:9,9:1315,774
+> 1:False:7,8:1043,590
+> 2:False:8,9:1315,774
+> 3:True:9,9:1315,774
+> 4:False:9,10:1315,774
+> 5:False:9,10:1315,774
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-4_10_2.tar.bz2:0.538330078125:0.1041727:0.54
+> 0:True:9,10:1315,774
+> 1:False:7,9:1043,590
+> 2:False:8,10:1315,774
+> 3:True:9,10:1315,774
+> 4:False:9,11:1315,774
+> 5:True:9,10:1315,774
+satellite-optimal-old-noisy/10/satellite_noisy_p01_hyp-4_10_3.tar.bz2:0.537589073181:0.1021656:0.54
+> 0:False:9,12:1315,774
+> 1:False:7,9:1043,590
+> 2:False:8,10:1315,774
+> 3:True:9,10:1315,774
+> 4:False:9,11:1315,774
+> 5:False:9,11:1315,774
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-1_10_1.tar.bz2:0.506078958511:0.1019068:0.51
+> 0:True:11,11:793,523
+> 1:False:11,12:793,523
+> 2:False:11,12:793,523
+> 3:False:11,12:793,523
+> 4:True:11,11:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-1_10_2.tar.bz2:0.49108505249:0.0865006:0.49
+> 0:True:11,11:793,523
+> 1:True:11,11:793,523
+> 2:True:11,11:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:True:11,11:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-1_10_3.tar.bz2:0.489007949829:0.0845449:0.49
+> 0:True:11,11:793,523
+> 1:False:11,12:793,523
+> 2:False:11,12:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-2_10_1.tar.bz2:0.505702972412:0.1022171:0.51
+> 0:True:11,11:793,523
+> 1:True:11,11:793,523
+> 2:False:11,12:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:True:11,11:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-2_10_2.tar.bz2:0.505462884903:0.1022415:0.49
+> 0:False:11,13:793,523
+> 1:True:11,11:793,523
+> 2:False:11,13:793,523
+> 3:True:11,11:793,523
+> 4:False:11,12:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-2_10_3.tar.bz2:0.503916025162:0.1012769:0.5
+> 0:False:11,12:793,523
+> 1:True:11,11:793,523
+> 2:False:11,12:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-3_10_1.tar.bz2:0.487802028656:0.0861051:0.48
+> 0:True:11,11:793,523
+> 1:True:11,11:793,523
+> 2:True:11,11:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:True:11,11:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-3_10_2.tar.bz2:0.490059137344:0.0857108:0.49
+> 0:True:11,11:793,523
+> 1:False:11,12:793,523
+> 2:True:11,11:793,523
+> 3:False:11,12:793,523
+> 4:False:11,12:793,523
+> 5:True:11,11:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-3_10_3.tar.bz2:0.4978120327:0.0951979:0.51
+> 0:False:11,12:792,522
+> 1:True:11,11:792,522
+> 2:True:11,11:792,522
+> 3:False:11,12:792,522
+> 4:False:11,12:792,522
+> 5:True:11,11:792,522
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-4_10_1.tar.bz2:0.53333902359:0.1290074:0.53
+> 0:False:11,12:793,523
+> 1:True:11,11:793,523
+> 2:False:11,13:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-4_10_2.tar.bz2:0.490368127823:0.08541:0.49
+> 0:True:11,12:793,523
+> 1:True:11,12:793,523
+> 2:True:11,12:793,523
+> 3:True:11,12:793,523
+> 4:True:11,12:793,523
+> 5:True:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p02_hyp-4_10_3.tar.bz2:0.524157047272:0.1204755:0.53
+> 0:False:11,12:793,523
+> 1:True:11,11:793,523
+> 2:False:11,12:793,523
+> 3:True:11,11:793,523
+> 4:True:11,11:793,523
+> 5:False:11,12:793,523
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-1_10_1.tar.bz2:0.416138887405:0.03389925:0.41
+> 0:True:8,8:341,232
+> 1:False:8,9:341,232
+> 2:False:8,9:341,232
+> 3:True:8,8:341,232
+> 4:False:8,9:341,232
+> 5:True:9,9:341,232
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-1_10_2.tar.bz2:0.412674188614:0.03299714:0.41
+> 0:True:8,8:342,233
+> 1:True:8,8:342,233
+> 2:True:8,8:342,233
+> 3:True:8,8:342,233
+> 4:True:8,8:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-1_10_3.tar.bz2:0.417384147644:0.03346108:0.42
+> 0:True:8,8:342,233
+> 1:True:8,8:342,233
+> 2:True:8,8:342,233
+> 3:True:8,8:342,233
+> 4:True:8,8:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-2_10_1.tar.bz2:0.419039011002:0.03688197:0.43
+> 0:True:8,9:341,232
+> 1:True:8,9:341,232
+> 2:True:8,9:341,232
+> 3:True:8,9:341,232
+> 4:True:8,9:341,232
+> 5:True:9,10:341,232
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-2_10_2.tar.bz2:0.414088010788:0.03324266:0.42
+> 0:True:8,8:341,232
+> 1:True:8,8:341,232
+> 2:True:8,8:341,232
+> 3:True:8,8:341,232
+> 4:True:8,8:341,232
+> 5:True:9,9:341,232
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-2_10_3.tar.bz2:0.415199995041:0.03381663:0.42
+> 0:True:8,8:342,233
+> 1:False:8,9:342,233
+> 2:True:8,8:342,233
+> 3:False:8,9:342,233
+> 4:True:8,8:342,233
+> 5:False:9,10:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-3_10_1.tar.bz2:0.416139125824:0.03455951:0.42
+> 0:False:8,9:342,233
+> 1:False:8,9:342,233
+> 2:True:8,8:342,233
+> 3:True:8,8:342,233
+> 4:True:8,8:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-3_10_2.tar.bz2:0.416308879852:0.03377073:0.42
+> 0:False:8,9:342,233
+> 1:True:8,8:342,233
+> 2:False:8,9:342,233
+> 3:True:8,8:342,233
+> 4:False:8,9:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-3_10_3.tar.bz2:0.417522907257:0.03576516:0.42
+> 0:False:8,10:342,233
+> 1:False:8,9:342,233
+> 2:True:8,8:342,233
+> 3:False:8,10:342,233
+> 4:False:8,9:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-4_10_1.tar.bz2:0.415050983429:0.03317413:0.42
+> 0:True:8,8:342,233
+> 1:True:8,8:342,233
+> 2:True:8,8:342,233
+> 3:True:8,8:342,233
+> 4:True:8,8:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-4_10_2.tar.bz2:0.415759086609:0.03326862:0.41
+> 0:True:8,8:341,232
+> 1:True:8,8:341,232
+> 2:False:8,9:341,232
+> 3:True:8,8:341,232
+> 4:False:8,9:341,232
+> 5:True:9,9:341,232
+satellite-optimal-old-noisy/10/satellite_noisy_p03_hyp-4_10_3.tar.bz2:0.414397954941:0.03312778:0.42
+> 0:True:8,8:342,233
+> 1:True:8,8:342,233
+> 2:True:8,8:342,233
+> 3:True:8,8:342,233
+> 4:True:8,8:342,233
+> 5:True:9,9:342,233
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-1_30_1.tar.bz2:0.538125991821:0.1028132:0.53
+> 0:True:9,10:1316,775
+> 1:False:7,10:1044,591
+> 2:True:8,9:1316,775
+> 3:True:9,10:1316,775
+> 4:False:9,12:1316,775
+> 5:False:9,11:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-1_30_2.tar.bz2:0.530507087708:0.0968688:0.53
+> 0:True:9,10:1316,775
+> 1:False:7,9:1044,591
+> 2:False:8,10:1316,775
+> 3:True:9,10:1316,775
+> 4:False:9,11:1316,775
+> 5:True:9,10:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-1_30_3.tar.bz2:0.556329965591:0.124116:0.56
+> 0:True:9,10:1316,775
+> 1:False:7,10:1044,591
+> 2:False:8,11:1316,775
+> 3:False:9,12:1316,775
+> 4:False:9,13:1316,775
+> 5:False:9,12:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-2_30_1.tar.bz2:0.545211076736:0.111314:0.56
+> 0:True:9,11:1315,774
+> 1:True:7,9:1043,590
+> 2:False:8,11:1315,774
+> 3:True:9,11:1315,774
+> 4:True:9,11:1315,774
+> 5:True:9,11:1315,774
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-2_30_2.tar.bz2:0.541393041611:0.1065334:0.54
+> 0:False:9,12:1316,775
+> 1:True:7,9:1044,591
+> 2:False:8,12:1316,775
+> 3:True:9,11:1316,775
+> 4:False:9,12:1316,775
+> 5:True:9,11:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-2_30_3.tar.bz2:0.534533023834:0.0987633:0.54
+> 0:False:9,12:1316,775
+> 1:False:7,9:1044,591
+> 2:False:8,10:1316,775
+> 3:True:9,10:1316,775
+> 4:False:9,11:1316,775
+> 5:False:9,11:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-3_30_1.tar.bz2:0.529273986816:0.0946604:0.53
+> 0:False:9,12:1316,775
+> 1:False:7,9:1044,591
+> 2:True:8,8:1316,775
+> 3:False:9,10:1316,775
+> 4:False:9,10:1316,775
+> 5:True:9,9:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-3_30_2.tar.bz2:0.534269094467:0.0991422:0.53
+> 0:False:9,11:1316,775
+> 1:False:7,9:1044,591
+> 2:True:8,8:1316,775
+> 3:False:9,10:1316,775
+> 4:False:9,12:1316,775
+> 5:False:9,11:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-3_30_3.tar.bz2:0.533226013184:0.0989497:0.53
+> 0:False:9,11:1316,775
+> 1:False:7,10:1044,591
+> 2:True:8,8:1316,775
+> 3:False:9,10:1316,775
+> 4:False:9,12:1316,775
+> 5:False:9,10:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-4_30_1.tar.bz2:0.548335075378:0.1149485:0.55
+> 0:False:9,12:1316,775
+> 1:False:7,10:1044,591
+> 2:False:8,10:1316,775
+> 3:True:9,10:1316,775
+> 4:False:9,13:1316,775
+> 5:False:9,12:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-4_30_2.tar.bz2:0.545730113983:0.111936:0.55
+> 0:False:9,12:1316,775
+> 1:False:7,9:1044,591
+> 2:False:8,13:1316,775
+> 3:True:9,10:1316,775
+> 4:False:9,11:1316,775
+> 5:False:9,12:1316,775
+satellite-optimal-old-noisy/30/satellite_noisy_p01_hyp-4_30_3.tar.bz2:0.533502101898:0.0980979:0.54
+> 0:True:9,10:1317,776
+> 1:False:7,10:1045,592
+> 2:False:8,10:1317,776
+> 3:True:9,10:1317,776
+> 4:False:9,13:1317,776
+> 5:False:9,12:1317,776
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-1_30_1.tar.bz2:0.547030925751:0.1434276:0.55
+> 0:True:11,13:795,525
+> 1:False:11,14:795,525
+> 2:False:11,14:795,525
+> 3:True:11,13:795,525
+> 4:True:11,13:795,525
+> 5:False:11,14:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-1_30_2.tar.bz2:0.506696939468:0.1038139:0.51
+> 0:True:11,12:795,525
+> 1:False:11,14:795,525
+> 2:False:11,13:795,525
+> 3:False:11,14:795,525
+> 4:False:11,13:795,525
+> 5:False:11,13:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-1_30_3.tar.bz2:0.489547014236:0.0855267:0.49
+> 0:True:11,12:795,525
+> 1:False:11,13:795,525
+> 2:True:11,12:795,525
+> 3:True:11,12:795,525
+> 4:True:11,12:795,525
+> 5:False:11,13:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-2_30_1.tar.bz2:0.502450942993:0.0985623:0.5
+> 0:False:11,13:795,525
+> 1:True:11,12:795,525
+> 2:True:11,12:795,525
+> 3:False:11,13:795,525
+> 4:False:11,13:795,525
+> 5:True:11,12:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-2_30_2.tar.bz2:0.494826078415:0.0910195:0.5
+> 0:False:11,12:795,525
+> 1:True:11,11:795,525
+> 2:False:11,12:795,525
+> 3:True:11,11:795,525
+> 4:True:11,11:795,525
+> 5:True:11,11:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-2_30_3.tar.bz2:0.498538970947:0.0947011:0.5
+> 0:False:11,13:795,525
+> 1:True:11,12:795,525
+> 2:True:11,12:795,525
+> 3:False:11,13:795,525
+> 4:False:11,13:795,525
+> 5:True:11,12:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-3_30_1.tar.bz2:0.542782068253:0.1391391:0.55
+> 0:False:11,14:795,525
+> 1:True:11,12:795,525
+> 2:True:11,12:795,525
+> 3:False:11,14:795,525
+> 4:False:11,14:795,525
+> 5:True:11,12:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-3_30_2.tar.bz2:0.490051031113:0.0860223:0.49
+> 0:True:11,12:795,525
+> 1:False:11,13:795,525
+> 2:True:11,12:795,525
+> 3:False:11,13:795,525
+> 4:False:11,13:795,525
+> 5:True:11,12:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-3_30_3.tar.bz2:0.490041017532:0.0852307:0.49
+> 0:False:11,12:795,525
+> 1:False:11,13:795,525
+> 2:True:11,11:795,525
+> 3:False:11,13:795,525
+> 4:False:11,13:795,525
+> 5:False:11,12:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-4_30_1.tar.bz2:0.495882987976:0.0916874:0.5
+> 0:False:11,13:795,525
+> 1:False:11,12:795,525
+> 2:False:11,14:795,525
+> 3:True:11,11:795,525
+> 4:False:11,12:795,525
+> 5:False:11,13:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-4_30_2.tar.bz2:0.500715017319:0.0964571:0.5
+> 0:True:11,13:795,525
+> 1:True:11,13:795,525
+> 2:True:11,13:795,525
+> 3:True:11,13:795,525
+> 4:True:11,13:795,525
+> 5:True:11,13:795,525
+satellite-optimal-old-noisy/30/satellite_noisy_p02_hyp-4_30_3.tar.bz2:0.495719909668:0.0911078:0.49
+> 0:True:11,11:794,524
+> 1:False:11,13:794,524
+> 2:False:11,14:794,524
+> 3:True:11,11:794,524
+> 4:True:11,11:794,524
+> 5:False:11,13:794,524
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-1_30_1.tar.bz2:0.418129920959:0.03530678:0.41
+> 0:True:8,8:344,235
+> 1:False:8,9:344,235
+> 2:True:8,8:344,235
+> 3:False:8,10:344,235
+> 4:True:8,8:344,235
+> 5:False:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-1_30_2.tar.bz2:0.414871931076:0.03317487:0.42
+> 0:True:8,8:344,235
+> 1:False:8,9:344,235
+> 2:False:8,10:344,235
+> 3:True:8,8:344,235
+> 4:False:8,10:344,235
+> 5:True:9,9:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-1_30_3.tar.bz2:0.417134046555:0.03564208:0.41
+> 0:True:8,9:344,235
+> 1:True:8,9:344,235
+> 2:False:8,10:344,235
+> 3:False:8,11:344,235
+> 4:True:8,9:344,235
+> 5:True:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-2_30_1.tar.bz2:0.415405035019:0.03341548:0.42
+> 0:False:8,10:344,235
+> 1:True:8,8:344,235
+> 2:False:8,9:344,235
+> 3:False:8,10:344,235
+> 4:False:8,9:344,235
+> 5:True:9,9:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-2_30_2.tar.bz2:0.415527105331:0.0337849:0.41
+> 0:False:8,10:344,235
+> 1:True:8,9:344,235
+> 2:False:8,10:344,235
+> 3:False:8,10:344,235
+> 4:False:8,11:344,235
+> 5:True:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-2_30_3.tar.bz2:0.421839952469:0.03916987:0.42
+> 0:True:8,9:344,235
+> 1:True:8,9:344,235
+> 2:True:8,9:344,235
+> 3:True:8,9:344,235
+> 4:True:8,9:344,235
+> 5:True:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-3_30_1.tar.bz2:0.414063930511:0.03349651:0.42
+> 0:False:8,9:344,235
+> 1:False:8,9:344,235
+> 2:True:8,8:344,235
+> 3:False:8,11:344,235
+> 4:True:8,8:344,235
+> 5:False:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-3_30_2.tar.bz2:0.416725873947:0.03403036:0.42
+> 0:False:8,10:344,235
+> 1:False:8,10:344,235
+> 2:True:8,9:344,235
+> 3:False:8,10:344,235
+> 4:True:8,9:344,235
+> 5:False:9,11:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-3_30_3.tar.bz2:0.416612148285:0.03669529:0.41
+> 0:False:8,10:344,235
+> 1:False:8,10:344,235
+> 2:True:8,9:344,235
+> 3:True:8,9:344,235
+> 4:True:8,9:344,235
+> 5:False:9,11:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-4_30_1.tar.bz2:0.417223930359:0.03532349:0.41
+> 0:False:8,10:344,235
+> 1:False:8,10:344,235
+> 2:False:8,10:344,235
+> 3:False:8,10:344,235
+> 4:False:8,11:344,235
+> 5:True:9,9:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-4_30_2.tar.bz2:0.416947126389:0.03477778:0.42
+> 0:True:8,8:344,235
+> 1:False:8,9:344,235
+> 2:True:8,8:344,235
+> 3:True:8,8:344,235
+> 4:True:8,8:344,235
+> 5:False:9,10:344,235
+satellite-optimal-old-noisy/30/satellite_noisy_p03_hyp-4_30_3.tar.bz2:0.415564060211:0.03338843:0.42
+> 0:False:8,10:344,235
+> 1:False:8,10:344,235
+> 2:False:8,10:344,235
+> 3:True:8,9:344,235
+> 4:False:8,10:344,235
+> 5:True:9,10:344,235
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-1_50_1.tar.bz2:0.534231185913:0.0991946:0.53
+> 0:False:9,10:1318,777
+> 1:False:7,9:1046,593
+> 2:False:8,9:1318,777
+> 3:True:9,9:1318,777
+> 4:False:9,11:1318,777
+> 5:False:9,10:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-1_50_2.tar.bz2:0.546632051468:0.1125523:0.54
+> 0:True:9,10:1318,777
+> 1:False:7,10:1046,593
+> 2:False:8,10:1318,777
+> 3:True:9,10:1318,777
+> 4:False:9,12:1318,777
+> 5:False:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-1_50_3.tar.bz2:0.559340000153:0.1236752:0.56
+> 0:True:9,10:1318,777
+> 1:False:7,10:1046,593
+> 2:False:8,10:1318,777
+> 3:False:9,11:1318,777
+> 4:False:9,12:1318,777
+> 5:False:9,12:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-2_50_1.tar.bz2:0.537951946259:0.1029998:0.54
+> 0:False:9,13:1318,777
+> 1:True:7,9:1046,593
+> 2:False:8,11:1318,777
+> 3:True:9,11:1318,777
+> 4:False:9,13:1318,777
+> 5:False:9,12:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-2_50_2.tar.bz2:0.556733846664:0.1215522:0.56
+> 0:True:9,11:1318,777
+> 1:True:7,9:1046,593
+> 2:False:8,12:1318,777
+> 3:True:9,11:1318,777
+> 4:True:9,11:1318,777
+> 5:True:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-2_50_3.tar.bz2:0.599019050598:0.1649379:0.6
+> 0:False:9,12:1318,777
+> 1:True:7,9:1046,593
+> 2:True:8,10:1318,777
+> 3:True:9,11:1318,777
+> 4:False:9,12:1318,777
+> 5:True:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-3_50_1.tar.bz2:0.546523094177:0.1127541:0.54
+> 0:False:9,11:1318,777
+> 1:False:7,9:1046,593
+> 2:False:8,10:1318,777
+> 3:True:9,10:1318,777
+> 4:False:9,12:1318,777
+> 5:False:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-3_50_2.tar.bz2:0.542083024979:0.107548:0.54
+> 0:False:9,12:1318,777
+> 1:False:7,10:1046,593
+> 2:True:8,8:1318,777
+> 3:False:9,11:1318,777
+> 4:False:9,12:1318,777
+> 5:False:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-3_50_3.tar.bz2:0.535739898682:0.1036012:0.54
+> 0:False:9,11:1318,777
+> 1:False:7,10:1046,593
+> 2:True:8,9:1318,777
+> 3:False:9,11:1318,777
+> 4:False:9,12:1318,777
+> 5:False:9,11:1318,777
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-4_50_1.tar.bz2:0.54746389389:0.111712:0.54
+> 0:False:9,12:1320,779
+> 1:False:7,11:1048,595
+> 2:False:8,13:1320,779
+> 3:True:9,11:1320,779
+> 4:False:9,13:1320,779
+> 5:False:9,12:1320,779
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-4_50_2.tar.bz2:0.526757955551:0.0929063:0.53
+> 0:False:9,12:1320,779
+> 1:False:7,10:1048,595
+> 2:False:8,11:1320,779
+> 3:True:9,10:1320,779
+> 4:False:9,12:1320,779
+> 5:False:9,12:1320,779
+satellite-optimal-old-noisy/50/satellite_noisy_p01_hyp-4_50_3.tar.bz2:0.538944959641:0.1035418:0.55
+> 0:False:9,13:1320,779
+> 1:False:7,10:1048,595
+> 2:False:8,12:1320,779
+> 3:True:9,11:1320,779
+> 4:False:9,13:1320,779
+> 5:False:9,12:1320,779
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-1_50_1.tar.bz2:0.490255117416:0.0853819:0.49
+> 0:True:11,12:799,529
+> 1:False:11,14:799,529
+> 2:False:11,14:799,529
+> 3:True:11,12:799,529
+> 4:True:11,12:799,529
+> 5:False:11,14:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-1_50_2.tar.bz2:0.490113973618:0.0853551:0.49
+> 0:True:11,13:798,528
+> 1:False:11,14:798,528
+> 2:False:11,15:798,528
+> 3:True:11,13:798,528
+> 4:True:11,13:798,528
+> 5:False:11,14:798,528
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-1_50_3.tar.bz2:0.560998916626:0.1559139:0.56
+> 0:True:11,12:799,529
+> 1:False:11,14:799,529
+> 2:False:11,14:799,529
+> 3:False:11,14:799,529
+> 4:False:11,13:799,529
+> 5:False:11,13:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-2_50_1.tar.bz2:0.48863697052:0.0852544:0.48
+> 0:True:11,12:799,529
+> 1:True:11,12:799,529
+> 2:False:11,13:799,529
+> 3:True:11,12:799,529
+> 4:True:11,12:799,529
+> 5:True:11,12:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-2_50_2.tar.bz2:0.488385915756:0.0851051:0.49
+> 0:False:11,15:799,529
+> 1:True:11,12:799,529
+> 2:False:11,14:799,529
+> 3:False:11,13:799,529
+> 4:False:11,14:799,529
+> 5:False:11,13:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-2_50_3.tar.bz2:0.489935159683:0.0850021:0.49
+> 0:False:11,13:799,529
+> 1:True:11,11:799,529
+> 2:False:11,13:799,529
+> 3:False:11,12:799,529
+> 4:False:11,13:799,529
+> 5:True:11,11:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-3_50_1.tar.bz2:0.514739990234:0.1113936:0.52
+> 0:False:11,14:799,529
+> 1:False:11,15:799,529
+> 2:True:11,13:799,529
+> 3:False:11,15:799,529
+> 4:False:11,15:799,529
+> 5:False:11,14:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-3_50_2.tar.bz2:0.496236801147:0.0928455:0.49
+> 0:False:11,15:799,529
+> 1:False:11,15:799,529
+> 2:True:11,13:799,529
+> 3:False:11,16:799,529
+> 4:False:11,16:799,529
+> 5:False:11,14:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-3_50_3.tar.bz2:0.489351034164:0.0852238:0.49
+> 0:False:11,12:799,529
+> 1:False:11,13:799,529
+> 2:True:11,11:799,529
+> 3:False:11,13:799,529
+> 4:False:11,13:799,529
+> 5:False:11,12:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-4_50_1.tar.bz2:0.489645957947:0.0849121:0.48
+> 0:False:11,13:798,528
+> 1:False:11,13:798,528
+> 2:False:11,15:798,528
+> 3:True:11,12:798,528
+> 4:False:11,13:798,528
+> 5:False:11,13:798,528
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-4_50_2.tar.bz2:0.490327835083:0.0855917:0.49
+> 0:True:11,12:799,529
+> 1:False:11,13:799,529
+> 2:False:11,13:799,529
+> 3:True:11,12:799,529
+> 4:True:11,12:799,529
+> 5:False:11,13:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p02_hyp-4_50_3.tar.bz2:0.489165067673:0.0855296:0.5
+> 0:False:11,14:799,529
+> 1:True:11,12:799,529
+> 2:False:11,15:799,529
+> 3:True:11,12:799,529
+> 4:False:11,13:799,529
+> 5:False:11,13:799,529
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-1_50_1.tar.bz2:0.41705083847:0.03639894:0.42
+> 0:True:8,9:346,237
+> 1:False:8,10:346,237
+> 2:False:8,10:346,237
+> 3:True:8,9:346,237
+> 4:False:8,10:346,237
+> 5:True:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-1_50_2.tar.bz2:0.417655229568:0.03799208:0.41
+> 0:True:8,9:346,237
+> 1:True:8,9:346,237
+> 2:True:8,9:346,237
+> 3:True:8,9:346,237
+> 4:True:8,9:346,237
+> 5:True:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-1_50_3.tar.bz2:0.416001081467:0.03479582:0.41
+> 0:True:8,8:346,237
+> 1:False:8,10:346,237
+> 2:True:8,8:346,237
+> 3:False:8,9:346,237
+> 4:False:8,9:346,237
+> 5:False:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-2_50_1.tar.bz2:0.415791034698:0.03449121:0.42
+> 0:False:8,10:346,237
+> 1:True:8,8:346,237
+> 2:False:8,11:346,237
+> 3:False:8,9:346,237
+> 4:False:8,10:346,237
+> 5:True:9,9:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-2_50_2.tar.bz2:0.41651892662:0.03480452:0.42
+> 0:False:8,10:346,237
+> 1:True:8,9:346,237
+> 2:True:8,9:346,237
+> 3:False:8,10:346,237
+> 4:True:8,9:346,237
+> 5:True:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-2_50_3.tar.bz2:0.416038990021:0.03401481:0.42
+> 0:False:8,9:346,237
+> 1:True:8,8:346,237
+> 2:False:8,9:346,237
+> 3:False:8,9:346,237
+> 4:False:8,9:346,237
+> 5:True:9,9:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-3_50_1.tar.bz2:0.415368080139:0.03389418:0.41
+> 0:False:8,9:345,236
+> 1:False:8,10:345,236
+> 2:True:8,8:345,236
+> 3:False:8,10:345,236
+> 4:False:8,9:345,236
+> 5:False:9,10:345,236
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-3_50_2.tar.bz2:0.414862155914:0.03355689:0.41
+> 0:False:8,9:346,237
+> 1:False:8,10:346,237
+> 2:True:8,8:346,237
+> 3:False:8,10:346,237
+> 4:True:8,8:346,237
+> 5:False:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-3_50_3.tar.bz2:0.417102098465:0.03424472:0.42
+> 0:False:8,9:346,237
+> 1:False:8,10:346,237
+> 2:True:8,8:346,237
+> 3:False:8,10:346,237
+> 4:True:8,8:346,237
+> 5:False:9,11:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-4_50_1.tar.bz2:0.421767234802:0.03909515:0.43
+> 0:True:8,9:346,237
+> 1:True:8,9:346,237
+> 2:False:8,10:346,237
+> 3:True:8,9:346,237
+> 4:False:8,10:346,237
+> 5:True:9,10:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-4_50_2.tar.bz2:0.416793107986:0.03430105:0.41
+> 0:False:8,10:346,237
+> 1:False:8,9:346,237
+> 2:False:8,10:346,237
+> 3:False:8,9:346,237
+> 4:False:8,10:346,237
+> 5:True:9,9:346,237
+satellite-optimal-old-noisy/50/satellite_noisy_p03_hyp-4_50_3.tar.bz2:0.4163210392:0.03475018:0.42
+> 0:False:8,10:346,237
+> 1:False:8,9:346,237
+> 2:False:8,9:346,237
+> 3:False:8,9:346,237
+> 4:False:8,10:346,237
+> 5:True:9,9:346,237
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-1_70_1.tar.bz2:0.536744832993:0.1018621:0.53
+> 0:True:9,10:1321,780
+> 1:False:7,12:1049,596
+> 2:False:8,12:1321,780
+> 3:False:9,12:1321,780
+> 4:False:9,14:1321,780
+> 5:False:9,14:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-1_70_2.tar.bz2:0.534570932388:0.0977644:0.54
+> 0:True:9,10:1321,780
+> 1:False:7,12:1049,596
+> 2:False:8,13:1321,780
+> 3:False:9,13:1321,780
+> 4:False:9,13:1321,780
+> 5:False:9,13:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-1_70_3.tar.bz2:0.532392024994:0.0972656:0.53
+> 0:True:9,10:1321,780
+> 1:False:7,13:1049,596
+> 2:False:8,13:1321,780
+> 3:False:9,13:1321,780
+> 4:False:9,14:1321,780
+> 5:False:9,14:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-2_70_1.tar.bz2:0.531657934189:0.09654:0.53
+> 0:False:9,15:1321,780
+> 1:True:7,9:1049,596
+> 2:False:8,13:1321,780
+> 3:True:9,11:1321,780
+> 4:False:9,13:1321,780
+> 5:False:9,13:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-2_70_2.tar.bz2:0.534645795822:0.1007908:0.54
+> 0:False:9,16:1321,780
+> 1:True:7,9:1049,596
+> 2:False:8,14:1321,780
+> 3:True:9,11:1321,780
+> 4:False:9,14:1321,780
+> 5:False:9,14:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-2_70_3.tar.bz2:0.541025876999:0.1051593:0.54
+> 0:False:9,16:1321,780
+> 1:True:7,9:1049,596
+> 2:False:8,15:1321,780
+> 3:True:9,11:1321,780
+> 4:False:9,14:1321,780
+> 5:False:9,14:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-3_70_1.tar.bz2:0.536875963211:0.1029716:0.55
+> 0:False:9,14:1321,780
+> 1:False:7,12:1049,596
+> 2:True:8,10:1321,780
+> 3:False:9,13:1321,780
+> 4:False:9,13:1321,780
+> 5:False:9,13:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-3_70_2.tar.bz2:0.538086891174:0.1033702:0.53
+> 0:False:9,14:1321,780
+> 1:False:7,12:1049,596
+> 2:True:8,10:1321,780
+> 3:False:9,13:1321,780
+> 4:False:9,15:1321,780
+> 5:False:9,13:1321,780
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-3_70_3.tar.bz2:0.535530090332:0.1007481:0.54
+> 0:False:9,14:1320,779
+> 1:False:7,11:1048,595
+> 2:True:8,10:1320,779
+> 3:False:9,12:1320,779
+> 4:False:9,13:1320,779
+> 5:False:9,12:1320,779
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-4_70_1.tar.bz2:0.535212993622:0.1000978:0.53
+> 0:False:9,14:1322,781
+> 1:False:7,11:1050,597
+> 2:False:8,13:1322,781
+> 3:True:9,11:1322,781
+> 4:False:9,14:1322,781
+> 5:False:9,14:1322,781
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-4_70_2.tar.bz2:0.539340019226:0.1040372:0.54
+> 0:False:9,13:1322,781
+> 1:False:7,11:1050,597
+> 2:False:8,12:1322,781
+> 3:True:9,11:1322,781
+> 4:False:9,12:1322,781
+> 5:False:9,13:1322,781
+satellite-optimal-old-noisy/70/satellite_noisy_p01_hyp-4_70_3.tar.bz2:0.534248113632:0.1006474:0.54
+> 0:False:9,15:1322,781
+> 1:False:7,10:1050,597
+> 2:False:8,12:1322,781
+> 3:True:9,10:1322,781
+> 4:False:9,14:1322,781
+> 5:False:9,14:1322,781
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-1_70_1.tar.bz2:0.492183923721:0.0878606:0.49
+> 0:True:11,13:801,531
+> 1:False:11,16:801,531
+> 2:False:11,15:801,531
+> 3:False:11,14:801,531
+> 4:True:11,13:801,531
+> 5:False:11,15:801,531
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-1_70_2.tar.bz2:0.491554021835:0.088279:0.49
+> 0:True:11,12:802,532
+> 1:False:11,15:802,532
+> 2:False:11,15:802,532
+> 3:False:11,13:802,532
+> 4:True:11,12:802,532
+> 5:False:11,14:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-1_70_3.tar.bz2:0.491376161575:0.0884573:0.49
+> 0:True:11,13:801,531
+> 1:False:11,15:801,531
+> 2:False:11,14:801,531
+> 3:False:11,14:801,531
+> 4:True:11,13:801,531
+> 5:False:11,14:801,531
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-2_70_1.tar.bz2:0.488924980164:0.0856712:0.48
+> 0:False:11,14:802,532
+> 1:True:11,12:802,532
+> 2:False:11,14:802,532
+> 3:False:11,13:802,532
+> 4:False:11,13:802,532
+> 5:False:11,13:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-2_70_2.tar.bz2:0.489638090134:0.0863686:0.49
+> 0:False:11,15:802,532
+> 1:True:11,12:802,532
+> 2:False:11,13:802,532
+> 3:False:11,14:802,532
+> 4:False:11,15:802,532
+> 5:True:11,12:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-2_70_3.tar.bz2:0.491899967194:0.0888639:0.5
+> 0:False:11,15:802,532
+> 1:True:11,13:802,532
+> 2:True:11,13:802,532
+> 3:False:11,14:802,532
+> 4:False:11,14:802,532
+> 5:True:11,13:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-3_70_1.tar.bz2:0.49122595787:0.0860254:0.5
+> 0:False:11,15:802,532
+> 1:False:11,13:802,532
+> 2:True:11,11:802,532
+> 3:False:11,15:802,532
+> 4:False:11,15:802,532
+> 5:False:11,13:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-3_70_2.tar.bz2:0.489451885223:0.0849145:0.49
+> 0:False:11,16:802,532
+> 1:False:11,15:802,532
+> 2:True:11,12:802,532
+> 3:False:11,17:802,532
+> 4:False:11,17:802,532
+> 5:False:11,14:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-3_70_3.tar.bz2:0.489919900894:0.0849178:0.49
+> 0:False:11,14:801,531
+> 1:False:11,14:801,531
+> 2:True:11,11:801,531
+> 3:False:11,15:801,531
+> 4:False:11,15:801,531
+> 5:False:11,13:801,531
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-4_70_1.tar.bz2:0.487725019455:0.0845296:0.48
+> 0:False:11,13:802,532
+> 1:False:11,13:802,532
+> 2:False:11,15:802,532
+> 3:True:11,12:802,532
+> 4:True:11,12:802,532
+> 5:False:11,14:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-4_70_2.tar.bz2:0.490829944611:0.0875826:0.48
+> 0:False:11,14:802,532
+> 1:True:11,13:802,532
+> 2:False:11,16:802,532
+> 3:True:11,13:802,532
+> 4:True:11,13:802,532
+> 5:False:11,14:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p02_hyp-4_70_3.tar.bz2:0.491487979889:0.0894231:0.49
+> 0:True:11,13:802,532
+> 1:True:11,13:802,532
+> 2:False:11,15:802,532
+> 3:True:11,13:802,532
+> 4:True:11,13:802,532
+> 5:True:11,13:802,532
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-1_70_1.tar.bz2:0.417439937592:0.03663346:0.42
+> 0:True:8,9:349,240
+> 1:False:8,11:349,240
+> 2:False:8,11:349,240
+> 3:False:8,12:349,240
+> 4:False:8,10:349,240
+> 5:False:9,12:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-1_70_2.tar.bz2:0.417728185654:0.03547941:0.41
+> 0:True:8,9:349,240
+> 1:False:8,12:349,240
+> 2:False:8,11:349,240
+> 3:False:8,12:349,240
+> 4:False:8,11:349,240
+> 5:False:9,12:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-1_70_3.tar.bz2:0.417204141617:0.03393331:0.42
+> 0:True:8,9:349,240
+> 1:False:8,12:349,240
+> 2:False:8,11:349,240
+> 3:False:8,12:349,240
+> 4:False:8,11:349,240
+> 5:False:9,12:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-2_70_1.tar.bz2:0.415358066559:0.03362827:0.41
+> 0:False:8,11:349,240
+> 1:True:8,8:349,240
+> 2:False:8,12:349,240
+> 3:False:8,10:349,240
+> 4:False:8,11:349,240
+> 5:True:9,9:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-2_70_2.tar.bz2:0.418654918671:0.03544218:0.42
+> 0:False:8,11:349,240
+> 1:True:8,9:349,240
+> 2:False:8,12:349,240
+> 3:False:8,11:349,240
+> 4:False:8,11:349,240
+> 5:True:9,10:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-2_70_3.tar.bz2:0.418641090393:0.03618057:0.41
+> 0:False:8,11:349,240
+> 1:True:8,9:349,240
+> 2:False:8,13:349,240
+> 3:True:8,9:349,240
+> 4:False:8,12:349,240
+> 5:True:9,10:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-3_70_1.tar.bz2:0.415656089783:0.03481238:0.41
+> 0:False:8,11:349,240
+> 1:False:8,11:349,240
+> 2:True:8,9:349,240
+> 3:False:8,12:349,240
+> 4:True:8,9:349,240
+> 5:False:9,12:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-3_70_2.tar.bz2:0.415404081345:0.03364603:0.41
+> 0:False:8,11:349,240
+> 1:False:8,11:349,240
+> 2:True:8,9:349,240
+> 3:False:8,11:349,240
+> 4:False:8,10:349,240
+> 5:False:9,11:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-3_70_3.tar.bz2:0.415144920349:0.03494236:0.41
+> 0:False:8,11:348,239
+> 1:False:8,12:348,239
+> 2:True:8,9:348,239
+> 3:False:8,12:348,239
+> 4:True:8,9:348,239
+> 5:False:9,13:348,239
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-4_70_1.tar.bz2:0.415032148361:0.03423163:0.43
+> 0:False:8,12:348,239
+> 1:False:8,12:348,239
+> 2:False:8,12:348,239
+> 3:True:8,10:348,239
+> 4:False:8,13:348,239
+> 5:True:9,11:348,239
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-4_70_2.tar.bz2:0.417358160019:0.03486134:0.41
+> 0:False:8,11:349,240
+> 1:False:8,11:349,240
+> 2:False:8,12:349,240
+> 3:True:8,10:349,240
+> 4:False:8,11:349,240
+> 5:True:9,11:349,240
+satellite-optimal-old-noisy/70/satellite_noisy_p03_hyp-4_70_3.tar.bz2:0.416731119156:0.03466468:0.42
+> 0:False:8,12:349,240
+> 1:False:8,10:349,240
+> 2:False:8,11:349,240
+> 3:True:8,9:349,240
+> 4:False:8,11:349,240
+> 5:True:9,10:349,240
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-1_full_1.tar.bz2:0.536419153214:0.1022167:0.54
+> 0:True:9,10:1324,783
+> 1:False:7,13:1052,599
+> 2:False:8,13:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,14:1324,783
+> 5:False:9,14:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-1_full_2.tar.bz2:0.537027835846:0.100374:0.54
+> 0:True:9,10:1324,783
+> 1:False:7,13:1052,599
+> 2:False:8,13:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,14:1324,783
+> 5:False:9,13:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-1_full_3.tar.bz2:0.535746097565:0.1006779:0.53
+> 0:True:9,10:1324,783
+> 1:False:7,13:1052,599
+> 2:False:8,13:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,14:1324,783
+> 5:False:9,14:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-2_full_1.tar.bz2:0.548124074936:0.11257:0.55
+> 0:False:9,15:1323,782
+> 1:True:7,9:1051,598
+> 2:False:8,14:1323,782
+> 3:True:9,11:1323,782
+> 4:False:9,13:1323,782
+> 5:False:9,13:1323,782
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-2_full_2.tar.bz2:0.539973020554:0.1035146:0.54
+> 0:False:9,15:1322,781
+> 1:True:7,9:1050,597
+> 2:False:8,14:1322,781
+> 3:True:9,11:1322,781
+> 4:False:9,13:1322,781
+> 5:False:9,13:1322,781
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-2_full_3.tar.bz2:0.540207862854:0.1037713:0.53
+> 0:False:9,14:1322,781
+> 1:True:7,9:1050,597
+> 2:False:8,14:1322,781
+> 3:True:9,11:1322,781
+> 4:False:9,13:1322,781
+> 5:False:9,13:1322,781
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-3_full_1.tar.bz2:0.545632123947:0.1121428:0.54
+> 0:False:9,14:1324,783
+> 1:False:7,13:1052,599
+> 2:True:8,10:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,15:1324,783
+> 5:False:9,13:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-3_full_2.tar.bz2:0.537848949432:0.1008296:0.54
+> 0:False:9,14:1324,783
+> 1:False:7,13:1052,599
+> 2:True:8,9:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,15:1324,783
+> 5:False:9,12:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-3_full_3.tar.bz2:0.537707090378:0.1003581:0.54
+> 0:False:9,14:1324,783
+> 1:False:7,13:1052,599
+> 2:True:8,9:1324,783
+> 3:False:9,13:1324,783
+> 4:False:9,15:1324,783
+> 5:False:9,12:1324,783
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-4_full_1.tar.bz2:0.537553787231:0.1019785:0.54
+> 0:False:9,15:1326,785
+> 1:False:7,11:1054,601
+> 2:False:8,14:1326,785
+> 3:True:9,11:1326,785
+> 4:False:9,15:1326,785
+> 5:False:9,16:1326,785
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-4_full_2.tar.bz2:0.531474113464:0.0965352:0.53
+> 0:False:9,15:1326,785
+> 1:False:7,11:1054,601
+> 2:False:8,14:1326,785
+> 3:True:9,11:1326,785
+> 4:False:9,15:1326,785
+> 5:False:9,16:1326,785
+satellite-optimal-old-noisy/100/satellite_noisy_p01_hyp-4_full_3.tar.bz2:0.532299995422:0.0969038:0.53
+> 0:False:9,15:1325,784
+> 1:False:7,11:1053,600
+> 2:False:8,14:1325,784
+> 3:True:9,11:1325,784
+> 4:False:9,15:1325,784
+> 5:False:9,15:1325,784
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-1_full_1.tar.bz2:0.492144823074:0.0880834:0.49
+> 0:True:11,13:806,536
+> 1:False:11,15:806,536
+> 2:False:11,15:806,536
+> 3:False:11,14:806,536
+> 4:True:11,13:806,536
+> 5:False:11,14:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-1_full_2.tar.bz2:0.490671873093:0.0882589:0.49
+> 0:True:11,13:806,536
+> 1:False:11,16:806,536
+> 2:False:11,16:806,536
+> 3:False:11,14:806,536
+> 4:True:11,13:806,536
+> 5:False:11,15:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-1_full_3.tar.bz2:0.493126869202:0.0889202:0.49
+> 0:True:11,13:806,536
+> 1:False:11,16:806,536
+> 2:False:11,16:806,536
+> 3:False:11,14:806,536
+> 4:True:11,13:806,536
+> 5:False:11,15:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-2_full_1.tar.bz2:0.493716955185:0.0888307:0.5
+> 0:False:11,16:806,536
+> 1:True:11,13:806,536
+> 2:False:11,15:806,536
+> 3:False:11,14:806,536
+> 4:False:11,15:806,536
+> 5:True:11,13:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-2_full_2.tar.bz2:0.491831064224:0.0880132:0.5
+> 0:False:11,16:806,536
+> 1:True:11,13:806,536
+> 2:False:11,15:806,536
+> 3:False:11,14:806,536
+> 4:False:11,15:806,536
+> 5:True:11,13:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-2_full_3.tar.bz2:0.495469093323:0.0899688:0.49
+> 0:False:11,16:806,536
+> 1:True:11,13:806,536
+> 2:False:11,15:806,536
+> 3:False:11,14:806,536
+> 4:False:11,15:806,536
+> 5:True:11,13:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-3_full_1.tar.bz2:0.492275953293:0.0882001:0.49
+> 0:False:11,16:805,535
+> 1:False:11,15:805,535
+> 2:True:11,13:805,535
+> 3:False:11,17:805,535
+> 4:False:11,17:805,535
+> 5:False:11,14:805,535
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-3_full_2.tar.bz2:0.492234945297:0.0881448:0.5
+> 0:False:11,16:806,536
+> 1:False:11,15:806,536
+> 2:True:11,13:806,536
+> 3:False:11,17:806,536
+> 4:False:11,17:806,536
+> 5:False:11,14:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-3_full_3.tar.bz2:0.493457078934:0.0897878:0.49
+> 0:False:11,16:806,536
+> 1:False:11,15:806,536
+> 2:True:11,13:806,536
+> 3:False:11,17:806,536
+> 4:False:11,17:806,536
+> 5:False:11,14:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-4_full_1.tar.bz2:0.492928028107:0.0877249:0.49
+> 0:False:11,14:805,535
+> 1:False:11,14:805,535
+> 2:False:11,16:805,535
+> 3:True:11,13:805,535
+> 4:True:11,13:805,535
+> 5:False:11,15:805,535
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-4_full_2.tar.bz2:0.493243932724:0.0894703:0.5
+> 0:False:11,14:806,536
+> 1:False:11,14:806,536
+> 2:False:11,17:806,536
+> 3:True:11,13:806,536
+> 4:True:11,13:806,536
+> 5:False:11,15:806,536
+satellite-optimal-old-noisy/100/satellite_noisy_p02_hyp-4_full_3.tar.bz2:0.493028879166:0.0884321:0.5
+> 0:False:11,14:805,535
+> 1:False:11,14:805,535
+> 2:False:11,17:805,535
+> 3:True:11,13:805,535
+> 4:True:11,13:805,535
+> 5:False:11,15:805,535
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-1_full_1.tar.bz2:0.418507099152:0.03673225:0.42
+> 0:True:8,9:351,242
+> 1:False:8,11:351,242
+> 2:False:8,10:351,242
+> 3:False:8,11:351,242
+> 4:False:8,10:351,242
+> 5:False:9,11:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-1_full_2.tar.bz2:0.419427871704:0.03632804:0.41
+> 0:True:8,9:351,242
+> 1:False:8,11:351,242
+> 2:False:8,10:351,242
+> 3:False:8,11:351,242
+> 4:False:8,10:351,242
+> 5:False:9,11:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-1_full_3.tar.bz2:0.417587041855:0.03501914:0.41
+> 0:True:8,9:351,242
+> 1:False:8,11:351,242
+> 2:False:8,10:351,242
+> 3:False:8,12:351,242
+> 4:False:8,10:351,242
+> 5:False:9,11:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-2_full_1.tar.bz2:0.416877031326:0.03501006:0.42
+> 0:False:8,11:351,242
+> 1:True:8,9:351,242
+> 2:False:8,12:351,242
+> 3:False:8,10:351,242
+> 4:False:8,12:351,242
+> 5:True:9,10:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-2_full_2.tar.bz2:0.416443109512:0.03556667:0.41
+> 0:False:8,11:351,242
+> 1:True:8,9:351,242
+> 2:False:8,12:351,242
+> 3:False:8,10:351,242
+> 4:False:8,12:351,242
+> 5:True:9,10:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-2_full_3.tar.bz2:0.419738054276:0.03632217:0.42
+> 0:False:8,11:350,241
+> 1:True:8,9:350,241
+> 2:False:8,11:350,241
+> 3:False:8,10:350,241
+> 4:False:8,11:350,241
+> 5:True:9,10:350,241
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-3_full_1.tar.bz2:0.418869018555:0.03569071:0.42
+> 0:False:8,11:351,242
+> 1:False:8,12:351,242
+> 2:True:8,9:351,242
+> 3:False:8,13:351,242
+> 4:True:8,9:351,242
+> 5:False:9,13:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-3_full_2.tar.bz2:0.416942119598:0.03571821:0.41
+> 0:False:8,10:351,242
+> 1:False:8,11:351,242
+> 2:True:8,9:351,242
+> 3:False:8,11:351,242
+> 4:True:8,9:351,242
+> 5:False:9,11:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-3_full_3.tar.bz2:0.418470859528:0.03733307:0.42
+> 0:False:8,11:351,242
+> 1:False:8,12:351,242
+> 2:True:8,9:351,242
+> 3:False:8,12:351,242
+> 4:True:8,9:351,242
+> 5:False:9,12:351,242
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-4_full_1.tar.bz2:0.419692993164:0.03658042:0.43
+> 0:False:8,12:352,243
+> 1:False:8,11:352,243
+> 2:False:8,13:352,243
+> 3:True:8,10:352,243
+> 4:False:8,12:352,243
+> 5:True:9,11:352,243
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-4_full_2.tar.bz2:0.417742967606:0.03699554:0.41
+> 0:False:8,12:352,243
+> 1:False:8,11:352,243
+> 2:False:8,13:352,243
+> 3:True:8,10:352,243
+> 4:False:8,13:352,243
+> 5:True:9,11:352,243
+satellite-optimal-old-noisy/100/satellite_noisy_p03_hyp-4_full_3.tar.bz2:0.418979883194:0.03587715:0.42
+> 0:False:8,12:352,243
+> 1:False:8,11:352,243
+> 2:False:8,13:352,243
+> 3:True:8,10:352,243
+> 4:False:8,13:352,243
+> 5:True:9,11:352,243
