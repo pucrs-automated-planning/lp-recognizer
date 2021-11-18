@@ -1,0 +1,93 @@
+\def\year{2020}\relax
+\documentclass[border=0cm]{standalone}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{calc}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+\DeclareMathOperator{\planningtask}{\Pi}
+\DeclareMathOperator{\goalconditions}{\Gamma}
+\DeclareMathOperator{\plan}{\pi}
+\DeclareMathOperator{\optimalplan}{\pi^{*}}
+\DeclareMathOperator{\plancost}{\mathit{cost}}
+\DeclareMathOperator{\occur}{\mathit{occur}}
+\providecommand\initialstate{\ensuremath{s_{0}}}
+\providecommand\goalstate{\ensuremath{s^{*}}}
+
+\providecommand\h{\ensuremath{h}}
+\providecommand\hoptimal{\ensuremath{h^{*}}}
+\providecommand\hip{\ensuremath{h}^{\textup{IP}}}
+
+\DeclareMathOperator{\grtask}{\Pi_{\goalconditions}^{\observations}}
+\DeclareMathOperator{\grsolution}{\Gamma^{*}}
+\DeclareMathOperator{\observations}{\Omega}
+\DeclareMathOperator{\noisyobservations}{\Omega^{N}}
+\DeclareMathOperator{\obsevation}{o}
+\providecommand\varvalue[2]{\ensuremath{#1[#2]}}
+\providecommand\obs[1]{\ensuremath{\vec{#1}}}
+
+\providecommand\variableoccurrences{\ensuremath{\mathcal{K}}}
+\providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
+\providecommand\constraints{\ensuremath{C}}
+\providecommand\uncertainty{\ensuremath{\mu}}
+\providecommand\unreliability{\ensuremath{\epsilon}}
+
+\newcommand{\rg}{RG}
+\newcommand{\fgr}{FGR}
+\newcommand{\mirroring}{M+L}
+\newcommand{\dhc}{\ensuremath{\Gamma^{\text{LP}}}}
+\newcommand{\dhcu}{\ensuremath{\Gamma^{\uncertainty}}}
+\newcommand{\dhcf}{\ensuremath{\Gamma^{\text{\unreliability}}}}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+
+%---------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    %title={10\%},
+    xmin=-10,xmax=10,
+    ymin=-1,ymax=1,
+    %xmode=log,
+    %ymode=log,
+    xtick={-10, 10},
+    ytick={-1, 1},
+    xticklabels={,,},
+    yticklabels={,,},
+    width=4cm,height=4cm,
+    axis lines=middle,
+    enlargelimits=false]
+\addplot+[
+    only marks,
+    mark=asterisk,
+    mark size=1pt,
+    draw=black]
+table [x index=2, y index=3] {agr.dat};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

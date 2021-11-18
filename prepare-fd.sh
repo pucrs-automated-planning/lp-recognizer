@@ -4,12 +4,20 @@ if [[ $DIR == "." ]]; then
 	DIR=`pwd`
 fi
 
+if [[ ! -d "data-domains" ]]; then
+	mkdir data-domains
+fi
+
 if [[ ! -d "data-charts" ]]; then
 	mkdir data-charts
 fi
 
-if [[ ! -d "data-latex" ]]; then
-	mkdir data-latex
+if [[ ! -d "data-tables" ]]; then
+	mkdir data-tables
+fi
+
+if [[ ! -d "data-comparison" ]]; then
+	mkdir data-comparison
 fi
 
 if [[ ! -d "outputs" ]]; then

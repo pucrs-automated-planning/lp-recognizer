@@ -1,25 +1,7 @@
-# Do not include experiments already in another repo
-block-words-easy
-blocks-world
-dwr
-dwr-noisy
-easy-ipc-grid
-easy-ipc-grid-noisy
-ferry
-ferry-noisy
-intrusion-detection
-intrusion-detection-noisy
-kitchen
-kitchen-noisy
-logistics
-logistics-noisy
-miconic
-miconic-noisy
-rovers
-rovers-noisy
-satellite
-satellite-noisy
-sokoban
-sokoban-noisy
-zeno-travel
-zeno-travel-noisy
+# Output files
+stdout/*
+
+# Instance files
+small-sokoban-optimal/*/*.dat
+small-sokoban-optimal/*/*.pddl
+small-sokoban-optimal/*/*.tar

@@ -36,13 +36,13 @@ def parse_constraints(arg):
                 time_vars = 1
             # Noise filter
             noisy = 0
-            if len(arg) > i+1 and arg[i+1] == 'a': # Soft for all + inv
+            if len(arg) > i+1 and arg[i+1] == 'a': # Soft for all + inv (D4)
                 i += 1
                 noisy = 3
-            if len(arg) > i+1 and arg[i+1] == 'b': # Soft for obs only + inv
+            if len(arg) > i+1 and arg[i+1] == 'b': # Soft for obs only + inv (D3)
                 i += 1
                 noisy = 2
-            elif len(arg) > i+1 and arg[i+1] == 'o': # Soft for obs only
+            elif len(arg) > i+1 and arg[i+1] == 'o': # Soft for obs only (D2)
                 i += 1
                 noisy = 1
             # MIP vars

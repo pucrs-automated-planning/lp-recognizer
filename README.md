@@ -65,7 +65,7 @@ Where ```<experiment_file>``` is one of the experiments in your dataset.
 For example, with the experiments we provide here, we could run sokoban with the hard constraints strategy as follows:
 
 ```bash
-./test_instance.py -r deltac -e experiments/sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2
+./test_instance.py -r deltac -e experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments 
@@ -76,17 +76,17 @@ In order to run experiments for an entire domain organized in a folder named ```
 ./test_domain.py <path> <domain> <heuristics>
 ```
 
-For example, to run all Sokoban experiments, using all the heuristics you need to run:
+For example, to run the sokoban sample using all the heuristics, you need to run:
 
 ```bash
-./test_domain.py experiments sokoban "delta deltau delta-f2"
+./test_domain.py "experiments/" small-sokoban-optimal "delta deltau delta-f2"
 ```
 
 ### Running plan recognition experiments from AAAI paper
 
-In order to run all of the experiments in our paper ```replace with citation```, you need to run ```run-all-experiments.sh``` from the [experiments](experiments) folder, which will run every single domain for all approaches. 
+In order to run all of the experiments in our paper, you need to run ```get_results.sh``` from the [experiments](experiments) folder, which will run every single domain for all approaches. 
 ``` 
-cd experiments;./run-all-experiments.sh
+cd experiments;./get_results.sh -rerun
 ```
 
 Note that since the dataset is pretty large, this takes a very long time to finish. 

@@ -41,7 +41,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
     def test_h_flow(self):
         print("\nTesting hvalue with flow")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
-        #args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        #args[1] = "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
@@ -49,7 +49,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
     def test_h_flow_obs(self):
         print("\nTesting delta with flow")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
-        #args[1] = "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
+        #args[1] = "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
@@ -91,7 +91,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_delta(self):
         print("\nTesting delta")
-        args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
@@ -101,7 +101,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_deltau(self):
         print("\nTesting deltau")
-        args = ["-e", "experiments/small-sokoban/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("deltau", options)
         recognizer.run_recognizer()
@@ -112,7 +112,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_delta_filter(self):
         print("\nTesting delta with filter")
-        args = ["-e", "experiments/small-sokoban/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
+        args = ["-e", "experiments/small-sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
@@ -122,7 +122,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_hvalue(self):
         print("\nTesting hvalue")
-        args = ["-e", "experiments/small-sokoban/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
+        args = ["-e", "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
@@ -130,6 +130,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
         for hyp in recognizer.accepted_hypotheses:
             self.assertGreaterEqual(hyp.num_obs, hyp.h)
             self.assertGreaterEqual(hyp.num_obs, hyp.obs_hits)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -126,16 +126,10 @@ dmypy.json
 .pyre/
 
 *.stats
-experiments/*.output
 failed.txt
 debug/observation_sanity.txt
 ._*.dat
-latex-*/*.pdf
-latex-*/*.aux
-data-charts/*
-data-charts-old/*
-data-latex/*
-data-latex-old/*
-outputs-old/*
-results-old/*
+data-*/*
 results/*
+old/*
+outputs/small-sokoban*

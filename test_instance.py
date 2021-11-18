@@ -6,7 +6,7 @@ from options import Program_Options
 from plan_recognizer_factory import PlanRecognizerFactory
 
 if __name__ == '__main__':
-    os.system('rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2')
+    os.system('bash cleanup.sh')
     print(sys.argv)
     options = Program_Options(sys.argv[1:])
     recognizer = PlanRecognizerFactory(options).get_recognizer(options.recognizer_name)
