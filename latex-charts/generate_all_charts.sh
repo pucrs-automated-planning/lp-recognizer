@@ -31,8 +31,8 @@ elif [[ "$1" == "all" ]]; then
 	for file in *-scatter.dat; do
 		jobname=$(echo $file | sed 's/.dat//g')
 		cat $file > ../latex-charts/scatter.dat
-	    pdflatex -jobname=$jobname ../latex-charts/template_scatter.tex
-	    rm ../latex-charts/$jobname.aux ../latex-charts/$jobname.txt
+		pdflatex -jobname=$jobname ../latex-charts/template_scatter.tex
+		rm ../latex-charts/$jobname.aux ../latex-charts/$jobname.txt
 	done
 	popd
 fi

@@ -495,8 +495,8 @@ if __name__ == '__main__':
 	all_domain_data = {}
 	for d in domains:
 		domain_data = dd.DomainData(d, observabilities)
-		if os.path.exists(d + ".txt"):
-			domain_data.read()
+		if os.path.exists("data-domains/" + d + ".txt"):
+			domain_data.read("data-domains/")
 		else:
 			domain_data.load(base_path)
 		all_domain_data[d] = domain_data
