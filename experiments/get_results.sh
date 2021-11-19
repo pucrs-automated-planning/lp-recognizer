@@ -68,14 +68,17 @@ for arg in "$@"; do
 		# Generate pdf tables.
 		COMP=pdf
 	elif [[ "$arg" == "-charts1" ]]; then
-		# Generate pdf charts.
+		# Generate pdf charts (ref goals).
 		CHARTS=-ref
 	elif [[ "$arg" == "-charts2" ]]; then
-		# Generate pdf charts.
+		# Generate pdf charts (nonref goals.
 		CHARTS=-nonref
 	elif [[ "$arg" == "-charts3" ]]; then
-		# Generate pdf charts.
+		# Generate pdf charts (all goals).
 		CHARTS=-all
+	elif [[ "$arg" == "-charts4" ]]; then
+		# Generate pdf charts (all goals, sum scatter).
+		CHARTS=-sums
 	fi
 done
 

@@ -1,5 +1,19 @@
 #!/usr/bin/python
-import sys, os, math
+
+##
+## Generate .pdf tables for given methods.
+##
+
+## Uses:
+# Generate individual table:
+# ./generate_tables.py lmc -rows -comp $2 [-fast]
+# Generate summarized table by observability level:
+# ./generate_tables.py flowf2-sub-old-noisy -obs $2 [-fast]
+# Generate summarized table by domain:
+# ./generate_tables.py flowf2-sub-old-noisy -dom $2 [-fast]
+##
+
+import sys, os
 
 COLS_TYPE = 0
 BOLD = True
@@ -336,7 +350,7 @@ if __name__ == '__main__' :
 	if 'basic' in file:
 		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
 		names = ['L', 'P', 'S']
-	elif 'lm' in file:
+	elif 'lmc' in file:
 		COMP = 'lm'
 		approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
 		names = ['$L$', '$L^+$', '$L^+$ (soft)']

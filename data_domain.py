@@ -95,6 +95,9 @@ class ProblemData:
 				observations.append(line.strip().lower())
 		return observations
 
+	def get_hyp_indexes(self):
+		return range(len(self.hyps))
+
 	def get_solution_indexes(self):
 		solution = [] # list of indexes
 		for i in range(0, len(self.hyps)):

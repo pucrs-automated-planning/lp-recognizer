@@ -133,3 +133,5 @@ data-*/*
 results/*
 old/*
 outputs/small-sokoban*
+!/*.yml
+!/.gitignore
