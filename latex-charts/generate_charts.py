@@ -342,9 +342,9 @@ if __name__ == '__main__':
 	# Domains
 	fast = False
 	# Constraint set
-	lmc = False
+	lm = False
 	dr = False
-	flow = False
+	fl = False
 	basic = False
 	# Files
 	png = False
@@ -357,12 +357,12 @@ if __name__ == '__main__':
 			fast = True
 		elif arg == '-full':
 			fast = False
-		elif arg == '-lmc':
-			lmc = True
+		elif arg == '-lm':
+			lm = True
 		elif arg == '-del':
 			dr = True
-		elif arg == '-flow':
-			flow = True
+		elif arg == '-fl':
+			fl = True
 		elif arg == '-basic':
 			basic = True
 		elif arg == '-png':
@@ -402,7 +402,7 @@ if __name__ == '__main__':
 		generate_charts(dat, png, pdf, stats, domains,
 			["delta-cl", "delta-cp", "delta-cs"],
 			["LMC", "PH", "SEQ"])
-	if lmc:
+	if lm:
 		generate_charts(dat, png, pdf, stats, domains,
 			["delta-cl", "delta-o-cl1"], 
 			["LMC", "LMC+soft"])
@@ -411,7 +411,7 @@ if __name__ == '__main__':
 		generate_charts(dat, png, pdf, stats, domains,
 			["delta-o-cdt", "delta-o-cdto"],
 			["DEL+1", "DEL+2"])
-	if flow:
+	if fl:
 		generate_charts(dat, png, pdf, stats, domains,
 			["delta-cf1", "delta-o-cf17"],
 			["F1", "FOPxEIntra"])

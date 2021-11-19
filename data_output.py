@@ -10,9 +10,7 @@
 # For all domains:
 # ./data_output.py "delta-cl delta-o-cl1" all [-fast]
 # For method groups:
-# ./data_output.py lm optimal -scatter -stats [-fast]
-# ./data_output.py fl optimal -scatter -stats [-fast]
-# ./data_output.py dr optimal -stats [-fast]
+# ./data_output.py lmc all [-fast]
 ##
 
 import os, sys
@@ -346,7 +344,7 @@ class RawExperiment:
 				continue
 			line = line.split(":")
 			current_file = line[0].strip().replace("pb", "p")
-			if filter(current_file):
+			if dd.filter(current_file):
 				current_file = None
 				continue
 			if current_file[0].isdigit():
@@ -411,13 +409,13 @@ if __name__ == '__main__':
 		methods = ['delta-cl', 'delta-cp', 'delta-cs']
 	elif 'lmc' in sys.argv[1]:
 		methods = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
-	elif 'del' in sys.argv[1]:
+	elif 'delr' in sys.argv[1]:
 		methods = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
 	elif 'flow' in sys.argv[1]:
 		methods = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
 	else:
+		methods = sys.argv[1].split()
 		sys.argv[1] = ""
-		methods = methods.split()
 	if 'f2' in sys.argv[1]:
 		methods = [method + "-f2" for method in methods]
 

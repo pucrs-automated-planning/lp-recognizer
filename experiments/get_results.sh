@@ -90,10 +90,10 @@ export CONSTRAINT_NEW="delta-cd delta-o-cd delta-o-cl delta-cf1 delta-cf2"
 export FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
 
 # Methods from the second paper.
-export LM="delta-cl delta-o-cl delta-o-cl1"
-export LM_NOISY="$LM delta-o-cl2"
-export DR="delta-cdt delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
-export DR_NOISY="$DR delta-o-cdta1"
+export LMC="delta-cl delta-o-cl delta-o-cl1"
+export LMC_NOISY="$LMC delta-o-cl2"
+export DELR="delta-cdt delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
+export DELR_NOISY="$DELR delta-o-cdta1"
 export FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
 
 # Download datasets if necessary.
@@ -133,10 +133,10 @@ if [[ "$TEST" == "-test" ]]; then
 	METHODS="delta-cl delta-o-cl1"
 	get_results optimal
 else
-	METHODS="$BASIC $LM $DR $FLOW"
+	METHODS="$BASIC $LMC $DELR $FLOW"
 	get_results optimal
 	get_results suboptimal
-	METHODS="$BACIC_NOISY $LM_NOISY $DR_NOISY $FLOW_NOISY"
+	METHODS="$BACIC_NOISY $LMC_NOISY $DELR_NOISY $FLOW_NOISY"
 	get_results optimal-old-noisy
 	get_results suboptimal-old-noisy
 fi
@@ -166,7 +166,7 @@ if [[ "$COMP" == "txt" ]]; then
 		cd data-comparison
 		merge_comp_files lm "LM	LM+	LM+(soft)" 
 		merge_comp_files dr "DR+	DR+2	DR+3"
-		merge_comp_files fl "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
+		merge_comp_files fl "FL	FL(M2)	FL(PxE-Intra)	FL(PxE-Gen)	F2"
 		cd ..
 	fi
 	echo "Done."

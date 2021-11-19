@@ -354,7 +354,7 @@ if __name__ == '__main__' :
 		COMP = 'lm'
 		approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
 		names = ['$L$', '$L^+$', '$L^+$ (soft)']
-	elif 'del' in file:
+	elif 'delr' in file:
 		COMP = 'dr'
 		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
 		names = ['$D+$', '$D_2+$', '$D_3+$']

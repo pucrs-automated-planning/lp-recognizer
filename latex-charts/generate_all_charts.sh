@@ -17,11 +17,11 @@
 
 if [[ "$1" == "ref" ]]; then
 	# Reference goal
-	./generate_charts -full -stats -dat -pdf -lmc -flow -ref $2
+	./generate_charts -full -stats -dat -pdf -lm -fl -ref $2
 	#./generate_charts -full -stats -dr -ref $2
 elif [[ "$1" == "nonref" ]]; then
 	# Closest non-ref goal
-	./generate_charts -full -stats -dat -pdf -lmc -flow $2
+	./generate_charts -full -stats -dat -pdf -lm -fl $2
 	#./generate_charts -full -stats -dr $2
 elif [[ "$1" == "all" ]]; then
 	# All goals

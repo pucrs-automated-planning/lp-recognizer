@@ -14,8 +14,8 @@
 # Generate indivisual tables for optimal data sets.
 ./generate_tables.py lmc -rows -comp $2
 ./generate_tables.py lmcf2-old-noisy -rows -comp $2
-./generate_tables.py del -rows -comp $2
-./generate_tables.py delf2-old-noisy -rows -comp $2
+./generate_tables.py delr -rows -comp $2
+./generate_tables.py delrf2-old-noisy -rows -comp $2
 ./generate_tables.py flow -rows -comp $2
 ./generate_tables.py flowf2-old-noisy -rows -comp $2
 #./generate_tables.py basic
@@ -27,21 +27,21 @@
 if [[ "$1" == "merge" ]]; then
 	./generate_tables.py lmc-sub -rows -comp -obs $2
 	./generate_tables.py lmcf2-sub-old-noisy -rows -comp -obs $2
-	./generate_tables.py del-sub -rows -comp -obs $2
-	./generate_tables.py delf2-sub-old-noisy -rows -comp -obs $2
+	./generate_tables.py delr-sub -rows -comp -obs $2
+	./generate_tables.py delrf2-sub-old-noisy -rows -comp -obs $2
 	./generate_tables.py flow-sub -rows -comp -obs $2
 	./generate_tables.py flowf2-sub-old-noisy -rows -comp -obs $2
 	./merge_tables.py lmc lmc-sub -vertical
 	./merge_tables.py lmcf2-old-noisy lmcf2-sub-old-noisy -vertical
-	./merge_tables.py del del-sub -vertical
-	./merge_tables.py delf2-old-noisy delf2-sub-old-noisy -vertical
+	./merge_tables.py delr delr-sub -vertical
+	./merge_tables.py delrf2-old-noisy delrf2-sub-old-noisy -vertical
 	./merge_tables.py flow flow-sub -vertical
 	./merge_tables.py flowf2-old-noisy flowf2-sub-old-noisy -vertical
 else
 	./generate_tables.py lmc-sub -rows -comp $2
 	./generate_tables.py lmcf2-sub-old-noisy -rows -comp $2
-	./generate_tables.py del-sub -rows -comp $2
-	./generate_tables.py delf2-sub-old-noisy -rows -comp $2
+	./generate_tables.py delr-sub -rows -comp $2
+	./generate_tables.py delrf2-sub-old-noisy -rows -comp $2
 	./generate_tables.py flow-sub -rows -comp $2
 	./generate_tables.py flowf2-sub-old-noisy -rows -comp $2
 fi
