@@ -8,11 +8,11 @@
 # For especific domains:
 # ./data_output.py "delta-cl delta-o-cl1" blocks-world-optimal depots-optimal [-fast]
 # For all domains:
-# ./data_output.sh "delta-cl delta-o-cl1" all [-fast]
+# ./data_output.py "delta-cl delta-o-cl1" all [-fast]
 # For method groups:
-# ./data_output.sh lm optimal -hvalues -scatter -stats [-fast]
-# ./data_output.sh fl optimal -hvalues -scatter -stats [-fast]
-# ./data_output.sh dr optimal -hvalues -stats [-fast]
+# ./data_output.py lm optimal -scatter -stats [-fast]
+# ./data_output.py fl optimal -scatter -stats [-fast]
+# ./data_output.py dr optimal -stats [-fast]
 ##
 
 import os, sys, re
@@ -314,17 +314,17 @@ class ObsStats:
 		self.quads = [0, 0, 0, 0] # Q1, Q2, Q3, Q4
 		self.axis = [0, 0, 0, 0, 0] # Origin, X left, X right, Y bottom, Y right
 
-	def count_hvalues(experiments, problem):
-		for h in range(len(p.hyps)):
-			hc = [m.problem_outputs[p.name].scores[h][1] \
-				if h in m.problem_outputs[p.name].scores else 100 \
+	def count_hvalues(self, problem, experiments):
+		for h in range(len(problem.hyps)):
+			hc = [m.problem_outputs[problem.name].scores[h][1] \
+				if h in m.problem_outputs[problem.name].scores else 100 \
 				for m in experiments]
 			line = ' '.join([str(x) for x in hc])
-			if line in points:
-				points[line] += 1
+			if line in self.points:
+				self.points[line] += 1
 			else:
-				points[line] = 1
-			agr = [m.problem_outputs[p.name].agreement for m in experiments]
+				self.points[line] = 1
+			agr = [m.problem_outputs[problem.name].agreement for m in experiments]
 			if hc[0] > hc[1]:
 				self.win[0] += 1
 				if agr[0] > agr[1]:
@@ -350,22 +350,22 @@ class ObsStats:
 				else:
 					self.axis[0] += 1
 
-		def print_points():
-			return '\n'.join([line + " " + str(c) for line, c in self.points.items()])
+	def print_points(self):
+		return '\n'.join([line + " " + str(c) for line, c in self.points.items()])
 
-		def print_stats(methods):
-			content = methods[0] + " vs " + methods[1] + '\n'
-			content += methods[0] + " higher than " + methods[1] + ": %.2f" % self.win[0] + "%\n"
-			content += methods[1] + " higher than " + methods[0] + ": %.2f" % self.win[1] + "%\n"
-			content += methods[0] + " equal to " + methods[1] + ": %.2f" % self.win[2] + "%\n"
-			for i in range(0, 4):
-				content += "Q%s: %s" % (i + 1, self.quads[i]) + '\n'
-			content += "Axis X (left): %s" % self.axis[1] + '\n'
-			content += "Axis X (right): %s" % self.axis[2] + '\n'
-			content += "Axis Y (bottom): %s" % self.axis[3] + '\n'
-			content += "Axis Y (top): %s" % self.axis[4] + '\n'
-			content += "Origin: %s" % self.axis[0] + '\n'
-			return content
+	def print_stats(self, methods):
+		content = methods[0] + " vs " + methods[1] + '\n'
+		content += methods[0] + " higher than " + methods[1] + ": %.2f" % self.win[0] + "%\n"
+		content += methods[1] + " higher than " + methods[0] + ": %.2f" % self.win[1] + "%\n"
+		content += methods[0] + " equal to " + methods[1] + ": %.2f" % self.win[2] + "%\n"
+		for i in range(0, 4):
+			content += "Q%s: %s" % (i + 1, self.quads[i]) + '\n'
+		content += "Axis X (left): %s" % self.axis[1] + '\n'
+		content += "Axis X (right): %s" % self.axis[2] + '\n'
+		content += "Axis Y (bottom): %s" % self.axis[3] + '\n'
+		content += "Axis Y (top): %s" % self.axis[4] + '\n'
+		content += "Origin: %s" % self.axis[0] + '\n'
+		return content
 
 
 class RawProblem:
@@ -461,11 +461,11 @@ def write_dat_files(all_domain_data, methods, observabilities, chart_name = None
 	for o in range(len(observabilities)):
 		if scatter:
 			content = obs_stats[o].print_points()
-			with open("latex-charts/" + chart_name + "-" + observabilities[o] + "-scatter.dat", 'w') as f:
+			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-scatter-all.dat", 'w') as f:
 				f.write(header + content)
 		if stats: 
 			content = obs_stats[o].print_stats(methods)
-			with open("latex-charts/" + chart_name + "-" + observabilities[o] + "-stats.dat", 'w') as f:
+			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-stats.dat", 'w') as f:
 				f.write(content)
 
 
@@ -483,6 +483,8 @@ if __name__ == '__main__':
 	observabilities = ['10', '30', '50', '70', '100']
 	base_path = '../goal-plan-recognition-dataset/'
 	test = False
+	scatter = False
+	stats = False
 	if '-fast' in sys.argv:
 		set_filter(True)
 		dd.set_filter(True)
@@ -491,6 +493,12 @@ if __name__ == '__main__':
 		test = True
 		sys.argv.remove('-test')
 		base_path = 'experiments/'
+	if '-scatter' in sys.argv:
+		scatter = True
+		sys.argv.remove('-scatter')
+	if '-stats' in sys.argv:
+		stats = True
+		sys.argv.remove('-stats')
 	domains = dd.parse_domains(sys.argv[2:], test)
 	all_domain_data = {}
 	for d in domains:
@@ -514,8 +522,7 @@ if __name__ == '__main__':
 	else:
 		methods = methods.split()
 
-	if '-hvalues' in sys.argv:
-		write_dat_files(all_domain_data, methods, observabilities[0:-2], \
-			 chart_name, "-scatter" in sys.argv, "-stats" in sys.argv)
+	if scatter or stats:
+		write_dat_files(all_domain_data, methods, observabilities[0:-1], chart_name, scatter, stats)
 	else:
 		write_txt_files(all_domain_data, methods)

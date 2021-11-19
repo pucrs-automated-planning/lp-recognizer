@@ -24,18 +24,16 @@ elif [[ "$1" == "nonref" ]]; then
 elif [[ "$1" == "all" ]]; then
 	# All goals
 	pushd ..
-	./output_format.py lm optimal -scatter -stats $2
-	./output_format.py fl optimal -scatter -stats $2
-	./output_format.py dr optimal -stats $2
-	cd data-charts
-	for file in *-scatter.dat; do
-		jobname=$(echo $file | sed 's/.dat//g')
-		cat $file > ../latex-charts/scatter.dat
-		pdflatex -jobname=$jobname ../latex-charts/template_scatter.tex
-		rm ../latex-charts/$jobname.aux ../latex-charts/$jobname.txt
-	done
+	./data_output.py lm optimal -scatter -stats $2
+	./data_output.py fl optimal -scatter -stats $2
+	./data_output.py dr optimal -stats $2
 	popd
+	for file in ../data-charts/*-scatter-all.dat; do 
+		cat $file > scatter.dat
+		jobname=$(echo ${file##*/} | sed 's/-all.dat//g')
+		pdflatex -jobname=$jobname template_scatter.tex
+	done
 fi
 
 # Clean-up.
-rm *.txt *.aux
+rm *.log *.aux

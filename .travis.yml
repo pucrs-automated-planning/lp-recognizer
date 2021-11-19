@@ -19,6 +19,7 @@ script:
   - ./test_domain.py "experiments/" small-sokoban-optimal "delta delta-cl delta-o-cl1" -S soplex
   - ./data_domain.py small-sokoban-optimal -test
   - ./data_output.py "delta-cl delta-o-cl1" small-sokoban-optimal -test
+  - ./data_output.py "delta-cl delta-o-cl1" small-sokoban-optimal -stats -scatter -test
   - ./data_comparison.py lm "delta-cl delta-o-cl1" optimal -test
 branches:
   only:
