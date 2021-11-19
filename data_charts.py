@@ -167,6 +167,15 @@ if __name__ == '__main__':
 		test = True
 		sys.argv.remove('-test')
 		base_path = 'experiments/'
+	if '-scatter' in sys.argv:
+		scatter = True
+		sys.argv.remove('-scatter')
+	if '-stats' in sys.argv:
+		stats = True
+		sys.argv.remove('-stats')
+	if '-sums' in sys.argv:
+		sums = True
+		sys.argv.remove('-sums')
 
 	# Domains
 	domains = dd.parse_domains(sys.argv[2:], test)
