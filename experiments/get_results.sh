@@ -91,9 +91,9 @@ export FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
 
 # Methods from the second paper.
 export LMC="delta-cl delta-o-cl delta-o-cl1"
-export LMC_NOISY="$LMC delta-o-cl2"
+export LMC_N="$LMC delta-o-cl2"
 export DELR="delta-cdt delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
-export DELR_NOISY="$DELR delta-o-cdta1"
+export DELR_N="$DELR delta-o-cdta1"
 export FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
 
 # Download datasets if necessary.
@@ -136,7 +136,7 @@ else
 	METHODS="$BASIC $LMC $DELR $FLOW"
 	get_results optimal
 	get_results suboptimal
-	METHODS="$BACIC_NOISY $LMC_NOISY $DELR_NOISY $FLOW_NOISY"
+	METHODS="$BACIC_N $LMC_N $DELR_N $FLOW_N"
 	get_results optimal-old-noisy
 	get_results suboptimal-old-noisy
 fi
@@ -155,18 +155,18 @@ merge_comp_files() {
 if [[ "$COMP" == "txt" ]]; then
 	echo "Generating comparison tables..."
 	if [[ "$TEST" == "-test" ]]; then
-		./data_comparison.py lm "delta-cl delta-o-cl1" optimal $TEST
+		./data_comparison.py lmc "delta-cl delta-o-cl1" optimal $TEST
 	else 
-		./data_comparison.py lm "delta-cl delta-o-cl delta-o-cl1" optimal suboptimal $TEST
-		./data_comparison.py lm "delta-cl-f2 delta-o-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
-		./data_comparison.py dr "delta-o-cdt delta-o-cdto delta-o-cdtb5" optimal suboptimal $TEST
-		./data_comparison.py dr "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2"optimal-old-noisy suboptimal-old-noisy $TEST
-		./data_comparison.py fl "delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2" optimal suboptimal $TEST
-		./data_comparison.py fl "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py lmc "delta-cl delta-o-cl delta-o-cl1" optimal suboptimal $TEST
+		./data_comparison.py lmc "delta-cl-f2 delta-o-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py delr "delta-o-cdt delta-o-cdto delta-o-cdtb5" optimal suboptimal $TEST
+		./data_comparison.py delr "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2"optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py flow "delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2" optimal suboptimal $TEST
+		./data_comparison.py flow "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
 		cd data-comparison
-		merge_comp_files lm "LM	LM+	LM+(soft)" 
-		merge_comp_files dr "DR+	DR+2	DR+3"
-		merge_comp_files fl "FL	FL(M2)	FL(PxE-Intra)	FL(PxE-Gen)	F2"
+		merge_comp_files lmc "L	L+	L+(soft)" 
+		merge_comp_files delr "D+	D+2	D+3"
+		merge_comp_files flow "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
 		cd ..
 	fi
 	echo "Done."

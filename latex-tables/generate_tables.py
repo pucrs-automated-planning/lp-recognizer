@@ -351,15 +351,15 @@ if __name__ == '__main__' :
 		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
 		names = ['L', 'P', 'S']
 	elif 'lmc' in file:
-		COMP = 'lm'
+		COMP = 'lmc'
 		approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
 		names = ['$L$', '$L^+$', '$L^+$ (soft)']
 	elif 'delr' in file:
-		COMP = 'dr'
+		COMP = 'delr'
 		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
 		names = ['$D+$', '$D_2+$', '$D_3+$']
 	elif 'flow' in file:
-		COMP = 'fl'
+		COMP = 'flow'
 		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
 		names = ["F", "F(M2)", "FO(PxE-Intra)", "FO(PxE-Gen)", "F2"]
 	if 'f2' in file:
