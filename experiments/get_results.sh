@@ -84,17 +84,18 @@ done
 
 # Methods from the First paper.
 export BASIC="delta deltau"
+export BASIC_N="delta-f1 deltau-f1 delta-f2 deltau-f2"
 export CONSTRAINT_PAIRS="delta-cps delta-cls delta-clp deltau-cps deltau-cls deltau-clp"
 export CONSTRAINT_SINGLE="delta-cl delta-cp delta-cs deltau-cl deltau-cp deltau-cs"
-export CONSTRAINT_NEW="delta-cd delta-o-cd delta-o-cl delta-cf1 delta-cf2"
-export FILTERS="delta-f1 deltau-f1 delta-f2 deltau-f2"
 
 # Methods from the second paper.
-export LMC="delta-cl delta-o-cl delta-o-cl1"
-export LMC_N="$LMC delta-o-cl2"
+export LMC="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
+export LMC_N="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2 delta-o-cl2-f2"
 export DELR="delta-cdt delta-o-cdt delta-o-cdto delta-o-cdto1 delta-o-cdtb1"
-export DELR_N="$DELR delta-o-cdta1"
+export DELR_N="delta-cdt-f2 delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdto1-f2 delta-o-cdtb1-f2 delta-o-cdta1-f2"
 export FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
+export FLOW_N="delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2"
+export NEW_PAIRS="delta-o-csdto delta-o-csl1 delta-o-cl1dto"
 
 # Download datasets if necessary.
 if [[ ! -d ../$DATASETS ]]; then
@@ -142,31 +143,34 @@ else
 fi
 echo "Done."
 
-# Generate .txt tables for group comparisons.
-merge_comp_files() {
-	for d in "optimal suboptimal optimal-old-noisy suboptimal-old-noisy"; do
-		echo "$2" > $1-$d.txt
-		for file in $1-*-$d.txt; do
-			echo $file >> $1-$d.txt
-			echo "$(cat $file)" >> $1-$d.txt
-		done
-	done
-}
 if [[ "$COMP" == "txt" ]]; then
 	echo "Generating comparison tables..."
 	if [[ "$TEST" == "-test" ]]; then
 		./data_comparison.py lmc "delta-cl delta-o-cl1" optimal $TEST
 	else 
 		./data_comparison.py lmc "delta-cl delta-o-cl delta-o-cl1" optimal suboptimal $TEST
-		./data_comparison.py lmc "delta-cl-f2 delta-o-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py lmcf2 "delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
 		./data_comparison.py delr "delta-o-cdt delta-o-cdto delta-o-cdtb5" optimal suboptimal $TEST
-		./data_comparison.py delr "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2"optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py delrf2 "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy $TEST
 		./data_comparison.py flow "delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2" optimal suboptimal $TEST
-		./data_comparison.py flow "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py flowf2 "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
 		cd data-comparison
-		merge_comp_files lmc "L	L+	L+(soft)" 
+		# Generate .txt tables for group comparisons.
+		merge_comp_files() {
+			for d in "optimal suboptimal optimal-old-noisy suboptimal-old-noisy"; do
+				echo "$2" > $1-$d.txt
+				for file in $1-*-$d.txt; do
+					echo $file >> $1-$d.txt
+					echo "$(cat $file)" >> $1-$d.txt
+				done
+			done
+		}
+		merge_comp_files lmc "L	L+(uni)	L+(soft)" 
+		merge_comp_files lmcf2 "L	L+(uni)	L+	L+(soft)" 
 		merge_comp_files delr "D+	D+2	D+3"
+		merge_comp_files delrf2 "D+	D+2	D+3"
 		merge_comp_files flow "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
+		merge_comp_files flowf2 "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
 		cd ..
 	fi
 	echo "Done."

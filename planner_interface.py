@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+
 import sys, os, csv, time, math
 import benchmark
 
@@ -13,7 +13,7 @@ def custom_partition(s, sep):
     if i == 0: return (None, s[i], s[i + 1:])
     return (s[:i - 1], s[i], s[i + 1:])
 
-class PRCommand:
+class FDCommand:
 
     def __init__(self, domain, problem, opts):
         self.domain = domain
@@ -90,25 +90,25 @@ class Hypothesis:
     def evaluate(self, observations):
         hyp_problem = 'hyp_%d_problem.pddl' % self.index
         self.generate_pddl_for_hyp_plan(hyp_problem)
-        pr_cmd = PRCommand('domain.pddl', 'hyp_%d_problem.pddl' % self.index, self.opts)
-        pr_cmd.execute()
-        self.fd_time = pr_cmd.time
-        self.lp_time = pr_cmd.lp_time
-        pr_cmd.write_result('hyp_%d_planning_H.csv' % self.index)
-        if pr_cmd.signal != 0:
-            print("signal error: %d" % pr_cmd.signal)
+        fd_cmd = FDCommand('domain.pddl', 'hyp_%d_problem.pddl' % self.index, self.opts)
+        fd_cmd.execute()
+        self.fd_time = fd_cmd.time
+        self.lp_time = fd_cmd.lp_time
+        fd_cmd.write_result('hyp_%d_planning_H.csv' % self.index)
+        if fd_cmd.signal != 0:
+            print("signal error: %d" % fd_cmd.signal)
             #exit()
             self.test_failed = True
             return
-        if pr_cmd.h_values == None:
+        if fd_cmd.h_values == None:
             print("No h value. Failed.")
             self.test_failed = True
             return
-        if pr_cmd.obs_report == None:
+        if fd_cmd.obs_report == None:
             print("No observation report. Failed.")
             self.test_failed = True
             return
-        for x in pr_cmd.h_values:
+        for x in fd_cmd.h_values:
             if x < 0:
                 print("Negative h value. Failed.")
                 self.test_failed = True
@@ -118,24 +118,24 @@ class Hypothesis:
                 self.test_failed = True
                 return
         # LP size
-        self.num_lp_vars = pr_cmd.lp_info[0]
-        self.num_lp_consts = pr_cmd.lp_info[1]
-        self.lp_info = pr_cmd.lp_info
+        self.num_lp_vars = fd_cmd.lp_info[0]
+        self.num_lp_consts = fd_cmd.lp_info[1]
+        self.lp_info = fd_cmd.lp_info
         # obs
-        self.num_obs = pr_cmd.obs_report[0] - pr_cmd.obs_report[1]
-        self.num_invalid_obs = pr_cmd.obs_report[1]
-        self.obs_hits = pr_cmd.obs_report[2]
-        self.obs_misses = pr_cmd.obs_report[3]
-        self.op_counts = pr_cmd.op_counts
+        self.num_obs = fd_cmd.obs_report[0] - fd_cmd.obs_report[1]
+        self.num_invalid_obs = fd_cmd.obs_report[1]
+        self.obs_hits = fd_cmd.obs_report[2]
+        self.obs_misses = fd_cmd.obs_report[3]
+        self.op_counts = fd_cmd.op_counts
         self.last_obs = len(observations) - 1
         while self.op_counts.get(observations[self.last_obs].strip(), 0) == 0:
             self.last_obs -= 1
             if self.last_obs < 0:
                 break
         # h values
-        self.h = pr_cmd.h_values[0]
-        self.h_c = pr_cmd.h_values[1]
-        self.h_s = pr_cmd.h_values[2]
+        self.h = fd_cmd.h_values[0]
+        self.h_c = fd_cmd.h_values[1]
+        self.h_s = fd_cmd.h_values[2]
 
     def load_plan(self, plan_name):
         instream = open(plan_name)

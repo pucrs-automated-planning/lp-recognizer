@@ -1937,8 +1937,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2020-10-26 22:55:33.066597400 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2021-04-01 11:47:05.619147400 -0300
-@@ -11,41 +11,118 @@
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2021-12-08 15:02:30.722342400 -0200
+@@ -11,41 +11,120 @@
  #include "../utils/memory.h"
  
  #include <cassert>
@@ -2044,8 +2044,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                constraints.emplace_back(0, infinity);
 +                if (noisy == 1) // Divide: >= Y_obs / occur(obs)
 +                    constraints.back().insert(var_id, -1.0/it->second);
-+                else // B var: >= B_obs
++                else if (noisy == 2) // B var: >= B_obs
 +                    constraints.back().insert(b_vars[it->first], -1.0);
++                else if (noisy == 3) // Default: 1
++                    constraints.back().set_lower_bound(1);
 +                lp::LPConstraint &landmark_constraint = constraints.back();
 +                for (int op_id : op_ids) {
 +                    cout << op_id << " - " << task_proxy.get_operators()[op_id].get_name() << endl;
@@ -2068,7 +2070,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
  
  static shared_ptr<ConstraintGenerator> _parse(OptionParser &parser) {
-@@ -74,10 +151,11 @@
+@@ -74,10 +153,11 @@
              "2268-2274",
              "AAAI Press",
              "2013"));

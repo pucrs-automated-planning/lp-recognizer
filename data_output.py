@@ -408,7 +408,7 @@ if __name__ == '__main__':
 	if 'basic' in sys.argv[1]:
 		methods = ['delta-cl', 'delta-cp', 'delta-cs']
 	elif 'lmc' in sys.argv[1]:
-		methods = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
+		methods = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
 	elif 'delr' in sys.argv[1]:
 		methods = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
 	elif 'flow' in sys.argv[1]:

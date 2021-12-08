@@ -352,8 +352,13 @@ if __name__ == '__main__' :
 		names = ['L', 'P', 'S']
 	elif 'lmc' in file:
 		COMP = 'lmc'
-		approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
-		names = ['$L$', '$L^+$', '$L^+$ (soft)']
+		if 'f2' in file:
+			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
+			names = ['$L$', '$L^+$ (uni)', '$L^+$', '$L^+$ (soft)']
+		else:
+			COMP = 'lmc'
+			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
+			names = ['$L$', '$L^+$ (uni)', '$L^+$ (soft)']
 	elif 'delr' in file:
 		COMP = 'delr'
 		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
@@ -362,9 +367,11 @@ if __name__ == '__main__' :
 		COMP = 'flow'
 		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
 		names = ["F", "F(M2)", "FO(PxE-Intra)", "FO(PxE-Gen)", "F2"]
-	if 'f2' in file:
-		approaches = [approach + "-f2" for approach in approaches]
 	if not '-comp' in sys.argv:
 		COMP = None
+	if 'f2' in file:
+		approaches = [approach + "-f2" for approach in approaches]
+		if COMP:
+			COMP += "f2"
 			
 	create_tex_files(file, domains, observabilities, approaches, names)
