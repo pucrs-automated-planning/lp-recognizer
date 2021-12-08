@@ -35,14 +35,16 @@ class ProblemOutput:
 		# Get solution
 		self.solution_set = frozenset([h.index for h in recognizer.accepted_hypotheses])
 		exact_solution_set = frozenset([h.index for h in recognizer.hyps if h.is_solution])
-		wrong_solution_set = frozenset([h for h in recognizer.hyps if not h.is_solution])
+		wrong_solution_set = frozenset([h for h in recognizer.hyps if not h.is_solution and not h.test_failed])
 		real_hyp = recognizer.get_real_hypothesis()
 		hyp = recognizer.unique_goal
 
 		# Wrong hyp
-		min_wrong_d = min([h.h_c - h.h for h in wrong_solution_set if not h.test_failed])
-		min_wrong_hyps = [h for h in wrong_solution_set if h.h_c - h.h == min_wrong_d]
-		wrong_hyp = min_wrong_hyps[0] if len(min_wrong_hyps) > 0 else None
+		wrong_hyp = None
+		if len(wrong_solution_set) > 0:
+			min_wrong_d = min([h.h_c - h.h for h in wrong_solution_set if not h.test_failed])
+			min_wrong_hyps = [h for h in wrong_solution_set if h.h_c - h.h == min_wrong_d]
+			wrong_hyp = min_wrong_hyps[0] if len(min_wrong_hyps) > 0 else None
 
 		# Time results
 		self.lp_time = recognizer.lp_time

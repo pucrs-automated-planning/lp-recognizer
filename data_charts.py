@@ -76,9 +76,9 @@ class ObsStats:
 
 	def print_stats(self, methods):
 		content = methods[0] + " vs " + methods[1] + '\n'
-		content += "%s higher than %s: %s" % (methods[0], methods[1] self.win[0]) + "%\n"
-		content += "%s higher than %s: %s" % (methods[1], methods[0] self.win[1]) + "%\n"
-		content += "%s equal to %s: %s" % (methods[0], methods[1] self.win[2]) + "%\n"
+		content += "%s higher than %s: %s" % (methods[0], methods[1], self.win[0]) + "\n"
+		content += "%s higher than %s: %s" % (methods[1], methods[0], self.win[1]) + "\n"
+		content += "%s equal to %s: %s" % (methods[0], methods[1], self.win[2]) + "\n"
 		for i in range(0, 4):
 			content += "Q%s: %s" % (i + 1, self.quads[i]) + '\n'
 		content += "Axis X (left): %s" % self.axis[1] + '\n'

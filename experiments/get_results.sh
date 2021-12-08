@@ -7,6 +7,7 @@
 ## Uses:
 # Run methods and generate new .txt and .pdf files:
 # ./get_results.sh -rerun [-fast]
+# ./get_results.sh -rerun -pdf [-fast]
 # Generate .txt tables files from existing .output files:
 # ./get_results.sh -txt [-fast]
 # Generate .pdf tables from existing .txt files:
@@ -96,11 +97,16 @@ export DELR_N="delta-cdt-f2 delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdto1-f2 delt
 export FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
 export FLOW_N="delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2"
 export NEW_PAIRS="delta-o-csdto delta-o-csl1 delta-o-cl1dto"
+export NEW_PAIRS_N="delta-o-csdto-f2 delta-o-csl1-f2 delta-o-cl1dto-f2"
 
 # Download datasets if necessary.
 if [[ ! -d ../$DATASETS ]]; then
 	echo "Datasets not found at ../$DATASETS"
 	source get_datasets.sh
+fi
+# Create output folder
+if [[ ! -d stdout ]]; then
+	mkdir stdout
 fi
 
 pushd ..
@@ -122,7 +128,7 @@ get_results() {
 		# Method's results.
 		if [[ "$EXP" == "output" ]]; then
 			# .output files + .txt tables.
-			python2 test_domain.py $DATASETS $domain-$1 "$METHODS" $TEST -S cplex > experiments/stdout/$1.txt
+			python2 test_domain.py $DATASETS $domain-$1 "$METHODS" $TEST -S cplex > experiments/stdout/$domain-$1.txt
 		elif [[ "$EXP" == "txt" ]]; then
 			# .txt tables only.
 			python2 data_output.py "$METHODS" $domain-$1 $TEST
@@ -178,7 +184,7 @@ fi
 
 if [[ "$TEST" != "-test" ]]; then
 	# .pdf tables.
-	if [[ ! -z "$COMP" || ! -z "$EXP" ]]; then
+	if [[ ! -z "$COMP" ]]; then
 		echo "Generating pdf tables..."
 		cd latex-tables
 		bash generate_all_tables.sh full $TEST
