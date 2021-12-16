@@ -1,0 +1,1380 @@
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-1_10_1.tar.bz2:0.554416894913:0.007522259:0.55
+> 0:True:8,8:90,20
+> 1:False:11,13:90,23
+> 2:False:8,12:90,20
+> 3:True:8,8:90,20
+> 4:False:11,12:90,23
+> 5:False:8,12:90,20
+> 6:False:9,10:90,21
+> 7:False:8,10:90,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-1_10_2.tar.bz2:0.551743030548:0.008380705:0.56
+> 0:True:8,9:91,28
+> 1:False:11,13:91,31
+> 2:False:8,13:91,28
+> 3:True:8,9:91,28
+> 4:False:11,13:91,31
+> 5:False:8,13:91,28
+> 6:False:9,11:91,29
+> 7:False:8,11:91,28
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-1_10_3.tar.bz2:0.555824041367:0.008502792:0.56
+> 0:True:8,9:91,26
+> 1:False:11,13:91,29
+> 2:False:8,11:91,26
+> 3:True:8,9:91,26
+> 4:True:11,12:91,29
+> 5:False:8,11:91,26
+> 6:True:9,10:91,27
+> 7:False:8,11:91,26
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-2_10_1.tar.bz2:0.556452035904:0.00836562:0.55
+> 0:False:8,10:91,26
+> 1:True:11,12:91,29
+> 2:False:8,10:91,26
+> 3:False:8,10:91,26
+> 4:True:11,12:91,29
+> 5:False:8,10:91,26
+> 6:True:9,10:91,27
+> 7:False:8,10:91,26
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-2_10_2.tar.bz2:0.554255008698:0.007551399:0.55
+> 0:False:8,10:90,20
+> 1:True:11,11:90,23
+> 2:False:8,10:90,20
+> 3:False:8,10:90,20
+> 4:True:11,11:90,23
+> 5:False:8,10:90,20
+> 6:False:9,10:90,21
+> 7:False:8,11:90,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-2_10_3.tar.bz2:0.554113864899:0.007856399:0.56
+> 0:False:8,11:91,20
+> 1:False:11,13:91,23
+> 2:False:8,10:91,20
+> 3:False:8,11:91,20
+> 4:True:11,12:91,23
+> 5:False:8,10:91,20
+> 6:False:9,12:91,21
+> 7:False:8,10:91,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-3_10_1.tar.bz2:0.55367398262:0.007466117:0.56
+> 0:False:8,14:90,25
+> 1:True:11,14:90,28
+> 2:True:8,11:90,25
+> 3:False:8,14:90,25
+> 4:False:11,15:90,28
+> 5:True:8,11:90,25
+> 6:False:9,13:90,26
+> 7:False:8,13:90,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-3_10_2.tar.bz2:0.551995038986:0.007115667:0.55
+> 0:False:8,9:90,13
+> 1:True:11,11:90,16
+> 2:True:8,8:90,13
+> 3:False:8,9:90,13
+> 4:True:11,11:90,16
+> 5:True:8,8:90,13
+> 6:False:9,10:90,14
+> 7:True:8,8:90,13
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-3_10_3.tar.bz2:0.55239200592:0.008088683:0.56
+> 0:True:8,9:91,19
+> 1:True:11,12:91,22
+> 2:True:8,9:91,19
+> 3:True:8,9:91,19
+> 4:True:11,12:91,22
+> 5:True:8,9:91,19
+> 6:True:9,10:91,20
+> 7:True:8,9:91,19
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-4_10_1.tar.bz2:0.553014039993:0.00752546:0.55
+> 0:True:8,8:90,17
+> 1:True:11,11:90,20
+> 2:False:8,11:90,17
+> 3:True:8,8:90,17
+> 4:True:11,11:90,20
+> 5:False:8,11:90,17
+> 6:True:9,9:90,18
+> 7:False:8,9:90,17
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-4_10_2.tar.bz2:0.557325839996:0.008429987:0.55
+> 0:True:8,10:91,26
+> 1:True:11,13:91,29
+> 2:False:8,14:91,26
+> 3:True:8,10:91,26
+> 4:False:11,14:91,29
+> 5:False:8,14:91,26
+> 6:True:9,11:91,27
+> 7:False:8,12:91,26
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p03_hyp-4_10_3.tar.bz2:0.55611205101:0.008262668:0.55
+> 0:False:8,9:91,24
+> 1:True:11,11:91,27
+> 2:False:8,11:91,24
+> 3:False:8,9:91,24
+> 4:True:11,11:91,27
+> 5:False:8,11:91,24
+> 6:False:9,10:91,25
+> 7:True:8,8:91,24
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-1_10_1.tar.bz2:0.437382936478:0.006431849:0.44
+> 0:True:11,11:146,19
+> 1:False:9,12:146,17
+> 2:False:9,11:146,17
+> 3:False:10,13:146,18
+> 4:False:10,12:146,18
+> 5:False:12,14:146,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-1_10_2.tar.bz2:0.439368009567:0.00717239:0.44
+> 0:True:11,12:147,25
+> 1:False:9,11:147,23
+> 2:False:9,11:147,23
+> 3:False:10,13:147,24
+> 4:True:10,11:147,24
+> 5:False:12,14:147,26
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-1_10_3.tar.bz2:0.4377348423:0.00640288:0.44
+> 0:True:11,11:146,17
+> 1:False:9,11:146,15
+> 2:False:9,10:146,15
+> 3:False:10,11:146,16
+> 4:False:10,11:146,16
+> 5:False:12,13:146,18
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-2_10_1.tar.bz2:0.438209056854:0.00740306:0.44
+> 0:False:11,14:147,24
+> 1:False:9,10:147,22
+> 2:False:9,11:147,22
+> 3:False:10,11:147,23
+> 4:True:10,10:147,23
+> 5:False:12,14:147,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-2_10_2.tar.bz2:0.434903860092:0.00681291:0.43
+> 0:False:11,15:147,20
+> 1:False:9,12:147,18
+> 2:False:9,13:147,18
+> 3:True:10,12:147,19
+> 4:False:10,13:147,19
+> 5:False:12,16:147,21
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-2_10_3.tar.bz2:0.435477972031:0.00705938:0.45
+> 0:False:11,16:147,22
+> 1:True:9,12:147,20
+> 2:False:9,13:147,20
+> 3:False:10,14:147,21
+> 4:True:10,13:147,21
+> 5:True:12,15:147,23
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-3_10_1.tar.bz2:0.437516927719:0.00740253:0.43
+> 0:True:11,11:147,24
+> 1:False:9,10:147,22
+> 2:False:9,11:147,22
+> 3:False:10,12:147,24
+> 4:True:10,10:147,23
+> 5:False:12,13:147,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-3_10_2.tar.bz2:0.435767889023:0.006218187:0.43
+> 0:True:11,11:146,18
+> 1:False:9,10:146,16
+> 2:True:9,9:146,16
+> 3:True:10,10:146,17
+> 4:False:10,11:146,17
+> 5:True:12,12:146,19
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-3_10_3.tar.bz2:0.439161062241:0.00738748:0.44
+> 0:True:11,11:147,23
+> 1:False:9,11:147,21
+> 2:True:9,9:147,21
+> 3:False:10,11:147,22
+> 4:False:10,13:147,22
+> 5:True:12,12:147,24
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-4_10_1.tar.bz2:0.435421943665:0.00660463:0.44
+> 0:False:11,13:146,19
+> 1:True:9,9:146,17
+> 2:False:9,11:146,17
+> 3:False:10,11:146,18
+> 4:False:10,11:146,18
+> 5:False:12,14:146,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-4_10_2.tar.bz2:0.436136960983:0.00704659:0.44
+> 0:True:11,13:147,21
+> 1:True:9,11:147,19
+> 2:False:9,12:147,19
+> 3:False:10,13:147,20
+> 4:True:10,12:147,20
+> 5:False:12,15:147,22
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p04_hyp-4_10_3.tar.bz2:0.43964099884:0.00709669:0.44
+> 0:True:11,12:147,22
+> 1:True:9,10:147,20
+> 2:True:9,10:147,20
+> 3:True:10,11:147,21
+> 4:False:10,12:147,21
+> 5:True:12,13:147,23
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-1_10_1.tar.bz2:0.453936100006:0.00964335:0.46
+> 0:False:11,12:184,35
+> 1:True:10,10:184,34
+> 2:False:10,12:184,34
+> 3:False:9,10:184,33
+> 4:False:9,10:184,33
+> 5:False:12,15:184,36
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-1_10_2.tar.bz2:0.452116012573:0.00875818:0.45
+> 0:True:11,12:183,30
+> 1:False:10,12:183,29
+> 2:False:10,12:183,29
+> 3:False:9,12:183,28
+> 4:False:9,11:183,28
+> 5:False:12,15:183,31
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-1_10_3.tar.bz2:0.454926013947:0.00900625:0.46
+> 0:True:11,14:184,29
+> 1:True:10,13:184,28
+> 2:True:10,13:184,28
+> 3:True:9,12:184,27
+> 4:True:9,12:184,27
+> 5:True:12,15:184,30
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-2_10_1.tar.bz2:0.451980113983:0.0085564:0.45
+> 0:True:11,11:183,28
+> 1:False:10,12:183,27
+> 2:True:10,10:183,27
+> 3:False:9,10:183,26
+> 4:True:9,9:183,26
+> 5:True:12,12:183,29
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-2_10_2.tar.bz2:0.450930118561:0.00810647:0.45
+> 0:False:11,13:183,24
+> 1:False:10,12:183,23
+> 2:True:10,11:183,23
+> 3:False:9,11:183,22
+> 4:True:9,10:183,22
+> 5:True:12,13:183,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-2_10_3.tar.bz2:0.453259944916:0.00820744:0.45
+> 0:False:11,14:183,24
+> 1:False:10,13:183,23
+> 2:True:10,12:183,23
+> 3:True:9,11:183,22
+> 4:True:9,11:183,22
+> 5:False:12,15:183,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-3_10_1.tar.bz2:0.452980995178:0.00856121:0.45
+> 0:False:11,14:183,30
+> 1:True:10,10:183,29
+> 2:False:10,13:183,29
+> 3:True:9,9:183,28
+> 4:True:9,9:183,28
+> 5:False:12,15:183,31
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-3_10_2.tar.bz2:0.450627803802:0.00721196:0.46
+> 0:False:11,13:182,18
+> 1:False:10,12:182,17
+> 2:True:10,11:182,17
+> 3:True:9,10:182,16
+> 4:True:9,10:182,16
+> 5:True:12,13:182,19
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-3_10_3.tar.bz2:0.452576160431:0.00817008:0.45
+> 0:True:11,13:183,24
+> 1:True:10,12:183,23
+> 2:True:10,12:183,23
+> 3:True:9,11:183,22
+> 4:True:9,11:183,22
+> 5:True:12,14:183,25
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-4_10_1.tar.bz2:0.450662851334:0.00782445:0.45
+> 0:True:11,12:182,26
+> 1:False:10,13:182,25
+> 2:True:10,11:182,25
+> 3:False:9,12:182,24
+> 4:False:9,11:182,24
+> 5:True:12,13:182,27
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-4_10_2.tar.bz2:0.451034069061:0.007:0.44
+> 0:False:11,13:182,19
+> 1:False:10,12:182,18
+> 2:True:10,11:182,18
+> 3:True:9,10:182,17
+> 4:True:9,10:182,17
+> 5:True:12,13:182,20
+driverlog-suboptimal-old-noisy/10/driverlog_noisy_p05_hyp-4_10_3.tar.bz2:0.453471183777:0.00799363:0.45
+> 0:False:11,12:183,23
+> 1:False:10,12:183,22
+> 2:True:10,10:183,22
+> 3:False:9,10:183,21
+> 4:False:9,10:183,21
+> 5:True:12,12:183,24
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-1_30_1.tar.bz2:0.555857896805:0.00890459:0.56
+> 0:True:8,10:93,30
+> 1:False:11,15:93,33
+> 2:False:8,13:93,30
+> 3:True:8,10:93,30
+> 4:False:11,14:93,33
+> 5:False:8,13:93,30
+> 6:False:9,12:93,31
+> 7:False:8,12:93,30
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-1_30_2.tar.bz2:0.5558989048:0.00918645:0.56
+> 0:True:8,9:93,27
+> 1:False:11,14:93,30
+> 2:False:8,12:93,27
+> 3:True:8,9:93,27
+> 4:False:11,13:93,30
+> 5:False:8,12:93,27
+> 6:False:9,11:93,28
+> 7:False:8,11:93,27
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-1_30_3.tar.bz2:0.556943178177:0.00963174:0.56
+> 0:True:8,9:93,37
+> 1:False:11,14:93,40
+> 2:False:8,12:93,37
+> 3:True:8,9:93,37
+> 4:False:11,13:93,40
+> 5:False:8,12:93,37
+> 6:False:9,11:93,38
+> 7:False:8,11:93,37
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-2_30_1.tar.bz2:0.554900884628:0.00985972:0.56
+> 0:False:8,15:94,37
+> 1:True:11,14:94,40
+> 2:False:8,16:94,37
+> 3:False:8,15:94,37
+> 4:True:11,14:94,40
+> 5:False:8,16:94,37
+> 6:False:9,15:94,38
+> 7:False:8,14:94,37
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-2_30_2.tar.bz2:0.556225061417:0.00979389:0.56
+> 0:True:8,10:95,27
+> 1:True:11,13:95,30
+> 2:False:8,11:95,27
+> 3:True:8,10:95,27
+> 4:True:11,13:95,30
+> 5:False:8,11:95,27
+> 6:True:9,11:95,28
+> 7:True:8,10:95,27
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-2_30_3.tar.bz2:0.556485176086:0.0103653:0.55
+> 0:False:8,16:95,47
+> 1:True:11,15:95,50
+> 2:False:8,16:95,47
+> 3:False:8,16:95,47
+> 4:True:11,15:95,50
+> 5:False:8,16:95,47
+> 6:False:9,16:95,48
+> 7:False:8,15:95,47
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-3_30_1.tar.bz2:0.553769111633:0.00956733:0.55
+> 0:False:8,11:93,33
+> 1:True:11,12:93,36
+> 2:True:8,9:93,33
+> 3:False:8,11:93,33
+> 4:True:11,12:93,36
+> 5:True:8,9:93,33
+> 6:False:9,11:93,34
+> 7:False:8,10:93,33
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-3_30_2.tar.bz2:0.553120851517:0.01040819:0.55
+> 0:False:8,15:94,42
+> 1:False:11,16:94,45
+> 2:True:8,12:94,42
+> 3:False:8,15:94,42
+> 4:False:11,16:94,45
+> 5:True:8,12:94,42
+> 6:False:9,15:94,43
+> 7:False:8,14:94,42
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-3_30_3.tar.bz2:0.554708003998:0.01013708:0.55
+> 0:False:8,14:94,42
+> 1:True:11,14:94,45
+> 2:False:8,12:94,42
+> 3:False:8,14:94,42
+> 4:True:11,14:94,45
+> 5:False:8,12:94,42
+> 6:False:9,14:94,43
+> 7:False:8,14:94,42
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-4_30_1.tar.bz2:0.553426027298:0.01009703:0.56
+> 0:True:8,11:93,42
+> 1:True:11,14:93,45
+> 2:False:8,14:93,42
+> 3:True:8,11:93,42
+> 4:True:11,14:93,45
+> 5:False:8,14:93,42
+> 6:True:9,12:93,43
+> 7:False:8,13:93,42
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-4_30_2.tar.bz2:0.552621126175:0.00938138:0.55
+> 0:False:8,10:93,35
+> 1:True:11,12:93,38
+> 2:False:8,13:93,35
+> 3:False:8,10:93,35
+> 4:True:11,12:93,38
+> 5:False:8,13:93,35
+> 6:True:9,10:93,36
+> 7:False:8,12:93,35
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p03_hyp-4_30_3.tar.bz2:0.554660081863:0.0096935:0.55
+> 0:True:8,9:93,36
+> 1:True:11,12:93,39
+> 2:False:8,13:93,36
+> 3:True:8,9:93,36
+> 4:False:11,13:93,39
+> 5:False:8,13:93,36
+> 6:True:9,10:93,37
+> 7:False:8,11:93,36
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-1_30_1.tar.bz2:0.437291145325:0.00924251:0.44
+> 0:True:11,14:151,34
+> 1:False:9,14:151,32
+> 2:False:9,13:151,32
+> 3:False:10,14:151,33
+> 4:False:10,16:151,33
+> 5:False:12,16:151,35
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-1_30_2.tar.bz2:0.437178134918:0.00838635:0.43
+> 0:True:11,15:150,31
+> 1:False:9,15:150,29
+> 2:False:9,14:150,29
+> 3:False:10,16:150,30
+> 4:False:10,15:150,30
+> 5:False:12,17:150,32
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-1_30_3.tar.bz2:0.438180923462:0.00951944:0.44
+> 0:False:11,15:152,35
+> 1:False:9,14:152,33
+> 2:False:9,14:152,33
+> 3:False:10,16:152,34
+> 4:False:10,14:152,34
+> 5:True:12,14:152,36
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-2_30_1.tar.bz2:0.436642885208:0.00761821:0.45
+> 0:False:11,16:148,25
+> 1:True:9,10:148,23
+> 2:False:9,13:148,23
+> 3:False:10,12:148,24
+> 4:False:10,12:148,24
+> 5:False:12,16:148,26
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-2_30_2.tar.bz2:0.437214136124:0.00869338:0.43
+> 0:False:11,16:150,33
+> 1:True:9,11:150,31
+> 2:False:9,12:150,31
+> 3:True:10,12:150,32
+> 4:False:10,13:150,32
+> 5:False:12,16:150,34
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-2_30_3.tar.bz2:0.440590858459:0.00819587:0.44
+> 0:False:11,14:150,27
+> 1:True:9,11:150,25
+> 2:False:9,13:150,25
+> 3:False:10,13:150,26
+> 4:True:10,12:150,26
+> 5:False:12,15:150,28
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-3_30_1.tar.bz2:0.437398910522:0.0080897:0.43
+> 0:True:11,11:149,28
+> 1:False:9,10:149,26
+> 2:True:9,9:149,26
+> 3:False:10,11:149,27
+> 4:False:10,11:149,27
+> 5:True:12,12:149,29
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-3_30_2.tar.bz2:0.44095492363:0.00843716:0.44
+> 0:True:11,11:150,30
+> 1:False:9,12:150,28
+> 2:False:9,10:150,28
+> 3:False:10,12:150,29
+> 4:False:10,13:150,29
+> 5:False:12,13:150,31
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-3_30_3.tar.bz2:0.438657999039:0.00778407:0.44
+> 0:False:11,14:148,27
+> 1:False:9,14:148,25
+> 2:False:9,12:148,25
+> 3:False:10,15:148,26
+> 4:False:10,15:148,26
+> 5:True:12,12:148,28
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-4_30_1.tar.bz2:0.442885160446:0.00986782:0.45
+> 0:False:11,16:152,40
+> 1:False:9,15:152,38
+> 2:False:9,16:152,38
+> 3:False:10,17:152,40
+> 4:False:10,15:152,39
+> 5:True:12,16:152,41
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-4_30_2.tar.bz2:0.440042972565:0.00928895:0.44
+> 0:False:11,18:151,36
+> 1:False:9,15:151,34
+> 2:False:9,17:151,34
+> 3:False:10,18:151,37
+> 4:True:10,14:151,35
+> 5:False:12,18:151,37
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p04_hyp-4_30_3.tar.bz2:0.440920114517:0.0098151:0.44
+> 0:True:11,14:152,37
+> 1:False:9,14:152,35
+> 2:False:9,13:152,35
+> 3:False:10,15:152,36
+> 4:False:10,15:152,36
+> 5:True:12,15:152,38
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-1_30_1.tar.bz2:0.457248926163:0.01197761:0.45
+> 0:True:11,14:188,51
+> 1:False:10,15:188,50
+> 2:True:10,13:188,50
+> 3:False:9,13:188,49
+> 4:False:9,13:188,49
+> 5:False:12,16:188,52
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-1_30_2.tar.bz2:0.450824975967:0.01066591:0.45
+> 0:True:11,15:187,44
+> 1:False:10,17:187,43
+> 2:True:10,14:187,43
+> 3:False:9,16:187,42
+> 4:False:9,15:187,42
+> 5:False:12,17:187,45
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-1_30_3.tar.bz2:0.452399015427:0.01120704:0.46
+> 0:True:11,18:187,50
+> 1:False:10,18:187,49
+> 2:True:10,17:187,49
+> 3:True:9,16:187,48
+> 4:True:9,16:187,48
+> 5:True:12,19:187,51
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-2_30_1.tar.bz2:0.452818870544:0.01057747:0.46
+> 0:False:11,16:187,39
+> 1:False:10,15:187,38
+> 2:True:10,14:187,38
+> 3:True:9,13:187,37
+> 4:True:9,13:187,37
+> 5:True:12,16:187,40
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-2_30_2.tar.bz2:0.460100889206:0.0110788:0.46
+> 0:False:11,15:187,43
+> 1:False:10,16:187,42
+> 2:True:10,13:187,42
+> 3:False:9,14:187,41
+> 4:False:9,14:187,41
+> 5:False:12,16:187,44
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-2_30_3.tar.bz2:0.454694986343:0.01196884:0.45
+> 0:False:11,16:188,48
+> 1:False:10,16:188,47
+> 2:False:10,15:188,47
+> 3:False:9,14:188,46
+> 4:True:9,13:188,46
+> 5:True:12,16:188,49
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-3_30_1.tar.bz2:0.45676279068:0.01112341:0.46
+> 0:True:11,16:188,44
+> 1:True:10,15:188,43
+> 2:False:10,16:188,43
+> 3:True:9,14:188,42
+> 4:False:9,16:188,42
+> 5:True:12,17:188,45
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-3_30_2.tar.bz2:0.455656051636:0.01036332:0.44
+> 0:False:11,18:186,41
+> 1:False:10,16:186,40
+> 2:False:10,17:186,40
+> 3:True:9,14:186,39
+> 4:False:9,16:186,39
+> 5:False:12,19:186,42
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-3_30_3.tar.bz2:0.455082893372:0.01042003:0.46
+> 0:False:11,16:187,38
+> 1:True:10,14:187,37
+> 2:False:10,15:187,37
+> 3:True:9,13:187,36
+> 4:True:9,13:187,36
+> 5:True:12,16:187,39
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-4_30_1.tar.bz2:0.458968877792:0.01176331:0.45
+> 0:False:11,16:189,46
+> 1:False:10,17:189,45
+> 2:False:10,15:189,45
+> 3:False:9,15:189,44
+> 4:False:9,16:189,44
+> 5:True:12,16:189,47
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-4_30_2.tar.bz2:0.452223062515:0.01004461:0.44
+> 0:False:11,13:187,40
+> 1:False:10,15:187,39
+> 2:False:10,12:187,39
+> 3:False:9,14:187,38
+> 4:False:9,13:187,38
+> 5:True:12,13:187,41
+driverlog-suboptimal-old-noisy/30/driverlog_noisy_p05_hyp-4_30_3.tar.bz2:0.453694105148:0.01108782:0.46
+> 0:False:11,16:188,43
+> 1:False:10,17:188,42
+> 2:True:10,14:188,42
+> 3:False:9,15:188,41
+> 4:False:9,14:188,41
+> 5:True:12,16:188,44
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-1_50_1.tar.bz2:0.559211015701:0.01048854:0.56
+> 0:True:8,13:95,43
+> 1:True:11,16:95,46
+> 2:False:8,15:95,43
+> 3:True:8,13:95,43
+> 4:True:11,16:95,46
+> 5:False:8,15:95,43
+> 6:True:9,14:95,44
+> 7:False:8,15:95,43
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-1_50_2.tar.bz2:0.55967092514:0.01130911:0.57
+> 0:True:8,9:96,51
+> 1:False:11,14:96,54
+> 2:False:8,12:96,51
+> 3:True:8,9:96,51
+> 4:False:11,13:96,54
+> 5:False:8,12:96,51
+> 6:False:9,11:96,52
+> 7:False:8,11:96,51
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-1_50_3.tar.bz2:0.55758190155:0.01172035:0.56
+> 0:False:8,12:96,55
+> 1:False:11,15:96,58
+> 2:False:8,13:96,55
+> 3:False:8,12:96,55
+> 4:True:11,13:96,58
+> 5:False:8,13:96,55
+> 6:False:9,14:96,56
+> 7:False:8,12:96,55
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-2_50_1.tar.bz2:0.557821035385:0.01229683:0.56
+> 0:False:8,14:99,59
+> 1:True:11,13:99,62
+> 2:False:8,14:99,59
+> 3:False:8,14:99,59
+> 4:True:11,13:99,62
+> 5:False:8,14:99,59
+> 6:False:9,14:99,60
+> 7:False:8,13:99,59
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-2_50_2.tar.bz2:0.558165073395:0.01249295:0.56
+> 0:False:8,14:99,61
+> 1:True:11,13:99,64
+> 2:False:8,15:99,61
+> 3:False:8,14:99,61
+> 4:True:11,13:99,64
+> 5:False:8,15:99,61
+> 6:False:9,14:99,62
+> 7:False:8,13:99,61
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-2_50_3.tar.bz2:0.558066129684:0.01185808:0.55
+> 0:False:8,15:98,53
+> 1:True:11,14:98,56
+> 2:False:8,16:98,53
+> 3:False:8,15:98,53
+> 4:True:11,14:98,56
+> 5:False:8,16:98,53
+> 6:False:9,15:98,54
+> 7:False:8,14:98,53
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-3_50_1.tar.bz2:0.558989048004:0.01136529:0.57
+> 0:False:8,14:97,54
+> 1:True:11,15:97,57
+> 2:True:8,12:97,54
+> 3:False:8,14:97,54
+> 4:True:11,15:97,57
+> 5:True:8,12:97,54
+> 6:False:9,14:97,55
+> 7:False:8,13:97,54
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-3_50_2.tar.bz2:0.556142807007:0.01043643:0.55
+> 0:False:8,13:95,46
+> 1:True:11,13:95,49
+> 2:False:8,11:95,46
+> 3:False:8,13:95,46
+> 4:True:11,13:95,49
+> 5:False:8,11:95,46
+> 6:False:9,13:95,47
+> 7:False:8,13:95,46
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-3_50_3.tar.bz2:0.555994987488:0.01108678:0.55
+> 0:False:8,12:96,47
+> 1:True:11,14:96,50
+> 2:False:8,12:96,47
+> 3:False:8,12:96,47
+> 4:True:11,14:96,50
+> 5:False:8,12:96,47
+> 6:True:9,12:96,48
+> 7:False:8,13:96,47
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-4_50_1.tar.bz2:0.556508779526:0.0092555:0.56
+> 0:True:8,10:94,35
+> 1:False:11,14:94,38
+> 2:False:8,14:94,35
+> 3:True:8,10:94,35
+> 4:False:11,14:94,38
+> 5:False:8,14:94,35
+> 6:True:9,11:94,36
+> 7:False:8,12:94,35
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-4_50_2.tar.bz2:0.551820039749:0.0105291:0.55
+> 0:True:8,11:95,41
+> 1:True:11,14:95,44
+> 2:False:8,14:95,41
+> 3:True:8,11:95,41
+> 4:True:11,14:95,44
+> 5:False:8,14:95,41
+> 6:True:9,12:95,42
+> 7:False:8,13:95,41
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p03_hyp-4_50_3.tar.bz2:0.558119773865:0.01073012:0.57
+> 0:True:8,11:96,44
+> 1:True:11,14:96,47
+> 2:False:8,15:96,44
+> 3:True:8,11:96,44
+> 4:False:11,15:96,47
+> 5:False:8,15:96,44
+> 6:True:9,12:96,45
+> 7:False:8,13:96,44
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-1_50_1.tar.bz2:0.443258047104:0.01059945:0.45
+> 0:True:11,12:154,42
+> 1:False:9,14:154,40
+> 2:False:9,11:154,40
+> 3:False:10,14:154,41
+> 4:False:10,15:154,41
+> 5:False:12,14:154,43
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-1_50_2.tar.bz2:0.442985057831:0.010686:0.44
+> 0:True:11,14:155,47
+> 1:False:9,16:155,45
+> 2:False:9,14:155,45
+> 3:False:10,17:155,47
+> 4:False:10,17:155,46
+> 5:False:12,16:155,48
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-1_50_3.tar.bz2:0.441561937332:0.00992212:0.45
+> 0:True:11,13:153,37
+> 1:False:9,15:153,35
+> 2:False:9,12:153,35
+> 3:False:10,15:153,36
+> 4:False:10,16:153,36
+> 5:False:12,15:153,38
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-2_50_1.tar.bz2:0.442258119583:0.00950679:0.45
+> 0:False:11,17:153,35
+> 1:True:9,11:153,33
+> 2:False:9,14:153,33
+> 3:False:10,13:153,34
+> 4:True:10,12:153,34
+> 5:False:12,18:153,36
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-2_50_2.tar.bz2:0.439684867859:0.00973898:0.44
+> 0:False:11,18:153,39
+> 1:True:9,12:153,37
+> 2:False:9,15:153,37
+> 3:False:10,14:153,38
+> 4:False:10,14:153,38
+> 5:False:12,19:153,40
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-2_50_3.tar.bz2:0.442638158798:0.00998185:0.45
+> 0:False:11,18:153,40
+> 1:True:9,12:153,38
+> 2:False:9,16:153,38
+> 3:False:10,15:153,39
+> 4:True:10,13:153,39
+> 5:False:12,20:153,41
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-3_50_1.tar.bz2:0.44447684288:0.01014933:0.45
+> 0:True:11,15:153,41
+> 1:False:9,15:153,39
+> 2:False:9,14:153,39
+> 3:False:10,17:153,40
+> 4:False:10,17:153,40
+> 5:False:12,17:153,42
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-3_50_2.tar.bz2:0.444123029709:0.01004604:0.44
+> 0:True:11,15:152,43
+> 1:False:9,17:152,41
+> 2:False:9,15:152,41
+> 3:False:10,19:152,42
+> 4:False:10,18:152,42
+> 5:True:12,16:152,44
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-3_50_3.tar.bz2:0.443948984146:0.0102502:0.45
+> 0:True:11,13:153,44
+> 1:False:9,15:153,42
+> 2:True:9,11:153,42
+> 3:False:10,15:153,43
+> 4:False:10,17:153,43
+> 5:True:12,14:153,45
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-4_50_1.tar.bz2:0.442593097687:0.00999279:0.45
+> 0:False:11,16:153,39
+> 1:True:9,10:153,37
+> 2:False:9,14:153,37
+> 3:False:10,13:153,38
+> 4:False:10,13:153,38
+> 5:False:12,17:153,40
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-4_50_2.tar.bz2:0.439908027649:0.01002554:0.44
+> 0:True:11,15:153,41
+> 1:False:9,16:153,39
+> 2:False:9,15:153,39
+> 3:False:10,17:153,41
+> 4:False:10,15:153,40
+> 5:False:12,17:153,42
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p04_hyp-4_50_3.tar.bz2:0.441337108612:0.01072946:0.45
+> 0:False:11,18:155,46
+> 1:False:9,15:155,44
+> 2:False:9,17:155,44
+> 3:False:10,18:155,46
+> 4:True:10,15:155,45
+> 5:False:12,19:155,47
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-1_50_1.tar.bz2:0.456740140915:0.01408989:0.45
+> 0:False:11,21:192,67
+> 1:False:10,22:192,66
+> 2:False:10,20:192,66
+> 3:False:9,21:192,65
+> 4:False:9,20:192,65
+> 5:True:12,21:192,68
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-1_50_2.tar.bz2:0.459336996078:0.01431682:0.45
+> 0:False:11,20:192,68
+> 1:False:10,22:192,67
+> 2:False:10,20:192,67
+> 3:False:9,21:192,66
+> 4:False:9,20:192,66
+> 5:True:12,20:192,69
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-1_50_3.tar.bz2:0.462464094162:0.01396152:0.46
+> 0:True:11,16:193,61
+> 1:False:10,17:193,60
+> 2:False:10,16:193,60
+> 3:False:9,17:193,59
+> 4:False:9,17:193,59
+> 5:False:12,18:193,62
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-2_50_1.tar.bz2:0.45791387558:0.01351126:0.46
+> 0:False:11,14:191,59
+> 1:False:10,15:191,58
+> 2:True:10,12:191,58
+> 3:False:9,13:191,57
+> 4:False:9,12:191,57
+> 5:True:12,14:191,60
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-2_50_2.tar.bz2:0.45782995224:0.01109462:0.46
+> 0:False:11,15:188,43
+> 1:False:10,16:188,42
+> 2:True:10,13:188,42
+> 3:False:9,14:188,41
+> 4:False:9,14:188,41
+> 5:True:12,15:188,44
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-2_50_3.tar.bz2:0.456439971924:0.01226267:0.46
+> 0:False:11,18:189,50
+> 1:False:10,19:189,49
+> 2:False:10,17:189,49
+> 3:False:9,17:189,48
+> 4:False:9,16:189,48
+> 5:True:12,18:189,51
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-3_50_1.tar.bz2:0.457874059677:0.01165726:0.47
+> 0:False:11,18:189,45
+> 1:True:10,16:189,44
+> 2:False:10,17:189,44
+> 3:False:9,16:189,43
+> 4:False:9,16:189,43
+> 5:False:12,19:189,46
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-3_50_2.tar.bz2:0.457254886627:0.01291875:0.46
+> 0:False:11,20:191,55
+> 1:True:10,18:191,54
+> 2:False:10,19:191,54
+> 3:False:9,18:191,53
+> 4:False:9,18:191,53
+> 5:False:12,21:191,56
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-3_50_3.tar.bz2:0.458547830582:0.01259825:0.46
+> 0:False:11,17:191,48
+> 1:True:10,14:191,47
+> 2:False:10,17:191,47
+> 3:False:9,14:191,46
+> 4:False:9,14:191,46
+> 5:False:12,18:191,49
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-4_50_1.tar.bz2:0.460757017136:0.01451133:0.45
+> 0:False:11,16:192,70
+> 1:False:10,19:192,69
+> 2:False:10,15:192,69
+> 3:False:9,18:192,68
+> 4:False:9,16:192,68
+> 5:True:12,16:192,71
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-4_50_2.tar.bz2:0.458045005798:0.01153242:0.47
+> 0:False:11,17:189,49
+> 1:False:10,20:189,48
+> 2:False:10,16:189,48
+> 3:False:9,18:189,47
+> 4:False:9,17:189,47
+> 5:True:12,16:189,50
+driverlog-suboptimal-old-noisy/50/driverlog_noisy_p05_hyp-4_50_3.tar.bz2:0.457983970642:0.01295054:0.46
+> 0:False:11,19:191,55
+> 1:False:10,21:191,54
+> 2:False:10,19:191,54
+> 3:False:9,20:191,53
+> 4:False:9,19:191,53
+> 5:True:12,19:191,56
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-1_70_1.tar.bz2:0.556874990463:0.01090803:0.55
+> 0:True:8,9:97,42
+> 1:False:11,14:97,45
+> 2:False:8,13:97,42
+> 3:True:8,9:97,42
+> 4:False:11,13:97,45
+> 5:False:8,13:97,42
+> 6:False:9,11:97,43
+> 7:False:8,11:97,42
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-1_70_2.tar.bz2:0.559329986572:0.0114728:0.56
+> 0:True:8,11:97,50
+> 1:False:11,15:97,53
+> 2:False:8,14:97,50
+> 3:True:8,11:97,50
+> 4:True:11,14:97,53
+> 5:False:8,14:97,50
+> 6:False:9,13:97,51
+> 7:False:8,13:97,50
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-1_70_3.tar.bz2:0.557286024094:0.01116214:0.55
+> 0:False:8,14:97,51
+> 1:False:11,17:97,54
+> 2:False:8,16:97,51
+> 3:False:8,14:97,51
+> 4:False:11,17:97,54
+> 5:False:8,16:97,51
+> 6:True:9,14:97,52
+> 7:False:8,16:97,51
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-2_70_1.tar.bz2:0.561981916428:0.01353149:0.57
+> 0:False:8,17:101,73
+> 1:True:11,17:101,76
+> 2:False:8,19:101,73
+> 3:False:8,17:101,73
+> 4:False:11,18:101,76
+> 5:False:8,19:101,73
+> 6:False:9,18:101,74
+> 7:False:8,17:101,73
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-2_70_2.tar.bz2:0.560021162033:0.01396153:0.56
+> 0:False:8,17:103,72
+> 1:True:11,16:103,75
+> 2:False:8,17:103,72
+> 3:False:8,17:103,72
+> 4:True:11,16:103,75
+> 5:False:8,17:103,72
+> 6:False:9,17:103,73
+> 7:False:8,16:103,72
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-2_70_3.tar.bz2:0.557914018631:0.01447658:0.56
+> 0:False:8,17:104,80
+> 1:True:11,16:104,83
+> 2:False:8,17:104,80
+> 3:False:8,17:104,80
+> 4:True:11,16:104,83
+> 5:False:8,17:104,80
+> 6:False:9,17:104,81
+> 7:False:8,16:104,80
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-3_70_1.tar.bz2:0.554981946945:0.01112498:0.56
+> 0:False:8,15:97,46
+> 1:True:11,16:97,49
+> 2:True:8,13:97,46
+> 3:False:8,15:97,46
+> 4:True:11,16:97,49
+> 5:True:8,13:97,46
+> 6:False:9,15:97,47
+> 7:False:8,15:97,46
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-3_70_2.tar.bz2:0.557333946228:0.01227828:0.56
+> 0:False:8,12:98,53
+> 1:True:11,13:98,56
+> 2:True:8,10:98,53
+> 3:False:8,12:98,53
+> 4:True:11,13:98,56
+> 5:True:8,10:98,53
+> 6:False:9,12:98,54
+> 7:False:8,11:98,53
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-3_70_3.tar.bz2:0.556426048279:0.01308498:0.55
+> 0:False:8,16:99,72
+> 1:True:11,17:99,75
+> 2:True:8,14:99,72
+> 3:False:8,16:99,72
+> 4:True:11,17:99,75
+> 5:True:8,14:99,72
+> 6:True:9,15:99,73
+> 7:False:8,15:99,72
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-4_70_1.tar.bz2:0.557054042816:0.01162208:0.56
+> 0:True:8,12:98,51
+> 1:False:11,16:98,54
+> 2:False:8,15:98,51
+> 3:True:8,12:98,51
+> 4:False:11,16:98,54
+> 5:False:8,15:98,51
+> 6:True:9,13:98,52
+> 7:False:8,14:98,51
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-4_70_2.tar.bz2:0.557214975357:0.01175019:0.56
+> 0:True:8,10:98,47
+> 1:True:11,13:98,50
+> 2:False:8,13:98,47
+> 3:True:8,10:98,47
+> 4:False:11,14:98,50
+> 5:False:8,13:98,47
+> 6:True:9,11:98,48
+> 7:False:8,12:98,47
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p03_hyp-4_70_3.tar.bz2:0.557765007019:0.01130007:0.56
+> 0:True:8,12:97,48
+> 1:True:11,15:97,51
+> 2:False:8,14:97,48
+> 3:True:8,12:97,48
+> 4:True:11,15:97,51
+> 5:False:8,14:97,48
+> 6:True:9,13:97,49
+> 7:False:8,14:97,48
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-1_70_1.tar.bz2:0.443435907364:0.01283721:0.45
+> 0:True:11,17:160,60
+> 1:False:9,18:160,58
+> 2:False:9,17:160,58
+> 3:False:10,20:160,59
+> 4:False:10,18:160,59
+> 5:False:12,19:160,61
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-1_70_2.tar.bz2:0.441823005676:0.01289729:0.44
+> 0:False:11,20:160,64
+> 1:False:9,22:160,62
+> 2:False:9,20:160,62
+> 3:False:10,23:160,63
+> 4:False:10,21:160,63
+> 5:True:12,20:160,65
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-1_70_3.tar.bz2:0.441876173019:0.01194106:0.45
+> 0:True:11,14:158,53
+> 1:False:9,15:158,51
+> 2:False:9,14:158,51
+> 3:False:10,16:158,52
+> 4:False:10,16:158,52
+> 5:False:12,17:158,54
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-2_70_1.tar.bz2:0.442138910294:0.01090865:0.44
+> 0:False:11,19:156,46
+> 1:True:9,14:156,44
+> 2:False:9,18:156,44
+> 3:False:10,17:156,45
+> 4:True:10,15:156,45
+> 5:False:12,20:156,47
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-2_70_2.tar.bz2:0.444438934326:0.0116742:0.44
+> 0:False:11,21:157,52
+> 1:True:9,15:157,50
+> 2:False:9,18:157,50
+> 3:False:10,18:157,51
+> 4:False:10,17:157,51
+> 5:False:12,21:157,53
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-2_70_3.tar.bz2:0.442790985107:0.01120264:0.45
+> 0:False:11,20:156,50
+> 1:True:9,13:156,48
+> 2:False:9,17:156,48
+> 3:False:10,16:156,49
+> 4:False:10,15:156,49
+> 5:False:12,21:156,51
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-3_70_1.tar.bz2:0.443679094315:0.0115675:0.45
+> 0:False:11,18:156,52
+> 1:False:9,20:156,50
+> 2:False:9,17:156,50
+> 3:False:10,19:156,51
+> 4:False:10,20:156,51
+> 5:True:12,18:156,53
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-3_70_2.tar.bz2:0.443176031113:0.01043169:0.44
+> 0:False:11,16:154,45
+> 1:False:9,16:154,43
+> 2:False:9,14:154,43
+> 3:False:10,17:154,44
+> 4:False:10,18:154,44
+> 5:True:12,16:154,46
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-3_70_3.tar.bz2:0.439642190933:0.01181463:0.44
+> 0:True:11,18:156,57
+> 1:False:9,19:156,55
+> 2:False:9,18:156,55
+> 3:False:10,20:156,56
+> 4:False:10,19:156,56
+> 5:True:12,19:156,58
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-4_70_1.tar.bz2:0.445667028427:0.01227172:0.45
+> 0:False:11,19:158,53
+> 1:False:9,16:158,51
+> 2:False:9,19:158,51
+> 3:False:10,19:158,53
+> 4:True:10,16:158,52
+> 5:False:12,19:158,54
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-4_70_2.tar.bz2:0.442984104156:0.01214104:0.45
+> 0:False:11,19:158,53
+> 1:True:9,14:158,51
+> 2:False:9,18:158,51
+> 3:False:10,16:158,52
+> 4:True:10,15:158,52
+> 5:False:12,19:158,54
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p04_hyp-4_70_3.tar.bz2:0.444990158081:0.0127553:0.45
+> 0:False:11,19:159,60
+> 1:False:9,15:159,58
+> 2:False:9,19:159,58
+> 3:False:10,18:159,61
+> 4:True:10,15:159,59
+> 5:False:12,20:159,61
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-1_70_1.tar.bz2:0.46022605896:0.01613657:0.46
+> 0:True:11,18:196,79
+> 1:False:10,18:196,78
+> 2:False:10,18:196,78
+> 3:False:9,17:196,77
+> 4:False:9,18:196,77
+> 5:False:12,20:196,80
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-1_70_2.tar.bz2:0.460532903671:0.01585465:0.46
+> 0:False:11,20:196,80
+> 1:False:10,22:196,79
+> 2:False:10,20:196,79
+> 3:False:9,22:196,78
+> 4:False:9,21:196,78
+> 5:True:12,20:196,81
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-1_70_3.tar.bz2:0.458393096924:0.01363776:0.46
+> 0:True:11,18:192,63
+> 1:False:10,20:192,62
+> 2:True:10,17:192,62
+> 3:False:9,20:192,61
+> 4:False:9,18:192,61
+> 5:False:12,20:192,64
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-2_70_1.tar.bz2:0.456737995148:0.0149605:0.46
+> 0:True:11,17:195,68
+> 1:False:10,19:195,67
+> 2:False:10,17:195,67
+> 3:False:9,18:195,66
+> 4:False:9,18:195,66
+> 5:False:12,19:195,69
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-2_70_2.tar.bz2:0.459450960159:0.01541508:0.46
+> 0:False:11,18:194,75
+> 1:False:10,18:194,74
+> 2:True:10,16:194,74
+> 3:False:9,16:194,73
+> 4:False:9,16:194,73
+> 5:True:12,18:194,76
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-2_70_3.tar.bz2:0.460874080658:0.01582227:0.47
+> 0:True:11,18:195,81
+> 1:False:10,21:195,80
+> 2:True:10,17:195,80
+> 3:False:9,19:195,79
+> 4:False:9,18:195,79
+> 5:True:12,19:195,82
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-3_70_1.tar.bz2:0.459757804871:0.01425716:0.46
+> 0:False:11,21:194,64
+> 1:True:10,18:194,63
+> 2:False:10,20:194,63
+> 3:True:9,17:194,62
+> 4:False:9,18:194,62
+> 5:False:12,21:194,65
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-3_70_2.tar.bz2:0.457906961441:0.01455562:0.47
+> 0:False:11,22:194,67
+> 1:True:10,19:194,66
+> 2:False:10,21:194,66
+> 3:False:9,19:194,65
+> 4:False:9,19:194,65
+> 5:False:12,22:194,68
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-3_70_3.tar.bz2:0.458503007889:0.01546769:0.46
+> 0:False:11,21:196,75
+> 1:True:10,18:196,74
+> 2:False:10,20:196,74
+> 3:False:9,18:196,73
+> 4:False:9,18:196,73
+> 5:False:12,21:196,76
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-4_70_1.tar.bz2:0.461407184601:0.01569855:0.46
+> 0:False:11,18:195,79
+> 1:False:10,21:195,78
+> 2:False:10,17:195,78
+> 3:False:9,20:195,77
+> 4:False:9,18:195,77
+> 5:True:12,17:195,80
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-4_70_2.tar.bz2:0.458500146866:0.01515551:0.45
+> 0:False:11,20:194,72
+> 1:False:10,23:194,71
+> 2:False:10,19:194,71
+> 3:False:9,21:194,70
+> 4:False:9,20:194,70
+> 5:True:12,19:194,73
+driverlog-suboptimal-old-noisy/70/driverlog_noisy_p05_hyp-4_70_3.tar.bz2:0.462095022202:0.01633025:0.46
+> 0:False:11,19:196,81
+> 1:False:10,22:196,80
+> 2:False:10,18:196,80
+> 3:False:9,20:196,79
+> 4:False:9,19:196,79
+> 5:True:12,18:196,82
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-1_full_1.tar.bz2:0.558454036713:0.01333414:0.56
+> 0:False:8,16:101,73
+> 1:False:11,18:101,76
+> 2:False:8,18:101,73
+> 3:False:8,16:101,73
+> 4:True:11,17:101,76
+> 5:False:8,18:101,73
+> 6:False:9,16:101,74
+> 7:False:8,16:101,73
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-1_full_2.tar.bz2:0.555088043213:0.0126712:0.55
+> 0:False:8,14:100,64
+> 1:False:11,17:100,67
+> 2:False:8,17:100,64
+> 3:False:8,14:100,64
+> 4:False:11,17:100,67
+> 5:False:8,17:100,64
+> 6:True:9,14:100,65
+> 7:False:8,16:100,64
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-1_full_3.tar.bz2:0.555603027344:0.0120997:0.55
+> 0:True:8,12:99,54
+> 1:False:11,17:99,57
+> 2:False:8,16:99,54
+> 3:True:8,12:99,54
+> 4:False:11,16:99,57
+> 5:False:8,16:99,54
+> 6:False:9,14:99,55
+> 7:False:8,14:99,54
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-2_full_1.tar.bz2:0.563868999481:0.01677152:0.56
+> 0:False:8,21:108,103
+> 1:True:11,20:108,106
+> 2:False:8,21:108,103
+> 3:False:8,21:108,103
+> 4:True:11,20:108,106
+> 5:False:8,21:108,103
+> 6:False:9,21:108,104
+> 7:False:8,20:108,103
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-2_full_2.tar.bz2:0.562351942062:0.01575937:0.55
+> 0:False:8,23:107,95
+> 1:True:11,22:107,98
+> 2:False:8,23:107,95
+> 3:False:8,23:107,95
+> 4:True:11,22:107,98
+> 5:False:8,23:107,95
+> 6:False:9,23:107,96
+> 7:False:8,22:107,95
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-2_full_3.tar.bz2:0.563247919083:0.01603858:0.56
+> 0:False:8,19:106,95
+> 1:True:11,18:106,98
+> 2:False:8,19:106,95
+> 3:False:8,19:106,95
+> 4:True:11,18:106,98
+> 5:False:8,19:106,95
+> 6:False:9,19:106,96
+> 7:False:8,18:106,95
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-3_full_1.tar.bz2:0.560132026672:0.01418546:0.56
+> 0:False:8,17:102,74
+> 1:True:11,18:102,77
+> 2:True:8,15:102,74
+> 3:False:8,17:102,74
+> 4:True:11,18:102,77
+> 5:True:8,15:102,74
+> 6:True:9,16:102,75
+> 7:False:8,16:102,74
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-3_full_2.tar.bz2:0.561250925064:0.01484948:0.57
+> 0:False:8,18:103,81
+> 1:False:11,21:103,84
+> 2:False:8,18:103,81
+> 3:False:8,18:103,81
+> 4:True:11,20:103,84
+> 5:False:8,18:103,81
+> 6:True:9,18:103,82
+> 7:False:8,19:103,81
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-3_full_3.tar.bz2:0.559654951096:0.013487:0.56
+> 0:False:8,16:101,69
+> 1:False:11,17:101,72
+> 2:True:8,13:101,69
+> 3:False:8,16:101,69
+> 4:False:11,17:101,72
+> 5:True:8,13:101,69
+> 6:False:9,15:101,70
+> 7:False:8,15:101,69
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-4_full_1.tar.bz2:0.560266971588:0.01345133:0.56
+> 0:False:8,17:101,71
+> 1:True:11,19:101,74
+> 2:False:8,19:101,71
+> 3:False:8,17:101,71
+> 4:True:11,19:101,74
+> 5:False:8,19:101,71
+> 6:False:9,18:101,72
+> 7:False:8,19:101,71
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-4_full_2.tar.bz2:0.560546159744:0.01377924:0.56
+> 0:False:8,17:101,72
+> 1:True:11,19:101,75
+> 2:False:8,19:101,72
+> 3:False:8,17:101,72
+> 4:True:11,19:101,75
+> 5:False:8,19:101,72
+> 6:False:9,18:101,73
+> 7:False:8,19:101,72
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p03_hyp-4_full_3.tar.bz2:0.557949066162:0.01300947:0.56
+> 0:True:8,13:101,63
+> 1:False:11,17:101,66
+> 2:False:8,16:101,63
+> 3:True:8,13:101,63
+> 4:False:11,17:101,66
+> 5:False:8,16:101,63
+> 6:True:9,14:101,64
+> 7:False:8,15:101,63
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-1_full_1.tar.bz2:0.446618080139:0.01466373:0.45
+> 0:True:11,22:164,72
+> 1:False:9,25:164,70
+> 2:False:9,22:164,70
+> 3:False:10,25:164,71
+> 4:False:10,24:164,71
+> 5:True:12,23:164,73
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-1_full_2.tar.bz2:0.44730591774:0.01453647:0.45
+> 0:True:11,20:163,72
+> 1:False:9,23:163,70
+> 2:False:9,20:163,70
+> 3:False:10,24:163,71
+> 4:False:10,23:163,71
+> 5:True:12,21:163,73
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-1_full_3.tar.bz2:0.446542024612:0.01473074:0.44
+> 0:False:11,22:164,74
+> 1:False:9,25:164,72
+> 2:False:9,22:164,72
+> 3:False:10,24:164,73
+> 4:False:10,25:164,73
+> 5:True:12,22:164,75
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-2_full_1.tar.bz2:0.446676969528:0.01185687:0.45
+> 0:False:11,21:158,52
+> 1:True:9,14:158,50
+> 2:False:9,18:158,50
+> 3:False:10,16:158,51
+> 4:False:10,16:158,51
+> 5:False:12,22:158,53
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-2_full_2.tar.bz2:0.445291996002:0.01285375:0.45
+> 0:False:11,22:160,59
+> 1:True:9,17:160,57
+> 2:False:9,21:160,57
+> 3:False:10,20:160,58
+> 4:True:10,18:160,58
+> 5:False:12,23:160,60
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-2_full_3.tar.bz2:0.444195985794:0.01244409:0.44
+> 0:False:11,21:159,57
+> 1:True:9,17:159,55
+> 2:False:9,20:159,55
+> 3:False:10,20:159,56
+> 4:True:10,18:159,56
+> 5:False:12,22:159,58
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-3_full_1.tar.bz2:0.444002866745:0.01309731:0.45
+> 0:True:11,18:159,64
+> 1:False:9,22:159,62
+> 2:False:9,18:159,62
+> 3:False:10,22:159,64
+> 4:False:10,20:159,63
+> 5:False:12,20:159,65
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-3_full_2.tar.bz2:0.444711208344:0.01259812:0.44
+> 0:True:11,17:158,61
+> 1:False:9,19:158,59
+> 2:False:9,17:158,59
+> 3:False:10,20:158,60
+> 4:False:10,20:158,60
+> 5:False:12,19:158,62
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-3_full_3.tar.bz2:0.444179058075:0.01189801:0.44
+> 0:False:11,18:157,56
+> 1:False:9,20:157,54
+> 2:False:9,16:157,54
+> 3:False:10,20:157,55
+> 4:False:10,21:157,55
+> 5:True:12,17:157,57
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-4_full_1.tar.bz2:0.445072889328:0.01413863:0.45
+> 0:False:11,22:163,68
+> 1:False:9,18:163,66
+> 2:False:9,22:163,66
+> 3:False:10,21:163,68
+> 4:True:10,18:163,67
+> 5:False:12,23:163,69
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-4_full_2.tar.bz2:0.442713022232:0.01447207:0.44
+> 0:False:11,24:163,70
+> 1:False:9,20:163,68
+> 2:False:9,24:163,68
+> 3:False:10,23:163,70
+> 4:True:10,20:163,69
+> 5:False:12,26:163,71
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p04_hyp-4_full_3.tar.bz2:0.44547700882:0.01363906:0.45
+> 0:False:11,22:162,66
+> 1:False:9,19:162,64
+> 2:False:9,22:162,64
+> 3:False:10,21:162,67
+> 4:True:10,19:162,65
+> 5:False:12,23:162,67
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-1_full_1.tar.bz2:0.461392879486:0.01908619:0.46
+> 0:True:11,22:201,100
+> 1:False:10,24:201,99
+> 2:False:10,22:201,99
+> 3:False:9,24:201,98
+> 4:False:9,24:201,98
+> 5:True:12,23:201,101
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-1_full_2.tar.bz2:0.465881109238:0.02016667:0.47
+> 0:True:11,21:202,109
+> 1:False:10,22:202,108
+> 2:False:10,21:202,108
+> 3:False:9,22:202,107
+> 4:False:9,21:202,107
+> 5:False:12,24:202,110
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-1_full_3.tar.bz2:0.464390993118:0.01917719:0.47
+> 0:True:11,20:201,102
+> 1:False:10,22:201,101
+> 2:False:10,20:201,101
+> 3:False:9,22:201,100
+> 4:False:9,21:201,100
+> 5:False:12,23:201,103
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-2_full_1.tar.bz2:0.464969158173:0.01894631:0.47
+> 0:False:11,21:200,99
+> 1:False:10,23:200,98
+> 2:False:10,20:200,98
+> 3:False:9,21:200,97
+> 4:False:9,20:200,97
+> 5:True:12,19:200,100
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-2_full_2.tar.bz2:0.45917391777:0.01727912:0.46
+> 0:True:11,20:198,86
+> 1:False:10,22:198,85
+> 2:False:10,20:198,85
+> 3:False:9,22:198,84
+> 4:False:9,21:198,84
+> 5:False:12,22:198,87
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-2_full_3.tar.bz2:0.462124109268:0.01820298:0.46
+> 0:True:11,20:199,95
+> 1:False:10,23:199,94
+> 2:False:10,20:199,94
+> 3:False:9,22:199,93
+> 4:False:9,21:199,93
+> 5:False:12,22:199,96
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-3_full_1.tar.bz2:0.458256006241:0.01804504:0.47
+> 0:False:11,26:200,91
+> 1:True:10,22:200,90
+> 2:False:10,25:200,90
+> 3:True:9,21:200,89
+> 4:False:9,22:200,89
+> 5:False:12,26:200,92
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-3_full_2.tar.bz2:0.464557170868:0.01806287:0.46
+> 0:False:11,25:200,91
+> 1:True:10,22:200,90
+> 2:False:10,24:200,90
+> 3:True:9,21:200,89
+> 4:False:9,22:200,89
+> 5:False:12,25:200,92
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-3_full_3.tar.bz2:0.462438821793:0.01854084:0.45
+> 0:False:11,27:200,97
+> 1:True:10,23:200,96
+> 2:False:10,26:200,96
+> 3:True:9,22:200,95
+> 4:False:9,23:200,95
+> 5:False:12,27:200,98
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-4_full_1.tar.bz2:0.465100049973:0.01848202:0.46
+> 0:False:11,23:200,97
+> 1:False:10,26:200,96
+> 2:False:10,22:200,96
+> 3:False:9,24:200,95
+> 4:False:9,23:200,95
+> 5:True:12,22:200,98
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-4_full_2.tar.bz2:0.46523809433:0.01971241:0.45
+> 0:False:11,24:202,105
+> 1:False:10,26:202,104
+> 2:False:10,23:202,104
+> 3:False:9,25:202,103
+> 4:False:9,24:202,103
+> 5:True:12,23:202,106
+driverlog-suboptimal-old-noisy/100/driverlog_noisy_p05_hyp-4_full_3.tar.bz2:0.462609052658:0.01990326:0.46
+> 0:False:11,26:202,107
+> 1:False:10,28:202,106
+> 2:False:10,26:202,106
+> 3:False:9,27:202,105
+> 4:False:9,27:202,105
+> 5:True:12,26:202,108
