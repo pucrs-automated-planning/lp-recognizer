@@ -6,13 +6,13 @@
 
 ## Uses:
 # For basic (optimal and sub-optimal) data sets:
-# ./data_comparison.py lm "delta-cl delta-o-cl1" optimal suboptimal
-# ./data_comparison.py dr "delta-o-cdt delta-o-cdto" optimal suboptimal
-# ./data_comparison.py fl "delta-cf1 delta-o-cf17" optimal suboptimal
+# ./data_comparison.py lm "delta-cl delta-o-cl1" basic-all
+# ./data_comparison.py dr "delta-o-cdt delta-o-cdto" basic-all
+# ./data_comparison.py fl "delta-cf1 delta-o-cf17" basic-all
 # For noisy data sets:
-# ./data_comparison.py lm "delta-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy
-# ./data_comparison.py dr "delta-o-cdt-f2 delta-o-cdto-f2" optimal-old-noisy suboptimal-old-noisy
-# ./data_comparison.py fl "delta-cf1-f2 delta-o-cf17-f2" optimal-old-noisy suboptimal-old-noisy
+# ./data_comparison.py lmf2 "delta-cl-f2 delta-o-cl1-f2" noisy-all
+# ./data_comparison.py drf2 "delta-o-cdt-f2 delta-o-cdto-f2" noisy-all
+# ./data_comparison.py flf2 "delta-cf1-f2 delta-o-cf17-f2" noisy-all
 ##
 
 import sys, os
@@ -42,7 +42,9 @@ def print_table(base_path, domain_name, methods, observabilities):
 	else:
 		domain_data.load(base_path)
 
-	method_outputs = [do.MethodOutput(method, domain_data) for method in methods]
+	method_outputs = [do.MethodOutput(method, domain_data, "outputs/" if "delta" in method or "div" in method \
+		else "../rg2009/results/" if "rg" in method \
+		else "../lm2017/results/" ) for method in methods]
 	content = '\t'.join(methods) + '\n'
 	for o in range(len(observabilities)):
 		score = [0] * len(method_outputs)

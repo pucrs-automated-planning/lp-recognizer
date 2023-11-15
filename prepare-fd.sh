@@ -24,63 +24,48 @@ if [[ ! -d "outputs" ]]; then
 	mkdir outputs
 fi
 
-# Verifying paths
-pushd ..
-	FD_ROOT=`pwd`/fast-downward
-	if [[ -z "$DOWNWARD_COIN_ROOT" ]]; then
-		export DOWNWARD_COIN_ROOT=`pwd`/coin64
-	fi
-	if [[ -z "$DOWNWARD_SOPLEX_ROOT" ]]; then
-		export DOWNWARD_SOPLEX_ROOT=`pwd`/soplex
-	fi
-	if [[ -z "$DOWNWARD_CPLEX_ROOT" ]]; then
-		if [[ `uname` == "Darwin" ]]; then
-			export DOWNWARD_CPLEX_ROOT=/Applications/CPLEX_Studio129/cplex
-		elif [[ `uname` == "Linux" ]]; then
-			export DOWNWARD_CPLEX_ROOT=/opt/ibm/ILOG/CPLEX_Studio129/cplex
-		else
-			export DOWNWARD_CPLEX_ROOT=C:/Program\ Files/IBM/ILOG/CPLEX_Studio129/cplex
-		fi
-	fi
-popd
-
-# Check for libs in paths
-if [[ ! -d "$DOWNWARD_COIN_ROOT" ]]; then
-	if [[ `uname` == "Darwin" ]]; then
-		echo "Installing OSI for Mac"
-		source install-osi-mac.sh
-	elif [[ `uname` == "Linux" ]]; then
-		echo "Installing OSI for Linux"
-		source install-osi-linux.sh
-	else
-		echo "Install OSI Manually for Windows"
-		#source install-osi-windows.sh
-	fi
-else
-	echo "OSI Present"
-fi
-
 FD_REV=`cat fd-patch-rev`
+
 pushd ..
+	# Set soplex path
+	if [[ -z "$soplex_DIR" ]]; then
+		#export soplex_DIR=/opt/soplex-6.0.4x
+		export soplex_DIR=`pwd`/soplex
+		echo "soplex_DIR=\"${soplex_DIR}\"" >> ~/.profile
+	fi
+	# Check for soplex in path
+	if [[ ! -d "$soplex_DIR" ]]; then
+		git clone https://github.com/scipopt/soplex.git
+		export CXXFLAGS="$CXXFLAGS -Wno-use-after-free" # Ignore compiler warnings about use-after-free
+		cmake -S soplex -B build
+		cmake --build build
+		cmake --install build --prefix $soplex_DIR
+		rm -rf soplex build
+	else
+		echo "Soplex Present"
+	fi
+
+	# Check for fast-downward
+	FD_ROOT=`pwd`/fast-downward
 	if [[ ! -d "$FD_ROOT" ]]; then
 		echo "Downloading Fast Downward"
 		git clone https://github.com/aibasel/downward.git $FD_ROOT
 		if [[ ! $? ]]; then echo "Failed to clone fast-downward. Exiting."; exit; fi
+	else
+		echo "Fast Downward Present"
 	fi
 
+	# Change fast-downard branch
 	pushd $FD_ROOT
-		echo "Fast Downward Present"
 		git reset --hard
 		git clean -fd .
 		git checkout $FD_REV
 	popd
-
+	# Apply lp-recognizer's changes
 	echo "Patching Fast Downward"
 	patch -s -p0 -i ${DIR}/fd-patch.diff 
-
-	pushd $FD_ROOT
+	# Build fast-downward
+	pushd $FD_ROOT/
 		./build.py release
-		cp $DIR/fast-downward .
-		chmod u+x fast-downward
 	popd
 popd

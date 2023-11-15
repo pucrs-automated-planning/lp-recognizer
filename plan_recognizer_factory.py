@@ -3,6 +3,7 @@
 import h_plan_recognizer
 import const_plan_recognizer
 import delta_plan_recognizer
+import div_plan_recognizer
 
 import importlib
 import copy
@@ -76,37 +77,47 @@ def parse_constraints(arg):
                 i += 1
                 n = True
             # Partial merge type
-            m = 0
+            p = 0
             if len(arg) > i+1 and arg[i+1] == 'f':
                 i += 1
-                m = 2
+                p = 2
             # Goal variables only
             g = False
             if len(arg) > i+1 and arg[i+1] == 'g':
                 i += 1
                 g = True
             # Partial merges parameters
+            m = True
             if len(arg) > i+1 and arg[i+1].isdigit():
                 i += 1
                 # 0 -> no merges, 1 -> merges within operator, 2 -> merges inter-operators
                 if arg[i] == '0': # Preconditions + effects
-                    param = ", merge_preconditions=2, merge_effects=2, use_mutexes=false"
+                    param = ", merge_preconditions=2, merge_effects=2"
+                    m = False
                 elif arg[i] == '1': # Preconditions
-                    param = ", merge_preconditions=2, merge_effects=0, use_mutexes=false"
+                    param = ", merge_preconditions=2, merge_effects=0"
+                    m = False
                 elif arg[i] == '2': # Effects
-                    param = ", merge_preconditions=0, merge_effects=2, use_mutexes=false"
+                    param = ", merge_preconditions=0, merge_effects=2"
+                    m = False
                 elif arg[i] == '3': # Preconditions + effects (intra)
                     param = ", merge_preconditions=1, merge_effects=1"
+                    m = False
                 elif arg[i] == '4': # Preconditions (intra)
                     param = ", merge_preconditions=1, merge_effects=0"
+                    m = False
                 elif arg[i] == '5': # Effects (intra)
                     param = ", merge_preconditions=0, merge_effects=1"
+                    m = False
                 elif arg[i] == '6': # Preconditions x effects
-                    param = ", merge_preconditions=4, merge_effects=0, use_mutexes=false"
+                    param = ", merge_preconditions=4, merge_effects=0"
+                    m = False
                 elif arg[i] == '7': # Preconditions x effects (intra)
-                    param = ", merge_preconditions=3, merge_effects=0, use_mutexes=false"
+                    param = ", merge_preconditions=3, merge_effects=0"
+                    m = False
                 else:
-                    param = ", merge_preconditions=2, merge_effects=2, use_mutexes=false"
+                    param = ", merge_preconditions=2, merge_effects=2"
+                    m = False
                 if len(arg) > i+1 and arg[i+1] >= 'a' and arg[i+1] <= 'd':
                     i += 1
                     if arg[i] == 'a':
@@ -128,10 +139,12 @@ def parse_constraints(arg):
                     i += 1
                     if arg[i] == 'a':
                         param += ", partial_merge_time_limit=10"
-                m = 1
+                p = 1
             else:
                 param = ""
-            h = "flow_constraints(systematic(%s, only_interesting_patterns=%s), partial_merges=%s, merge_goal_only=%s%s)" % (s, not n, m, g, param)
+            m = True
+            param = "self_loop_optimization=false, use_mutexes=%s, partial_merges=%s, merge_goal_only=%s" % (m, p, g) + param
+            h = "flow_constraints(systematic(%s, only_interesting_patterns=%s), %s)" % (s, not n, param)
         print(h)
         heuristics.append(h)
         i += 1
@@ -153,8 +166,10 @@ class PlanRecognizerFactory(object):
         h_recognizers = dict([(cls.name, cls) for name, cls in h_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
         const_recognizers = dict([(cls.name, cls) for name, cls in const_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
         delta_recognizers = dict([(cls.name, cls) for name, cls in delta_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
+        div_recognizers = dict([(cls.name, cls) for name, cls in div_plan_recognizer.__dict__.items() if isinstance(cls,object) and hasattr(cls,'name')])
         h_recognizers.update(const_recognizers)
         h_recognizers.update(delta_recognizers)
+        h_recognizers.update(div_recognizers)
         return h_recognizers
 
     def get_recognizer_names(self):

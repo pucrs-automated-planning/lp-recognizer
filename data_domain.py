@@ -209,18 +209,25 @@ def parse_domains(domain_names, test = False):
 	all_domains = []
 	for domain_name in domain_names:
 		if domain_name == 'all':
-			domains = [d + "-optimal" for d in base_domains] + [d + "-suboptimal" for d in base_domains]
-			domains += [d.replace("optimal", "optimal-old-noisy") for d in domains]
+			domains = []
+			for dt in dataset_types:
+				domains += [d + "-" + dt for d in base_domains]
 		elif domain_name == 'optimal-all':
 			domains = [d + "-optimal" for d in base_domains]
-			domains += [d.replace("optimal", "optimal-old-noisy") for d in domains]
+			domains += [d + "-optimal-old-noisy" for d in base_domains]
 		elif domain_name == 'suboptimal-all':
 			domains = [d + "-suboptimal" for d in base_domains]
-			domains += [d.replace("optimal", "optimal-old-noisy") for d in domains]
+			domains += [d + "-suboptimal-old-noisy" for d in base_domains]
+		elif domain_name == 'basic-all':
+			domains = [d + "-optimal" for d in base_domains]
+			domains += [d + "-suboptimal" for d in base_domains]
+		elif domain_name == 'noisy-all':
+			domains = [d + "-optimal-old-noisy" for d in base_domains]
+			domains += [d + "-suboptimal-old-noisy" for d in base_domains]
 		elif domain_name in dataset_types:
 			domains = [d + "-" + domain_name for d in base_domains]
 		elif domain_name in base_domains:
-			domains = [domain_name + "-" + d for d in dataset_types]
+			domains = [domain_name + "-" + dt for dt in dataset_types]
 		else:
 			domains = [domain_name]
 		all_domains += domains

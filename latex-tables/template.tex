@@ -34,11 +34,6 @@
 \providecommand\hoptimal{\ensuremath{h^{*}}}
 \providecommand\hip{\ensuremath{h}^{\textup{IP}}}
 
-\DeclareMathOperator{\grtask}{\Pi_{\goalconditions}^{\observations}}
-\DeclareMathOperator{\grsolution}{\Gamma^{*}}
-\DeclareMathOperator{\observations}{\Omega}
-\DeclareMathOperator{\noisyobservations}{\Omega^{N}}
-\DeclareMathOperator{\obsevation}{o}
 \providecommand\varvalue[2]{\ensuremath{#1[#2]}}
 \providecommand\obs[1]{\ensuremath{\vec{#1}}}
 
@@ -46,7 +41,6 @@
 \providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
 \providecommand\constraints{\ensuremath{C}}
 \providecommand\uncertainty{\ensuremath{\mu}}
-\providecommand\unreliability{\ensuremath{\epsilon}}
 
 \newcommand{\rg}{RG}
 \newcommand{\fgr}{FGR}
@@ -58,6 +52,50 @@
 \newcommand{\pomA}{POM-10\%}
 \newcommand{\pomB}{POM-20\%}
 \newcommand{\pomC}{POM-30\%}
+
+%% Goal Recognition
+\newcommand{\grtask}{\ensuremath{\Pi_{\goalconditions}^{\observations}}}
+\newcommand{\grsolution}{\ensuremath{\Gamma^{*}}}
+\newcommand{\observations}{\ensuremath{\Omega}}
+\newcommand{\unreliability}{\ensuremath{\epsilon}}%{\ensuremath{\mathcal{R}}}
+
+%% Constraints
+\newcommand{\seq}{\text{SEQ}}
+\newcommand{\pho}{\text{PhO}}
+\newcommand{\lmc}{\text{LMC}}
+\newcommand{\lmco}{\text{LMC\textsuperscript{imp}}}
+\newcommand{\lmcs}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{soft}}}
+\newcommand{\lmch}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{hard}}}
+\newcommand{\lmcu}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{unified}}}
+\newcommand{\flow}{\text{FLOW}}
+\newcommand{\sysone}{\text{SYS\textsuperscript{1}}}
+\newcommand{\systwo}{\text{SYS\textsuperscript{2}}}
+\newcommand{\mtwo}{\text{M\textsuperscript{2}}}
+\newcommand{\intratwo}{\text{I\textsuperscript{2}}}
+\newcommand{\intertwo}{\text{O\textsuperscript{2}}}
+\newcommand{\dr}{\text{DEL}}
+\newcommand{\drone}{\text{DEL\textsuperscript{imp}}}
+\newcommand{\drtwo}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{2}}}
+\newcommand{\drthree}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{3}}}
+\newcommand{\drtime}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{time}}}
+
+%% Complying Heuristics
+\newcommand{\hoseq}{\ensuremath{h^{\seq}_{\observations}}}
+\newcommand{\holmc}{\ensuremath{h^{\lmc}_{\observations}}}
+\newcommand{\holmco}{\ensuremath{h^{\lmco}_{\observations}}}
+\newcommand{\holmcs}{\ensuremath{h^{\lmcs}_{\observations}}}
+\newcommand{\holmcu}{\ensuremath{h^{\lmcu}_{\observations}}}
+\newcommand{\hopho}{\ensuremath{h^{\pho}_{\observations}}}
+\newcommand{\hoflow}{\ensuremath{h^{\flow}_{\observations}}}
+\newcommand{\hosysone}{\ensuremath{h^{\sysone}_{\observations}}}
+\newcommand{\hosystwo}{\ensuremath{h^{\systwo}_{\observations}}}
+\newcommand{\homtwo}{\ensuremath{h^{\mtwo}_{\observations}}}
+\newcommand{\hointratwo}{\ensuremath{h^{\intratwo}_{\observations}}}
+\newcommand{\hointertwo}{\ensuremath{h^{\intertwo}_{\observations}}}
+\newcommand{\hodr}{\ensuremath{h^{\dr}_{\observations}}}
+\newcommand{\hodrone}{\ensuremath{h^{\drone}_{\observations}}}
+\newcommand{\hodrtwo}{\ensuremath{h^{\drtwo}_{\observations}}}
+\newcommand{\hodrthree}{\ensuremath{h^{\drthree}_{\observations}}}
 
 %---------------------------------------------------------------------------------------------------------------
 \begin{document}
@@ -71,9 +109,9 @@
 \# & \textbf{\%}
 <METRICS>
 \\ 
-\hline
+\hline % tablestart
 <TABLE_LP_RESULTS>
-<AVG_APPROACH>
+<AVG_APPROACH> % tableend
 \\ \bottomrule
 \end{tabular}
 

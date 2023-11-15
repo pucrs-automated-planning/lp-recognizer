@@ -32,7 +32,7 @@ def do_experiments(base_path, domain_name, observability, recognizer, opt):
             current_problem += 1
             print(options.recognizer_name + ":" + domain_name + ":" + str(obs) + "% - " + str(current_problem) + "/" + str(len(files)))
             # Run
-            os.system('rm -rf *.pddl *.dat *.log')
+            os.system('rm -rf ./*.pddl ./*.dat ./*.log')
             options.extract_exp_file(base_path + exp_file)
             recognizer = PlanRecognizerFactory(options).get_recognizer(options.recognizer_name, options)
             recognizer.run_recognizer()

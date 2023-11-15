@@ -6,11 +6,11 @@
 
 ## Uses:
 # Generate individual table:
-# ./generate_tables.py lmc -rows -comp $2 [-fast]
+# ./generate_tables.py lmc -rows -comp [-fast]
 # Generate summarized table by observability level:
-# ./generate_tables.py flowf2-sub-old-noisy -obs $2 [-fast]
+# ./generate_tables.py flowf2-sub-old-noisy -obs [-fast]
 # Generate summarized table by domain:
-# ./generate_tables.py flowf2-sub-old-noisy -dom $2 [-fast]
+# ./generate_tables.py flowf2-sub-old-noisy -dom [-fast]
 ##
 
 import sys, os
@@ -20,6 +20,7 @@ BOLD = True
 COMP = None
 AVG = 0
 NUM_VALUES = 18
+VER = 1
 
 class DomainData:
 
@@ -90,7 +91,6 @@ def average_values(all_domain_data, approach, obs = None):
 	for domain_data in all_domain_data.values():
 		if approach in domain_data.sum_data:
 			values = domain_data.obs_data[obs][approach] if obs else domain_data.sum_data[approach]
-			print(domain_data.name, len(values))
 			sum_values = [x + y for x, y in zip(sum_values, values)]
 	return sum_values
 
@@ -103,19 +103,21 @@ def collect_data(file, domains, observabilities, approaches):
 		domain_data = DomainData(domain_name, observabilities)
 		all_domain_data[domain_name] = domain_data
 		for approach in approaches:
-			path = "../data-latex/" + domain_name + '-' + approach + '.txt'
-			print(path)
+			path = "../data-tables/" + domain_name + '-' + approach + '.txt'
 			if not os.path.isfile(path):
+				print("File " + path + " not found")
 				continue
 			try:
 				with open(path) as f:
+					print("Processing " + approach)
 					domain_data.read_approach_data(f, approach)
 			except:
-				print(path)
+				print("Error with file " + path)
 				exit()
 		domain_data.total_problems /= len(approaches)
 		if COMP:
 			path = [f for f in comp_files if domain_name + ".txt" in f][0]
+			print("Comp file: " + path)
 			with open(path) as f:
 				domain_data.add_comp_data(f)
 	return all_domain_data
@@ -162,6 +164,8 @@ def get_line_content(values, best_ar, best_win, num_problems = 1):
 		content += '& {0} & {1} & {2} & {3} & {4}'.format(ar, hc, win, time, timelp)
 	elif COLS_TYPE == 2:
 		content += '& {0} & {1} & {2} & {3} & {4}'.format(ar, hc, const, time, timelp)
+	elif COLS_TYPE == 3:
+		content += '& {0} & {1}'.format(ar, time)
 	return content
 
 # Average per domain, per observability
@@ -185,6 +189,8 @@ def get_avg_content(domains, observabilities, approaches, all_domain_data):
 						content_table += '\n\t\t' + ('& - ' * 4) + '\t \n'
 					elif COLS_TYPE == 1 or COLS_TYPE == 2:
 						content_table += '\n\t\t' + ('& - ' * 5) + '\t \n'
+					elif COLS_TYPE == 3:
+						content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
 					continue
 				content_table += get_line_content(domain_data.obs_data[obs][approach], best_ar, best_win)
 				content_table += ' \t \n'
@@ -210,6 +216,8 @@ def get_dom_avg_content(domains, approaches, all_domain_data):
 					content_table += '\n\t\t' + ('& - ' * 4) + '\t \n'
 				elif COLS_TYPE == 1 or COLS_TYPE == 2:
 					content_table += '\n\t\t' + ('& - ' * 5) + '\t \n'
+				elif COLS_TYPE == 3:
+					content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
 				continue
 			content_table += get_line_content(domain_data.sum_data[approach], best_ar, best_win, 5)
 			content_table += ' \t \n'
@@ -227,7 +235,6 @@ def get_obs_avg_content(observabilities, approaches, all_domain_data):
 		best_win = max([int(average_values(all_domain_data, i, obs)[18]) for i in approaches]) if COMP else -1
 		for approach in approaches:
 			content_table += '\n\t\t% ' + approach + ' - ' + obs + '% \n'
-			print(obs, approach)
 			content_table += get_line_content(average_values(all_domain_data, approach, obs), best_ar, best_win, num_problems)
 			content_table += ' \t \n'
 		content_table += ' \\\\'
@@ -264,6 +271,8 @@ def get_latex_content(file, domains, observabilities, approaches):
 			content_avg += '& %s & & &' % win
 		elif COLS_TYPE == 1 or COLS_TYPE == 2:
 			content_avg += '& %s & & & &' % win
+		elif COLS_TYPE == 3:
+			content_avg += '& %s &' % win
 	return content_table, content_avg
 
 
@@ -284,6 +293,8 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 		cols = ['Agr', '$h^\\Omega$', 'Win', 'Total', 'LP']
 	elif COLS_TYPE == 2:
 		cols = ['Agr', '$h^\\Omega$', 'Rows', 'Total', 'LP']
+	elif COLS_TYPE == 3:
+		cols = ['Agr', 'Time']
 	names = ["& \\multicolumn{%s}{c|}{%s}" % (len(cols), name) for name in names]
 	names[-1] = names[-1].replace('c|', 'c')
 	midrule = ["\\cmidrule(lr){%s-%s}" % (3 + i * len(cols), 2 + len(cols) * (i + 1)) for i in range(len(approaches))]
@@ -306,6 +317,67 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
 	os.system("pdflatex " + file)
+
+
+def v1_methods(file):
+	global COMP
+	if 'basic' in file:
+		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
+		names = ['L', 'P', 'S']
+	elif 'lmc' in file:
+		COMP = 'lmc'
+		if 'lmcd' in file:
+			approaches = ['div-cl', 'div-o-cl', 'div-o-cl1']
+			names = ['\\lmc (div)', '\\lmcu (div)', '\\lmcs (div)']
+			COMP += 'd'
+		elif 'f2' in file:
+			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
+			names = ['\\lmc', '\\lmcu', '\\lmco', '\\lmcs']
+		else:
+			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
+			names = ['\\lmc', '\\lmcu', '\\lmcs']
+	elif 'delr' in file:
+		COMP = 'delr'
+		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
+		names = ['\\drone', '\\drtwo', '\\drthree']
+	elif 'flow' in file:
+		COMP = 'flow'
+		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
+		names = ["\\sysone", "\\mtwo", "\\intratwo", "\\intertwo", "\\systwo"]
+	elif 'general' in file:
+		#COMP = 'gen'
+		#approaches = ["delta-o-cl1dto", "delta-o-csl1", "delta-o-csdto", "rg2009", "lm_hc0"]
+		#names = ["$L^+$, $D_2^+$", "$S$, $L^+$", "$S$, $D_2^+$", "RG", "POM"]
+		approaches = ["rg2009", "lm_hc0"]
+		names = ["\\rg", "\\pom"]
+	return approaches, names
+
+def v2_methods(file):
+	global COMP
+	if 'basic' in file:
+		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
+		names = ['L', 'P', 'S']
+	elif 'lmc' in file:
+		COMP = 'lmc'
+		if 'lmcd' in file:
+			approaches = ['div-cl', 'div-o-cl1']
+			names = ['\\lmc (div)', '\\lmcs (div)']
+			COMP += 'd'
+		else:
+			approaches = ['delta-cl','delta-o-cl1']
+			names = ['\\lmc', '\\lmcs']
+	elif 'delr' in file:
+		COMP = 'delr'
+		approaches = ['delta-cdt', 'delta-o-cdto', 'delta-o-cdtb5', 'delta-o1-cdtb5']
+		names = ['\\dr', '\\drtwo', '\\drthree', '\\drtime']
+	elif 'flow' in file:
+		COMP = 'flow'
+		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
+		names = ["\\sysone", "\\mtwo", "\\intratwo", "\\intertwo", "\\systwo"]
+	elif 'general' in file:
+		approaches = ["rg2009", "lm_hc0"]
+		names = ["\\rg", "\\pom"]
+	return approaches, names
 
 
 if __name__ == '__main__' :
@@ -332,12 +404,18 @@ if __name__ == '__main__' :
 	if '-rows' in sys.argv:
 		# Include "row" column.
 		COLS_TYPE = 2
+	if '-time' in sys.argv:
+		# Include only agr and total time.
+		COLS_TYPE = 3
 	if '-dom' in sys.argv:
 		# Average by domain.
 		AVG = 1
 	if '-obs' in sys.argv:
 		# Average by observability.
 		AVG = 2
+	if '-v2' in sys.argv:
+		# Table version
+		VER = 2
 
 	# Data set type.
 	file = sys.argv[1] + ".tex"
@@ -347,31 +425,17 @@ if __name__ == '__main__' :
 		domains = [name.replace("optimal", "suboptimal") for name in domains]
 
 	# Methods.
-	if 'basic' in file:
-		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
-		names = ['L', 'P', 'S']
-	elif 'lmc' in file:
-		COMP = 'lmc'
-		if 'f2' in file:
-			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
-			names = ['$L$', '$L^+$ (uni)', '$L^+$', '$L^+$ (soft)']
-		else:
-			COMP = 'lmc'
-			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
-			names = ['$L$', '$L^+$ (uni)', '$L^+$ (soft)']
-	elif 'delr' in file:
-		COMP = 'delr'
-		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
-		names = ['$D+$', '$D_2+$', '$D_3+$']
-	elif 'flow' in file:
-		COMP = 'flow'
-		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
-		names = ["F", "F(M2)", "FO(PxE-Intra)", "FO(PxE-Gen)", "F2"]
+	if VER == 1:
+		approaches, names = v1_methods(file)
+	else:
+		approaches, names = v2_methods(file)
 	if not '-comp' in sys.argv:
 		COMP = None
 	if 'f2' in file:
-		approaches = [approach + "-f2" for approach in approaches]
+		approaches = [approach + "-f2" if 'delta' in approach or 'div' in approach else approach for approach in approaches]
 		if COMP:
 			COMP += "f2"
 			
+	print(approaches)
+	print(domains)
 	create_tex_files(file, domains, observabilities, approaches, names)

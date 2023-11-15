@@ -31,14 +31,15 @@ class ObsStats:
 		self.win = [0, 0, 0]  # better, worse, draw
 		self.quads = [0, 0, 0, 0] # Q1, Q2, Q3, Q4
 		self.axis = [0, 0, 0, 0, 0] # Origin, X left, X right, Y bottom, Y right
-		self.sum_points = [[], [], []]
+		self.sum_points = [[], [], [], []]
 		self.sum_diag = [0, 0, 0] * len(self.sum_points)
-		self.sum_axis = [0, 0] * len(self.sum_points)
+		self.sum_values = [0, 0, 0, 0] * len(self.sum_points)
+		self.sum_axis = [0, 0, 0] * len(self.sum_points)
 
 	def count_hvalues(self, problem, experiments):
-		for h in range(len(problem.hyps)):
-			hc = [m.problem_outputs[problem.name].scores[h][1] \
-				if h in m.problem_outputs[problem.name].scores else 45 \
+		for hyp in range(len(problem.hyps)):
+			hc = [m.problem_outputs[problem.name].scores[hyp][1] \
+				if hyp in m.problem_outputs[problem.name].scores else 45 \
 				for m in experiments]
 			line = ' '.join([str(x) for x in hc])
 			if line in self.points:
@@ -76,9 +77,11 @@ class ObsStats:
 
 	def print_stats(self, methods):
 		content = methods[0] + " vs " + methods[1] + '\n'
+		# HC Scatter
 		content += "%s higher than %s: %s" % (methods[0], methods[1], self.win[0]) + "\n"
 		content += "%s higher than %s: %s" % (methods[1], methods[0], self.win[1]) + "\n"
 		content += "%s equal to %s: %s" % (methods[0], methods[1], self.win[2]) + "\n"
+		# Agr vs HC
 		for i in range(0, 4):
 			content += "Q%s: %s" % (i + 1, self.quads[i]) + '\n'
 		content += "Axis X (left): %s" % self.axis[1] + '\n'
@@ -86,13 +89,22 @@ class ObsStats:
 		content += "Axis Y (bottom): %s" % self.axis[3] + '\n'
 		content += "Axis Y (top): %s" % self.axis[4] + '\n'
 		content += "Origin: %s" % self.axis[0] + '\n'
+		# Sums
+		for i in range(0, 4):
+			content += 'Sum %s:\t' % i + "\n"
+			content += "Above / Diag / Below:\t" + self.print_sum_diag(i) + "\n"
+			content += "X=0 / X>0 / Y=0 / Y>0:\t" + self.print_sum_values(i) + "\n"
+			content += "Axis X / Axis Y / Origin:\t" + self.print_sum_axis(i) + "\n"
 		return content
 
 	def count_sums(self, problem, experiments):
+		hyps = frozenset(problem.get_hyp_indexes())
 		ref = frozenset(problem.get_solution_indexes())
-		nonref = frozenset(problem.get_hyp_indexes()) - ref
+		nonref = hyps - ref
 		if len(ref) <= 0 or len(nonref) <= 0:
-			return [], []
+			return [], [], []
+		# (\sum h1(s_0,s*_i) > h2(s_0,s*_i) for i in \Gamma) / |\Gamma|
+		sums_all = []
   		# (\sum h1(s_0,s*_i) > h2(s_0,s*_i) for i in \Gamma*) / |\Gamma*|
 		sums_ref = []
 		# (\sum h1(s_0,s*_i) > h2(s_0,s*_i) for i in \Gamma* - \Gamma) / |\Gamma* - \Gamma|
@@ -107,6 +119,10 @@ class ObsStats:
 					hyp not in exp.problem_outputs[problem.name].scores or \
 					exp.problem_outputs[problem.name].scores[hyp][1] > \
 					exp.problem_outputs[problem.name].scores[hyp][0] ]) / len(nonref))
+			sums_all.append(sum([ 1.0 for hyp in hyps if \
+				hyp not in exp.problem_outputs[problem.name].scores or \
+				exp.problem_outputs[problem.name].scores[hyp][1] > \
+				exp.problem_outputs[problem.name].scores[hyp][0] ]) / len(hyps))
 		if len(ref) > 0 and len(nonref) > 0:
 			sums_ref.append(sum([ 1.0 for hyp in ref if \
 				experiments[1].problem_outputs[problem.name].scores[hyp][1] > \
@@ -116,46 +132,66 @@ class ObsStats:
 				hyp in experiments[0].problem_outputs[problem.name].scores and \
 				experiments[1].problem_outputs[problem.name].scores[hyp][1] > \
 				experiments[0].problem_outputs[problem.name].scores[hyp][1] ]) / len(nonref))
-		return sums_ref, sums_nonref
+		return (sums_ref, sums_nonref, sums_all)
 
-	def add_sum_point(self, i, x, y, z):
-		self.sum_points[i].append((x, y, z))
+	def add_sum_point(self, i, n, x, y, z):
+		self.sum_points[i].append((x, y))
 		if x < y:
-			self.sum_diag[i*3] += 1
-		elif x > y:
-			self.sum_diag[i*3 + 1] += 1
+			self.sum_diag[i*3] += 1.0 / n
+		elif x == y:
+			self.sum_diag[i*3 + 1] += 1.0 / n
 		else:
-			self.sum_diag[i* 3 + 2] += 1
-		if y == 0:
-			self.sum_axis[i*2] += 1
+			self.sum_diag[i*3 + 2] += 1.0 / n
 		if x == 0:
-			self.sum_axis[i*2 + 1] += 1
+			self.sum_values[i*4] += 1.0 / n
+		elif x > 0:
+			self.sum_values[i*4 + 1] += 1.0 / n
+		if y == 0:
+			self.sum_values[i*4 + 2] += 1.0 / n
+		elif y > 0:
+			self.sum_values[i*4 + 3] += 1.0 / n
+		if x > 0 and y == 0:
+			self.sum_axis[i*3] += 1.0 / n
+		elif x == 0 and y > 0:
+			self.sum_axis[i*3 + 1] += 1.0 / n
+		elif x == 0 and y == 0:
+			self.sum_axis[i*3 + 2] += 1.0 / n
 
 	def compute_sum_points(self, problems, experiments):
+		#n = len(problems)
+		n = 1
 		for p in problems:
-			sums_ref, sums_nonref = self.count_sums(p, experiments)
+			(sums_ref, sums_nonref, sums_all) = self.count_sums(p, experiments)
 			# sums0: (hc1 > h1 [ref], hc2 > h2 [ref])
 			# sums1: (hc1 > h1 [nonref], hc2 > h2 [nonref])
 			# sums2: (hc2 > hc1 [nonref], hc2 > hc1 [ref])
+			# sums3: (hc1 > h1, hc2 > h2)
 			if len(sums_ref) >= 1:
-				self.add_sum_point(0, sums_ref[0], sums_ref[1], p.name)
+				self.add_sum_point(0, n, sums_ref[0], sums_ref[1], p.name)
 			if len(sums_nonref) >= 1:
-				self.add_sum_point(1, sums_nonref[0], sums_nonref[1], p.name)
+				self.add_sum_point(1, n, sums_nonref[0], sums_nonref[1], p.name)
 			if len(sums_ref) >= 2 and len(sums_nonref) >= 2:
-				self.add_sum_point(2, sums_nonref[2], sums_ref[2], p.name)
+				self.add_sum_point(2, n, sums_nonref[2], sums_ref[2], p.name)
+			if len(sums_all) >= 1:
+				self.add_sum_point(3, n, sums_all[0], sums_all[1], p.name)
 
 	def print_sum_points(self, i):
-		return '\n'.join(["%s\t%s\t%s" % p for p in self.sum_points[i]])
+		return '\n'.join(["%s\t%s" % p for p in self.sum_points[i]])
 
-	def print_diag_axis(self, i):
-		return '\t'.join([str(d) for d in self.sum_diag[i*3:i*3+3]]) \
-			+ '\t' + '\t'.join([str(a) for a in self.sum_axis[i*2:i*2+2]])
+	def print_sum_diag(self, i):
+		return ' / '.join(["%.2f" % d for d in self.sum_diag[i*3:i*3+3]])
+
+	def print_sum_values(self, i):
+		return ' / '.join(["%.2f" % d for d in self.sum_values[i*4:i*4+4]])
+
+	def print_sum_axis(self, i):
+		return ' / '.join(["%.2f" % d for d in self.sum_axis[i*3:i*3+3]])
 
 
 def write_dat_files(all_domain_data, methods, observabilities, chart_name = None, scatter = True, stats = True, sums = True):
 	obs_stats = [ObsStats(o) for o in range(len(observabilities))]
 	for domain_data in all_domain_data.values():
-		method_outputs = [do.MethodOutput(method, domain_data) for method in methods]
+		method_outputs = [do.MethodOutput(method, domain_data, "outputs/") for method in methods]
 		for o in range(len(observabilities)):
 			method_experiments = [m.experiments[o] for m in method_outputs]
 			problems = domain_data.data[observabilities[o]].values()
@@ -177,14 +213,15 @@ def write_dat_files(all_domain_data, methods, observabilities, chart_name = None
 			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-stats.dat", 'w') as f:
 				f.write(content)
 		if sums:
-			for i in range(0, 3):
+			for i in range(0, 4):
 				content = obs_stats[o].print_sum_points(i)
 				with open("data-charts/" + chart_name + "-" + observabilities[o] + "-sums%d.dat" % i, 'w') as f:
 					f.write(content)
-	for i in range(0, 3):
-		print('fig %s:\t' % (i + 1) + '\tAbove\tBelow\tDiag\tX\tY')
+	for i in range(0, 4):
+		print('Sum %s: ' % i + '\tAbove\tDiag\tBelow\tX\tY\tOrigin')
 		for o in range(len(observabilities)):
-			print(observabilities[o] + "%: " + obs_stats[o].print_diag_axis(i))
+			stats = obs_stats[o].print_sum_diag(i) + " / " + obs_stats[o].print_sum_axis(i)
+			print(observabilities[o] + "%:\t" + stats.replace(" / ", "\t"))
 
 if __name__ == '__main__':
 	observabilities = ['10', '30', '50', '70']

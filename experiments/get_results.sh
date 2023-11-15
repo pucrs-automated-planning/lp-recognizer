@@ -7,7 +7,7 @@
 ## Uses:
 # Run methods and generate new .txt and .pdf files:
 # ./get_results.sh -rerun [-fast]
-# ./get_results.sh -rerun -pdf [-fast]
+# ./get_results.sh -rerun -comp [-fast]
 # Generate .txt tables files from existing .output files:
 # ./get_results.sh -txt [-fast]
 # Generate .pdf tables from existing .txt files:
@@ -34,7 +34,7 @@ export DOMAINS='
 	zeno-travel'
 
 # Root folder for all domains.
-export DATASETS=../goal-plan-recognition-dataset
+export DATASETS=../goal-plan-recognition-dataset/
 
 # Parse arguments.
 for arg in "$@"; do
@@ -72,7 +72,7 @@ for arg in "$@"; do
 		# Generate pdf charts (ref goals).
 		CHARTS=-ref
 	elif [[ "$arg" == "-charts2" ]]; then
-		# Generate pdf charts (nonref goals.
+		# Generate pdf charts (nonref goals).
 		CHARTS=-nonref
 	elif [[ "$arg" == "-charts3" ]]; then
 		# Generate pdf charts (all goals).
@@ -98,6 +98,8 @@ export FLOW="delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2"
 export FLOW_N="delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2"
 export NEW_PAIRS="delta-o-csdto delta-o-csl1 delta-o-cl1dto"
 export NEW_PAIRS_N="delta-o-csdto-f2 delta-o-csl1-f2 delta-o-cl1dto-f2"
+
+export TEST_METHODS="div-cl div-o-cl div-o-cl3 div-o-cl1"
 
 # Download datasets if necessary.
 if [[ ! -d ../$DATASETS ]]; then
@@ -137,13 +139,14 @@ get_results() {
 }
 echo "Generating results tables..."
 if [[ "$TEST" == "-test" ]]; then
-	METHODS="delta-cl delta-o-cl1"
+	METHODS="$TEST_METHODS"
 	get_results optimal
 else
-	METHODS="$BASIC $LMC $DELR $FLOW"
+	#METHODS="$LMC $DELR $FLOW"
+	METHODS="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
 	get_results optimal
 	get_results suboptimal
-	METHODS="$BACIC_N $LMC_N $DELR_N $FLOW_N"
+	METHODS="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
 	get_results optimal-old-noisy
 	get_results suboptimal-old-noisy
 fi
@@ -152,32 +155,38 @@ echo "Done."
 if [[ "$COMP" == "txt" ]]; then
 	echo "Generating comparison tables..."
 	if [[ "$TEST" == "-test" ]]; then
-		./data_comparison.py lmc "delta-cl delta-o-cl1" optimal $TEST
+		./data_comparison.py lmc "$TEST_METHODS" optimal $TEST
 	else 
-		./data_comparison.py lmc "delta-cl delta-o-cl delta-o-cl1" optimal suboptimal $TEST
-		./data_comparison.py lmcf2 "delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
-		./data_comparison.py delr "delta-o-cdt delta-o-cdto delta-o-cdtb5" optimal suboptimal $TEST
-		./data_comparison.py delrf2 "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy $TEST
-		./data_comparison.py flow "delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2" optimal suboptimal $TEST
-		./data_comparison.py flowf2 "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
-		cd data-comparison
+		#./data_comparison.py lmc "delta-cl delta-o-cl delta-o-cl1" optimal suboptimal $TEST
+		#./data_comparison.py lmcd "div-cl div-o-cl div-o-cl1" optimal suboptimal $TEST
+		#./data_comparison.py lmcf2 "delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		#./data_comparison.py delr "delta-o-cdt delta-o-cdto delta-o-cdtb5" optimal suboptimal $TEST
+		#./data_comparison.py delrf2 "delta-o-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py lmc "delta-cl delta-o-cl1" optimal suboptimal $TEST
+		./data_comparison.py lmcf2 "delta-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		./data_comparison.py delr "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal $TEST
+		./data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		#./data_comparison.py flow "delta-cf1 delta-cf1ab delta-o-cf17 delta-o-cf16 delta-cf2" optimal suboptimal $TEST
+		#./data_comparison.py flowf2 "delta-cf1-f2 delta-cf1ab-f2 delta-o-cf17-f2 delta-o-cf16-f2 delta-cf2-f2" optimal-old-noisy suboptimal-old-noisy $TEST
+		pushd data-comparison
 		# Generate .txt tables for group comparisons.
 		merge_comp_files() {
-			for d in "optimal suboptimal optimal-old-noisy suboptimal-old-noisy"; do
-				echo "$2" > $1-$d.txt
-				for file in $1-*-$d.txt; do
-					echo $file >> $1-$d.txt
-					echo "$(cat $file)" >> $1-$d.txt
+			for d in $3; do
+				echo "$2" > "$1-$d.txt"
+				for file in $(ls $1-*-$d.txt); do
+					echo $file >> "$1-$d.txt"
+					echo "$(cat $file)" >> "$1-$d.txt"
 				done
 			done
 		}
-		merge_comp_files lmc "L	L+(uni)	L+(soft)" 
-		merge_comp_files lmcf2 "L	L+(uni)	L+	L+(soft)" 
-		merge_comp_files delr "D+	D+2	D+3"
-		merge_comp_files delrf2 "D+	D+2	D+3"
-		merge_comp_files flow "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
-		merge_comp_files flowf2 "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
-		cd ..
+		merge_comp_files lmc "L	L+(uni)	L+(soft)" "optimal suboptimal"
+		#merge_comp_files lmcd "L	L+(uni)	L+(soft)" 
+		merge_comp_files lmcf2 "L	L+(uni)	L+	L+(soft)" "optimal-old-noisy suboptimal-old-noisy"
+		merge_comp_files delr "D+	D+2	D+3" "optimal suboptimal"
+		merge_comp_files delrf2 "D+	D+2	D+3" "optimal-old-noisy suboptimal-old-noisy"
+		#merge_comp_files flow "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
+		#merge_comp_files flowf2 "F	F(M2)	F(PxE-Intra)	F(PxE-Gen)	F2"
+		popd
 	fi
 	echo "Done."
 fi

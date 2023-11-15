@@ -110,10 +110,16 @@ class ProblemOutput:
 		# Time results
 		if len(raw_problem.times) > 0:
 			self.total_time = raw_problem.times[0]
+		else:
+			self.total_time = 0
 		if len(raw_problem.times) > 1:
 			self.lp_time = raw_problem.times[1]
+		else:
+			self.lp_time = 0
 		if len(raw_problem.times) > 2:
 			self.fd_time = raw_problem.times[2]
+		else:
+			self.fd_time = 0
 
 		# Domain info
 		self.num_obs = len(problem_data.obs)
@@ -122,12 +128,12 @@ class ProblemOutput:
 
 		# Get solution
 		exact_solution_set = frozenset(problem_data.get_solution_indexes())
-		wrong_solution_set = frozenset(raw_problem.goals) - exact_solution_set
+		wrong_solution_set = frozenset(raw_problem.scores.keys()) - exact_solution_set
 		real_hyp = problem_data.get_true_hyp_index()
-		self.solution_set = frozenset([i for i in raw_problem.goals if raw_problem.accepted[i] == True])
+		self.solution_set = frozenset([i for i in raw_problem.scores.keys() if raw_problem.accepted[i] == True])
 		min_score = float("inf")
 		hyp = None # index
-		for goal in raw_problem.goals:
+		for goal in raw_problem.scores.keys():
 			score = raw_problem.scores[goal][1] - raw_problem.scores[goal][0]
 			if score < min_score:
 				min_score = score
@@ -165,7 +171,7 @@ class ProblemOutput:
 			self.h_value_best = 0
 			self.hc_value_best = 0
 		# Reference hyp
-		if real_hyp in raw_problem.goals:
+		if real_hyp in raw_problem.scores:
 			self.lp_info_real = raw_problem.lp_infos[real_hyp]
 			self.h_value_real = raw_problem.scores[real_hyp][0]
 			self.hc_value_real = raw_problem.scores[real_hyp][1]
@@ -212,7 +218,7 @@ class ExperimentOutput:
 		if self.obs in raw_experiment.experiment_times:
 			self.total_time = raw_experiment.experiment_times[self.obs]
 			self.max_time = self.total_time
-		for raw_problem in raw_experiment.problems[self.obs]:
+		for raw_problem in raw_experiment.problems[self.obs].values():
 			problem_data = domain_data.data[self.obs][raw_problem.file]
 			problem = ProblemOutput(problem_data.name)
 			problem.load(problem_data, raw_problem)
@@ -274,11 +280,16 @@ class MethodOutput:
 	# The results for the set of goal recognition tasks for a single domain.
 	#
 
-	def __init__(self, method, domain_data):
+	def __init__(self, method, domain_data, folder):
 		self.name = method
 		self.domain_data = domain_data
 		self.experiments = []
-		raw_experiment = RawExperiment(domain_data.name + "-" + self.name, domain_data.observabilities)
+		filename = folder + domain_data.name + "-" + method
+		if os.path.exists(filename + ".output"):
+			raw_experiment = RawExperiment(open(filename + ".output"), domain_data.observabilities)
+		else:
+			raw_experiment = RawExperiment(open(filename + ".success"), domain_data.observabilities)
+			raw_experiment.switch_keys(domain_data)
 		for obs in domain_data.observabilities:
 			experiment = ExperimentOutput(obs)
 			experiment.load(domain_data, raw_experiment)
@@ -299,7 +310,6 @@ class RawProblem:
 
 	def __init__(self, file):
 		self.file = file
-		self.goals = []
 		self.accepted = {}
 		self.scores = {}
 		self.lp_infos = {}
@@ -307,9 +317,10 @@ class RawProblem:
 
 	def add_goal(self, line):
 		line = line.strip().replace("> ", "").split(":")
-		#hyp = frozenset([tok.strip().lower() for tok in line[0].split(',')])
-		hyp = int(line[0])
-		self.goals.append(hyp)
+		if line[0][0].isdigit():
+			hyp = int(line[0])
+		else:
+			hyp = frozenset([tok.strip().lower() for tok in line[0].split(',')])
 		if len(line) > 1:
 			self.accepted[hyp] = line[1] == 'True'
 		else:
@@ -326,6 +337,13 @@ class RawProblem:
 	def add_times(self, line):
 		self.times = [float(x) for x in line[1:]]
 
+	def switch_keys(self, k1, k2):
+		if k1 in self.scores:
+			print("switched ", k1)
+			self.accepted[k2] = self.accepted.pop(k1)
+			self.scores[k2] = self.scores.pop(k1)
+			self.lp_infos[k2] = self.lp_infos.pop(k1)
+
 
 class RawExperiment:
 
@@ -333,8 +351,7 @@ class RawExperiment:
 	# Output data for a single domain and a single observatility level.
 	#
 
-	def __init__(self, filename, observabilities):
-		file = open("outputs/" + filename + ".output")
+	def __init__(self, file, observabilities):
 		current_problem = None
 		problems = []
 		experiment_times = []
@@ -350,30 +367,38 @@ class RawExperiment:
 				current_file = None
 				continue
 			if current_file[0].isdigit():
-				experiment_times.append(current_file)
+				experiment_times.append(float(current_file))
 				continue
 			current_problem = RawProblem(current_file)
 			problems.append(current_problem)
-			if len(line) > 1 and line[1].strip()[0].isdigit():
-				current_problem.add_times(line)
+			if len(line) > 1:
+				time = line[1].strip()
+				if len(time) > 0 and time[0].isdigit():
+					current_problem.add_times(line)
 		# Separate by observability
 		self.problems = dict()
 		for obs in observabilities:
-			self.problems[obs] = []
+			self.problems[obs] = dict()
 		for problem in problems:
 			for obs in observabilities:
 				if obs + "/" in problem.file:
-					self.problems[obs].append(problem)
+					self.problems[obs][problem.file] = problem
 					break
 		self.experiment_times = dict()
 		for i in range(len(experiment_times)):
-			self.experiment_times[observabilities[i]] = experiments[i]
+			self.experiment_times[observabilities[i]] = experiment_times[i]
+
+	def switch_keys(self, domain_data):
+		for obs in domain_data.observabilities:
+			for problem_data in domain_data.data[obs].values():
+				for i in range(len(problem_data.hyps)):
+					self.problems[obs][problem_data.name].switch_keys(problem_data.hyps[i], i)
 
 
-def write_txt_files(domain_data, methods):
+def write_txt_files(domain_data, methods, result_folder):
 	for domain_data in all_domain_data.values():
 		for method in methods:
-			method_output = MethodOutput(method, domain_data)
+			method_output = MethodOutput(method, domain_data, result_folder)
 			with open("data-tables/" + domain_data.name + "-" + method + ".txt", 'w') as f:
 				f.write(method_output.print_table())
 			with open("data-charts/" + domain_data.name + "-" + method + ".txt", 'w') as f:
@@ -382,7 +407,7 @@ def write_txt_files(domain_data, methods):
 
 if __name__ == '__main__':
 	observabilities = ['10', '30', '50', '70', '100']
-	base_path = '../goal-plan-recognition-dataset/'
+	base_path = "../goal-plan-recognition-dataset/"
 
 	# Flags
 	test = False
@@ -395,6 +420,7 @@ if __name__ == '__main__':
 		sys.argv.remove('-test')
 		base_path = 'experiments/'
 
+
 	# Domains
 	domains = dd.parse_domains(sys.argv[2:], test)
 	all_domain_data = {}
@@ -406,6 +432,7 @@ if __name__ == '__main__':
 			domain_data.load(base_path)
 		all_domain_data[d] = domain_data
 
+	result_path = "outputs/"
 	# Methods
 	if 'basic' in sys.argv[1]:
 		methods = ['delta-cl', 'delta-cp', 'delta-cs']
@@ -415,10 +442,16 @@ if __name__ == '__main__':
 		methods = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
 	elif 'flow' in sys.argv[1]:
 		methods = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
+	elif 'lm2017' in sys.argv[1]:
+		methods = ['lm_hc0', 'lm_hu0', 'lm_hc10', 'lm_hu10', 'lm_hc20', 'lm_hu20', 'lm_hc30', 'lm_hu30']
+		result_path = "../lm2017/results/"
+	elif 'rg2009' in sys.argv[1]:
+		methods = ['rg2009']
+		result_path = "../rg2009/results/"
 	else:
 		methods = sys.argv[1].split()
 		sys.argv[1] = ""
 	if 'f2' in sys.argv[1]:
 		methods = [method + "-f2" for method in methods]
 
-	write_txt_files(all_domain_data, methods)
+	write_txt_files(all_domain_data, methods, result_path)
