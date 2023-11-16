@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 from plan_recognizer import PlanRecognizer
 import time
@@ -18,7 +18,7 @@ class LPRecognizerHValue(PlanRecognizer):
     def get_score(self, h):
         return [h.h, h.obs_misses]
 
-    def verify_hypothesis(self):
+    def verify_hypotheses(self):
         if self.unique_goal:
             for h in self.hyps:
                 if self.accept_hypothesis(h):
@@ -52,5 +52,5 @@ class LPRecognizerHValue(PlanRecognizer):
                    self.unique_goal = h
         # Select other goals
         self.calculate_uncertainty()
-        self.verify_hypothesis()
+        self.verify_hypotheses()
         self.total_time = time.time() - self.total_time

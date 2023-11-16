@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 # Code originally developed by Miquel Ramirez
 import sys, os, csv, time, math

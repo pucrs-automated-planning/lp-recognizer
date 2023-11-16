@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 from planner_interface import Hypothesis
 import re
@@ -65,20 +65,20 @@ class PlanRecognizer:
         outstream = open('report.txt', 'w')
         # Convert this to Python 3
         # print(s,end="", file=outstream)
-        print >> outstream, "Experiment=%s" % experiment
-        print >> outstream, "Num_Hyp=%d" % len(hyps)
+        print("Experiment=%s" % experiment, file=outstream)
+        print("Num_Hyp=%d" % len(hyps), file=outstream)
         for hyp in hyps:
-            print >> outstream, "Hyp_Atoms=%s" % ",".join(hyp.atoms)
+            print("Hyp_Atoms=%s" % ",".join(hyp.atoms), file=outstream)
             if hyp.test_failed:
-                print >> outstream, "Hyp_Score=unknown"
-                print >> outstream, "Hyp_Plan_Len=unknown"
+                print("Hyp_Score=unknown", file=outstream)
+                print("Hyp_Plan_Len=unknown", file=outstream)
             else:
-                print >> outstream, "Hyp_Score=%f" % hyp.score
-                print >> outstream, "Hyp_Plan_Len=%d" % len(hyp.plan)
-            print >> outstream, "Hyp_Trans_Time=%f" % hyp.trans_time
-            print >> outstream, "Hyp_Plan_Time=%f" % hyp.plan_time
-            print >> outstream, "Hyp_Test_Time=%f" % hyp.total_time
-            print >> outstream, "Hyp_Is_True=%s" % hyp.is_true
+                print("Hyp_Score=%f" % hyp.score, file=outstream)
+                print("Hyp_Plan_Len=%d" % len(hyp.plan), file=outstream)
+            print("Hyp_Trans_Time=%f" % hyp.trans_time, file=outstream)
+            print("Hyp_Plan_Time=%f" % hyp.plan_time, file=outstream)
+            print("Hyp_Test_Time=%f" % hyp.total_time, file=outstream)
+            print("Hyp_Is_True=%s" % hyp.is_true, file=outstream)
         outstream.close()
         print(max(hyps))
 

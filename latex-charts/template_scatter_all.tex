@@ -1,0 +1,145 @@
+\def\year{2020}\relax
+\documentclass[border=0cm]{standalone}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{algorithm, algpseudocode}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{calc}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\usepackage{subcaption}
+\newcommand{\timeout}{{\it Timeout}}
+\newcommand{\outofmemory}{{\it Out of Memory}}
+
+\DeclareMathOperator{\planningtask}{\Pi}
+\DeclareMathOperator{\goalconditions}{\Gamma}
+\DeclareMathOperator{\plan}{\pi}
+\DeclareMathOperator{\optimalplan}{\pi^{*}}
+\DeclareMathOperator{\plancost}{\mathit{cost}}
+\DeclareMathOperator{\occur}{\mathit{occur}}
+\providecommand\initialstate{\ensuremath{s_{0}}}
+\providecommand\goalstate{\ensuremath{s^{*}}}
+
+\providecommand\h{\ensuremath{h}}
+\providecommand\hoptimal{\ensuremath{h^{*}}}
+\providecommand\hip{\ensuremath{h}^{\textup{IP}}}
+
+\DeclareMathOperator{\grtask}{\Pi_{\goalconditions}^{\observations}}
+\DeclareMathOperator{\grsolution}{\Gamma^{*}}
+\DeclareMathOperator{\observations}{\Omega}
+\DeclareMathOperator{\noisyobservations}{\Omega^{N}}
+\DeclareMathOperator{\obsevation}{o}
+\providecommand\varvalue[2]{\ensuremath{#1[#2]}}
+\providecommand\obs[1]{\ensuremath{\vec{#1}}}
+
+\providecommand\variableoccurrences{\ensuremath{\mathcal{K}}}
+\providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
+\providecommand\constraints{\ensuremath{C}}
+\providecommand\uncertainty{\ensuremath{\mu}}
+\providecommand\unreliability{\ensuremath{\epsilon}}
+
+\newcommand{\rg}{RG}
+\newcommand{\fgr}{FGR}
+\newcommand{\mirroring}{M+L}
+\newcommand{\dhc}{\ensuremath{\Gamma^{\text{LP}}}}
+\newcommand{\dhcu}{\ensuremath{\Gamma^{\uncertainty}}}
+\newcommand{\dhcf}{\ensuremath{\Gamma^{\text{\unreliability}}}}
+\newcommand{\pom}{POM}
+\newcommand{\pomA}{POM-10\%}
+\newcommand{\pomB}{POM-20\%}
+\newcommand{\pomC}{POM-30\%}
+
+%---------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    %title={10\%},
+    width=4.75cm,height=4.75cm,
+    xmin=0,xmax=45,
+    ymin=0,ymax=45,
+    xticklabels={,,},
+    yticklabels={,,},
+    enlargelimits=false]
+
+\addplot [color=black, dashed] coordinates {(0, 0) (45, 45)};
+
+% Optimal
+\addplot+[
+	scatter=true,
+    only marks,
+    mark=star,
+    mark size=0.8pt,
+    point meta=explicit,
+    scatter/@pre marker code/.code={%
+    \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
+    \def\markopts{fill=blue, draw=blue, opacity=\pgfmathresult}%
+    \expandafter\scope\expandafter[\markopts]%
+    },%
+    scatter/@post marker code/.code={\endscope}]
+table [x index=0, y index=1, meta index=2] {scatter.dat};
+
+% Suboptimal
+\addplot+[
+    scatter=true,
+    only marks,
+    mark=diamond,
+    mark size=0.8pt,
+    point meta=explicit,
+    scatter/@pre marker code/.code={%
+    \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
+    \def\markopts{fill=blue, draw=blue, opacity=\pgfmathresult}%
+    \expandafter\scope\expandafter[\markopts]%
+    },%
+    scatter/@post marker code/.code={\endscope}]
+table [x index=0, y index=1, meta index=2] {scatter-sub.dat};
+
+% Noisy
+\addplot+[
+    scatter=true,
+    only marks,
+    mark=star,
+    mark size=0.8pt,
+    point meta=explicit,
+    scatter/@pre marker code/.code={%
+    \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
+    \def\markopts{fill=red, draw=red, opacity=\pgfmathresult}%
+    \expandafter\scope\expandafter[\markopts]%
+    },%
+    scatter/@post marker code/.code={\endscope}]
+table [x index=0, y index=1, meta index=2] {scatter-noisy.dat};
+
+% Suboptimal Noisy
+\addplot+[
+    scatter=true,
+    only marks,
+    mark=diamond,
+    mark size=0.8pt,
+    point meta=explicit,
+    scatter/@pre marker code/.code={%
+    \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
+    \def\markopts{fill=red, draw=red, opacity=\pgfmathresult}%
+    \expandafter\scope\expandafter[\markopts]%
+    },%
+    scatter/@post marker code/.code={\endscope}]
+table [x index=0, y index=1, meta index=2] {scatter-sub-noisy.dat};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

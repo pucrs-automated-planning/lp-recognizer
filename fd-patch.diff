@@ -1498,8 +1498,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2023-11-15 18:14:39.883896700 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2023-11-15 17:12:46.813153700 -0300
-@@ -8,23 +8,78 @@
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2023-11-15 20:41:38.871734000 -0300
+@@ -8,23 +8,79 @@
  #include "../utils/memory.h"
  
  #include <cassert>
@@ -1571,6 +1571,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                    landmark_constraint.insert(op_id, 1.0);
 +                }
 +            });
++        cout << "Hard observation landmark computation done." << endl;
 +        if (dead_end)
 +            return true;
 +        lp_solver.add_temporary_constraints(constraints);
@@ -1580,9 +1581,11 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
      bool dead_end = landmark_generator->compute_landmarks(
          state, nullptr,
-@@ -36,12 +91,48 @@
+@@ -35,13 +91,51 @@
+                 landmark_constraint.insert(op_id, 1.0);
              }
          });
++    cout << "Goal landmark computation done." << endl;
  
 -    if (dead_end) {
 +    if (dead_end)
@@ -1617,6 +1620,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                    landmark_constraint.insert(op_id, 1.0);
 +                }
 +            });
++        cout << "Soft observation landmark computation done." << endl;
 +        if (noisy == LM_NOISY_B) {
 +            // 0 <= B_obs * M - Y_obs
 +            constraints.emplace_back(0, infinity);
@@ -1633,7 +1637,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  }
  
  class LMCutConstraintsFeature : public plugins::TypedFeature<ConstraintGenerator, LMCutConstraints> {
-@@ -72,11 +163,12 @@
+@@ -72,11 +166,12 @@
                  "2268-2274",
                  "AAAI Press",
                  "2013"));
@@ -1691,8 +1695,8 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  };
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2023-11-15 17:56:35.084807600 -0300
-@@ -0,0 +1,494 @@
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2023-11-15 21:45:35.617919000 -0300
+@@ -0,0 +1,497 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -1750,7 +1754,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +      mip(opts.get<bool>("mip")),
 +      soft_weight(opts.get<int>("weights")) {
 +    // Initialize map to convert operator name to operator ID
-+    map_operators(true);
++    map_operators(false);
 +    // Read observations from file and prune invalid
 +    load_observations();
 +    prune_observations();
@@ -1954,7 +1958,12 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +    // Constraints
 +    double infinity = lp_h.get_infinity();
-+    LPConstraints constraints;
++    LPVariables variables_temp;
++    LPConstraints constraints_temp;
++    lp::LinearProgram lp(lp::LPObjectiveSense::MINIMIZE, move(variables_temp), move(constraints_temp), infinity);
++    LPVariables& variables = lp.get_variables();
++    LPConstraints& constraints = lp.get_constraints();
++
 +    lp::LPConstraint dummy_constraint(0, infinity);
 +    dummy_constraint.insert(0, 1); // Hack to make setInteger work.
 +    constraints.push_back(dummy_constraint);
@@ -1962,12 +1971,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    // Create operator variables
 +    if (mip)
 +        cout << "Using integer operator-counting variables" << endl;
-+    LPVariables variables;
 +    for (OperatorProxy op : task_proxy.get_operators()) {
 +        variables.push_back(lp::LPVariable(0, infinity, op.get_cost(), mip));
 +    }
-+
-+    lp::LinearProgram lp(lp::LPObjectiveSense::MINIMIZE, move(variables), move(constraints), infinity);
 +
 +    // Compute LP problem without observation constraints
 +    if (calculate_h) {
@@ -1984,6 +1990,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                break;
 +            }
 +        }
++        cout << "Updated constraints. Solvable: " << calculate_h << endl;
 +        // Compute result
 +        if (calculate_h) {
 +            lp_h.solve();
@@ -1997,6 +2004,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    }
 +
 +    if (h_obs != OBS_NONE) {
++        // Use special computation for observation
 +        constraints.clear();
 +        constraints.push_back(dummy_constraint);
 +        variables.erase(variables.begin() + task_proxy.get_operators().size(), variables.end());
@@ -2007,18 +2015,17 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +        for (const string &obs : observations)
 +            if (op_indexes.find(obs) != op_indexes.end())
 +                observation_ids.push_back(op_indexes[obs]);
-+        lp::LinearProgram lp_obs(lp::LPObjectiveSense::MINIMIZE, move(variables), move(constraints), infinity);
 +        for (const auto &generator : constraint_generators) {
 +            generator->set_observations(observation_ids, h_obs);
-+            generator->initialize_constraints(task, lp_obs);
++            generator->initialize_constraints(task, lp);
 +        }
 +    } else {
++        // Use default heuristic constraints
 +        add_observation_variables(variables, constraints);
 +        // If not initialized already
 +        if (!calculate_h) {
-+            lp::LinearProgram lp_obs(lp::LPObjectiveSense::MINIMIZE, move(variables), move(constraints), infinity);
 +            for (const auto &generator : constraint_generators)
-+                generator->initialize_constraints(task, lp_obs);
++                generator->initialize_constraints(task, lp);
 +        }
 +    }
 +
@@ -2026,15 +2033,15 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    if (calculate_h_s) {
 +        // Initialize LP
 +        set_variable_weights(variables);
-+        lp::LinearProgram lp_obs_soft(lp::LPObjectiveSense::MINIMIZE, move(variables), move(constraints), infinity);
 +        cout << "h_s #constraints: " << constraints.size() << endl;
-+        lp_h_s.load_problem(lp_obs_soft);
++        lp_h_s.load_problem(lp);
 +        cout << "Loaded problem with soft constraints." << endl;
 +        // Update constraints
 +        for (const auto &generator : constraint_generators) {
 +            if (generator->update_constraints(state, lp_h_s))
 +                calculate_h_s = false;
 +        }
++        cout << "Updated soft constraints. Solvable: " << calculate_h_s << endl;
 +        // Compute result
 +        if (calculate_h_s) {
 +            lp_h_s.solve();
@@ -2051,14 +2058,14 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +    if (calculate_h_c) {
 +        add_observation_hard_constraint(variables, constraints);
 +        cout << "h_c #constraints: " << constraints.size() << endl;
-+        lp::LinearProgram lp_obs_hard(lp::LPObjectiveSense::MINIMIZE, move(variables), move(constraints), infinity);
-+        lp_h_c.load_problem(lp_obs_hard);
++        lp_h_c.load_problem(lp);
 +        cout << "Loaded problem with hard constraints." << endl;
 +        // Update constraints
 +        for (const auto &generator : constraint_generators) {
 +            if (generator->update_constraints(state, lp_h_c))
 +                calculate_h_c = false;
 +        }
++        cout << "Updated hard constraints. Solvable: " << calculate_h_c << endl;
 +        // Compute LP
 +        if (calculate_h_c) {
 +            lp_h_c.solve();

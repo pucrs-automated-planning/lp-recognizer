@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 # Code originally developed by Miquel Ramirez
 import sys, os, subprocess, math
@@ -98,7 +98,7 @@ def write_file_solution(file):
     solution = compute_solution(hyps)
     print(solution)
     outstream = open(file.replace("tar.bz2", "solution"), 'w')
-    print >> outstream, '\n'.join(solution)
+    print('\n'.join(solution), file=outstream)
     outstream.close()
 
 def write_directory_solutions(folder):

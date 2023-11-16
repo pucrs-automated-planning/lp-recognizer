@@ -70,8 +70,10 @@ class FDCommand:
             instream.close()
 
     def write_result(self, filename):
-        res = csv.writer(open('%s' % filename, 'w'))
+        f = open('%s' % filename, 'w');
+        res = csv.writer(f)
         res.writerow([os.path.basename(self.domain), os.path.basename(self.problem), self.signal, self.time])
+        f.close()
 
 
 class Hypothesis:
@@ -155,10 +157,10 @@ class Hypothesis:
         for line in instream:
             line = line.strip()
             if '<HYPOTHESIS>' not in line:
-                print >> outstream, line
+                print(line, file=outstream)
             else:
                 for atom in self.atoms:
-                    print >> outstream, atom
+                    print(atom, file=outstream)
         outstream.close()
         instream.close()
 
