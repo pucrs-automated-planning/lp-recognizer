@@ -13,7 +13,7 @@
 # ./data_output.py lmc all [-fast]
 ##
 
-import os, sys
+import os, sys, math
 import data_domain as dd
 
 class ProblemOutput:
@@ -230,7 +230,7 @@ class ExperimentOutput:
 		self.max_time = max(self.max_time, problem.total_time)
 
 	def print_stats(self):
-		problems = self.problem_outputs.values()
+		problems = list(self.problem_outputs.values())
 		n = float(len(problems))
 		values = [\
 		sum([p.num_obs for p in problems]) / n, \
@@ -249,10 +249,10 @@ class ExperimentOutput:
 		sum([p.lp_info_real[1] for p in problems]) / n, \
 		sum([p.h_value_real for p in problems]) / n, \
 		sum([p.hc_value_real for p in problems]) / n, \
-		sum([cmp(p.hc_value_real, 0) for p in problems])]
+		sum([math.copysign(p.hc_value_real, 0) for p in problems])]
 		for i in range(2, len(problems[0].lp_info_real)):
 			values.append(sum([p.lp_info_real[i] for p in problems]) / n) # Avg U'
-			values.append(sum([cmp(p.lp_info_real[i], 0) for p in problems])) # U' > 0 
+			values.append(sum([math.copysign(p.lp_info_real[i], 0) for p in problems])) # U' > 0 
 		content = "%s\t%s\t" % (len(problems), self.obs)
 		content += '\t'.join(["%2.4f" % x for x in values])
 		content += '\n'
