@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 
-import unittest
+import unittest, os
 
 from options import Program_Options
 from plan_recognizer_factory import PlanRecognizerFactory
 from const_plan_recognizer import *
 from delta_plan_recognizer import *
 
-class TestPlanRecognizerFactory(unittest.TestCase):
+class TestPlanRecognizer(unittest.TestCase):
+    SOLVER = "cplex"
 
     def setUp(self):
-        options = Program_Options(["-e", "experiments/example/example.tar.bz2"])
+        options = Program_Options(["-e", "experiments/example/example.tar.bz2", "-S", TestPlanRecognizer.SOLVER])
         self.factory = PlanRecognizerFactory(options)
 
     def test_factory(self):
@@ -40,7 +41,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_h_flow(self):
         print("\nTesting hvalue with flow")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))", "-S", TestPlanRecognizer.SOLVER]
         #args[1] = "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
@@ -48,7 +49,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_h_flow_obs(self):
         print("\nTesting delta with flow")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))", "-S", TestPlanRecognizer.SOLVER]
         #args[1] = "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2" # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
@@ -56,42 +57,42 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_h_lmcut(self):
         print("\nTesting hvalue with lmcut")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
 
     def test_h_lmcut_obs(self):
         print("\nTesting delta with lmcut")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
 
     def test_h_lmcut_obs2(self):
         print("\nTesting delta modified with lmcut")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", '-o']
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "lmcut_constraints()", '-o', "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
 
     def test_h_relaxation(self):
         print("\nTesting delta with delete relaxation")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()"]
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
 
     def test_h_relaxation_obs(self):
         print("\nTesting delta modified with delete relaxation")
-        args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()", '-o']
+        args = ["-e", "experiments/example/example.tar.bz2", "-H", "delete_relaxation_constraints()", '-o', "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
 
     def test_r_hvalue(self):
         print("\nTesting hvalue")
-        args = ["-e", "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2"] # obs_count = C*
+        args = ["-e", "experiments/small-sokoban-optimal/100/sokoban_p01_hyp-1_full.tar.bz2", "-S", TestPlanRecognizer.SOLVER] # obs_count = C*
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
@@ -104,7 +105,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_delta(self):
         print("\nTesting delta")
-        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
@@ -116,7 +117,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_deltau(self):
         print("\nTesting deltau")
-        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2"]
+        args = ["-e", "experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("deltau", options)
         recognizer.run_recognizer()
@@ -129,7 +130,7 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
     def test_r_delta_filter(self):
         print("\nTesting delta with filter")
-        args = ["-e", "experiments/small-sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26"]
+        args = ["-e", "experiments/small-sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2", "-F", "26", "-S", TestPlanRecognizer.SOLVER]
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
@@ -141,4 +142,5 @@ class TestPlanRecognizerFactory(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    TestPlanRecognizer.SOLVER = os.environ.get('lpr_solver', TestPlanRecognizer.SOLVER)
     unittest.main()
