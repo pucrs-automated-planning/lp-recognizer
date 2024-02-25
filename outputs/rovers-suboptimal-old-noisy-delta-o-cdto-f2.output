@@ -1,1260 +1,180 @@
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_1.tar.bz2:0.54226398468:0.03646696:0.55
-> 0:True:6,7:8177,893
-> 1:False:6,9:8177,893
-> 2:False:6,9:8177,893
-> 3:False:6,9:8177,893
-> 4:False:7,10:8177,893
-> 5:False:7,10:8177,893
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_2.tar.bz2:0.53968501091:0.03695747:0.54
-> 0:True:6,7:8178,895
-> 1:True:6,7:8178,895
-> 2:True:6,7:8178,895
-> 3:True:6,7:8178,895
-> 4:True:7,8:8178,895
-> 5:True:7,8:8178,895
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_3.tar.bz2:0.54324889183:0.03683736:0.55
-> 0:False:6,7:8178,895
-> 1:False:6,7:8178,895
-> 2:False:6,7:8178,895
-> 3:False:6,8:8178,895
-> 4:True:7,7:8178,895
-> 5:True:7,7:8178,895
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_1.tar.bz2:0.543389081955:0.0368313:0.55
-> 0:False:6,9:8179,897
-> 1:True:6,7:8179,897
-> 2:False:6,8:8179,897
-> 3:False:6,9:8179,897
-> 4:False:7,9:8179,897
-> 5:False:7,9:8179,897
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_2.tar.bz2:0.542402029037:0.0368778:0.54
-> 0:True:6,7:8179,897
-> 1:True:6,7:8179,897
-> 2:True:6,7:8179,897
-> 3:True:6,7:8179,897
-> 4:True:7,8:8179,897
-> 5:True:7,8:8179,897
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_3.tar.bz2:0.543234109879:0.03665531:0.54
-> 0:False:6,9:8179,897
-> 1:True:6,8:8179,897
-> 2:False:6,9:8179,897
-> 3:False:6,9:8179,897
-> 4:False:7,10:8179,897
-> 5:False:7,10:8179,897
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_1.tar.bz2:0.539666891098:0.03609346:0.54
-> 0:False:6,9:8178,895
-> 1:False:6,9:8178,895
-> 2:True:6,8:8178,895
-> 3:False:6,10:8178,895
-> 4:False:7,10:8178,895
-> 5:False:7,11:8178,895
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_2.tar.bz2:0.543833017349:0.03638505:0.55
-> 0:False:6,8:8179,897
-> 1:True:6,7:8179,897
-> 2:True:6,7:8179,897
-> 3:False:6,8:8179,897
-> 4:True:7,8:8179,897
-> 5:True:7,8:8179,897
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_3.tar.bz2:0.541657924652:0.03666235:0.54
-> 0:False:6,9:8179,897
-> 1:False:6,8:8179,897
-> 2:False:6,8:8179,897
-> 3:False:6,9:8179,897
-> 4:True:7,8:8179,897
-> 5:False:7,9:8179,897
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_1.tar.bz2:0.541594982147:0.03681463:0.54
-> 0:False:6,7:8178,895
-> 1:False:6,7:8178,895
-> 2:False:6,7:8178,895
-> 3:False:6,7:8178,895
-> 4:True:7,7:8178,895
-> 5:True:7,7:8178,895
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_2.tar.bz2:0.54162311554:0.03671691:0.55
-> 0:True:6,7:8177,893
-> 1:True:6,7:8177,893
-> 2:True:6,7:8177,893
-> 3:True:6,7:8177,893
-> 4:True:7,8:8177,893
-> 5:True:7,8:8177,893
-rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_3.tar.bz2:0.544307947159:0.03664984:0.53
-> 0:False:6,7:8177,893
-> 1:False:6,7:8177,893
-> 2:False:6,7:8177,893
-> 3:False:6,7:8177,893
-> 4:True:7,7:8177,893
-> 5:True:7,7:8177,893
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_1.tar.bz2:0.648558139801:0.0635729:0.65
-> 0:False:7,8:16055,1476
-> 1:False:7,9:16055,1476
-> 2:True:8,8:16055,1476
-> 3:False:7,8:16055,1476
-> 4:False:8,10:16055,1476
-> 5:False:7,9:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_2.tar.bz2:0.64971780777:0.0639579:0.66
-> 0:False:7,8:16055,1476
-> 1:False:7,10:16055,1476
-> 2:True:8,8:16055,1476
-> 3:False:7,8:16055,1476
-> 4:False:8,9:16055,1476
-> 5:False:7,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_3.tar.bz2:0.649110794067:0.0641667:0.65
-> 0:False:7,8:16055,1476
-> 1:False:7,10:16055,1476
-> 2:True:8,8:16055,1476
-> 3:False:7,8:16055,1476
-> 4:False:8,10:16055,1476
-> 5:False:7,8:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_1.tar.bz2:0.65168595314:0.0650418:0.65
-> 0:False:7,10:16055,1476
-> 1:True:7,9:16055,1476
-> 2:True:8,10:16055,1476
-> 3:True:7,9:16055,1476
-> 4:True:8,10:16055,1476
-> 5:False:7,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_2.tar.bz2:0.648069143295:0.0635619:0.65
-> 0:False:7,11:16055,1476
-> 1:True:7,10:16055,1476
-> 2:True:8,11:16055,1476
-> 3:True:7,10:16055,1476
-> 4:False:8,12:16055,1476
-> 5:False:7,11:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_3.tar.bz2:0.650454998016:0.062955:0.65
-> 0:False:7,11:16054,1474
-> 1:False:7,11:16054,1474
-> 2:True:8,11:16054,1474
-> 3:False:7,11:16054,1474
-> 4:True:8,11:16054,1474
-> 5:False:7,11:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_1.tar.bz2:0.647250175476:0.0641357:0.64
-> 0:False:7,9:16055,1476
-> 1:False:7,10:16055,1476
-> 2:True:8,9:16055,1476
-> 3:False:7,10:16055,1476
-> 4:False:8,11:16055,1476
-> 5:False:7,9:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_2.tar.bz2:0.646592855453:0.0632841:0.65
-> 0:True:7,10:16054,1474
-> 1:False:7,11:16054,1474
-> 2:True:8,11:16054,1474
-> 3:False:7,11:16054,1474
-> 4:True:8,11:16054,1474
-> 5:True:7,10:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_3.tar.bz2:0.652215957642:0.064566:0.65
-> 0:False:7,10:16055,1476
-> 1:False:7,10:16055,1476
-> 2:True:8,10:16055,1476
-> 3:False:7,10:16055,1476
-> 4:True:8,10:16055,1476
-> 5:False:7,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_1.tar.bz2:0.649488210678:0.0639124:0.65
-> 0:True:7,9:16055,1476
-> 1:True:7,9:16055,1476
-> 2:True:8,10:16055,1476
-> 3:True:7,9:16055,1476
-> 4:True:8,10:16055,1476
-> 5:True:7,9:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_2.tar.bz2:0.652203083038:0.0645758:0.65
-> 0:False:7,9:16055,1476
-> 1:False:7,9:16055,1476
-> 2:True:8,9:16055,1476
-> 3:False:7,9:16055,1476
-> 4:True:8,9:16055,1476
-> 5:False:7,9:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_3.tar.bz2:0.649467945099:0.0638132:0.64
-> 0:False:7,10:16054,1474
-> 1:False:7,10:16054,1474
-> 2:True:8,10:16054,1474
-> 3:False:7,10:16054,1474
-> 4:True:8,10:16054,1474
-> 5:True:7,9:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_1.tar.bz2:0.651661872864:0.0640445:0.66
-> 0:True:7,9:16055,1476
-> 1:False:7,10:16055,1476
-> 2:True:7,9:16055,1476
-> 3:True:7,9:16055,1476
-> 4:True:8,10:16055,1476
-> 5:True:8,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_2.tar.bz2:0.64762711525:0.0637046:0.65
-> 0:True:7,9:16054,1474
-> 1:False:7,10:16054,1474
-> 2:False:7,12:16054,1474
-> 3:True:7,9:16054,1474
-> 4:True:8,10:16054,1474
-> 5:False:8,12:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_3.tar.bz2:0.650817155838:0.0638247:0.64
-> 0:True:7,9:16054,1474
-> 1:False:7,10:16054,1474
-> 2:False:7,10:16054,1474
-> 3:True:7,9:16054,1474
-> 4:True:8,10:16054,1474
-> 5:True:8,10:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_1.tar.bz2:0.65128993988:0.0636706:0.65
-> 0:True:7,7:16055,1476
-> 1:True:7,7:16055,1476
-> 2:False:7,9:16055,1476
-> 3:True:7,7:16055,1476
-> 4:True:8,8:16055,1476
-> 5:False:8,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_2.tar.bz2:0.647429943085:0.0637273:0.65
-> 0:False:7,10:16055,1476
-> 1:True:7,9:16055,1476
-> 2:False:7,10:16055,1476
-> 3:False:7,10:16055,1476
-> 4:True:8,10:16055,1476
-> 5:True:8,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_3.tar.bz2:0.65203499794:0.0645142:0.65
-> 0:False:7,12:16055,1476
-> 1:True:7,10:16055,1476
-> 2:True:7,10:16055,1476
-> 3:True:7,10:16055,1476
-> 4:True:8,11:16055,1476
-> 5:False:8,12:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_1.tar.bz2:0.654668092728:0.0643419:0.66
-> 0:False:7,10:16055,1476
-> 1:False:7,10:16055,1476
-> 2:False:7,10:16055,1476
-> 3:False:7,10:16055,1476
-> 4:False:8,11:16055,1476
-> 5:True:8,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_2.tar.bz2:0.645567893982:0.0634661:0.63
-> 0:False:7,12:16054,1474
-> 1:False:7,12:16054,1474
-> 2:True:7,10:16054,1474
-> 3:True:7,10:16054,1474
-> 4:False:8,12:16054,1474
-> 5:False:8,12:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_3.tar.bz2:0.649976015091:0.0634652:0.64
-> 0:False:7,9:16054,1474
-> 1:False:7,9:16054,1474
-> 2:False:7,9:16054,1474
-> 3:False:7,9:16054,1474
-> 4:True:8,9:16054,1474
-> 5:True:8,9:16054,1474
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_1.tar.bz2:0.650279045105:0.0638632:0.66
-> 0:False:7,12:16055,1476
-> 1:False:7,12:16055,1476
-> 2:True:7,10:16055,1476
-> 3:True:7,10:16055,1476
-> 4:False:8,12:16055,1476
-> 5:False:8,12:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_2.tar.bz2:0.648435115814:0.0637123:0.65
-> 0:False:7,9:16055,1476
-> 1:True:7,8:16055,1476
-> 2:True:7,8:16055,1476
-> 3:True:7,8:16055,1476
-> 4:False:8,10:16055,1476
-> 5:False:8,10:16055,1476
-rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_3.tar.bz2:0.651650905609:0.0638192:0.65
-> 0:False:7,9:16054,1474
-> 1:False:7,9:16054,1474
-> 2:False:7,9:16054,1474
-> 3:False:7,9:16054,1474
-> 4:True:8,9:16054,1474
-> 5:True:8,9:16054,1474
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_1.tar.bz2:0.542650938034:0.0366247:0.54
-> 0:True:6,7:8180,899
-> 1:False:6,8:8180,899
-> 2:False:6,8:8180,899
-> 3:False:6,8:8180,899
-> 4:False:7,9:8180,899
-> 5:False:7,9:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_2.tar.bz2:0.542141914368:0.03687042:0.54
-> 0:True:6,7:8180,899
-> 1:False:6,9:8180,899
-> 2:False:6,9:8180,899
-> 3:False:6,9:8180,899
-> 4:False:7,10:8180,899
-> 5:False:7,11:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_3.tar.bz2:0.544813871384:0.03644726:0.53
-> 0:True:6,8:8180,899
-> 1:False:6,9:8180,899
-> 2:False:6,9:8180,899
-> 3:False:6,9:8180,899
-> 4:True:7,9:8180,899
-> 5:False:7,10:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_1.tar.bz2:0.543163061142:0.03703013:0.54
-> 0:True:6,9:8181,901
-> 1:True:6,9:8181,901
-> 2:True:6,9:8181,901
-> 3:False:6,10:8181,901
-> 4:True:7,10:8181,901
-> 5:False:7,11:8181,901
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_2.tar.bz2:0.541307926178:0.03705858:0.54
-> 0:False:6,11:8181,901
-> 1:True:6,10:8181,901
-> 2:False:6,11:8181,901
-> 3:False:6,12:8181,901
-> 4:False:7,12:8181,901
-> 5:False:7,13:8181,901
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_3.tar.bz2:0.544345855713:0.03685578:0.55
-> 0:False:6,9:8181,901
-> 1:True:6,8:8181,901
-> 2:False:6,9:8181,901
-> 3:False:6,10:8181,901
-> 4:False:7,10:8181,901
-> 5:False:7,11:8181,901
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_1.tar.bz2:0.542895793915:0.0365588:0.55
-> 0:False:6,10:8181,901
-> 1:False:6,9:8181,901
-> 2:True:6,8:8181,901
-> 3:False:6,10:8181,901
-> 4:False:7,10:8181,901
-> 5:False:7,11:8181,901
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_2.tar.bz2:0.543393850327:0.03654866:0.54
-> 0:False:6,10:8180,899
-> 1:False:6,10:8180,899
-> 2:True:6,9:8180,899
-> 3:False:6,10:8180,899
-> 4:False:7,11:8180,899
-> 5:False:7,11:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_3.tar.bz2:0.540863037109:0.03641393:0.55
-> 0:False:6,10:8180,899
-> 1:False:6,10:8180,899
-> 2:True:6,9:8180,899
-> 3:False:6,10:8180,899
-> 4:False:7,11:8180,899
-> 5:False:7,11:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_1.tar.bz2:0.542228937149:0.03672528:0.54
-> 0:False:6,9:8180,899
-> 1:False:6,9:8180,899
-> 2:False:6,9:8180,899
-> 3:True:6,8:8180,899
-> 4:False:7,10:8180,899
-> 5:False:7,10:8180,899
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_2.tar.bz2:0.537591934204:0.03639878:0.54
-> 0:False:6,9:8179,897
-> 1:False:6,9:8179,897
-> 2:True:6,8:8179,897
-> 3:True:6,8:8179,897
-> 4:False:7,10:8179,897
-> 5:False:7,10:8179,897
-rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_3.tar.bz2:0.545366048813:0.03658792:0.55
-> 0:False:6,10:8178,895
-> 1:False:6,10:8178,895
-> 2:False:6,10:8178,895
-> 3:True:6,8:8178,895
-> 4:False:7,10:8178,895
-> 5:True:7,9:8178,895
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_1.tar.bz2:0.652828931808:0.0640431:0.66
-> 0:False:7,11:16057,1480
-> 1:False:7,12:16057,1480
-> 2:True:8,11:16057,1480
-> 3:False:7,12:16057,1480
-> 4:False:8,13:16057,1480
-> 5:True:7,10:16057,1480
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_2.tar.bz2:0.647655010223:0.0638449:0.65
-> 0:True:7,10:16057,1480
-> 1:False:7,11:16057,1480
-> 2:False:8,12:16057,1480
-> 3:False:7,11:16057,1480
-> 4:False:8,13:16057,1480
-> 5:False:7,11:16057,1480
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_3.tar.bz2:0.647125959396:0.0632606:0.65
-> 0:True:7,11:16056,1478
-> 1:False:7,12:16056,1478
-> 2:True:8,12:16056,1478
-> 3:False:7,12:16056,1478
-> 4:True:8,12:16056,1478
-> 5:True:7,11:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_1.tar.bz2:0.651749134064:0.064785:0.66
-> 0:False:7,12:16060,1486
-> 1:True:7,11:16060,1486
-> 2:False:8,13:16060,1486
-> 3:True:7,11:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:7,13:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_2.tar.bz2:0.651077985764:0.0649656:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,11:16060,1486
-> 2:False:8,14:16060,1486
-> 3:False:7,12:16060,1486
-> 4:True:8,11:16060,1486
-> 5:False:7,14:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_3.tar.bz2:0.65118098259:0.0645724:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,13:16060,1486
-> 2:True:8,13:16060,1486
-> 3:False:7,13:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:7,13:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_1.tar.bz2:0.650176048279:0.0648805:0.65
-> 0:False:7,13:16059,1484
-> 1:False:7,13:16059,1484
-> 2:True:8,11:16059,1484
-> 3:False:7,13:16059,1484
-> 4:True:8,11:16059,1484
-> 5:True:7,10:16059,1484
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_2.tar.bz2:0.653016090393:0.0649577:0.65
-> 0:False:7,13:16059,1484
-> 1:False:7,13:16059,1484
-> 2:True:8,12:16059,1484
-> 3:False:7,13:16059,1484
-> 4:False:8,13:16059,1484
-> 5:False:7,12:16059,1484
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_3.tar.bz2:0.650901079178:0.064382:0.65
-> 0:False:7,12:16060,1486
-> 1:False:7,14:16060,1486
-> 2:True:8,12:16060,1486
-> 3:False:7,13:16060,1486
-> 4:False:8,13:16060,1486
-> 5:False:7,13:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_1.tar.bz2:0.651177883148:0.0643654:0.65
-> 0:False:7,10:16058,1482
-> 1:False:7,11:16058,1482
-> 2:True:8,10:16058,1482
-> 3:False:7,10:16058,1482
-> 4:False:8,11:16058,1482
-> 5:False:7,11:16058,1482
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_2.tar.bz2:0.650123119354:0.06535:0.65
-> 0:True:7,9:16058,1482
-> 1:False:7,10:16058,1482
-> 2:True:8,10:16058,1482
-> 3:True:7,9:16058,1482
-> 4:False:8,12:16058,1482
-> 5:False:7,11:16058,1482
-rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_3.tar.bz2:0.652220964432:0.064653:0.66
-> 0:False:7,10:16058,1482
-> 1:False:7,11:16058,1482
-> 2:True:8,10:16058,1482
-> 3:False:7,10:16058,1482
-> 4:False:8,11:16058,1482
-> 5:False:7,10:16058,1482
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_1.tar.bz2:0.646190881729:0.0642968:0.65
-> 0:True:7,10:16057,1480
-> 1:False:7,12:16057,1480
-> 2:False:7,12:16057,1480
-> 3:False:7,12:16057,1480
-> 4:True:8,11:16057,1480
-> 5:False:8,12:16057,1480
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_2.tar.bz2:0.651010990143:0.0636967:0.66
-> 0:True:7,10:16056,1478
-> 1:False:7,12:16056,1478
-> 2:False:7,12:16056,1478
-> 3:True:7,10:16056,1478
-> 4:False:8,12:16056,1478
-> 5:False:8,12:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_3.tar.bz2:0.648150920868:0.0636646:0.64
-> 0:True:7,10:16056,1478
-> 1:False:7,13:16056,1478
-> 2:False:7,13:16056,1478
-> 3:False:7,12:16056,1478
-> 4:False:8,12:16056,1478
-> 5:False:8,13:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_1.tar.bz2:0.652194976807:0.0642673:0.65
-> 0:False:7,10:16057,1480
-> 1:False:7,10:16057,1480
-> 2:False:7,11:16057,1480
-> 3:False:7,10:16057,1480
-> 4:True:8,10:16057,1480
-> 5:False:8,12:16057,1480
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_2.tar.bz2:0.650207996368:0.064275:0.66
-> 0:False:7,11:16056,1478
-> 1:False:7,11:16056,1478
-> 2:False:7,11:16056,1478
-> 3:False:7,11:16056,1478
-> 4:True:8,11:16056,1478
-> 5:True:8,11:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_3.tar.bz2:0.653805971146:0.0647141:0.64
-> 0:False:7,12:16058,1482
-> 1:True:7,10:16058,1482
-> 2:False:7,12:16058,1482
-> 3:False:7,12:16058,1482
-> 4:True:8,11:16058,1482
-> 5:False:8,13:16058,1482
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_1.tar.bz2:0.649465084076:0.0645702:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,13:16060,1486
-> 2:False:7,13:16060,1486
-> 3:True:7,12:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:8,16:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_2.tar.bz2:0.648635149002:0.0644724:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,13:16060,1486
-> 2:False:7,13:16060,1486
-> 3:False:7,13:16060,1486
-> 4:True:8,13:16060,1486
-> 5:False:8,14:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_3.tar.bz2:0.648080825806:0.06403:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,13:16060,1486
-> 2:True:7,12:16060,1486
-> 3:True:7,12:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:8,14:16060,1486
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_1.tar.bz2:0.648766994476:0.0636267:0.64
-> 0:False:7,13:16056,1478
-> 1:False:7,12:16056,1478
-> 2:False:7,13:16056,1478
-> 3:True:7,11:16056,1478
-> 4:False:8,13:16056,1478
-> 5:False:8,15:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_2.tar.bz2:0.648278951645:0.0638506:0.65
-> 0:False:7,14:16056,1478
-> 1:False:7,13:16056,1478
-> 2:False:7,12:16056,1478
-> 3:True:7,11:16056,1478
-> 4:False:8,14:16056,1478
-> 5:False:8,15:16056,1478
-rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_3.tar.bz2:0.647763967514:0.0633566:0.65
-> 0:True:7,9:16057,1480
-> 1:False:7,11:16057,1480
-> 2:False:7,11:16057,1480
-> 3:True:7,9:16057,1480
-> 4:False:8,11:16057,1480
-> 5:False:8,11:16057,1480
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_1.tar.bz2:0.541686058044:0.03738952:0.55
-> 0:True:6,8:8182,903
-> 1:False:6,9:8182,903
-> 2:False:6,9:8182,903
-> 3:False:6,10:8182,903
-> 4:False:7,10:8182,903
-> 5:False:7,11:8182,903
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_2.tar.bz2:0.542037010193:0.03709817:0.54
-> 0:False:6,8:8182,903
-> 1:False:6,8:8182,903
-> 2:False:6,8:8182,903
-> 3:False:6,9:8182,903
-> 4:True:7,8:8182,903
-> 5:False:7,10:8182,903
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_3.tar.bz2:0.540646076202:0.0367108:0.54
-> 0:True:6,8:8181,901
-> 1:False:6,10:8181,901
-> 2:False:6,10:8181,901
-> 3:False:6,10:8181,901
-> 4:False:7,11:8181,901
-> 5:False:7,12:8181,901
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_1.tar.bz2:0.541402101517:0.03699628:0.55
-> 0:False:6,11:8182,903
-> 1:True:6,9:8182,903
-> 2:False:6,10:8182,903
-> 3:False:6,12:8182,903
-> 4:False:7,11:8182,903
-> 5:False:7,12:8182,903
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_2.tar.bz2:0.542590856552:0.03736525:0.54
-> 0:False:6,12:8184,907
-> 1:True:6,9:8184,907
-> 2:False:6,11:8184,907
-> 3:False:6,13:8184,907
-> 4:False:7,12:8184,907
-> 5:False:7,13:8184,907
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_3.tar.bz2:0.540643930435:0.03684358:0.53
-> 0:False:6,12:8183,905
-> 1:True:6,9:8183,905
-> 2:False:6,11:8183,905
-> 3:False:6,13:8183,905
-> 4:False:7,12:8183,905
-> 5:False:7,13:8183,905
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_1.tar.bz2:0.543841838837:0.0372435:0.54
-> 0:False:6,12:8183,905
-> 1:False:6,10:8183,905
-> 2:True:6,9:8183,905
-> 3:False:6,12:8183,905
-> 4:True:7,10:8183,905
-> 5:False:7,12:8183,905
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_2.tar.bz2:0.543932914734:0.03674118:0.54
-> 0:False:6,12:8183,905
-> 1:True:6,10:8183,905
-> 2:True:6,10:8183,905
-> 3:False:6,11:8183,905
-> 4:True:7,11:8183,905
-> 5:True:7,11:8183,905
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_3.tar.bz2:0.544157028198:0.03760064:0.56
-> 0:False:6,11:8184,907
-> 1:False:6,11:8184,907
-> 2:True:6,9:8184,907
-> 3:False:6,10:8184,907
-> 4:False:7,12:8184,907
-> 5:False:7,12:8184,907
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_1.tar.bz2:0.543668031693:0.03681623:0.54
-> 0:False:6,9:8181,901
-> 1:False:6,10:8181,901
-> 2:False:6,10:8181,901
-> 3:False:6,8:8181,901
-> 4:False:7,10:8181,901
-> 5:True:7,8:8181,901
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_2.tar.bz2:0.544381141663:0.03692535:0.53
-> 0:False:6,9:8181,901
-> 1:False:6,10:8181,901
-> 2:False:6,9:8181,901
-> 3:True:6,8:8181,901
-> 4:False:7,11:8181,901
-> 5:False:7,11:8181,901
-rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_3.tar.bz2:0.542675018311:0.0372542:0.54
-> 0:False:6,10:8182,903
-> 1:False:6,10:8182,903
-> 2:False:6,9:8182,903
-> 3:True:6,8:8182,903
-> 4:False:7,10:8182,903
-> 5:False:7,10:8182,903
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_1.tar.bz2:0.648082971573:0.0647132:0.64
-> 0:True:7,11:16061,1488
-> 1:False:7,15:16061,1488
-> 2:False:8,13:16061,1488
-> 3:False:7,14:16061,1488
-> 4:False:8,16:16061,1488
-> 5:False:7,13:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_2.tar.bz2:0.654506921768:0.0648515:0.66
-> 0:True:7,10:16061,1488
-> 1:False:7,14:16061,1488
-> 2:True:8,11:16061,1488
-> 3:False:7,12:16061,1488
-> 4:False:8,15:16061,1488
-> 5:False:7,12:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_3.tar.bz2:0.649158000946:0.065097:0.65
-> 0:True:7,11:16060,1486
-> 1:False:7,14:16060,1486
-> 2:True:8,12:16060,1486
-> 3:False:7,13:16060,1486
-> 4:False:8,15:16060,1486
-> 5:False:7,13:16060,1486
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_1.tar.bz2:0.651267766953:0.0646978:0.65
-> 0:False:7,14:16062,1490
-> 1:True:7,12:16062,1490
-> 2:False:8,14:16062,1490
-> 3:False:7,13:16062,1490
-> 4:True:8,13:16062,1490
-> 5:False:7,15:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_2.tar.bz2:0.650299072266:0.0654811:0.65
-> 0:False:7,14:16062,1490
-> 1:True:7,12:16062,1490
-> 2:False:8,14:16062,1490
-> 3:True:7,12:16062,1490
-> 4:False:8,14:16062,1490
-> 5:False:7,15:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_3.tar.bz2:0.650933980942:0.0652689:0.64
-> 0:False:7,14:16061,1488
-> 1:True:7,12:16061,1488
-> 2:False:8,14:16061,1488
-> 3:True:7,12:16061,1488
-> 4:False:8,15:16061,1488
-> 5:False:7,15:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_1.tar.bz2:0.649022102356:0.0653029:0.65
-> 0:False:7,13:16062,1490
-> 1:False:7,15:16062,1490
-> 2:True:8,12:16062,1490
-> 3:False:7,13:16062,1490
-> 4:False:8,16:16062,1490
-> 5:False:7,15:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_2.tar.bz2:0.649045944214:0.0648448:0.64
-> 0:False:7,13:16062,1490
-> 1:False:7,16:16062,1490
-> 2:True:8,12:16062,1490
-> 3:False:7,14:16062,1490
-> 4:False:8,14:16062,1490
-> 5:False:7,13:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_3.tar.bz2:0.652825832367:0.0651772:0.66
-> 0:False:7,13:16063,1492
-> 1:False:7,14:16063,1492
-> 2:True:8,13:16063,1492
-> 3:False:7,13:16063,1492
-> 4:False:8,15:16063,1492
-> 5:False:7,14:16063,1492
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_1.tar.bz2:0.651699066162:0.0651295:0.66
-> 0:False:7,13:16062,1490
-> 1:False:7,14:16062,1490
-> 2:True:8,13:16062,1490
-> 3:False:7,13:16062,1490
-> 4:False:8,15:16062,1490
-> 5:False:7,14:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_2.tar.bz2:0.653254985809:0.0652815:0.65
-> 0:False:7,14:16060,1486
-> 1:False:7,14:16060,1486
-> 2:True:8,14:16060,1486
-> 3:True:7,13:16060,1486
-> 4:False:8,16:16060,1486
-> 5:False:7,16:16060,1486
-rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_3.tar.bz2:0.652009010315:0.0653474:0.66
-> 0:False:7,14:16062,1490
-> 1:False:7,13:16062,1490
-> 2:False:8,14:16062,1490
-> 3:True:7,12:16062,1490
-> 4:False:8,16:16062,1490
-> 5:False:7,16:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_1.tar.bz2:0.652137994766:0.0643193:0.66
-> 0:True:7,12:16059,1484
-> 1:False:7,13:16059,1484
-> 2:False:7,14:16059,1484
-> 3:False:7,13:16059,1484
-> 4:True:8,13:16059,1484
-> 5:False:8,14:16059,1484
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_2.tar.bz2:0.648287773132:0.06451:0.65
-> 0:True:7,10:16060,1486
-> 1:False:7,15:16060,1486
-> 2:False:7,16:16060,1486
-> 3:False:7,14:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:8,15:16060,1486
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_3.tar.bz2:0.651307821274:0.0648773:0.65
-> 0:True:7,11:16060,1486
-> 1:False:7,16:16060,1486
-> 2:False:7,17:16060,1486
-> 3:False:7,14:16060,1486
-> 4:False:8,15:16060,1486
-> 5:False:8,16:16060,1486
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_1.tar.bz2:0.650087118149:0.0648676:0.65
-> 0:False:7,14:16061,1488
-> 1:True:7,13:16061,1488
-> 2:False:7,15:16061,1488
-> 3:False:7,14:16061,1488
-> 4:True:8,14:16061,1488
-> 5:False:8,16:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_2.tar.bz2:0.650326013565:0.0647668:0.65
-> 0:False:7,13:16061,1488
-> 1:False:7,12:16061,1488
-> 2:False:7,15:16061,1488
-> 3:False:7,13:16061,1488
-> 4:True:8,12:16061,1488
-> 5:False:8,16:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_3.tar.bz2:0.650244951248:0.0645688:0.64
-> 0:False:7,16:16060,1486
-> 1:True:7,14:16060,1486
-> 2:False:7,16:16060,1486
-> 3:False:7,15:16060,1486
-> 4:False:8,16:16060,1486
-> 5:False:8,18:16060,1486
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_1.tar.bz2:0.649682998657:0.0645126:0.65
-> 0:False:7,15:16061,1488
-> 1:True:7,13:16061,1488
-> 2:True:7,13:16061,1488
-> 3:False:7,15:16061,1488
-> 4:False:8,15:16061,1488
-> 5:True:8,14:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_2.tar.bz2:0.651458978653:0.0648223:0.65
-> 0:False:7,16:16062,1490
-> 1:False:7,15:16062,1490
-> 2:True:7,13:16062,1490
-> 3:False:7,15:16062,1490
-> 4:False:8,16:16062,1490
-> 5:False:8,15:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_3.tar.bz2:0.648054838181:0.0646537:0.65
-> 0:False:7,16:16062,1490
-> 1:False:7,14:16062,1490
-> 2:True:7,13:16062,1490
-> 3:False:7,14:16062,1490
-> 4:False:8,16:16062,1490
-> 5:False:8,16:16062,1490
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_1.tar.bz2:0.652057886124:0.0644079:0.64
-> 0:False:7,12:16061,1488
-> 1:False:7,12:16061,1488
-> 2:False:7,14:16061,1488
-> 3:True:7,11:16061,1488
-> 4:True:8,12:16061,1488
-> 5:False:8,15:16061,1488
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_2.tar.bz2:0.652467012405:0.0652166:0.66
-> 0:False:7,14:16059,1484
-> 1:False:7,13:16059,1484
-> 2:False:7,13:16059,1484
-> 3:True:7,12:16059,1484
-> 4:False:8,14:16059,1484
-> 5:False:8,15:16059,1484
-rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_3.tar.bz2:0.648334980011:0.0641703:0.65
-> 0:False:7,13:16060,1486
-> 1:False:7,14:16060,1486
-> 2:False:7,14:16060,1486
-> 3:True:7,12:16060,1486
-> 4:False:8,14:16060,1486
-> 5:False:8,16:16060,1486
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_1.tar.bz2:0.541280984879:0.03738008:0.54
-> 0:True:6,9:8184,907
-> 1:False:6,13:8184,907
-> 2:False:6,13:8184,907
-> 3:False:6,12:8184,907
-> 4:False:7,14:8184,907
-> 5:False:7,14:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_2.tar.bz2:0.539626836777:0.03620004:0.53
-> 0:True:6,9:8182,903
-> 1:False:6,12:8182,903
-> 2:False:6,12:8182,903
-> 3:False:6,12:8182,903
-> 4:False:7,13:8182,903
-> 5:False:7,14:8182,903
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_3.tar.bz2:0.541387081146:0.03657391:0.54
-> 0:True:6,9:8183,905
-> 1:False:6,13:8183,905
-> 2:False:6,13:8183,905
-> 3:False:6,13:8183,905
-> 4:False:7,14:8183,905
-> 5:False:7,15:8183,905
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_1.tar.bz2:0.542657136917:0.03735871:0.55
-> 0:False:6,13:8184,907
-> 1:True:6,10:8184,907
-> 2:False:6,12:8184,907
-> 3:False:6,14:8184,907
-> 4:False:7,13:8184,907
-> 5:False:7,15:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_2.tar.bz2:0.542917966843:0.03723527:0.54
-> 0:False:6,12:8186,911
-> 1:True:6,10:8186,911
-> 2:False:6,11:8186,911
-> 3:False:6,13:8186,911
-> 4:False:7,12:8186,911
-> 5:False:7,14:8186,911
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_3.tar.bz2:0.54308795929:0.0361078:0.55
-> 0:False:6,14:8183,905
-> 1:True:6,11:8183,905
-> 2:False:6,12:8183,905
-> 3:False:6,14:8183,905
-> 4:False:7,13:8183,905
-> 5:False:7,14:8183,905
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_1.tar.bz2:0.543184995651:0.03718397:0.54
-> 0:False:6,13:8185,909
-> 1:False:6,12:8185,909
-> 2:True:6,10:8185,909
-> 3:False:6,13:8185,909
-> 4:False:7,13:8185,909
-> 5:False:7,13:8185,909
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_2.tar.bz2:0.540717124939:0.03637281:0.54
-> 0:False:6,13:8184,907
-> 1:False:6,12:8184,907
-> 2:True:6,10:8184,907
-> 3:False:6,13:8184,907
-> 4:False:7,12:8184,907
-> 5:False:7,14:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_3.tar.bz2:0.543798208237:0.03707434:0.54
-> 0:False:6,13:8184,907
-> 1:False:6,12:8184,907
-> 2:True:6,11:8184,907
-> 3:False:6,14:8184,907
-> 4:True:7,12:8184,907
-> 5:False:7,14:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_1.tar.bz2:0.544575929642:0.0370317:0.55
-> 0:False:6,11:8184,907
-> 1:False:6,13:8184,907
-> 2:False:6,11:8184,907
-> 3:True:6,8:8184,907
-> 4:False:7,14:8184,907
-> 5:False:7,13:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_2.tar.bz2:0.545727968216:0.03666056:0.55
-> 0:False:6,13:8182,903
-> 1:False:6,14:8182,903
-> 2:False:6,12:8182,903
-> 3:True:6,10:8182,903
-> 4:False:7,15:8182,903
-> 5:False:7,13:8182,903
-rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_3.tar.bz2:0.542629003525:0.03783349:0.55
-> 0:False:6,11:8184,907
-> 1:False:6,12:8184,907
-> 2:False:6,12:8184,907
-> 3:True:6,10:8184,907
-> 4:False:7,13:8184,907
-> 5:False:7,13:8184,907
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_1.tar.bz2:0.65033698082:0.0647262:0.65
-> 0:True:7,12:16063,1492
-> 1:False:7,16:16063,1492
-> 2:False:8,14:16063,1492
-> 3:False:7,15:16063,1492
-> 4:False:8,16:16063,1492
-> 5:False:7,13:16063,1492
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_2.tar.bz2:0.651980876923:0.065456:0.65
-> 0:True:7,12:16063,1492
-> 1:False:7,16:16063,1492
-> 2:True:8,13:16063,1492
-> 3:False:7,15:16063,1492
-> 4:False:8,16:16063,1492
-> 5:False:7,13:16063,1492
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_3.tar.bz2:0.651160001755:0.0647739:0.65
-> 0:True:7,12:16062,1490
-> 1:False:7,16:16062,1490
-> 2:True:8,13:16062,1490
-> 3:False:7,14:16062,1490
-> 4:False:8,16:16062,1490
-> 5:False:7,14:16062,1490
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_1.tar.bz2:0.651868104935:0.0655129:0.66
-> 0:False:7,18:16066,1498
-> 1:True:7,15:16066,1498
-> 2:False:8,18:16066,1498
-> 3:False:7,16:16066,1498
-> 4:True:8,16:16066,1498
-> 5:False:7,18:16066,1498
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_2.tar.bz2:0.650988101959:0.0650479:0.65
-> 0:False:7,18:16063,1492
-> 1:True:7,16:16063,1492
-> 2:False:8,19:16063,1492
-> 3:False:7,18:16063,1492
-> 4:False:8,18:16063,1492
-> 5:False:7,19:16063,1492
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_3.tar.bz2:0.651874780655:0.0659409:0.64
-> 0:False:7,17:16067,1500
-> 1:True:7,15:16067,1500
-> 2:False:8,17:16067,1500
-> 3:True:7,15:16067,1500
-> 4:False:8,18:16067,1500
-> 5:False:7,18:16067,1500
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_1.tar.bz2:0.655003786087:0.0660833:0.65
-> 0:False:7,15:16066,1498
-> 1:False:7,18:16066,1498
-> 2:True:8,14:16066,1498
-> 3:False:7,16:16066,1498
-> 4:False:8,18:16066,1498
-> 5:False:7,16:16066,1498
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_2.tar.bz2:0.653869867325:0.0655819:0.65
-> 0:False:7,17:16064,1494
-> 1:False:7,19:16064,1494
-> 2:True:8,15:16064,1494
-> 3:False:7,17:16064,1494
-> 4:False:8,19:16064,1494
-> 5:False:7,18:16064,1494
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_3.tar.bz2:0.650231838226:0.0655724:0.65
-> 0:False:7,16:16064,1494
-> 1:False:7,18:16064,1494
-> 2:True:8,15:16064,1494
-> 3:False:7,16:16064,1494
-> 4:False:8,18:16064,1494
-> 5:False:7,18:16064,1494
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_1.tar.bz2:0.654607057571:0.0647446:0.66
-> 0:False:7,18:16064,1494
-> 1:False:7,17:16064,1494
-> 2:False:8,18:16064,1494
-> 3:True:7,15:16064,1494
-> 4:False:8,20:16064,1494
-> 5:False:7,21:16064,1494
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_2.tar.bz2:0.651666164398:0.0652977:0.65
-> 0:False:7,16:16064,1494
-> 1:False:7,17:16064,1494
-> 2:True:8,16:16064,1494
-> 3:True:7,15:16064,1494
-> 4:False:8,18:16064,1494
-> 5:False:7,18:16064,1494
-rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_3.tar.bz2:0.654600143433:0.0652518:0.66
-> 0:False:7,15:16066,1498
-> 1:False:7,16:16066,1498
-> 2:True:8,15:16066,1498
-> 3:True:7,14:16066,1498
-> 4:False:8,18:16066,1498
-> 5:False:7,18:16066,1498
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_1.tar.bz2:0.649126052856:0.0649537:0.65
-> 0:True:7,11:16061,1488
-> 1:False:7,14:16061,1488
-> 2:False:7,16:16061,1488
-> 3:False:7,13:16061,1488
-> 4:False:8,13:16061,1488
-> 5:False:8,16:16061,1488
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_2.tar.bz2:0.647150039673:0.064496:0.65
-> 0:True:7,11:16061,1488
-> 1:False:7,14:16061,1488
-> 2:False:7,16:16061,1488
-> 3:False:7,13:16061,1488
-> 4:False:8,14:16061,1488
-> 5:False:8,15:16061,1488
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_3.tar.bz2:0.648363828659:0.0648629:0.64
-> 0:True:7,10:16063,1492
-> 1:False:7,14:16063,1492
-> 2:False:7,16:16063,1492
-> 3:False:7,12:16063,1492
-> 4:False:8,14:16063,1492
-> 5:False:8,15:16063,1492
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_1.tar.bz2:0.653950929642:0.0656262:0.66
-> 0:False:7,17:16065,1496
-> 1:True:7,15:16065,1496
-> 2:False:7,17:16065,1496
-> 3:False:7,16:16065,1496
-> 4:False:8,17:16065,1496
-> 5:False:8,19:16065,1496
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_2.tar.bz2:0.650635004044:0.0654547:0.66
-> 0:False:7,20:16064,1494
-> 1:True:7,16:16064,1494
-> 2:False:7,18:16064,1494
-> 3:False:7,19:16064,1494
-> 4:False:8,19:16064,1494
-> 5:False:8,21:16064,1494
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_3.tar.bz2:0.653598070145:0.0651883:0.65
-> 0:False:7,18:16065,1496
-> 1:True:7,14:16065,1496
-> 2:False:7,16:16065,1496
-> 3:False:7,17:16065,1496
-> 4:False:8,17:16065,1496
-> 5:False:8,19:16065,1496
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_1.tar.bz2:0.649984121323:0.0648957:0.65
-> 0:False:7,18:16066,1498
-> 1:False:7,16:16066,1498
-> 2:True:7,14:16066,1498
-> 3:False:7,17:16066,1498
-> 4:False:8,18:16066,1498
-> 5:False:8,17:16066,1498
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_2.tar.bz2:0.649855136871:0.0654522:0.65
-> 0:False:7,20:16065,1496
-> 1:False:7,17:16065,1496
-> 2:True:7,15:16065,1496
-> 3:False:7,17:16065,1496
-> 4:False:8,20:16065,1496
-> 5:False:8,18:16065,1496
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_3.tar.bz2:0.653506040573:0.0659049:0.66
-> 0:False:7,19:16067,1500
-> 1:False:7,16:16067,1500
-> 2:True:7,14:16067,1500
-> 3:False:7,16:16067,1500
-> 4:False:8,19:16067,1500
-> 5:False:8,18:16067,1500
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_1.tar.bz2:0.65362405777:0.0652464:0.66
-> 0:False:7,14:16062,1490
-> 1:False:7,14:16062,1490
-> 2:False:7,14:16062,1490
-> 3:True:7,12:16062,1490
-> 4:False:8,15:16062,1490
-> 5:False:8,17:16062,1490
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_2.tar.bz2:0.652734041214:0.0650142:0.66
-> 0:False:7,13:16062,1490
-> 1:False:7,13:16062,1490
-> 2:False:7,14:16062,1490
-> 3:True:7,11:16062,1490
-> 4:False:8,14:16062,1490
-> 5:False:8,16:16062,1490
-rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_3.tar.bz2:0.651877164841:0.0644213:0.65
-> 0:False:7,13:16061,1488
-> 1:False:7,13:16061,1488
-> 2:False:7,15:16061,1488
-> 3:True:7,12:16061,1488
-> 4:False:8,15:16061,1488
-> 5:False:8,17:16061,1488
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_1.tar.bz2:0.546470165253:0.03789985:0.54
-> 0:True:6,9:8187,913
-> 1:False:6,13:8187,913
-> 2:False:6,13:8187,913
-> 3:False:6,13:8187,913
-> 4:False:7,13:8187,913
-> 5:False:7,15:8187,913
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_2.tar.bz2:0.544371843338:0.03759062:0.55
-> 0:True:6,9:8186,911
-> 1:False:6,12:8186,911
-> 2:False:6,12:8186,911
-> 3:False:6,13:8186,911
-> 4:False:7,13:8186,911
-> 5:False:7,15:8186,911
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_3.tar.bz2:0.541103839874:0.03733618:0.54
-> 0:True:6,9:8186,911
-> 1:False:6,13:8186,911
-> 2:False:6,13:8186,911
-> 3:False:6,12:8186,911
-> 4:False:7,14:8186,911
-> 5:False:7,15:8186,911
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_1.tar.bz2:0.543742895126:0.03786175:0.54
-> 0:False:6,15:8188,915
-> 1:True:6,11:8188,915
-> 2:False:6,13:8188,915
-> 3:False:6,16:8188,915
-> 4:False:7,14:8188,915
-> 5:False:7,16:8188,915
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_2.tar.bz2:0.537940979004:0.03725995:0.53
-> 0:False:6,15:8186,911
-> 1:True:6,11:8186,911
-> 2:False:6,13:8186,911
-> 3:False:6,16:8186,911
-> 4:False:7,14:8186,911
-> 5:False:7,16:8186,911
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_3.tar.bz2:0.542558908463:0.03715819:0.55
-> 0:False:6,15:8187,913
-> 1:True:6,11:8187,913
-> 2:False:6,13:8187,913
-> 3:False:6,16:8187,913
-> 4:False:7,14:8187,913
-> 5:False:7,16:8187,913
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_1.tar.bz2:0.540561914444:0.0375596:0.54
-> 0:False:6,14:8188,915
-> 1:False:6,13:8188,915
-> 2:True:6,11:8188,915
-> 3:False:6,15:8188,915
-> 4:False:7,14:8188,915
-> 5:False:7,16:8188,915
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_2.tar.bz2:0.541842937469:0.03659568:0.55
-> 0:False:6,15:8186,911
-> 1:False:6,13:8186,911
-> 2:True:6,11:8186,911
-> 3:False:6,15:8186,911
-> 4:False:7,14:8186,911
-> 5:False:7,16:8186,911
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_3.tar.bz2:0.540355920792:0.0374016:0.54
-> 0:False:6,15:8187,913
-> 1:False:6,13:8187,913
-> 2:True:6,11:8187,913
-> 3:False:6,15:8187,913
-> 4:False:7,13:8187,913
-> 5:False:7,16:8187,913
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_1.tar.bz2:0.541235208511:0.03741737:0.54
-> 0:False:6,13:8187,913
-> 1:False:6,14:8187,913
-> 2:False:6,13:8187,913
-> 3:True:6,9:8187,913
-> 4:False:7,15:8187,913
-> 5:False:7,14:8187,913
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_2.tar.bz2:0.544840812683:0.03756925:0.55
-> 0:False:6,13:8187,913
-> 1:False:6,14:8187,913
-> 2:False:6,13:8187,913
-> 3:True:6,9:8187,913
-> 4:False:7,15:8187,913
-> 5:False:7,14:8187,913
-rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_3.tar.bz2:0.541621923447:0.03728376:0.54
-> 0:False:6,13:8186,911
-> 1:False:6,14:8186,911
-> 2:False:6,13:8186,911
-> 3:True:6,9:8186,911
-> 4:False:7,15:8186,911
-> 5:False:7,13:8186,911
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_1.tar.bz2:0.652306079865:0.0659125:0.65
-> 0:True:7,12:16067,1500
-> 1:False:7,17:16067,1500
-> 2:False:8,14:16067,1500
-> 3:False:7,15:16067,1500
-> 4:False:8,19:16067,1500
-> 5:False:7,16:16067,1500
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_2.tar.bz2:0.652922153473:0.0650291:0.65
-> 0:True:7,12:16066,1498
-> 1:False:7,17:16066,1498
-> 2:False:8,14:16066,1498
-> 3:False:7,15:16066,1498
-> 4:False:8,19:16066,1498
-> 5:False:7,16:16066,1498
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_3.tar.bz2:0.655544042587:0.0659209:0.66
-> 0:True:7,12:16067,1500
-> 1:False:7,17:16067,1500
-> 2:False:8,14:16067,1500
-> 3:False:7,15:16067,1500
-> 4:False:8,19:16067,1500
-> 5:False:7,16:16067,1500
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_1.tar.bz2:0.652410030365:0.0653651:0.65
-> 0:False:7,21:16067,1500
-> 1:True:7,16:16067,1500
-> 2:False:8,21:16067,1500
-> 3:False:7,18:16067,1500
-> 4:False:8,19:16067,1500
-> 5:False:7,22:16067,1500
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_2.tar.bz2:0.65474486351:0.0669887:0.66
-> 0:False:7,20:16071,1508
-> 1:True:7,16:16071,1508
-> 2:False:8,21:16071,1508
-> 3:False:7,18:16071,1508
-> 4:False:8,19:16071,1508
-> 5:False:7,22:16071,1508
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_3.tar.bz2:0.650647878647:0.0655193:0.65
-> 0:False:7,21:16069,1504
-> 1:True:7,16:16069,1504
-> 2:False:8,21:16069,1504
-> 3:False:7,18:16069,1504
-> 4:False:8,19:16069,1504
-> 5:False:7,22:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_1.tar.bz2:0.652339935303:0.0661212:0.65
-> 0:False:7,18:16069,1504
-> 1:False:7,21:16069,1504
-> 2:True:8,16:16069,1504
-> 3:False:7,19:16069,1504
-> 4:False:8,21:16069,1504
-> 5:False:7,19:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_2.tar.bz2:0.651789188385:0.0656496:0.65
-> 0:False:7,18:16069,1504
-> 1:False:7,21:16069,1504
-> 2:True:8,16:16069,1504
-> 3:False:7,19:16069,1504
-> 4:False:8,21:16069,1504
-> 5:False:7,19:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_3.tar.bz2:0.655261993408:0.0665674:0.65
-> 0:False:7,18:16070,1506
-> 1:False:7,21:16070,1506
-> 2:True:8,16:16070,1506
-> 3:False:7,19:16070,1506
-> 4:False:8,21:16070,1506
-> 5:False:7,19:16070,1506
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_1.tar.bz2:0.647444009781:0.0654901:0.65
-> 0:False:7,19:16068,1502
-> 1:False:7,18:16068,1502
-> 2:False:8,19:16068,1502
-> 3:True:7,16:16068,1502
-> 4:False:8,21:16068,1502
-> 5:False:7,22:16068,1502
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_2.tar.bz2:0.654352903366:0.0658978:0.66
-> 0:False:7,19:16068,1502
-> 1:False:7,18:16068,1502
-> 2:False:8,19:16068,1502
-> 3:True:7,16:16068,1502
-> 4:False:8,21:16068,1502
-> 5:False:7,22:16068,1502
-rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_3.tar.bz2:0.653702974319:0.0664205:0.65
-> 0:False:7,19:16070,1506
-> 1:False:7,18:16070,1506
-> 2:False:8,19:16070,1506
-> 3:True:7,16:16070,1506
-> 4:False:8,21:16070,1506
-> 5:False:7,22:16070,1506
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_1.tar.bz2:0.652059078217:0.0653964:0.65
-> 0:True:7,12:16066,1498
-> 1:False:7,17:16066,1498
-> 2:False:7,18:16066,1498
-> 3:False:7,15:16066,1498
-> 4:False:8,16:16066,1498
-> 5:False:8,17:16066,1498
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_2.tar.bz2:0.651430845261:0.0649973:0.65
-> 0:True:7,12:16064,1494
-> 1:False:7,17:16064,1494
-> 2:False:7,19:16064,1494
-> 3:False:7,16:16064,1494
-> 4:False:8,16:16064,1494
-> 5:False:8,18:16064,1494
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_3.tar.bz2:0.653851032257:0.0656805:0.65
-> 0:True:7,12:16066,1498
-> 1:False:7,17:16066,1498
-> 2:False:7,19:16066,1498
-> 3:False:7,15:16066,1498
-> 4:False:8,16:16066,1498
-> 5:False:8,18:16066,1498
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_1.tar.bz2:0.651872873306:0.0657999:0.66
-> 0:False:7,20:16069,1504
-> 1:True:7,16:16069,1504
-> 2:False:7,19:16069,1504
-> 3:False:7,19:16069,1504
-> 4:False:8,19:16069,1504
-> 5:False:8,22:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_2.tar.bz2:0.64821600914:0.0637831:0.65
-> 0:False:7,20:16066,1498
-> 1:True:7,16:16066,1498
-> 2:False:7,20:16066,1498
-> 3:False:7,19:16066,1498
-> 4:False:8,19:16066,1498
-> 5:False:8,23:16066,1498
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_3.tar.bz2:0.654507160187:0.0661358:0.65
-> 0:False:7,20:16068,1502
-> 1:True:7,16:16068,1502
-> 2:False:7,19:16068,1502
-> 3:False:7,19:16068,1502
-> 4:False:8,19:16068,1502
-> 5:False:8,23:16068,1502
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_1.tar.bz2:0.650116205215:0.0661821:0.65
-> 0:False:7,22:16069,1504
-> 1:False:7,19:16069,1504
-> 2:True:7,16:16069,1504
-> 3:False:7,19:16069,1504
-> 4:False:8,22:16069,1504
-> 5:False:8,21:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_2.tar.bz2:0.652931213379:0.0657872:0.65
-> 0:False:7,21:16069,1504
-> 1:False:7,19:16069,1504
-> 2:True:7,16:16069,1504
-> 3:False:7,19:16069,1504
-> 4:False:8,22:16069,1504
-> 5:False:8,21:16069,1504
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_3.tar.bz2:0.653357028961:0.0658892:0.66
-> 0:False:7,22:16071,1508
-> 1:False:7,19:16071,1508
-> 2:True:7,16:16071,1508
-> 3:False:7,19:16071,1508
-> 4:False:8,22:16071,1508
-> 5:False:8,21:16071,1508
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_1.tar.bz2:0.655071973801:0.0656073:0.64
-> 0:False:7,15:16067,1500
-> 1:False:7,15:16067,1500
-> 2:False:7,16:16067,1500
-> 3:True:7,12:16067,1500
-> 4:False:8,17:16067,1500
-> 5:False:8,19:16067,1500
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_2.tar.bz2:0.652837991714:0.0653159:0.65
-> 0:False:7,15:16067,1500
-> 1:False:7,15:16067,1500
-> 2:False:7,16:16067,1500
-> 3:True:7,12:16067,1500
-> 4:False:8,17:16067,1500
-> 5:False:8,19:16067,1500
-rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_3.tar.bz2:0.65068602562:0.0656774:0.65
-> 0:False:7,15:16065,1496
-> 1:False:7,15:16065,1496
-> 2:False:7,16:16065,1496
-> 3:True:7,12:16065,1496
-> 4:False:8,17:16065,1496
-> 5:False:8,19:16065,1496
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_1.tar.bz2:0.566171407699585:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_2.tar.bz2:0.5661728382110596:0.0:0.5700000000000074
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-1_10_3.tar.bz2:0.5569174289703369:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_1.tar.bz2:0.5584070682525635:0.0:0.5599999999999881
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_2.tar.bz2:0.5609116554260254:0.0:0.5499999999999972
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-2_10_3.tar.bz2:0.5619511604309082:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_1.tar.bz2:0.5798439979553223:0.0:0.5900000000000176
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_2.tar.bz2:0.5696711540222168:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-3_10_3.tar.bz2:0.560297966003418:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_1.tar.bz2:0.5769999027252197:0.0:0.5799999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_2.tar.bz2:0.566784143447876:0.0:0.5599999999999881
+rovers-suboptimal-old-noisy/10/rovers_noisy_p01_hyp-4_10_3.tar.bz2:0.5606474876403809:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_1.tar.bz2:0.6029083728790283:0.0:0.6099999999999994
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_2.tar.bz2:0.5960447788238525:0.0:0.5900000000000176
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-1_10_3.tar.bz2:0.5846457481384277:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_1.tar.bz2:0.6015520095825195:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_2.tar.bz2:0.5789129734039307:0.0:0.5799999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-2_10_3.tar.bz2:0.584583044052124:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_1.tar.bz2:0.5940332412719727:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_2.tar.bz2:0.5913710594177246:0.0:0.5899999999999892
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-3_10_3.tar.bz2:0.5799572467803955:0.0:0.5799999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_1.tar.bz2:0.5729949474334717:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_2.tar.bz2:0.5871074199676514:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p02_hyp-4_10_3.tar.bz2:0.5923995971679688:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_1.tar.bz2:0.5642068386077881:0.0:0.5700000000000074
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_2.tar.bz2:0.5724606513977051:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-1_10_3.tar.bz2:0.5799086093902588:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_1.tar.bz2:0.5767064094543457:0.0:0.5799999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_2.tar.bz2:0.5813610553741455:0.0:0.5799999999999983
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-2_10_3.tar.bz2:0.5965802669525146:0.0:0.6000000000000085
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_1.tar.bz2:0.5696427822113037:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_2.tar.bz2:0.5655908584594727:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-3_10_3.tar.bz2:0.5866577625274658:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_1.tar.bz2:0.5687384605407715:0.0:0.5599999999999881
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_2.tar.bz2:0.59275221824646:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/10/rovers_noisy_p03_hyp-4_10_3.tar.bz2:0.574958086013794:0.0:0.5700000000000216
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_1.tar.bz2:0.5391995906829834:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_2.tar.bz2:0.5659387111663818:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-1_30_3.tar.bz2:0.5604348182678223:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_1.tar.bz2:0.5557692050933838:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_2.tar.bz2:0.5396873950958252:0.0:0.5300000000000011
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-2_30_3.tar.bz2:0.5355503559112549:0.0:0.5300000000000011
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_1.tar.bz2:0.546205997467041:0.0:0.5500000000000114
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_2.tar.bz2:0.5366692543029785:0.0:0.5300000000000011
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-3_30_3.tar.bz2:0.5442979335784912:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_1.tar.bz2:0.5571606159210205:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_2.tar.bz2:0.5620298385620117:0.0:0.5700000000000216
+rovers-suboptimal-old-noisy/30/rovers_noisy_p01_hyp-4_30_3.tar.bz2:0.5573844909667969:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_1.tar.bz2:0.5652122497558594:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_2.tar.bz2:0.5597965717315674:0.0:0.5599999999999739
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-1_30_3.tar.bz2:0.5710034370422363:0.0:0.5600000000000307
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_1.tar.bz2:0.597043514251709:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_2.tar.bz2:0.590510368347168:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-2_30_3.tar.bz2:0.5791051387786865:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_1.tar.bz2:0.575808048248291:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_2.tar.bz2:0.5735151767730713:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-3_30_3.tar.bz2:0.572317361831665:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_1.tar.bz2:0.5880169868469238:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_2.tar.bz2:0.5912082195281982:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p02_hyp-4_30_3.tar.bz2:0.5793423652648926:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_1.tar.bz2:0.5862395763397217:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_2.tar.bz2:0.5905110836029053:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-1_30_3.tar.bz2:0.5941014289855957:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_1.tar.bz2:0.587897539138794:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_2.tar.bz2:0.5979030132293701:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-2_30_3.tar.bz2:0.5813353061676025:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_1.tar.bz2:0.5910961627960205:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_2.tar.bz2:0.5909488201141357:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-3_30_3.tar.bz2:0.5827529430389404:0.0:0.589999999999975
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_1.tar.bz2:0.5878520011901855:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_2.tar.bz2:0.5699398517608643:0.0:0.5599999999999739
+rovers-suboptimal-old-noisy/30/rovers_noisy_p03_hyp-4_30_3.tar.bz2:0.5781104564666748:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_1.tar.bz2:0.5722804069519043:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_2.tar.bz2:0.5843887329101562:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-1_50_3.tar.bz2:0.5785102844238281:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_1.tar.bz2:0.5739703178405762:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_2.tar.bz2:0.562882661819458:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-2_50_3.tar.bz2:0.5767414569854736:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_1.tar.bz2:0.5748369693756104:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_2.tar.bz2:0.5726072788238525:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-3_50_3.tar.bz2:0.5723068714141846:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_1.tar.bz2:0.5741853713989258:0.0:0.5800000000000409
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_2.tar.bz2:0.5512123107910156:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/50/rovers_noisy_p01_hyp-4_50_3.tar.bz2:0.5615091323852539:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_1.tar.bz2:0.5990362167358398:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_2.tar.bz2:0.6019644737243652:0.0:0.6000000000000227
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-1_50_3.tar.bz2:0.6028647422790527:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_1.tar.bz2:0.5893690586090088:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_2.tar.bz2:0.5739634037017822:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-2_50_3.tar.bz2:0.5770823955535889:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_1.tar.bz2:0.587977409362793:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_2.tar.bz2:0.5864524841308594:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-3_50_3.tar.bz2:0.5837130546569824:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_1.tar.bz2:0.5565764904022217:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_2.tar.bz2:0.5509264469146729:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/50/rovers_noisy_p02_hyp-4_50_3.tar.bz2:0.5598042011260986:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_1.tar.bz2:0.5582423210144043:0.0:0.5600000000000307
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_2.tar.bz2:0.5731651782989502:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-1_50_3.tar.bz2:0.5640773773193359:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_1.tar.bz2:0.5747435092926025:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_2.tar.bz2:0.5652482509613037:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-2_50_3.tar.bz2:0.5925354957580566:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_1.tar.bz2:0.5796856880187988:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_2.tar.bz2:0.5720081329345703:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-3_50_3.tar.bz2:0.5692543983459473:0.0:0.5600000000000307
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_1.tar.bz2:0.5663471221923828:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_2.tar.bz2:0.5525052547454834:0.0:0.5500000000000114
+rovers-suboptimal-old-noisy/50/rovers_noisy_p03_hyp-4_50_3.tar.bz2:0.5737292766571045:0.0:0.5700000000000216
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_1.tar.bz2:0.5536417961120605:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_2.tar.bz2:0.5390863418579102:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-1_70_3.tar.bz2:0.5544021129608154:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_1.tar.bz2:0.5473599433898926:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_2.tar.bz2:0.541513204574585:0.0:0.5400000000000205
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-2_70_3.tar.bz2:0.5506458282470703:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_1.tar.bz2:0.5713355541229248:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_2.tar.bz2:0.5509371757507324:0.0:0.549999999999983
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-3_70_3.tar.bz2:0.5501773357391357:0.0:0.5500000000000114
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_1.tar.bz2:0.5566005706787109:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_2.tar.bz2:0.5418198108673096:0.0:0.539999999999992
+rovers-suboptimal-old-noisy/70/rovers_noisy_p01_hyp-4_70_3.tar.bz2:0.5550637245178223:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_1.tar.bz2:0.5812339782714844:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_2.tar.bz2:0.58827805519104:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-1_70_3.tar.bz2:0.5682277679443359:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_1.tar.bz2:0.5620248317718506:0.0:0.5700000000000216
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_2.tar.bz2:0.5909581184387207:0.0:0.589999999999975
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-2_70_3.tar.bz2:0.5788025856018066:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_1.tar.bz2:0.579725980758667:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_2.tar.bz2:0.5725886821746826:0.0:0.5700000000000216
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-3_70_3.tar.bz2:0.5719444751739502:0.0:0.5699999999999648
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_1.tar.bz2:0.5664598941802979:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_2.tar.bz2:0.5687739849090576:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/70/rovers_noisy_p02_hyp-4_70_3.tar.bz2:0.574124813079834:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_1.tar.bz2:0.5630323886871338:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_2.tar.bz2:0.5791077613830566:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-1_70_3.tar.bz2:0.5751526355743408:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_1.tar.bz2:0.5891315937042236:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_2.tar.bz2:0.5909874439239502:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-2_70_3.tar.bz2:0.5917978286743164:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_1.tar.bz2:0.586045503616333:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_2.tar.bz2:0.6093816757202148:0.0:0.6100000000000136
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-3_70_3.tar.bz2:0.5990796089172363:0.0:0.5900000000000318
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_1.tar.bz2:0.5967147350311279:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_2.tar.bz2:0.5929622650146484:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/70/rovers_noisy_p03_hyp-4_70_3.tar.bz2:0.6041662693023682:0.0:0.6100000000000136
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_1.tar.bz2:0.5645434856414795:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_2.tar.bz2:0.5724844932556152:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-1_full_3.tar.bz2:0.5534119606018066:0.0:0.5500000000000114
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_1.tar.bz2:0.5624337196350098:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_2.tar.bz2:0.5855104923248291:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-2_full_3.tar.bz2:0.5525708198547363:0.0:0.5500000000000114
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_1.tar.bz2:0.5573861598968506:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_2.tar.bz2:0.5535600185394287:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-3_full_3.tar.bz2:0.5601584911346436:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_1.tar.bz2:0.5721156597137451:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_2.tar.bz2:0.5588498115539551:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p01_hyp-4_full_3.tar.bz2:0.5649464130401611:0.0:0.5600000000000023
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_1.tar.bz2:0.5789060592651367:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_2.tar.bz2:0.5783290863037109:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-1_full_3.tar.bz2:0.5902409553527832:0.0:0.5900000000000318
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_1.tar.bz2:0.5803186893463135:0.0:0.589999999999975
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_2.tar.bz2:0.5927407741546631:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-2_full_3.tar.bz2:0.5809087753295898:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_1.tar.bz2:0.6000511646270752:0.0:0.5999999999999659
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_2.tar.bz2:0.5860648155212402:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-3_full_3.tar.bz2:0.5862092971801758:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_1.tar.bz2:0.5847983360290527:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_2.tar.bz2:0.5969746112823486:0.0:0.5999999999999943
+rovers-suboptimal-old-noisy/100/rovers_noisy_p02_hyp-4_full_3.tar.bz2:0.5844297409057617:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_1.tar.bz2:0.5900242328643799:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_2.tar.bz2:0.5906345844268799:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-1_full_3.tar.bz2:0.5854480266571045:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_1.tar.bz2:0.5932912826538086:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_2.tar.bz2:0.5666623115539551:0.0:0.5699999999999932
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-2_full_3.tar.bz2:0.5880260467529297:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_1.tar.bz2:0.5850393772125244:0.0:0.5800000000000125
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_2.tar.bz2:0.5881476402282715:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-3_full_3.tar.bz2:0.5805609226226807:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_1.tar.bz2:0.5854377746582031:0.0:0.5900000000000034
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_2.tar.bz2:0.5804176330566406:0.0:0.5799999999999841
+rovers-suboptimal-old-noisy/100/rovers_noisy_p03_hyp-4_full_3.tar.bz2:0.597205638885498:0.0:0.5999999999999943

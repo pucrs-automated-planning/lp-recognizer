@@ -125,15 +125,15 @@ get_results() {
 		echo "Processing domain $domain-$1"
 		# Domain .txt tables.
 		if [[ "$DD" == "txt" ]]; then
-			python2 data_domain.py $domain-$1 $TEST
+			python3 data_domain.py $domain-$1 $TEST
 		fi
 		# Method's results.
 		if [[ "$EXP" == "output" ]]; then
 			# .output files + .txt tables.
-			python2 test_domain.py $DATASETS $domain-$1 "$METHODS" $TEST -S cplex > experiments/stdout/$domain-$1.txt
+			python3 test_domain.py $DATASETS $domain-$1 "$METHODS" $TEST -S cplex > experiments/stdout/$domain-$1.txt
 		elif [[ "$EXP" == "txt" ]]; then
 			# .txt tables only.
-			python2 data_output.py "$METHODS" $domain-$1 $TEST
+			python3 data_output.py "$METHODS" $domain-$1 $TEST
 		fi
 	done
 }

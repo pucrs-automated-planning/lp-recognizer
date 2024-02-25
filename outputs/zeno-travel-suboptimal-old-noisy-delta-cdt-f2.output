@@ -1,1260 +1,180 @@
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_1.tar.bz2:0.70609498024:0.096292:0.71
-> 0:True:8,8:16869,2381
-> 1:True:7,7:16869,2381
-> 2:False:9,11:16869,2381
-> 3:False:10,11:16869,2381
-> 4:False:10,12:16869,2381
-> 5:False:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_2.tar.bz2:0.701864957809:0.095946:0.7
-> 0:True:8,9:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,11:16869,2381
-> 3:True:10,11:16869,2381
-> 4:True:10,11:16869,2381
-> 5:True:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_3.tar.bz2:0.705237150192:0.0956695:0.7
-> 0:True:8,9:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,11:16869,2381
-> 3:True:10,11:16869,2381
-> 4:True:10,11:16869,2381
-> 5:True:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_1.tar.bz2:0.703307151794:0.0947901:0.71
-> 0:True:8,8:16869,2381
-> 1:False:7,8:16869,2381
-> 2:False:9,11:16869,2381
-> 3:False:10,12:16869,2381
-> 4:False:10,11:16869,2381
-> 5:False:10,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_2.tar.bz2:0.706414937973:0.0958885:0.71
-> 0:True:8,9:16869,2381
-> 1:True:7,8:16869,2381
-> 2:False:9,11:16869,2381
-> 3:False:10,12:16869,2381
-> 4:False:10,12:16869,2381
-> 5:False:10,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_3.tar.bz2:0.699457883835:0.0935509:0.71
-> 0:False:8,9:16869,2381
-> 1:False:7,8:16869,2381
-> 2:False:9,10:16869,2381
-> 3:True:10,10:16869,2381
-> 4:True:10,10:16869,2381
-> 5:True:10,10:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_1.tar.bz2:0.701818943024:0.0947985:0.7
-> 0:False:8,9:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,10:16869,2381
-> 3:False:10,11:16869,2381
-> 4:True:10,10:16869,2381
-> 5:False:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_2.tar.bz2:0.705236911774:0.0987767:0.7
-> 0:False:8,10:16869,2381
-> 1:False:7,9:16869,2381
-> 2:True:9,9:16869,2381
-> 3:False:10,12:16869,2381
-> 4:True:10,10:16869,2381
-> 5:False:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_3.tar.bz2:0.701620101929:0.0927183:0.7
-> 0:False:8,9:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,10:16869,2381
-> 3:False:10,11:16869,2381
-> 4:True:10,10:16869,2381
-> 5:True:10,10:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_1.tar.bz2:0.70300412178:0.0935219:0.7
-> 0:False:8,9:16869,2381
-> 1:False:7,8:16869,2381
-> 2:False:9,10:16869,2381
-> 3:True:10,10:16869,2381
-> 4:True:10,10:16869,2381
-> 5:True:10,10:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_2.tar.bz2:0.702264070511:0.0937299:0.7
-> 0:False:8,10:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,11:16869,2381
-> 3:True:10,10:16869,2381
-> 4:False:10,11:16869,2381
-> 5:False:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_3.tar.bz2:0.698491811752:0.0937447:0.7
-> 0:False:8,10:16869,2381
-> 1:False:7,9:16869,2381
-> 2:False:9,11:16869,2381
-> 3:True:10,10:16869,2381
-> 4:False:10,11:16869,2381
-> 5:False:10,11:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_1.tar.bz2:0.695958137512:0.0906648:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,12:16869,2381
-> 3:True:12,12:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_2.tar.bz2:0.69685792923:0.089009:0.7
-> 0:True:12,12:16869,2381
-> 1:False:12,13:16869,2381
-> 2:False:11,12:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_3.tar.bz2:0.693397045135:0.0863687:0.69
-> 0:True:12,12:16869,2381
-> 1:False:12,14:16869,2381
-> 2:False:11,12:16869,2381
-> 3:False:12,14:16869,2381
-> 4:False:12,14:16869,2381
-> 5:False:11,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_1.tar.bz2:0.698625087738:0.0907398:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_2.tar.bz2:0.697129964828:0.089621:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,14:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_3.tar.bz2:0.693849086761:0.0889672:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,14:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_1.tar.bz2:0.697131872177:0.0917467:0.69
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_2.tar.bz2:0.695176124573:0.0867606:0.7
-> 0:False:12,14:16869,2381
-> 1:False:12,14:16869,2381
-> 2:True:11,11:16869,2381
-> 3:False:12,13:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_3.tar.bz2:0.700407981873:0.091077:0.7
-> 0:False:12,14:16869,2381
-> 1:True:12,13:16869,2381
-> 2:True:11,12:16869,2381
-> 3:False:12,14:16869,2381
-> 4:False:12,14:16869,2381
-> 5:True:11,12:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_1.tar.bz2:0.692454099655:0.0855694:0.7
-> 0:False:12,13:16869,2381
-> 1:False:12,13:16869,2381
-> 2:False:11,13:16869,2381
-> 3:True:12,12:16869,2381
-> 4:False:12,14:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_2.tar.bz2:0.696369171143:0.0907671:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:True:12,12:16869,2381
-> 4:False:12,14:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_3.tar.bz2:0.699333906174:0.0913931:0.7
-> 0:False:12,13:16869,2381
-> 1:True:12,12:16869,2381
-> 2:False:11,13:16869,2381
-> 3:True:12,12:16869,2381
-> 4:False:12,13:16869,2381
-> 5:False:11,13:16869,2381
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_1.tar.bz2:0.816469907761:0.1340937:0.81
-> 0:False:5,7:22417,3067
-> 1:True:10,10:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,8:22417,3067
-> 4:False:5,7:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_2.tar.bz2:0.820222854614:0.1410317:0.82
-> 0:False:5,7:22417,3067
-> 1:True:10,10:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,8:22417,3067
-> 4:False:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_3.tar.bz2:0.815762042999:0.137332:0.82
-> 0:False:5,7:22417,3067
-> 1:True:10,11:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,9:22417,3067
-> 4:True:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_1.tar.bz2:0.815525054932:0.1367839:0.81
-> 0:False:5,7:22417,3067
-> 1:True:10,11:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,9:22417,3067
-> 4:True:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_2.tar.bz2:0.821537971497:0.1415435:0.83
-> 0:True:5,6:22417,3067
-> 1:True:10,11:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,9:22417,3067
-> 4:True:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_3.tar.bz2:0.820788860321:0.1432305:0.81
-> 0:False:5,7:22417,3067
-> 1:True:10,11:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,9:22417,3067
-> 4:False:5,7:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_1.tar.bz2:0.8201379776:0.1402349:0.82
-> 0:False:5,7:22417,3067
-> 1:False:10,12:22417,3067
-> 2:False:6,8:22417,3067
-> 3:False:8,10:22417,3067
-> 4:True:5,5:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_2.tar.bz2:0.814807891846:0.1375649:0.8
-> 0:False:5,7:22417,3067
-> 1:False:10,12:22417,3067
-> 2:False:6,8:22417,3067
-> 3:False:8,10:22417,3067
-> 4:True:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_3.tar.bz2:0.818253993988:0.1393926:0.82
-> 0:False:5,7:22417,3067
-> 1:False:10,12:22417,3067
-> 2:False:6,8:22417,3067
-> 3:False:8,10:22417,3067
-> 4:True:5,5:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_1.tar.bz2:0.815158128738:0.1381419:0.82
-> 0:False:5,7:22417,3067
-> 1:False:10,12:22417,3067
-> 2:False:6,8:22417,3067
-> 3:True:8,9:22417,3067
-> 4:False:5,7:22417,3067
-> 5:True:7,8:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_2.tar.bz2:0.814481973648:0.1329827:0.82
-> 0:False:5,7:22417,3067
-> 1:True:10,11:22417,3067
-> 2:True:6,7:22417,3067
-> 3:False:8,10:22417,3067
-> 4:True:5,6:22417,3067
-> 5:True:7,8:22417,3067
-zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_3.tar.bz2:0.810490131378:0.13494:0.8
-> 0:False:5,7:22417,3067
-> 1:False:10,12:22417,3067
-> 2:False:6,8:22417,3067
-> 3:False:8,10:22417,3067
-> 4:True:5,6:22417,3067
-> 5:False:7,9:22417,3067
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_1.tar.bz2:0.703099966049:0.0952044:0.7
-> 0:True:8,8:16872,2384
-> 1:False:7,8:16872,2384
-> 2:False:9,13:16872,2384
-> 3:False:10,12:16872,2384
-> 4:False:10,13:16872,2384
-> 5:False:10,12:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_2.tar.bz2:0.705007791519:0.0932724:0.71
-> 0:True:8,8:16871,2383
-> 1:False:7,9:16871,2383
-> 2:False:9,12:16871,2383
-> 3:False:10,12:16871,2383
-> 4:False:10,12:16871,2383
-> 5:False:10,12:16871,2383
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_3.tar.bz2:0.701098918915:0.0943937:0.69
-> 0:True:8,8:16872,2384
-> 1:False:7,9:16872,2384
-> 2:False:9,12:16872,2384
-> 3:False:10,12:16872,2384
-> 4:False:10,12:16872,2384
-> 5:False:10,12:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_1.tar.bz2:0.699385881424:0.0930862:0.7
-> 0:True:8,9:16872,2384
-> 1:False:7,9:16872,2384
-> 2:False:9,13:16872,2384
-> 3:False:10,12:16872,2384
-> 4:False:10,13:16872,2384
-> 5:False:10,12:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_2.tar.bz2:0.704308986664:0.0958592:0.7
-> 0:True:8,9:16871,2383
-> 1:True:7,8:16871,2383
-> 2:False:9,11:16871,2383
-> 3:True:10,11:16871,2383
-> 4:True:10,11:16871,2383
-> 5:True:10,11:16871,2383
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_3.tar.bz2:0.705974817276:0.0958741:0.71
-> 0:True:8,9:16872,2384
-> 1:False:7,9:16872,2384
-> 2:False:9,12:16872,2384
-> 3:True:10,11:16872,2384
-> 4:False:10,12:16872,2384
-> 5:True:10,11:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_1.tar.bz2:0.699481964111:0.0932983:0.7
-> 0:False:8,13:16874,2386
-> 1:False:7,13:16874,2386
-> 2:False:9,12:16874,2386
-> 3:False:10,15:16874,2386
-> 4:True:10,12:16874,2386
-> 5:False:10,14:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_2.tar.bz2:0.699851036072:0.0937592:0.7
-> 0:False:8,11:16873,2385
-> 1:False:7,12:16873,2385
-> 2:False:9,12:16873,2385
-> 3:False:10,14:16873,2385
-> 4:True:10,12:16873,2385
-> 5:False:10,13:16873,2385
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_3.tar.bz2:0.705392122269:0.0937987:0.71
-> 0:False:8,13:16873,2385
-> 1:False:7,13:16873,2385
-> 2:True:9,11:16873,2385
-> 3:False:10,15:16873,2385
-> 4:False:10,13:16873,2385
-> 5:False:10,14:16873,2385
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_1.tar.bz2:0.701289892197:0.0937894:0.7
-> 0:False:8,10:16872,2384
-> 1:False:7,11:16872,2384
-> 2:False:9,11:16872,2384
-> 3:True:10,10:16872,2384
-> 4:True:10,10:16872,2384
-> 5:False:10,11:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_2.tar.bz2:0.702477931976:0.0940578:0.71
-> 0:False:8,10:16872,2384
-> 1:False:7,10:16872,2384
-> 2:False:9,12:16872,2384
-> 3:True:10,10:16872,2384
-> 4:False:10,12:16872,2384
-> 5:False:10,11:16872,2384
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_3.tar.bz2:0.700105905533:0.094874:0.7
-> 0:False:8,9:16871,2383
-> 1:False:7,10:16871,2383
-> 2:False:9,12:16871,2383
-> 3:True:10,10:16871,2383
-> 4:True:10,10:16871,2383
-> 5:False:10,11:16871,2383
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_1.tar.bz2:0.698642969131:0.0902616:0.71
-> 0:True:12,15:16873,2385
-> 1:True:12,15:16873,2385
-> 2:False:11,16:16873,2385
-> 3:False:12,16:16873,2385
-> 4:False:12,18:16873,2385
-> 5:False:11,16:16873,2385
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_2.tar.bz2:0.699232816696:0.0917899:0.7
-> 0:True:12,13:16874,2386
-> 1:True:12,13:16874,2386
-> 2:False:11,14:16874,2386
-> 3:False:12,14:16874,2386
-> 4:False:12,15:16874,2386
-> 5:False:11,14:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_3.tar.bz2:0.695842981339:0.0904544:0.7
-> 0:True:12,13:16874,2386
-> 1:False:12,15:16874,2386
-> 2:False:11,15:16874,2386
-> 3:False:12,14:16874,2386
-> 4:False:12,16:16874,2386
-> 5:False:11,15:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_1.tar.bz2:0.697822093964:0.0921995:0.7
-> 0:False:12,14:16874,2386
-> 1:True:12,12:16874,2386
-> 2:False:11,13:16874,2386
-> 3:False:12,14:16874,2386
-> 4:False:12,14:16874,2386
-> 5:False:11,14:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_2.tar.bz2:0.698549032211:0.0910661:0.7
-> 0:False:12,15:16873,2385
-> 1:True:12,13:16873,2385
-> 2:False:11,15:16873,2385
-> 3:False:12,16:16873,2385
-> 4:False:12,15:16873,2385
-> 5:False:11,15:16873,2385
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_3.tar.bz2:0.700724124908:0.0930079:0.7
-> 0:False:12,15:16873,2385
-> 1:True:12,14:16873,2385
-> 2:False:11,16:16873,2385
-> 3:False:12,15:16873,2385
-> 4:False:12,16:16873,2385
-> 5:False:11,16:16873,2385
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_1.tar.bz2:0.694822072983:0.0871723:0.69
-> 0:False:12,17:16874,2386
-> 1:True:12,15:16874,2386
-> 2:True:11,14:16874,2386
-> 3:True:12,15:16874,2386
-> 4:False:12,17:16874,2386
-> 5:False:11,15:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_2.tar.bz2:0.694935083389:0.0873714:0.7
-> 0:False:12,17:16874,2386
-> 1:False:12,16:16874,2386
-> 2:True:11,13:16874,2386
-> 3:False:12,16:16874,2386
-> 4:True:12,14:16874,2386
-> 5:False:11,14:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_3.tar.bz2:0.69725894928:0.0894243:0.7
-> 0:False:12,15:16874,2386
-> 1:True:12,14:16874,2386
-> 2:True:11,13:16874,2386
-> 3:False:12,17:16874,2386
-> 4:False:12,16:16874,2386
-> 5:True:11,13:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_1.tar.bz2:0.702033042908:0.0920979:0.7
-> 0:False:12,16:16874,2386
-> 1:True:12,15:16874,2386
-> 2:False:11,17:16874,2386
-> 3:True:12,15:16874,2386
-> 4:False:12,17:16874,2386
-> 5:False:11,17:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_2.tar.bz2:0.698827981949:0.0917921:0.71
-> 0:False:12,15:16874,2386
-> 1:False:12,14:16874,2386
-> 2:False:11,15:16874,2386
-> 3:True:12,13:16874,2386
-> 4:False:12,14:16874,2386
-> 5:False:11,14:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_3.tar.bz2:0.698086977005:0.0881:0.7
-> 0:False:12,16:16874,2386
-> 1:False:12,16:16874,2386
-> 2:False:11,15:16874,2386
-> 3:True:12,13:16874,2386
-> 4:False:12,15:16874,2386
-> 5:False:11,16:16874,2386
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_1.tar.bz2:0.815843105316:0.1363621:0.82
-> 0:False:5,10:22421,3071
-> 1:True:10,13:22421,3071
-> 2:False:6,11:22421,3071
-> 3:False:8,12:22421,3071
-> 4:False:5,10:22421,3071
-> 5:False:7,12:22421,3071
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_2.tar.bz2:0.813491106033:0.1329818:0.82
-> 0:False:5,9:22422,3072
-> 1:True:10,11:22422,3072
-> 2:False:6,12:22422,3072
-> 3:False:8,10:22422,3072
-> 4:False:5,9:22422,3072
-> 5:False:7,12:22422,3072
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_3.tar.bz2:0.816694974899:0.1382685:0.82
-> 0:False:5,11:22422,3072
-> 1:True:10,13:22422,3072
-> 2:False:6,12:22422,3072
-> 3:False:8,12:22422,3072
-> 4:False:5,10:22422,3072
-> 5:False:7,13:22422,3072
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_1.tar.bz2:0.821465015411:0.1431043:0.82
-> 0:False:5,8:22420,3070
-> 1:False:10,11:22420,3070
-> 2:False:6,8:22420,3070
-> 3:True:8,8:22420,3070
-> 4:False:5,8:22420,3070
-> 5:False:7,8:22420,3070
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_2.tar.bz2:0.818291902542:0.142493:0.82
-> 0:False:5,9:22420,3070
-> 1:False:10,12:22420,3070
-> 2:False:6,9:22420,3070
-> 3:True:8,9:22420,3070
-> 4:False:5,8:22420,3070
-> 5:False:7,9:22420,3070
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_3.tar.bz2:0.812316179276:0.1367984:0.81
-> 0:False:5,8:22419,3069
-> 1:True:10,11:22419,3069
-> 2:False:6,10:22419,3069
-> 3:True:8,9:22419,3069
-> 4:False:5,8:22419,3069
-> 5:False:7,11:22419,3069
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_1.tar.bz2:0.816870927811:0.137031:0.82
-> 0:False:5,9:22419,3069
-> 1:False:10,13:22419,3069
-> 2:False:6,9:22419,3069
-> 3:False:8,11:22419,3069
-> 4:True:5,7:22419,3069
-> 5:True:7,9:22419,3069
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_2.tar.bz2:0.817985057831:0.1382851:0.82
-> 0:False:5,9:22419,3069
-> 1:False:10,13:22419,3069
-> 2:False:6,9:22419,3069
-> 3:False:8,11:22419,3069
-> 4:True:5,7:22419,3069
-> 5:False:7,10:22419,3069
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_3.tar.bz2:0.813919067383:0.1346889:0.82
-> 0:False:5,9:22419,3069
-> 1:True:10,12:22419,3069
-> 2:False:6,10:22419,3069
-> 3:False:8,11:22419,3069
-> 4:True:5,7:22419,3069
-> 5:False:7,11:22419,3069
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_1.tar.bz2:0.813468933105:0.1360612:0.81
-> 0:False:5,9:22420,3070
-> 1:True:10,11:22420,3070
-> 2:False:6,8:22420,3070
-> 3:False:8,11:22420,3070
-> 4:False:5,8:22420,3070
-> 5:True:7,8:22420,3070
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_2.tar.bz2:0.826349020004:0.1445847:0.83
-> 0:False:5,9:22419,3069
-> 1:True:10,13:22419,3069
-> 2:True:6,9:22419,3069
-> 3:False:8,12:22419,3069
-> 4:True:5,8:22419,3069
-> 5:True:7,10:22419,3069
-zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_3.tar.bz2:0.820032835007:0.1400733:0.83
-> 0:False:5,9:22420,3070
-> 1:False:10,13:22420,3070
-> 2:False:6,9:22420,3070
-> 3:False:8,11:22420,3070
-> 4:False:5,8:22420,3070
-> 5:True:7,9:22420,3070
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_1.tar.bz2:0.707676887512:0.0955158:0.7
-> 0:True:8,11:16875,2387
-> 1:False:7,12:16875,2387
-> 2:False:9,16:16875,2387
-> 3:False:10,16:16875,2387
-> 4:False:10,16:16875,2387
-> 5:False:10,16:16875,2387
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_2.tar.bz2:0.705217123032:0.0956425:0.71
-> 0:True:8,10:16875,2387
-> 1:False:7,12:16875,2387
-> 2:False:9,15:16875,2387
-> 3:False:10,13:16875,2387
-> 4:False:10,14:16875,2387
-> 5:False:10,14:16875,2387
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_3.tar.bz2:0.702513933182:0.095218:0.71
-> 0:True:8,11:16876,2388
-> 1:False:7,12:16876,2388
-> 2:False:9,15:16876,2388
-> 3:False:10,15:16876,2388
-> 4:False:10,15:16876,2388
-> 5:False:10,15:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_1.tar.bz2:0.707221031189:0.0953994:0.71
-> 0:False:8,12:16875,2387
-> 1:True:7,10:16875,2387
-> 2:False:9,15:16875,2387
-> 3:True:10,13:16875,2387
-> 4:False:10,14:16875,2387
-> 5:True:10,13:16875,2387
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_2.tar.bz2:0.699985027313:0.0937487:0.7
-> 0:False:8,11:16874,2386
-> 1:True:7,9:16874,2386
-> 2:False:9,14:16874,2386
-> 3:False:10,13:16874,2386
-> 4:False:10,13:16874,2386
-> 5:False:10,13:16874,2386
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_3.tar.bz2:0.701277017593:0.0936901:0.7
-> 0:True:8,10:16875,2387
-> 1:True:7,9:16875,2387
-> 2:False:9,14:16875,2387
-> 3:False:10,14:16875,2387
-> 4:False:10,14:16875,2387
-> 5:False:10,14:16875,2387
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_1.tar.bz2:0.704506874084:0.094824:0.7
-> 0:False:8,13:16876,2388
-> 1:False:7,13:16876,2388
-> 2:False:9,12:16876,2388
-> 3:False:10,13:16876,2388
-> 4:True:10,12:16876,2388
-> 5:False:10,13:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_2.tar.bz2:0.701903104782:0.0934615:0.71
-> 0:False:8,14:16876,2388
-> 1:False:7,14:16876,2388
-> 2:False:9,13:16876,2388
-> 3:False:10,16:16876,2388
-> 4:True:10,13:16876,2388
-> 5:False:10,15:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_3.tar.bz2:0.699147939682:0.0927596:0.7
-> 0:False:8,14:16876,2388
-> 1:False:7,14:16876,2388
-> 2:False:9,12:16876,2388
-> 3:False:10,14:16876,2388
-> 4:True:10,12:16876,2388
-> 5:False:10,13:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_1.tar.bz2:0.701647996902:0.0939413:0.71
-> 0:False:8,12:16876,2388
-> 1:False:7,12:16876,2388
-> 2:False:9,14:16876,2388
-> 3:True:10,11:16876,2388
-> 4:False:10,12:16876,2388
-> 5:False:10,12:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_2.tar.bz2:0.70022892952:0.0945469:0.7
-> 0:False:8,14:16875,2387
-> 1:False:7,12:16875,2387
-> 2:False:9,14:16875,2387
-> 3:True:10,12:16875,2387
-> 4:False:10,13:16875,2387
-> 5:False:10,13:16875,2387
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_3.tar.bz2:0.699773073196:0.0925358:0.7
-> 0:False:8,14:16876,2388
-> 1:False:7,14:16876,2388
-> 2:False:9,15:16876,2388
-> 3:True:10,12:16876,2388
-> 4:False:10,13:16876,2388
-> 5:False:10,14:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_1.tar.bz2:0.69694685936:0.0886658:0.7
-> 0:True:12,13:16877,2389
-> 1:False:12,14:16877,2389
-> 2:False:11,16:16877,2389
-> 3:False:12,15:16877,2389
-> 4:False:12,17:16877,2389
-> 5:False:11,15:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_2.tar.bz2:0.698604106903:0.0896709:0.7
-> 0:True:12,13:16877,2389
-> 1:True:12,13:16877,2389
-> 2:False:11,16:16877,2389
-> 3:False:12,14:16877,2389
-> 4:False:12,15:16877,2389
-> 5:False:11,16:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_3.tar.bz2:0.69939994812:0.0911011:0.7
-> 0:True:12,14:16876,2388
-> 1:False:12,15:16876,2388
-> 2:False:11,17:16876,2388
-> 3:False:12,15:16876,2388
-> 4:False:12,18:16876,2388
-> 5:False:11,16:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_1.tar.bz2:0.699346065521:0.0924723:0.7
-> 0:False:12,16:16876,2388
-> 1:True:12,14:16876,2388
-> 2:False:11,16:16876,2388
-> 3:False:12,17:16876,2388
-> 4:False:12,18:16876,2388
-> 5:False:11,15:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_2.tar.bz2:0.700366020203:0.0908539:0.7
-> 0:False:12,16:16877,2389
-> 1:True:12,13:16877,2389
-> 2:False:11,16:16877,2389
-> 3:False:12,15:16877,2389
-> 4:False:12,17:16877,2389
-> 5:False:11,17:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_3.tar.bz2:0.701686143875:0.0932201:0.71
-> 0:False:12,16:16877,2389
-> 1:True:12,13:16877,2389
-> 2:False:11,14:16877,2389
-> 3:False:12,16:16877,2389
-> 4:False:12,15:16877,2389
-> 5:False:11,15:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_1.tar.bz2:0.698069095612:0.0899048:0.7
-> 0:False:12,16:16877,2389
-> 1:False:12,15:16877,2389
-> 2:True:11,13:16877,2389
-> 3:False:12,16:16877,2389
-> 4:False:12,15:16877,2389
-> 5:False:11,14:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_2.tar.bz2:0.697741985321:0.0912282:0.69
-> 0:False:12,17:16877,2389
-> 1:False:12,16:16877,2389
-> 2:True:11,12:16877,2389
-> 3:False:12,17:16877,2389
-> 4:False:12,15:16877,2389
-> 5:False:11,13:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_3.tar.bz2:0.696567058563:0.0894857:0.71
-> 0:False:12,16:16876,2388
-> 1:False:12,15:16876,2388
-> 2:True:11,13:16876,2388
-> 3:False:12,17:16876,2388
-> 4:False:12,15:16876,2388
-> 5:False:11,16:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_1.tar.bz2:0.703229188919:0.0927276:0.71
-> 0:False:12,15:16876,2388
-> 1:False:12,14:16876,2388
-> 2:False:11,17:16876,2388
-> 3:True:12,13:16876,2388
-> 4:False:12,16:16876,2388
-> 5:False:11,16:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_2.tar.bz2:0.697927951813:0.0908261:0.69
-> 0:False:12,16:16876,2388
-> 1:False:12,16:16876,2388
-> 2:False:11,17:16876,2388
-> 3:True:12,14:16876,2388
-> 4:False:12,17:16876,2388
-> 5:False:11,16:16876,2388
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_3.tar.bz2:0.696001052856:0.0879747:0.7
-> 0:False:12,16:16877,2389
-> 1:False:12,15:16877,2389
-> 2:False:11,16:16877,2389
-> 3:True:12,14:16877,2389
-> 4:False:12,16:16877,2389
-> 5:False:11,17:16877,2389
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_1.tar.bz2:0.813971996307:0.1354895:0.82
-> 0:False:5,11:22424,3074
-> 1:True:10,12:22424,3074
-> 2:False:6,14:22424,3074
-> 3:False:8,12:22424,3074
-> 4:False:5,11:22424,3074
-> 5:False:7,14:22424,3074
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_2.tar.bz2:0.819859027863:0.1384236:0.82
-> 0:False:5,10:22425,3075
-> 1:True:10,10:22425,3075
-> 2:False:6,13:22425,3075
-> 3:False:8,11:22425,3075
-> 4:False:5,11:22425,3075
-> 5:False:7,13:22425,3075
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_3.tar.bz2:0.814972877502:0.1362134:0.82
-> 0:False:5,12:22425,3075
-> 1:True:10,13:22425,3075
-> 2:False:6,13:22425,3075
-> 3:False:8,12:22425,3075
-> 4:False:5,11:22425,3075
-> 5:False:7,13:22425,3075
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_1.tar.bz2:0.808974981308:0.1347599:0.81
-> 0:False:5,11:22424,3074
-> 1:False:10,14:22424,3074
-> 2:False:6,13:22424,3074
-> 3:True:8,11:22424,3074
-> 4:False:5,12:22424,3074
-> 5:False:7,13:22424,3074
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_2.tar.bz2:0.814166069031:0.1368934:0.82
-> 0:False:5,11:22423,3073
-> 1:False:10,14:22423,3073
-> 2:False:6,13:22423,3073
-> 3:True:8,11:22423,3073
-> 4:False:5,12:22423,3073
-> 5:False:7,13:22423,3073
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_3.tar.bz2:0.814178943634:0.1354857:0.81
-> 0:False:5,12:22423,3073
-> 1:False:10,15:22423,3073
-> 2:False:6,12:22423,3073
-> 3:True:8,11:22423,3073
-> 4:False:5,12:22423,3073
-> 5:False:7,12:22423,3073
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_1.tar.bz2:0.806048870087:0.1304004:0.8
-> 0:False:5,11:22422,3072
-> 1:False:10,13:22422,3072
-> 2:False:6,11:22422,3072
-> 3:False:8,12:22422,3072
-> 4:True:5,7:22422,3072
-> 5:False:7,11:22422,3072
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_2.tar.bz2:0.809283018112:0.133737:0.81
-> 0:False:5,11:22421,3071
-> 1:True:10,13:22421,3071
-> 2:False:6,11:22421,3071
-> 3:False:8,12:22421,3071
-> 4:True:5,8:22421,3071
-> 5:False:7,11:22421,3071
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_3.tar.bz2:0.811641931534:0.1357073:0.82
-> 0:False:5,10:22422,3072
-> 1:False:10,14:22422,3072
-> 2:False:6,12:22422,3072
-> 3:False:8,12:22422,3072
-> 4:True:5,8:22422,3072
-> 5:False:7,12:22422,3072
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_1.tar.bz2:0.812708854675:0.138273:0.81
-> 0:False:5,13:22423,3073
-> 1:False:10,15:22423,3073
-> 2:False:6,11:22423,3073
-> 3:False:8,14:22423,3073
-> 4:False:5,12:22423,3073
-> 5:True:7,11:22423,3073
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_2.tar.bz2:0.800751924515:0.1292441:0.8
-> 0:False:5,13:22424,3074
-> 1:False:10,16:22424,3074
-> 2:False:6,11:22424,3074
-> 3:False:8,14:22424,3074
-> 4:False:5,12:22424,3074
-> 5:True:7,11:22424,3074
-zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_3.tar.bz2:0.81062579155:0.1348834:0.81
-> 0:False:5,13:22424,3074
-> 1:False:10,15:22424,3074
-> 2:False:6,11:22424,3074
-> 3:False:8,13:22424,3074
-> 4:False:5,11:22424,3074
-> 5:True:7,11:22424,3074
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_1.tar.bz2:0.702468156815:0.0944174:0.7
-> 0:True:8,14:16878,2390
-> 1:False:7,15:16878,2390
-> 2:False:9,19:16878,2390
-> 3:False:10,19:16878,2390
-> 4:False:10,19:16878,2390
-> 5:False:10,19:16878,2390
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_2.tar.bz2:0.700528144836:0.093886:0.69
-> 0:True:8,14:16880,2392
-> 1:False:7,16:16880,2392
-> 2:False:9,19:16880,2392
-> 3:False:10,18:16880,2392
-> 4:False:10,18:16880,2392
-> 5:False:10,19:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_3.tar.bz2:0.702290058136:0.095618:0.7
-> 0:True:8,12:16879,2391
-> 1:False:7,14:16879,2391
-> 2:False:9,18:16879,2391
-> 3:False:10,17:16879,2391
-> 4:False:10,17:16879,2391
-> 5:False:10,18:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_1.tar.bz2:0.697918891907:0.0938133:0.7
-> 0:False:8,12:16876,2388
-> 1:True:7,10:16876,2388
-> 2:False:9,15:16876,2388
-> 3:False:10,15:16876,2388
-> 4:False:10,14:16876,2388
-> 5:False:10,15:16876,2388
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_2.tar.bz2:0.704703092575:0.0946115:0.71
-> 0:False:8,13:16878,2390
-> 1:True:7,11:16878,2390
-> 2:False:9,17:16878,2390
-> 3:False:10,15:16878,2390
-> 4:False:10,16:16878,2390
-> 5:False:10,15:16878,2390
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_3.tar.bz2:0.702950954437:0.0939672:0.71
-> 0:False:8,13:16877,2389
-> 1:True:7,11:16877,2389
-> 2:False:9,16:16877,2389
-> 3:False:10,15:16877,2389
-> 4:False:10,15:16877,2389
-> 5:False:10,15:16877,2389
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_1.tar.bz2:0.700742959976:0.0936275:0.7
-> 0:False:8,16:16878,2390
-> 1:False:7,17:16878,2390
-> 2:True:9,14:16878,2390
-> 3:False:10,18:16878,2390
-> 4:True:10,15:16878,2390
-> 5:False:10,17:16878,2390
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_2.tar.bz2:0.701668977737:0.0942162:0.7
-> 0:False:8,17:16879,2391
-> 1:False:7,16:16879,2391
-> 2:True:9,14:16879,2391
-> 3:False:10,19:16879,2391
-> 4:False:10,16:16879,2391
-> 5:False:10,17:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_3.tar.bz2:0.703939199448:0.0957643:0.71
-> 0:False:8,16:16880,2392
-> 1:False:7,16:16880,2392
-> 2:True:9,13:16880,2392
-> 3:False:10,17:16880,2392
-> 4:True:10,14:16880,2392
-> 5:False:10,16:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_1.tar.bz2:0.700438022614:0.0952927:0.71
-> 0:False:8,14:16879,2391
-> 1:False:7,14:16879,2391
-> 2:False:9,17:16879,2391
-> 3:True:10,12:16879,2391
-> 4:False:10,15:16879,2391
-> 5:False:10,14:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_2.tar.bz2:0.708683013916:0.0962135:0.71
-> 0:False:8,14:16879,2391
-> 1:False:7,14:16879,2391
-> 2:False:9,16:16879,2391
-> 3:True:10,12:16879,2391
-> 4:False:10,14:16879,2391
-> 5:False:10,14:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_3.tar.bz2:0.705384016037:0.0938384:0.69
-> 0:False:8,16:16878,2390
-> 1:False:7,16:16878,2390
-> 2:False:9,17:16878,2390
-> 3:True:10,14:16878,2390
-> 4:False:10,16:16878,2390
-> 5:False:10,16:16878,2390
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_1.tar.bz2:0.699596166611:0.0893028:0.7
-> 0:True:12,15:16880,2392
-> 1:False:12,16:16880,2392
-> 2:False:11,20:16880,2392
-> 3:False:12,17:16880,2392
-> 4:False:12,20:16880,2392
-> 5:False:11,18:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_2.tar.bz2:0.702094078064:0.09152:0.71
-> 0:True:12,17:16879,2391
-> 1:False:12,18:16879,2391
-> 2:False:11,20:16879,2391
-> 3:False:12,18:16879,2391
-> 4:False:12,21:16879,2391
-> 5:False:11,19:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_3.tar.bz2:0.697163105011:0.089935:0.7
-> 0:True:12,15:16881,2393
-> 1:False:12,16:16881,2393
-> 2:False:11,19:16881,2393
-> 3:False:12,17:16881,2393
-> 4:False:12,19:16881,2393
-> 5:False:11,17:16881,2393
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_1.tar.bz2:0.698318958282:0.0896996:0.7
-> 0:False:12,18:16881,2393
-> 1:True:12,15:16881,2393
-> 2:False:11,18:16881,2393
-> 3:False:12,18:16881,2393
-> 4:False:12,18:16881,2393
-> 5:False:11,19:16881,2393
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_2.tar.bz2:0.694777011871:0.0896818:0.69
-> 0:False:12,17:16880,2392
-> 1:True:12,14:16880,2392
-> 2:False:11,18:16880,2392
-> 3:False:12,18:16880,2392
-> 4:False:12,19:16880,2392
-> 5:False:11,18:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_3.tar.bz2:0.701841831207:0.093408:0.71
-> 0:False:12,18:16881,2393
-> 1:True:12,15:16881,2393
-> 2:False:11,17:16881,2393
-> 3:False:12,19:16881,2393
-> 4:False:12,18:16881,2393
-> 5:False:11,17:16881,2393
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_1.tar.bz2:0.695459127426:0.08975:0.69
-> 0:False:12,20:16879,2391
-> 1:False:12,19:16879,2391
-> 2:True:11,15:16879,2391
-> 3:False:12,19:16879,2391
-> 4:True:12,16:16879,2391
-> 5:False:11,17:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_2.tar.bz2:0.696743965149:0.0883625:0.7
-> 0:False:12,20:16880,2392
-> 1:False:12,19:16880,2392
-> 2:True:11,14:16880,2392
-> 3:False:12,19:16880,2392
-> 4:False:12,17:16880,2392
-> 5:False:11,16:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_3.tar.bz2:0.698791980743:0.0878786:0.69
-> 0:False:12,21:16879,2391
-> 1:False:12,19:16879,2391
-> 2:True:11,16:16879,2391
-> 3:False:12,20:16879,2391
-> 4:False:12,18:16879,2391
-> 5:False:11,19:16879,2391
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_1.tar.bz2:0.696715831757:0.0888421:0.7
-> 0:False:12,18:16880,2392
-> 1:False:12,19:16880,2392
-> 2:False:11,20:16880,2392
-> 3:True:12,15:16880,2392
-> 4:False:12,19:16880,2392
-> 5:False:11,21:16880,2392
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_2.tar.bz2:0.69891500473:0.0886213:0.7
-> 0:False:12,18:16881,2393
-> 1:False:12,18:16881,2393
-> 2:False:11,19:16881,2393
-> 3:True:12,15:16881,2393
-> 4:False:12,18:16881,2393
-> 5:False:11,20:16881,2393
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_3.tar.bz2:0.696050882339:0.0882909:0.69
-> 0:False:12,17:16881,2393
-> 1:False:12,17:16881,2393
-> 2:False:11,18:16881,2393
-> 3:True:12,15:16881,2393
-> 4:False:12,18:16881,2393
-> 5:False:11,19:16881,2393
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_1.tar.bz2:0.812808990479:0.1335996:0.81
-> 0:False:5,15:22429,3079
-> 1:True:10,14:22429,3079
-> 2:False:6,16:22429,3079
-> 3:False:8,16:22429,3079
-> 4:False:5,15:22429,3079
-> 5:False:7,16:22429,3079
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_2.tar.bz2:0.822325944901:0.1429832:0.82
-> 0:False:5,14:22428,3078
-> 1:True:10,14:22428,3078
-> 2:False:6,16:22428,3078
-> 3:False:8,15:22428,3078
-> 4:False:5,14:22428,3078
-> 5:False:7,16:22428,3078
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_3.tar.bz2:0.817237854004:0.1366321:0.82
-> 0:False:5,15:22428,3078
-> 1:True:10,14:22428,3078
-> 2:False:6,15:22428,3078
-> 3:False:8,16:22428,3078
-> 4:False:5,14:22428,3078
-> 5:False:7,15:22428,3078
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_1.tar.bz2:0.817419052124:0.1379147:0.82
-> 0:False:5,13:22429,3079
-> 1:False:10,16:22429,3079
-> 2:False:6,16:22429,3079
-> 3:True:8,12:22429,3079
-> 4:False:5,15:22429,3079
-> 5:False:7,16:22429,3079
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_2.tar.bz2:0.817250013351:0.1378589:0.81
-> 0:False:5,13:22427,3077
-> 1:False:10,16:22427,3077
-> 2:False:6,16:22427,3077
-> 3:True:8,13:22427,3077
-> 4:False:5,15:22427,3077
-> 5:False:7,16:22427,3077
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_3.tar.bz2:0.821650981903:0.1356858:0.82
-> 0:False:5,14:22428,3078
-> 1:False:10,17:22428,3078
-> 2:False:6,16:22428,3078
-> 3:True:8,13:22428,3078
-> 4:False:5,16:22428,3078
-> 5:False:7,16:22428,3078
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_1.tar.bz2:0.813779830933:0.1317637:0.82
-> 0:False:5,13:22424,3074
-> 1:False:10,16:22424,3074
-> 2:False:6,12:22424,3074
-> 3:False:8,14:22424,3074
-> 4:True:5,9:22424,3074
-> 5:False:7,12:22424,3074
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_2.tar.bz2:0.806853055954:0.1316863:0.82
-> 0:False:5,13:22423,3073
-> 1:False:10,16:22423,3073
-> 2:False:6,13:22423,3073
-> 3:False:8,15:22423,3073
-> 4:True:5,9:22423,3073
-> 5:False:7,14:22423,3073
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_3.tar.bz2:0.812824964523:0.1326196:0.81
-> 0:False:5,13:22424,3074
-> 1:False:10,16:22424,3074
-> 2:False:6,13:22424,3074
-> 3:False:8,15:22424,3074
-> 4:True:5,9:22424,3074
-> 5:False:7,13:22424,3074
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_1.tar.bz2:0.816859960556:0.1390355:0.82
-> 0:False:5,16:22428,3078
-> 1:False:10,17:22428,3078
-> 2:False:6,13:22428,3078
-> 3:False:8,15:22428,3078
-> 4:False:5,15:22428,3078
-> 5:True:7,13:22428,3078
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_2.tar.bz2:0.812916994095:0.1344889:0.81
-> 0:False:5,17:22427,3077
-> 1:False:10,18:22427,3077
-> 2:False:6,14:22427,3077
-> 3:False:8,17:22427,3077
-> 4:False:5,14:22427,3077
-> 5:True:7,14:22427,3077
-zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_3.tar.bz2:0.815541982651:0.135441:0.82
-> 0:False:5,17:22428,3078
-> 1:False:10,18:22428,3078
-> 2:False:6,14:22428,3078
-> 3:False:8,18:22428,3078
-> 4:False:5,14:22428,3078
-> 5:True:7,14:22428,3078
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_1.tar.bz2:0.700273990631:0.0955924:0.71
-> 0:True:8,16:16883,2395
-> 1:False:7,18:16883,2395
-> 2:False:9,22:16883,2395
-> 3:False:10,21:16883,2395
-> 4:False:10,21:16883,2395
-> 5:False:10,22:16883,2395
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_2.tar.bz2:0.706440925598:0.0989956:0.7
-> 0:True:8,16:16883,2395
-> 1:False:7,18:16883,2395
-> 2:False:9,21:16883,2395
-> 3:False:10,21:16883,2395
-> 4:False:10,20:16883,2395
-> 5:False:10,21:16883,2395
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_3.tar.bz2:0.704567909241:0.0955665:0.71
-> 0:True:8,16:16883,2395
-> 1:False:7,18:16883,2395
-> 2:False:9,22:16883,2395
-> 3:False:10,21:16883,2395
-> 4:False:10,21:16883,2395
-> 5:False:10,22:16883,2395
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_1.tar.bz2:0.704624891281:0.0945608:0.7
-> 0:False:8,15:16881,2393
-> 1:True:7,13:16881,2393
-> 2:False:9,19:16881,2393
-> 3:False:10,18:16881,2393
-> 4:False:10,18:16881,2393
-> 5:False:10,18:16881,2393
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_2.tar.bz2:0.700043916702:0.0935752:0.69
-> 0:False:8,15:16881,2393
-> 1:True:7,13:16881,2393
-> 2:False:9,19:16881,2393
-> 3:False:10,18:16881,2393
-> 4:False:10,18:16881,2393
-> 5:False:10,18:16881,2393
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_3.tar.bz2:0.70129609108:0.0947108:0.7
-> 0:False:8,15:16881,2393
-> 1:True:7,13:16881,2393
-> 2:False:9,19:16881,2393
-> 3:False:10,18:16881,2393
-> 4:False:10,18:16881,2393
-> 5:False:10,18:16881,2393
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_1.tar.bz2:0.702605962753:0.0941188:0.7
-> 0:False:8,20:16884,2396
-> 1:False:7,20:16884,2396
-> 2:True:9,16:16884,2396
-> 3:False:10,21:16884,2396
-> 4:False:10,18:16884,2396
-> 5:False:10,19:16884,2396
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_2.tar.bz2:0.701955795288:0.0939918:0.7
-> 0:False:8,20:16884,2396
-> 1:False:7,20:16884,2396
-> 2:True:9,16:16884,2396
-> 3:False:10,21:16884,2396
-> 4:False:10,18:16884,2396
-> 5:False:10,19:16884,2396
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_3.tar.bz2:0.70599603653:0.094941:0.69
-> 0:False:8,20:16884,2396
-> 1:False:7,20:16884,2396
-> 2:True:9,16:16884,2396
-> 3:False:10,21:16884,2396
-> 4:False:10,18:16884,2396
-> 5:False:10,19:16884,2396
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_1.tar.bz2:0.701140165329:0.0944311:0.71
-> 0:False:8,17:16882,2394
-> 1:False:7,17:16882,2394
-> 2:False:9,19:16882,2394
-> 3:True:10,14:16882,2394
-> 4:False:10,17:16882,2394
-> 5:False:10,16:16882,2394
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_2.tar.bz2:0.702718019485:0.0940533:0.69
-> 0:False:8,17:16882,2394
-> 1:False:7,17:16882,2394
-> 2:False:9,19:16882,2394
-> 3:True:10,14:16882,2394
-> 4:False:10,17:16882,2394
-> 5:False:10,16:16882,2394
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_3.tar.bz2:0.699033975601:0.0934566:0.69
-> 0:False:8,17:16882,2394
-> 1:False:7,17:16882,2394
-> 2:False:9,19:16882,2394
-> 3:True:10,14:16882,2394
-> 4:False:10,17:16882,2394
-> 5:False:10,16:16882,2394
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_1.tar.bz2:0.698849916458:0.0908091:0.69
-> 0:True:12,16:16885,2397
-> 1:False:12,18:16885,2397
-> 2:False:11,21:16885,2397
-> 3:False:12,17:16885,2397
-> 4:False:12,20:16885,2397
-> 5:False:11,20:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_2.tar.bz2:0.700260877609:0.0908727:0.71
-> 0:True:12,16:16885,2397
-> 1:False:12,18:16885,2397
-> 2:False:11,22:16885,2397
-> 3:False:12,18:16885,2397
-> 4:False:12,21:16885,2397
-> 5:False:11,20:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_3.tar.bz2:0.699610948563:0.0903233:0.7
-> 0:True:12,16:16885,2397
-> 1:False:12,18:16885,2397
-> 2:False:11,22:16885,2397
-> 3:False:12,18:16885,2397
-> 4:False:12,21:16885,2397
-> 5:False:11,20:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_1.tar.bz2:0.702281951904:0.0931502:0.7
-> 0:False:12,20:16886,2398
-> 1:True:12,17:16886,2398
-> 2:False:11,21:16886,2398
-> 3:False:12,21:16886,2398
-> 4:False:12,22:16886,2398
-> 5:False:11,21:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_2.tar.bz2:0.702611923218:0.0951843:0.71
-> 0:False:12,20:16886,2398
-> 1:True:12,17:16886,2398
-> 2:False:11,21:16886,2398
-> 3:False:12,21:16886,2398
-> 4:False:12,22:16886,2398
-> 5:False:11,21:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_3.tar.bz2:0.697552919388:0.088602:0.69
-> 0:False:12,20:16886,2398
-> 1:True:12,17:16886,2398
-> 2:False:11,20:16886,2398
-> 3:False:12,20:16886,2398
-> 4:False:12,22:16886,2398
-> 5:False:11,20:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_1.tar.bz2:0.69642496109:0.0895299:0.69
-> 0:False:12,23:16885,2397
-> 1:False:12,21:16885,2397
-> 2:True:11,16:16885,2397
-> 3:False:12,22:16885,2397
-> 4:False:12,19:16885,2397
-> 5:False:11,19:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_2.tar.bz2:0.696591854095:0.0881137:0.7
-> 0:False:12,23:16885,2397
-> 1:False:12,21:16885,2397
-> 2:True:11,16:16885,2397
-> 3:False:12,22:16885,2397
-> 4:False:12,19:16885,2397
-> 5:False:11,19:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_3.tar.bz2:0.696599006653:0.089682:0.7
-> 0:False:12,23:16885,2397
-> 1:False:12,21:16885,2397
-> 2:True:11,16:16885,2397
-> 3:False:12,22:16885,2397
-> 4:False:12,19:16885,2397
-> 5:False:11,19:16885,2397
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_1.tar.bz2:0.69699215889:0.0899966:0.7
-> 0:False:12,20:16886,2398
-> 1:False:12,22:16886,2398
-> 2:False:11,23:16886,2398
-> 3:True:12,17:16886,2398
-> 4:False:12,22:16886,2398
-> 5:False:11,23:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_2.tar.bz2:0.694530010223:0.0887222:0.69
-> 0:False:12,20:16886,2398
-> 1:False:12,22:16886,2398
-> 2:False:11,23:16886,2398
-> 3:True:12,17:16886,2398
-> 4:False:12,22:16886,2398
-> 5:False:11,23:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_3.tar.bz2:0.697860002518:0.0911255:0.7
-> 0:False:12,19:16886,2398
-> 1:False:12,21:16886,2398
-> 2:False:11,22:16886,2398
-> 3:True:12,17:16886,2398
-> 4:False:12,21:16886,2398
-> 5:False:11,22:16886,2398
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_1.tar.bz2:0.811441898346:0.1312504:0.81
-> 0:False:5,18:22434,3084
-> 1:True:10,17:22434,3084
-> 2:False:6,20:22434,3084
-> 3:False:8,19:22434,3084
-> 4:False:5,19:22434,3084
-> 5:False:7,20:22434,3084
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_2.tar.bz2:0.809051990509:0.1332695:0.81
-> 0:False:5,18:22434,3084
-> 1:True:10,17:22434,3084
-> 2:False:6,20:22434,3084
-> 3:False:8,19:22434,3084
-> 4:False:5,19:22434,3084
-> 5:False:7,20:22434,3084
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_3.tar.bz2:0.812529087067:0.1327719:0.81
-> 0:False:5,18:22434,3084
-> 1:True:10,17:22434,3084
-> 2:False:6,20:22434,3084
-> 3:False:8,19:22434,3084
-> 4:False:5,19:22434,3084
-> 5:False:7,20:22434,3084
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_1.tar.bz2:0.81268787384:0.1336985:0.82
-> 0:False:5,17:22432,3082
-> 1:False:10,20:22432,3082
-> 2:False:6,19:22432,3082
-> 3:True:8,16:22432,3082
-> 4:False:5,19:22432,3082
-> 5:False:7,19:22432,3082
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_2.tar.bz2:0.811581850052:0.1328913:0.8
-> 0:False:5,17:22432,3082
-> 1:False:10,20:22432,3082
-> 2:False:6,19:22432,3082
-> 3:True:8,16:22432,3082
-> 4:False:5,19:22432,3082
-> 5:False:7,19:22432,3082
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_3.tar.bz2:0.81320810318:0.1342159:0.81
-> 0:False:5,17:22432,3082
-> 1:False:10,20:22432,3082
-> 2:False:6,19:22432,3082
-> 3:True:8,16:22432,3082
-> 4:False:5,19:22432,3082
-> 5:False:7,19:22432,3082
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_1.tar.bz2:0.809504985809:0.1312826:0.81
-> 0:False:5,16:22427,3077
-> 1:False:10,19:22427,3077
-> 2:False:6,16:22427,3077
-> 3:False:8,18:22427,3077
-> 4:True:5,12:22427,3077
-> 5:False:7,16:22427,3077
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_2.tar.bz2:0.811368942261:0.1313227:0.82
-> 0:False:5,17:22427,3077
-> 1:False:10,19:22427,3077
-> 2:False:6,16:22427,3077
-> 3:False:8,18:22427,3077
-> 4:True:5,12:22427,3077
-> 5:False:7,16:22427,3077
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_3.tar.bz2:0.810606002808:0.1309369:0.81
-> 0:False:5,17:22427,3077
-> 1:False:10,19:22427,3077
-> 2:False:6,16:22427,3077
-> 3:False:8,18:22427,3077
-> 4:True:5,12:22427,3077
-> 5:False:7,16:22427,3077
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_1.tar.bz2:0.809930801392:0.131131:0.81
-> 0:False:5,20:22431,3081
-> 1:False:10,22:22431,3081
-> 2:False:6,16:22431,3081
-> 3:False:8,20:22431,3081
-> 4:False:5,18:22431,3081
-> 5:True:7,16:22431,3081
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_2.tar.bz2:0.81130194664:0.130527:0.81
-> 0:False:5,21:22432,3082
-> 1:False:10,22:22432,3082
-> 2:False:6,16:22432,3082
-> 3:False:8,20:22432,3082
-> 4:False:5,18:22432,3082
-> 5:True:7,16:22432,3082
-zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_3.tar.bz2:0.806965112686:0.1301902:0.81
-> 0:False:5,20:22432,3082
-> 1:False:10,22:22432,3082
-> 2:False:6,16:22432,3082
-> 3:False:8,20:22432,3082
-> 4:False:5,18:22432,3082
-> 5:True:7,16:22432,3082
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_1.tar.bz2:0.5843799114227295:0.0:0.58
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_2.tar.bz2:0.6021401882171631:0.0:0.61
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-1_10_3.tar.bz2:0.5691530704498291:0.0:0.5700000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_1.tar.bz2:0.5736198425292969:0.0:0.5699999999999998
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_2.tar.bz2:0.5850660800933838:0.0:0.5900000000000003
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-2_10_3.tar.bz2:0.5816938877105713:0.0:0.5899999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_1.tar.bz2:0.579850435256958:0.0:0.580000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_2.tar.bz2:0.5757396221160889:0.0:0.5699999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-3_10_3.tar.bz2:0.5983357429504395:0.0:0.5899999999999999
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_1.tar.bz2:0.598259687423706:0.0:0.5899999999999999
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_2.tar.bz2:0.5951497554779053:0.0:0.6000000000000005
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p03_hyp-4_10_3.tar.bz2:0.596019983291626:0.0:0.5899999999999999
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_1.tar.bz2:0.5942568778991699:0.0:0.5900000000000007
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_2.tar.bz2:0.577399730682373:0.0:0.5699999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-1_10_3.tar.bz2:0.5744025707244873:0.0:0.5800000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_1.tar.bz2:0.5601310729980469:0.0:0.5699999999999985
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_2.tar.bz2:0.5829799175262451:0.0:0.5800000000000018
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-2_10_3.tar.bz2:0.5808968544006348:0.0:0.5800000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_1.tar.bz2:0.5614025592803955:0.0:0.5599999999999987
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_2.tar.bz2:0.5697262287139893:0.0:0.5800000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-3_10_3.tar.bz2:0.5773355960845947:0.0:0.5699999999999985
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_1.tar.bz2:0.5813398361206055:0.0:0.5800000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_2.tar.bz2:0.5763239860534668:0.0:0.5899999999999999
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p04_hyp-4_10_3.tar.bz2:0.575669527053833:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_1.tar.bz2:0.6186387538909912:0.0:0.6100000000000012
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_2.tar.bz2:0.6135282516479492:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-1_10_3.tar.bz2:0.6099507808685303:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_1.tar.bz2:0.6023960113525391:0.0:0.6000000000000014
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_2.tar.bz2:0.6220619678497314:0.0:0.629999999999999
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-2_10_3.tar.bz2:0.6111869812011719:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_1.tar.bz2:0.592710018157959:0.0:0.6000000000000014
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_2.tar.bz2:0.6043527126312256:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-3_10_3.tar.bz2:0.616877555847168:0.0:0.620000000000001
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_1.tar.bz2:0.6077606678009033:0.0:0.5999999999999979
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_2.tar.bz2:0.6243035793304443:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/10/zeno-travel_noisy_p05_hyp-4_10_3.tar.bz2:0.5970816612243652:0.0:0.5899999999999963
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_1.tar.bz2:0.5771486759185791:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_2.tar.bz2:0.571000337600708:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-1_30_3.tar.bz2:0.56463623046875:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_1.tar.bz2:0.5758028030395508:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_2.tar.bz2:0.5905942916870117:0.0:0.5899999999999999
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-2_30_3.tar.bz2:0.5845980644226074:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_1.tar.bz2:0.5807514190673828:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_2.tar.bz2:0.5631105899810791:0.0:0.5599999999999987
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-3_30_3.tar.bz2:0.5618562698364258:0.0:0.5600000000000058
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_1.tar.bz2:0.5875766277313232:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_2.tar.bz2:0.5829451084136963:0.0:0.5800000000000018
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p03_hyp-4_30_3.tar.bz2:0.562903881072998:0.0:0.5500000000000007
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_1.tar.bz2:0.5684373378753662:0.0:0.5699999999999967
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_2.tar.bz2:0.5684170722961426:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-1_30_3.tar.bz2:0.5680508613586426:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_1.tar.bz2:0.5867164134979248:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_2.tar.bz2:0.5895516872406006:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-2_30_3.tar.bz2:0.5792043209075928:0.0:0.5800000000000018
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_1.tar.bz2:0.562999963760376:0.0:0.5699999999999967
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_2.tar.bz2:0.6045377254486084:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-3_30_3.tar.bz2:0.5818440914154053:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_1.tar.bz2:0.5611295700073242:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_2.tar.bz2:0.5716938972473145:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p04_hyp-4_30_3.tar.bz2:0.5897648334503174:0.0:0.5899999999999963
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_1.tar.bz2:0.609856128692627:0.0:0.6000000000000014
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_2.tar.bz2:0.6297900676727295:0.0:0.6300000000000097
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-1_30_3.tar.bz2:0.6197342872619629:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_1.tar.bz2:0.6234531402587891:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_2.tar.bz2:0.6096789836883545:0.0:0.6099999999999923
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-2_30_3.tar.bz2:0.5875747203826904:0.0:0.6000000000000014
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_1.tar.bz2:0.6114695072174072:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_2.tar.bz2:0.6163492202758789:0.0:0.6199999999999974
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-3_30_3.tar.bz2:0.6211228370666504:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_1.tar.bz2:0.6291811466217041:0.0:0.6300000000000026
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_2.tar.bz2:0.6236226558685303:0.0:0.6199999999999974
+zeno-travel-suboptimal-old-noisy/30/zeno-travel_noisy_p05_hyp-4_30_3.tar.bz2:0.6160237789154053:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_1.tar.bz2:0.5703821182250977:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_2.tar.bz2:0.570448637008667:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-1_50_3.tar.bz2:0.5942304134368896:0.0:0.5899999999999963
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_1.tar.bz2:0.576460599899292:0.0:0.5800000000000054
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_2.tar.bz2:0.5693862438201904:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-2_50_3.tar.bz2:0.5728778839111328:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_1.tar.bz2:0.5749764442443848:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_2.tar.bz2:0.5775008201599121:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-3_50_3.tar.bz2:0.565173864364624:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_1.tar.bz2:0.594141960144043:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_2.tar.bz2:0.5837502479553223:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p03_hyp-4_50_3.tar.bz2:0.587212085723877:0.0:0.5800000000000054
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_1.tar.bz2:0.5803670883178711:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_2.tar.bz2:0.5715968608856201:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-1_50_3.tar.bz2:0.5797080993652344:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_1.tar.bz2:0.5799024105072021:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_2.tar.bz2:0.5890004634857178:0.0:0.5899999999999963
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-2_50_3.tar.bz2:0.5772237777709961:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_1.tar.bz2:0.577355146408081:0.0:0.5700000000000003
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_2.tar.bz2:0.5843913555145264:0.0:0.5800000000000054
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-3_50_3.tar.bz2:0.5765233039855957:0.0:0.5800000000000054
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_1.tar.bz2:0.6056945323944092:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_2.tar.bz2:0.5848388671875:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p04_hyp-4_50_3.tar.bz2:0.5923936367034912:0.0:0.5899999999999963
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_1.tar.bz2:0.6277503967285156:0.0:0.6299999999999955
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_2.tar.bz2:0.6401329040527344:0.0:0.6400000000000006
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-1_50_3.tar.bz2:0.6239497661590576:0.0:0.6199999999999974
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_1.tar.bz2:0.6078770160675049:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_2.tar.bz2:0.6088659763336182:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-2_50_3.tar.bz2:0.6388571262359619:0.0:0.6399999999999935
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_1.tar.bz2:0.6150481700897217:0.0:0.6100000000000065
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_2.tar.bz2:0.6005456447601318:0.0:0.6000000000000014
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-3_50_3.tar.bz2:0.6127569675445557:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_1.tar.bz2:0.608445405960083:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_2.tar.bz2:0.61625075340271:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/50/zeno-travel_noisy_p05_hyp-4_50_3.tar.bz2:0.6203036308288574:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_1.tar.bz2:0.5920779705047607:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_2.tar.bz2:0.5919113159179688:0.0:0.5899999999999892
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-1_70_3.tar.bz2:0.5742764472961426:0.0:0.5800000000000125
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_1.tar.bz2:0.5834043025970459:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_2.tar.bz2:0.5896425247192383:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-2_70_3.tar.bz2:0.5897176265716553:0.0:0.5999999999999943
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_1.tar.bz2:0.57731032371521:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_2.tar.bz2:0.5943541526794434:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-3_70_3.tar.bz2:0.5966415405273438:0.0:0.5899999999999892
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_1.tar.bz2:0.5832967758178711:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_2.tar.bz2:0.5908381938934326:0.0:0.5999999999999943
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p03_hyp-4_70_3.tar.bz2:0.5885746479034424:0.0:0.5900000000000176
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_1.tar.bz2:0.5991537570953369:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_2.tar.bz2:0.5691068172454834:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-1_70_3.tar.bz2:0.5720400810241699:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_1.tar.bz2:0.5891373157501221:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_2.tar.bz2:0.5874738693237305:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-2_70_3.tar.bz2:0.5847656726837158:0.0:0.5800000000000125
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_1.tar.bz2:0.5836682319641113:0.0:0.5799999999999841
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_2.tar.bz2:0.5841233730316162:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-3_70_3.tar.bz2:0.5896031856536865:0.0:0.6000000000000085
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_1.tar.bz2:0.5819106101989746:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_2.tar.bz2:0.5638418197631836:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p04_hyp-4_70_3.tar.bz2:0.5762965679168701:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_1.tar.bz2:0.6277523040771484:0.0:0.6299999999999955
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_2.tar.bz2:0.6046392917633057:0.0:0.6100000000000136
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-1_70_3.tar.bz2:0.6183242797851562:0.0:0.6299999999999955
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_1.tar.bz2:0.6044070720672607:0.0:0.6000000000000085
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_2.tar.bz2:0.6255292892456055:0.0:0.6199999999999903
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-2_70_3.tar.bz2:0.6208877563476562:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_1.tar.bz2:0.607630729675293:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_2.tar.bz2:0.6234447956085205:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-3_70_3.tar.bz2:0.6106827259063721:0.0:0.6099999999999852
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_1.tar.bz2:0.606090784072876:0.0:0.6100000000000136
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_2.tar.bz2:0.6125171184539795:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/70/zeno-travel_noisy_p05_hyp-4_70_3.tar.bz2:0.6139724254608154:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_1.tar.bz2:0.5765516757965088:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_2.tar.bz2:0.5876138210296631:0.0:0.5900000000000034
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-1_full_3.tar.bz2:0.5955603122711182:0.0:0.5999999999999943
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_1.tar.bz2:0.6002261638641357:0.0:0.6100000000000136
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_2.tar.bz2:0.5765485763549805:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-2_full_3.tar.bz2:0.5840945243835449:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_1.tar.bz2:0.5677647590637207:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_2.tar.bz2:0.5820975303649902:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-3_full_3.tar.bz2:0.583021879196167:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_1.tar.bz2:0.596243143081665:0.0:0.6000000000000085
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_2.tar.bz2:0.5858669281005859:0.0:0.5899999999999892
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p03_hyp-4_full_3.tar.bz2:0.5650861263275146:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_1.tar.bz2:0.5695846080780029:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_2.tar.bz2:0.575110912322998:0.0:0.5699999999999932
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-1_full_3.tar.bz2:0.5745835304260254:0.0:0.5700000000000074
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_1.tar.bz2:0.5793261528015137:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_2.tar.bz2:0.5809400081634521:0.0:0.5799999999999983
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-2_full_3.tar.bz2:0.6041240692138672:0.0:0.6000000000000227
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_1.tar.bz2:0.6038010120391846:0.0:0.5999999999999943
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_2.tar.bz2:0.5747392177581787:0.0:0.5800000000000125
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-3_full_3.tar.bz2:0.5753514766693115:0.0:0.5799999999999841
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_1.tar.bz2:0.5793185234069824:0.0:0.5800000000000125
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_2.tar.bz2:0.5575969219207764:0.0:0.5600000000000023
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p04_hyp-4_full_3.tar.bz2:0.5902895927429199:0.0:0.5800000000000125
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_1.tar.bz2:0.634160041809082:0.0:0.6300000000000097
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_2.tar.bz2:0.6214985847473145:0.0:0.6099999999999994
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-1_full_3.tar.bz2:0.6149342060089111:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_1.tar.bz2:0.6224970817565918:0.0:0.6199999999999903
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_2.tar.bz2:0.6131532192230225:0.0:0.6099999999999852
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-2_full_3.tar.bz2:0.6081235408782959:0.0:0.6100000000000136
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_1.tar.bz2:0.6283750534057617:0.0:0.6200000000000045
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_2.tar.bz2:0.5977396965026855:0.0:0.5899999999999892
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-3_full_3.tar.bz2:0.6087815761566162:0.0:0.6199999999999903
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_1.tar.bz2:0.601038932800293:0.0:0.6000000000000085
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_2.tar.bz2:0.6167926788330078:0.0:0.5999999999999943
+zeno-travel-suboptimal-old-noisy/100/zeno-travel_noisy_p05_hyp-4_full_3.tar.bz2:0.6095757484436035:0.0:0.6099999999999994
