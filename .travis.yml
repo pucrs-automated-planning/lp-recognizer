@@ -11,6 +11,7 @@ before_install:
   - sudo apt install wget cmake g++ git make python3 zlib1g-dev libgmp3-dev bzip2
 install: 
   - chmod +x *.sh
+  - ./install-soplex.sh
   - ./prepare-fd.sh
   - chmod +x *.py
 script: 
