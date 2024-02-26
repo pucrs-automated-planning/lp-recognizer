@@ -46,6 +46,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_flow_obs(self):
         print("\nTesting delta with flow")
@@ -54,6 +56,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_lmcut(self):
         print("\nTesting hvalue with lmcut")
@@ -61,6 +65,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("hvalue", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_lmcut_obs(self):
         print("\nTesting delta with lmcut")
@@ -68,6 +74,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_lmcut_obs2(self):
         print("\nTesting delta modified with lmcut")
@@ -75,6 +83,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_relaxation(self):
         print("\nTesting delta with delete relaxation")
@@ -82,6 +92,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_h_relaxation_obs(self):
         print("\nTesting delta modified with delete relaxation")
@@ -89,6 +101,8 @@ class TestPlanRecognizer(unittest.TestCase):
         options = Program_Options(args)
         recognizer = self.factory.get_recognizer("delta", options)
         recognizer.run_recognizer()
+        if recognizer.unique_goal is None:
+            self.fail("All hypotheses failed.")
 
     def test_r_hvalue(self):
         print("\nTesting hvalue")

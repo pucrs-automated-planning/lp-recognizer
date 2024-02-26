@@ -31,10 +31,10 @@ def parse_constraints(arg):
             h = "state_equation_constraints()"
         if arg[i] == 'd':
             # Use time variables
-            time_vars = 0
+            time_vars = False
             if len(arg) > i+1 and arg[i+1] == 't':
                 i += 1
-                time_vars = 1
+                time_vars = True
             # Noise filter
             noisy = 0
             if len(arg) > i+1 and arg[i+1] == 'a': # Soft for all + inv (D4)

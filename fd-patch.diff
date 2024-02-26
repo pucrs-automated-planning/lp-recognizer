@@ -1,6 +1,28 @@
+diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/CMakeLists.txt fast-downward/src/search/CMakeLists.txt
+--- fast-downward-original/src/search/CMakeLists.txt	2023-11-15 18:14:39.797760300 -0300
++++ fast-downward/src/search/CMakeLists.txt	2024-02-24 20:05:13.695279700 -0300
+@@ -857,7 +857,10 @@
+     SOURCES
+         operator_counting/constraint_generator
+         operator_counting/delete_relaxation_constraints
++        operator_counting/flow_constraints
++        operator_counting/flow_constraint_internals
+         operator_counting/lm_cut_constraints
++        operator_counting/oc_single_shot_heuristic
+         operator_counting/operator_counting_heuristic
+         operator_counting/pho_constraints
+         operator_counting/state_equation_constraints
+@@ -873,6 +876,7 @@
+         pdbs/canonical_pdbs_heuristic
+         pdbs/cegar
+         pdbs/dominance_pruning
++        pdbs/explicit_projection
+         pdbs/incremental_canonical_pdbs
+         pdbs/match_tree
+         pdbs/max_cliques
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/algorithms/combinations.h fast-downward/src/search/algorithms/combinations.h
 --- fast-downward-original/src/search/algorithms/combinations.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/algorithms/combinations.h	2023-10-25 14:33:07.024369700 -0300
++++ fast-downward/src/search/algorithms/combinations.h	2024-02-24 20:05:13.691320200 -0300
 @@ -0,0 +1,45 @@
 +#ifndef ALGORITHMS_COMBINATIONS_H
 +#define ALGORITHMS_COMBINATIONS_H
@@ -49,7 +71,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/alg
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/algorithms/named_vector.h fast-downward/src/search/algorithms/named_vector.h
 --- fast-downward-original/src/search/algorithms/named_vector.h	2023-11-15 18:14:29.852554800 -0300
-+++ fast-downward/src/search/algorithms/named_vector.h	2023-11-15 17:08:25.836904600 -0300
++++ fast-downward/src/search/algorithms/named_vector.h	2024-02-24 20:05:13.693284200 -0300
 @@ -92,6 +92,10 @@
          names.clear();
      }
@@ -61,31 +83,9 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/alg
      void reserve(int capacity) {
          /* No space is reserved in the names vector because it is kept
             at minimal size and space is only used when necessary. */
-diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/CMakeLists.txt fast-downward/src/search/CMakeLists.txt
---- fast-downward-original/src/search/CMakeLists.txt	2023-11-15 18:14:39.797760300 -0300
-+++ fast-downward/src/search/CMakeLists.txt	2023-11-15 18:06:32.902423200 -0300
-@@ -857,7 +857,10 @@
-     SOURCES
-         operator_counting/constraint_generator
-         operator_counting/delete_relaxation_constraints
-+        operator_counting/flow_constraints
-+        operator_counting/flow_constraint_internals
-         operator_counting/lm_cut_constraints
-+        operator_counting/oc_single_shot_heuristic
-         operator_counting/operator_counting_heuristic
-         operator_counting/pho_constraints
-         operator_counting/state_equation_constraints
-@@ -873,6 +876,7 @@
-         pdbs/canonical_pdbs_heuristic
-         pdbs/cegar
-         pdbs/dominance_pruning
-+        pdbs/explicit_projection
-         pdbs/incremental_canonical_pdbs
-         pdbs/match_tree
-         pdbs/max_cliques
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc fast-downward/src/search/heuristics/lm_cut_landmarks.cc
 --- fast-downward-original/src/search/heuristics/lm_cut_landmarks.cc	2023-11-15 18:14:39.829874200 -0300
-+++ fast-downward/src/search/heuristics/lm_cut_landmarks.cc	2023-10-25 17:56:46.192366000 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.cc	2024-02-24 20:05:13.697389500 -0300
 @@ -10,6 +10,63 @@
  
  namespace lm_cut_heuristic {
@@ -152,7 +152,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heu
      task_properties::verify_no_conditional_effects(task_proxy);
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heuristics/lm_cut_landmarks.h fast-downward/src/search/heuristics/lm_cut_landmarks.h
 --- fast-downward-original/src/search/heuristics/lm_cut_landmarks.h	2023-11-15 18:14:39.830871400 -0300
-+++ fast-downward/src/search/heuristics/lm_cut_landmarks.h	2023-10-25 17:58:24.015497300 -0300
++++ fast-downward/src/search/heuristics/lm_cut_landmarks.h	2024-02-24 20:05:13.699384700 -0300
 @@ -87,6 +87,7 @@
      using CostCallback = std::function<void (int)>;
      using LandmarkCallback = std::function<void (const Landmark &, int)>;
@@ -163,7 +163,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/heu
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.cc fast-downward/src/search/operator_counting/constraint_generator.cc
 --- fast-downward-original/src/search/operator_counting/constraint_generator.cc	2023-11-15 18:14:39.881902300 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.cc	2023-10-25 18:15:39.698911300 -0300
++++ fast-downward/src/search/operator_counting/constraint_generator.cc	2024-02-24 20:05:13.701379000 -0300
 @@ -5,10 +5,18 @@
  using namespace std;
  
@@ -185,7 +185,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
      ConstraintGeneratorCategoryPlugin() : TypedCategoryPlugin("ConstraintGenerator") {
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/constraint_generator.h fast-downward/src/search/operator_counting/constraint_generator.h
 --- fast-downward-original/src/search/operator_counting/constraint_generator.h	2023-11-15 18:14:39.882899700 -0300
-+++ fast-downward/src/search/operator_counting/constraint_generator.h	2023-11-15 15:51:32.484417000 -0300
++++ fast-downward/src/search/operator_counting/constraint_generator.h	2024-02-24 20:05:13.703374300 -0300
 @@ -5,6 +5,7 @@
  #include <vector>
  
@@ -236,7 +236,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.cc	2023-11-15 18:14:39.882899700 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2023-11-15 17:45:07.907318500 -0300
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.cc	2024-02-26 17:00:47.602226500 -0300
 @@ -7,6 +7,7 @@
  #include "../utils/markup.h"
  
@@ -267,7 +267,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +   // use_integer_vars(opts.get<bool>("use_integer_vars")),
 +    use_integer_vars_op(opts.get<int>("use_integer_vars_op")),
 +    use_integer_vars_op2(opts.get<int>("use_integer_vars_op2")),
-+    use_integer_vars_facts(opts.get<int>("use_integer_vars_facts")),
++    use_integer_vars_facts(opts.get<int>("use_integer_vars_fact")),
 +    use_integer_vars_achiever(opts.get<int>("use_integer_vars_achiever")),
 +    use_integer_vars_time(opts.get<int>("use_integer_vars_time")),
 +    noisy(opts.get<int>("noisy")) {
@@ -540,7 +540,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 \ No newline at end of file
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h fast-downward/src/search/operator_counting/delete_relaxation_constraints.h
 --- fast-downward-original/src/search/operator_counting/delete_relaxation_constraints.h	2023-11-15 18:14:39.882899700 -0300
-+++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2023-11-15 16:57:12.293513900 -0300
++++ fast-downward/src/search/operator_counting/delete_relaxation_constraints.h	2024-02-24 20:05:13.707486400 -0300
 @@ -3,13 +3,12 @@
  
  #include  "constraint_generator.h"
@@ -611,7 +611,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraint_internals.cc fast-downward/src/search/operator_counting/flow_constraint_internals.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraint_internals.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraint_internals.cc	2023-11-15 18:11:37.942086600 -0300
++++ fast-downward/src/search/operator_counting/flow_constraint_internals.cc	2024-02-24 20:05:13.710480200 -0300
 @@ -0,0 +1,243 @@
 +#include "flow_constraint_internals.h"
 +
@@ -858,7 +858,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraint_internals.h fast-downward/src/search/operator_counting/flow_constraint_internals.h
 --- fast-downward-original/src/search/operator_counting/flow_constraint_internals.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraint_internals.h	2023-11-15 17:07:50.339352400 -0300
++++ fast-downward/src/search/operator_counting/flow_constraint_internals.h	2024-02-24 20:05:13.712478900 -0300
 @@ -0,0 +1,68 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINT_INTERNALS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINT_INTERNALS_H
@@ -930,7 +930,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.cc fast-downward/src/search/operator_counting/flow_constraints.cc
 --- fast-downward-original/src/search/operator_counting/flow_constraints.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.cc	2023-11-15 17:52:11.360076000 -0300
++++ fast-downward/src/search/operator_counting/flow_constraints.cc	2024-02-26 17:12:07.807801900 -0300
 @@ -0,0 +1,510 @@
 +#include "flow_constraints.h"
 +
@@ -1033,7 +1033,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +                                   vector<vector<FactPair>> &required_features,
 +                                   bool &found_operator_above_feature_size) {
 +    // HACK: hard-coded for now.
-+#ifdef COIN_HAS_CPX
++#ifdef HAS_CPLEX
 +    lp::LPSolver lp_solver(lp::LPSolverType::CPLEX);
 +#else
 +    lp::LPSolver lp_solver(lp::LPSolverType::SOPLEX);
@@ -1444,7 +1444,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/flow_constraints.h fast-downward/src/search/operator_counting/flow_constraints.h
 --- fast-downward-original/src/search/operator_counting/flow_constraints.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/flow_constraints.h	2023-11-15 16:57:34.964535700 -0300
++++ fast-downward/src/search/operator_counting/flow_constraints.h	2024-02-24 20:05:13.717592300 -0300
 @@ -0,0 +1,50 @@
 +#ifndef OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
 +#define OPERATOR_COUNTING_FLOW_CONSTRAINTS_H
@@ -1498,7 +1498,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc fast-downward/src/search/operator_counting/lm_cut_constraints.cc
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.cc	2023-11-15 18:14:39.883896700 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2023-11-15 20:41:38.871734000 -0300
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.cc	2024-02-24 20:05:13.719584000 -0300
 @@ -8,23 +8,79 @@
  #include "../utils/memory.h"
  
@@ -1655,7 +1655,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  static plugins::FeaturePlugin<LMCutConstraintsFeature> _plugin;
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/lm_cut_constraints.h fast-downward/src/search/operator_counting/lm_cut_constraints.h
 --- fast-downward-original/src/search/operator_counting/lm_cut_constraints.h	2023-11-15 18:14:39.883896700 -0300
-+++ fast-downward/src/search/operator_counting/lm_cut_constraints.h	2023-11-15 16:58:00.535265100 -0300
++++ fast-downward/src/search/operator_counting/lm_cut_constraints.h	2024-02-24 20:05:13.721578400 -0300
 @@ -4,17 +4,34 @@
  #include "constraint_generator.h"
  
@@ -1695,7 +1695,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
  };
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2023-11-15 21:45:35.617919000 -0300
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2024-02-24 20:05:13.723572500 -0300
 @@ -0,0 +1,497 @@
 +#include "oc_single_shot_heuristic.h"
 +
@@ -2196,7 +2196,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +}
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2023-11-15 16:58:54.694132400 -0300
++++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.h	2024-02-24 20:05:13.725567700 -0300
 @@ -0,0 +1,67 @@
 +#ifndef OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
 +#define OPERATOR_COUNTING_OPERATOR_COUNTING_HEURISTIC_H
@@ -2267,7 +2267,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +#endif
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdbs/explicit_projection.cc fast-downward/src/search/pdbs/explicit_projection.cc
 --- fast-downward-original/src/search/pdbs/explicit_projection.cc	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/pdbs/explicit_projection.cc	2023-10-25 14:33:07.182265900 -0300
++++ fast-downward/src/search/pdbs/explicit_projection.cc	2024-02-24 20:05:13.728678100 -0300
 @@ -0,0 +1,513 @@
 +#include "explicit_projection.h"
 +
@@ -2784,7 +2784,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdb
 +}  // namespace pdbs
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/pdbs/explicit_projection.h fast-downward/src/search/pdbs/explicit_projection.h
 --- fast-downward-original/src/search/pdbs/explicit_projection.h	1969-12-31 21:00:00.000000000 -0300
-+++ fast-downward/src/search/pdbs/explicit_projection.h	2023-10-25 14:33:07.183268800 -0300
++++ fast-downward/src/search/pdbs/explicit_projection.h	2024-02-24 20:05:13.730670200 -0300
 @@ -0,0 +1,52 @@
 +#ifndef PDBS_EXPLICIT_PROJECTION_H
 +#define PDBS_EXPLICIT_PROJECTION_H

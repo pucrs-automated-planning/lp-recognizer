@@ -131,6 +131,9 @@ get_results() {
 		if [[ "$EXP" == "output" ]]; then
 			# .output files + .txt tables.
 			python3 test_domain.py $DATASETS $domain-$1 "$METHODS" $TEST -S cplex > experiments/stdout/$domain-$1.txt
+			for filename in hyp_*_problem.log; do
+				mv $filename experiments/stdout/$domain-$1-$filename
+			done
 		elif [[ "$EXP" == "txt" ]]; then
 			# .txt tables only.
 			python3 data_output.py "$METHODS" $domain-$1 $TEST
