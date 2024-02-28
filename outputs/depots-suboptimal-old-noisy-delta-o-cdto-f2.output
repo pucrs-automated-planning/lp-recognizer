@@ -1,180 +1,1618 @@
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_1.tar.bz2:0.7552740573883057:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_2.tar.bz2:0.7548840045928955:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_3.tar.bz2:0.748356819152832:0.0:0.7500000000000284
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_1.tar.bz2:0.7421860694885254:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_2.tar.bz2:0.7500052452087402:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_3.tar.bz2:0.7506558895111084:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_1.tar.bz2:0.7300348281860352:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_2.tar.bz2:0.7488217353820801:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_3.tar.bz2:0.7518796920776367:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_1.tar.bz2:0.7429308891296387:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_2.tar.bz2:0.7516741752624512:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_3.tar.bz2:0.7393417358398438:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_1.tar.bz2:0.7489173412322998:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_2.tar.bz2:0.7781891822814941:0.0:0.7799999999999727
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_3.tar.bz2:0.7645523548126221:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_1.tar.bz2:0.7683494091033936:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_2.tar.bz2:0.7672364711761475:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_3.tar.bz2:0.7863955497741699:0.0:0.789999999999992
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_1.tar.bz2:0.7805790901184082:0.0:0.7799999999999727
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_2.tar.bz2:0.7457759380340576:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_3.tar.bz2:0.75636887550354:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_1.tar.bz2:0.7709667682647705:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_2.tar.bz2:0.7569427490234375:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_3.tar.bz2:0.7467424869537354:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_1.tar.bz2:0.7585422992706299:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_2.tar.bz2:0.7598972320556641:0.0:0.75
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_3.tar.bz2:0.7525308132171631:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_1.tar.bz2:0.7705955505371094:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_2.tar.bz2:0.7742514610290527:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_3.tar.bz2:0.7568104267120361:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_1.tar.bz2:0.7693014144897461:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_2.tar.bz2:0.768836498260498:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_3.tar.bz2:0.7620043754577637:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_1.tar.bz2:0.7419986724853516:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_2.tar.bz2:0.7564795017242432:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_3.tar.bz2:0.7651383876800537:0.0:0.7699999999999534
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_1.tar.bz2:0.7240548133850098:0.0:0.7200000000000273
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_2.tar.bz2:0.7251343727111816:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_3.tar.bz2:0.7295887470245361:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_1.tar.bz2:0.7488863468170166:0.0:0.75
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_2.tar.bz2:0.747133731842041:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_3.tar.bz2:0.7130277156829834:0.0:0.710000000000008
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_1.tar.bz2:0.717172384262085:0.0:0.7199999999999989
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_2.tar.bz2:0.7239260673522949:0.0:0.7200000000000273
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_3.tar.bz2:0.7215874195098877:0.0:0.7199999999999704
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_1.tar.bz2:0.7280471324920654:0.0:0.7199999999999989
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_2.tar.bz2:0.7321155071258545:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_3.tar.bz2:0.7510120868682861:0.0:0.75
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_1.tar.bz2:0.7673790454864502:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_2.tar.bz2:0.7358200550079346:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_3.tar.bz2:0.7541294097900391:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_1.tar.bz2:0.7650206089019775:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_2.tar.bz2:0.7475755214691162:0.0:0.7500000000000284
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_3.tar.bz2:0.7487502098083496:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_1.tar.bz2:0.7679269313812256:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_2.tar.bz2:0.7425317764282227:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_3.tar.bz2:0.7448775768280029:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_1.tar.bz2:0.7486286163330078:0.0:0.7500000000000284
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_2.tar.bz2:0.7825655937194824:0.0:0.7899999999999636
-depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_3.tar.bz2:0.7495086193084717:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_1.tar.bz2:0.7203567028045654:0.0:0.7100000000000364
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_2.tar.bz2:0.7530457973480225:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_3.tar.bz2:0.7297577857971191:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_1.tar.bz2:0.7540829181671143:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_2.tar.bz2:0.7592382431030273:0.0:0.75
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_3.tar.bz2:0.7284748554229736:0.0:0.7299999999999613
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_1.tar.bz2:0.7334942817687988:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_2.tar.bz2:0.7376673221588135:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_3.tar.bz2:0.7412033081054688:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_1.tar.bz2:0.7572550773620605:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_2.tar.bz2:0.7530913352966309:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_3.tar.bz2:0.7347397804260254:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_1.tar.bz2:0.7419025897979736:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_2.tar.bz2:0.7589950561523438:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_3.tar.bz2:0.7352027893066406:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_1.tar.bz2:0.754065990447998:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_2.tar.bz2:0.7296173572540283:0.0:0.7300000000000466
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_3.tar.bz2:0.7454748153686523:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_1.tar.bz2:0.7236862182617188:0.0:0.7199999999999704
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_2.tar.bz2:0.7220978736877441:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_3.tar.bz2:0.742142915725708:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_1.tar.bz2:0.7473642826080322:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_2.tar.bz2:0.7446126937866211:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_3.tar.bz2:0.7260701656341553:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_1.tar.bz2:0.7554564476013184:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_2.tar.bz2:0.7486302852630615:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_3.tar.bz2:0.7682597637176514:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_1.tar.bz2:0.7576320171356201:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_2.tar.bz2:0.7524528503417969:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_3.tar.bz2:0.7528409957885742:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_1.tar.bz2:0.7438299655914307:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_2.tar.bz2:0.7475118637084961:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_3.tar.bz2:0.7554845809936523:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_1.tar.bz2:0.7425646781921387:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_2.tar.bz2:0.7490847110748291:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_3.tar.bz2:0.745668888092041:0.0:0.7400000000000375
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_1.tar.bz2:0.7631046772003174:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_2.tar.bz2:0.764613151550293:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_3.tar.bz2:0.7589011192321777:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_1.tar.bz2:0.759929895401001:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_2.tar.bz2:0.7494683265686035:0.0:0.7500000000000284
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_3.tar.bz2:0.7789604663848877:0.0:0.7800000000000011
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_1.tar.bz2:0.7614145278930664:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_2.tar.bz2:0.7581741809844971:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_3.tar.bz2:0.759920597076416:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_1.tar.bz2:0.7605535984039307:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_2.tar.bz2:0.7544572353363037:0.0:0.75
-depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_3.tar.bz2:0.7792272567749023:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_1.tar.bz2:0.763568639755249:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_2.tar.bz2:0.7328321933746338:0.0:0.7299999999999898
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_3.tar.bz2:0.7460193634033203:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_1.tar.bz2:0.7468976974487305:0.0:0.75
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_2.tar.bz2:0.7569890022277832:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_3.tar.bz2:0.7388224601745605:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_1.tar.bz2:0.7497186660766602:0.0:0.75
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_2.tar.bz2:0.7454679012298584:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_3.tar.bz2:0.7547879219055176:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_1.tar.bz2:0.7533402442932129:0.0:0.7399999999999807
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_2.tar.bz2:0.7498304843902588:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_3.tar.bz2:0.7534866333007812:0.0:0.7599999999999625
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_1.tar.bz2:0.7753512859344482:0.0:0.7800000000000011
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_2.tar.bz2:0.7687335014343262:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_3.tar.bz2:0.7655971050262451:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_1.tar.bz2:0.7539124488830566:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_2.tar.bz2:0.7512233257293701:0.0:0.75
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_3.tar.bz2:0.7555389404296875:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_1.tar.bz2:0.7814555168151855:0.0:0.7800000000000296
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_2.tar.bz2:0.7661488056182861:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_3.tar.bz2:0.7599411010742188:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_1.tar.bz2:0.7601284980773926:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_2.tar.bz2:0.7488081455230713:0.0:0.75
-depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_3.tar.bz2:0.7565484046936035:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_1.tar.bz2:0.7594723701477051:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_2.tar.bz2:0.7522666454315186:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_3.tar.bz2:0.7620503902435303:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_1.tar.bz2:0.7678377628326416:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_2.tar.bz2:0.758620023727417:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_3.tar.bz2:0.7556231021881104:0.0:0.7499999999999716
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_1.tar.bz2:0.7614474296569824:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_2.tar.bz2:0.7727956771850586:0.0:0.7799999999999727
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_3.tar.bz2:0.76645827293396:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_1.tar.bz2:0.7478585243225098:0.0:0.75
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_2.tar.bz2:0.7618210315704346:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_3.tar.bz2:0.7593786716461182:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_1.tar.bz2:0.7519052028656006:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_2.tar.bz2:0.7632312774658203:0.0:0.7600000000000193
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_3.tar.bz2:0.761756420135498:0.0:0.7700000000000102
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_1.tar.bz2:0.7545452117919922:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_2.tar.bz2:0.7430906295776367:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_3.tar.bz2:0.7562723159790039:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_1.tar.bz2:0.7625198364257812:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_2.tar.bz2:0.7605969905853271:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_3.tar.bz2:0.7519209384918213:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_1.tar.bz2:0.7602906227111816:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_2.tar.bz2:0.746429443359375:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_3.tar.bz2:0.7444021701812744:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_1.tar.bz2:0.7419061660766602:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_2.tar.bz2:0.7418382167816162:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_3.tar.bz2:0.734222412109375:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_1.tar.bz2:0.7491114139556885:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_2.tar.bz2:0.7464814186096191:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_3.tar.bz2:0.7485816478729248:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_1.tar.bz2:0.7563951015472412:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_2.tar.bz2:0.77374267578125:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_3.tar.bz2:0.7441565990447998:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_1.tar.bz2:0.7481849193572998:0.0:0.75
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_2.tar.bz2:0.748321533203125:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_3.tar.bz2:0.756066083908081:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_1.tar.bz2:0.7707440853118896:0.0:0.7699999999999818
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_2.tar.bz2:0.761054277420044:0.0:0.7700000000000387
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_3.tar.bz2:0.7457263469696045:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_1.tar.bz2:0.7589125633239746:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_2.tar.bz2:0.7438175678253174:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_3.tar.bz2:0.7333600521087646:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_1.tar.bz2:0.7502405643463135:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_2.tar.bz2:0.737220287322998:0.0:0.7300000000000182
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_3.tar.bz2:0.7481882572174072:0.0:0.7400000000000091
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_1.tar.bz2:0.7250254154205322:0.0:0.7199999999999704
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_2.tar.bz2:0.7641723155975342:0.0:0.7599999999999909
-depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_3.tar.bz2:0.7505121231079102:0.0:0.7599999999999909
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_1.tar.bz2:0.9385781288146973:0.10120019999999999:0.9299999999999784
+> 0:True:2,4:9797,1910
+> 1:True:4,6:9797,1910
+> 2:True:4,6:9797,1910
+> 3:True:4,6:9797,1910
+> 4:True:4,6:9797,1910
+> 5:True:4,6:9797,1910
+> 6:False:2,5:9797,1910
+> 7:True:4,6:9797,1910
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_2.tar.bz2:0.9657504558563232:0.10173489999999999:0.9499999999999886
+> 0:True:2,4:9798,1913
+> 1:True:4,6:9798,1913
+> 2:True:4,6:9798,1913
+> 3:True:4,6:9798,1913
+> 4:True:4,6:9798,1913
+> 5:True:4,6:9798,1913
+> 6:True:2,4:9798,1913
+> 7:True:4,6:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-1_10_3.tar.bz2:0.9335808753967285:0.1032799:0.9300000000000068
+> 0:False:2,3:9797,1910
+> 1:False:4,5:9797,1910
+> 2:True:4,4:9797,1910
+> 3:False:4,5:9797,1910
+> 4:False:4,5:9797,1910
+> 5:False:4,5:9797,1910
+> 6:False:2,3:9797,1910
+> 7:False:4,5:9797,1910
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_1.tar.bz2:0.9735188484191895:0.11000189999999999:0.9699999999999989
+> 0:True:2,6:9798,1913
+> 1:True:4,8:9798,1913
+> 2:True:4,8:9798,1913
+> 3:True:4,8:9798,1913
+> 4:True:4,8:9798,1913
+> 5:True:4,8:9798,1913
+> 6:True:2,6:9798,1913
+> 7:True:4,8:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_2.tar.bz2:0.9212615489959717:0.09636209999999999:0.9200000000000159
+> 0:False:2,5:9799,1916
+> 1:False:4,7:9799,1916
+> 2:True:4,6:9799,1916
+> 3:False:4,7:9799,1916
+> 4:False:4,7:9799,1916
+> 5:False:4,7:9799,1916
+> 6:False:2,5:9799,1916
+> 7:False:4,7:9799,1916
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-2_10_3.tar.bz2:0.9501607418060303:0.1100239:0.9499999999999602
+> 0:False:2,6:9798,1913
+> 1:True:4,7:9798,1913
+> 2:False:4,8:9798,1913
+> 3:False:4,8:9798,1913
+> 4:False:4,8:9798,1913
+> 5:True:4,7:9798,1913
+> 6:False:2,6:9798,1913
+> 7:True:4,7:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_1.tar.bz2:0.9375300407409668:0.10649059999999999:0.9300000000000068
+> 0:False:2,6:9798,1913
+> 1:False:4,8:9798,1913
+> 2:True:4,7:9798,1913
+> 3:False:4,9:9798,1913
+> 4:False:4,8:9798,1913
+> 5:False:4,8:9798,1913
+> 6:False:2,7:9798,1913
+> 7:False:4,9:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_2.tar.bz2:0.9344315528869629:0.0977473:0.9300000000000068
+> 0:False:2,6:9798,1913
+> 1:False:4,8:9798,1913
+> 2:False:4,8:9798,1913
+> 3:False:4,8:9798,1913
+> 4:False:4,8:9798,1913
+> 5:True:4,7:9798,1913
+> 6:False:2,6:9798,1913
+> 7:False:4,8:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-3_10_3.tar.bz2:0.9325525760650635:0.0962346:0.9299999999999784
+> 0:False:2,5:9798,1913
+> 1:False:4,7:9798,1913
+> 2:True:4,6:9798,1913
+> 3:False:4,7:9798,1913
+> 4:False:4,7:9798,1913
+> 5:False:4,7:9798,1913
+> 6:False:2,5:9798,1913
+> 7:False:4,7:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_1.tar.bz2:0.9572839736938477:0.10580160000000001:0.950000000000017
+> 0:False:2,6:9798,1913
+> 1:False:4,8:9798,1913
+> 2:True:4,7:9798,1913
+> 3:False:4,8:9798,1913
+> 4:False:4,8:9798,1913
+> 5:True:4,7:9798,1913
+> 6:False:2,6:9798,1913
+> 7:False:4,8:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_2.tar.bz2:0.9412472248077393:0.1041847:0.9399999999999977
+> 0:False:2,6:9798,1913
+> 1:False:4,8:9798,1913
+> 2:False:4,8:9798,1913
+> 3:True:4,6:9798,1913
+> 4:False:4,7:9798,1913
+> 5:False:4,8:9798,1913
+> 6:False:2,6:9798,1913
+> 7:False:4,8:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p03_hyp-4_10_3.tar.bz2:0.9557421207427979:0.10668389999999998:0.960000000000008
+> 0:True:2,6:9798,1913
+> 1:True:4,8:9798,1913
+> 2:True:4,8:9798,1913
+> 3:True:4,8:9798,1913
+> 4:True:4,8:9798,1913
+> 5:True:4,8:9798,1913
+> 6:True:2,6:9798,1913
+> 7:True:4,8:9798,1913
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_1.tar.bz2:0.9825332164764404:0.11314970000000002:0.9799999999999613
+> 0:False:4,9:11402,2149
+> 1:False:4,9:11402,2149
+> 2:False:2,7:11402,2149
+> 3:False:4,9:11402,2149
+> 4:False:4,9:11402,2149
+> 5:False:2,7:11402,2149
+> 6:True:4,8:11402,2149
+> 7:False:4,9:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_2.tar.bz2:0.962669849395752:0.11085919999999999:0.9600000000000364
+> 0:True:4,7:11403,2152
+> 1:False:4,8:11403,2152
+> 2:False:2,6:11403,2152
+> 3:True:4,7:11403,2152
+> 4:False:4,8:11403,2152
+> 5:False:2,6:11403,2152
+> 6:False:4,8:11403,2152
+> 7:False:4,8:11403,2152
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-1_10_3.tar.bz2:0.9837267398834229:0.11874570000000001:0.9800000000000182
+> 0:True:4,8:11402,2149
+> 1:True:4,8:11402,2149
+> 2:True:2,6:11402,2149
+> 3:True:4,8:11402,2149
+> 4:True:4,8:11402,2149
+> 5:True:2,6:11402,2149
+> 6:True:4,8:11402,2149
+> 7:True:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_1.tar.bz2:0.9929845333099365:0.11916840000000001:0.9799999999999613
+> 0:False:4,8:11402,2149
+> 1:True:4,7:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,8:11402,2149
+> 4:False:4,8:11402,2149
+> 5:False:2,6:11402,2149
+> 6:False:4,8:11402,2149
+> 7:True:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_2.tar.bz2:0.9826867580413818:0.1148032:0.9799999999999613
+> 0:False:4,7:11403,2152
+> 1:True:4,6:11403,2152
+> 2:False:2,5:11403,2152
+> 3:False:4,8:11403,2152
+> 4:False:4,7:11403,2152
+> 5:False:2,6:11403,2152
+> 6:False:4,7:11403,2152
+> 7:False:4,7:11403,2152
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-2_10_3.tar.bz2:0.9941635131835938:0.1194751:0.9900000000000091
+> 0:True:4,6:11402,2149
+> 1:False:4,7:11402,2149
+> 2:False:2,5:11402,2149
+> 3:False:4,7:11402,2149
+> 4:False:4,7:11402,2149
+> 5:False:2,5:11402,2149
+> 6:False:4,7:11402,2149
+> 7:False:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_1.tar.bz2:0.9672367572784424:0.1083564:0.9699999999999989
+> 0:False:4,7:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:True:4,6:11402,2149
+> 4:False:4,7:11402,2149
+> 5:False:2,6:11402,2149
+> 6:False:4,8:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_2.tar.bz2:0.9654009342193604:0.10229189999999999:0.960000000000008
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:True:4,6:11402,2149
+> 4:False:4,7:11402,2149
+> 5:False:2,6:11402,2149
+> 6:False:4,8:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-3_10_3.tar.bz2:0.9933545589447021:0.1226998:0.9899999999999807
+> 0:True:4,6:11401,2146
+> 1:False:4,7:11401,2146
+> 2:False:2,5:11401,2146
+> 3:False:4,7:11401,2146
+> 4:False:4,7:11401,2146
+> 5:False:2,5:11401,2146
+> 6:False:4,7:11401,2146
+> 7:False:4,7:11401,2146
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_1.tar.bz2:0.985713005065918:0.108853:0.9900000000000091
+> 0:True:4,6:11401,2146
+> 1:False:4,7:11401,2146
+> 2:False:2,5:11401,2146
+> 3:False:4,7:11401,2146
+> 4:False:4,7:11401,2146
+> 5:False:2,5:11401,2146
+> 6:False:4,7:11401,2146
+> 7:False:4,7:11401,2146
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_2.tar.bz2:0.965320348739624:0.11008530000000001:0.960000000000008
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,9:11402,2149
+> 4:False:4,8:11402,2149
+> 5:False:2,7:11402,2149
+> 6:True:4,7:11402,2149
+> 7:False:4,9:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p04_hyp-4_10_3.tar.bz2:0.9717466831207275:0.1084621:0.9699999999999989
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,8:11402,2149
+> 4:False:4,8:11402,2149
+> 5:False:2,6:11402,2149
+> 6:True:4,6:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_1.tar.bz2:0.97585129737854:0.1172408:0.9799999999999898
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,8:11402,2149
+> 4:False:4,8:11402,2149
+> 5:False:2,6:11402,2149
+> 6:True:4,7:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_2.tar.bz2:0.9579455852508545:0.108748:0.960000000000008
+> 0:True:4,6:11402,2149
+> 1:False:4,7:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,7:11402,2149
+> 4:False:4,7:11402,2149
+> 5:False:2,5:11402,2149
+> 6:False:4,7:11402,2149
+> 7:False:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-1_10_3.tar.bz2:1.0051157474517822:0.112133:0.9899999999999807
+> 0:True:4,7:11402,2149
+> 1:True:4,7:11402,2149
+> 2:True:2,5:11402,2149
+> 3:True:4,7:11402,2149
+> 4:True:4,7:11402,2149
+> 5:True:2,5:11402,2149
+> 6:True:4,7:11402,2149
+> 7:True:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_1.tar.bz2:0.9756138324737549:0.1111587:0.9599999999999795
+> 0:True:4,6:11402,2149
+> 1:False:4,7:11402,2149
+> 2:False:2,5:11402,2149
+> 3:False:4,7:11402,2149
+> 4:False:4,7:11402,2149
+> 5:False:2,5:11402,2149
+> 6:False:4,7:11402,2149
+> 7:False:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_2.tar.bz2:1.004176139831543:0.1210063:0.9899999999999807
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,8:11402,2149
+> 4:False:4,8:11402,2149
+> 5:False:2,7:11402,2149
+> 6:True:4,7:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-2_10_3.tar.bz2:0.9992475509643555:0.11909020000000001:1.0000000000000284
+> 0:True:4,6:11402,2149
+> 1:True:4,6:11402,2149
+> 2:True:2,4:11402,2149
+> 3:False:4,7:11402,2149
+> 4:True:4,6:11402,2149
+> 5:False:2,5:11402,2149
+> 6:True:4,6:11402,2149
+> 7:False:4,7:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_1.tar.bz2:0.9773831367492676:0.11225349999999999:0.9699999999999989
+> 0:True:4,8:11402,2149
+> 1:False:4,9:11402,2149
+> 2:False:2,7:11402,2149
+> 3:False:4,9:11402,2149
+> 4:False:4,9:11402,2149
+> 5:False:2,7:11402,2149
+> 6:False:4,9:11402,2149
+> 7:False:4,9:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_2.tar.bz2:0.969855785369873:0.11088920000000001:0.960000000000008
+> 0:True:4,8:11402,2149
+> 1:False:4,9:11402,2149
+> 2:False:2,7:11402,2149
+> 3:False:4,9:11402,2149
+> 4:False:4,9:11402,2149
+> 5:False:2,7:11402,2149
+> 6:False:4,9:11402,2149
+> 7:False:4,9:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-3_10_3.tar.bz2:0.9662342071533203:0.11740489999999999:0.9599999999999795
+> 0:True:4,5:11402,2149
+> 1:False:4,6:11402,2149
+> 2:False:2,4:11402,2149
+> 3:False:4,6:11402,2149
+> 4:False:4,6:11402,2149
+> 5:False:2,4:11402,2149
+> 6:False:4,6:11402,2149
+> 7:False:4,6:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_1.tar.bz2:0.9788920879364014:0.11580439999999999:0.9699999999999989
+> 0:True:4,9:11402,2149
+> 1:False:4,10:11402,2149
+> 2:False:2,8:11402,2149
+> 3:True:4,9:11402,2149
+> 4:True:4,9:11402,2149
+> 5:False:2,8:11402,2149
+> 6:False:4,10:11402,2149
+> 7:False:4,10:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_2.tar.bz2:0.9983930587768555:0.10805150000000001:0.9900000000000091
+> 0:False:4,8:11402,2149
+> 1:False:4,8:11402,2149
+> 2:False:2,6:11402,2149
+> 3:False:4,7:11402,2149
+> 4:True:4,6:11402,2149
+> 5:False:2,6:11402,2149
+> 6:False:4,8:11402,2149
+> 7:False:4,8:11402,2149
+depots-suboptimal-old-noisy/10/depots_noisy_p05_hyp-4_10_3.tar.bz2:1.0033106803894043:0.12181099999999999:1.0
+> 0:False:4,9:11402,2149
+> 1:False:4,9:11402,2149
+> 2:False:2,7:11402,2149
+> 3:False:4,8:11402,2149
+> 4:True:4,7:11402,2149
+> 5:False:2,7:11402,2149
+> 6:False:4,8:11402,2149
+> 7:False:4,9:11402,2149
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_1.tar.bz2:0.9592981338500977:0.0995438:0.950000000000017
+> 0:True:2,7:9799,1916
+> 1:True:4,9:9799,1916
+> 2:True:4,9:9799,1916
+> 3:False:4,10:9799,1916
+> 4:True:4,9:9799,1916
+> 5:True:4,9:9799,1916
+> 6:False:2,8:9799,1916
+> 7:False:4,10:9799,1916
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_2.tar.bz2:0.9461286067962646:0.105471:0.9399999999999977
+> 0:False:2,7:9799,1916
+> 1:False:4,9:9799,1916
+> 2:True:4,8:9799,1916
+> 3:False:4,9:9799,1916
+> 4:False:4,9:9799,1916
+> 5:False:4,9:9799,1916
+> 6:False:2,7:9799,1916
+> 7:False:4,9:9799,1916
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-1_30_3.tar.bz2:0.9568541049957275:0.1063042:0.9499999999999886
+> 0:True:2,5:9799,1916
+> 1:True:4,7:9799,1916
+> 2:True:4,7:9799,1916
+> 3:False:4,9:9799,1916
+> 4:True:4,7:9799,1916
+> 5:False:4,8:9799,1916
+> 6:False:2,7:9799,1916
+> 7:False:4,9:9799,1916
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_1.tar.bz2:0.9398128986358643:0.1022207:0.9399999999999977
+> 0:False:2,10:9800,1919
+> 1:True:4,10:9800,1919
+> 2:False:4,11:9800,1919
+> 3:False:4,12:9800,1919
+> 4:False:4,12:9800,1919
+> 5:False:4,12:9800,1919
+> 6:False:2,10:9800,1919
+> 7:True:4,10:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_2.tar.bz2:0.9468240737915039:0.09786339999999999:0.950000000000017
+> 0:False:2,7:9800,1919
+> 1:True:4,7:9800,1919
+> 2:False:4,9:9800,1919
+> 3:False:4,9:9800,1919
+> 4:False:4,9:9800,1919
+> 5:False:4,9:9800,1919
+> 6:False:2,7:9800,1919
+> 7:False:4,8:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-2_30_3.tar.bz2:0.9576592445373535:0.1056619:0.9599999999999795
+> 0:False:2,7:9800,1919
+> 1:True:4,7:9800,1919
+> 2:False:4,9:9800,1919
+> 3:False:4,10:9800,1919
+> 4:False:4,9:9800,1919
+> 5:False:4,10:9800,1919
+> 6:False:2,8:9800,1919
+> 7:False:4,8:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_1.tar.bz2:0.9576866626739502:0.0989774:0.9599999999999795
+> 0:False:2,7:9800,1919
+> 1:False:4,9:9800,1919
+> 2:True:4,7:9800,1919
+> 3:False:4,8:9800,1919
+> 4:False:4,9:9800,1919
+> 5:False:4,8:9800,1919
+> 6:False:2,7:9800,1919
+> 7:False:4,8:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_2.tar.bz2:0.9466087818145752:0.10094190000000001:0.950000000000017
+> 0:False:2,8:9800,1919
+> 1:False:4,10:9800,1919
+> 2:True:4,8:9800,1919
+> 3:False:4,10:9800,1919
+> 4:False:4,10:9800,1919
+> 5:False:4,10:9800,1919
+> 6:False:2,8:9800,1919
+> 7:False:4,10:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-3_30_3.tar.bz2:0.9533755779266357:0.09652:0.960000000000008
+> 0:False:2,7:9800,1919
+> 1:False:4,9:9800,1919
+> 2:True:4,7:9800,1919
+> 3:False:4,10:9800,1919
+> 4:False:4,9:9800,1919
+> 5:False:4,10:9800,1919
+> 6:False:2,8:9800,1919
+> 7:False:4,10:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_1.tar.bz2:0.9823780059814453:0.1078404:0.9799999999999898
+> 0:False:2,6:9801,1922
+> 1:False:4,8:9801,1922
+> 2:True:4,7:9801,1922
+> 3:False:4,8:9801,1922
+> 4:False:4,8:9801,1922
+> 5:False:4,8:9801,1922
+> 6:False:2,6:9801,1922
+> 7:False:4,8:9801,1922
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_2.tar.bz2:0.9831352233886719:0.1111146:0.9700000000000273
+> 0:False:2,9:9801,1922
+> 1:False:4,11:9801,1922
+> 2:True:4,9:9801,1922
+> 3:False:4,10:9801,1922
+> 4:False:4,10:9801,1922
+> 5:False:4,10:9801,1922
+> 6:False:2,8:9801,1922
+> 7:False:4,10:9801,1922
+depots-suboptimal-old-noisy/30/depots_noisy_p03_hyp-4_30_3.tar.bz2:0.9690563678741455:0.1065011:0.9799999999999898
+> 0:False:2,9:9800,1919
+> 1:False:4,11:9800,1919
+> 2:True:4,10:9800,1919
+> 3:True:4,10:9800,1919
+> 4:True:4,10:9800,1919
+> 5:True:4,10:9800,1919
+> 6:False:2,9:9800,1919
+> 7:False:4,11:9800,1919
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_1.tar.bz2:1.0053141117095947:0.11604460000000001:1.009999999999991
+> 0:True:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,9:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_2.tar.bz2:0.9813964366912842:0.10701629999999998:0.9900000000000091
+> 0:True:4,7:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,9:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-1_30_3.tar.bz2:0.9835424423217773:0.12041249999999999:0.9799999999999898
+> 0:True:4,8:11404,2155
+> 1:False:4,9:11404,2155
+> 2:False:2,7:11404,2155
+> 3:True:4,8:11404,2155
+> 4:False:4,9:11404,2155
+> 5:False:2,7:11404,2155
+> 6:True:4,8:11404,2155
+> 7:True:4,8:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_1.tar.bz2:0.9853558540344238:0.1114183:0.9900000000000091
+> 0:False:4,10:11405,2158
+> 1:True:4,9:11405,2158
+> 2:False:2,8:11405,2158
+> 3:False:4,10:11405,2158
+> 4:False:4,10:11405,2158
+> 5:False:2,8:11405,2158
+> 6:True:4,9:11405,2158
+> 7:True:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_2.tar.bz2:0.9792931079864502:0.10963000000000002:0.9799999999999898
+> 0:True:4,9:11404,2155
+> 1:True:4,9:11404,2155
+> 2:False:2,8:11404,2155
+> 3:False:4,10:11404,2155
+> 4:False:4,10:11404,2155
+> 5:False:2,8:11404,2155
+> 6:False:4,10:11404,2155
+> 7:True:4,9:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-2_30_3.tar.bz2:0.9893300533294678:0.1145059:0.9899999999999807
+> 0:True:4,8:11405,2158
+> 1:True:4,8:11405,2158
+> 2:False:2,7:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,9:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_1.tar.bz2:0.9829366207122803:0.11343230000000001:0.9900000000000091
+> 0:False:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:True:4,7:11405,2158
+> 4:False:4,8:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_2.tar.bz2:0.9856631755828857:0.1128512:0.9800000000000182
+> 0:True:4,9:11405,2158
+> 1:False:4,10:11405,2158
+> 2:False:2,8:11405,2158
+> 3:True:4,9:11405,2158
+> 4:True:4,9:11405,2158
+> 5:False:2,8:11405,2158
+> 6:True:4,9:11405,2158
+> 7:False:4,10:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-3_30_3.tar.bz2:1.0042643547058105:0.11459879999999999:1.0
+> 0:True:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:True:4,8:11405,2158
+> 4:True:4,8:11405,2158
+> 5:False:2,7:11405,2158
+> 6:True:4,8:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_1.tar.bz2:0.9874999523162842:0.1143464:0.9800000000000182
+> 0:False:4,10:11404,2155
+> 1:False:4,10:11404,2155
+> 2:False:2,8:11404,2155
+> 3:False:4,9:11404,2155
+> 4:False:4,10:11404,2155
+> 5:False:2,7:11404,2155
+> 6:True:4,8:11404,2155
+> 7:False:4,9:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_2.tar.bz2:0.9829764366149902:0.11305589999999999:0.9899999999999807
+> 0:True:4,7:11404,2155
+> 1:False:4,8:11404,2155
+> 2:False:2,6:11404,2155
+> 3:False:4,8:11404,2155
+> 4:False:4,8:11404,2155
+> 5:False:2,6:11404,2155
+> 6:False:4,8:11404,2155
+> 7:False:4,8:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p04_hyp-4_30_3.tar.bz2:0.9989535808563232:0.1096172:1.0100000000000193
+> 0:False:4,10:11405,2158
+> 1:True:4,9:11405,2158
+> 2:False:2,9:11405,2158
+> 3:False:4,10:11405,2158
+> 4:False:4,11:11405,2158
+> 5:False:2,8:11405,2158
+> 6:True:4,9:11405,2158
+> 7:False:4,10:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_1.tar.bz2:0.9988353252410889:0.1097215:1.0
+> 0:True:4,7:11405,2158
+> 1:False:4,8:11405,2158
+> 2:False:2,6:11405,2158
+> 3:False:4,8:11405,2158
+> 4:False:4,8:11405,2158
+> 5:False:2,6:11405,2158
+> 6:True:4,7:11405,2158
+> 7:False:4,8:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_2.tar.bz2:0.9831807613372803:0.10589879999999999:0.9699999999999989
+> 0:False:4,8:11406,2161
+> 1:True:4,7:11406,2161
+> 2:False:2,7:11406,2161
+> 3:False:4,9:11406,2161
+> 4:False:4,9:11406,2161
+> 5:False:2,7:11406,2161
+> 6:False:4,9:11406,2161
+> 7:False:4,8:11406,2161
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-1_30_3.tar.bz2:0.9881069660186768:0.112392:0.9899999999999807
+> 0:False:4,9:11405,2158
+> 1:True:4,8:11405,2158
+> 2:False:2,8:11405,2158
+> 3:False:4,10:11405,2158
+> 4:False:4,10:11405,2158
+> 5:False:2,8:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_1.tar.bz2:0.991856575012207:0.11227000000000001:0.9900000000000091
+> 0:True:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,9:11405,2158
+> 5:False:2,7:11405,2158
+> 6:True:4,8:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_2.tar.bz2:1.010498046875:0.11249819999999999:1.009999999999991
+> 0:False:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,9:11405,2158
+> 5:False:2,7:11405,2158
+> 6:True:4,7:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-2_30_3.tar.bz2:1.0089085102081299:0.1167957:1.0100000000000193
+> 0:False:4,8:11405,2158
+> 1:False:4,8:11405,2158
+> 2:False:2,6:11405,2158
+> 3:False:4,9:11405,2158
+> 4:False:4,8:11405,2158
+> 5:False:2,7:11405,2158
+> 6:True:4,7:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_1.tar.bz2:0.9907839298248291:0.1163948:0.9900000000000091
+> 0:True:4,7:11404,2155
+> 1:False:4,8:11404,2155
+> 2:False:2,6:11404,2155
+> 3:False:4,8:11404,2155
+> 4:False:4,8:11404,2155
+> 5:False:2,6:11404,2155
+> 6:True:4,7:11404,2155
+> 7:False:4,8:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_2.tar.bz2:0.9917020797729492:0.11489089999999999:1.0
+> 0:False:4,10:11406,2161
+> 1:False:4,9:11406,2161
+> 2:False:2,8:11406,2161
+> 3:False:4,9:11406,2161
+> 4:False:4,10:11406,2161
+> 5:False:2,7:11406,2161
+> 6:False:4,9:11406,2161
+> 7:True:4,7:11406,2161
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-3_30_3.tar.bz2:1.0008454322814941:0.1185644:0.9900000000000091
+> 0:False:4,11:11404,2155
+> 1:False:4,10:11404,2155
+> 2:False:2,9:11404,2155
+> 3:False:4,11:11404,2155
+> 4:False:4,11:11404,2155
+> 5:False:2,9:11404,2155
+> 6:False:4,10:11404,2155
+> 7:True:4,9:11404,2155
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_1.tar.bz2:0.9923572540283203:0.11388619999999999:0.9900000000000091
+> 0:False:4,8:11406,2161
+> 1:False:4,8:11406,2161
+> 2:False:2,6:11406,2161
+> 3:False:4,8:11406,2161
+> 4:True:4,6:11406,2161
+> 5:False:2,7:11406,2161
+> 6:False:4,9:11406,2161
+> 7:False:4,9:11406,2161
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_2.tar.bz2:0.9891581535339355:0.11588500000000002:0.9900000000000091
+> 0:True:4,8:11405,2158
+> 1:False:4,9:11405,2158
+> 2:False:2,7:11405,2158
+> 3:True:4,8:11405,2158
+> 4:True:4,8:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,9:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/30/depots_noisy_p05_hyp-4_30_3.tar.bz2:0.9925167560577393:0.11607609999999999:0.9900000000000091
+> 0:False:4,8:11405,2158
+> 1:False:4,8:11405,2158
+> 2:False:2,6:11405,2158
+> 3:False:4,8:11405,2158
+> 4:True:4,6:11405,2158
+> 5:False:2,7:11405,2158
+> 6:False:4,8:11405,2158
+> 7:False:4,9:11405,2158
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_1.tar.bz2:0.9678683280944824:0.1075709:0.9599999999999795
+> 0:True:2,5:9802,1925
+> 1:True:4,7:9802,1925
+> 2:True:4,7:9802,1925
+> 3:False:4,8:9802,1925
+> 4:True:4,7:9802,1925
+> 5:True:4,7:9802,1925
+> 6:False:2,6:9802,1925
+> 7:False:4,8:9802,1925
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_2.tar.bz2:0.9708995819091797:0.10664509999999999:0.9700000000000273
+> 0:True:2,6:9801,1922
+> 1:True:4,8:9801,1922
+> 2:True:4,8:9801,1922
+> 3:False:4,9:9801,1922
+> 4:True:4,8:9801,1922
+> 5:True:4,8:9801,1922
+> 6:False:2,7:9801,1922
+> 7:False:4,9:9801,1922
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-1_50_3.tar.bz2:0.9588990211486816:0.10161930000000001:0.9599999999999795
+> 0:True:2,5:9802,1925
+> 1:True:4,7:9802,1925
+> 2:True:4,7:9802,1925
+> 3:False:4,8:9802,1925
+> 4:True:4,7:9802,1925
+> 5:True:4,7:9802,1925
+> 6:False:2,6:9802,1925
+> 7:False:4,8:9802,1925
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_1.tar.bz2:0.9421548843383789:0.10288749999999999:0.9399999999999977
+> 0:False:2,11:9803,1928
+> 1:True:4,11:9803,1928
+> 2:False:4,12:9803,1928
+> 3:False:4,14:9803,1928
+> 4:False:4,13:9803,1928
+> 5:False:4,14:9803,1928
+> 6:False:2,12:9803,1928
+> 7:False:4,13:9803,1928
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_2.tar.bz2:0.9588894844055176:0.10000949999999999:0.950000000000017
+> 0:False:2,9:9802,1925
+> 1:True:4,9:9802,1925
+> 2:False:4,11:9802,1925
+> 3:False:4,12:9802,1925
+> 4:False:4,11:9802,1925
+> 5:False:4,12:9802,1925
+> 6:False:2,10:9802,1925
+> 7:False:4,11:9802,1925
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-2_50_3.tar.bz2:0.9686970710754395:0.10075909999999999:0.9699999999999989
+> 0:False:2,9:9804,1931
+> 1:True:4,9:9804,1931
+> 2:False:4,11:9804,1931
+> 3:False:4,12:9804,1931
+> 4:False:4,11:9804,1931
+> 5:False:4,11:9804,1931
+> 6:False:2,10:9804,1931
+> 7:False:4,11:9804,1931
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_1.tar.bz2:0.9799864292144775:0.1000219:0.9699999999999704
+> 0:False:2,8:9801,1922
+> 1:False:4,10:9801,1922
+> 2:True:4,8:9801,1922
+> 3:False:4,11:9801,1922
+> 4:False:4,10:9801,1922
+> 5:False:4,11:9801,1922
+> 6:False:2,9:9801,1922
+> 7:False:4,11:9801,1922
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_2.tar.bz2:0.9740140438079834:0.10345330000000001:0.9699999999999989
+> 0:False:2,7:9802,1925
+> 1:False:4,9:9802,1925
+> 2:True:4,7:9802,1925
+> 3:False:4,10:9802,1925
+> 4:False:4,9:9802,1925
+> 5:False:4,10:9802,1925
+> 6:False:2,8:9802,1925
+> 7:False:4,10:9802,1925
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-3_50_3.tar.bz2:0.9567592144012451:0.09771389999999999:0.960000000000008
+> 0:False:2,10:9801,1922
+> 1:False:4,12:9801,1922
+> 2:True:4,10:9801,1922
+> 3:False:4,12:9801,1922
+> 4:False:4,12:9801,1922
+> 5:False:4,11:9801,1922
+> 6:False:2,10:9801,1922
+> 7:False:4,12:9801,1922
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_1.tar.bz2:0.9669981002807617:0.10381570000000001:0.960000000000008
+> 0:False:2,11:9801,1922
+> 1:False:4,13:9801,1922
+> 2:True:4,12:9801,1922
+> 3:True:4,12:9801,1922
+> 4:True:4,12:9801,1922
+> 5:True:4,12:9801,1922
+> 6:False:2,11:9801,1922
+> 7:False:4,13:9801,1922
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_2.tar.bz2:0.9524092674255371:0.1039829:0.9499999999999886
+> 0:False:2,10:9802,1925
+> 1:False:4,12:9802,1925
+> 2:False:4,11:9802,1925
+> 3:True:4,10:9802,1925
+> 4:False:4,11:9802,1925
+> 5:False:4,11:9802,1925
+> 6:False:2,10:9802,1925
+> 7:False:4,12:9802,1925
+depots-suboptimal-old-noisy/50/depots_noisy_p03_hyp-4_50_3.tar.bz2:0.9519424438476562:0.1062711:0.9499999999999886
+> 0:False:2,11:9803,1928
+> 1:False:4,13:9803,1928
+> 2:False:4,13:9803,1928
+> 3:True:4,10:9803,1928
+> 4:False:4,12:9803,1928
+> 5:False:4,12:9803,1928
+> 6:False:2,10:9803,1928
+> 7:True:4,10:9803,1928
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_1.tar.bz2:0.9725193977355957:0.10096120000000001:0.9699999999999704
+> 0:True:4,11:11408,2167
+> 1:False:4,13:11408,2167
+> 2:False:2,11:11408,2167
+> 3:False:4,12:11408,2167
+> 4:False:4,13:11408,2167
+> 5:False:2,10:11408,2167
+> 6:False:4,12:11408,2167
+> 7:False:4,12:11408,2167
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_2.tar.bz2:0.9926419258117676:0.1153149:1.0
+> 0:True:4,10:11407,2164
+> 1:False:4,12:11407,2164
+> 2:False:2,10:11407,2164
+> 3:False:4,13:11407,2164
+> 4:False:4,12:11407,2164
+> 5:False:2,11:11407,2164
+> 6:False:4,13:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-1_50_3.tar.bz2:1.0027036666870117:0.11074569999999999:1.0
+> 0:True:4,11:11407,2164
+> 1:False:4,13:11407,2164
+> 2:False:2,11:11407,2164
+> 3:False:4,13:11407,2164
+> 4:False:4,13:11407,2164
+> 5:False:2,11:11407,2164
+> 6:False:4,12:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_1.tar.bz2:0.9853050708770752:0.1159859:0.9800000000000182
+> 0:False:4,12:11406,2161
+> 1:True:4,11:11406,2161
+> 2:False:2,11:11406,2161
+> 3:False:4,13:11406,2161
+> 4:False:4,13:11406,2161
+> 5:False:2,11:11406,2161
+> 6:False:4,13:11406,2161
+> 7:False:4,13:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_2.tar.bz2:1.012481927871704:0.1233843:1.009999999999991
+> 0:False:4,13:11407,2164
+> 1:True:4,12:11407,2164
+> 2:False:2,12:11407,2164
+> 3:False:4,14:11407,2164
+> 4:False:4,14:11407,2164
+> 5:False:2,12:11407,2164
+> 6:False:4,13:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-2_50_3.tar.bz2:1.0004451274871826:0.10594759999999999:1.0000000000000568
+> 0:False:4,13:11407,2164
+> 1:True:4,11:11407,2164
+> 2:False:2,11:11407,2164
+> 3:False:4,14:11407,2164
+> 4:False:4,13:11407,2164
+> 5:False:2,12:11407,2164
+> 6:False:4,14:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_1.tar.bz2:0.9907848834991455:0.1126653:0.9799999999999613
+> 0:False:4,15:11408,2167
+> 1:False:4,15:11408,2167
+> 2:False:2,13:11408,2167
+> 3:True:4,13:11408,2167
+> 4:False:4,14:11408,2167
+> 5:False:2,12:11408,2167
+> 6:False:4,14:11408,2167
+> 7:False:4,14:11408,2167
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_2.tar.bz2:0.9847674369812012:0.11164589999999999:0.9800000000000182
+> 0:False:4,15:11408,2167
+> 1:False:4,15:11408,2167
+> 2:False:2,13:11408,2167
+> 3:True:4,13:11408,2167
+> 4:False:4,14:11408,2167
+> 5:False:2,12:11408,2167
+> 6:False:4,14:11408,2167
+> 7:False:4,14:11408,2167
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-3_50_3.tar.bz2:0.9938571453094482:0.1126027:0.9800000000000182
+> 0:False:4,14:11407,2164
+> 1:False:4,14:11407,2164
+> 2:False:2,12:11407,2164
+> 3:True:4,12:11407,2164
+> 4:False:4,13:11407,2164
+> 5:False:2,11:11407,2164
+> 6:False:4,13:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_1.tar.bz2:1.0006780624389648:0.1143838:1.0
+> 0:False:4,12:11407,2164
+> 1:False:4,12:11407,2164
+> 2:False:2,10:11407,2164
+> 3:False:4,12:11407,2164
+> 4:False:4,12:11407,2164
+> 5:False:2,10:11407,2164
+> 6:True:4,10:11407,2164
+> 7:False:4,12:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_2.tar.bz2:0.996922492980957:0.1160177:0.9999999999999432
+> 0:False:4,13:11407,2164
+> 1:False:4,13:11407,2164
+> 2:False:2,11:11407,2164
+> 3:False:4,12:11407,2164
+> 4:False:4,13:11407,2164
+> 5:False:2,10:11407,2164
+> 6:True:4,10:11407,2164
+> 7:False:4,12:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p04_hyp-4_50_3.tar.bz2:0.985466480255127:0.10976810000000001:0.9699999999999704
+> 0:False:4,11:11406,2161
+> 1:False:4,11:11406,2161
+> 2:False:2,9:11406,2161
+> 3:False:4,10:11406,2161
+> 4:False:4,11:11406,2161
+> 5:False:2,8:11406,2161
+> 6:True:4,8:11406,2161
+> 7:False:4,10:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_1.tar.bz2:1.015404462814331:0.11767730000000001:1.009999999999991
+> 0:False:4,15:11406,2161
+> 1:True:4,13:11406,2161
+> 2:False:2,13:11406,2161
+> 3:False:4,16:11406,2161
+> 4:False:4,15:11406,2161
+> 5:False:2,14:11406,2161
+> 6:False:4,15:11406,2161
+> 7:False:4,14:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_2.tar.bz2:0.9992196559906006:0.1131115:0.9999999999999432
+> 0:False:4,13:11406,2161
+> 1:True:4,12:11406,2161
+> 2:False:2,11:11406,2161
+> 3:False:4,14:11406,2161
+> 4:False:4,13:11406,2161
+> 5:False:2,12:11406,2161
+> 6:False:4,14:11406,2161
+> 7:False:4,13:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-1_50_3.tar.bz2:1.003363847732544:0.1108889:0.9900000000000091
+> 0:False:4,11:11407,2164
+> 1:True:4,9:11407,2164
+> 2:False:2,9:11407,2164
+> 3:False:4,12:11407,2164
+> 4:False:4,11:11407,2164
+> 5:False:2,10:11407,2164
+> 6:False:4,12:11407,2164
+> 7:False:4,11:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_1.tar.bz2:1.0064468383789062:0.1166628:1.009999999999991
+> 0:True:4,11:11407,2164
+> 1:False:4,12:11407,2164
+> 2:False:2,10:11407,2164
+> 3:False:4,12:11407,2164
+> 4:False:4,12:11407,2164
+> 5:False:2,10:11407,2164
+> 6:True:4,11:11407,2164
+> 7:False:4,12:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_2.tar.bz2:0.9973900318145752:0.1131971:1.0
+> 0:False:4,12:11408,2167
+> 1:False:4,12:11408,2167
+> 2:False:2,10:11408,2167
+> 3:False:4,12:11408,2167
+> 4:False:4,12:11408,2167
+> 5:False:2,10:11408,2167
+> 6:True:4,11:11408,2167
+> 7:False:4,12:11408,2167
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-2_50_3.tar.bz2:0.9946339130401611:0.11109619999999999:0.9900000000000091
+> 0:True:4,11:11407,2164
+> 1:False:4,12:11407,2164
+> 2:False:2,10:11407,2164
+> 3:False:4,12:11407,2164
+> 4:False:4,12:11407,2164
+> 5:False:2,10:11407,2164
+> 6:True:4,11:11407,2164
+> 7:False:4,12:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_1.tar.bz2:1.0055856704711914:0.1171662:1.009999999999991
+> 0:False:4,11:11408,2167
+> 1:False:4,10:11408,2167
+> 2:False:2,10:11408,2167
+> 3:False:4,11:11408,2167
+> 4:False:4,11:11408,2167
+> 5:False:2,9:11408,2167
+> 6:False:4,11:11408,2167
+> 7:True:4,9:11408,2167
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_2.tar.bz2:1.000119686126709:0.1134416:1.0
+> 0:False:4,14:11407,2164
+> 1:False:4,13:11407,2164
+> 2:False:2,12:11407,2164
+> 3:False:4,13:11407,2164
+> 4:False:4,14:11407,2164
+> 5:False:2,11:11407,2164
+> 6:False:4,13:11407,2164
+> 7:True:4,11:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-3_50_3.tar.bz2:0.9940388202667236:0.1145947:0.9900000000000091
+> 0:False:4,14:11406,2161
+> 1:False:4,13:11406,2161
+> 2:False:2,12:11406,2161
+> 3:False:4,13:11406,2161
+> 4:False:4,14:11406,2161
+> 5:False:2,11:11406,2161
+> 6:False:4,13:11406,2161
+> 7:True:4,11:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_1.tar.bz2:0.9944126605987549:0.11297110000000002:1.0
+> 0:False:4,13:11406,2161
+> 1:False:4,13:11406,2161
+> 2:False:2,11:11406,2161
+> 3:True:4,12:11406,2161
+> 4:True:4,12:11406,2161
+> 5:False:2,11:11406,2161
+> 6:True:4,12:11406,2161
+> 7:False:4,13:11406,2161
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_2.tar.bz2:1.0025570392608643:0.11211550000000002:1.0
+> 0:False:4,12:11407,2164
+> 1:False:4,12:11407,2164
+> 2:False:2,10:11407,2164
+> 3:False:4,12:11407,2164
+> 4:True:4,10:11407,2164
+> 5:False:2,11:11407,2164
+> 6:False:4,13:11407,2164
+> 7:False:4,13:11407,2164
+depots-suboptimal-old-noisy/50/depots_noisy_p05_hyp-4_50_3.tar.bz2:0.9706711769104004:0.11034069999999999:0.9600000000000364
+> 0:False:4,11:11407,2164
+> 1:False:4,11:11407,2164
+> 2:False:2,9:11407,2164
+> 3:False:4,11:11407,2164
+> 4:True:4,9:11407,2164
+> 5:False:2,10:11407,2164
+> 6:False:4,12:11407,2164
+> 7:False:4,12:11407,2164
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_1.tar.bz2:0.9482555389404297:0.0968468:0.9499999999999886
+> 0:True:2,8:9803,1928
+> 1:True:4,10:9803,1928
+> 2:True:4,10:9803,1928
+> 3:False:4,12:9803,1928
+> 4:True:4,10:9803,1928
+> 5:False:4,11:9803,1928
+> 6:False:2,10:9803,1928
+> 7:False:4,12:9803,1928
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_2.tar.bz2:0.9634840488433838:0.10653660000000001:0.9600000000000364
+> 0:True:2,8:9802,1925
+> 1:True:4,10:9802,1925
+> 2:True:4,10:9802,1925
+> 3:False:4,12:9802,1925
+> 4:True:4,10:9802,1925
+> 5:False:4,11:9802,1925
+> 6:False:2,10:9802,1925
+> 7:False:4,12:9802,1925
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-1_70_3.tar.bz2:0.928931474685669:0.10038430000000001:0.9300000000000068
+> 0:True:2,9:9803,1928
+> 1:True:4,11:9803,1928
+> 2:True:4,11:9803,1928
+> 3:False:4,12:9803,1928
+> 4:True:4,11:9803,1928
+> 5:True:4,11:9803,1928
+> 6:False:2,10:9803,1928
+> 7:False:4,12:9803,1928
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_1.tar.bz2:0.9695301055908203:0.11603089999999999:0.9699999999999704
+> 0:False:2,9:9805,1934
+> 1:True:4,10:9805,1934
+> 2:False:4,11:9805,1934
+> 3:False:4,12:9805,1934
+> 4:False:4,11:9805,1934
+> 5:False:4,11:9805,1934
+> 6:False:2,10:9805,1934
+> 7:False:4,11:9805,1934
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_2.tar.bz2:0.9830300807952881:0.11245449999999999:0.9900000000000091
+> 0:False:2,9:9806,1937
+> 1:True:4,9:9806,1937
+> 2:False:4,11:9806,1937
+> 3:False:4,12:9806,1937
+> 4:False:4,11:9806,1937
+> 5:False:4,12:9806,1937
+> 6:False:2,10:9806,1937
+> 7:False:4,11:9806,1937
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-2_70_3.tar.bz2:0.9598841667175293:0.10713609999999998:0.9699999999999704
+> 0:False:2,10:9806,1937
+> 1:True:4,10:9806,1937
+> 2:False:4,11:9806,1937
+> 3:False:4,12:9806,1937
+> 4:False:4,12:9806,1937
+> 5:False:4,13:9806,1937
+> 6:False:2,11:9806,1937
+> 7:False:4,12:9806,1937
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_1.tar.bz2:0.9715003967285156:0.10312680000000002:0.9700000000000273
+> 0:False:2,9:9804,1931
+> 1:False:4,11:9804,1931
+> 2:True:4,9:9804,1931
+> 3:False:4,12:9804,1931
+> 4:False:4,11:9804,1931
+> 5:False:4,12:9804,1931
+> 6:False:2,10:9804,1931
+> 7:False:4,12:9804,1931
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_2.tar.bz2:0.9519410133361816:0.097567:0.9599999999999795
+> 0:False:2,9:9804,1931
+> 1:False:4,11:9804,1931
+> 2:True:4,9:9804,1931
+> 3:False:4,12:9804,1931
+> 4:False:4,11:9804,1931
+> 5:False:4,12:9804,1931
+> 6:False:2,10:9804,1931
+> 7:False:4,12:9804,1931
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-3_70_3.tar.bz2:0.9360568523406982:0.0960386:0.9300000000000068
+> 0:False:2,11:9802,1925
+> 1:False:4,13:9802,1925
+> 2:True:4,11:9802,1925
+> 3:False:4,13:9802,1925
+> 4:False:4,13:9802,1925
+> 5:False:4,13:9802,1925
+> 6:False:2,11:9802,1925
+> 7:False:4,13:9802,1925
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_1.tar.bz2:0.9778411388397217:0.10423940000000001:0.9800000000000182
+> 0:False:2,12:9805,1934
+> 1:False:4,14:9805,1934
+> 2:False:4,13:9805,1934
+> 3:True:4,11:9805,1934
+> 4:False:4,13:9805,1934
+> 5:False:4,13:9805,1934
+> 6:False:2,11:9805,1934
+> 7:False:4,13:9805,1934
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_2.tar.bz2:0.9688816070556641:0.10688910000000001:0.9699999999999704
+> 0:False:2,10:9805,1934
+> 1:False:4,12:9805,1934
+> 2:False:4,12:9805,1934
+> 3:True:4,10:9805,1934
+> 4:False:4,11:9805,1934
+> 5:False:4,11:9805,1934
+> 6:False:2,10:9805,1934
+> 7:False:4,12:9805,1934
+depots-suboptimal-old-noisy/70/depots_noisy_p03_hyp-4_70_3.tar.bz2:0.9468109607696533:0.10651719999999999:0.9499999999999886
+> 0:False:2,11:9806,1937
+> 1:False:4,13:9806,1937
+> 2:False:4,13:9806,1937
+> 4:True:4,12:9806,1937
+> 5:True:4,12:9806,1937
+> 6:True:2,10:9806,1937
+> 7:True:4,12:9806,1937
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_1.tar.bz2:0.9844396114349365:0.11250280000000001:0.9800000000000182
+> 0:True:4,13:11410,2173
+> 1:False:4,15:11410,2173
+> 2:False:2,13:11410,2173
+> 3:False:4,15:11410,2173
+> 4:False:4,15:11410,2173
+> 5:False:2,13:11410,2173
+> 6:False:4,15:11410,2173
+> 7:False:4,15:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_2.tar.bz2:0.9975497722625732:0.11601439999999999:1.009999999999991
+> 0:True:4,13:11410,2173
+> 1:False:4,15:11410,2173
+> 2:False:2,13:11410,2173
+> 3:False:4,16:11410,2173
+> 4:False:4,15:11410,2173
+> 5:False:2,14:11410,2173
+> 6:False:4,16:11410,2173
+> 7:False:4,16:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-1_70_3.tar.bz2:0.9716165065765381:0.10563020000000001:0.9699999999999704
+> 0:True:4,13:11411,2176
+> 1:False:4,15:11411,2176
+> 2:False:2,13:11411,2176
+> 3:False:4,16:11411,2176
+> 4:False:4,15:11411,2176
+> 5:False:2,14:11411,2176
+> 6:False:4,16:11411,2176
+> 7:False:4,16:11411,2176
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_1.tar.bz2:0.9836132526397705:0.11338019999999999:0.9900000000000091
+> 0:False:4,13:11408,2167
+> 1:True:4,12:11408,2167
+> 2:False:2,11:11408,2167
+> 3:False:4,13:11408,2167
+> 4:False:4,13:11408,2167
+> 5:False:2,11:11408,2167
+> 6:True:4,12:11408,2167
+> 7:True:4,12:11408,2167
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_2.tar.bz2:1.015125036239624:0.12160860000000001:1.009999999999991
+> 0:False:4,12:11410,2173
+> 1:True:4,11:11410,2173
+> 2:False:2,11:11410,2173
+> 3:False:4,13:11410,2173
+> 4:False:4,13:11410,2173
+> 5:False:2,11:11410,2173
+> 6:False:4,13:11410,2173
+> 7:False:4,13:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-2_70_3.tar.bz2:1.0041453838348389:0.115946:1.0
+> 0:False:4,12:11409,2170
+> 1:True:4,11:11409,2170
+> 2:False:2,11:11409,2170
+> 3:False:4,13:11409,2170
+> 4:False:4,13:11409,2170
+> 5:False:2,11:11409,2170
+> 6:False:4,12:11409,2170
+> 7:False:4,12:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_1.tar.bz2:1.0268468856811523:0.1286511:1.0300000000000296
+> 0:False:4,16:11413,2182
+> 1:False:4,16:11413,2182
+> 2:False:2,14:11413,2182
+> 3:True:4,13:11413,2182
+> 4:False:4,15:11413,2182
+> 5:False:2,13:11413,2182
+> 6:False:4,15:11413,2182
+> 7:False:4,15:11413,2182
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_2.tar.bz2:0.9750308990478516:0.11234330000000001:0.9700000000000273
+> 0:False:4,16:11410,2173
+> 1:False:4,16:11410,2173
+> 2:False:2,14:11410,2173
+> 3:True:4,14:11410,2173
+> 4:False:4,15:11410,2173
+> 5:False:2,14:11410,2173
+> 6:False:4,16:11410,2173
+> 7:False:4,16:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-3_70_3.tar.bz2:0.9813539981842041:0.1104791:0.9799999999999613
+> 0:False:4,16:11410,2173
+> 1:False:4,16:11410,2173
+> 2:False:2,14:11410,2173
+> 3:True:4,13:11410,2173
+> 4:False:4,15:11410,2173
+> 5:False:2,13:11410,2173
+> 6:False:4,15:11410,2173
+> 7:False:4,15:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_1.tar.bz2:0.9859368801116943:0.1094439:0.9799999999999613
+> 0:False:4,12:11409,2170
+> 1:False:4,12:11409,2170
+> 2:False:2,10:11409,2170
+> 3:False:4,12:11409,2170
+> 4:False:4,12:11409,2170
+> 5:False:2,10:11409,2170
+> 6:True:4,10:11409,2170
+> 7:False:4,12:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_2.tar.bz2:0.9858136177062988:0.1202076:0.9900000000000091
+> 0:True:4,12:11410,2173
+> 1:True:4,12:11410,2173
+> 2:True:2,10:11410,2173
+> 3:False:4,13:11410,2173
+> 4:True:4,12:11410,2173
+> 5:False:2,11:11410,2173
+> 6:True:4,12:11410,2173
+> 7:False:4,13:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p04_hyp-4_70_3.tar.bz2:0.9925570487976074:0.11544600000000001:0.9900000000000091
+> 0:False:4,13:11409,2170
+> 1:False:4,13:11409,2170
+> 2:False:2,11:11409,2170
+> 3:False:4,12:11409,2170
+> 4:False:4,13:11409,2170
+> 5:False:2,10:11409,2170
+> 6:True:4,10:11409,2170
+> 7:False:4,12:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_1.tar.bz2:0.9935715198516846:0.1186396:0.9900000000000091
+> 0:False:4,13:11408,2167
+> 1:True:4,12:11408,2167
+> 2:False:2,11:11408,2167
+> 3:False:4,13:11408,2167
+> 4:False:4,13:11408,2167
+> 5:False:2,11:11408,2167
+> 6:False:4,13:11408,2167
+> 7:False:4,13:11408,2167
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_2.tar.bz2:1.0225253105163574:0.12185140000000001:1.0299999999999727
+> 0:False:4,12:11409,2170
+> 1:True:4,11:11409,2170
+> 2:False:2,11:11409,2170
+> 3:False:4,13:11409,2170
+> 4:False:4,13:11409,2170
+> 5:False:2,11:11409,2170
+> 6:False:4,13:11409,2170
+> 7:False:4,13:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-1_70_3.tar.bz2:1.0202710628509521:0.12007250000000003:1.0200000000000387
+> 0:False:4,13:11409,2170
+> 1:True:4,11:11409,2170
+> 2:False:2,11:11409,2170
+> 3:False:4,14:11409,2170
+> 4:False:4,13:11409,2170
+> 5:False:2,12:11409,2170
+> 6:False:4,14:11409,2170
+> 7:False:4,13:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_1.tar.bz2:0.9895365238189697:0.11448710000000001:0.9900000000000091
+> 0:True:4,12:11408,2167
+> 1:False:4,13:11408,2167
+> 2:False:2,11:11408,2167
+> 3:False:4,13:11408,2167
+> 4:False:4,13:11408,2167
+> 5:False:2,11:11408,2167
+> 6:True:4,12:11408,2167
+> 7:False:4,13:11408,2167
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_2.tar.bz2:0.9905502796173096:0.11693130000000002:0.9899999999999523
+> 0:True:4,12:11410,2173
+> 1:False:4,13:11410,2173
+> 2:False:2,11:11410,2173
+> 3:False:4,13:11410,2173
+> 4:False:4,13:11410,2173
+> 5:False:2,11:11410,2173
+> 6:True:4,12:11410,2173
+> 7:False:4,13:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-2_70_3.tar.bz2:0.9971084594726562:0.1163742:0.9900000000000091
+> 0:False:4,12:11410,2173
+> 1:False:4,13:11410,2173
+> 2:False:2,11:11410,2173
+> 3:False:4,13:11410,2173
+> 4:False:4,13:11410,2173
+> 5:False:2,11:11410,2173
+> 6:True:4,11:11410,2173
+> 7:False:4,13:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_1.tar.bz2:0.9809677600860596:0.1101273:0.9699999999999704
+> 0:False:4,13:11410,2173
+> 1:False:4,13:11410,2173
+> 2:False:2,12:11410,2173
+> 3:False:4,13:11410,2173
+> 4:False:4,14:11410,2173
+> 5:False:2,11:11410,2173
+> 6:False:4,13:11410,2173
+> 7:True:4,12:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_2.tar.bz2:0.9804823398590088:0.1133416:0.9799999999999613
+> 0:False:4,13:11409,2170
+> 1:False:4,13:11409,2170
+> 2:False:2,11:11409,2170
+> 3:False:4,13:11409,2170
+> 4:False:4,13:11409,2170
+> 5:False:2,11:11409,2170
+> 6:False:4,13:11409,2170
+> 7:True:4,11:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-3_70_3.tar.bz2:1.000018835067749:0.12055869999999999:0.9900000000000091
+> 0:True:4,12:11410,2173
+> 1:True:4,12:11410,2173
+> 2:False:2,11:11410,2173
+> 3:False:4,13:11410,2173
+> 4:False:4,13:11410,2173
+> 5:False:2,11:11410,2173
+> 6:False:4,13:11410,2173
+> 7:True:4,12:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_1.tar.bz2:0.9996075630187988:0.1210746:1.0
+> 0:False:4,12:11410,2173
+> 1:False:4,13:11410,2173
+> 2:False:2,11:11410,2173
+> 3:False:4,13:11410,2173
+> 4:True:4,11:11410,2173
+> 5:False:2,11:11410,2173
+> 6:False:4,13:11410,2173
+> 7:False:4,13:11410,2173
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_2.tar.bz2:1.0191056728363037:0.11804600000000001:1.0100000000000477
+> 0:False:4,13:11409,2170
+> 1:False:4,14:11409,2170
+> 2:False:2,12:11409,2170
+> 3:False:4,13:11409,2170
+> 4:True:4,12:11409,2170
+> 5:False:2,12:11409,2170
+> 6:False:4,13:11409,2170
+> 7:False:4,14:11409,2170
+depots-suboptimal-old-noisy/70/depots_noisy_p05_hyp-4_70_3.tar.bz2:1.0030581951141357:0.1173304:1.009999999999991
+> 0:False:4,13:11408,2167
+> 1:False:4,14:11408,2167
+> 2:False:2,12:11408,2167
+> 3:False:4,13:11408,2167
+> 4:True:4,12:11408,2167
+> 5:False:2,12:11408,2167
+> 6:False:4,13:11408,2167
+> 7:False:4,14:11408,2167
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_1.tar.bz2:0.9615349769592285:0.1048137:0.9599999999999795
+> 0:True:2,9:9804,1931
+> 1:True:4,11:9804,1931
+> 2:True:4,11:9804,1931
+> 3:False:4,13:9804,1931
+> 4:True:4,11:9804,1931
+> 5:False:4,12:9804,1931
+> 6:False:2,11:9804,1931
+> 7:False:4,13:9804,1931
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_2.tar.bz2:0.9623305797576904:0.1100416:0.9600000000000364
+> 0:True:2,9:9806,1937
+> 1:True:4,11:9806,1937
+> 2:True:4,11:9806,1937
+> 3:False:4,13:9806,1937
+> 4:True:4,11:9806,1937
+> 5:False:4,12:9806,1937
+> 6:False:2,11:9806,1937
+> 7:False:4,13:9806,1937
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-1_full_3.tar.bz2:0.9682464599609375:0.1019538:0.9700000000000273
+> 0:True:2,9:9804,1931
+> 1:True:4,11:9804,1931
+> 2:True:4,11:9804,1931
+> 3:False:4,13:9804,1931
+> 4:True:4,11:9804,1931
+> 5:False:4,12:9804,1931
+> 6:False:2,11:9804,1931
+> 7:False:4,13:9804,1931
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_1.tar.bz2:0.9526193141937256:0.09801270000000001:0.9599999999999227
+> 0:False:2,12:9807,1940
+> 1:True:4,12:9807,1940
+> 2:False:4,14:9807,1940
+> 3:False:4,15:9807,1940
+> 4:False:4,14:9807,1940
+> 5:False:4,15:9807,1940
+> 6:False:2,13:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_2.tar.bz2:0.9388668537139893:0.0969433:0.9300000000000637
+> 0:False:2,12:9807,1940
+> 1:True:4,12:9807,1940
+> 2:False:4,14:9807,1940
+> 3:False:4,15:9807,1940
+> 4:False:4,14:9807,1940
+> 5:False:4,15:9807,1940
+> 6:False:2,13:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-2_full_3.tar.bz2:0.9469945430755615:0.1043786:0.9499999999999886
+> 0:False:2,12:9808,1943
+> 1:True:4,12:9808,1943
+> 2:False:4,14:9808,1943
+> 3:False:4,15:9808,1943
+> 4:False:4,14:9808,1943
+> 5:False:4,15:9808,1943
+> 6:False:2,13:9808,1943
+> 7:False:4,14:9808,1943
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_1.tar.bz2:0.9516499042510986:0.09643539999999998:0.9500000000000455
+> 0:False:2,11:9806,1937
+> 1:False:4,13:9806,1937
+> 2:True:4,11:9806,1937
+> 3:False:4,14:9806,1937
+> 4:False:4,13:9806,1937
+> 5:False:4,14:9806,1937
+> 6:False:2,13:9806,1937
+> 7:False:4,15:9806,1937
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_2.tar.bz2:0.9730789661407471:0.10412139999999999:0.9699999999999704
+> 0:False:2,11:9807,1940
+> 1:False:4,13:9807,1940
+> 2:True:4,11:9807,1940
+> 3:False:4,14:9807,1940
+> 4:False:4,13:9807,1940
+> 5:False:4,14:9807,1940
+> 6:False:2,12:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-3_full_3.tar.bz2:0.9778294563293457:0.11037920000000001:0.9699999999999704
+> 0:False:2,11:9807,1940
+> 1:False:4,13:9807,1940
+> 2:True:4,11:9807,1940
+> 3:False:4,14:9807,1940
+> 4:False:4,13:9807,1940
+> 5:False:4,14:9807,1940
+> 6:False:2,12:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_1.tar.bz2:0.9593067169189453:0.10608230000000002:0.9499999999999886
+> 0:False:2,14:9809,1946
+> 1:False:4,16:9809,1946
+> 2:False:4,14:9809,1946
+> 3:True:4,13:9809,1946
+> 4:False:4,15:9809,1946
+> 5:False:4,15:9809,1946
+> 6:False:2,13:9809,1946
+> 7:False:4,15:9809,1946
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_2.tar.bz2:0.9656887054443359:0.10399140000000001:0.9800000000000182
+> 0:False:2,13:9807,1940
+> 1:False:4,15:9807,1940
+> 2:False:4,15:9807,1940
+> 3:True:4,12:9807,1940
+> 4:False:4,14:9807,1940
+> 5:False:4,14:9807,1940
+> 6:False:2,12:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p03_hyp-4_full_3.tar.bz2:0.9559042453765869:0.1003798:0.9599999999999795
+> 0:False:2,13:9807,1940
+> 1:False:4,15:9807,1940
+> 2:False:4,15:9807,1940
+> 3:True:4,12:9807,1940
+> 4:False:4,14:9807,1940
+> 5:False:4,14:9807,1940
+> 6:False:2,12:9807,1940
+> 7:False:4,14:9807,1940
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_1.tar.bz2:0.9859745502471924:0.10753820000000001:0.9900000000000091
+> 0:True:4,16:11411,2176
+> 1:False:4,18:11411,2176
+> 2:False:2,16:11411,2176
+> 3:False:4,19:11411,2176
+> 4:False:4,18:11411,2176
+> 5:False:2,17:11411,2176
+> 6:False:4,19:11411,2176
+> 7:False:4,19:11411,2176
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_2.tar.bz2:0.9923837184906006:0.11225189999999999:0.9900000000000091
+> 1:True:4,18:11412,2179
+> 2:True:2,16:11412,2179
+> 3:False:4,19:11412,2179
+> 4:True:4,18:11412,2179
+> 5:False:2,17:11412,2179
+> 6:False:4,19:11412,2179
+> 7:False:4,19:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-1_full_3.tar.bz2:0.9970214366912842:0.10914270000000001:0.9900000000000091
+> 0:True:4,16:11412,2179
+> 1:False:4,18:11412,2179
+> 2:False:2,16:11412,2179
+> 3:False:4,19:11412,2179
+> 4:False:4,18:11412,2179
+> 5:False:2,17:11412,2179
+> 6:False:4,19:11412,2179
+> 7:False:4,19:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_1.tar.bz2:1.0148308277130127:0.12145940000000002:1.009999999999991
+> 0:False:4,14:11413,2182
+> 1:True:4,13:11413,2182
+> 2:False:2,13:11413,2182
+> 3:False:4,16:11413,2182
+> 4:False:4,15:11413,2182
+> 5:False:2,14:11413,2182
+> 6:False:4,16:11413,2182
+> 7:False:4,15:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_2.tar.bz2:0.9930408000946045:0.1177716:1.0
+> 0:False:4,15:11412,2179
+> 1:True:4,13:11412,2179
+> 2:False:2,13:11412,2179
+> 3:False:4,16:11412,2179
+> 4:False:4,15:11412,2179
+> 5:False:2,14:11412,2179
+> 6:False:4,16:11412,2179
+> 7:False:4,15:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-2_full_3.tar.bz2:1.0197358131408691:0.12047060000000001:1.009999999999991
+> 0:False:4,15:11412,2179
+> 1:True:4,13:11412,2179
+> 2:False:2,13:11412,2179
+> 3:False:4,16:11412,2179
+> 4:False:4,15:11412,2179
+> 5:False:2,14:11412,2179
+> 6:False:4,16:11412,2179
+> 7:False:4,15:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_1.tar.bz2:1.0079944133758545:0.1221113:1.009999999999991
+> 0:False:4,19:11414,2185
+> 1:False:4,19:11414,2185
+> 2:False:2,17:11414,2185
+> 3:True:4,16:11414,2185
+> 4:False:4,18:11414,2185
+> 5:False:2,16:11414,2185
+> 6:False:4,18:11414,2185
+> 7:False:4,18:11414,2185
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_2.tar.bz2:0.9883401393890381:0.1147259:0.9900000000000091
+> 0:False:4,19:11413,2182
+> 1:False:4,19:11413,2182
+> 2:False:2,17:11413,2182
+> 3:True:4,16:11413,2182
+> 4:False:4,18:11413,2182
+> 5:False:2,16:11413,2182
+> 6:False:4,18:11413,2182
+> 7:False:4,18:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-3_full_3.tar.bz2:0.9899251461029053:0.11458719999999999:0.980000000000075
+> 0:False:4,19:11414,2185
+> 1:False:4,20:11414,2185
+> 2:False:2,18:11414,2185
+> 3:True:4,17:11414,2185
+> 4:False:4,19:11414,2185
+> 5:False:2,17:11414,2185
+> 6:False:4,19:11414,2185
+> 7:False:4,19:11414,2185
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_1.tar.bz2:0.9989631175994873:0.1142098:1.0
+> 0:False:4,15:11411,2176
+> 1:False:4,15:11411,2176
+> 2:False:2,13:11411,2176
+> 3:False:4,14:11411,2176
+> 4:False:4,15:11411,2176
+> 5:False:2,12:11411,2176
+> 6:True:4,12:11411,2176
+> 7:False:4,14:11411,2176
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_2.tar.bz2:0.9867010116577148:0.1148856:0.9899999999999523
+> 0:False:4,15:11411,2176
+> 1:False:4,15:11411,2176
+> 2:False:2,13:11411,2176
+> 3:False:4,14:11411,2176
+> 4:False:4,15:11411,2176
+> 5:False:2,12:11411,2176
+> 6:True:4,12:11411,2176
+> 7:False:4,14:11411,2176
+depots-suboptimal-old-noisy/100/depots_noisy_p04_hyp-4_full_3.tar.bz2:0.9828598499298096:0.1164192:0.9800000000000182
+> 0:False:4,15:11411,2176
+> 1:False:4,15:11411,2176
+> 2:False:2,13:11411,2176
+> 3:False:4,14:11411,2176
+> 4:False:4,15:11411,2176
+> 5:False:2,12:11411,2176
+> 6:True:4,12:11411,2176
+> 7:False:4,14:11411,2176
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_1.tar.bz2:0.999765157699585:0.1207352:1.0
+> 0:False:4,15:11413,2182
+> 1:True:4,13:11413,2182
+> 2:False:2,13:11413,2182
+> 3:False:4,16:11413,2182
+> 4:False:4,15:11413,2182
+> 5:False:2,14:11413,2182
+> 6:False:4,16:11413,2182
+> 7:False:4,15:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_2.tar.bz2:0.9953634738922119:0.11761980000000001:0.9900000000000091
+> 0:False:4,16:11414,2185
+> 1:True:4,14:11414,2185
+> 2:False:2,14:11414,2185
+> 3:False:4,17:11414,2185
+> 4:False:4,16:11414,2185
+> 5:False:2,15:11414,2185
+> 6:False:4,16:11414,2185
+> 7:False:4,16:11414,2185
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-1_full_3.tar.bz2:0.9803299903869629:0.1136868:0.9700000000000273
+> 0:False:4,15:11413,2182
+> 1:True:4,13:11413,2182
+> 2:False:2,13:11413,2182
+> 3:False:4,16:11413,2182
+> 4:False:4,15:11413,2182
+> 5:False:2,14:11413,2182
+> 6:False:4,16:11413,2182
+> 7:False:4,15:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_1.tar.bz2:1.0120654106140137:0.1143343:1.009999999999991
+> 0:False:4,15:11412,2179
+> 1:False:4,16:11412,2179
+> 2:False:2,14:11412,2179
+> 3:False:4,16:11412,2179
+> 4:False:4,16:11412,2179
+> 5:False:2,14:11412,2179
+> 6:True:4,14:11412,2179
+> 7:False:4,16:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_2.tar.bz2:1.012608528137207:0.11199780000000001:1.009999999999991
+> 0:False:4,15:11412,2179
+> 1:False:4,16:11412,2179
+> 2:False:2,14:11412,2179
+> 3:False:4,16:11412,2179
+> 4:False:4,16:11412,2179
+> 5:False:2,14:11412,2179
+> 6:True:4,14:11412,2179
+> 7:False:4,16:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-2_full_3.tar.bz2:0.9927520751953125:0.11262029999999999:0.9800000000000182
+> 0:False:4,15:11412,2179
+> 1:False:4,16:11412,2179
+> 2:False:2,14:11412,2179
+> 3:False:4,16:11412,2179
+> 4:False:4,16:11412,2179
+> 5:False:2,14:11412,2179
+> 6:True:4,14:11412,2179
+> 7:False:4,16:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_1.tar.bz2:1.0264127254486084:0.12097139999999999:1.0200000000000387
+> 0:False:4,16:11413,2182
+> 1:False:4,15:11413,2182
+> 2:False:2,14:11413,2182
+> 3:False:4,15:11413,2182
+> 4:False:4,16:11413,2182
+> 5:False:2,13:11413,2182
+> 6:False:4,15:11413,2182
+> 7:True:4,13:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_2.tar.bz2:1.0175130367279053:0.1193997:1.0199999999999818
+> 0:False:4,16:11412,2179
+> 1:False:4,15:11412,2179
+> 2:False:2,14:11412,2179
+> 3:False:4,15:11412,2179
+> 4:False:4,16:11412,2179
+> 5:False:2,13:11412,2179
+> 6:False:4,15:11412,2179
+> 7:True:4,13:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-3_full_3.tar.bz2:1.016115427017212:0.12313120000000001:1.0
+> 0:False:4,16:11413,2182
+> 1:False:4,15:11413,2182
+> 2:False:2,14:11413,2182
+> 3:False:4,15:11413,2182
+> 4:False:4,16:11413,2182
+> 5:False:2,13:11413,2182
+> 6:False:4,15:11413,2182
+> 7:True:4,14:11413,2182
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_1.tar.bz2:0.996877908706665:0.11663880000000001:0.9899999999999523
+> 0:False:4,15:11412,2179
+> 1:False:4,15:11412,2179
+> 2:False:2,13:11412,2179
+> 3:False:4,15:11412,2179
+> 4:True:4,13:11412,2179
+> 5:False:2,14:11412,2179
+> 6:False:4,16:11412,2179
+> 7:False:4,16:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_2.tar.bz2:0.9861447811126709:0.1149141:0.9800000000000182
+> 0:False:4,15:11412,2179
+> 1:False:4,15:11412,2179
+> 2:False:2,13:11412,2179
+> 3:False:4,15:11412,2179
+> 4:True:4,13:11412,2179
+> 5:False:2,14:11412,2179
+> 6:False:4,16:11412,2179
+> 7:False:4,16:11412,2179
+depots-suboptimal-old-noisy/100/depots_noisy_p05_hyp-4_full_3.tar.bz2:0.9990346431732178:0.11535820000000001:0.9900000000000091
+> 0:False:4,15:11413,2182
+> 1:False:4,16:11413,2182
+> 2:False:2,14:11413,2182
+> 3:False:4,15:11413,2182
+> 4:True:4,14:11413,2182
+> 5:False:2,14:11413,2182
+> 6:False:4,16:11413,2182
+> 7:False:4,16:11413,2182

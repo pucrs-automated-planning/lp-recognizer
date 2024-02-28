@@ -1,180 +1,1620 @@
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_1.tar.bz2:1.2832856178283691:0.0:1.2800000000000011
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_2.tar.bz2:1.2935383319854736:0.0:1.3000000000000398
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_3.tar.bz2:1.3111741542816162:0.0:1.299999999999983
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_1.tar.bz2:1.292565107345581:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_2.tar.bz2:1.2850642204284668:0.0:1.2900000000000205
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_3.tar.bz2:1.2876460552215576:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_1.tar.bz2:1.2761125564575195:0.0:1.2699999999999818
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_2.tar.bz2:1.3016140460968018:0.0:1.3100000000000307
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_3.tar.bz2:1.2998650074005127:0.0:1.299999999999983
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_1.tar.bz2:1.294888973236084:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_2.tar.bz2:1.2918009757995605:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_3.tar.bz2:1.305739164352417:0.0:1.3100000000000023
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_1.tar.bz2:0.7228372097015381:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_2.tar.bz2:0.7289514541625977:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_3.tar.bz2:0.7159726619720459:0.0:0.7099999999999511
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_1.tar.bz2:0.7302854061126709:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_2.tar.bz2:0.7310316562652588:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_3.tar.bz2:0.7276449203491211:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_1.tar.bz2:0.7200753688812256:0.0:0.7099999999999795
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_2.tar.bz2:0.7221822738647461:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_3.tar.bz2:0.7345218658447266:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_1.tar.bz2:0.7065496444702148:0.0:0.7099999999999795
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_2.tar.bz2:0.7190430164337158:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_3.tar.bz2:0.7015650272369385:0.0:0.6899999999999977
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_1.tar.bz2:0.918025016784668:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_2.tar.bz2:0.8905134201049805:0.0:0.8899999999999864
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_3.tar.bz2:0.928248405456543:0.0:0.9299999999999784
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_1.tar.bz2:0.9394807815551758:0.0:0.9300000000000068
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_2.tar.bz2:0.9046709537506104:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_3.tar.bz2:0.9231605529785156:0.0:0.9199999999999875
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_1.tar.bz2:0.9215085506439209:0.0:0.9200000000000159
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_2.tar.bz2:0.9143633842468262:0.0:0.9199999999999875
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_3.tar.bz2:0.8806209564208984:0.0:0.8799999999999955
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_1.tar.bz2:0.9184985160827637:0.0:0.9199999999999875
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_2.tar.bz2:0.9127721786499023:0.0:0.9099999999999966
-sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_3.tar.bz2:0.894906759262085:0.0:0.8900000000000148
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_1.tar.bz2:1.2929294109344482:0.0:1.2800000000000011
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_2.tar.bz2:1.2964868545532227:0.0:1.299999999999983
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_3.tar.bz2:1.2890222072601318:0.0:1.2800000000000011
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_1.tar.bz2:1.3001441955566406:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_2.tar.bz2:1.2887508869171143:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_3.tar.bz2:1.311845064163208:0.0:1.3100000000000023
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_1.tar.bz2:1.2890653610229492:0.0:1.2800000000000011
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_2.tar.bz2:1.316967248916626:0.0:1.3200000000000216
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_3.tar.bz2:1.343290090560913:0.0:1.339999999999975
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_1.tar.bz2:1.3129353523254395:0.0:1.3100000000000307
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_2.tar.bz2:1.2717325687408447:0.0:1.2700000000000102
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_3.tar.bz2:1.294938087463379:0.0:1.2899999999999636
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_1.tar.bz2:0.7223911285400391:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_2.tar.bz2:0.7295961380004883:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_3.tar.bz2:0.726496696472168:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_1.tar.bz2:0.7187063694000244:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_2.tar.bz2:0.7063450813293457:0.0:0.7099999999999795
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_3.tar.bz2:0.7197744846343994:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_1.tar.bz2:0.7395210266113281:0.0:0.75
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_2.tar.bz2:0.7294771671295166:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_3.tar.bz2:0.7157413959503174:0.0:0.710000000000008
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_1.tar.bz2:0.7358548641204834:0.0:0.7299999999999898
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_2.tar.bz2:0.7321329116821289:0.0:0.7199999999999989
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_3.tar.bz2:0.7123801708221436:0.0:0.700000000000017
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_1.tar.bz2:0.9068562984466553:0.0:0.9099999999999966
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_2.tar.bz2:0.9079420566558838:0.0:0.9000000000000057
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_3.tar.bz2:0.9184505939483643:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_1.tar.bz2:0.9055941104888916:0.0:0.8899999999999864
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_2.tar.bz2:0.9102709293365479:0.0:0.9000000000000057
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_3.tar.bz2:0.917102575302124:0.0:0.9199999999999875
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_1.tar.bz2:0.9129011631011963:0.0:0.9000000000000057
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_2.tar.bz2:0.9048800468444824:0.0:0.8999999999999773
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_3.tar.bz2:0.9137017726898193:0.0:0.9099999999999966
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_1.tar.bz2:0.9001188278198242:0.0:0.8899999999999864
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_2.tar.bz2:0.9234139919281006:0.0:0.9200000000000159
-sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_3.tar.bz2:0.924257755279541:0.0:0.9199999999999875
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_1.tar.bz2:1.2842071056365967:0.0:1.2900000000000205
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_2.tar.bz2:1.3134005069732666:0.0:1.3100000000000023
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_3.tar.bz2:1.3120412826538086:0.0:1.3100000000000023
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_1.tar.bz2:1.2855899333953857:0.0:1.289999999999992
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_2.tar.bz2:1.3129725456237793:0.0:1.3100000000000307
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_3.tar.bz2:1.2636759281158447:0.0:1.2699999999999818
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_1.tar.bz2:1.273766279220581:0.0:1.2699999999999818
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_2.tar.bz2:1.2807388305664062:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_3.tar.bz2:1.3321945667266846:0.0:1.329999999999984
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_1.tar.bz2:1.2849934101104736:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_2.tar.bz2:1.299264669418335:0.0:1.2900000000000205
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_3.tar.bz2:1.3065719604492188:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_1.tar.bz2:0.6897482872009277:0.0:0.6899999999999977
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_2.tar.bz2:0.7240099906921387:0.0:0.7199999999999704
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_3.tar.bz2:0.72225022315979:0.0:0.7199999999999704
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_1.tar.bz2:0.7254774570465088:0.0:0.7400000000000091
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_2.tar.bz2:0.7051637172698975:0.0:0.6999999999999886
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_3.tar.bz2:0.7081615924835205:0.0:0.7100000000000364
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_1.tar.bz2:0.7340500354766846:0.0:0.7299999999999613
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_2.tar.bz2:0.7360949516296387:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_3.tar.bz2:0.7252321243286133:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_1.tar.bz2:0.7169077396392822:0.0:0.7199999999999704
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_2.tar.bz2:0.7148699760437012:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_3.tar.bz2:0.7110867500305176:0.0:0.7099999999999795
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_1.tar.bz2:0.919783353805542:0.0:0.9199999999999591
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_2.tar.bz2:0.9241399765014648:0.0:0.9200000000000159
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_3.tar.bz2:0.9062392711639404:0.0:0.8999999999999773
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_1.tar.bz2:0.9223284721374512:0.0:0.9200000000000159
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_2.tar.bz2:0.8981397151947021:0.0:0.8999999999999773
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_3.tar.bz2:0.9070961475372314:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_1.tar.bz2:0.8979883193969727:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_2.tar.bz2:0.9207396507263184:0.0:0.9199999999999591
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_3.tar.bz2:0.9194023609161377:0.0:0.9200000000000159
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_1.tar.bz2:0.9232177734375:0.0:0.9300000000000068
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_2.tar.bz2:0.899742603302002:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_3.tar.bz2:0.8970379829406738:0.0:0.8999999999999773
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_1.tar.bz2:1.2834630012512207:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_2.tar.bz2:1.292180061340332:0.0:1.2999999999999545
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_3.tar.bz2:1.2971522808074951:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_1.tar.bz2:1.2946653366088867:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_2.tar.bz2:1.3105223178863525:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_3.tar.bz2:1.3021044731140137:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_1.tar.bz2:1.2974870204925537:0.0:1.2899999999999636
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_2.tar.bz2:1.3065016269683838:0.0:1.3000000000000682
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_3.tar.bz2:1.266209602355957:0.0:1.259999999999991
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_1.tar.bz2:1.3115730285644531:0.0:1.3199999999999932
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_2.tar.bz2:1.2858648300170898:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_3.tar.bz2:1.3048169612884521:0.0:1.2999999999999545
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_1.tar.bz2:0.7437455654144287:0.0:0.75
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_2.tar.bz2:0.711585283279419:0.0:0.6999999999999886
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_3.tar.bz2:0.7536623477935791:0.0:0.7599999999999909
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_1.tar.bz2:0.7160758972167969:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_2.tar.bz2:0.7444729804992676:0.0:0.7400000000000091
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_3.tar.bz2:0.7297854423522949:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_1.tar.bz2:0.7411139011383057:0.0:0.7299999999999613
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_2.tar.bz2:0.7416014671325684:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_3.tar.bz2:0.7250494956970215:0.0:0.7199999999999704
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_1.tar.bz2:0.7306540012359619:0.0:0.730000000000075
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_2.tar.bz2:0.7542073726654053:0.0:0.75
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_3.tar.bz2:0.7241504192352295:0.0:0.7299999999999613
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_1.tar.bz2:0.9362039566040039:0.0:0.9399999999999977
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_2.tar.bz2:0.9435899257659912:0.0:0.9399999999999977
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_3.tar.bz2:0.9171721935272217:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_1.tar.bz2:0.885422945022583:0.0:0.8800000000000523
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_2.tar.bz2:0.9105064868927002:0.0:0.9099999999999682
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_3.tar.bz2:0.8976030349731445:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_1.tar.bz2:0.9020636081695557:0.0:0.8999999999999773
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_2.tar.bz2:0.9074387550354004:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_3.tar.bz2:0.8860223293304443:0.0:0.8799999999999386
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_1.tar.bz2:0.9100596904754639:0.0:0.9199999999999591
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_2.tar.bz2:0.9270317554473877:0.0:0.9300000000000068
-sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_3.tar.bz2:0.91560959815979:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_1.tar.bz2:1.3043172359466553:0.0:1.2900000000000205
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_2.tar.bz2:1.3019139766693115:0.0:1.2999999999999545
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_3.tar.bz2:1.288095235824585:0.0:1.2799999999999727
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_1.tar.bz2:1.2972886562347412:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_2.tar.bz2:1.286600112915039:0.0:1.2800000000000296
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_3.tar.bz2:1.3146083354949951:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_1.tar.bz2:1.2991774082183838:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_2.tar.bz2:1.2961602210998535:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_3.tar.bz2:1.2609920501708984:0.0:1.259999999999934
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_1.tar.bz2:1.3128271102905273:0.0:1.3100000000000023
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_2.tar.bz2:1.315438985824585:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_3.tar.bz2:1.3098359107971191:0.0:1.3000000000000114
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_1.tar.bz2:0.7359702587127686:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_2.tar.bz2:0.7400262355804443:0.0:0.7400000000000091
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_3.tar.bz2:0.7206087112426758:0.0:0.7199999999999704
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_1.tar.bz2:0.7130398750305176:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_2.tar.bz2:0.6976180076599121:0.0:0.6999999999999886
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_3.tar.bz2:0.7190947532653809:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_1.tar.bz2:0.7312471866607666:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_2.tar.bz2:0.7325382232666016:0.0:0.7299999999999613
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_3.tar.bz2:0.7371461391448975:0.0:0.7300000000000182
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_1.tar.bz2:0.7314691543579102:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_2.tar.bz2:0.7024064064025879:0.0:0.6999999999999886
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_3.tar.bz2:0.7185664176940918:0.0:0.7200000000000273
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_1.tar.bz2:0.9227466583251953:0.0:0.9199999999999591
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_2.tar.bz2:0.8926589488983154:0.0:0.8900000000000432
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_3.tar.bz2:0.8950502872467041:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_1.tar.bz2:0.9200966358184814:0.0:0.9199999999999591
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_2.tar.bz2:0.8992133140563965:0.0:0.9000000000000341
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_3.tar.bz2:0.9112262725830078:0.0:0.9099999999999682
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_1.tar.bz2:0.9124412536621094:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_2.tar.bz2:0.9154915809631348:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_3.tar.bz2:0.9019296169281006:0.0:0.910000000000025
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_1.tar.bz2:0.9102606773376465:0.0:0.9099999999999682
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_2.tar.bz2:0.9233739376068115:0.0:0.9300000000000068
-sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_3.tar.bz2:0.8916170597076416:0.0:0.8999999999999773
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_1.tar.bz2:5.270249128341675:1.2337699999999998:5.259999999999991
+> 0:False:6,15:249060,8981
+> 1:False:7,16:249060,8981
+> 2:True:9,17:249060,8981
+> 3:False:6,15:249060,8981
+> 4:False:7,18:249060,8981
+> 5:False:7,17:249060,8981
+> 6:False:7,18:249060,8981
+> 7:False:9,18:249060,8981
+> 8:False:6,15:249060,8981
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_2.tar.bz2:5.292144536972046:1.2522229999999999:5.289999999999964
+> 0:True:6,11:249061,8984
+> 1:True:7,12:249061,8984
+> 2:False:9,15:249061,8984
+> 3:False:6,12:249061,8984
+> 4:False:7,14:249061,8984
+> 5:False:7,14:249061,8984
+> 6:False:7,14:249061,8984
+> 7:False:9,15:249061,8984
+> 8:False:6,12:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-1_10_3.tar.bz2:5.200202703475952:1.204102:5.189999999999941
+> 0:True:6,11:249061,8984
+> 1:False:7,13:249061,8984
+> 2:True:9,14:249061,8984
+> 3:True:6,11:249061,8984
+> 4:False:7,13:249061,8984
+> 5:True:7,12:249061,8984
+> 6:True:7,12:249061,8984
+> 7:True:9,14:249061,8984
+> 8:False:6,12:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_1.tar.bz2:5.202858209609985:1.218484:5.210000000000036
+> 0:True:6,11:249060,8981
+> 1:False:7,13:249060,8981
+> 2:True:9,14:249060,8981
+> 3:False:6,12:249060,8981
+> 4:False:7,15:249060,8981
+> 5:False:7,13:249060,8981
+> 6:False:7,15:249060,8981
+> 7:False:9,15:249060,8981
+> 8:False:6,12:249060,8981
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_2.tar.bz2:5.299468994140625:1.254178:5.289999999999964
+> 0:False:6,13:249061,8984
+> 1:True:7,13:249061,8984
+> 2:False:9,16:249061,8984
+> 3:False:6,15:249061,8984
+> 4:False:7,17:249061,8984
+> 5:False:7,15:249061,8984
+> 6:False:7,15:249061,8984
+> 7:False:9,16:249061,8984
+> 8:False:6,15:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-2_10_3.tar.bz2:5.208664417266846:1.2153489999999998:5.190000000000055
+> 0:True:6,11:249061,8984
+> 1:False:7,13:249061,8984
+> 2:True:9,14:249061,8984
+> 3:False:6,14:249061,8984
+> 4:False:7,15:249061,8984
+> 5:False:7,15:249061,8984
+> 6:False:7,15:249061,8984
+> 7:False:9,15:249061,8984
+> 8:False:6,12:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_1.tar.bz2:5.316539287567139:1.257322:5.309999999999945
+> 0:False:6,12:249061,8984
+> 1:False:7,13:249061,8984
+> 2:True:9,13:249061,8984
+> 3:False:6,13:249061,8984
+> 4:False:7,15:249061,8984
+> 5:False:7,14:249061,8984
+> 6:False:7,15:249061,8984
+> 7:False:9,14:249061,8984
+> 8:False:6,12:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_2.tar.bz2:5.323839426040649:1.2605739999999999:5.32000000000005
+> 0:False:6,12:249061,8984
+> 1:False:7,13:249061,8984
+> 2:True:9,12:249061,8984
+> 3:False:6,14:249061,8984
+> 4:False:7,15:249061,8984
+> 5:False:7,14:249061,8984
+> 6:False:7,15:249061,8984
+> 7:False:9,16:249061,8984
+> 8:False:6,13:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-3_10_3.tar.bz2:5.259706497192383:1.232451:5.259999999999991
+> 0:True:6,10:249061,8984
+> 1:True:7,11:249061,8984
+> 2:False:9,15:249061,8984
+> 3:False:6,13:249061,8984
+> 4:False:7,14:249061,8984
+> 5:False:7,14:249061,8984
+> 6:False:7,14:249061,8984
+> 7:False:9,15:249061,8984
+> 8:False:6,12:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_1.tar.bz2:5.224591016769409:1.250375:5.220000000000027
+> 0:False:6,12:249061,8984
+> 1:False:7,14:249061,8984
+> 2:False:9,16:249061,8984
+> 3:True:6,10:249061,8984
+> 4:False:7,14:249061,8984
+> 5:False:7,14:249061,8984
+> 6:False:7,14:249061,8984
+> 7:False:9,16:249061,8984
+> 8:False:6,13:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_2.tar.bz2:5.162504196166992:1.207424:5.149999999999977
+> 0:True:6,13:249061,8984
+> 1:True:7,14:249061,8984
+> 2:True:9,16:249061,8984
+> 3:True:6,13:249061,8984
+> 4:False:7,15:249061,8984
+> 5:False:7,15:249061,8984
+> 6:False:7,15:249061,8984
+> 7:True:9,16:249061,8984
+> 8:True:6,13:249061,8984
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p01_hyp-4_10_3.tar.bz2:5.180269002914429:1.24392:5.170000000000073
+> 0:True:6,14:249060,8981
+> 1:False:7,17:249060,8981
+> 2:False:9,19:249060,8981
+> 3:True:6,14:249060,8981
+> 4:False:7,18:249060,8981
+> 5:False:7,17:249060,8981
+> 6:False:7,17:249060,8981
+> 7:False:9,19:249060,8981
+> 8:False:6,17:249060,8981
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_1.tar.bz2:0.9946749210357666:0.11823039999999999:0.9900000000000091
+> 0:True:6,8:17311,1985
+> 1:False:7,11:17311,1985
+> 2:False:6,10:17311,1985
+> 3:False:6,11:17311,1985
+> 4:False:7,13:17311,1985
+> 5:False:8,13:17311,1985
+> 7:False:8,13:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_2.tar.bz2:0.9997787475585938:0.12079600000000001:1.0
+> 0:True:6,10:17311,1985
+> 1:False:7,12:17311,1985
+> 2:False:6,11:17311,1985
+> 3:False:6,13:17311,1985
+> 4:False:7,15:17311,1985
+> 5:True:8,12:17311,1985
+> 7:False:8,13:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-1_10_3.tar.bz2:0.9980931282043457:0.12330409999999999:1.0
+> 0:True:6,8:17311,1985
+> 1:False:7,10:17311,1985
+> 2:False:6,9:17311,1985
+> 3:False:6,10:17311,1985
+> 4:False:7,11:17311,1985
+> 5:True:8,10:17311,1985
+> 7:True:8,10:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_1.tar.bz2:0.96942138671875:0.11086560000000002:0.9699999999999136
+> 0:False:6,10:17312,1988
+> 1:True:7,10:17312,1988
+> 2:False:6,10:17312,1988
+> 3:False:6,10:17312,1988
+> 4:False:7,11:17312,1988
+> 5:True:8,11:17312,1988
+> 7:False:8,12:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_2.tar.bz2:1.0175347328186035:0.1208286:1.0200000000000955
+> 0:False:6,9:17312,1988
+> 1:False:7,10:17312,1988
+> 2:False:6,10:17312,1988
+> 3:False:6,11:17312,1988
+> 4:False:7,12:17312,1988
+> 5:True:8,10:17312,1988
+> 7:False:8,11:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-2_10_3.tar.bz2:1.0136971473693848:0.12015319999999999:1.009999999999991
+> 0:False:6,10:17311,1985
+> 1:True:7,9:17311,1985
+> 2:False:6,11:17311,1985
+> 3:False:6,11:17311,1985
+> 4:False:7,13:17311,1985
+> 5:False:8,12:17311,1985
+> 7:False:8,13:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_1.tar.bz2:1.0472466945648193:0.12635020000000002:1.0399999999999636
+> 0:True:6,9:17312,1988
+> 1:False:7,11:17312,1988
+> 2:True:6,9:17312,1988
+> 3:False:6,11:17312,1988
+> 4:False:7,13:17312,1988
+> 5:True:8,11:17312,1988
+> 7:False:8,12:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_2.tar.bz2:0.9889991283416748:0.12359310000000001:0.9900000000000091
+> 0:False:6,10:17311,1985
+> 1:True:7,10:17311,1985
+> 2:False:6,10:17311,1985
+> 3:False:6,10:17311,1985
+> 4:False:7,13:17311,1985
+> 5:False:8,12:17311,1985
+> 7:False:8,12:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-3_10_3.tar.bz2:1.0176024436950684:0.1200459:1.009999999999991
+> 0:False:6,9:17312,1988
+> 1:False:7,11:17312,1988
+> 2:True:6,8:17312,1988
+> 3:False:6,10:17312,1988
+> 4:False:7,11:17312,1988
+> 5:False:8,11:17312,1988
+> 7:True:8,10:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_1.tar.bz2:1.0313324928283691:0.1246983:1.0399999999999636
+> 0:False:6,11:17312,1988
+> 1:True:7,11:17312,1988
+> 2:False:6,11:17312,1988
+> 3:True:6,10:17312,1988
+> 4:False:7,12:17312,1988
+> 5:True:8,12:17312,1988
+> 7:False:8,13:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_2.tar.bz2:0.996589183807373:0.12107639999999999:0.9900000000000091
+> 0:False:6,10:17312,1988
+> 1:True:7,10:17312,1988
+> 2:False:6,10:17312,1988
+> 3:False:6,10:17312,1988
+> 4:False:7,13:17312,1988
+> 5:False:8,12:17312,1988
+> 7:False:8,12:17312,1988
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p02_hyp-4_10_3.tar.bz2:0.9852035045623779:0.11683009999999999:0.9800000000001319
+> 0:False:6,11:17311,1985
+> 1:True:7,11:17311,1985
+> 2:True:6,10:17311,1985
+> 3:False:6,11:17311,1985
+> 4:False:7,14:17311,1985
+> 5:True:8,12:17311,1985
+> 7:False:8,14:17311,1985
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_1.tar.bz2:2.190549373626709:0.4619668:2.17999999999995
+> 0:False:7,13:83532,5038
+> 1:False:6,11:83532,5038
+> 2:False:6,10:83532,5038
+> 3:False:6,10:83532,5038
+> 4:False:7,13:83532,5038
+> 5:False:6,11:83532,5038
+> 6:True:6,9:83532,5038
+> 7:False:7,12:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_2.tar.bz2:2.211944341659546:0.4573378:2.2000000000000455
+> 0:False:7,10:83532,5038
+> 1:True:6,8:83532,5038
+> 2:False:6,9:83532,5038
+> 3:False:6,10:83532,5038
+> 4:False:7,12:83532,5038
+> 5:False:6,11:83532,5038
+> 6:False:6,10:83532,5038
+> 7:False:7,12:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-1_10_3.tar.bz2:2.1542842388153076:0.4487671999999999:2.1499999999999773
+> 0:False:7,12:83532,5038
+> 1:False:6,10:83532,5038
+> 2:True:6,9:83532,5038
+> 3:False:6,10:83532,5038
+> 4:False:7,12:83532,5038
+> 5:False:6,10:83532,5038
+> 6:False:6,10:83532,5038
+> 7:False:7,12:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_1.tar.bz2:2.1536104679107666:0.4364155:2.1499999999999773
+> 0:False:7,11:83531,5035
+> 1:False:6,10:83531,5035
+> 2:False:6,10:83531,5035
+> 3:True:6,9:83531,5035
+> 4:False:7,11:83531,5035
+> 5:False:6,10:83531,5035
+> 6:True:6,9:83531,5035
+> 7:False:7,11:83531,5035
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_2.tar.bz2:2.1693716049194336:0.4597524:2.160000000000082
+> 0:True:7,11:83532,5038
+> 1:False:6,11:83532,5038
+> 2:False:6,13:83532,5038
+> 3:False:6,13:83532,5038
+> 4:False:7,14:83532,5038
+> 5:False:6,11:83532,5038
+> 6:False:6,13:83532,5038
+> 7:True:7,11:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-2_10_3.tar.bz2:2.201125383377075:0.467903:2.2000000000000455
+> 0:True:7,12:83532,5038
+> 1:False:6,12:83532,5038
+> 2:True:6,11:83532,5038
+> 3:True:6,11:83532,5038
+> 4:False:7,13:83532,5038
+> 5:False:6,12:83532,5038
+> 6:True:6,11:83532,5038
+> 7:True:7,12:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_1.tar.bz2:2.1681313514709473:0.4573797:2.159999999999968
+> 0:False:7,11:83531,5035
+> 1:False:6,10:83531,5035
+> 2:False:6,11:83531,5035
+> 3:True:6,9:83531,5035
+> 4:False:7,12:83531,5035
+> 5:False:6,11:83531,5035
+> 6:False:6,10:83531,5035
+> 7:False:7,12:83531,5035
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_2.tar.bz2:2.1901917457580566:0.45144399999999996:2.17999999999995
+> 0:False:7,10:83532,5038
+> 1:False:6,9:83532,5038
+> 2:False:6,9:83532,5038
+> 3:True:6,8:83532,5038
+> 4:False:7,11:83532,5038
+> 5:False:6,10:83532,5038
+> 6:False:6,9:83532,5038
+> 7:False:7,10:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-3_10_3.tar.bz2:2.2205045223236084:0.46378880000000006:2.2100000000000364
+> 0:False:7,12:83532,5038
+> 1:False:6,12:83532,5038
+> 2:True:6,10:83532,5038
+> 3:False:6,11:83532,5038
+> 4:False:7,13:83532,5038
+> 5:False:6,12:83532,5038
+> 6:False:6,11:83532,5038
+> 7:False:7,12:83532,5038
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_1.tar.bz2:2.156614303588867:0.4448595:2.150000000000091
+> 0:False:7,11:83531,5035
+> 1:False:6,11:83531,5035
+> 2:False:6,11:83531,5035
+> 3:False:6,10:83531,5035
+> 4:False:7,12:83531,5035
+> 5:True:6,8:83531,5035
+> 6:False:6,9:83531,5035
+> 7:False:7,12:83531,5035
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_2.tar.bz2:2.1778557300567627:0.4598201:2.169999999999959
+> 0:False:7,13:83531,5035
+> 1:False:6,13:83531,5035
+> 2:False:6,12:83531,5035
+> 3:True:6,11:83531,5035
+> 4:False:7,15:83531,5035
+> 5:True:6,11:83531,5035
+> 6:False:6,13:83531,5035
+> 7:False:7,15:83531,5035
+sokoban-suboptimal-old-noisy/10/sokoban_noisy_p03_hyp-4_10_3.tar.bz2:2.182650566101074:0.4523502:2.17999999999995
+> 0:False:7,11:83532,5038
+> 1:False:6,9:83532,5038
+> 2:False:6,10:83532,5038
+> 3:True:6,8:83532,5038
+> 4:False:7,12:83532,5038
+> 5:False:6,11:83532,5038
+> 6:True:6,8:83532,5038
+> 7:False:7,12:83532,5038
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_1.tar.bz2:5.2610249519348145:1.323913:5.259999999999991
+> 0:True:6,19:249069,9008
+> 1:False:7,23:249069,9008
+> 2:False:9,23:249069,9008
+> 3:False:6,20:249069,9008
+> 4:False:7,24:249069,9008
+> 5:False:7,23:249069,9008
+> 6:False:7,24:249069,9008
+> 7:False:9,23:249069,9008
+> 8:False:6,21:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_2.tar.bz2:5.19588303565979:1.2589789999999998:5.190000000000055
+> 0:False:6,20:249068,9005
+> 1:False:7,22:249068,9005
+> 2:True:9,22:249068,9005
+> 3:False:6,21:249068,9005
+> 4:False:7,25:249068,9005
+> 5:False:7,24:249068,9005
+> 6:False:7,25:249068,9005
+> 7:False:9,23:249068,9005
+> 8:False:6,22:249068,9005
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-1_30_3.tar.bz2:5.3164472579956055:1.290754:5.2999999999999545
+> 0:False:6,19:249067,9002
+> 1:True:7,19:249067,9002
+> 2:True:9,21:249067,9002
+> 3:False:6,19:249067,9002
+> 4:False:7,22:249067,9002
+> 5:False:7,21:249067,9002
+> 6:False:7,22:249067,9002
+> 7:True:9,21:249067,9002
+> 8:False:6,19:249067,9002
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_1.tar.bz2:5.356499671936035:1.2821999999999998:5.280000000000086
+> 0:True:6,18:249069,9008
+> 1:True:7,19:249069,9008
+> 2:False:9,23:249069,9008
+> 3:False:6,19:249069,9008
+> 4:False:7,23:249069,9008
+> 5:False:7,22:249069,9008
+> 6:False:7,23:249069,9008
+> 7:False:9,23:249069,9008
+> 8:False:6,20:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_2.tar.bz2:5.181414365768433:1.251913:5.17999999999995
+> 0:False:6,22:249068,9005
+> 1:True:7,21:249068,9005
+> 2:True:9,23:249068,9005
+> 3:False:6,22:249068,9005
+> 4:False:7,25:249068,9005
+> 5:False:7,23:249068,9005
+> 6:False:7,25:249068,9005
+> 7:False:9,24:249068,9005
+> 8:False:6,23:249068,9005
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-2_30_3.tar.bz2:5.30659294128418:1.282695:5.289999999999964
+> 0:False:6,20:249069,9008
+> 1:True:7,20:249069,9008
+> 2:True:9,22:249069,9008
+> 3:True:6,19:249069,9008
+> 4:False:7,22:249069,9008
+> 5:False:7,21:249069,9008
+> 6:False:7,21:249069,9008
+> 7:True:9,22:249069,9008
+> 8:False:6,20:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_1.tar.bz2:5.2999303340911865:1.2576169999999998:5.2999999999999545
+> 0:True:6,18:249069,9008
+> 1:True:7,19:249069,9008
+> 2:True:9,21:249069,9008
+> 3:False:6,19:249069,9008
+> 4:False:7,21:249069,9008
+> 5:False:7,20:249069,9008
+> 6:False:7,21:249069,9008
+> 7:True:9,21:249069,9008
+> 8:False:6,20:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_2.tar.bz2:5.324099540710449:1.26331:5.32000000000005
+> 0:False:6,19:249069,9008
+> 1:False:7,20:249069,9008
+> 2:True:9,17:249069,9008
+> 3:False:6,20:249069,9008
+> 4:False:7,23:249069,9008
+> 5:False:7,22:249069,9008
+> 6:False:7,23:249069,9008
+> 7:False:9,19:249069,9008
+> 8:False:6,19:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-3_30_3.tar.bz2:5.297487497329712:1.2891139999999999:5.289999999999964
+> 0:False:6,22:249070,9011
+> 1:False:7,22:249070,9011
+> 2:True:9,20:249070,9011
+> 3:False:6,22:249070,9011
+> 4:False:7,25:249070,9011
+> 5:False:7,24:249070,9011
+> 6:False:7,25:249070,9011
+> 7:False:9,22:249070,9011
+> 8:False:6,21:249070,9011
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_1.tar.bz2:5.264131307601929:1.267175:5.269999999999982
+> 0:False:6,22:249069,9008
+> 1:False:7,25:249069,9008
+> 2:False:9,26:249069,9008
+> 3:True:6,21:249069,9008
+> 4:False:7,26:249069,9008
+> 5:False:7,26:249069,9008
+> 6:False:7,25:249069,9008
+> 7:False:9,26:249069,9008
+> 8:False:6,22:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_2.tar.bz2:5.292586803436279:1.291554:5.280000000000086
+> 0:True:6,17:249069,9008
+> 1:False:7,20:249069,9008
+> 2:False:9,22:249069,9008
+> 3:False:6,18:249069,9008
+> 4:False:7,22:249069,9008
+> 5:False:7,21:249069,9008
+> 6:False:7,21:249069,9008
+> 7:False:9,22:249069,9008
+> 8:False:6,20:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p01_hyp-4_30_3.tar.bz2:5.398707628250122:1.282833:5.269999999999982
+> 0:False:6,21:249069,9008
+> 1:False:7,24:249069,9008
+> 2:False:9,24:249069,9008
+> 3:True:6,19:249069,9008
+> 4:False:7,24:249069,9008
+> 5:False:7,24:249069,9008
+> 6:False:7,22:249069,9008
+> 7:False:9,25:249069,9008
+> 8:False:6,22:249069,9008
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_1.tar.bz2:1.0095479488372803:0.12012790000000001:1.0199999999999818
+> 0:True:6,13:17313,1991
+> 1:False:7,15:17313,1991
+> 2:False:6,15:17313,1991
+> 3:False:6,16:17313,1991
+> 4:False:7,18:17313,1991
+> 5:True:8,15:17313,1991
+> 7:False:8,17:17313,1991
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_2.tar.bz2:0.9969568252563477:0.114708:0.9900000000000091
+> 0:True:6,14:17316,2000
+> 1:False:7,16:17316,2000
+> 2:False:6,15:17316,2000
+> 3:False:6,16:17316,2000
+> 4:False:7,19:17316,2000
+> 5:True:8,16:17316,2000
+> 7:False:8,17:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-1_30_3.tar.bz2:1.007443904876709:0.1198555:1.0
+> 0:False:6,13:17315,1997
+> 1:False:7,14:17315,1997
+> 2:False:6,13:17315,1997
+> 3:False:6,15:17315,1997
+> 4:False:7,15:17315,1997
+> 5:False:8,15:17315,1997
+> 7:True:8,14:17315,1997
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_1.tar.bz2:1.0004098415374756:0.12256900000000001:1.0
+> 0:False:6,14:17317,2003
+> 1:True:7,14:17317,2003
+> 2:False:6,15:17317,2003
+> 3:False:6,16:17317,2003
+> 4:False:7,18:17317,2003
+> 5:False:8,16:17317,2003
+> 7:False:8,17:17317,2003
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_2.tar.bz2:1.010406494140625:0.12022110000000001:1.0000000000001137
+> 0:False:6,16:17316,2000
+> 1:True:7,14:17316,2000
+> 2:False:6,18:17316,2000
+> 3:False:6,18:17316,2000
+> 4:False:7,20:17316,2000
+> 5:False:8,18:17316,2000
+> 7:False:8,18:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-2_30_3.tar.bz2:0.9981474876403809:0.1233149:1.0
+> 0:False:6,14:17316,2000
+> 1:True:7,11:17316,2000
+> 2:False:6,15:17316,2000
+> 3:False:6,16:17316,2000
+> 4:False:7,17:17316,2000
+> 5:False:8,16:17316,2000
+> 7:False:8,17:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_1.tar.bz2:1.0221524238586426:0.1216187:1.0299999999999727
+> 0:False:6,14:17316,2000
+> 1:False:7,14:17316,2000
+> 2:False:6,13:17316,2000
+> 3:False:6,14:17316,2000
+> 4:False:7,17:17316,2000
+> 5:True:8,12:17316,2000
+> 7:False:8,17:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_2.tar.bz2:1.0300867557525635:0.11946609999999999:1.0199999999999818
+> 0:False:6,12:17316,2000
+> 1:True:7,12:17316,2000
+> 2:False:6,12:17316,2000
+> 3:False:6,14:17316,2000
+> 4:False:7,15:17316,2000
+> 5:False:8,14:17316,2000
+> 7:False:8,15:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-3_30_3.tar.bz2:0.9780256748199463:0.11157109999999999:0.9700000000000273
+> 0:False:6,13:17316,2000
+> 1:False:7,13:17316,2000
+> 2:False:6,13:17316,2000
+> 3:False:6,15:17316,2000
+> 4:False:7,17:17316,2000
+> 5:True:8,13:17316,2000
+> 7:False:8,16:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_1.tar.bz2:0.9990801811218262:0.1200496:0.9900000000000091
+> 0:False:6,13:17316,2000
+> 1:False:7,13:17316,2000
+> 2:False:6,13:17316,2000
+> 3:False:6,12:17316,2000
+> 4:False:7,16:17316,2000
+> 5:True:8,13:17316,2000
+> 7:False:8,15:17316,2000
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_2.tar.bz2:1.0104517936706543:0.12238500000000001:1.009999999999991
+> 0:False:6,14:17317,2003
+> 1:False:7,13:17317,2003
+> 2:False:6,12:17317,2003
+> 3:False:6,12:17317,2003
+> 4:False:7,15:17317,2003
+> 5:True:8,12:17317,2003
+> 7:False:8,15:17317,2003
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p02_hyp-4_30_3.tar.bz2:1.0006492137908936:0.1216352:0.9900000000000091
+> 0:False:6,15:17315,1997
+> 1:False:7,15:17315,1997
+> 2:False:6,14:17315,1997
+> 3:True:6,13:17315,1997
+> 4:False:7,17:17315,1997
+> 5:True:8,15:17315,1997
+> 7:False:8,16:17315,1997
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_1.tar.bz2:2.202645778656006:0.4668323:2.2000000000000455
+> 0:False:7,16:83537,5053
+> 1:False:6,15:83537,5053
+> 2:False:6,16:83537,5053
+> 3:True:6,14:83537,5053
+> 4:False:7,19:83537,5053
+> 5:False:6,17:83537,5053
+> 6:False:6,16:83537,5053
+> 7:False:7,18:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_2.tar.bz2:2.213181972503662:0.45893:2.2100000000000364
+> 0:False:7,16:83538,5056
+> 1:True:6,14:83538,5056
+> 2:True:6,14:83538,5056
+> 3:False:6,15:83538,5056
+> 4:False:7,17:83538,5056
+> 5:False:6,15:83538,5056
+> 6:True:6,14:83538,5056
+> 7:True:7,15:83538,5056
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-1_30_3.tar.bz2:2.19274640083313:0.45065130000000003:2.189999999999941
+> 0:False:7,17:83537,5053
+> 1:False:6,17:83537,5053
+> 2:False:6,18:83537,5053
+> 3:False:6,18:83537,5053
+> 4:False:7,21:83537,5053
+> 5:False:6,19:83537,5053
+> 6:False:6,17:83537,5053
+> 7:True:7,16:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_1.tar.bz2:2.196969985961914:0.46075730000000004:2.189999999999941
+> 0:False:7,16:83538,5056
+> 1:False:6,15:83538,5056
+> 2:False:6,15:83538,5056
+> 3:False:6,16:83538,5056
+> 4:False:7,18:83538,5056
+> 5:False:6,15:83538,5056
+> 6:False:6,16:83538,5056
+> 7:True:7,15:83538,5056
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_2.tar.bz2:2.2185964584350586:0.4745962:2.2200000000000273
+> 0:False:7,16:83537,5053
+> 1:False:6,15:83537,5053
+> 2:False:6,17:83537,5053
+> 3:False:6,18:83537,5053
+> 4:False:7,18:83537,5053
+> 5:False:6,17:83537,5053
+> 6:False:6,17:83537,5053
+> 7:True:7,15:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-2_30_3.tar.bz2:2.1877553462982178:0.4432431:2.1800000000000637
+> 0:True:7,16:83537,5053
+> 1:False:6,16:83537,5053
+> 2:False:6,18:83537,5053
+> 3:False:6,17:83537,5053
+> 4:False:7,20:83537,5053
+> 5:False:6,17:83537,5053
+> 6:False:6,16:83537,5053
+> 7:True:7,16:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_1.tar.bz2:2.152574062347412:0.44674109999999995:2.1399999999999864
+> 0:False:7,16:83538,5056
+> 1:True:6,13:83538,5056
+> 2:False:6,14:83538,5056
+> 3:False:6,14:83538,5056
+> 4:False:7,17:83538,5056
+> 5:False:6,15:83538,5056
+> 6:False:6,15:83538,5056
+> 7:False:7,16:83538,5056
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_2.tar.bz2:2.214491128921509:0.47268449999999995:2.2200000000000273
+> 0:False:7,17:83538,5056
+> 1:False:6,17:83538,5056
+> 2:True:6,14:83538,5056
+> 3:False:6,15:83538,5056
+> 4:False:7,19:83538,5056
+> 5:False:6,17:83538,5056
+> 6:True:6,14:83538,5056
+> 7:False:7,18:83538,5056
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-3_30_3.tar.bz2:2.23244309425354:0.4553958:2.2299999999999045
+> 0:False:7,18:83537,5053
+> 1:False:6,15:83537,5053
+> 2:True:6,14:83537,5053
+> 3:False:6,16:83537,5053
+> 4:False:7,18:83537,5053
+> 5:False:6,17:83537,5053
+> 6:False:6,16:83537,5053
+> 7:False:7,18:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_1.tar.bz2:2.23124098777771:0.4586415999999999:2.230000000000018
+> 0:False:7,17:83538,5056
+> 1:False:6,16:83538,5056
+> 2:False:6,15:83538,5056
+> 3:True:6,14:83538,5056
+> 4:False:7,17:83538,5056
+> 5:False:6,17:83538,5056
+> 6:True:6,14:83538,5056
+> 7:False:7,17:83538,5056
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_2.tar.bz2:2.222404956817627:0.4568354:2.2100000000000364
+> 0:False:7,15:83537,5053
+> 1:False:6,15:83537,5053
+> 2:True:6,13:83537,5053
+> 3:False:6,14:83537,5053
+> 4:False:7,16:83537,5053
+> 5:False:6,14:83537,5053
+> 6:False:6,14:83537,5053
+> 7:False:7,15:83537,5053
+sokoban-suboptimal-old-noisy/30/sokoban_noisy_p03_hyp-4_30_3.tar.bz2:2.195160150527954:0.4459828:2.2000000000000455
+> 0:False:7,19:83538,5056
+> 1:False:6,18:83538,5056
+> 2:False:6,17:83538,5056
+> 3:True:6,16:83538,5056
+> 4:False:7,20:83538,5056
+> 5:True:6,16:83538,5056
+> 6:True:6,16:83538,5056
+> 7:False:7,19:83538,5056
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_1.tar.bz2:5.276898622512817:1.2787570000000001:5.279999999999973
+> 0:False:6,24:249075,9026
+> 1:False:7,26:249075,9026
+> 2:True:9,26:249075,9026
+> 3:False:6,24:249075,9026
+> 4:False:7,28:249075,9026
+> 5:False:7,28:249075,9026
+> 6:False:7,28:249075,9026
+> 7:True:9,26:249075,9026
+> 8:False:6,25:249075,9026
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_2.tar.bz2:5.314901351928711:1.296828:5.309999999999945
+> 0:True:6,24:249074,9023
+> 1:False:7,26:249074,9023
+> 2:False:9,28:249074,9023
+> 3:False:6,25:249074,9023
+> 4:False:7,28:249074,9023
+> 5:False:7,26:249074,9023
+> 6:False:7,26:249074,9023
+> 7:False:9,28:249074,9023
+> 8:False:6,26:249074,9023
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-1_50_3.tar.bz2:5.365827322006226:1.294216:5.360000000000127
+> 0:True:6,24:249077,9032
+> 1:True:7,25:249077,9032
+> 2:False:9,28:249077,9032
+> 3:False:6,25:249077,9032
+> 4:False:7,28:249077,9032
+> 5:False:7,27:249077,9032
+> 6:False:7,27:249077,9032
+> 7:True:9,27:249077,9032
+> 8:False:6,25:249077,9032
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_1.tar.bz2:5.309666156768799:1.27571:5.309999999999945
+> 0:False:6,21:249077,9032
+> 1:True:7,20:249077,9032
+> 2:False:9,25:249077,9032
+> 3:False:6,22:249077,9032
+> 4:False:7,24:249077,9032
+> 5:False:7,22:249077,9032
+> 6:False:7,24:249077,9032
+> 7:False:9,25:249077,9032
+> 8:False:6,23:249077,9032
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_2.tar.bz2:5.318799018859863:1.268647:5.309999999999945
+> 0:True:6,22:249075,9026
+> 1:True:7,23:249075,9026
+> 2:False:9,26:249075,9026
+> 3:False:6,25:249075,9026
+> 4:False:7,28:249075,9026
+> 5:False:7,27:249075,9026
+> 6:False:7,28:249075,9026
+> 7:False:9,26:249075,9026
+> 8:False:6,24:249075,9026
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-2_50_3.tar.bz2:5.4197258949279785:1.331708:5.409999999999968
+> 0:False:6,22:249077,9032
+> 1:True:7,21:249077,9032
+> 2:False:9,25:249077,9032
+> 3:False:6,23:249077,9032
+> 4:False:7,26:249077,9032
+> 5:False:7,26:249077,9032
+> 6:False:7,27:249077,9032
+> 7:False:9,24:249077,9032
+> 8:False:6,24:249077,9032
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_1.tar.bz2:5.333123683929443:1.276788:5.319999999999936
+> 0:False:6,25:249077,9032
+> 1:False:7,27:249077,9032
+> 2:True:9,25:249077,9032
+> 3:False:6,27:249077,9032
+> 4:False:7,30:249077,9032
+> 5:False:7,29:249077,9032
+> 6:False:7,30:249077,9032
+> 7:False:9,27:249077,9032
+> 8:False:6,27:249077,9032
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_2.tar.bz2:5.282268524169922:1.268654:5.2700000000000955
+> 0:False:6,25:249076,9029
+> 1:False:7,26:249076,9029
+> 2:True:9,23:249076,9029
+> 3:False:6,26:249076,9029
+> 4:False:7,30:249076,9029
+> 5:False:7,29:249076,9029
+> 6:False:7,28:249076,9029
+> 7:False:9,26:249076,9029
+> 8:False:6,26:249076,9029
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-3_50_3.tar.bz2:5.3630311489105225:1.2728789999999999:5.350000000000023
+> 0:False:6,25:249075,9026
+> 1:False:7,26:249075,9026
+> 2:True:9,22:249075,9026
+> 3:False:6,26:249075,9026
+> 4:False:7,29:249075,9026
+> 5:False:7,28:249075,9026
+> 6:False:7,28:249075,9026
+> 7:False:9,26:249075,9026
+> 8:False:6,25:249075,9026
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_1.tar.bz2:5.20947265625:1.2568199999999998:5.190000000000055
+> 0:False:6,26:249076,9029
+> 1:False:7,28:249076,9029
+> 2:False:9,28:249076,9029
+> 3:True:6,24:249076,9029
+> 4:False:7,28:249076,9029
+> 5:False:7,29:249076,9029
+> 6:False:7,27:249076,9029
+> 7:False:9,30:249076,9029
+> 8:False:6,27:249076,9029
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_2.tar.bz2:5.320265769958496:1.294243:5.309999999999945
+> 0:True:6,22:249075,9026
+> 1:False:7,26:249075,9026
+> 2:False:9,27:249075,9026
+> 3:False:6,23:249075,9026
+> 4:False:7,27:249075,9026
+> 5:False:7,26:249075,9026
+> 6:False:7,26:249075,9026
+> 7:False:9,28:249075,9026
+> 8:False:6,25:249075,9026
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p01_hyp-4_50_3.tar.bz2:5.410004377365112:1.2954649999999999:5.410000000000082
+> 0:True:6,23:249075,9026
+> 1:False:7,26:249075,9026
+> 2:False:9,28:249075,9026
+> 3:False:6,25:249075,9026
+> 4:False:7,28:249075,9026
+> 5:False:7,27:249075,9026
+> 6:False:7,27:249075,9026
+> 7:False:9,29:249075,9026
+> 8:False:6,25:249075,9026
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_1.tar.bz2:1.0096120834350586:0.1180185:1.009999999999991
+> 0:False:6,16:17320,2012
+> 1:False:7,19:17320,2012
+> 2:False:6,16:17320,2012
+> 3:False:6,18:17320,2012
+> 4:False:7,20:17320,2012
+> 5:True:8,17:17320,2012
+> 7:False:8,19:17320,2012
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_2.tar.bz2:1.0098845958709717:0.1163028:1.009999999999991
+> 0:True:6,16:17320,2012
+> 1:True:7,17:17320,2012
+> 2:False:6,19:17320,2012
+> 3:False:6,19:17320,2012
+> 4:False:7,21:17320,2012
+> 5:True:8,18:17320,2012
+> 7:False:8,19:17320,2012
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-1_50_3.tar.bz2:1.0237722396850586:0.1202738:1.0199999999999818
+> 0:True:6,14:17320,2012
+> 1:False:7,18:17320,2012
+> 2:False:6,18:17320,2012
+> 3:False:6,19:17320,2012
+> 4:False:7,21:17320,2012
+> 5:False:8,18:17320,2012
+> 7:False:8,18:17320,2012
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_1.tar.bz2:1.03165602684021:0.1225885:1.0299999999999727
+> 0:True:6,16:17320,2012
+> 1:True:7,17:17320,2012
+> 2:False:6,19:17320,2012
+> 3:False:6,19:17320,2012
+> 4:False:7,19:17320,2012
+> 5:False:8,19:17320,2012
+> 7:True:8,18:17320,2012
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_2.tar.bz2:0.9980690479278564:0.12075420000000002:0.9900000000000091
+> 0:False:6,17:17319,2009
+> 1:True:7,17:17319,2009
+> 2:False:6,19:17319,2009
+> 3:False:6,20:17319,2009
+> 4:False:7,21:17319,2009
+> 5:False:8,20:17319,2009
+> 7:False:8,21:17319,2009
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-2_50_3.tar.bz2:1.0001249313354492:0.11853429999999998:1.0
+> 0:False:6,15:17319,2009
+> 1:True:7,14:17319,2009
+> 2:False:6,17:17319,2009
+> 3:False:6,18:17319,2009
+> 4:False:7,20:17319,2009
+> 5:False:8,17:17319,2009
+> 7:False:8,19:17319,2009
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_1.tar.bz2:1.00144624710083:0.1168934:1.0
+> 0:False:6,18:17321,2015
+> 1:False:7,19:17321,2015
+> 2:False:6,17:17321,2015
+> 3:False:6,20:17321,2015
+> 4:False:7,22:17321,2015
+> 5:True:8,18:17321,2015
+> 7:False:8,21:17321,2015
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_2.tar.bz2:1.0129499435424805:0.12277629999999998:1.0
+> 0:False:6,18:17321,2015
+> 1:False:7,19:17321,2015
+> 2:False:6,17:17321,2015
+> 3:False:6,18:17321,2015
+> 4:False:7,21:17321,2015
+> 5:True:8,18:17321,2015
+> 7:False:8,20:17321,2015
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-3_50_3.tar.bz2:1.0145747661590576:0.11874470000000001:1.009999999999991
+> 0:False:6,18:17321,2015
+> 1:False:7,18:17321,2015
+> 2:False:6,17:17321,2015
+> 3:False:6,18:17321,2015
+> 4:False:7,20:17321,2015
+> 5:True:8,17:17321,2015
+> 7:False:8,19:17321,2015
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_1.tar.bz2:1.0255560874938965:0.1225145:1.0300000000000864
+> 0:False:6,18:17321,2015
+> 1:False:7,18:17321,2015
+> 2:False:6,18:17321,2015
+> 3:False:6,16:17321,2015
+> 4:False:7,19:17321,2015
+> 5:True:8,17:17321,2015
+> 7:False:8,19:17321,2015
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_2.tar.bz2:1.0407133102416992:0.12649519999999997:1.0300000000000864
+> 0:False:6,19:17321,2015
+> 1:False:7,18:17321,2015
+> 2:False:6,17:17321,2015
+> 3:False:6,16:17321,2015
+> 4:False:7,20:17321,2015
+> 5:True:8,17:17321,2015
+> 7:False:8,20:17321,2015
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p02_hyp-4_50_3.tar.bz2:1.0005838871002197:0.11543919999999999:1.0
+> 0:False:6,18:17319,2009
+> 1:False:7,18:17319,2009
+> 2:False:6,17:17319,2009
+> 3:True:6,15:17319,2009
+> 4:False:7,17:17319,2009
+> 5:False:8,18:17319,2009
+> 7:False:8,19:17319,2009
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_1.tar.bz2:2.236773729324341:0.4626563:2.2399999999998954
+> 0:True:7,21:83542,5068
+> 1:False:6,21:83542,5068
+> 2:True:6,20:83542,5068
+> 3:False:6,21:83542,5068
+> 4:False:7,23:83542,5068
+> 5:False:6,21:83542,5068
+> 6:True:6,20:83542,5068
+> 7:True:7,21:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_2.tar.bz2:2.251779794692993:0.4694993:2.25
+> 0:True:7,18:83542,5068
+> 1:False:6,18:83542,5068
+> 2:False:6,20:83542,5068
+> 3:False:6,20:83542,5068
+> 4:False:7,23:83542,5068
+> 5:False:6,20:83542,5068
+> 6:False:6,20:83542,5068
+> 7:False:7,19:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-1_50_3.tar.bz2:2.21337890625:0.4651674:2.2100000000000364
+> 0:True:7,19:83541,5065
+> 1:False:6,19:83541,5065
+> 2:True:6,18:83541,5065
+> 3:True:6,18:83541,5065
+> 4:False:7,23:83541,5065
+> 5:False:6,21:83541,5065
+> 6:False:6,19:83541,5065
+> 7:False:7,20:83541,5065
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_1.tar.bz2:2.1881415843963623:0.45629079999999994:2.189999999999941
+> 0:False:7,18:83542,5068
+> 1:False:6,18:83542,5068
+> 2:False:6,19:83542,5068
+> 3:False:6,19:83542,5068
+> 4:False:7,22:83542,5068
+> 5:False:6,19:83542,5068
+> 6:False:6,18:83542,5068
+> 7:True:7,17:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_2.tar.bz2:2.1862995624542236:0.45378530000000006:2.1800000000000637
+> 0:True:7,18:83542,5068
+> 1:True:6,17:83542,5068
+> 2:False:6,19:83542,5068
+> 3:False:6,19:83542,5068
+> 4:False:7,23:83542,5068
+> 5:False:6,19:83542,5068
+> 6:False:6,20:83542,5068
+> 7:True:7,18:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-2_50_3.tar.bz2:2.154677629470825:0.457699:2.150000000000091
+> 0:True:7,17:83542,5068
+> 1:False:6,17:83542,5068
+> 2:False:6,17:83542,5068
+> 3:False:6,19:83542,5068
+> 4:False:7,21:83542,5068
+> 5:False:6,19:83542,5068
+> 6:False:6,19:83542,5068
+> 7:True:7,17:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_1.tar.bz2:2.120786428451538:0.44200939999999994:2.119999999999891
+> 0:False:7,19:83542,5068
+> 1:False:6,17:83542,5068
+> 2:False:6,17:83542,5068
+> 3:False:6,17:83542,5068
+> 4:False:7,21:83542,5068
+> 5:False:6,19:83542,5068
+> 6:True:6,16:83542,5068
+> 7:False:7,20:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_2.tar.bz2:2.147998571395874:0.44280669999999994:2.1499999999999773
+> 0:False:7,21:83544,5074
+> 1:False:6,18:83544,5074
+> 2:True:6,17:83544,5074
+> 3:False:6,19:83544,5074
+> 4:False:7,22:83544,5074
+> 5:False:6,21:83544,5074
+> 6:False:6,19:83544,5074
+> 7:False:7,21:83544,5074
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-3_50_3.tar.bz2:2.171661138534546:0.4620181:2.169999999999959
+> 0:False:7,21:83541,5065
+> 1:False:6,20:83541,5065
+> 2:True:6,18:83541,5065
+> 3:False:6,19:83541,5065
+> 4:False:7,23:83541,5065
+> 5:False:6,22:83541,5065
+> 6:False:6,19:83541,5065
+> 7:False:7,22:83541,5065
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_1.tar.bz2:2.149597644805908:0.45239880000000005:2.1399999999999864
+> 0:False:7,21:83541,5065
+> 1:False:6,19:83541,5065
+> 2:False:6,19:83541,5065
+> 3:True:6,17:83541,5065
+> 4:False:7,21:83541,5065
+> 5:False:6,18:83541,5065
+> 6:False:6,18:83541,5065
+> 7:False:7,21:83541,5065
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_2.tar.bz2:2.1429443359375:0.4488026:2.1400000000001
+> 0:False:7,22:83542,5068
+> 1:False:6,22:83542,5068
+> 2:False:6,20:83542,5068
+> 3:True:6,17:83542,5068
+> 4:False:7,23:83542,5068
+> 5:False:6,19:83542,5068
+> 6:False:6,19:83542,5068
+> 7:False:7,22:83542,5068
+sokoban-suboptimal-old-noisy/50/sokoban_noisy_p03_hyp-4_50_3.tar.bz2:2.1651864051818848:0.4440438:2.159999999999968
+> 0:False:7,23:83540,5062
+> 1:False:6,23:83540,5062
+> 2:False:6,23:83540,5062
+> 3:True:6,19:83540,5062
+> 4:False:7,25:83540,5062
+> 5:False:6,21:83540,5062
+> 6:False:6,20:83540,5062
+> 7:False:7,23:83540,5062
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_1.tar.bz2:5.187080144882202:1.2456360000000002:5.169999999999959
+> 0:True:6,26:249084,9053
+> 1:False:7,29:249084,9053
+> 2:False:9,30:249084,9053
+> 3:False:6,27:249084,9053
+> 4:False:7,32:249084,9053
+> 5:False:7,31:249084,9053
+> 6:False:7,31:249084,9053
+> 7:False:9,30:249084,9053
+> 8:False:6,28:249084,9053
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_2.tar.bz2:5.336239814758301:1.299193:5.340000000000032
+> 0:True:6,26:249083,9050
+> 1:False:7,29:249083,9050
+> 2:False:9,30:249083,9050
+> 3:False:6,27:249083,9050
+> 4:False:7,32:249083,9050
+> 5:False:7,31:249083,9050
+> 6:False:7,31:249083,9050
+> 7:False:9,30:249083,9050
+> 8:False:6,28:249083,9050
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-1_70_3.tar.bz2:5.309197664260864:1.254952:5.300000000000068
+> 0:True:6,27:249081,9044
+> 1:False:7,30:249081,9044
+> 2:False:9,31:249081,9044
+> 3:False:6,28:249081,9044
+> 4:False:7,33:249081,9044
+> 5:False:7,32:249081,9044
+> 6:False:7,31:249081,9044
+> 7:False:9,32:249081,9044
+> 8:False:6,29:249081,9044
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_1.tar.bz2:5.388703107833862:1.294889:5.379999999999882
+> 0:False:6,27:249082,9047
+> 1:True:7,27:249082,9047
+> 2:False:9,32:249082,9047
+> 3:False:6,30:249082,9047
+> 4:False:7,32:249082,9047
+> 5:False:7,31:249082,9047
+> 6:False:7,33:249082,9047
+> 7:False:9,32:249082,9047
+> 8:False:6,30:249082,9047
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_2.tar.bz2:5.226458311080933:1.247842:5.220000000000027
+> 0:False:6,29:249081,9044
+> 1:True:7,29:249081,9044
+> 2:False:9,32:249081,9044
+> 3:False:6,30:249081,9044
+> 4:False:7,32:249081,9044
+> 5:False:7,32:249081,9044
+> 6:False:7,32:249081,9044
+> 7:False:9,32:249081,9044
+> 8:False:6,30:249081,9044
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-2_70_3.tar.bz2:5.362360239028931:1.2757470000000002:5.310000000000173
+> 0:True:6,27:249081,9044
+> 1:True:7,28:249081,9044
+> 2:False:9,33:249081,9044
+> 3:False:6,31:249081,9044
+> 4:False:7,33:249081,9044
+> 5:False:7,32:249081,9044
+> 6:False:7,33:249081,9044
+> 7:False:9,33:249081,9044
+> 8:False:6,31:249081,9044
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_1.tar.bz2:5.292463779449463:1.2737599999999998:5.279999999999973
+> 0:False:6,31:249083,9050
+> 1:False:7,32:249083,9050
+> 2:True:9,30:249083,9050
+> 3:False:6,33:249083,9050
+> 4:False:7,36:249083,9050
+> 5:False:7,35:249083,9050
+> 6:False:7,35:249083,9050
+> 7:False:9,33:249083,9050
+> 8:False:6,33:249083,9050
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_2.tar.bz2:5.18866753578186:1.230999:5.179999999999836
+> 0:False:6,28:249084,9053
+> 1:False:7,27:249084,9053
+> 2:True:9,28:249084,9053
+> 3:False:6,30:249084,9053
+> 4:False:7,32:249084,9053
+> 5:False:7,32:249084,9053
+> 6:False:7,32:249084,9053
+> 7:False:9,31:249084,9053
+> 8:False:6,30:249084,9053
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-3_70_3.tar.bz2:5.296517610549927:1.2710880000000002:5.279999999999859
+> 0:False:6,29:249083,9050
+> 1:False:7,30:249083,9050
+> 2:True:9,28:249083,9050
+> 3:False:6,31:249083,9050
+> 4:False:7,34:249083,9050
+> 5:False:7,33:249083,9050
+> 6:False:7,33:249083,9050
+> 7:False:9,31:249083,9050
+> 8:False:6,30:249083,9050
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_1.tar.bz2:5.281545639038086:1.2529080000000001:5.269999999999982
+> 0:False:6,29:249084,9053
+> 1:False:7,32:249084,9053
+> 2:False:9,33:249084,9053
+> 3:True:6,27:249084,9053
+> 4:False:7,33:249084,9053
+> 5:False:7,33:249084,9053
+> 6:False:7,33:249084,9053
+> 7:False:9,33:249084,9053
+> 8:False:6,31:249084,9053
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_2.tar.bz2:5.296020746231079:1.29102:5.289999999999964
+> 0:False:6,31:249081,9044
+> 1:False:7,34:249081,9044
+> 2:False:9,34:249081,9044
+> 3:True:6,29:249081,9044
+> 4:False:7,36:249081,9044
+> 5:False:7,35:249081,9044
+> 6:False:7,35:249081,9044
+> 7:False:9,33:249081,9044
+> 8:False:6,33:249081,9044
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p01_hyp-4_70_3.tar.bz2:5.251233339309692:1.248163:5.240000000000009
+> 0:False:6,28:249083,9050
+> 1:False:7,32:249083,9050
+> 2:False:9,31:249083,9050
+> 3:True:6,27:249083,9050
+> 4:False:7,33:249083,9050
+> 5:False:7,32:249083,9050
+> 6:False:7,32:249083,9050
+> 7:False:9,32:249083,9050
+> 8:False:6,30:249083,9050
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_1.tar.bz2:1.0098421573638916:0.1140347:1.0
+> 0:True:6,19:17324,2024
+> 1:False:7,23:17324,2024
+> 2:False:6,20:17324,2024
+> 3:False:6,22:17324,2024
+> 4:False:7,23:17324,2024
+> 5:False:8,22:17324,2024
+> 7:False:8,23:17324,2024
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_2.tar.bz2:1.0151045322418213:0.11805759999999998:1.009999999999991
+> 0:True:6,18:17324,2024
+> 1:False:7,22:17324,2024
+> 2:False:6,20:17324,2024
+> 3:False:6,21:17324,2024
+> 4:False:7,23:17324,2024
+> 5:False:8,22:17324,2024
+> 7:False:8,22:17324,2024
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-1_70_3.tar.bz2:1.0179810523986816:0.12423599999999999:1.0100000000001046
+> 0:True:6,19:17325,2027
+> 1:False:7,22:17325,2027
+> 2:False:6,22:17325,2027
+> 3:False:6,23:17325,2027
+> 4:False:7,25:17325,2027
+> 5:False:8,22:17325,2027
+> 7:False:8,23:17325,2027
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_1.tar.bz2:1.0280258655548096:0.12119840000000001:1.029999999999859
+> 0:False:6,19:17323,2021
+> 1:True:7,19:17323,2021
+> 2:False:6,20:17323,2021
+> 3:False:6,20:17323,2021
+> 4:False:7,22:17323,2021
+> 5:True:8,20:17323,2021
+> 7:False:8,21:17323,2021
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_2.tar.bz2:1.001753807067871:0.12204559999999998:1.0
+> 0:False:6,18:17323,2021
+> 1:True:7,16:17323,2021
+> 2:False:6,21:17323,2021
+> 3:False:6,21:17323,2021
+> 4:False:7,22:17323,2021
+> 5:False:8,22:17323,2021
+> 7:False:8,21:17323,2021
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-2_70_3.tar.bz2:1.0235552787780762:0.12467220000000001:1.0199999999999818
+> 0:False:6,18:17324,2024
+> 1:True:7,17:17324,2024
+> 2:False:6,20:17324,2024
+> 3:False:6,19:17324,2024
+> 4:False:7,21:17324,2024
+> 5:False:8,20:17324,2024
+> 7:False:8,21:17324,2024
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_1.tar.bz2:1.014042854309082:0.1206132:1.0100000000002183
+> 0:True:6,19:17328,2036
+> 1:False:7,21:17328,2036
+> 2:True:6,19:17328,2036
+> 3:False:6,21:17328,2036
+> 4:False:7,23:17328,2036
+> 5:True:8,21:17328,2036
+> 7:False:8,22:17328,2036
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_2.tar.bz2:0.982689619064331:0.11659880000000002:0.9800000000000182
+> 0:False:6,20:17325,2027
+> 1:False:7,21:17325,2027
+> 2:True:6,19:17325,2027
+> 3:False:6,21:17325,2027
+> 4:False:7,23:17325,2027
+> 5:True:8,21:17325,2027
+> 7:False:8,22:17325,2027
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-3_70_3.tar.bz2:1.0133612155914307:0.1300667:1.009999999999991
+> 0:False:6,21:17326,2030
+> 1:False:7,21:17326,2030
+> 2:False:6,19:17326,2030
+> 3:False:6,20:17326,2030
+> 4:False:7,23:17326,2030
+> 5:True:8,20:17326,2030
+> 7:False:8,23:17326,2030
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_1.tar.bz2:0.9929063320159912:0.11785620000000001:0.9899999999998954
+> 0:False:6,21:17325,2027
+> 1:False:7,21:17325,2027
+> 2:False:6,21:17325,2027
+> 3:True:6,19:17325,2027
+> 4:False:7,22:17325,2027
+> 5:False:8,22:17325,2027
+> 7:False:8,23:17325,2027
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_2.tar.bz2:0.998908281326294:0.11802770000000001:0.9899999999998954
+> 0:False:6,21:17325,2027
+> 1:True:7,21:17325,2027
+> 2:False:6,21:17325,2027
+> 3:True:6,20:17325,2027
+> 4:False:7,24:17325,2027
+> 5:True:8,22:17325,2027
+> 7:False:8,23:17325,2027
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p02_hyp-4_70_3.tar.bz2:1.015183925628662:0.1266303:1.0199999999999818
+> 0:False:6,23:17323,2021
+> 1:False:7,23:17323,2021
+> 2:False:6,22:17323,2021
+> 3:True:6,20:17323,2021
+> 4:False:7,24:17323,2021
+> 5:True:8,22:17323,2021
+> 7:False:8,26:17323,2021
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_1.tar.bz2:2.190741539001465:0.46618859999999995:2.189999999999827
+> 0:True:7,21:83546,5080
+> 1:False:6,22:83546,5080
+> 2:False:6,22:83546,5080
+> 3:False:6,22:83546,5080
+> 4:False:7,26:83546,5080
+> 5:False:6,23:83546,5080
+> 6:False:6,23:83546,5080
+> 7:True:7,21:83546,5080
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_2.tar.bz2:2.1932170391082764:0.4750942:2.2000000000000455
+> 0:True:7,19:83548,5086
+> 1:False:6,21:83548,5086
+> 2:False:6,22:83548,5086
+> 3:False:6,21:83548,5086
+> 4:False:7,25:83548,5086
+> 5:False:6,22:83548,5086
+> 6:False:6,22:83548,5086
+> 7:False:7,21:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-1_70_3.tar.bz2:2.1728439331054688:0.46228389999999997:2.1700000000000728
+> 0:True:7,19:83547,5083
+> 1:False:6,20:83547,5083
+> 2:False:6,22:83547,5083
+> 3:False:6,21:83547,5083
+> 4:False:7,25:83547,5083
+> 5:False:6,23:83547,5083
+> 6:False:6,22:83547,5083
+> 7:False:7,20:83547,5083
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_1.tar.bz2:2.202214479446411:0.4670453:2.2099999999999227
+> 0:True:7,22:83548,5086
+> 1:True:6,21:83548,5086
+> 2:False:6,24:83548,5086
+> 3:False:6,24:83548,5086
+> 4:False:7,27:83548,5086
+> 5:False:6,23:83548,5086
+> 6:False:6,24:83548,5086
+> 7:False:7,23:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_2.tar.bz2:2.159980535507202:0.440985:2.1499999999999773
+> 0:True:7,22:83548,5086
+> 1:False:6,22:83548,5086
+> 2:False:6,24:83548,5086
+> 3:False:6,23:83548,5086
+> 4:False:7,28:83548,5086
+> 5:False:6,24:83548,5086
+> 6:False:6,22:83548,5086
+> 7:True:7,22:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-2_70_3.tar.bz2:2.150000810623169:0.4522333:2.160000000000082
+> 0:False:7,23:83548,5086
+> 1:False:6,22:83548,5086
+> 2:False:6,24:83548,5086
+> 3:False:6,24:83548,5086
+> 4:False:7,27:83548,5086
+> 5:False:6,23:83548,5086
+> 6:False:6,24:83548,5086
+> 7:True:7,22:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_1.tar.bz2:2.1266045570373535:0.4401923:2.1299999999999955
+> 0:False:7,24:83548,5086
+> 1:False:6,22:83548,5086
+> 2:True:6,20:83548,5086
+> 3:True:6,20:83548,5086
+> 4:False:7,24:83548,5086
+> 5:False:6,23:83548,5086
+> 6:True:6,20:83548,5086
+> 7:False:7,23:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_2.tar.bz2:2.1368393898010254:0.4462499999999999:2.1299999999999955
+> 0:False:7,23:83548,5086
+> 1:False:6,21:83548,5086
+> 2:False:6,21:83548,5086
+> 3:True:6,20:83548,5086
+> 4:False:7,24:83548,5086
+> 5:False:6,23:83548,5086
+> 6:True:6,20:83548,5086
+> 7:False:7,23:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-3_70_3.tar.bz2:2.177225112915039:0.45950599999999997:2.1700000000000728
+> 0:False:7,23:83550,5092
+> 1:False:6,21:83550,5092
+> 2:True:6,20:83550,5092
+> 3:True:6,20:83550,5092
+> 4:False:7,25:83550,5092
+> 5:False:6,23:83550,5092
+> 6:True:6,20:83550,5092
+> 7:False:7,24:83550,5092
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_1.tar.bz2:2.1890149116516113:0.45051040000000003:2.17999999999995
+> 0:False:7,23:83547,5083
+> 1:False:6,23:83547,5083
+> 2:False:6,22:83547,5083
+> 3:True:6,19:83547,5083
+> 4:False:7,25:83547,5083
+> 5:False:6,21:83547,5083
+> 6:False:6,20:83547,5083
+> 7:False:7,24:83547,5083
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_2.tar.bz2:2.2001171112060547:0.4592654:2.2000000000000455
+> 0:False:7,23:83548,5086
+> 1:False:6,22:83548,5086
+> 2:False:6,21:83548,5086
+> 3:True:6,18:83548,5086
+> 4:False:7,24:83548,5086
+> 5:False:6,20:83548,5086
+> 6:False:6,20:83548,5086
+> 7:False:7,23:83548,5086
+sokoban-suboptimal-old-noisy/70/sokoban_noisy_p03_hyp-4_70_3.tar.bz2:2.144277811050415:0.4503224:2.1299999999999955
+> 0:False:7,22:83548,5086
+> 1:False:6,22:83548,5086
+> 2:False:6,21:83548,5086
+> 3:True:6,19:83548,5086
+> 4:False:7,23:83548,5086
+> 5:False:6,20:83548,5086
+> 6:True:6,19:83548,5086
+> 7:False:7,22:83548,5086
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_1.tar.bz2:5.205140829086304:1.266889:5.190000000000055
+> 0:True:6,32:249092,9077
+> 1:False:7,35:249092,9077
+> 2:False:9,37:249092,9077
+> 3:False:6,34:249092,9077
+> 4:False:7,39:249092,9077
+> 5:False:7,38:249092,9077
+> 6:False:7,38:249092,9077
+> 7:False:9,38:249092,9077
+> 8:False:6,35:249092,9077
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_2.tar.bz2:5.2686989307403564:1.28445:5.269999999999982
+> 0:True:6,32:249091,9074
+> 1:False:7,35:249091,9074
+> 2:False:9,37:249091,9074
+> 3:False:6,34:249091,9074
+> 4:False:7,39:249091,9074
+> 5:False:7,38:249091,9074
+> 6:False:7,38:249091,9074
+> 7:False:9,38:249091,9074
+> 8:False:6,35:249091,9074
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-1_full_3.tar.bz2:5.268732070922852:1.273028:5.259999999999991
+> 0:True:6,32:249091,9074
+> 1:False:7,35:249091,9074
+> 2:False:9,37:249091,9074
+> 3:False:6,34:249091,9074
+> 4:False:7,38:249091,9074
+> 5:False:7,37:249091,9074
+> 6:False:7,38:249091,9074
+> 7:False:9,38:249091,9074
+> 8:False:6,35:249091,9074
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_1.tar.bz2:5.233726978302002:1.2574899999999998:5.230000000000018
+> 0:False:6,33:249092,9077
+> 1:True:7,32:249092,9077
+> 2:False:9,39:249092,9077
+> 3:False:6,37:249092,9077
+> 4:False:7,39:249092,9077
+> 5:False:7,38:249092,9077
+> 6:False:7,39:249092,9077
+> 7:False:9,39:249092,9077
+> 8:False:6,36:249092,9077
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_2.tar.bz2:5.2659828662872314:1.256495:5.259999999999991
+> 0:False:6,33:249092,9077
+> 1:True:7,32:249092,9077
+> 2:False:9,39:249092,9077
+> 3:False:6,37:249092,9077
+> 4:False:7,39:249092,9077
+> 5:False:7,38:249092,9077
+> 6:False:7,39:249092,9077
+> 7:False:9,39:249092,9077
+> 8:False:6,36:249092,9077
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-2_full_3.tar.bz2:5.256643533706665:1.259116:5.25
+> 0:False:6,34:249092,9077
+> 1:True:7,33:249092,9077
+> 2:False:9,39:249092,9077
+> 3:False:6,37:249092,9077
+> 4:False:7,39:249092,9077
+> 5:False:7,38:249092,9077
+> 6:False:7,39:249092,9077
+> 7:False:9,39:249092,9077
+> 8:False:6,37:249092,9077
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_1.tar.bz2:5.168084621429443:1.2342160000000002:5.150000000000091
+> 0:False:6,35:249092,9077
+> 1:False:7,36:249092,9077
+> 2:True:9,34:249092,9077
+> 3:False:6,36:249092,9077
+> 4:False:7,40:249092,9077
+> 5:False:7,39:249092,9077
+> 6:False:7,40:249092,9077
+> 7:False:9,38:249092,9077
+> 8:False:6,37:249092,9077
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_2.tar.bz2:5.402930021286011:1.28083:5.399999999999977
+> 0:False:6,35:249093,9080
+> 1:False:7,36:249093,9080
+> 2:True:9,33:249093,9080
+> 3:False:6,37:249093,9080
+> 4:False:7,40:249093,9080
+> 5:False:7,39:249093,9080
+> 6:False:7,40:249093,9080
+> 7:False:9,37:249093,9080
+> 8:False:6,36:249093,9080
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-3_full_3.tar.bz2:5.3045127391815186:1.2822900000000002:5.2999999999999545
+> 0:False:6,34:249093,9080
+> 1:False:7,37:249093,9080
+> 2:True:9,34:249093,9080
+> 3:False:6,37:249093,9080
+> 4:False:7,40:249093,9080
+> 5:False:7,39:249093,9080
+> 6:False:7,40:249093,9080
+> 7:False:9,38:249093,9080
+> 8:False:6,37:249093,9080
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_1.tar.bz2:5.293224573135376:1.2690029999999999:5.289999999999964
+> 0:False:6,35:249091,9074
+> 1:False:7,39:249091,9074
+> 2:False:9,39:249091,9074
+> 3:True:6,34:249091,9074
+> 4:False:7,40:249091,9074
+> 5:False:7,39:249091,9074
+> 6:False:7,39:249091,9074
+> 7:False:9,40:249091,9074
+> 8:False:6,37:249091,9074
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_2.tar.bz2:5.397655487060547:1.284415:5.389999999999873
+> 0:False:6,35:249091,9074
+> 1:False:7,39:249091,9074
+> 2:False:9,38:249091,9074
+> 3:True:6,33:249091,9074
+> 4:False:7,40:249091,9074
+> 5:False:7,39:249091,9074
+> 6:False:7,39:249091,9074
+> 7:False:9,40:249091,9074
+> 8:False:6,37:249091,9074
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p01_hyp-4_full_3.tar.bz2:5.316250801086426:1.267942:5.300000000000182
+> 0:False:6,36:249091,9074
+> 1:False:7,39:249091,9074
+> 2:False:9,39:249091,9074
+> 3:True:6,34:249091,9074
+> 4:False:7,40:249091,9074
+> 5:False:7,39:249091,9074
+> 6:False:7,39:249091,9074
+> 7:False:9,40:249091,9074
+> 8:False:6,37:249091,9074
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_1.tar.bz2:0.9952080249786377:0.1175368:0.9900000000000091
+> 0:True:6,21:17328,2036
+> 1:False:7,25:17328,2036
+> 2:False:6,25:17328,2036
+> 3:False:6,26:17328,2036
+> 4:False:7,28:17328,2036
+> 5:False:8,26:17328,2036
+> 7:False:8,25:17328,2036
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_2.tar.bz2:1.0035724639892578:0.12100999999999999:1.009999999999991
+> 0:True:6,22:17330,2042
+> 1:False:7,24:17330,2042
+> 2:False:6,25:17330,2042
+> 3:False:6,26:17330,2042
+> 4:False:7,28:17330,2042
+> 5:False:8,25:17330,2042
+> 7:False:8,26:17330,2042
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-1_full_3.tar.bz2:1.015333890914917:0.12330650000000001:1.0099999999998772
+> 0:True:6,22:17329,2039
+> 1:False:7,25:17329,2039
+> 2:False:6,25:17329,2039
+> 3:False:6,26:17329,2039
+> 4:False:7,28:17329,2039
+> 5:False:8,26:17329,2039
+> 7:False:8,25:17329,2039
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_1.tar.bz2:1.0271806716918945:0.1230831:1.0200000000000955
+> 0:False:6,22:17331,2045
+> 1:True:7,20:17331,2045
+> 2:False:6,26:17331,2045
+> 3:False:6,25:17331,2045
+> 4:False:7,27:17331,2045
+> 5:False:8,25:17331,2045
+> 7:False:8,26:17331,2045
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_2.tar.bz2:1.0116381645202637:0.11871870000000001:1.0
+> 0:False:6,23:17329,2039
+> 1:True:7,21:17329,2039
+> 2:False:6,26:17329,2039
+> 3:False:6,26:17329,2039
+> 4:False:7,27:17329,2039
+> 5:False:8,26:17329,2039
+> 7:False:8,26:17329,2039
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-2_full_3.tar.bz2:1.019880771636963:0.1262628:1.0199999999999818
+> 0:False:6,22:17331,2045
+> 1:True:7,21:17331,2045
+> 2:False:6,25:17331,2045
+> 3:False:6,25:17331,2045
+> 4:False:7,27:17331,2045
+> 5:False:8,24:17331,2045
+> 7:False:8,26:17331,2045
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_1.tar.bz2:1.0098776817321777:0.1249882:1.0
+> 0:False:6,25:17332,2048
+> 1:False:7,26:17332,2048
+> 2:True:6,23:17332,2048
+> 3:False:6,25:17332,2048
+> 4:False:7,27:17332,2048
+> 5:True:8,25:17332,2048
+> 7:False:8,27:17332,2048
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_2.tar.bz2:1.009596824645996:0.1258622:1.009999999999991
+> 0:False:6,25:17330,2042
+> 1:False:7,25:17330,2042
+> 2:True:6,23:17330,2042
+> 3:False:6,26:17330,2042
+> 4:False:7,28:17330,2042
+> 5:True:8,25:17330,2042
+> 7:False:8,28:17330,2042
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-3_full_3.tar.bz2:1.0232124328613281:0.1252155:1.0200000000000955
+> 0:False:6,25:17331,2045
+> 1:False:7,26:17331,2045
+> 2:False:6,23:17331,2045
+> 3:False:6,25:17331,2045
+> 4:False:7,27:17331,2045
+> 5:True:8,24:17331,2045
+> 7:False:8,27:17331,2045
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_1.tar.bz2:1.000211238861084:0.12068139999999998:1.0
+> 0:False:6,25:17331,2045
+> 1:False:7,25:17331,2045
+> 2:False:6,23:17331,2045
+> 3:True:6,21:17331,2045
+> 4:False:7,26:17331,2045
+> 5:False:8,24:17331,2045
+> 7:False:8,28:17331,2045
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_2.tar.bz2:1.0214557647705078:0.1204539:1.0099999999998772
+> 0:False:6,25:17329,2039
+> 1:False:7,25:17329,2039
+> 2:False:6,24:17329,2039
+> 3:True:6,22:17329,2039
+> 4:False:7,26:17329,2039
+> 5:True:8,24:17329,2039
+> 7:False:8,28:17329,2039
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p02_hyp-4_full_3.tar.bz2:1.0230543613433838:0.11906850000000001:1.0300000000000864
+> 0:False:6,25:17329,2039
+> 1:False:7,25:17329,2039
+> 2:False:6,24:17329,2039
+> 3:True:6,21:17329,2039
+> 4:False:7,26:17329,2039
+> 5:False:8,25:17329,2039
+> 7:False:8,28:17329,2039
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_1.tar.bz2:2.2021799087524414:0.44654590000000005:2.199999999999932
+> 0:True:7,24:83554,5104
+> 1:False:6,26:83554,5104
+> 2:False:6,27:83554,5104
+> 3:False:6,26:83554,5104
+> 4:False:7,30:83554,5104
+> 5:False:6,28:83554,5104
+> 6:False:6,28:83554,5104
+> 7:False:7,26:83554,5104
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_2.tar.bz2:2.216465711593628:0.4542729999999999:2.2100000000000364
+> 0:True:7,24:83554,5104
+> 1:False:6,26:83554,5104
+> 2:False:6,27:83554,5104
+> 3:False:6,26:83554,5104
+> 4:False:7,30:83554,5104
+> 5:False:6,28:83554,5104
+> 6:False:6,27:83554,5104
+> 7:False:7,26:83554,5104
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-1_full_3.tar.bz2:2.17149019241333:0.43784959999999995:2.1800000000000637
+> 0:True:7,23:83552,5098
+> 1:False:6,25:83552,5098
+> 2:False:6,27:83552,5098
+> 3:False:6,26:83552,5098
+> 4:False:7,30:83552,5098
+> 5:False:6,27:83552,5098
+> 6:False:6,27:83552,5098
+> 7:False:7,25:83552,5098
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_1.tar.bz2:2.2330429553985596:0.44611:2.2100000000000364
+> 0:True:7,25:83554,5104
+> 1:True:6,24:83554,5104
+> 2:False:6,28:83554,5104
+> 3:False:6,28:83554,5104
+> 4:False:7,31:83554,5104
+> 5:False:6,26:83554,5104
+> 6:False:6,28:83554,5104
+> 7:False:7,26:83554,5104
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_2.tar.bz2:2.2514801025390625:0.4619317:2.240000000000009
+> 0:True:7,26:83554,5104
+> 1:True:6,25:83554,5104
+> 2:False:6,28:83554,5104
+> 3:False:6,28:83554,5104
+> 4:False:7,31:83554,5104
+> 5:False:6,27:83554,5104
+> 6:False:6,28:83554,5104
+> 7:False:7,27:83554,5104
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-2_full_3.tar.bz2:2.2390859127044678:0.4572508:2.240000000000009
+> 0:True:7,25:83555,5107
+> 1:True:6,24:83555,5107
+> 2:False:6,28:83555,5107
+> 3:False:6,28:83555,5107
+> 4:False:7,30:83555,5107
+> 5:False:6,26:83555,5107
+> 6:False:6,28:83555,5107
+> 7:False:7,26:83555,5107
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_1.tar.bz2:2.2138924598693848:0.4478301:2.2100000000000364
+> 0:False:7,29:83555,5107
+> 1:False:6,27:83555,5107
+> 2:True:6,25:83555,5107
+> 3:False:6,26:83555,5107
+> 4:False:7,31:83555,5107
+> 5:False:6,29:83555,5107
+> 6:False:6,26:83555,5107
+> 7:False:7,30:83555,5107
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_2.tar.bz2:2.235590696334839:0.44918779999999997:2.230000000000018
+> 0:False:7,29:83554,5104
+> 1:False:6,27:83554,5104
+> 2:True:6,24:83554,5104
+> 3:False:6,26:83554,5104
+> 4:False:7,31:83554,5104
+> 5:False:6,29:83554,5104
+> 6:False:6,26:83554,5104
+> 7:False:7,30:83554,5104
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-3_full_3.tar.bz2:2.2200918197631836:0.45369449999999995:2.2199999999999136
+> 0:False:7,29:83555,5107
+> 1:False:6,27:83555,5107
+> 2:True:6,24:83555,5107
+> 3:False:6,26:83555,5107
+> 4:False:7,31:83555,5107
+> 5:False:6,29:83555,5107
+> 6:False:6,26:83555,5107
+> 7:False:7,30:83555,5107
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_1.tar.bz2:2.223439931869507:0.4560803:2.2099999999999227
+> 0:False:7,29:83551,5095
+> 1:False:6,29:83551,5095
+> 2:False:6,28:83551,5095
+> 3:True:6,23:83551,5095
+> 4:False:7,30:83551,5095
+> 5:False:6,26:83551,5095
+> 6:False:6,26:83551,5095
+> 7:False:7,29:83551,5095
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_2.tar.bz2:2.2203304767608643:0.4501764:2.21000000000015
+> 0:False:7,29:83553,5101
+> 1:False:6,29:83553,5101
+> 2:False:6,28:83553,5101
+> 3:True:6,23:83553,5101
+> 4:False:7,30:83553,5101
+> 5:False:6,26:83553,5101
+> 6:False:6,26:83553,5101
+> 7:False:7,28:83553,5101
+sokoban-suboptimal-old-noisy/100/sokoban_noisy_p03_hyp-4_full_3.tar.bz2:2.164961099624634:0.44457640000000004:2.169999999999959
+> 0:False:7,29:83554,5104
+> 1:False:6,29:83554,5104
+> 2:False:6,27:83554,5104
+> 3:True:6,23:83554,5104
+> 4:False:7,30:83554,5104
+> 5:False:6,26:83554,5104
+> 6:False:6,26:83554,5104
+> 7:False:7,29:83554,5104

@@ -1,180 +1,1980 @@
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_1.tar.bz2:0.841217041015625:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_2.tar.bz2:0.8247733116149902:0.0:0.8299999999999841
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_3.tar.bz2:0.8496170043945312:0.0:0.8499999999999659
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_1.tar.bz2:0.8559074401855469:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_2.tar.bz2:0.838756799697876:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_3.tar.bz2:0.8221433162689209:0.0:0.8199999999999363
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_1.tar.bz2:0.8497471809387207:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_2.tar.bz2:0.8394064903259277:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_3.tar.bz2:0.8366622924804688:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_1.tar.bz2:0.8570847511291504:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_2.tar.bz2:0.8502261638641357:0.0:0.8499999999999659
-logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_3.tar.bz2:0.8402860164642334:0.0:0.8499999999999659
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_1.tar.bz2:0.8353531360626221:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_2.tar.bz2:0.8630280494689941:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_3.tar.bz2:0.8453927040100098:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_1.tar.bz2:0.8408358097076416:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_2.tar.bz2:0.8570728302001953:0.0:0.8499999999999659
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_3.tar.bz2:0.8721022605895996:0.0:0.8700000000000614
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_1.tar.bz2:0.8381359577178955:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_2.tar.bz2:0.8598923683166504:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_3.tar.bz2:0.8399326801300049:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_1.tar.bz2:0.8389101028442383:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_2.tar.bz2:0.867100715637207:0.0:0.8700000000000614
-logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_3.tar.bz2:0.8814663887023926:0.0:0.8899999999999295
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_1.tar.bz2:0.8668792247772217:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_2.tar.bz2:0.8591477870941162:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_3.tar.bz2:0.8600554466247559:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_1.tar.bz2:0.8639509677886963:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_2.tar.bz2:0.864159107208252:0.0:0.8599999999999568
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_3.tar.bz2:0.8683099746704102:0.0:0.8700000000000614
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_1.tar.bz2:0.8348627090454102:0.0:0.8299999999999841
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_2.tar.bz2:0.8506016731262207:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_3.tar.bz2:0.8646748065948486:0.0:0.8599999999999568
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_1.tar.bz2:0.8571345806121826:0.0:0.8499999999999659
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_2.tar.bz2:0.8595139980316162:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_3.tar.bz2:0.8579514026641846:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_1.tar.bz2:0.8441786766052246:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_2.tar.bz2:0.8352775573730469:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_3.tar.bz2:0.8520216941833496:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_1.tar.bz2:0.8373672962188721:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_2.tar.bz2:0.8413374423980713:0.0:0.839999999999975
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_3.tar.bz2:0.822843074798584:0.0:0.8299999999999841
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_1.tar.bz2:0.8467533588409424:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_2.tar.bz2:0.8310818672180176:0.0:0.8299999999999841
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_3.tar.bz2:0.8833305835723877:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_1.tar.bz2:0.8714337348937988:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_2.tar.bz2:0.8203842639923096:0.0:0.8199999999999932
-logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_3.tar.bz2:0.8290669918060303:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_1.tar.bz2:0.8462338447570801:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_2.tar.bz2:0.8626947402954102:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_3.tar.bz2:0.8279125690460205:0.0:0.8199999999999932
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_1.tar.bz2:0.874459981918335:0.0:0.8699999999999477
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_2.tar.bz2:0.8608810901641846:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_3.tar.bz2:0.8814873695373535:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_1.tar.bz2:0.8426296710968018:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_2.tar.bz2:0.8614532947540283:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_3.tar.bz2:0.8410758972167969:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_1.tar.bz2:0.8226902484893799:0.0:0.82000000000005
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_2.tar.bz2:0.8182945251464844:0.0:0.8199999999999363
-logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_3.tar.bz2:0.8353214263916016:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_1.tar.bz2:0.8379251956939697:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_2.tar.bz2:0.8760204315185547:0.0:0.8800000000001091
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_3.tar.bz2:0.8772897720336914:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_1.tar.bz2:0.8665652275085449:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_2.tar.bz2:0.8470859527587891:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_3.tar.bz2:0.8505349159240723:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_1.tar.bz2:0.8628063201904297:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_2.tar.bz2:0.8367919921875:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_3.tar.bz2:0.8738138675689697:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_1.tar.bz2:0.8575177192687988:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_2.tar.bz2:0.8510684967041016:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_3.tar.bz2:0.8693990707397461:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_1.tar.bz2:0.8367786407470703:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_2.tar.bz2:0.8616032600402832:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_3.tar.bz2:0.8676261901855469:0.0:0.8700000000001182
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_1.tar.bz2:0.8374078273773193:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_2.tar.bz2:0.8674273490905762:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_3.tar.bz2:0.8519172668457031:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_1.tar.bz2:0.860400915145874:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_2.tar.bz2:0.8277432918548584:0.0:0.82000000000005
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_3.tar.bz2:0.8539407253265381:0.0:0.8599999999999
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_1.tar.bz2:0.8441367149353027:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_2.tar.bz2:0.8560745716094971:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_3.tar.bz2:0.843048095703125:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_1.tar.bz2:0.8677778244018555:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_2.tar.bz2:0.8538546562194824:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_3.tar.bz2:0.8372881412506104:0.0:0.8299999999999272
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_1.tar.bz2:0.8337345123291016:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_2.tar.bz2:0.8547704219818115:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_3.tar.bz2:0.8509111404418945:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_1.tar.bz2:0.8171799182891846:0.0:0.82000000000005
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_2.tar.bz2:0.8414266109466553:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_3.tar.bz2:0.8382542133331299:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_1.tar.bz2:0.839108943939209:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_2.tar.bz2:0.8468008041381836:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_3.tar.bz2:0.8573729991912842:0.0:0.849999999999909
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_1.tar.bz2:0.8757929801940918:0.0:0.8800000000001091
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_2.tar.bz2:0.8680500984191895:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_3.tar.bz2:0.8468239307403564:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_1.tar.bz2:0.8805058002471924:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_2.tar.bz2:0.8747091293334961:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_3.tar.bz2:0.8658769130706787:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_1.tar.bz2:0.8488705158233643:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_2.tar.bz2:0.9053785800933838:0.0:0.8999999999999773
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_3.tar.bz2:0.8650290966033936:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_1.tar.bz2:0.8273820877075195:0.0:0.8299999999999272
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_2.tar.bz2:0.8591902256011963:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_3.tar.bz2:0.8590049743652344:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_1.tar.bz2:0.8640265464782715:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_2.tar.bz2:0.8198418617248535:0.0:0.8299999999999272
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_3.tar.bz2:0.8281006813049316:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_1.tar.bz2:0.8536286354064941:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_2.tar.bz2:0.8629093170166016:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_3.tar.bz2:0.8528244495391846:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_1.tar.bz2:0.8616251945495605:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_2.tar.bz2:0.8313829898834229:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_3.tar.bz2:0.871840238571167:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_1.tar.bz2:0.8342511653900146:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_2.tar.bz2:0.8171513080596924:0.0:0.82000000000005
-logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_3.tar.bz2:0.8388314247131348:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_1.tar.bz2:0.8481321334838867:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_2.tar.bz2:0.845705509185791:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_3.tar.bz2:0.81978440284729:0.0:0.82000000000005
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_1.tar.bz2:0.8660964965820312:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_2.tar.bz2:0.8160247802734375:0.0:0.8099999999999454
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_3.tar.bz2:0.8719296455383301:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_1.tar.bz2:0.8367698192596436:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_2.tar.bz2:0.8358244895935059:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_3.tar.bz2:0.8295683860778809:0.0:0.8300000000000409
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_1.tar.bz2:0.8461740016937256:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_2.tar.bz2:0.8512234687805176:0.0:0.849999999999909
-logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_3.tar.bz2:0.8467445373535156:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_1.tar.bz2:0.8571474552154541:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_2.tar.bz2:0.8640780448913574:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_3.tar.bz2:0.8687233924865723:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_1.tar.bz2:0.8776390552520752:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_2.tar.bz2:0.8475196361541748:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_3.tar.bz2:0.8823084831237793:0.0:0.8899999999998727
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_1.tar.bz2:0.8778009414672852:0.0:0.8800000000001091
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_2.tar.bz2:0.8759236335754395:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_3.tar.bz2:0.8772578239440918:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_1.tar.bz2:0.8748703002929688:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_2.tar.bz2:0.8871169090270996:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_3.tar.bz2:0.8848011493682861:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_1.tar.bz2:0.8686196804046631:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_2.tar.bz2:0.8824729919433594:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_3.tar.bz2:0.8693463802337646:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_1.tar.bz2:0.8507497310638428:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_2.tar.bz2:0.8574855327606201:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_3.tar.bz2:0.8756062984466553:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_1.tar.bz2:0.8600690364837646:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_2.tar.bz2:0.879464864730835:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_3.tar.bz2:0.8816068172454834:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_1.tar.bz2:0.8479580879211426:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_2.tar.bz2:0.8568646907806396:0.0:0.8500000000000227
-logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_3.tar.bz2:0.866307258605957:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_1.tar.bz2:0.8300559520721436:0.0:0.8299999999999272
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_2.tar.bz2:0.8512084484100342:0.0:0.8399999999999181
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_3.tar.bz2:0.8433940410614014:0.0:0.8400000000000318
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_1.tar.bz2:0.8646275997161865:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_2.tar.bz2:0.8813309669494629:0.0:0.8800000000001091
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_3.tar.bz2:0.8689801692962646:0.0:0.8699999999998909
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_1.tar.bz2:0.8751120567321777:0.0:0.8800000000001091
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_2.tar.bz2:0.8766777515411377:0.0:0.8599999999999
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_3.tar.bz2:0.8542215824127197:0.0:0.849999999999909
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_1.tar.bz2:0.865868330001831:0.0:0.8600000000000136
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_2.tar.bz2:0.8659520149230957:0.0:0.8700000000001182
-logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_3.tar.bz2:0.8753371238708496:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_1.tar.bz2:0.8772411346435547:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_2.tar.bz2:0.887589693069458:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_3.tar.bz2:0.8864386081695557:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_1.tar.bz2:0.8860487937927246:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_2.tar.bz2:0.8678843975067139:0.0:0.8700000000000045
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_3.tar.bz2:0.8886873722076416:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_1.tar.bz2:0.8908417224884033:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_2.tar.bz2:0.8998446464538574:0.0:0.900000000000091
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_3.tar.bz2:0.8930881023406982:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_1.tar.bz2:0.8882746696472168:0.0:0.8899999999999864
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_2.tar.bz2:0.8762857913970947:0.0:0.8799999999999955
-logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_3.tar.bz2:0.9051513671875:0.0:0.8999999999999773
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_1.tar.bz2:1.516507625579834:0.5189701:1.5199999999999818
+> 0:True:10,15:13168,1068,0
+> 1:False:10,17:13168,1068,0
+> 2:False:10,17:13168,1068,0
+> 3:False:10,17:13168,1068,0
+> 4:True:10,15:13168,1068,0
+> 5:False:10,17:13168,1068,0
+> 6:False:10,17:13168,1068,0
+> 7:True:10,15:13168,1068,0
+> 8:False:10,17:13168,1068,0
+> 9:False:10,17:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_2.tar.bz2:1.4214801788330078:0.3860071:1.4300000000000637
+> 0:True:10,11:13167,1065,0
+> 1:False:10,20:13167,1065,0
+> 2:False:10,18:13167,1065,0
+> 3:False:10,15:13167,1065,0
+> 4:False:10,15:13167,1065,0
+> 5:False:10,18:13167,1065,0
+> 6:False:10,16:13167,1065,0
+> 7:False:10,15:13167,1065,0
+> 8:False:10,15:13167,1065,0
+> 9:False:10,14:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-1_10_3.tar.bz2:1.4901623725891113:0.4816653000000001:1.490000000000009
+> 0:False:10,15:13168,1068,0
+> 1:False:10,16:13168,1068,0
+> 2:False:10,16:13168,1068,0
+> 3:False:10,15:13168,1068,0
+> 4:False:10,17:13168,1068,0
+> 5:False:10,15:13168,1068,0
+> 6:False:10,15:13168,1068,0
+> 7:False:10,16:13168,1068,0
+> 8:True:10,14:13168,1068,0
+> 9:True:10,14:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_1.tar.bz2:1.4724621772766113:0.4370532:1.4700000000000273
+> 0:False:10,16:13167,1065,0
+> 1:True:10,12:13167,1065,0
+> 2:True:10,12:13167,1065,0
+> 3:False:10,16:13167,1065,0
+> 4:False:10,13:13167,1065,0
+> 5:False:10,16:13167,1065,0
+> 6:False:10,17:13167,1065,0
+> 7:False:10,16:13167,1065,0
+> 8:False:10,16:13167,1065,0
+> 9:False:10,16:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_2.tar.bz2:1.4757442474365234:0.4559413:1.4699999999999136
+> 0:False:10,18:13168,1068,0
+> 1:True:10,14:13168,1068,0
+> 2:False:10,15:13168,1068,0
+> 3:False:10,18:13168,1068,0
+> 4:False:10,16:13168,1068,0
+> 5:False:10,18:13168,1068,0
+> 6:False:10,18:13168,1068,0
+> 7:False:10,18:13168,1068,0
+> 8:False:10,18:13168,1068,0
+> 9:False:10,18:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-2_10_3.tar.bz2:1.5050938129425049:0.49327980000000005:1.509999999999991
+> 0:False:10,17:13168,1068,0
+> 1:True:10,14:13168,1068,0
+> 2:False:10,17:13168,1068,0
+> 3:False:10,16:13168,1068,0
+> 4:False:10,17:13168,1068,0
+> 5:False:10,16:13168,1068,0
+> 6:True:10,14:13168,1068,0
+> 7:False:10,16:13168,1068,0
+> 8:False:10,16:13168,1068,0
+> 9:False:10,16:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_1.tar.bz2:1.459115982055664:0.4237736:1.4500000000001592
+> 0:True:10,15:13168,1068,0
+> 1:True:10,15:13168,1068,0
+> 2:True:10,15:13168,1068,0
+> 3:True:10,15:13168,1068,0
+> 4:False:10,16:13168,1068,0
+> 5:True:10,15:13168,1068,0
+> 6:False:10,16:13168,1068,0
+> 7:True:10,15:13168,1068,0
+> 8:True:10,15:13168,1068,0
+> 9:True:10,15:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_2.tar.bz2:1.4253616333007812:0.4122757:1.419999999999959
+> 0:False:10,18:13167,1065,0
+> 1:False:10,19:13167,1065,0
+> 2:True:10,13:13167,1065,0
+> 3:False:10,14:13167,1065,0
+> 4:False:10,18:13167,1065,0
+> 5:True:10,13:13167,1065,0
+> 6:False:10,19:13167,1065,0
+> 7:False:10,18:13167,1065,0
+> 8:False:10,14:13167,1065,0
+> 9:True:10,13:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-3_10_3.tar.bz2:1.4642925262451172:0.4306924:1.4700000000000273
+> 0:False:10,18:13167,1065,0
+> 1:False:10,18:13167,1065,0
+> 2:False:10,14:13167,1065,0
+> 3:True:10,13:13167,1065,0
+> 4:False:10,19:13167,1065,0
+> 5:True:10,13:13167,1065,0
+> 6:False:10,19:13167,1065,0
+> 7:False:10,17:13167,1065,0
+> 8:False:10,14:13167,1065,0
+> 9:True:10,13:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_1.tar.bz2:1.4251484870910645:0.4228761:1.4099999999999682
+> 0:False:10,15:13167,1065,0
+> 1:False:10,18:13167,1065,0
+> 2:False:10,19:13167,1065,0
+> 3:True:10,14:13167,1065,0
+> 4:False:10,20:13167,1065,0
+> 5:False:10,18:13167,1065,0
+> 6:False:10,15:13167,1065,0
+> 7:False:10,18:13167,1065,0
+> 8:True:10,14:13167,1065,0
+> 9:True:10,14:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_2.tar.bz2:1.4514572620391846:0.432013:1.4599999999999227
+> 0:False:10,16:13168,1068,0
+> 1:True:10,15:13168,1068,0
+> 2:False:10,16:13168,1068,0
+> 3:True:10,15:13168,1068,0
+> 4:False:10,16:13168,1068,0
+> 5:True:10,15:13168,1068,0
+> 6:True:10,15:13168,1068,0
+> 7:True:10,15:13168,1068,0
+> 8:True:10,15:13168,1068,0
+> 9:True:10,15:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p01_hyp-4_10_3.tar.bz2:1.4116907119750977:0.3810089:1.4100000000000819
+> 0:True:10,14:13167,1065,0
+> 1:True:10,14:13167,1065,0
+> 2:True:10,14:13167,1065,0
+> 3:True:10,14:13167,1065,0
+> 4:False:10,15:13167,1065,0
+> 5:True:10,14:13167,1065,0
+> 6:False:10,15:13167,1065,0
+> 7:True:10,14:13167,1065,0
+> 8:True:10,14:13167,1065,0
+> 9:True:10,14:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_1.tar.bz2:1.3971896171569824:0.37675519999999996:1.3899999999999864
+> 0:False:10,15:13167,1065,0
+> 1:False:10,13:13167,1065,0
+> 2:False:10,16:13167,1065,1
+> 3:False:10,16:13167,1065,1
+> 4:False:10,16:13167,1065,1
+> 5:False:10,15:13167,1065,0
+> 6:False:10,16:13167,1065,1
+> 7:True:10,12:13167,1065,0
+> 8:False:10,16:13167,1065,1
+> 9:False:10,15:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_2.tar.bz2:1.4499382972717285:0.4253119000000001:1.4399999999999409
+> 0:False:10,15:13168,1068,0
+> 1:True:10,13:13168,1068,0
+> 2:False:10,18:13168,1068,0
+> 3:True:10,13:13168,1068,0
+> 4:False:10,18:13168,1068,0
+> 5:True:10,13:13168,1068,0
+> 6:False:10,18:13168,1068,0
+> 7:False:10,15:13168,1068,0
+> 8:False:10,15:13168,1068,0
+> 9:False:10,17:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-1_10_3.tar.bz2:1.4747190475463867:0.42903909999999995:1.470000000000141
+> 0:False:10,16:13167,1065,0
+> 1:True:10,11:13167,1065,0
+> 2:False:10,21:13167,1065,0
+> 3:False:10,16:13167,1065,0
+> 4:False:10,20:13167,1065,0
+> 5:False:10,15:13167,1065,0
+> 6:False:10,20:13167,1065,0
+> 7:False:10,12:13167,1065,0
+> 8:False:10,16:13167,1065,0
+> 9:False:10,19:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_1.tar.bz2:1.4055359363555908:0.3989386:1.4099999999999682
+> 0:True:10,12:13167,1065,0
+> 1:False:10,17:13167,1065,0
+> 2:False:10,17:13167,1065,0
+> 3:False:10,17:13167,1065,0
+> 4:False:10,21:13167,1065,0
+> 5:True:10,12:13167,1065,0
+> 6:False:10,21:13167,1065,0
+> 7:False:10,16:13167,1065,0
+> 8:False:10,17:13167,1065,0
+> 9:False:10,16:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_2.tar.bz2:1.3878192901611328:0.38043180000000004:1.3799999999999955
+> 0:True:10,14:13167,1065,0
+> 1:False:10,15:13167,1065,0
+> 2:False:10,18:13167,1065,0
+> 3:False:10,15:13167,1065,0
+> 4:False:10,19:13167,1065,0
+> 5:False:10,15:13167,1065,0
+> 6:False:10,18:13167,1065,0
+> 7:True:10,14:13167,1065,0
+> 8:True:10,14:13167,1065,0
+> 9:False:10,18:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-2_10_3.tar.bz2:1.4959280490875244:0.4888846:1.5
+> 0:False:10,14:13168,1068,0
+> 1:True:10,13:13168,1068,0
+> 2:False:10,17:13168,1068,0
+> 3:False:10,14:13168,1068,0
+> 4:False:10,15:13168,1068,0
+> 5:True:10,13:13168,1068,0
+> 6:False:10,16:13168,1068,0
+> 7:False:10,14:13168,1068,0
+> 8:False:10,14:13168,1068,0
+> 9:False:10,15:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_1.tar.bz2:1.3926212787628174:0.3762945:1.3899999999999864
+> 0:False:10,17:13167,1065,0
+> 1:False:10,17:13167,1065,0
+> 2:True:10,13:13167,1065,0
+> 3:False:10,17:13167,1065,0
+> 4:False:10,17:13167,1065,0
+> 5:False:10,17:13167,1065,0
+> 6:False:10,17:13167,1065,0
+> 7:False:10,17:13167,1065,0
+> 8:False:10,17:13167,1065,0
+> 9:True:10,13:13167,1065,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_2.tar.bz2:1.4330544471740723:0.4177658:1.4399999999999409
+> 0:False:10,12:13168,1068,0
+> 1:False:10,13:13168,1068,0
+> 2:False:10,12:13168,1068,0
+> 3:False:10,12:13168,1068,0
+> 4:False:10,17:13168,1068,0
+> 5:True:10,11:13168,1068,0
+> 6:False:10,17:13168,1068,0
+> 7:False:10,13:13168,1068,0
+> 8:False:10,14:13168,1068,0
+> 9:False:10,12:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-3_10_3.tar.bz2:1.4161288738250732:0.4146333:1.4099999999999682
+> 0:False:10,12:13168,1068,0
+> 1:False:10,15:13168,1068,1
+> 2:False:10,12:13168,1068,0
+> 3:False:10,14:13168,1068,1
+> 4:False:10,15:13168,1068,1
+> 5:True:10,11:13168,1068,0
+> 6:False:10,16:13168,1068,1
+> 7:False:10,15:13168,1068,1
+> 8:False:10,16:13168,1068,1
+> 9:True:10,11:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_1.tar.bz2:1.4750900268554688:0.45255009999999996:1.470000000000141
+> 0:False:10,17:13168,1068,0
+> 1:False:10,16:13168,1068,0
+> 2:False:10,17:13168,1068,0
+> 3:True:10,15:13168,1068,0
+> 4:True:10,15:13168,1068,0
+> 5:False:10,16:13168,1068,0
+> 6:False:10,16:13168,1068,0
+> 7:False:10,17:13168,1068,0
+> 8:False:10,16:13168,1068,0
+> 9:False:10,16:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_2.tar.bz2:1.5173625946044922:0.48195949999999993:1.509999999999991
+> 0:True:10,12:13168,1068,0
+> 1:False:10,13:13168,1068,0
+> 2:False:10,16:13168,1068,0
+> 3:True:10,12:13168,1068,0
+> 4:False:10,16:13168,1068,0
+> 5:True:10,12:13168,1068,0
+> 6:False:10,15:13168,1068,0
+> 7:True:10,12:13168,1068,0
+> 8:False:10,13:13168,1068,0
+> 9:False:10,16:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p02_hyp-4_10_3.tar.bz2:1.5308825969696045:0.5009606:1.5199999999998681
+> 0:False:10,17:13168,1068,0
+> 1:False:10,17:13168,1068,1
+> 2:False:10,18:13168,1068,0
+> 3:True:10,14:13168,1068,0
+> 4:False:10,15:13168,1068,0
+> 5:False:10,16:13168,1068,0
+> 6:False:10,15:13168,1068,0
+> 7:False:10,17:13168,1068,0
+> 8:False:10,15:13168,1068,0
+> 9:False:10,16:13168,1068,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_1.tar.bz2:1.5030066967010498:0.4379684:1.5000000000001137
+> 0:False:10,13:17047,1252,0
+> 1:False:8,10:17047,1252,0
+> 2:False:7,12:17047,1252,0
+> 3:False:10,13:17047,1252,0
+> 4:True:10,11:17047,1252,0
+> 5:False:8,13:17047,1252,0
+> 6:False:10,13:17047,1252,0
+> 7:True:10,11:17047,1252,0
+> 8:False:10,15:17047,1252,0
+> 9:False:10,12:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_2.tar.bz2:1.522362232208252:0.4390097:1.5199999999999818
+> 0:False:10,12:17047,1252,0
+> 1:True:8,9:17047,1252,0
+> 2:False:7,9:17047,1252,0
+> 3:False:10,12:17047,1252,0
+> 4:True:10,11:17047,1252,0
+> 5:False:8,11:17047,1252,0
+> 6:True:10,11:17047,1252,0
+> 7:False:10,12:17047,1252,0
+> 8:False:10,12:17047,1252,0
+> 9:False:10,12:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-1_10_3.tar.bz2:1.609246015548706:0.4941025:1.6100000000000136
+> 0:True:10,15:17046,1249,0
+> 1:True:8,13:17046,1249,0
+> 2:False:7,13:17046,1249,0
+> 3:True:10,15:17046,1249,0
+> 4:True:10,15:17046,1249,0
+> 5:False:8,14:17046,1249,0
+> 6:True:10,15:17046,1249,0
+> 7:True:10,15:17046,1249,0
+> 8:False:10,16:17046,1249,0
+> 9:True:10,15:17046,1249,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_1.tar.bz2:1.5061397552490234:0.41168699999999997:1.5099999999998772
+> 0:True:10,12:17047,1252,0
+> 1:True:8,10:17047,1252,0
+> 2:False:7,11:17047,1252,0
+> 3:True:10,12:17047,1252,0
+> 4:True:10,12:17047,1252,0
+> 5:False:8,11:17047,1252,0
+> 6:False:10,13:17047,1252,0
+> 7:False:10,13:17047,1252,0
+> 8:False:10,13:17047,1252,0
+> 9:True:10,12:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_2.tar.bz2:1.5776140689849854:0.49465659999999995:1.57000000000005
+> 0:True:10,12:17047,1252,0
+> 1:False:8,11:17047,1252,0
+> 2:False:7,11:17047,1252,0
+> 3:False:10,13:17047,1252,0
+> 4:True:10,12:17047,1252,0
+> 5:False:8,11:17047,1252,0
+> 6:False:10,14:17047,1252,0
+> 7:False:10,13:17047,1252,0
+> 8:False:10,13:17047,1252,0
+> 9:True:10,12:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-2_10_3.tar.bz2:1.6553332805633545:0.5808047000000001:1.650000000000091
+> 0:False:10,16:17047,1252,0
+> 1:True:8,11:17047,1252,0
+> 2:False:7,14:17047,1252,0
+> 3:False:10,16:17047,1252,0
+> 4:False:10,16:17047,1252,0
+> 5:False:8,15:17047,1252,0
+> 6:False:10,16:17047,1252,0
+> 7:False:10,16:17047,1252,0
+> 8:False:10,16:17047,1252,0
+> 9:False:10,16:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_1.tar.bz2:1.5065629482269287:0.4287042:1.509999999999991
+> 0:False:10,13:17047,1252,0
+> 1:False:8,12:17047,1252,0
+> 2:True:7,9:17047,1252,0
+> 3:False:10,14:17047,1252,0
+> 4:False:10,14:17047,1252,0
+> 5:True:8,10:17047,1252,0
+> 6:False:10,13:17047,1252,0
+> 7:False:10,13:17047,1252,0
+> 8:False:10,13:17047,1252,0
+> 9:False:10,14:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_2.tar.bz2:1.5173046588897705:0.4528947:1.5099999999998772
+> 0:False:10,16:17046,1249,0
+> 1:False:8,15:17046,1249,0
+> 2:True:7,11:17046,1249,0
+> 3:False:10,17:17046,1249,0
+> 4:False:10,16:17046,1249,0
+> 5:True:8,12:17046,1249,0
+> 6:False:10,16:17046,1249,0
+> 7:False:10,15:17046,1249,0
+> 8:False:10,16:17046,1249,0
+> 9:False:10,16:17046,1249,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-3_10_3.tar.bz2:1.5369596481323242:0.4524393:1.5400000000000773
+> 0:False:10,15:17046,1249,0
+> 1:False:8,14:17046,1249,0
+> 2:True:7,10:17046,1249,0
+> 3:False:10,16:17046,1249,0
+> 4:False:10,15:17046,1249,0
+> 5:True:8,11:17046,1249,0
+> 6:False:10,15:17046,1249,0
+> 7:False:10,14:17046,1249,0
+> 8:False:10,15:17046,1249,0
+> 9:False:10,15:17046,1249,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_1.tar.bz2:1.6240952014923096:0.5355942:1.6200000000000045
+> 0:False:10,14:17047,1252,0
+> 1:True:8,9:17047,1252,0
+> 2:False:7,12:17047,1252,0
+> 3:False:10,14:17047,1252,0
+> 4:False:10,14:17047,1252,0
+> 5:False:8,13:17047,1252,0
+> 6:False:10,14:17047,1252,0
+> 7:False:10,14:17047,1252,0
+> 8:False:10,14:17047,1252,0
+> 9:False:10,14:17047,1252,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_2.tar.bz2:1.515366554260254:0.4575505999999999:1.509999999999991
+> 0:False:10,16:17046,1249,0
+> 1:False:8,17:17046,1249,0
+> 2:False:7,17:17046,1249,0
+> 3:True:10,13:17046,1249,0
+> 4:False:10,19:17046,1249,0
+> 5:False:8,18:17046,1249,0
+> 6:False:10,15:17046,1249,0
+> 7:False:10,17:17046,1249,0
+> 8:False:10,20:17046,1249,0
+> 9:True:10,13:17046,1249,0
+logistics-suboptimal-old-noisy/10/logistics_noisy_p03_hyp-4_10_3.tar.bz2:1.623232364654541:0.5417291:1.6200000000001182
+> 0:False:10,14:17047,1252,0
+> 1:False:8,12:17047,1252,0
+> 2:False:7,12:17047,1252,0
+> 3:False:10,12:17047,1252,0
+> 4:False:10,15:17047,1252,0
+> 5:False:8,13:17047,1252,0
+> 6:False:10,15:17047,1252,0
+> 7:True:10,11:17047,1252,0
+> 8:False:10,14:17047,1252,0
+> 9:False:10,12:17047,1252,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_1.tar.bz2:1.4124805927276611:0.39137920000000004:1.4099999999999682
+> 0:False:10,19:13173,1083,0
+> 1:False:10,20:13173,1083,0
+> 2:False:10,21:13173,1083,0
+> 3:True:10,18:13173,1083,0
+> 4:False:10,22:13173,1083,0
+> 5:False:10,20:13173,1083,0
+> 6:False:10,19:13173,1083,0
+> 7:False:10,20:13173,1083,0
+> 8:True:10,18:13173,1083,0
+> 9:True:10,18:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_2.tar.bz2:1.5926802158355713:0.557369:1.5900000000000318
+> 0:True:10,18:13172,1080,1
+> 1:False:10,25:13172,1080,3
+> 2:False:10,24:13172,1080,1
+> 3:False:10,20:13172,1080,1
+> 4:False:10,21:13172,1080,1
+> 5:False:10,24:13172,1080,1
+> 6:False:10,22:13172,1080,3
+> 7:False:10,22:13172,1080,1
+> 8:False:10,22:13172,1080,2
+> 9:False:10,21:13172,1080,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-1_30_3.tar.bz2:1.6371502876281738:0.6205783:1.6299999999998818
+> 0:True:10,15:13173,1083,0
+> 1:False:10,22:13173,1083,0
+> 2:False:10,23:13173,1083,0
+> 3:False:10,19:13173,1083,0
+> 4:False:10,20:13173,1083,0
+> 5:False:10,23:13173,1083,0
+> 6:False:10,19:13173,1083,0
+> 7:False:10,19:13173,1083,0
+> 8:False:10,19:13173,1083,0
+> 9:False:10,19:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_1.tar.bz2:1.746194839477539:0.723847:1.7400000000001228
+> 0:False:10,24:13174,1086,0
+> 1:True:10,19:13174,1086,1
+> 2:False:10,20:13174,1086,0
+> 3:False:10,22:13174,1086,0
+> 4:False:10,21:13174,1086,0
+> 5:False:10,22:13174,1086,0
+> 6:False:10,22:13174,1086,1
+> 7:False:10,24:13174,1086,0
+> 8:False:10,22:13174,1086,0
+> 9:False:10,22:13174,1086,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_2.tar.bz2:1.5585651397705078:0.5229305999999999:1.5699999999999363
+> 0:False:10,23:13172,1080,1
+> 1:True:10,15:13172,1080,1
+> 2:False:10,20:13172,1080,1
+> 3:False:10,22:13172,1080,1
+> 4:False:10,21:13172,1080,1
+> 5:False:10,22:13172,1080,1
+> 6:False:10,20:13172,1080,1
+> 7:False:10,22:13172,1080,1
+> 8:False:10,22:13172,1080,1
+> 9:False:10,22:13172,1080,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-2_30_3.tar.bz2:1.5980477333068848:0.585863:1.5900000000000318
+> 0:False:10,23:13175,1089,0
+> 1:True:10,19:13175,1089,0
+> 2:False:10,20:13175,1089,0
+> 3:False:10,22:13175,1089,0
+> 4:False:10,20:13175,1089,0
+> 5:False:10,22:13175,1089,0
+> 6:False:10,22:13175,1089,0
+> 7:False:10,22:13175,1089,0
+> 8:False:10,22:13175,1089,0
+> 9:False:10,22:13175,1089,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_1.tar.bz2:1.5356111526489258:0.5111901:1.5399999999999636
+> 0:False:10,21:13175,1089,2
+> 1:False:10,21:13175,1089,2
+> 2:True:10,17:13175,1089,2
+> 3:True:10,17:13175,1089,2
+> 4:False:10,22:13175,1089,2
+> 5:True:10,17:13175,1089,2
+> 6:False:10,22:13175,1089,2
+> 7:False:10,20:13175,1089,2
+> 8:False:10,18:13175,1089,2
+> 9:True:10,17:13175,1089,2
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_2.tar.bz2:1.5043919086456299:0.4789597:1.5
+> 0:False:10,19:13174,1086,0
+> 1:False:10,17:13174,1086,0
+> 2:True:10,15:13174,1086,0
+> 3:False:10,16:13174,1086,0
+> 4:False:10,17:13174,1086,0
+> 5:False:10,16:13174,1086,0
+> 6:False:10,21:13174,1086,0
+> 7:False:10,19:13174,1086,0
+> 8:False:10,17:13174,1086,0
+> 9:False:10,16:13174,1086,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-3_30_3.tar.bz2:1.5029332637786865:0.4769886:1.5
+> 0:False:10,21:13175,1089,1
+> 1:False:10,19:13175,1089,1
+> 2:True:10,15:13175,1089,0
+> 3:False:10,19:13175,1089,0
+> 4:False:10,18:13175,1089,1
+> 5:False:10,18:13175,1089,0
+> 6:False:10,22:13175,1089,1
+> 7:False:10,21:13175,1089,1
+> 8:False:10,19:13175,1089,0
+> 9:False:10,18:13175,1089,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_1.tar.bz2:1.4752912521362305:0.45298259999999996:1.4700000000000273
+> 0:False:10,19:13171,1077,2
+> 1:False:10,22:13171,1077,2
+> 2:False:10,22:13171,1077,2
+> 3:True:10,17:13171,1077,2
+> 4:False:10,24:13171,1077,2
+> 5:False:10,21:13171,1077,1
+> 6:False:10,19:13171,1077,2
+> 7:False:10,22:13171,1077,2
+> 8:True:10,17:13171,1077,2
+> 9:True:10,17:13171,1077,2
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_2.tar.bz2:1.5191774368286133:0.48471050000000004:1.509999999999991
+> 0:False:10,19:13173,1083,0
+> 1:False:10,21:13173,1083,0
+> 2:False:10,19:13173,1083,0
+> 3:True:10,15:13173,1083,0
+> 4:False:10,23:13173,1083,0
+> 5:False:10,18:13173,1083,0
+> 6:False:10,19:13173,1083,0
+> 7:False:10,21:13173,1083,0
+> 8:True:10,15:13173,1083,0
+> 9:True:10,15:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p01_hyp-4_30_3.tar.bz2:1.5537092685699463:0.541087:1.5500000000000682
+> 0:False:10,19:13174,1086,1
+> 1:False:10,22:13174,1086,1
+> 2:False:10,23:13174,1086,1
+> 3:True:10,18:13174,1086,1
+> 4:False:10,24:13174,1086,1
+> 5:False:10,22:13174,1086,1
+> 6:False:10,19:13174,1086,1
+> 7:False:10,22:13174,1086,1
+> 8:True:10,18:13174,1086,1
+> 9:True:10,18:13174,1086,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_1.tar.bz2:1.4330613613128662:0.3944171:1.4300000000000637
+> 0:False:10,23:13172,1080,1
+> 1:True:10,17:13172,1080,1
+> 2:False:10,27:13172,1080,1
+> 3:False:10,22:13172,1080,1
+> 4:False:10,26:13172,1080,1
+> 5:False:10,21:13172,1080,1
+> 6:False:10,26:13172,1080,1
+> 7:False:10,20:13172,1080,1
+> 8:False:10,23:13172,1080,1
+> 9:False:10,25:13172,1080,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_2.tar.bz2:1.433316707611084:0.4141676:1.42999999999995
+> 0:False:10,21:13171,1077,1
+> 1:True:10,16:13171,1077,1
+> 2:False:10,26:13171,1077,1
+> 3:False:10,21:13171,1077,1
+> 4:False:10,25:13171,1077,1
+> 5:False:10,20:13171,1077,1
+> 6:False:10,25:13171,1077,1
+> 7:False:10,18:13171,1077,1
+> 8:False:10,21:13171,1077,1
+> 9:False:10,24:13171,1077,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-1_30_3.tar.bz2:1.43351149559021:0.42583380000000004:1.42999999999995
+> 0:False:10,18:13173,1083,0
+> 1:True:10,15:13173,1083,0
+> 2:False:10,22:13173,1083,0
+> 3:False:10,17:13173,1083,0
+> 4:False:10,22:13173,1083,0
+> 5:False:10,16:13173,1083,0
+> 6:False:10,22:13173,1083,0
+> 7:False:10,17:13173,1083,0
+> 8:False:10,19:13173,1083,0
+> 9:False:10,20:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_1.tar.bz2:1.3911876678466797:0.3639627:1.3899999999999864
+> 0:True:10,17:13171,1077,1
+> 1:False:10,23:13171,1077,1
+> 2:False:10,23:13171,1077,1
+> 3:False:10,23:13171,1077,1
+> 4:False:10,27:13171,1077,1
+> 5:False:10,18:13171,1077,1
+> 6:False:10,26:13171,1077,1
+> 7:False:10,21:13171,1077,1
+> 8:False:10,22:13171,1077,1
+> 9:False:10,21:13171,1077,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_2.tar.bz2:1.5583386421203613:0.5233197:1.5600000000000591
+> 0:True:10,18:13173,1083,0
+> 1:False:10,22:13173,1083,0
+> 2:False:10,23:13173,1083,0
+> 3:False:10,22:13173,1083,0
+> 4:False:10,25:13173,1083,0
+> 5:False:10,19:13173,1083,0
+> 6:False:10,25:13173,1083,0
+> 7:False:10,20:13173,1083,0
+> 8:False:10,21:13173,1083,0
+> 9:False:10,22:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-2_30_3.tar.bz2:1.5158462524414062:0.47495070000000006:1.509999999999991
+> 0:True:10,18:13173,1083,0
+> 1:False:10,20:13173,1083,0
+> 2:False:10,22:13173,1083,0
+> 3:False:10,19:13173,1083,0
+> 4:False:10,24:13173,1083,0
+> 5:False:10,19:13173,1083,0
+> 6:False:10,23:13173,1083,0
+> 7:True:10,18:13173,1083,0
+> 8:False:10,19:13173,1083,0
+> 9:False:10,22:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_1.tar.bz2:1.55666184425354:0.505394:1.5499999999999545
+> 0:False:10,20:13173,1083,1
+> 1:False:10,22:13173,1083,2
+> 2:True:10,17:13173,1083,2
+> 3:False:10,21:13173,1083,2
+> 4:False:10,22:13173,1083,2
+> 5:False:10,20:13173,1083,1
+> 6:False:10,22:13173,1083,2
+> 7:False:10,21:13173,1083,2
+> 8:False:10,22:13173,1083,2
+> 9:True:10,17:13173,1083,3
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_2.tar.bz2:1.5748395919799805:0.5454132:1.57000000000005
+> 0:False:10,21:13173,1083,0
+> 1:False:10,22:13173,1083,0
+> 2:True:10,17:13173,1083,0
+> 3:False:10,21:13173,1083,0
+> 4:False:10,22:13173,1083,0
+> 5:False:10,21:13173,1083,0
+> 6:False:10,22:13173,1083,0
+> 7:False:10,21:13173,1083,0
+> 8:False:10,22:13173,1083,0
+> 9:False:10,18:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-3_30_3.tar.bz2:1.61456298828125:0.6001723000000001:1.6200000000000045
+> 0:False:10,22:13172,1080,3
+> 1:False:10,26:13172,1080,2
+> 2:True:10,18:13172,1080,3
+> 3:False:10,25:13172,1080,3
+> 4:False:10,26:13172,1080,3
+> 5:False:10,22:13172,1080,2
+> 6:False:10,26:13172,1080,3
+> 7:False:10,25:13172,1080,2
+> 8:False:10,26:13172,1080,3
+> 9:True:10,18:13172,1080,2
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_1.tar.bz2:1.6268994808197021:0.6051555:1.6299999999999955
+> 0:False:10,20:13173,1083,0
+> 1:False:10,19:13173,1083,0
+> 2:False:10,23:13173,1083,0
+> 3:True:10,14:13173,1083,0
+> 4:False:10,20:13173,1083,0
+> 5:False:10,18:13173,1083,0
+> 6:False:10,21:13173,1083,0
+> 7:False:10,20:13173,1083,0
+> 8:False:10,18:13173,1083,0
+> 9:False:10,22:13173,1083,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_2.tar.bz2:1.4727962017059326:0.4767273:1.4600000000000364
+> 0:False:10,22:13174,1086,1
+> 1:False:10,22:13174,1086,1
+> 2:False:10,24:13174,1086,1
+> 3:True:10,17:13174,1086,1
+> 4:False:10,21:13174,1086,1
+> 5:False:10,21:13174,1086,1
+> 6:False:10,21:13174,1086,1
+> 7:False:10,22:13174,1086,1
+> 8:False:10,19:13174,1086,1
+> 9:False:10,23:13174,1086,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p02_hyp-4_30_3.tar.bz2:1.5030581951141357:0.47492369999999995:1.490000000000009
+> 0:False:10,21:13173,1083,1
+> 1:False:10,21:13173,1083,1
+> 2:False:10,24:13173,1083,1
+> 3:True:10,16:13173,1083,1
+> 4:False:10,21:13173,1083,1
+> 5:False:10,20:13173,1083,1
+> 6:False:10,22:13173,1083,1
+> 7:False:10,21:13173,1083,1
+> 8:False:10,19:13173,1083,1
+> 9:False:10,23:13173,1083,1
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_1.tar.bz2:1.5082807540893555:0.441458:1.5199999999999818
+> 0:True:10,17:17050,1261,0
+> 1:False:8,22:17050,1261,0
+> 2:False:7,22:17050,1261,0
+> 3:False:10,20:17050,1261,0
+> 4:False:10,24:17050,1261,0
+> 5:False:8,20:17050,1261,0
+> 6:False:10,20:17050,1261,0
+> 7:False:10,24:17050,1261,0
+> 8:False:10,22:17050,1261,0
+> 9:False:10,20:17050,1261,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_2.tar.bz2:2.2097511291503906:1.1433305999999999:2.2100000000000364
+> 0:True:10,15:17052,1267,0
+> 1:False:8,17:17052,1267,0
+> 2:False:7,22:17052,1267,0
+> 3:False:10,20:17052,1267,0
+> 4:False:10,20:17052,1267,0
+> 5:False:8,20:17052,1267,0
+> 6:False:10,21:17052,1267,0
+> 7:False:10,20:17052,1267,0
+> 8:False:10,21:17052,1267,0
+> 9:False:10,20:17052,1267,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-1_30_3.tar.bz2:1.5805778503417969:0.5005062:1.5899999999999181
+> 0:True:10,17:17051,1264,0
+> 1:False:8,18:17051,1264,0
+> 2:False:7,18:17051,1264,0
+> 3:False:10,19:17051,1264,0
+> 4:False:10,20:17051,1264,0
+> 5:False:8,16:17051,1264,0
+> 6:False:10,19:17051,1264,0
+> 7:False:10,20:17051,1264,0
+> 8:False:10,18:17051,1264,0
+> 9:False:10,19:17051,1264,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_1.tar.bz2:1.573822021484375:0.48557380000000006:1.5700000000001637
+> 0:False:10,14:17049,1258,0
+> 1:True:8,10:17049,1258,0
+> 2:False:7,13:17049,1258,0
+> 3:False:10,15:17049,1258,0
+> 4:True:10,12:17049,1258,0
+> 5:False:8,13:17049,1258,0
+> 6:False:10,16:17049,1258,0
+> 7:False:10,13:17049,1258,0
+> 8:False:10,15:17049,1258,0
+> 9:False:10,14:17049,1258,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_2.tar.bz2:1.5694530010223389:0.48720060000000004:1.5699999999999363
+> 0:True:10,14:17049,1258,0
+> 1:True:8,12:17049,1258,0
+> 2:False:7,13:17049,1258,0
+> 3:False:10,15:17049,1258,0
+> 4:True:10,14:17049,1258,0
+> 5:False:8,13:17049,1258,0
+> 6:False:10,16:17049,1258,0
+> 7:False:10,15:17049,1258,0
+> 8:False:10,15:17049,1258,0
+> 9:True:10,14:17049,1258,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-2_30_3.tar.bz2:1.5595855712890625:0.46399989999999997:1.5500000000000682
+> 0:True:10,13:17049,1258,0
+> 1:True:8,11:17049,1258,0
+> 2:False:7,12:17049,1258,0
+> 3:False:10,14:17049,1258,0
+> 4:True:10,13:17049,1258,0
+> 5:False:8,12:17049,1258,0
+> 6:False:10,15:17049,1258,0
+> 7:False:10,14:17049,1258,0
+> 8:False:10,14:17049,1258,0
+> 9:True:10,13:17049,1258,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_1.tar.bz2:1.5773439407348633:0.5003016:1.5799999999999272
+> 0:False:10,17:17048,1255,0
+> 1:False:8,16:17048,1255,0
+> 2:True:7,9:17048,1255,0
+> 3:False:10,18:17048,1255,0
+> 4:False:10,14:17048,1255,0
+> 5:False:8,14:17048,1255,0
+> 6:False:10,13:17048,1255,0
+> 7:False:10,17:17048,1255,0
+> 8:False:10,17:17048,1255,0
+> 9:False:10,18:17048,1255,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_2.tar.bz2:1.6534311771392822:0.5551761:1.6499999999999773
+> 0:False:10,17:17049,1258,0
+> 1:False:8,16:17049,1258,0
+> 2:True:7,10:17049,1258,0
+> 3:False:10,18:17049,1258,0
+> 4:True:10,13:17049,1258,0
+> 5:False:8,15:17049,1258,0
+> 6:True:10,13:17049,1258,0
+> 7:False:10,16:17049,1258,0
+> 8:True:10,13:17049,1258,0
+> 9:False:10,17:17049,1258,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-3_30_3.tar.bz2:1.5170457363128662:0.4381133:1.5199999999999818
+> 0:False:10,16:17048,1255,0
+> 1:False:8,15:17048,1255,0
+> 2:False:7,13:17048,1255,0
+> 3:False:10,17:17048,1255,0
+> 4:False:10,16:17048,1255,0
+> 5:False:8,14:17048,1255,0
+> 6:False:10,16:17048,1255,0
+> 7:True:10,15:17048,1255,0
+> 8:False:10,16:17048,1255,0
+> 9:False:10,16:17048,1255,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_1.tar.bz2:1.5195469856262207:0.44359350000000003:1.5300000000000864
+> 0:False:10,19:17050,1261,0
+> 1:False:8,20:17050,1261,0
+> 2:False:7,20:17050,1261,0
+> 3:True:10,14:17050,1261,0
+> 4:False:10,22:17050,1261,0
+> 5:False:8,21:17050,1261,0
+> 6:False:10,18:17050,1261,0
+> 7:False:10,18:17050,1261,0
+> 8:False:10,23:17050,1261,0
+> 9:False:10,15:17050,1261,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_2.tar.bz2:1.7215955257415771:0.6471085000000001:1.7199999999999136
+> 0:False:10,19:17051,1264,0
+> 1:False:8,19:17051,1264,0
+> 2:False:7,20:17051,1264,0
+> 3:False:10,18:17051,1264,0
+> 4:False:10,22:17051,1264,0
+> 5:False:8,21:17051,1264,0
+> 6:False:10,20:17051,1264,0
+> 7:False:10,21:17051,1264,0
+> 8:False:10,22:17051,1264,0
+> 9:True:10,17:17051,1264,0
+logistics-suboptimal-old-noisy/30/logistics_noisy_p03_hyp-4_30_3.tar.bz2:1.7050981521606445:0.656839:1.7000000000000455
+> 0:False:10,18:17051,1264,0
+> 1:False:8,19:17051,1264,0
+> 2:False:7,19:17051,1264,0
+> 3:False:10,16:17051,1264,0
+> 4:False:10,20:17051,1264,0
+> 5:False:8,19:17051,1264,0
+> 6:False:10,20:17051,1264,0
+> 7:False:10,18:17051,1264,0
+> 8:False:10,21:17051,1264,0
+> 9:True:10,15:17051,1264,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_1.tar.bz2:1.5914626121520996:0.5710346:1.5900000000000318
+> 0:True:10,21:13178,1098,2
+> 1:False:10,26:13178,1098,4
+> 2:False:10,27:13178,1098,1
+> 3:False:10,22:13178,1098,2
+> 4:False:10,25:13178,1098,2
+> 5:False:10,26:13178,1098,2
+> 6:False:10,23:13178,1098,0
+> 7:False:10,24:13178,1098,2
+> 8:False:10,23:13178,1098,2
+> 9:False:10,23:13178,1098,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_2.tar.bz2:1.5613598823547363:0.5460433:1.5699999999999363
+> 0:True:10,18:13178,1098,0
+> 1:False:10,24:13178,1098,0
+> 2:False:10,24:13178,1098,0
+> 3:False:10,20:13178,1098,0
+> 4:False:10,23:13178,1098,3
+> 5:False:10,24:13178,1098,0
+> 6:False:10,22:13178,1098,0
+> 7:False:10,23:13178,1098,0
+> 8:False:10,21:13178,1098,0
+> 9:False:10,21:13178,1098,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-1_50_3.tar.bz2:1.4525129795074463:0.44472819999999996:1.4400000000000546
+> 0:True:10,21:13177,1095,2
+> 1:False:10,24:13177,1095,2
+> 2:False:10,23:13177,1095,2
+> 3:False:10,22:13177,1095,2
+> 4:False:10,22:13177,1095,2
+> 5:False:10,23:13177,1095,2
+> 6:False:10,22:13177,1095,2
+> 7:False:10,22:13177,1095,2
+> 8:True:10,21:13177,1095,2
+> 9:True:10,21:13177,1095,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_1.tar.bz2:1.526855707168579:0.5112369999999999:1.5200000000000955
+> 0:False:10,28:13179,1101,1
+> 1:True:10,20:13179,1101,1
+> 2:False:10,25:13179,1101,1
+> 3:False:10,27:13179,1101,1
+> 4:False:10,25:13179,1101,1
+> 5:False:10,27:13179,1101,1
+> 6:False:10,23:13179,1101,0
+> 7:False:10,27:13179,1101,1
+> 8:False:10,27:13179,1101,1
+> 9:False:10,27:13179,1101,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_2.tar.bz2:1.5234451293945312:0.5060857:1.5199999999999818
+> 0:False:10,26:13178,1098,0
+> 1:True:10,18:13178,1098,0
+> 2:False:10,23:13178,1098,0
+> 3:False:10,25:13178,1098,0
+> 4:False:10,23:13178,1098,0
+> 5:False:10,25:13178,1098,0
+> 6:False:10,21:13178,1098,0
+> 7:False:10,25:13178,1098,0
+> 8:False:10,25:13178,1098,0
+> 9:False:10,25:13178,1098,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-2_50_3.tar.bz2:1.6221599578857422:0.6303962000000001:1.6200000000000045
+> 0:False:10,25:13180,1104,1
+> 1:True:10,20:13180,1104,1
+> 2:False:10,24:13180,1104,1
+> 3:False:10,24:13180,1104,0
+> 4:False:10,24:13180,1104,1
+> 5:False:10,26:13180,1104,1
+> 6:False:10,22:13180,1104,0
+> 7:False:10,26:13180,1104,1
+> 8:False:10,25:13180,1104,1
+> 9:False:10,24:13180,1104,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_1.tar.bz2:1.6403906345367432:0.6248769000000001:1.6299999999999955
+> 0:False:10,28:13178,1098,1
+> 1:False:10,26:13178,1098,2
+> 2:True:10,20:13178,1098,1
+> 3:False:10,25:13178,1098,2
+> 4:False:10,26:13178,1098,2
+> 5:False:10,25:13178,1098,2
+> 6:False:10,29:13178,1098,2
+> 7:False:10,28:13178,1098,2
+> 8:False:10,26:13178,1098,1
+> 9:False:10,25:13178,1098,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_2.tar.bz2:1.5249111652374268:0.5040817:1.5199999999999818
+> 0:False:10,26:13179,1101,6
+> 1:False:10,24:13179,1101,3
+> 2:True:10,22:13179,1101,3
+> 3:True:10,22:13179,1101,5
+> 4:False:10,25:13179,1101,5
+> 5:True:10,22:13179,1101,5
+> 6:False:10,26:13179,1101,4
+> 7:False:10,25:13179,1101,3
+> 8:False:10,23:13179,1101,5
+> 9:True:10,22:13179,1101,5
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-3_50_3.tar.bz2:1.5085422992706299:0.48873130000000004:1.509999999999991
+> 0:False:10,26:13180,1104,1
+> 1:False:10,23:13180,1104,0
+> 2:True:10,20:13180,1104,1
+> 3:False:10,22:13180,1104,1
+> 4:False:10,24:13180,1104,0
+> 5:False:10,22:13180,1104,1
+> 6:False:10,27:13180,1104,0
+> 7:False:10,25:13180,1104,0
+> 8:False:10,23:13180,1104,1
+> 9:False:10,22:13180,1104,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_1.tar.bz2:1.4665923118591309:0.46093970000000006:1.4699999999999136
+> 0:False:10,22:13178,1098,2
+> 1:False:10,22:13178,1098,1
+> 2:False:10,23:13178,1098,2
+> 3:True:10,20:13178,1098,1
+> 4:False:10,25:13178,1098,2
+> 5:False:10,22:13178,1098,1
+> 6:False:10,21:13178,1098,2
+> 7:False:10,23:13178,1098,2
+> 8:True:10,20:13178,1098,1
+> 9:True:10,20:13178,1098,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_2.tar.bz2:1.5349023342132568:0.5111401000000001:1.5400000000000773
+> 0:False:10,22:13178,1098,1
+> 1:False:10,25:13178,1098,1
+> 2:False:10,26:13178,1098,1
+> 3:True:10,21:13178,1098,1
+> 4:False:10,27:13178,1098,1
+> 5:False:10,25:13178,1098,1
+> 6:False:10,23:13178,1098,1
+> 7:False:10,25:13178,1098,1
+> 8:False:10,22:13178,1098,1
+> 9:False:10,22:13178,1098,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p01_hyp-4_50_3.tar.bz2:1.5864388942718506:0.5516749:1.580000000000041
+> 0:False:10,22:13180,1104,1
+> 1:False:10,23:13180,1104,1
+> 2:False:10,24:13180,1104,1
+> 3:True:10,19:13180,1104,1
+> 4:False:10,27:13180,1104,1
+> 5:False:10,23:13180,1104,1
+> 6:False:10,21:13180,1104,1
+> 7:False:10,25:13180,1104,1
+> 8:False:10,20:13180,1104,1
+> 9:False:10,20:13180,1104,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_1.tar.bz2:1.4975080490112305:0.47933080000000006:1.4999999999998863
+> 0:False:10,20:13177,1095,0
+> 1:True:10,17:13177,1095,0
+> 2:False:10,25:13177,1095,0
+> 3:False:10,20:13177,1095,0
+> 4:False:10,24:13177,1095,0
+> 5:False:10,19:13177,1095,0
+> 6:False:10,24:13177,1095,0
+> 7:False:10,18:13177,1095,0
+> 8:False:10,20:13177,1095,0
+> 9:False:10,23:13177,1095,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_2.tar.bz2:1.6464173793792725:0.6145337000000001:1.6299999999999955
+> 0:False:10,21:13176,1092,0
+> 1:True:10,18:13176,1092,0
+> 2:False:10,26:13176,1092,0
+> 3:False:10,21:13176,1092,0
+> 4:False:10,25:13176,1092,0
+> 5:False:10,20:13176,1092,0
+> 6:False:10,25:13176,1092,0
+> 7:False:10,20:13176,1092,0
+> 8:False:10,22:13176,1092,0
+> 9:False:10,24:13176,1092,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-1_50_3.tar.bz2:1.4751605987548828:0.4369164000000001:1.4700000000000273
+> 0:False:10,22:13176,1092,1
+> 1:True:10,17:13176,1092,0
+> 2:False:10,26:13176,1092,0
+> 3:False:10,22:13176,1092,1
+> 4:False:10,25:13176,1092,1
+> 5:False:10,21:13176,1092,1
+> 6:False:10,25:13176,1092,1
+> 7:False:10,19:13176,1092,1
+> 8:False:10,22:13176,1092,1
+> 9:False:10,24:13176,1092,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_1.tar.bz2:1.4447109699249268:0.4191105:1.4400000000000546
+> 0:True:10,17:13176,1092,0
+> 1:False:10,22:13176,1092,1
+> 2:False:10,22:13176,1092,1
+> 3:False:10,22:13176,1092,1
+> 4:False:10,26:13176,1092,1
+> 5:False:10,18:13176,1092,0
+> 6:False:10,25:13176,1092,0
+> 7:False:10,20:13176,1092,1
+> 8:False:10,21:13176,1092,1
+> 9:False:10,21:13176,1092,3
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_2.tar.bz2:1.4646472930908203:0.43589710000000004:1.4699999999999136
+> 0:True:10,20:13178,1098,1
+> 1:False:10,24:13178,1098,1
+> 2:False:10,25:13178,1098,1
+> 3:False:10,22:13178,1098,1
+> 4:False:10,26:13178,1098,1
+> 5:True:10,20:13178,1098,1
+> 6:False:10,26:13178,1098,1
+> 7:False:10,22:13178,1098,1
+> 8:False:10,22:13178,1098,1
+> 9:False:10,23:13178,1098,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-2_50_3.tar.bz2:1.456404209136963:0.4619326:1.4500000000000455
+> 0:True:10,20:13176,1092,2
+> 1:False:10,23:13176,1092,2
+> 2:False:10,25:13176,1092,2
+> 3:False:10,23:13176,1092,2
+> 4:False:10,26:13176,1092,2
+> 5:False:10,21:13176,1092,2
+> 6:False:10,26:13176,1092,2
+> 7:False:10,22:13176,1092,2
+> 8:False:10,22:13176,1092,2
+> 9:False:10,24:13176,1092,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_1.tar.bz2:1.607841968536377:0.5901497:1.6100000000000136
+> 0:False:10,25:13179,1101,1
+> 1:False:10,28:13179,1101,1
+> 2:True:10,22:13179,1101,1
+> 3:False:10,27:13179,1101,1
+> 4:False:10,28:13179,1101,1
+> 5:False:10,24:13179,1101,1
+> 6:False:10,29:13179,1101,1
+> 7:False:10,28:13179,1101,1
+> 8:False:10,29:13179,1101,1
+> 9:True:10,22:13179,1101,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_2.tar.bz2:1.6140875816345215:0.5977856999999999:1.6200000000000045
+> 0:False:10,24:13179,1101,1
+> 1:False:10,26:13179,1101,1
+> 2:True:10,20:13179,1101,1
+> 3:False:10,26:13179,1101,1
+> 4:False:10,26:13179,1101,1
+> 5:False:10,24:13179,1101,1
+> 6:False:10,26:13179,1101,1
+> 7:False:10,26:13179,1101,1
+> 8:False:10,26:13179,1101,1
+> 9:False:10,21:13179,1101,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-3_50_3.tar.bz2:1.4966788291931152:0.47910719999999996:1.5
+> 0:False:10,22:13178,1098,0
+> 1:False:10,25:13178,1098,0
+> 2:True:10,20:13178,1098,0
+> 3:False:10,24:13178,1098,0
+> 4:False:10,25:13178,1098,0
+> 5:False:10,22:13178,1098,0
+> 6:False:10,25:13178,1098,0
+> 7:False:10,24:13178,1098,0
+> 8:False:10,25:13178,1098,0
+> 9:True:10,20:13178,1098,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_1.tar.bz2:1.5452115535736084:0.5356008999999999:1.5499999999999545
+> 0:False:10,24:13180,1104,0
+> 1:False:10,24:13180,1104,0
+> 2:False:10,26:13180,1104,1
+> 3:True:10,20:13180,1104,1
+> 4:False:10,23:13180,1104,1
+> 5:False:10,23:13180,1104,0
+> 6:False:10,24:13180,1104,1
+> 7:False:10,25:13180,1104,1
+> 8:False:10,22:13180,1104,1
+> 9:False:10,25:13180,1104,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_2.tar.bz2:1.589104175567627:0.5752242:1.5900000000000318
+> 0:False:10,25:13177,1095,2
+> 1:False:10,24:13177,1095,3
+> 2:False:10,29:13177,1095,3
+> 3:True:10,21:13177,1095,3
+> 4:False:10,27:13177,1095,2
+> 5:False:10,24:13177,1095,2
+> 6:False:10,27:13177,1095,3
+> 7:False:10,25:13177,1095,2
+> 8:False:10,23:13177,1095,3
+> 9:False:10,28:13177,1095,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p02_hyp-4_50_3.tar.bz2:1.5813384056091309:0.5376045:1.580000000000041
+> 0:False:10,23:13179,1101,0
+> 1:False:10,22:13179,1101,0
+> 2:False:10,27:13179,1101,1
+> 3:True:10,19:13179,1101,2
+> 4:False:10,24:13179,1101,0
+> 5:False:10,21:13179,1101,0
+> 6:False:10,25:13179,1101,0
+> 7:False:10,23:13179,1101,0
+> 8:False:10,22:13179,1101,1
+> 9:False:10,25:13179,1101,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_1.tar.bz2:1.6607229709625244:0.5940521:1.6599999999999682
+> 0:True:10,17:17054,1273,0
+> 1:False:8,22:17054,1273,0
+> 2:False:7,23:17054,1273,0
+> 3:False:10,23:17054,1273,0
+> 4:False:10,25:17054,1273,0
+> 5:False:8,21:17054,1273,0
+> 6:False:10,23:17054,1273,0
+> 7:False:10,25:17054,1273,1
+> 8:False:10,22:17054,1273,0
+> 9:False:10,23:17054,1273,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_2.tar.bz2:1.6274693012237549:0.5339946:1.6200000000000045
+> 0:True:10,17:17054,1273,0
+> 1:False:8,20:17054,1273,0
+> 2:False:7,21:17054,1273,0
+> 3:False:10,21:17054,1273,0
+> 4:False:10,23:17054,1273,0
+> 5:False:8,19:17054,1273,0
+> 6:False:10,21:17054,1273,0
+> 7:False:10,23:17054,1273,0
+> 8:False:10,20:17054,1273,0
+> 9:False:10,21:17054,1273,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-1_50_3.tar.bz2:1.6592552661895752:0.5914779:1.6599999999999682
+> 0:True:10,17:17054,1273,0
+> 1:False:8,20:17054,1273,0
+> 2:False:7,21:17054,1273,0
+> 3:False:10,22:17054,1273,0
+> 4:False:10,23:17054,1273,0
+> 5:False:8,19:17054,1273,0
+> 6:False:10,22:17054,1273,0
+> 7:False:10,23:17054,1273,0
+> 8:False:10,20:17054,1273,0
+> 9:False:10,22:17054,1273,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_1.tar.bz2:1.6070544719696045:0.5329363:1.6000000000000227
+> 0:False:10,18:17052,1267,1
+> 1:True:8,14:17052,1267,1
+> 2:False:7,17:17052,1267,1
+> 3:False:10,18:17052,1267,1
+> 4:False:10,18:17052,1267,1
+> 5:False:8,17:17052,1267,1
+> 6:False:10,19:17052,1267,1
+> 7:False:10,19:17052,1267,1
+> 8:False:10,19:17052,1267,1
+> 9:False:10,18:17052,1267,1
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_2.tar.bz2:1.531378984451294:0.45691210000000004:1.5300000000000864
+> 0:False:10,22:17051,1264,0
+> 1:True:8,14:17051,1264,0
+> 2:False:7,21:17051,1264,0
+> 3:False:10,22:17051,1264,0
+> 4:False:10,19:17051,1264,0
+> 5:False:8,21:17051,1264,0
+> 6:False:10,23:17051,1264,0
+> 7:False:10,20:17051,1264,0
+> 8:False:10,23:17051,1264,0
+> 9:False:10,22:17051,1264,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-2_50_3.tar.bz2:1.6162409782409668:0.5440568:1.6299999999998818
+> 0:False:10,22:17051,1264,0
+> 1:True:8,14:17051,1264,0
+> 2:False:7,21:17051,1264,0
+> 3:False:10,22:17051,1264,0
+> 4:False:10,19:17051,1264,0
+> 5:False:8,21:17051,1264,0
+> 6:False:10,23:17051,1264,0
+> 7:False:10,20:17051,1264,0
+> 8:False:10,23:17051,1264,0
+> 9:False:10,22:17051,1264,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_1.tar.bz2:1.6235954761505127:0.5602855999999999:1.6200000000001182
+> 0:False:10,19:17052,1267,0
+> 1:False:8,20:17052,1267,0
+> 2:True:7,12:17052,1267,0
+> 3:False:10,22:17052,1267,0
+> 4:False:10,18:17052,1267,0
+> 5:False:8,15:17052,1267,0
+> 6:False:10,18:17052,1267,0
+> 7:False:10,20:17052,1267,0
+> 8:False:10,19:17052,1267,0
+> 9:False:10,21:17052,1267,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_2.tar.bz2:1.5256683826446533:0.4404068:1.5199999999998681
+> 0:False:10,19:17052,1267,0
+> 1:False:8,18:17052,1267,0
+> 2:True:7,11:17052,1267,0
+> 3:False:10,20:17052,1267,0
+> 4:False:10,16:17052,1267,0
+> 5:False:8,15:17052,1267,0
+> 6:False:10,16:17052,1267,0
+> 7:False:10,18:17052,1267,0
+> 8:False:10,19:17052,1267,0
+> 9:False:10,19:17052,1267,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-3_50_3.tar.bz2:1.618473768234253:0.522363:1.6200000000000045
+> 0:False:10,18:17052,1267,0
+> 1:False:8,17:17052,1267,0
+> 2:True:7,11:17052,1267,0
+> 3:False:10,19:17052,1267,0
+> 4:False:10,15:17052,1267,0
+> 5:False:8,16:17052,1267,0
+> 6:False:10,16:17052,1267,0
+> 7:False:10,18:17052,1267,0
+> 8:False:10,19:17052,1267,0
+> 9:False:10,18:17052,1267,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_1.tar.bz2:1.5593910217285156:0.4721058:1.5600000000000591
+> 0:True:10,16:17054,1273,0
+> 1:False:8,17:17054,1273,0
+> 2:False:7,18:17054,1273,0
+> 3:True:10,16:17054,1273,0
+> 4:False:10,20:17054,1273,0
+> 5:False:8,19:17054,1273,0
+> 6:True:10,16:17054,1273,0
+> 7:False:10,20:17054,1273,0
+> 8:False:10,20:17054,1273,0
+> 9:True:10,16:17054,1273,0
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_2.tar.bz2:1.6717724800109863:0.5818916:1.669999999999959
+> 0:True:10,17:17055,1276,1
+> 1:False:8,18:17055,1276,0
+> 2:False:7,19:17055,1276,0
+> 3:False:10,19:17055,1276,2
+> 4:False:10,21:17055,1276,3
+> 5:False:8,19:17055,1276,1
+> 6:False:10,19:17055,1276,0
+> 7:False:10,21:17055,1276,0
+> 8:False:10,21:17055,1276,3
+> 9:False:10,18:17055,1276,2
+logistics-suboptimal-old-noisy/50/logistics_noisy_p03_hyp-4_50_3.tar.bz2:1.5777904987335205:0.48856170000000004:1.5900000000000318
+> 0:False:10,19:17054,1273,0
+> 1:False:8,20:17054,1273,0
+> 2:False:7,20:17054,1273,0
+> 3:False:10,16:17054,1273,0
+> 4:False:10,21:17054,1273,0
+> 5:False:8,20:17054,1273,0
+> 6:False:10,21:17054,1273,0
+> 7:False:10,19:17054,1273,0
+> 8:False:10,22:17054,1273,0
+> 9:True:10,15:17054,1273,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_1.tar.bz2:1.5472311973571777:0.5283825:1.5400000000000773
+> 0:True:10,22:13182,1110,3
+> 1:False:10,29:13182,1110,2
+> 2:False:10,27:13182,1110,1
+> 3:False:10,24:13182,1110,2
+> 4:False:10,26:13182,1110,2
+> 5:False:10,27:13182,1110,1
+> 6:False:10,27:13182,1110,2
+> 7:False:10,26:13182,1110,2
+> 8:False:10,24:13182,1110,1
+> 9:False:10,24:13182,1110,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_2.tar.bz2:1.6002066135406494:0.5825666:1.6000000000000227
+> 0:True:10,21:13184,1116,2
+> 1:False:10,28:13184,1116,1
+> 2:False:10,29:13184,1116,1
+> 3:False:10,25:13184,1116,1
+> 4:False:10,26:13184,1116,2
+> 5:False:10,29:13184,1116,1
+> 6:False:10,26:13184,1116,1
+> 7:False:10,26:13184,1116,1
+> 8:False:10,26:13184,1116,1
+> 9:False:10,26:13184,1116,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-1_70_3.tar.bz2:1.514632225036621:0.4813945:1.5199999999998681
+> 0:True:10,21:13182,1110,0
+> 1:False:10,26:13182,1110,0
+> 2:False:10,25:13182,1110,0
+> 3:False:10,25:13182,1110,0
+> 4:False:10,23:13182,1110,0
+> 5:False:10,27:13182,1110,0
+> 6:False:10,25:13182,1110,0
+> 7:False:10,25:13182,1110,0
+> 8:False:10,24:13182,1110,0
+> 9:False:10,24:13182,1110,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_1.tar.bz2:1.5605266094207764:0.5412889999999999:1.5600000000000591
+> 0:False:10,31:13183,1113,5
+> 1:True:10,23:13183,1113,5
+> 2:False:10,28:13183,1113,5
+> 3:False:10,30:13183,1113,5
+> 4:False:10,28:13183,1113,5
+> 5:False:10,30:13183,1113,5
+> 6:False:10,27:13183,1113,6
+> 7:False:10,30:13183,1113,5
+> 8:False:10,31:13183,1113,5
+> 9:False:10,30:13183,1113,5
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_2.tar.bz2:1.4940135478973389:0.4984837999999999:1.5000000000001137
+> 0:False:10,30:13182,1110,1
+> 1:True:10,22:13182,1110,2
+> 2:False:10,28:13182,1110,2
+> 3:False:10,29:13182,1110,0
+> 4:False:10,28:13182,1110,2
+> 5:False:10,30:13182,1110,2
+> 6:False:10,25:13182,1110,0
+> 7:False:10,30:13182,1110,1
+> 8:False:10,29:13182,1110,1
+> 9:False:10,29:13182,1110,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-2_70_3.tar.bz2:1.7817621231079102:0.7385307:1.7899999999999636
+> 0:False:10,30:13183,1113,2
+> 1:True:10,21:13183,1113,3
+> 2:False:10,27:13183,1113,2
+> 3:False:10,29:13183,1113,2
+> 4:False:10,27:13183,1113,2
+> 5:False:10,29:13183,1113,2
+> 6:False:10,25:13183,1113,3
+> 7:False:10,29:13183,1113,2
+> 8:False:10,29:13183,1113,2
+> 9:False:10,29:13183,1113,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_1.tar.bz2:1.705735206604004:0.6924516000000001:1.7099999999999227
+> 0:False:10,30:13184,1116,0
+> 1:False:10,27:13184,1116,0
+> 2:True:10,22:13184,1116,1
+> 3:False:10,26:13184,1116,0
+> 4:False:10,28:13184,1116,0
+> 5:False:10,26:13184,1116,0
+> 6:False:10,32:13184,1116,0
+> 7:False:10,30:13184,1116,0
+> 8:False:10,27:13184,1116,1
+> 9:False:10,26:13184,1116,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_2.tar.bz2:1.514237403869629:0.5168548000000001:1.5200000000000955
+> 0:False:10,29:13181,1107,2
+> 1:False:10,29:13181,1107,2
+> 2:True:10,23:13181,1107,1
+> 3:False:10,26:13181,1107,1
+> 4:False:10,28:13181,1107,1
+> 5:False:10,26:13181,1107,1
+> 6:False:10,30:13181,1107,1
+> 7:False:10,29:13181,1107,2
+> 8:False:10,27:13181,1107,2
+> 9:False:10,26:13181,1107,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-3_70_3.tar.bz2:1.6554608345031738:0.6407582:1.6499999999998636
+> 0:False:10,29:13184,1116,2
+> 1:False:10,28:13184,1116,2
+> 2:True:10,22:13184,1116,2
+> 3:False:10,27:13184,1116,2
+> 4:False:10,26:13184,1116,1
+> 5:False:10,27:13184,1116,2
+> 6:False:10,32:13184,1116,2
+> 7:False:10,29:13184,1116,1
+> 8:False:10,28:13184,1116,2
+> 9:False:10,27:13184,1116,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_1.tar.bz2:1.58259916305542:0.5286362:1.580000000000041
+> 0:False:10,28:13185,1119,2
+> 1:False:10,30:13185,1119,2
+> 2:False:10,30:13185,1119,2
+> 3:True:10,25:13185,1119,2
+> 4:False:10,31:13185,1119,1
+> 5:False:10,27:13185,1119,2
+> 6:False:10,27:13185,1119,1
+> 7:False:10,29:13185,1119,2
+> 8:False:10,26:13185,1119,2
+> 9:True:10,25:13185,1119,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_2.tar.bz2:1.6683266162872314:0.6689747:1.6599999999999682
+> 0:False:10,30:13185,1119,2
+> 1:False:10,33:13185,1119,1
+> 2:False:10,30:13185,1119,2
+> 3:True:10,25:13185,1119,2
+> 4:False:10,35:13185,1119,2
+> 5:False:10,29:13185,1119,2
+> 6:False:10,30:13185,1119,2
+> 7:False:10,33:13185,1119,1
+> 8:False:10,26:13185,1119,2
+> 9:True:10,25:13185,1119,3
+logistics-suboptimal-old-noisy/70/logistics_noisy_p01_hyp-4_70_3.tar.bz2:1.6008548736572266:0.5919898:1.599999999999909
+> 0:False:10,28:13183,1113,1
+> 1:False:10,31:13183,1113,0
+> 2:False:10,29:13183,1113,0
+> 3:True:10,23:13183,1113,1
+> 4:False:10,33:13183,1113,0
+> 5:False:10,27:13183,1113,1
+> 6:False:10,29:13183,1113,1
+> 7:False:10,31:13183,1113,1
+> 8:False:10,25:13183,1113,1
+> 9:False:10,24:13183,1113,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_1.tar.bz2:1.6131219863891602:0.5922284:1.6100000000001273
+> 0:False:10,26:13183,1113,2
+> 1:True:10,21:13183,1113,2
+> 2:False:10,30:13183,1113,2
+> 3:False:10,26:13183,1113,3
+> 4:False:10,28:13183,1113,2
+> 5:False:10,25:13183,1113,3
+> 6:False:10,29:13183,1113,2
+> 7:False:10,23:13183,1113,2
+> 8:False:10,26:13183,1113,2
+> 9:False:10,28:13183,1113,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_2.tar.bz2:1.5550332069396973:0.5461761:1.5499999999999545
+> 0:False:10,27:13183,1113,1
+> 1:True:10,22:13183,1113,2
+> 2:False:10,29:13183,1113,1
+> 3:False:10,27:13183,1113,1
+> 4:False:10,30:13183,1113,1
+> 5:False:10,26:13183,1113,2
+> 6:False:10,30:13183,1113,1
+> 7:False:10,24:13183,1113,1
+> 8:False:10,27:13183,1113,1
+> 9:False:10,28:13183,1113,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-1_70_3.tar.bz2:1.490471601486206:0.4716109:1.4899999999998954
+> 0:False:10,27:13182,1110,2
+> 1:True:10,22:13182,1110,2
+> 2:False:10,31:13182,1110,2
+> 3:False:10,26:13182,1110,2
+> 4:False:10,30:13182,1110,2
+> 5:False:10,25:13182,1110,1
+> 6:False:10,30:13182,1110,2
+> 7:False:10,25:13182,1110,2
+> 8:False:10,27:13182,1110,2
+> 9:False:10,29:13182,1110,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_1.tar.bz2:1.42083740234375:0.41113879999999997:1.4200000000000728
+> 0:True:10,21:13181,1107,1
+> 1:False:10,24:13181,1107,1
+> 2:False:10,25:13181,1107,1
+> 3:False:10,24:13181,1107,1
+> 4:False:10,27:13181,1107,1
+> 5:True:10,21:13181,1107,1
+> 6:False:10,27:13181,1107,1
+> 7:False:10,23:13181,1107,1
+> 8:False:10,24:13181,1107,1
+> 9:False:10,24:13181,1107,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_2.tar.bz2:1.4060814380645752:0.4186312:1.3999999999999773
+> 0:True:10,22:13181,1107,2
+> 1:False:10,26:13181,1107,2
+> 2:False:10,27:13181,1107,1
+> 3:False:10,26:13181,1107,2
+> 4:False:10,28:13181,1107,2
+> 5:False:10,23:13181,1107,2
+> 6:False:10,28:13181,1107,2
+> 7:False:10,24:13181,1107,2
+> 8:False:10,25:13181,1107,2
+> 9:False:10,26:13181,1107,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-2_70_3.tar.bz2:1.5477361679077148:0.5174795999999999:1.5399999999999636
+> 0:True:10,21:13181,1107,1
+> 1:False:10,27:13181,1107,2
+> 2:False:10,27:13181,1107,1
+> 3:False:10,27:13181,1107,2
+> 4:False:10,30:13181,1107,1
+> 5:False:10,22:13181,1107,1
+> 6:False:10,30:13181,1107,1
+> 7:False:10,25:13181,1107,1
+> 8:False:10,26:13181,1107,1
+> 9:False:10,25:13181,1107,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_1.tar.bz2:1.7758803367614746:0.7779184:1.7699999999999818
+> 0:False:10,28:13185,1119,6
+> 1:False:10,31:13185,1119,7
+> 2:True:10,23:13185,1119,7
+> 3:False:10,31:13185,1119,7
+> 4:False:10,31:13185,1119,7
+> 5:False:10,28:13185,1119,6
+> 6:False:10,31:13185,1119,6
+> 7:False:10,31:13185,1119,5
+> 8:False:10,31:13185,1119,6
+> 9:False:10,25:13185,1119,6
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_2.tar.bz2:1.5441315174102783:0.5432237:1.5499999999999545
+> 0:False:10,28:13185,1119,2
+> 1:False:10,32:13185,1119,2
+> 2:True:10,23:13185,1119,2
+> 3:False:10,31:13185,1119,2
+> 4:False:10,32:13185,1119,1
+> 5:False:10,28:13185,1119,2
+> 6:False:10,32:13185,1119,1
+> 7:False:10,31:13185,1119,2
+> 8:False:10,32:13185,1119,1
+> 9:False:10,24:13185,1119,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-3_70_3.tar.bz2:1.5137646198272705:0.5010260000000001:1.509999999999991
+> 0:False:10,27:13182,1110,1
+> 1:False:10,30:13182,1110,2
+> 2:True:10,23:13182,1110,1
+> 3:False:10,29:13182,1110,2
+> 4:False:10,30:13182,1110,1
+> 5:False:10,26:13182,1110,1
+> 6:False:10,31:13182,1110,1
+> 7:False:10,30:13182,1110,1
+> 8:False:10,31:13182,1110,1
+> 9:True:10,23:13182,1110,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_1.tar.bz2:1.4720642566680908:0.48239730000000003:1.4699999999999136
+> 0:False:10,27:13183,1113,0
+> 1:False:10,26:13183,1113,0
+> 2:False:10,28:13183,1113,0
+> 3:True:10,21:13183,1113,1
+> 4:False:10,25:13183,1113,0
+> 5:False:10,25:13183,1113,0
+> 6:False:10,26:13183,1113,0
+> 7:False:10,27:13183,1113,0
+> 8:False:10,25:13183,1113,0
+> 9:False:10,27:13183,1113,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_2.tar.bz2:1.5406854152679443:0.5180346:1.5400000000000773
+> 0:False:10,29:13182,1110,1
+> 1:False:10,29:13182,1110,1
+> 2:False:10,30:13182,1110,2
+> 3:True:10,24:13182,1110,2
+> 4:False:10,26:13182,1110,2
+> 5:False:10,28:13182,1110,2
+> 6:False:10,27:13182,1110,2
+> 7:False:10,29:13182,1110,2
+> 8:False:10,27:13182,1110,2
+> 9:False:10,29:13182,1110,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p02_hyp-4_70_3.tar.bz2:1.5571317672729492:0.5476404:1.5499999999999545
+> 0:False:10,27:13183,1113,2
+> 1:False:10,27:13183,1113,1
+> 2:False:10,30:13183,1113,2
+> 3:True:10,23:13183,1113,4
+> 4:False:10,29:13183,1113,3
+> 5:False:10,26:13183,1113,1
+> 6:False:10,29:13183,1113,3
+> 7:False:10,27:13183,1113,2
+> 8:False:10,26:13183,1113,3
+> 9:False:10,30:13183,1113,2
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_1.tar.bz2:1.6083424091339111:0.5257674:1.6000000000000227
+> 0:True:10,17:17059,1288,0
+> 1:False:8,21:17059,1288,0
+> 2:False:7,22:17059,1288,0
+> 3:False:10,23:17059,1288,0
+> 4:False:10,24:17059,1288,0
+> 5:False:8,20:17059,1288,0
+> 6:False:10,23:17059,1288,0
+> 7:False:10,24:17059,1288,0
+> 8:False:10,21:17059,1288,0
+> 9:False:10,23:17059,1288,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_2.tar.bz2:1.571197271347046:0.491469:1.57000000000005
+> 0:True:10,18:17058,1285,0
+> 1:False:8,24:17058,1285,0
+> 2:False:7,24:17058,1285,0
+> 3:False:10,23:17058,1285,0
+> 4:False:10,26:17058,1285,0
+> 5:False:8,22:17058,1285,0
+> 6:False:10,23:17058,1285,0
+> 7:False:10,26:17058,1285,0
+> 8:False:10,24:17058,1285,0
+> 9:False:10,23:17058,1285,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-1_70_3.tar.bz2:1.726139783859253:0.6475898999999999:1.7299999999999045
+> 0:True:10,17:17058,1285,0
+> 1:False:8,23:17058,1285,2
+> 2:False:7,24:17058,1285,0
+> 3:False:10,23:17058,1285,1
+> 4:False:10,26:17058,1285,1
+> 5:False:8,22:17058,1285,0
+> 6:False:10,23:17058,1285,1
+> 7:False:10,26:17058,1285,1
+> 8:False:10,23:17058,1285,0
+> 9:False:10,23:17058,1285,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_1.tar.bz2:1.6870312690734863:0.6116498:1.6900000000000546
+> 0:False:10,21:17054,1273,0
+> 1:True:8,14:17054,1273,0
+> 2:False:7,20:17054,1273,0
+> 3:False:10,21:17054,1273,0
+> 4:False:10,18:17054,1273,0
+> 5:False:8,20:17054,1273,0
+> 6:False:10,22:17054,1273,0
+> 7:False:10,19:17054,1273,0
+> 8:False:10,22:17054,1273,0
+> 9:False:10,21:17054,1273,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_2.tar.bz2:1.6122899055480957:0.5432217:1.6200000000000045
+> 0:False:10,19:17055,1276,1
+> 1:True:8,13:17055,1276,0
+> 2:False:7,18:17055,1276,2
+> 3:False:10,20:17055,1276,2
+> 4:False:10,16:17055,1276,2
+> 5:False:8,18:17055,1276,2
+> 6:False:10,21:17055,1276,2
+> 7:False:10,17:17055,1276,2
+> 8:False:10,20:17055,1276,2
+> 9:False:10,19:17055,1276,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-2_70_3.tar.bz2:1.551544427871704:0.4839894:1.5500000000000682
+> 0:False:10,18:17054,1273,0
+> 1:True:8,14:17054,1273,0
+> 2:False:7,17:17054,1273,0
+> 3:False:10,19:17054,1273,0
+> 4:True:10,16:17054,1273,0
+> 5:False:8,17:17054,1273,0
+> 6:False:10,20:17054,1273,0
+> 7:False:10,17:17054,1273,0
+> 8:False:10,19:17054,1273,0
+> 9:False:10,18:17054,1273,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_1.tar.bz2:1.6291630268096924:0.5484667999999999:1.6299999999998818
+> 0:False:10,20:17054,1273,0
+> 1:False:8,19:17054,1273,0
+> 2:True:7,11:17054,1273,0
+> 3:False:10,21:17054,1273,0
+> 4:False:10,17:17054,1273,0
+> 5:False:8,16:17054,1273,0
+> 6:False:10,17:17054,1273,0
+> 7:False:10,19:17054,1273,0
+> 8:False:10,20:17054,1273,0
+> 9:False:10,20:17054,1273,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_2.tar.bz2:1.7497155666351318:0.7068555:1.7400000000001228
+> 0:False:10,21:17055,1276,0
+> 1:False:8,20:17055,1276,0
+> 2:True:7,12:17055,1276,0
+> 3:False:10,22:17055,1276,0
+> 4:False:10,18:17055,1276,0
+> 5:False:8,17:17055,1276,0
+> 6:False:10,18:17055,1276,0
+> 7:False:10,20:17055,1276,0
+> 8:False:10,21:17055,1276,0
+> 9:False:10,21:17055,1276,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-3_70_3.tar.bz2:1.7286286354064941:0.6418346:1.7299999999999045
+> 0:False:10,21:17055,1276,0
+> 1:False:8,20:17055,1276,0
+> 2:True:7,12:17055,1276,0
+> 3:False:10,22:17055,1276,0
+> 4:False:10,18:17055,1276,0
+> 5:False:8,17:17055,1276,0
+> 6:False:10,18:17055,1276,0
+> 7:False:10,20:17055,1276,0
+> 8:False:10,21:17055,1276,0
+> 9:False:10,21:17055,1276,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_1.tar.bz2:1.765134572982788:0.6926393000000001:1.7600000000001046
+> 0:False:10,22:17059,1288,1
+> 1:False:8,22:17059,1288,1
+> 2:False:7,24:17059,1288,1
+> 3:True:10,18:17059,1288,1
+> 4:False:10,25:17059,1288,1
+> 5:False:8,24:17059,1288,1
+> 6:False:10,22:17059,1288,1
+> 7:False:10,23:17059,1288,2
+> 8:False:10,26:17059,1288,1
+> 9:False:10,19:17059,1288,1
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_2.tar.bz2:1.5831902027130127:0.5188754:1.5799999999999272
+> 0:False:10,21:17058,1285,0
+> 1:False:8,20:17058,1285,0
+> 2:False:7,22:17058,1285,0
+> 3:False:10,19:17058,1285,0
+> 4:False:10,23:17058,1285,0
+> 5:False:8,22:17058,1285,0
+> 6:False:10,22:17058,1285,0
+> 7:False:10,21:17058,1285,0
+> 8:False:10,24:17058,1285,0
+> 9:True:10,18:17058,1285,0
+logistics-suboptimal-old-noisy/70/logistics_noisy_p03_hyp-4_70_3.tar.bz2:1.790590763092041:0.7068523:1.8000000000000682
+> 0:False:10,22:17060,1291,3
+> 1:False:8,22:17060,1291,0
+> 2:False:7,24:17060,1291,1
+> 3:True:10,18:17060,1291,3
+> 4:False:10,25:17060,1291,2
+> 5:False:8,24:17060,1291,6
+> 6:False:10,23:17060,1291,3
+> 7:False:10,23:17060,1291,5
+> 8:False:10,26:17060,1291,6
+> 9:True:10,18:17060,1291,2
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_1.tar.bz2:1.4551434516906738:0.45216219999999996:1.4499999999999318
+> 0:True:10,24:13186,1122,1
+> 1:False:10,32:13186,1122,1
+> 2:False:10,32:13186,1122,1
+> 3:False:10,28:13186,1122,1
+> 4:False:10,29:13186,1122,1
+> 5:False:10,32:13186,1122,1
+> 6:False:10,30:13186,1122,1
+> 7:False:10,29:13186,1122,1
+> 8:False:10,29:13186,1122,1
+> 9:False:10,29:13186,1122,1
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_2.tar.bz2:1.5571575164794922:0.5258916:1.5600000000000591
+> 0:True:10,25:13189,1131,3
+> 1:False:10,33:13189,1131,4
+> 2:False:10,32:13189,1131,0
+> 3:False:10,29:13189,1131,2
+> 4:False:10,29:13189,1131,1
+> 5:False:10,32:13189,1131,4
+> 6:False:10,30:13189,1131,0
+> 7:False:10,29:13189,1131,3
+> 8:False:10,28:13189,1131,0
+> 9:False:10,28:13189,1131,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-1_full_3.tar.bz2:1.4906597137451172:0.4585749:1.490000000000009
+> 0:True:10,24:13187,1125,1
+> 1:False:10,32:13187,1125,0
+> 2:False:10,32:13187,1125,1
+> 3:False:10,28:13187,1125,1
+> 4:False:10,29:13187,1125,1
+> 5:False:10,32:13187,1125,0
+> 6:False:10,30:13187,1125,1
+> 7:False:10,29:13187,1125,1
+> 8:False:10,29:13187,1125,1
+> 9:False:10,29:13187,1125,1
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_1.tar.bz2:1.6141233444213867:0.5921879000000001:1.6100000000000136
+> 0:False:10,36:13189,1131,4
+> 1:True:10,27:13189,1131,4
+> 2:False:10,33:13189,1131,3
+> 3:False:10,35:13189,1131,3
+> 4:False:10,33:13189,1131,4
+> 5:False:10,35:13189,1131,3
+> 6:False:10,31:13189,1131,4
+> 7:False:10,35:13189,1131,3
+> 8:False:10,35:13189,1131,4
+> 9:False:10,35:13189,1131,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_2.tar.bz2:1.5499305725097656:0.5358563:1.5500000000000682
+> 0:False:10,35:13189,1131,1
+> 1:True:10,26:13189,1131,3
+> 2:False:10,32:13189,1131,1
+> 3:False:10,34:13189,1131,2
+> 4:False:10,32:13189,1131,3
+> 5:False:10,34:13189,1131,1
+> 6:False:10,30:13189,1131,1
+> 7:False:10,34:13189,1131,0
+> 8:False:10,34:13189,1131,1
+> 9:False:10,34:13189,1131,1
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-2_full_3.tar.bz2:1.5270640850067139:0.5039411000000001:1.5199999999999818
+> 0:False:10,34:13190,1134,3
+> 1:True:10,26:13190,1134,2
+> 2:False:10,32:13190,1134,1
+> 3:False:10,34:13190,1134,1
+> 4:False:10,31:13190,1134,1
+> 5:False:10,34:13190,1134,1
+> 6:False:10,30:13190,1134,3
+> 7:False:10,33:13190,1134,1
+> 8:False:10,34:13190,1134,1
+> 9:False:10,34:13190,1134,1
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_1.tar.bz2:1.5062646865844727:0.47689139999999997:1.509999999999991
+> 0:False:10,35:13189,1131,3
+> 1:False:10,33:13189,1131,4
+> 2:True:10,27:13189,1131,2
+> 3:False:10,32:13189,1131,3
+> 4:False:10,32:13189,1131,4
+> 5:False:10,32:13189,1131,4
+> 6:False:10,36:13189,1131,3
+> 7:False:10,35:13189,1131,4
+> 8:False:10,33:13189,1131,4
+> 9:False:10,32:13189,1131,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_2.tar.bz2:1.547243595123291:0.5339234:1.5399999999999636
+> 0:False:10,35:13191,1137,3
+> 1:False:10,33:13191,1137,3
+> 2:True:10,27:13191,1137,4
+> 3:False:10,32:13191,1137,3
+> 4:False:10,33:13191,1137,2
+> 5:False:10,31:13191,1137,3
+> 6:False:10,37:13191,1137,3
+> 7:False:10,34:13191,1137,3
+> 8:False:10,33:13191,1137,3
+> 9:False:10,32:13191,1137,2
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-3_full_3.tar.bz2:1.536463975906372:0.5187089:1.5299999999999727
+> 0:False:10,35:13188,1128,4
+> 1:False:10,32:13188,1128,5
+> 2:True:10,27:13188,1128,6
+> 3:False:10,32:13188,1128,4
+> 4:False:10,33:13188,1128,6
+> 5:False:10,32:13188,1128,4
+> 6:False:10,37:13188,1128,4
+> 7:False:10,35:13188,1128,4
+> 8:False:10,33:13188,1128,5
+> 9:False:10,32:13188,1128,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_1.tar.bz2:1.4362995624542236:0.4325576:1.4300000000000637
+> 0:False:10,32:13188,1128,3
+> 1:False:10,35:13188,1128,3
+> 2:False:10,33:13188,1128,3
+> 3:True:10,27:13188,1128,3
+> 4:False:10,37:13188,1128,3
+> 5:False:10,31:13188,1128,3
+> 6:False:10,33:13188,1128,3
+> 7:False:10,35:13188,1128,3
+> 8:False:10,29:13188,1128,3
+> 9:False:10,28:13188,1128,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_2.tar.bz2:1.4629180431365967:0.4349871:1.4700000000000273
+> 0:False:10,32:13189,1131,2
+> 1:False:10,34:13189,1131,3
+> 2:False:10,33:13189,1131,2
+> 3:True:10,27:13189,1131,3
+> 4:False:10,37:13189,1131,3
+> 5:False:10,31:13189,1131,3
+> 6:False:10,32:13189,1131,3
+> 7:False:10,35:13189,1131,2
+> 8:False:10,29:13189,1131,2
+> 9:False:10,28:13189,1131,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p01_hyp-4_full_3.tar.bz2:1.4773201942443848:0.46505650000000004:1.4800000000000182
+> 0:False:10,32:13191,1137,3
+> 1:False:10,35:13191,1137,3
+> 2:False:10,33:13191,1137,3
+> 3:True:10,27:13191,1137,3
+> 4:False:10,37:13191,1137,3
+> 5:False:10,31:13191,1137,3
+> 6:False:10,33:13191,1137,3
+> 7:False:10,35:13191,1137,3
+> 8:False:10,29:13191,1137,3
+> 9:False:10,28:13191,1137,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_1.tar.bz2:1.4633750915527344:0.4363523:1.4599999999999227
+> 0:False:10,31:13187,1125,3
+> 1:True:10,25:13187,1125,3
+> 2:False:10,35:13187,1125,3
+> 3:False:10,30:13187,1125,3
+> 4:False:10,33:13187,1125,3
+> 5:False:10,29:13187,1125,3
+> 6:False:10,34:13187,1125,3
+> 7:False:10,28:13187,1125,3
+> 8:False:10,31:13187,1125,3
+> 9:False:10,33:13187,1125,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_2.tar.bz2:1.4818499088287354:0.45333409999999996:1.4800000000000182
+> 0:False:10,31:13189,1131,4
+> 1:True:10,25:13189,1131,4
+> 2:False:10,34:13189,1131,4
+> 3:False:10,30:13189,1131,4
+> 4:False:10,34:13189,1131,4
+> 5:False:10,29:13189,1131,4
+> 6:False:10,34:13189,1131,4
+> 7:False:10,28:13189,1131,4
+> 8:False:10,31:13189,1131,4
+> 9:False:10,33:13189,1131,4
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-1_full_3.tar.bz2:1.50396728515625:0.4964112:1.509999999999991
+> 0:False:10,31:13188,1128,3
+> 1:True:10,25:13188,1128,3
+> 2:False:10,35:13188,1128,3
+> 3:False:10,29:13188,1128,4
+> 4:False:10,33:13188,1128,3
+> 5:False:10,29:13188,1128,3
+> 6:False:10,34:13188,1128,2
+> 7:False:10,28:13188,1128,4
+> 8:False:10,31:13188,1128,3
+> 9:False:10,33:13188,1128,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_1.tar.bz2:1.465834617614746:0.435687:1.4700000000000273
+> 0:True:10,25:13187,1125,4
+> 1:False:10,31:13187,1125,5
+> 2:False:10,31:13187,1125,4
+> 3:False:10,31:13187,1125,5
+> 4:False:10,34:13187,1125,5
+> 5:False:10,26:13187,1125,5
+> 6:False:10,34:13187,1125,5
+> 7:False:10,29:13187,1125,4
+> 8:False:10,30:13187,1125,5
+> 9:False:10,29:13187,1125,4
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_2.tar.bz2:1.4613585472106934:0.45291979999999993:1.4599999999999227
+> 0:True:10,24:13188,1128,3
+> 1:False:10,29:13188,1128,3
+> 2:False:10,30:13188,1128,3
+> 3:False:10,30:13188,1128,3
+> 4:False:10,32:13188,1128,3
+> 5:False:10,25:13188,1128,3
+> 6:False:10,32:13188,1128,3
+> 7:False:10,28:13188,1128,3
+> 8:False:10,28:13188,1128,2
+> 9:False:10,28:13188,1128,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-2_full_3.tar.bz2:1.4903273582458496:0.46345689999999995:1.4900000000001228
+> 0:True:10,24:13189,1131,3
+> 1:False:10,30:13189,1131,2
+> 2:False:10,30:13189,1131,4
+> 3:False:10,30:13189,1131,2
+> 4:False:10,33:13189,1131,3
+> 5:False:10,25:13189,1131,3
+> 6:False:10,33:13189,1131,2
+> 7:False:10,28:13189,1131,2
+> 8:False:10,29:13189,1131,3
+> 9:False:10,28:13189,1131,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_1.tar.bz2:1.7308883666992188:0.6955032999999998:1.7199999999999136
+> 0:False:10,33:13191,1137,5
+> 1:False:10,37:13191,1137,4
+> 2:True:10,28:13191,1137,6
+> 3:False:10,36:13191,1137,4
+> 4:False:10,37:13191,1137,4
+> 5:False:10,33:13191,1137,4
+> 6:False:10,37:13191,1137,5
+> 7:False:10,36:13191,1137,5
+> 8:False:10,37:13191,1137,5
+> 9:False:10,30:13191,1137,5
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_2.tar.bz2:1.582024097442627:0.5616785000000001:1.57000000000005
+> 0:False:10,32:13192,1140,3
+> 1:False:10,36:13192,1140,3
+> 2:True:10,27:13192,1140,3
+> 3:False:10,35:13192,1140,3
+> 4:False:10,35:13192,1140,3
+> 5:False:10,32:13192,1140,3
+> 6:False:10,35:13192,1140,3
+> 7:False:10,35:13192,1140,3
+> 8:False:10,36:13192,1140,3
+> 9:False:10,29:13192,1140,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-3_full_3.tar.bz2:1.6720335483551025:0.6573989:1.6700000000000728
+> 0:False:10,33:13191,1137,4
+> 1:False:10,35:13191,1137,2
+> 2:True:10,28:13191,1137,5
+> 3:False:10,35:13191,1137,5
+> 4:False:10,35:13191,1137,2
+> 5:False:10,33:13191,1137,4
+> 6:False:10,35:13191,1137,2
+> 7:False:10,35:13191,1137,3
+> 8:False:10,35:13191,1137,2
+> 9:False:10,30:13191,1137,3
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_1.tar.bz2:1.4723057746887207:0.44544000000000006:1.4700000000000273
+> 0:False:10,32:13189,1131,1
+> 1:False:10,31:13189,1131,3
+> 2:False:10,35:13189,1131,3
+> 3:True:10,26:13189,1131,3
+> 4:False:10,32:13189,1131,3
+> 5:False:10,30:13189,1131,2
+> 6:False:10,33:13189,1131,3
+> 7:False:10,32:13189,1131,3
+> 8:False:10,30:13189,1131,3
+> 9:False:10,34:13189,1131,2
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_2.tar.bz2:1.5506465435028076:0.5559648:1.5399999999999636
+> 0:False:10,33:13191,1137,7
+> 1:False:10,32:13191,1137,5
+> 2:False:10,36:13191,1137,5
+> 3:True:10,27:13191,1137,7
+> 4:False:10,32:13191,1137,3
+> 5:False:10,31:13191,1137,6
+> 6:False:10,33:13191,1137,3
+> 7:False:10,33:13191,1137,7
+> 8:False:10,31:13191,1137,5
+> 9:False:10,35:13191,1137,5
+logistics-suboptimal-old-noisy/100/logistics_noisy_p02_hyp-4_full_3.tar.bz2:1.4938178062438965:0.48752170000000006:1.490000000000009
+> 0:False:10,33:13189,1131,4
+> 1:False:10,32:13189,1131,6
+> 2:False:10,36:13189,1131,7
+> 3:True:10,27:13189,1131,5
+> 4:False:10,33:13189,1131,4
+> 5:False:10,31:13189,1131,6
+> 6:False:10,34:13189,1131,4
+> 7:False:10,33:13189,1131,6
+> 8:False:10,31:13189,1131,7
+> 9:False:10,35:13189,1131,4
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_1.tar.bz2:1.605057954788208:0.5224143:1.5900000000000318
+> 0:True:10,19:17065,1306,2
+> 1:False:8,25:17065,1306,1
+> 2:False:7,26:17065,1306,2
+> 3:False:10,25:17065,1306,2
+> 4:False:10,28:17065,1306,2
+> 5:False:8,24:17065,1306,3
+> 6:False:10,25:17065,1306,2
+> 7:False:10,28:17065,1306,1
+> 8:False:10,24:17065,1306,2
+> 9:False:10,25:17065,1306,2
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_2.tar.bz2:1.6228551864624023:0.5621066:1.6199999999998909
+> 0:True:10,19:17064,1303,2
+> 1:False:8,24:17064,1303,1
+> 2:False:7,25:17064,1303,1
+> 3:False:10,24:17064,1303,1
+> 4:False:10,27:17064,1303,0
+> 5:False:8,24:17064,1303,2
+> 6:False:10,24:17064,1303,1
+> 7:False:10,27:17064,1303,0
+> 8:False:10,25:17064,1303,3
+> 9:False:10,24:17064,1303,1
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-1_full_3.tar.bz2:1.6063616275787354:0.5237119:1.6100000000001273
+> 0:True:10,19:17064,1303,4
+> 1:False:8,25:17064,1303,3
+> 2:False:7,25:17064,1303,0
+> 3:False:10,24:17064,1303,0
+> 4:False:10,27:17064,1303,0
+> 5:False:8,23:17064,1303,0
+> 6:False:10,24:17064,1303,0
+> 7:False:10,27:17064,1303,0
+> 8:False:10,25:17064,1303,5
+> 9:False:10,24:17064,1303,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_1.tar.bz2:1.5828118324279785:0.5096567:1.5699999999999363
+> 0:False:10,21:17059,1288,0
+> 1:True:8,14:17059,1288,0
+> 2:False:7,20:17059,1288,0
+> 3:False:10,21:17059,1288,0
+> 4:False:10,18:17059,1288,0
+> 5:False:8,20:17059,1288,0
+> 6:False:10,22:17059,1288,0
+> 7:False:10,19:17059,1288,0
+> 8:False:10,22:17059,1288,0
+> 9:False:10,21:17059,1288,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_2.tar.bz2:1.5548269748687744:0.4967980000000001:1.5600000000000591
+> 0:False:10,21:17058,1285,0
+> 1:True:8,14:17058,1285,0
+> 2:False:7,20:17058,1285,0
+> 3:False:10,21:17058,1285,0
+> 4:False:10,18:17058,1285,0
+> 5:False:8,20:17058,1285,0
+> 6:False:10,22:17058,1285,0
+> 7:False:10,19:17058,1285,0
+> 8:False:10,22:17058,1285,0
+> 9:False:10,21:17058,1285,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-2_full_3.tar.bz2:1.6074504852294922:0.5059524000000001:1.6000000000000227
+> 0:False:10,21:17058,1285,0
+> 1:True:8,14:17058,1285,0
+> 2:False:7,20:17058,1285,0
+> 3:False:10,21:17058,1285,0
+> 4:False:10,18:17058,1285,0
+> 5:False:8,20:17058,1285,0
+> 6:False:10,22:17058,1285,0
+> 7:False:10,19:17058,1285,0
+> 8:False:10,22:17058,1285,0
+> 9:False:10,21:17058,1285,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_1.tar.bz2:1.5557382106781006:0.4621742:1.5499999999999545
+> 0:False:10,21:17058,1285,0
+> 1:False:8,20:17058,1285,0
+> 2:True:7,12:17058,1285,0
+> 3:False:10,22:17058,1285,0
+> 4:False:10,18:17058,1285,0
+> 5:False:8,17:17058,1285,0
+> 6:False:10,18:17058,1285,0
+> 7:False:10,20:17058,1285,0
+> 8:False:10,21:17058,1285,0
+> 9:False:10,21:17058,1285,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_2.tar.bz2:1.55711030960083:0.4903986:1.5599999999999454
+> 0:False:10,21:17058,1285,0
+> 1:False:8,20:17058,1285,0
+> 2:True:7,12:17058,1285,0
+> 3:False:10,22:17058,1285,0
+> 4:False:10,18:17058,1285,0
+> 5:False:8,17:17058,1285,0
+> 6:False:10,18:17058,1285,0
+> 7:False:10,20:17058,1285,0
+> 8:False:10,21:17058,1285,0
+> 9:False:10,21:17058,1285,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-3_full_3.tar.bz2:1.608506441116333:0.5065672:1.599999999999909
+> 0:False:10,22:17059,1288,2
+> 1:False:8,21:17059,1288,2
+> 2:True:7,13:17059,1288,2
+> 3:False:10,23:17059,1288,2
+> 4:False:10,19:17059,1288,2
+> 5:False:8,18:17059,1288,1
+> 6:False:10,19:17059,1288,2
+> 7:False:10,21:17059,1288,2
+> 8:False:10,22:17059,1288,2
+> 9:False:10,22:17059,1288,2
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_1.tar.bz2:1.7096819877624512:0.6342071999999999:1.71000000000015
+> 0:False:10,24:17065,1306,5
+> 1:False:8,24:17065,1306,7
+> 2:False:7,25:17065,1306,5
+> 3:True:10,20:17065,1306,1
+> 4:False:10,27:17065,1306,6
+> 5:False:8,25:17065,1306,5
+> 6:False:10,23:17065,1306,7
+> 7:False:10,24:17065,1306,5
+> 8:False:10,26:17065,1306,7
+> 9:True:10,20:17065,1306,4
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_2.tar.bz2:1.617340087890625:0.5323634:1.6099999999999
+> 0:False:10,23:17064,1303,0
+> 1:False:8,23:17064,1303,0
+> 2:False:7,25:17064,1303,0
+> 3:True:10,19:17064,1303,0
+> 4:False:10,26:17064,1303,0
+> 5:False:8,25:17064,1303,0
+> 6:False:10,23:17064,1303,0
+> 7:False:10,24:17064,1303,0
+> 8:False:10,27:17064,1303,0
+> 9:True:10,19:17064,1303,0
+logistics-suboptimal-old-noisy/100/logistics_noisy_p03_hyp-4_full_3.tar.bz2:1.6137316226959229:0.5367345:1.6100000000001273
+> 0:False:10,22:17064,1303,0
+> 1:False:8,23:17064,1303,0
+> 2:False:7,25:17064,1303,0
+> 3:True:10,19:17064,1303,0
+> 4:False:10,26:17064,1303,0
+> 5:False:8,24:17064,1303,0
+> 6:False:10,23:17064,1303,0
+> 7:False:10,24:17064,1303,0
+> 8:False:10,26:17064,1303,0
+> 9:True:10,19:17064,1303,0

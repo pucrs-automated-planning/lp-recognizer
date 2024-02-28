@@ -1,180 +1,1380 @@
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_1.tar.bz2:0.7048540115356445:0.0:0.7
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_2.tar.bz2:0.7406141757965088:0.0:0.74
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_3.tar.bz2:0.7191615104675293:0.0:0.72
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_1.tar.bz2:0.736635684967041:0.0:0.7399999999999998
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_2.tar.bz2:0.7305407524108887:0.0:0.7200000000000002
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_3.tar.bz2:0.7155888080596924:0.0:0.71
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_1.tar.bz2:0.7305269241333008:0.0:0.7400000000000002
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_2.tar.bz2:0.7048921585083008:0.0:0.71
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_3.tar.bz2:0.7245490550994873:0.0:0.7199999999999998
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_1.tar.bz2:0.7153403759002686:0.0:0.7100000000000009
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_2.tar.bz2:0.7296876907348633:0.0:0.7299999999999995
-dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_3.tar.bz2:0.7305750846862793:0.0:0.7400000000000002
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_1.tar.bz2:0.5633676052093506:0.0:0.5700000000000003
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_2.tar.bz2:0.5688631534576416:0.0:0.5699999999999985
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_3.tar.bz2:0.5623664855957031:0.0:0.5599999999999987
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_1.tar.bz2:0.5564610958099365:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_2.tar.bz2:0.5456204414367676:0.0:0.5499999999999989
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_3.tar.bz2:0.5674762725830078:0.0:0.5700000000000003
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_1.tar.bz2:0.5488481521606445:0.0:0.5399999999999991
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_2.tar.bz2:0.5486166477203369:0.0:0.5500000000000007
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_3.tar.bz2:0.5470480918884277:0.0:0.5499999999999989
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_1.tar.bz2:0.5619368553161621:0.0:0.5700000000000021
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_2.tar.bz2:0.5436861515045166:0.0:0.5399999999999991
-dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_3.tar.bz2:0.5507111549377441:0.0:0.5500000000000007
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_1.tar.bz2:0.6609423160552979:0.0:0.6600000000000019
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_2.tar.bz2:0.6507353782653809:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_3.tar.bz2:0.6700475215911865:0.0:0.6699999999999982
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_1.tar.bz2:0.655562162399292:0.0:0.6500000000000021
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_2.tar.bz2:0.6543242931365967:0.0:0.6500000000000021
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_3.tar.bz2:0.6673533916473389:0.0:0.6600000000000037
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_1.tar.bz2:0.6522440910339355:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_2.tar.bz2:0.6545760631561279:0.0:0.6600000000000001
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_3.tar.bz2:0.6649971008300781:0.0:0.6600000000000001
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_1.tar.bz2:0.6233136653900146:0.0:0.620000000000001
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_2.tar.bz2:0.6696920394897461:0.0:0.6600000000000037
-dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_3.tar.bz2:0.6649472713470459:0.0:0.6600000000000001
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_1.tar.bz2:0.7320857048034668:0.0:0.7399999999999984
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_2.tar.bz2:0.7410986423492432:0.0:0.7300000000000004
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_3.tar.bz2:0.7277839183807373:0.0:0.7300000000000004
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_1.tar.bz2:0.7328922748565674:0.0:0.7299999999999969
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_2.tar.bz2:0.7088937759399414:0.0:0.7100000000000044
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_3.tar.bz2:0.7224991321563721:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_1.tar.bz2:0.7336673736572266:0.0:0.7300000000000004
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_2.tar.bz2:0.7666740417480469:0.0:0.7600000000000016
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_3.tar.bz2:0.7538430690765381:0.0:0.7600000000000016
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_1.tar.bz2:0.739464521408081:0.0:0.740000000000002
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_2.tar.bz2:0.7492635250091553:0.0:0.75
-dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_3.tar.bz2:0.7397308349609375:0.0:0.7399999999999984
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_1.tar.bz2:0.5522756576538086:0.0:0.5499999999999972
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_2.tar.bz2:0.5821728706359863:0.0:0.5900000000000034
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_3.tar.bz2:0.5558273792266846:0.0:0.5499999999999972
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_1.tar.bz2:0.5496950149536133:0.0:0.5500000000000043
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_2.tar.bz2:0.5585610866546631:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_3.tar.bz2:0.56964111328125:0.0:0.5799999999999983
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_1.tar.bz2:0.5588788986206055:0.0:0.5599999999999952
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_2.tar.bz2:0.5757932662963867:0.0:0.5799999999999983
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_3.tar.bz2:0.5605349540710449:0.0:0.5599999999999952
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_1.tar.bz2:0.5490021705627441:0.0:0.5500000000000043
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_2.tar.bz2:0.5620646476745605:0.0:0.5699999999999932
-dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_3.tar.bz2:0.5754611492156982:0.0:0.5599999999999952
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_1.tar.bz2:0.6571314334869385:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_2.tar.bz2:0.6571986675262451:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_3.tar.bz2:0.6386258602142334:0.0:0.6399999999999935
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_1.tar.bz2:0.6516187191009521:0.0:0.6500000000000057
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_2.tar.bz2:0.6486225128173828:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_3.tar.bz2:0.6484334468841553:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_1.tar.bz2:0.6553943157196045:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_2.tar.bz2:0.6416103839874268:0.0:0.6400000000000006
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_3.tar.bz2:0.6617064476013184:0.0:0.6600000000000037
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_1.tar.bz2:0.6530156135559082:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_2.tar.bz2:0.6444087028503418:0.0:0.6400000000000006
-dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_3.tar.bz2:0.6485214233398438:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_1.tar.bz2:0.7228190898895264:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_2.tar.bz2:0.7301559448242188:0.0:0.7399999999999949
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_3.tar.bz2:0.7292740345001221:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_1.tar.bz2:0.7089533805847168:0.0:0.7100000000000009
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_2.tar.bz2:0.7256152629852295:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_3.tar.bz2:0.7288062572479248:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_1.tar.bz2:0.7207982540130615:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_2.tar.bz2:0.7313253879547119:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_3.tar.bz2:0.7199616432189941:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_1.tar.bz2:0.7151620388031006:0.0:0.720000000000006
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_2.tar.bz2:0.7130742073059082:0.0:0.7099999999999937
-dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_3.tar.bz2:0.7433280944824219:0.0:0.75
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_1.tar.bz2:0.5568180084228516:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_2.tar.bz2:0.5599243640899658:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_3.tar.bz2:0.590609073638916:0.0:0.5900000000000034
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_1.tar.bz2:0.5540869235992432:0.0:0.5400000000000063
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_2.tar.bz2:0.5672857761383057:0.0:0.5699999999999932
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_3.tar.bz2:0.5515902042388916:0.0:0.5399999999999991
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_1.tar.bz2:0.5603625774383545:0.0:0.5599999999999952
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_2.tar.bz2:0.5617194175720215:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_3.tar.bz2:0.5462985038757324:0.0:0.539999999999992
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_1.tar.bz2:0.5720171928405762:0.0:0.5700000000000003
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_2.tar.bz2:0.568854570388794:0.0:0.5700000000000003
-dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_3.tar.bz2:0.5539703369140625:0.0:0.5500000000000043
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_1.tar.bz2:0.6451728343963623:0.0:0.6499999999999986
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_2.tar.bz2:0.6350924968719482:0.0:0.6400000000000006
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_3.tar.bz2:0.645552396774292:0.0:0.6400000000000006
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_1.tar.bz2:0.6621546745300293:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_2.tar.bz2:0.6520330905914307:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_3.tar.bz2:0.6437723636627197:0.0:0.6399999999999864
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_1.tar.bz2:0.6581354141235352:0.0:0.6600000000000108
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_2.tar.bz2:0.6343214511871338:0.0:0.6400000000000006
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_3.tar.bz2:0.645305871963501:0.0:0.6500000000000057
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_1.tar.bz2:0.6497781276702881:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_2.tar.bz2:0.6518361568450928:0.0:0.6499999999999915
-dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_3.tar.bz2:0.6618163585662842:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_1.tar.bz2:0.7225251197814941:0.0:0.7199999999999989
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_2.tar.bz2:0.7279160022735596:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_3.tar.bz2:0.7428493499755859:0.0:0.75
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_1.tar.bz2:0.7427816390991211:0.0:0.75
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_2.tar.bz2:0.7462036609649658:0.0:0.7399999999999949
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_3.tar.bz2:0.7399342060089111:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_1.tar.bz2:0.7385342121124268:0.0:0.75
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_2.tar.bz2:0.7406585216522217:0.0:0.75
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_3.tar.bz2:0.7399516105651855:0.0:0.7399999999999949
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_1.tar.bz2:0.7378404140472412:0.0:0.7400000000000091
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_2.tar.bz2:0.7534036636352539:0.0:0.75
-dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_3.tar.bz2:0.752882719039917:0.0:0.7600000000000051
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_1.tar.bz2:0.5688662528991699:0.0:0.5599999999999881
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_2.tar.bz2:0.5666203498840332:0.0:0.5799999999999983
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_3.tar.bz2:0.5821743011474609:0.0:0.5800000000000125
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_1.tar.bz2:0.5750608444213867:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_2.tar.bz2:0.5781986713409424:0.0:0.5899999999999892
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_3.tar.bz2:0.5713403224945068:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_1.tar.bz2:0.565617561340332:0.0:0.5600000000000023
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_2.tar.bz2:0.5479278564453125:0.0:0.539999999999992
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_3.tar.bz2:0.5665426254272461:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_1.tar.bz2:0.5604684352874756:0.0:0.5499999999999972
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_2.tar.bz2:0.5691583156585693:0.0:0.5799999999999983
-dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_3.tar.bz2:0.5678656101226807:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_1.tar.bz2:0.6573870182037354:0.0:0.6499999999999915
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_2.tar.bz2:0.6537487506866455:0.0:0.6500000000000057
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_3.tar.bz2:0.6511285305023193:0.0:0.6499999999999915
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_1.tar.bz2:0.6653101444244385:0.0:0.6700000000000017
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_2.tar.bz2:0.6731619834899902:0.0:0.6799999999999926
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_3.tar.bz2:0.6736500263214111:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_1.tar.bz2:0.6753265857696533:0.0:0.6800000000000068
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_2.tar.bz2:0.6740505695343018:0.0:0.6600000000000108
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_3.tar.bz2:0.6669566631317139:0.0:0.6700000000000017
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_1.tar.bz2:0.6444454193115234:0.0:0.6399999999999864
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_2.tar.bz2:0.6561908721923828:0.0:0.6500000000000057
-dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_3.tar.bz2:0.657120943069458:0.0:0.6699999999999875
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_1.tar.bz2:0.7685754299163818:0.0:0.7600000000000051
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_2.tar.bz2:0.7377316951751709:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_3.tar.bz2:0.7397000789642334:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_1.tar.bz2:0.7450411319732666:0.0:0.7400000000000091
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_2.tar.bz2:0.7346739768981934:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_3.tar.bz2:0.7304377555847168:0.0:0.730000000000004
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_1.tar.bz2:0.7464799880981445:0.0:0.75
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_2.tar.bz2:0.750114917755127:0.0:0.75
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_3.tar.bz2:0.7416512966156006:0.0:0.75
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_1.tar.bz2:0.7357285022735596:0.0:0.7400000000000091
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_2.tar.bz2:0.76033616065979:0.0:0.7599999999999909
-dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_3.tar.bz2:0.751197099685669:0.0:0.7599999999999909
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_1.tar.bz2:0.5751338005065918:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_2.tar.bz2:0.5717644691467285:0.0:0.5699999999999932
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_3.tar.bz2:0.5718693733215332:0.0:0.5700000000000216
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_1.tar.bz2:0.5850629806518555:0.0:0.5799999999999983
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_2.tar.bz2:0.5778756141662598:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_3.tar.bz2:0.5686030387878418:0.0:0.5699999999999932
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_1.tar.bz2:0.5787353515625:0.0:0.5699999999999932
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_2.tar.bz2:0.5609705448150635:0.0:0.5599999999999881
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_3.tar.bz2:0.5849127769470215:0.0:0.5799999999999841
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_1.tar.bz2:0.5746603012084961:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_2.tar.bz2:0.5610780715942383:0.0:0.5599999999999881
-dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_3.tar.bz2:0.5695006847381592:0.0:0.5700000000000074
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_1.tar.bz2:0.6526451110839844:0.0:0.6499999999999915
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_2.tar.bz2:0.669243335723877:0.0:0.6700000000000017
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_3.tar.bz2:0.6552934646606445:0.0:0.6600000000000108
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_1.tar.bz2:0.65924072265625:0.0:0.6599999999999966
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_2.tar.bz2:0.6572756767272949:0.0:0.6499999999999915
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_3.tar.bz2:0.664372444152832:0.0:0.6700000000000017
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_1.tar.bz2:0.6576945781707764:0.0:0.6600000000000108
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_2.tar.bz2:0.6687431335449219:0.0:0.6700000000000017
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_3.tar.bz2:0.6747782230377197:0.0:0.6799999999999926
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_1.tar.bz2:0.6654000282287598:0.0:0.6600000000000108
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_2.tar.bz2:0.6597821712493896:0.0:0.660000000000025
-dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_3.tar.bz2:0.6717004776000977:0.0:0.6699999999999875
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_1.tar.bz2:0.872920036315918:0.07737627999999999:0.8700000000000001
+> 0:True:5,6:6860,1529
+> 1:False:5,7:6860,1529
+> 2:False:5,7:6860,1529
+> 3:False:5,7:6860,1529
+> 4:False:5,7:6860,1529
+> 5:False:5,7:6860,1529
+> 6:False:5,7:6860,1529
+> 7:True:5,6:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_2.tar.bz2:0.905503511428833:0.08131186000000001:0.9099999999999997
+> 0:True:5,7:6861,1530
+> 1:True:5,7:6861,1530
+> 2:True:5,7:6861,1530
+> 3:True:5,7:6861,1530
+> 4:True:5,7:6861,1530
+> 5:True:5,7:6861,1530
+> 6:True:5,7:6861,1530
+> 7:True:5,7:6861,1530
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-1_10_3.tar.bz2:0.8841607570648193:0.08261608000000001:0.8800000000000003
+> 0:True:5,6:6860,1529
+> 1:False:5,7:6860,1529
+> 2:False:5,7:6860,1529
+> 3:False:5,7:6860,1529
+> 4:False:5,7:6860,1529
+> 5:False:5,7:6860,1529
+> 6:False:5,7:6860,1529
+> 7:True:5,6:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_1.tar.bz2:0.8847918510437012:0.08531957000000001:0.8900000000000001
+> 0:True:5,7:6860,1529
+> 1:True:5,7:6860,1529
+> 2:True:5,7:6860,1529
+> 3:True:5,7:6860,1529
+> 4:True:5,7:6860,1529
+> 5:True:5,7:6860,1529
+> 6:True:5,7:6860,1529
+> 7:True:5,7:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_2.tar.bz2:0.8706760406494141:0.0820705:0.8699999999999997
+> 0:False:5,7:6861,1530
+> 1:True:5,6:6861,1530
+> 2:False:5,7:6861,1530
+> 3:False:5,7:6861,1530
+> 4:False:5,7:6861,1530
+> 5:False:5,7:6861,1530
+> 6:True:5,6:6861,1530
+> 7:True:5,6:6861,1530
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-2_10_3.tar.bz2:0.8651144504547119:0.07753725:0.8700000000000001
+> 0:True:5,6:6860,1529
+> 1:False:5,7:6860,1529
+> 2:False:5,7:6860,1529
+> 3:False:5,7:6860,1529
+> 4:False:5,7:6860,1529
+> 5:False:5,7:6860,1529
+> 6:False:5,7:6860,1529
+> 7:False:5,7:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_1.tar.bz2:0.9037199020385742:0.08661168000000001:0.9000000000000004
+> 0:True:5,7:6860,1529
+> 1:True:5,7:6860,1529
+> 2:True:5,7:6860,1529
+> 3:True:5,7:6860,1529
+> 4:True:5,7:6860,1529
+> 5:True:5,7:6860,1529
+> 6:True:5,7:6860,1529
+> 7:True:5,7:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_2.tar.bz2:0.8827164173126221:0.07957856999999999:0.879999999999999
+> 0:True:5,6:6860,1529
+> 1:True:5,6:6860,1529
+> 2:True:5,6:6860,1529
+> 3:False:5,7:6860,1529
+> 4:False:5,7:6860,1529
+> 5:False:5,7:6860,1529
+> 6:True:5,6:6860,1529
+> 7:True:5,6:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-3_10_3.tar.bz2:0.8997609615325928:0.08854309000000002:0.9000000000000004
+> 0:True:5,6:6861,1530
+> 1:True:5,6:6861,1530
+> 2:False:5,7:6861,1530
+> 3:False:5,7:6861,1530
+> 4:False:5,7:6861,1530
+> 5:True:5,6:6861,1530
+> 6:False:5,7:6861,1530
+> 7:False:5,7:6861,1530
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_1.tar.bz2:0.8774292469024658:0.08427758:0.8800000000000008
+> 0:True:5,7:6860,1529
+> 1:True:5,7:6860,1529
+> 2:True:5,7:6860,1529
+> 3:True:5,7:6860,1529
+> 4:True:5,7:6860,1529
+> 5:True:5,7:6860,1529
+> 6:True:5,7:6860,1529
+> 7:True:5,7:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_2.tar.bz2:0.8817474842071533:0.08331109:0.879999999999999
+> 0:True:5,7:6860,1529
+> 1:True:5,7:6860,1529
+> 2:True:5,7:6860,1529
+> 3:True:5,7:6860,1529
+> 4:True:5,7:6860,1529
+> 5:True:5,7:6860,1529
+> 6:True:5,7:6860,1529
+> 7:True:5,7:6860,1529
+dwr-suboptimal-old-noisy/10/dwr_noisy_p02_hyp-4_10_3.tar.bz2:0.8869566917419434:0.08299079999999999:0.879999999999999
+> 0:False:5,7:6861,1530
+> 1:True:5,6:6861,1530
+> 2:False:5,7:6861,1530
+> 3:False:5,7:6861,1530
+> 4:False:5,7:6861,1530
+> 5:True:5,6:6861,1530
+> 6:False:5,7:6861,1530
+> 7:False:5,7:6861,1530
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_1.tar.bz2:0.7163271903991699:0.0736853:0.7099999999999973
+> 0:False:3,5:9853,1916
+> 1:False:3,5:9853,1916
+> 2:True:4,5:9853,1916
+> 3:False:3,5:9853,1916
+> 4:False:3,5:9853,1916
+> 5:False:3,5:9853,1916
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_2.tar.bz2:0.7192525863647461:0.0808777:0.7300000000000004
+> 0:False:3,5:9853,1916
+> 1:False:3,5:9853,1916
+> 2:True:4,5:9853,1916
+> 3:False:3,5:9853,1916
+> 4:False:3,5:9853,1916
+> 5:False:3,5:9853,1916
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-1_10_3.tar.bz2:0.6926100254058838:0.06974113:0.6899999999999995
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_1.tar.bz2:0.6991662979125977:0.07286290000000001:0.6900000000000013
+> 0:False:3,6:9854,1917
+> 1:False:3,6:9854,1917
+> 2:True:4,6:9854,1917
+> 3:False:3,6:9854,1917
+> 4:False:3,6:9854,1917
+> 5:False:3,6:9854,1917
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_2.tar.bz2:0.7037086486816406:0.0698467:0.7099999999999991
+> 0:True:3,6:9854,1917
+> 1:True:3,6:9854,1917
+> 2:True:4,7:9854,1917
+> 3:True:3,6:9854,1917
+> 4:True:3,6:9854,1917
+> 5:True:3,6:9854,1917
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-2_10_3.tar.bz2:0.694350004196167:0.07288251:0.6900000000000013
+> 0:True:3,6:9853,1916
+> 1:True:3,6:9853,1916
+> 2:True:4,7:9853,1916
+> 3:True:3,6:9853,1916
+> 4:True:3,6:9853,1916
+> 5:True:3,6:9853,1916
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_1.tar.bz2:0.709850549697876:0.07565840000000001:0.7100000000000009
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_2.tar.bz2:0.7351419925689697:0.0813571:0.7300000000000004
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-3_10_3.tar.bz2:0.7097103595733643:0.0746477:0.7000000000000028
+> 0:False:3,5:9853,1916
+> 1:True:3,4:9853,1916
+> 2:True:4,5:9853,1916
+> 3:False:3,5:9853,1916
+> 4:False:3,5:9853,1916
+> 5:False:3,5:9853,1916
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_1.tar.bz2:0.7051670551300049:0.07134645:0.7100000000000009
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_2.tar.bz2:0.7048943042755127:0.0717665:0.6999999999999993
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p04_hyp-4_10_3.tar.bz2:0.7137784957885742:0.0774891:0.7300000000000004
+> 0:True:3,5:9852,1915
+> 1:True:3,5:9852,1915
+> 2:True:4,6:9852,1915
+> 3:True:3,5:9852,1915
+> 4:True:3,5:9852,1915
+> 5:True:3,5:9852,1915
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_1.tar.bz2:1.0931994915008545:0.18581609999999998:1.0899999999999999
+> 0:True:5,11:39000,4361
+> 1:True:5,11:39000,4361
+> 2:True:5,11:39000,4361
+> 3:True:4,10:39000,4361
+> 4:True:4,10:39000,4361
+> 5:True:4,10:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_2.tar.bz2:1.1122334003448486:0.1856308:1.1099999999999994
+> 0:True:5,11:39001,4362
+> 1:True:5,11:39001,4362
+> 2:True:5,11:39001,4362
+> 3:True:4,10:39001,4362
+> 4:True:4,10:39001,4362
+> 5:True:4,10:39001,4362
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-1_10_3.tar.bz2:1.1333751678466797:0.1924862:1.129999999999999
+> 0:True:5,10:39000,4361
+> 1:True:5,10:39000,4361
+> 2:False:5,11:39000,4361
+> 3:False:4,10:39000,4361
+> 4:False:4,10:39000,4361
+> 5:False:4,10:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_1.tar.bz2:1.1072587966918945:0.18570940000000002:1.1000000000000014
+> 0:False:5,11:39001,4362
+> 1:False:5,11:39001,4362
+> 2:True:5,10:39001,4362
+> 3:False:4,10:39001,4362
+> 4:False:4,10:39001,4362
+> 5:False:4,10:39001,4362
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_2.tar.bz2:1.1214938163757324:0.18600219999999998:1.1200000000000045
+> 0:True:5,10:39002,4363
+> 1:True:5,10:39002,4363
+> 2:True:5,10:39002,4363
+> 3:False:4,10:39002,4363
+> 4:False:4,10:39002,4363
+> 5:False:4,10:39002,4363
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-2_10_3.tar.bz2:1.117370367050171:0.1909269:1.120000000000001
+> 0:True:5,10:39001,4362
+> 1:False:5,11:39001,4362
+> 2:False:5,11:39001,4362
+> 3:False:4,10:39001,4362
+> 4:False:4,10:39001,4362
+> 5:False:4,10:39001,4362
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_1.tar.bz2:1.1253578662872314:0.1894088:1.120000000000001
+> 0:True:5,9:38999,4360
+> 1:True:5,9:38999,4360
+> 2:True:5,9:38999,4360
+> 3:True:4,8:38999,4360
+> 4:True:4,8:38999,4360
+> 5:True:4,8:38999,4360
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_2.tar.bz2:1.1277248859405518:0.18947329999999998:1.120000000000001
+> 0:True:5,9:39000,4361
+> 1:True:5,9:39000,4361
+> 2:True:5,9:39000,4361
+> 3:True:4,8:39000,4361
+> 4:True:4,8:39000,4361
+> 5:True:4,8:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-3_10_3.tar.bz2:1.1130850315093994:0.187205:1.0999999999999979
+> 0:True:5,8:39000,4361
+> 1:False:5,9:39000,4361
+> 2:False:5,9:39000,4361
+> 3:False:4,8:39000,4361
+> 4:False:4,8:39000,4361
+> 5:False:4,8:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_1.tar.bz2:1.1177921295166016:0.1855278:1.1099999999999994
+> 0:True:5,9:39000,4361
+> 1:True:5,9:39000,4361
+> 2:True:5,9:39000,4361
+> 3:True:4,8:39000,4361
+> 4:True:4,8:39000,4361
+> 5:True:4,8:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_2.tar.bz2:1.114025592803955:0.18218080000000003:1.1099999999999994
+> 0:True:5,8:39000,4361
+> 1:False:5,9:39000,4361
+> 2:False:5,9:39000,4361
+> 3:False:4,8:39000,4361
+> 4:False:4,8:39000,4361
+> 5:False:4,8:39000,4361
+dwr-suboptimal-old-noisy/10/dwr_noisy_p05_hyp-4_10_3.tar.bz2:1.1110608577728271:0.1915065:1.1099999999999994
+> 0:True:5,9:39000,4361
+> 1:True:5,9:39000,4361
+> 2:True:5,9:39000,4361
+> 3:True:4,8:39000,4361
+> 4:True:4,8:39000,4361
+> 5:True:4,8:39000,4361
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_1.tar.bz2:0.890045166015625:0.08829118000000001:0.8900000000000006
+> 0:True:5,10:6865,1534
+> 1:True:5,10:6865,1534
+> 2:True:5,10:6865,1534
+> 3:False:5,11:6865,1534
+> 4:False:5,11:6865,1534
+> 5:True:5,10:6865,1534
+> 6:True:5,10:6865,1534
+> 7:True:5,10:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_2.tar.bz2:0.883751630783081:0.08768181:0.8800000000000026
+> 0:True:5,10:6863,1532
+> 1:False:5,11:6863,1532
+> 2:False:5,11:6863,1532
+> 3:False:5,11:6863,1532
+> 4:False:5,11:6863,1532
+> 5:False:5,11:6863,1532
+> 6:False:5,11:6863,1532
+> 7:False:5,11:6863,1532
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-1_30_3.tar.bz2:0.8672363758087158:0.08496057:0.8699999999999974
+> 0:True:5,10:6865,1534
+> 1:True:5,10:6865,1534
+> 2:False:5,11:6865,1534
+> 3:False:5,11:6865,1534
+> 4:True:5,10:6865,1534
+> 5:True:5,10:6865,1534
+> 6:True:5,10:6865,1534
+> 7:True:5,10:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_1.tar.bz2:0.8689205646514893:0.08194003999999999:0.8599999999999923
+> 0:False:5,11:6864,1533
+> 1:True:5,9:6864,1533
+> 2:False:5,10:6864,1533
+> 3:False:5,11:6864,1533
+> 4:False:5,11:6864,1533
+> 5:False:5,10:6864,1533
+> 6:False:5,10:6864,1533
+> 7:False:5,10:6864,1533
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_2.tar.bz2:0.872321605682373:0.07489182:0.8800000000000026
+> 0:True:5,10:6864,1533
+> 1:False:5,11:6864,1533
+> 2:True:5,10:6864,1533
+> 3:False:5,11:6864,1533
+> 4:False:5,11:6864,1533
+> 5:False:5,11:6864,1533
+> 6:True:5,10:6864,1533
+> 7:True:5,10:6864,1533
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-2_30_3.tar.bz2:0.8920423984527588:0.09052619:0.8900000000000006
+> 0:False:5,11:6863,1532
+> 1:True:5,10:6863,1532
+> 2:True:5,10:6863,1532
+> 3:False:5,11:6863,1532
+> 4:False:5,11:6863,1532
+> 5:False:5,11:6863,1532
+> 6:True:5,10:6863,1532
+> 7:True:5,10:6863,1532
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_1.tar.bz2:0.8822531700134277:0.08575912999999999:0.8900000000000006
+> 0:True:5,9:6865,1534
+> 1:False:5,11:6865,1534
+> 2:False:5,10:6865,1534
+> 3:False:5,11:6865,1534
+> 4:False:5,11:6865,1534
+> 5:False:5,10:6865,1534
+> 6:False:5,10:6865,1534
+> 7:False:5,10:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_2.tar.bz2:0.8824276924133301:0.08434338999999999:0.8799999999999955
+> 0:True:5,10:6865,1534
+> 1:False:5,11:6865,1534
+> 2:True:5,10:6865,1534
+> 3:False:5,11:6865,1534
+> 4:False:5,11:6865,1534
+> 5:False:5,11:6865,1534
+> 6:False:5,11:6865,1534
+> 7:True:5,10:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-3_30_3.tar.bz2:0.8782327175140381:0.08000069:0.8700000000000045
+> 0:False:5,11:6864,1533
+> 1:True:5,10:6864,1533
+> 2:True:5,10:6864,1533
+> 3:False:5,11:6864,1533
+> 4:False:5,11:6864,1533
+> 5:False:5,11:6864,1533
+> 6:True:5,10:6864,1533
+> 7:True:5,10:6864,1533
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_1.tar.bz2:0.8899643421173096:0.08198946:0.8800000000000026
+> 0:False:5,11:6865,1534
+> 1:False:5,10:6865,1534
+> 2:False:5,10:6865,1534
+> 3:True:5,9:6865,1534
+> 4:False:5,10:6865,1534
+> 5:False:5,10:6865,1534
+> 6:True:5,9:6865,1534
+> 7:False:5,10:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_2.tar.bz2:0.9017219543457031:0.08682874:0.8999999999999986
+> 0:True:5,10:6865,1534
+> 1:False:5,11:6865,1534
+> 2:False:5,11:6865,1534
+> 3:False:5,11:6865,1534
+> 4:False:5,11:6865,1534
+> 5:False:5,11:6865,1534
+> 6:False:5,11:6865,1534
+> 7:False:5,11:6865,1534
+dwr-suboptimal-old-noisy/30/dwr_noisy_p02_hyp-4_30_3.tar.bz2:0.869868278503418:0.08131825:0.8600000000000065
+> 0:True:5,10:6864,1533
+> 1:False:5,11:6864,1533
+> 2:True:5,10:6864,1533
+> 3:False:5,11:6864,1533
+> 4:False:5,11:6864,1533
+> 5:False:5,11:6864,1533
+> 6:True:5,10:6864,1533
+> 7:True:5,10:6864,1533
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_1.tar.bz2:0.716425895690918:0.0746505:0.7199999999999989
+> 0:True:3,9:9856,1919
+> 1:True:3,9:9856,1919
+> 2:True:4,10:9856,1919
+> 3:True:3,9:9856,1919
+> 4:True:3,9:9856,1919
+> 5:True:3,9:9856,1919
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_2.tar.bz2:0.709078311920166:0.0698107:0.6999999999999957
+> 0:True:3,8:9857,1920
+> 1:False:3,9:9857,1920
+> 2:True:4,9:9857,1920
+> 3:False:3,9:9857,1920
+> 4:False:3,9:9857,1920
+> 5:False:3,9:9857,1920
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-1_30_3.tar.bz2:0.7126045227050781:0.0728204:0.7199999999999989
+> 0:True:3,9:9856,1919
+> 1:True:3,9:9856,1919
+> 2:True:4,10:9856,1919
+> 3:True:3,9:9856,1919
+> 4:True:3,9:9856,1919
+> 5:True:3,9:9856,1919
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_1.tar.bz2:0.7230179309844971:0.07671720000000001:0.720000000000006
+> 0:True:3,10:9857,1920
+> 1:True:3,10:9857,1920
+> 2:True:4,11:9857,1920
+> 3:True:3,10:9857,1920
+> 4:True:3,10:9857,1920
+> 5:True:3,10:9857,1920
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_2.tar.bz2:0.725172758102417:0.0741021:0.7199999999999989
+> 0:False:3,10:9858,1921
+> 1:False:3,10:9858,1921
+> 2:True:4,10:9858,1921
+> 3:False:3,10:9858,1921
+> 4:False:3,10:9858,1921
+> 5:False:3,10:9858,1921
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-2_30_3.tar.bz2:0.7288930416107178:0.07691860000000002:0.7199999999999989
+> 0:False:3,10:9857,1920
+> 1:False:3,10:9857,1920
+> 2:True:4,10:9857,1920
+> 3:False:3,10:9857,1920
+> 4:False:3,10:9857,1920
+> 5:False:3,10:9857,1920
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_1.tar.bz2:0.7191822528839111:0.0753405:0.720000000000006
+> 0:True:3,9:9857,1920
+> 1:True:3,9:9857,1920
+> 2:True:4,10:9857,1920
+> 3:True:3,9:9857,1920
+> 4:True:3,9:9857,1920
+> 5:True:3,9:9857,1920
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_2.tar.bz2:0.7110457420349121:0.07719140000000001:0.7199999999999918
+> 0:False:3,9:9857,1920
+> 1:True:3,7:9857,1920
+> 2:False:4,9:9857,1920
+> 3:False:3,8:9857,1920
+> 4:False:3,9:9857,1920
+> 5:False:3,9:9857,1920
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-3_30_3.tar.bz2:0.6938879489898682:0.07144935999999999:0.6900000000000048
+> 0:False:3,9:9858,1921
+> 1:True:3,8:9858,1921
+> 2:True:4,9:9858,1921
+> 3:True:3,8:9858,1921
+> 4:False:3,9:9858,1921
+> 5:False:3,9:9858,1921
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_1.tar.bz2:0.709686279296875:0.0766517:0.7099999999999937
+> 0:False:3,9:9856,1919
+> 1:False:3,9:9856,1919
+> 2:True:4,9:9856,1919
+> 3:False:3,9:9856,1919
+> 4:False:3,9:9856,1919
+> 5:False:3,9:9856,1919
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_2.tar.bz2:0.7056355476379395:0.07438349999999999:0.7100000000000009
+> 0:True:3,9:9856,1919
+> 1:True:3,9:9856,1919
+> 2:True:4,10:9856,1919
+> 3:True:3,9:9856,1919
+> 4:True:3,9:9856,1919
+> 5:True:3,9:9856,1919
+dwr-suboptimal-old-noisy/30/dwr_noisy_p04_hyp-4_30_3.tar.bz2:0.7241675853729248:0.0762442:0.7199999999999989
+> 0:True:3,9:9856,1919
+> 1:True:3,9:9856,1919
+> 2:True:4,10:9856,1919
+> 3:True:3,9:9856,1919
+> 4:True:3,9:9856,1919
+> 5:True:3,9:9856,1919
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_1.tar.bz2:1.0983998775482178:0.1876078:1.0999999999999943
+> 0:True:5,19:39010,4371
+> 1:False:5,20:39010,4371
+> 2:False:5,20:39010,4371
+> 3:False:4,20:39010,4371
+> 4:False:4,19:39010,4371
+> 5:False:4,19:39010,4371
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_2.tar.bz2:1.1248092651367188:0.1970893:1.1300000000000026
+> 0:True:5,20:39010,4371
+> 1:False:5,21:39010,4371
+> 2:False:5,21:39010,4371
+> 3:False:4,20:39010,4371
+> 4:False:4,20:39010,4371
+> 5:False:4,20:39010,4371
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-1_30_3.tar.bz2:1.1263201236724854:0.18963300000000002:1.1299999999999955
+> 0:True:5,20:39012,4373
+> 1:True:5,20:39012,4373
+> 2:True:5,20:39012,4373
+> 3:False:4,20:39012,4373
+> 4:False:4,20:39012,4373
+> 5:False:4,20:39012,4373
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_1.tar.bz2:1.1189041137695312:0.1912211:1.1200000000000045
+> 0:False:5,20:39011,4372
+> 1:True:5,19:39011,4372
+> 2:False:5,20:39011,4372
+> 3:False:4,20:39011,4372
+> 4:False:4,20:39011,4372
+> 5:False:4,20:39011,4372
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_2.tar.bz2:1.11602783203125:0.18951030000000002:1.1200000000000045
+> 0:False:5,21:39008,4369
+> 1:True:5,20:39008,4369
+> 2:True:5,20:39008,4369
+> 3:False:4,20:39008,4369
+> 4:False:4,20:39008,4369
+> 5:False:4,20:39008,4369
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-2_30_3.tar.bz2:1.1363341808319092:0.1942569:1.1400000000000006
+> 0:True:5,20:39006,4367
+> 1:True:5,20:39006,4367
+> 2:False:5,21:39006,4367
+> 3:False:4,20:39006,4367
+> 4:False:4,20:39006,4367
+> 5:False:4,20:39006,4367
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_1.tar.bz2:1.1306428909301758:0.1861659:1.1299999999999955
+> 0:True:5,17:39007,4368
+> 1:False:5,18:39007,4368
+> 2:False:5,18:39007,4368
+> 3:False:4,17:39007,4368
+> 4:False:4,17:39007,4368
+> 5:False:4,17:39007,4368
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_2.tar.bz2:1.1359336376190186:0.1960287:1.1400000000000077
+> 0:False:5,18:39010,4371
+> 1:True:5,17:39010,4371
+> 2:True:5,17:39010,4371
+> 3:False:4,17:39010,4371
+> 4:False:4,17:39010,4371
+> 5:False:4,17:39010,4371
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-3_30_3.tar.bz2:1.1277601718902588:0.1894114:1.1299999999999955
+> 0:True:5,17:39006,4367
+> 1:True:5,17:39006,4367
+> 2:False:5,18:39006,4367
+> 3:False:4,17:39006,4367
+> 4:True:4,16:39006,4367
+> 5:False:4,17:39006,4367
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_1.tar.bz2:1.127119541168213:0.1895337:1.1200000000000045
+> 0:True:5,16:39006,4367
+> 1:True:5,16:39006,4367
+> 2:True:5,16:39006,4367
+> 3:False:4,16:39006,4367
+> 4:False:4,16:39006,4367
+> 5:False:4,16:39006,4367
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_2.tar.bz2:1.1333439350128174:0.1902624:1.1399999999999935
+> 0:True:5,16:39007,4368
+> 1:True:5,16:39007,4368
+> 2:True:5,16:39007,4368
+> 3:True:4,15:39007,4368
+> 4:False:4,16:39007,4368
+> 5:False:4,16:39007,4368
+dwr-suboptimal-old-noisy/30/dwr_noisy_p05_hyp-4_30_3.tar.bz2:1.1330208778381348:0.1896497:1.1200000000000045
+> 0:True:5,16:39007,4368
+> 1:True:5,16:39007,4368
+> 2:True:5,16:39007,4368
+> 3:False:4,16:39007,4368
+> 4:False:4,16:39007,4368
+> 5:False:4,16:39007,4368
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_1.tar.bz2:0.9018881320953369:0.08461234:0.9000000000000057
+> 0:True:5,11:6868,1537
+> 1:True:5,11:6868,1537
+> 2:True:5,11:6868,1537
+> 3:True:5,11:6868,1537
+> 4:True:5,11:6868,1537
+> 5:False:5,12:6868,1537
+> 6:False:5,12:6868,1537
+> 7:True:5,11:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_2.tar.bz2:0.8792781829833984:0.0800025:0.8799999999999955
+> 0:True:5,11:6868,1537
+> 1:False:5,12:6868,1537
+> 2:True:5,11:6868,1537
+> 3:False:5,13:6868,1537
+> 4:False:5,12:6868,1537
+> 5:False:5,12:6868,1537
+> 6:False:5,12:6868,1537
+> 7:True:5,11:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-1_50_3.tar.bz2:0.8782844543457031:0.08113026999999999:0.8799999999999955
+> 0:True:5,10:6868,1537
+> 1:False:5,12:6868,1537
+> 2:False:5,11:6868,1537
+> 3:False:5,12:6868,1537
+> 4:False:5,12:6868,1537
+> 5:False:5,12:6868,1537
+> 6:False:5,12:6868,1537
+> 7:False:5,12:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_1.tar.bz2:0.8792586326599121:0.07847238999999999:0.8799999999999955
+> 0:False:5,13:6867,1536
+> 1:True:5,12:6867,1536
+> 2:False:5,13:6867,1536
+> 3:False:5,14:6867,1536
+> 4:False:5,14:6867,1536
+> 5:False:5,13:6867,1536
+> 6:False:5,13:6867,1536
+> 7:False:5,13:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_2.tar.bz2:0.8848471641540527:0.07704717999999999:0.8900000000000006
+> 0:False:5,13:6867,1536
+> 1:True:5,12:6867,1536
+> 2:False:5,13:6867,1536
+> 3:False:5,13:6867,1536
+> 4:False:5,13:6867,1536
+> 5:False:5,13:6867,1536
+> 6:False:5,13:6867,1536
+> 7:False:5,13:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-2_50_3.tar.bz2:0.8770921230316162:0.08550259:0.8799999999999955
+> 0:True:5,13:6867,1536
+> 1:True:5,13:6867,1536
+> 2:True:5,13:6867,1536
+> 3:False:5,14:6867,1536
+> 4:False:5,14:6867,1536
+> 5:True:5,13:6867,1536
+> 6:True:5,13:6867,1536
+> 7:True:5,13:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_1.tar.bz2:0.8812704086303711:0.08058676000000001:0.8799999999999955
+> 0:False:5,12:6867,1536
+> 1:False:5,12:6867,1536
+> 2:True:5,11:6867,1536
+> 3:False:5,12:6867,1536
+> 4:False:5,12:6867,1536
+> 5:False:5,12:6867,1536
+> 6:False:5,12:6867,1536
+> 7:False:5,12:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_2.tar.bz2:0.8811733722686768:0.08165216:0.8700000000000045
+> 0:True:5,11:6867,1536
+> 1:True:5,11:6867,1536
+> 2:True:5,11:6867,1536
+> 3:False:5,13:6867,1536
+> 4:False:5,12:6867,1536
+> 5:False:5,12:6867,1536
+> 6:False:5,12:6867,1536
+> 7:False:5,12:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-3_50_3.tar.bz2:0.8883349895477295:0.07669011:0.8999999999999915
+> 0:True:5,11:6867,1536
+> 1:False:5,12:6867,1536
+> 2:True:5,11:6867,1536
+> 3:False:5,13:6867,1536
+> 4:False:5,12:6867,1536
+> 5:False:5,12:6867,1536
+> 6:False:5,13:6867,1536
+> 7:False:5,12:6867,1536
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_1.tar.bz2:0.8940019607543945:0.08361827:0.8900000000000148
+> 0:False:5,13:6868,1537
+> 1:False:5,13:6868,1537
+> 2:False:5,13:6868,1537
+> 3:True:5,12:6868,1537
+> 4:False:5,13:6868,1537
+> 5:False:5,13:6868,1537
+> 6:True:5,12:6868,1537
+> 7:False:5,13:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_2.tar.bz2:0.8871273994445801:0.08077604:0.8800000000000097
+> 0:False:5,13:6868,1537
+> 1:False:5,13:6868,1537
+> 2:False:5,14:6868,1537
+> 3:False:5,13:6868,1537
+> 4:False:5,13:6868,1537
+> 5:True:5,12:6868,1537
+> 6:False:5,13:6868,1537
+> 7:False:5,13:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p02_hyp-4_50_3.tar.bz2:0.900923490524292:0.08613103:0.8999999999999915
+> 0:False:5,13:6868,1537
+> 1:False:5,13:6868,1537
+> 2:False:5,14:6868,1537
+> 3:True:5,12:6868,1537
+> 4:True:5,12:6868,1537
+> 5:True:5,12:6868,1537
+> 6:True:5,12:6868,1537
+> 7:False:5,13:6868,1537
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_1.tar.bz2:0.7047810554504395:0.0731541:0.710000000000008
+> 0:True:3,10:9858,1921
+> 1:False:3,11:9858,1921
+> 2:True:4,11:9858,1921
+> 3:False:3,11:9858,1921
+> 4:False:3,11:9858,1921
+> 5:True:3,10:9858,1921
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_2.tar.bz2:0.7050881385803223:0.0770848:0.7000000000000028
+> 0:True:3,9:9857,1920
+> 1:False:3,11:9857,1920
+> 2:False:4,11:9857,1920
+> 3:False:3,10:9857,1920
+> 4:False:3,11:9857,1920
+> 5:False:3,10:9857,1920
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-1_50_3.tar.bz2:0.7099130153656006:0.0731319:0.7000000000000028
+> 0:True:3,10:9857,1920
+> 1:False:3,11:9857,1920
+> 2:True:4,11:9857,1920
+> 3:False:3,11:9857,1920
+> 4:False:3,11:9857,1920
+> 5:False:3,11:9857,1920
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_1.tar.bz2:0.7083323001861572:0.0712027:0.7099999999999937
+> 0:False:3,14:9862,1925
+> 1:False:3,14:9862,1925
+> 2:True:4,14:9862,1925
+> 3:False:3,14:9862,1925
+> 4:False:3,14:9862,1925
+> 5:True:3,13:9862,1925
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_2.tar.bz2:0.6970243453979492:0.0704911:0.6899999999999977
+> 0:False:3,14:9861,1924
+> 1:False:3,14:9861,1924
+> 2:True:4,14:9861,1924
+> 3:False:3,14:9861,1924
+> 4:False:3,14:9861,1924
+> 5:False:3,14:9861,1924
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-2_50_3.tar.bz2:0.7253026962280273:0.0821341:0.7299999999999898
+> 0:False:3,14:9861,1924
+> 1:False:3,14:9861,1924
+> 2:True:4,13:9861,1924
+> 3:False:3,13:9861,1924
+> 4:False:3,14:9861,1924
+> 5:False:3,14:9861,1924
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_1.tar.bz2:0.7286121845245361:0.0797796:0.730000000000004
+> 0:False:3,12:9859,1922
+> 1:True:3,10:9859,1922
+> 2:False:4,12:9859,1922
+> 3:False:3,12:9859,1922
+> 4:False:3,11:9859,1922
+> 5:False:3,12:9859,1922
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_2.tar.bz2:0.7119536399841309:0.0737305:0.6999999999999886
+> 0:False:3,12:9860,1923
+> 1:True:3,11:9860,1923
+> 2:True:4,12:9860,1923
+> 3:False:3,12:9860,1923
+> 4:False:3,12:9860,1923
+> 5:False:3,12:9860,1923
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-3_50_3.tar.bz2:0.6906764507293701:0.071839:0.6899999999999977
+> 0:False:3,12:9861,1924
+> 1:False:3,12:9861,1924
+> 2:True:4,12:9861,1924
+> 3:False:3,12:9861,1924
+> 4:True:3,11:9861,1924
+> 5:False:3,12:9861,1924
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_1.tar.bz2:0.7177948951721191:0.0789317:0.7200000000000131
+> 0:True:3,11:9860,1923
+> 1:False:3,12:9860,1923
+> 2:True:4,12:9860,1923
+> 3:False:3,12:9860,1923
+> 4:True:3,11:9860,1923
+> 5:True:3,11:9860,1923
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_2.tar.bz2:0.7210133075714111:0.0761917:0.7200000000000131
+> 0:False:3,12:9860,1923
+> 1:False:3,12:9860,1923
+> 2:False:4,13:9860,1923
+> 3:False:3,12:9860,1923
+> 4:True:3,11:9860,1923
+> 5:False:3,12:9860,1923
+dwr-suboptimal-old-noisy/50/dwr_noisy_p04_hyp-4_50_3.tar.bz2:0.7256391048431396:0.0770409:0.7299999999999756
+> 0:False:3,11:9859,1922
+> 1:False:3,12:9859,1922
+> 2:False:4,12:9859,1922
+> 3:False:3,12:9859,1922
+> 4:True:3,10:9859,1922
+> 5:False:3,11:9859,1922
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_1.tar.bz2:1.1231169700622559:0.18551520000000002:1.1200000000000188
+> 0:True:5,28:39020,4381
+> 1:False:5,30:39020,4381
+> 2:False:5,30:39020,4381
+> 3:False:4,30:39020,4381
+> 4:False:4,30:39020,4381
+> 5:False:4,30:39020,4381
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_2.tar.bz2:1.1169884204864502:0.1852349:1.1200000000000045
+> 0:True:5,29:39017,4378
+> 1:False:5,30:39017,4378
+> 2:False:5,30:39017,4378
+> 3:False:4,30:39017,4378
+> 4:False:4,30:39017,4378
+> 5:False:4,30:39017,4378
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-1_50_3.tar.bz2:1.1098313331604004:0.18942299999999998:1.1099999999999994
+> 0:True:5,29:39016,4377
+> 1:False:5,30:39016,4377
+> 2:False:5,30:39016,4377
+> 3:False:4,30:39016,4377
+> 4:False:4,30:39016,4377
+> 5:False:4,30:39016,4377
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_1.tar.bz2:1.1054584980010986:0.18438859999999999:1.0999999999999943
+> 0:False:5,29:39018,4379
+> 1:True:5,27:39018,4379
+> 2:False:5,29:39018,4379
+> 3:False:4,29:39018,4379
+> 4:False:4,29:39018,4379
+> 5:False:4,29:39018,4379
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_2.tar.bz2:1.1191151142120361:0.1935164:1.1200000000000045
+> 0:False:5,29:39017,4378
+> 1:True:5,28:39017,4378
+> 2:False:5,29:39017,4378
+> 3:False:4,29:39017,4378
+> 4:False:4,29:39017,4378
+> 5:False:4,29:39017,4378
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-2_50_3.tar.bz2:1.1309316158294678:0.1865926:1.1300000000000097
+> 0:False:5,29:39016,4377
+> 1:True:5,28:39016,4377
+> 2:False:5,29:39016,4377
+> 3:False:4,29:39016,4377
+> 4:False:4,29:39016,4377
+> 5:False:4,29:39016,4377
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_1.tar.bz2:1.1074142456054688:0.17974179999999998:1.1099999999999852
+> 0:True:5,25:39014,4375
+> 1:True:5,25:39014,4375
+> 2:True:5,25:39014,4375
+> 3:False:4,25:39014,4375
+> 4:False:4,25:39014,4375
+> 5:False:4,25:39014,4375
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_2.tar.bz2:1.140425443649292:0.1929606:1.1400000000000006
+> 0:True:5,24:39015,4376
+> 1:False:5,25:39015,4376
+> 2:False:5,25:39015,4376
+> 3:False:4,25:39015,4376
+> 4:False:4,24:39015,4376
+> 5:False:4,25:39015,4376
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-3_50_3.tar.bz2:1.1261670589447021:0.19438450000000002:1.1200000000000045
+> 0:True:5,25:39012,4373
+> 1:False:5,26:39012,4373
+> 2:True:5,25:39012,4373
+> 3:False:4,25:39012,4373
+> 4:False:4,25:39012,4373
+> 5:False:4,25:39012,4373
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_1.tar.bz2:1.134545087814331:0.19104800000000002:1.1300000000000097
+> 0:True:5,24:39013,4374
+> 1:True:5,24:39013,4374
+> 2:True:5,24:39013,4374
+> 3:False:4,24:39013,4374
+> 4:False:4,24:39013,4374
+> 5:False:4,24:39013,4374
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_2.tar.bz2:1.0904853343963623:0.18490869999999998:1.0799999999999983
+> 0:True:5,24:39013,4374
+> 1:True:5,24:39013,4374
+> 2:True:5,24:39013,4374
+> 3:True:4,23:39013,4374
+> 4:False:4,24:39013,4374
+> 5:False:4,24:39013,4374
+dwr-suboptimal-old-noisy/50/dwr_noisy_p05_hyp-4_50_3.tar.bz2:1.1168739795684814:0.19098810000000002:1.1099999999999994
+> 0:True:5,24:39013,4374
+> 1:True:5,24:39013,4374
+> 2:True:5,24:39013,4374
+> 3:False:4,24:39013,4374
+> 4:False:4,24:39013,4374
+> 5:False:4,24:39013,4374
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_1.tar.bz2:0.8907358646392822:0.08440355000000001:0.8900000000000148
+> 0:True:5,14:6870,1539
+> 1:False:5,16:6870,1539
+> 2:True:5,14:6870,1539
+> 3:False:5,16:6870,1539
+> 4:False:5,16:6870,1539
+> 5:False:5,15:6870,1539
+> 6:False:5,15:6870,1539
+> 7:False:5,15:6870,1539
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_2.tar.bz2:0.8985838890075684:0.08924447:0.9000000000000057
+> 0:True:5,14:6871,1540
+> 1:False:5,16:6871,1540
+> 2:False:5,15:6871,1540
+> 3:False:5,16:6871,1540
+> 4:False:5,16:6871,1540
+> 5:False:5,15:6871,1540
+> 6:False:5,16:6871,1540
+> 7:False:5,15:6871,1540
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-1_70_3.tar.bz2:0.8821561336517334:0.08740466:0.8799999999999955
+> 0:True:5,13:6871,1540
+> 1:False:5,14:6871,1540
+> 2:False:5,14:6871,1540
+> 3:False:5,16:6871,1540
+> 4:False:5,16:6871,1540
+> 5:False:5,15:6871,1540
+> 6:False:5,15:6871,1540
+> 7:False:5,14:6871,1540
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_1.tar.bz2:0.8867325782775879:0.08192337:0.8800000000000097
+> 0:False:5,17:6869,1538
+> 1:True:5,15:6869,1538
+> 2:False:5,16:6869,1538
+> 3:False:5,18:6869,1538
+> 4:False:5,18:6869,1538
+> 5:False:5,17:6869,1538
+> 6:False:5,17:6869,1538
+> 7:False:5,17:6869,1538
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_2.tar.bz2:0.8772401809692383:0.09075063000000001:0.8699999999999903
+> 0:False:5,16:6871,1540
+> 1:True:5,14:6871,1540
+> 2:False:5,16:6871,1540
+> 3:False:5,17:6871,1540
+> 4:False:5,17:6871,1540
+> 5:False:5,15:6871,1540
+> 6:False:5,16:6871,1540
+> 7:False:5,15:6871,1540
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-2_70_3.tar.bz2:0.8930513858795166:0.08690172:0.8900000000000006
+> 0:False:5,17:6872,1541
+> 1:True:5,15:6872,1541
+> 2:False:5,18:6872,1541
+> 3:False:5,17:6872,1541
+> 4:False:5,17:6872,1541
+> 5:False:5,16:6872,1541
+> 6:False:5,17:6872,1541
+> 7:False:5,17:6872,1541
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_1.tar.bz2:0.8781876564025879:0.07843927:0.8799999999999955
+> 0:False:5,16:6870,1539
+> 1:False:5,16:6870,1539
+> 2:True:5,15:6870,1539
+> 3:False:5,16:6870,1539
+> 4:False:5,16:6870,1539
+> 5:False:5,16:6870,1539
+> 6:False:5,16:6870,1539
+> 7:False:5,16:6870,1539
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_2.tar.bz2:0.8926048278808594:0.08452879999999999:0.8900000000000006
+> 0:True:5,14:6872,1541
+> 1:False:5,16:6872,1541
+> 2:True:5,14:6872,1541
+> 3:False:5,16:6872,1541
+> 4:False:5,15:6872,1541
+> 5:False:5,16:6872,1541
+> 6:False:5,16:6872,1541
+> 7:False:5,15:6872,1541
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-3_70_3.tar.bz2:0.8650555610656738:0.08366954:0.8600000000000136
+> 0:True:5,14:6872,1541
+> 1:False:5,15:6872,1541
+> 2:True:5,14:6872,1541
+> 3:False:5,15:6872,1541
+> 4:False:5,15:6872,1541
+> 5:False:5,15:6872,1541
+> 6:False:5,15:6872,1541
+> 7:False:5,15:6872,1541
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_1.tar.bz2:0.8732509613037109:0.08394425999999999:0.8799999999999955
+> 0:False:5,17:6870,1539
+> 1:False:5,17:6870,1539
+> 2:False:5,17:6870,1539
+> 3:True:5,14:6870,1539
+> 4:False:5,15:6870,1539
+> 5:False:5,17:6870,1539
+> 6:False:5,16:6870,1539
+> 7:False:5,17:6870,1539
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_2.tar.bz2:0.8867001533508301:0.08602292:0.8800000000000097
+> 0:False:5,17:6871,1540
+> 1:False:5,17:6871,1540
+> 2:False:5,17:6871,1540
+> 3:True:5,14:6871,1540
+> 4:False:5,15:6871,1540
+> 5:False:5,16:6871,1540
+> 6:False:5,16:6871,1540
+> 7:False:5,17:6871,1540
+dwr-suboptimal-old-noisy/70/dwr_noisy_p02_hyp-4_70_3.tar.bz2:0.8959949016571045:0.08621978:0.8899999999999864
+> 0:False:5,17:6869,1538
+> 1:False:5,17:6869,1538
+> 2:False:5,17:6869,1538
+> 3:True:5,16:6869,1538
+> 4:False:5,17:6869,1538
+> 5:False:5,17:6869,1538
+> 6:True:5,16:6869,1538
+> 7:False:5,17:6869,1538
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_1.tar.bz2:0.7036042213439941:0.0757233:0.710000000000008
+> 0:True:3,13:9863,1926
+> 1:False:3,15:9863,1926
+> 2:False:4,15:9863,1926
+> 3:False:3,14:9863,1926
+> 4:False:3,14:9863,1926
+> 5:True:3,13:9863,1926
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_2.tar.bz2:0.7334089279174805:0.0698086:0.730000000000004
+> 0:True:3,13:9860,1923
+> 1:False:3,15:9860,1923
+> 2:False:4,15:9860,1923
+> 3:False:3,14:9860,1923
+> 4:False:3,15:9860,1923
+> 5:False:3,14:9860,1923
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-1_70_3.tar.bz2:0.7355630397796631:0.0774245:0.7399999999999949
+> 0:True:3,13:9860,1923
+> 1:False:3,15:9860,1923
+> 2:False:4,15:9860,1923
+> 3:False:3,14:9860,1923
+> 4:False:3,15:9860,1923
+> 5:False:3,14:9860,1923
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_1.tar.bz2:0.7175998687744141:0.0752492:0.710000000000008
+> 0:False:3,17:9862,1925
+> 1:False:3,16:9862,1925
+> 2:True:4,16:9862,1925
+> 3:False:3,17:9862,1925
+> 4:False:3,17:9862,1925
+> 5:False:3,17:9862,1925
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_2.tar.bz2:0.7087044715881348:0.08047359999999999:0.7199999999999989
+> 0:False:3,17:9863,1926
+> 1:False:3,17:9863,1926
+> 2:True:4,16:9863,1926
+> 3:False:3,17:9863,1926
+> 4:False:3,17:9863,1926
+> 5:False:3,17:9863,1926
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-2_70_3.tar.bz2:0.7067451477050781:0.07124150000000001:0.6999999999999886
+> 0:False:3,17:9862,1925
+> 1:False:3,17:9862,1925
+> 2:True:4,17:9862,1925
+> 3:True:3,16:9862,1925
+> 4:False:3,17:9862,1925
+> 5:False:3,17:9862,1925
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_1.tar.bz2:0.7081372737884521:0.07215619999999999:0.7099999999999937
+> 0:False:3,16:9863,1926
+> 1:True:3,15:9863,1926
+> 2:True:4,16:9863,1926
+> 3:False:3,16:9863,1926
+> 4:False:3,16:9863,1926
+> 5:False:3,16:9863,1926
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_2.tar.bz2:0.7152128219604492:0.07644609999999999:0.7199999999999989
+> 0:False:3,16:9862,1925
+> 1:True:3,15:9862,1925
+> 2:True:4,16:9862,1925
+> 3:False:3,16:9862,1925
+> 4:False:3,16:9862,1925
+> 5:False:3,16:9862,1925
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-3_70_3.tar.bz2:0.7212061882019043:0.0770893:0.7200000000000131
+> 0:False:3,16:9862,1925
+> 1:True:3,13:9862,1925
+> 2:False:4,15:9862,1925
+> 3:False:3,15:9862,1925
+> 4:False:3,15:9862,1925
+> 5:False:3,16:9862,1925
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_1.tar.bz2:0.7017791271209717:0.0788384:0.7000000000000028
+> 0:False:3,15:9865,1928
+> 1:True:3,14:9865,1928
+> 2:False:4,16:9865,1928
+> 3:False:3,15:9865,1928
+> 4:True:3,14:9865,1928
+> 5:False:3,15:9865,1928
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_2.tar.bz2:0.7351827621459961:0.0773134:0.730000000000004
+> 0:True:3,14:9865,1928
+> 1:False:3,15:9865,1928
+> 2:False:4,16:9865,1928
+> 3:False:3,15:9865,1928
+> 4:True:3,14:9865,1928
+> 5:False:3,15:9865,1928
+dwr-suboptimal-old-noisy/70/dwr_noisy_p04_hyp-4_70_3.tar.bz2:0.6987912654876709:0.0741577:0.7099999999999937
+> 0:False:3,16:9863,1926
+> 1:False:3,16:9863,1926
+> 2:True:4,16:9863,1926
+> 3:False:3,16:9863,1926
+> 4:True:3,15:9863,1926
+> 5:False:3,16:9863,1926
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_1.tar.bz2:1.1143898963928223:0.1900693:1.1099999999999994
+> 0:True:5,40:39023,4384
+> 1:True:5,40:39023,4384
+> 2:True:5,40:39023,4384
+> 3:False:4,40:39023,4384
+> 4:True:4,39:39023,4384
+> 5:True:4,39:39023,4384
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_2.tar.bz2:1.1233716011047363:0.2001868:1.1299999999999955
+> 0:True:5,39:39021,4382
+> 1:False:5,40:39021,4382
+> 2:False:5,40:39021,4382
+> 3:False:4,40:39021,4382
+> 4:False:4,40:39021,4382
+> 5:False:4,40:39021,4382
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-1_70_3.tar.bz2:1.1191487312316895:0.19457210000000003:1.1200000000000045
+> 0:True:5,39:39024,4385
+> 1:False:5,40:39024,4385
+> 2:False:5,40:39024,4385
+> 3:False:4,40:39024,4385
+> 4:False:4,39:39024,4385
+> 5:False:4,39:39024,4385
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_1.tar.bz2:1.1191954612731934:0.1958143:1.1199999999999903
+> 0:False:5,40:39023,4384
+> 1:True:5,38:39023,4384
+> 2:False:5,40:39023,4384
+> 3:False:4,38:39023,4384
+> 4:False:4,40:39023,4384
+> 5:False:4,40:39023,4384
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_2.tar.bz2:1.124732255935669:0.1929767:1.1299999999999955
+> 0:True:5,39:39023,4384
+> 1:True:5,39:39023,4384
+> 2:False:5,40:39023,4384
+> 3:True:4,38:39023,4384
+> 4:False:4,40:39023,4384
+> 5:False:4,40:39023,4384
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-2_70_3.tar.bz2:1.1373546123504639:0.19384330000000002:1.1400000000000006
+> 0:False:5,40:39022,4383
+> 1:True:5,39:39022,4383
+> 2:False:5,40:39022,4383
+> 3:False:4,39:39022,4383
+> 4:False:4,40:39022,4383
+> 5:False:4,40:39022,4383
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_1.tar.bz2:1.1303682327270508:0.19738459999999997:1.1300000000000097
+> 0:False:5,34:39018,4379
+> 1:False:5,34:39018,4379
+> 2:True:5,33:39018,4379
+> 3:False:4,34:39018,4379
+> 4:False:4,34:39018,4379
+> 5:False:4,34:39018,4379
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_2.tar.bz2:1.1354680061340332:0.2021133:1.1399999999999864
+> 0:True:5,34:39019,4380
+> 1:True:5,34:39019,4380
+> 2:True:5,34:39019,4380
+> 3:False:4,34:39019,4380
+> 4:False:4,34:39019,4380
+> 5:False:4,34:39019,4380
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-3_70_3.tar.bz2:1.111283779144287:0.19701060000000004:1.1200000000000188
+> 0:True:5,34:39017,4378
+> 1:True:5,34:39017,4378
+> 2:True:5,34:39017,4378
+> 3:False:4,34:39017,4378
+> 4:False:4,34:39017,4378
+> 5:False:4,34:39017,4378
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_1.tar.bz2:1.1103084087371826:0.18704150000000003:1.1099999999999852
+> 0:False:5,32:39018,4379
+> 1:False:5,32:39018,4379
+> 2:True:5,31:39018,4379
+> 3:False:4,31:39018,4379
+> 4:False:4,32:39018,4379
+> 5:False:4,32:39018,4379
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_2.tar.bz2:1.1331114768981934:0.1877432:1.1299999999999955
+> 0:False:5,32:39018,4379
+> 1:False:5,32:39018,4379
+> 2:True:5,31:39018,4379
+> 3:True:4,30:39018,4379
+> 4:False:4,32:39018,4379
+> 5:False:4,32:39018,4379
+dwr-suboptimal-old-noisy/70/dwr_noisy_p05_hyp-4_70_3.tar.bz2:1.1161222457885742:0.19877489999999998:1.1099999999999852
+> 0:False:5,32:39019,4380
+> 1:False:5,32:39019,4380
+> 2:True:5,31:39019,4380
+> 3:False:4,32:39019,4380
+> 4:False:4,32:39019,4380
+> 5:False:4,32:39019,4380
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_1.tar.bz2:0.9044861793518066:0.08070826:0.9099999999999966
+> 0:True:5,16:6873,1542
+> 1:False:5,20:6873,1542
+> 2:False:5,17:6873,1542
+> 3:False:5,20:6873,1542
+> 4:False:5,19:6873,1542
+> 5:False:5,19:6873,1542
+> 6:False:5,19:6873,1542
+> 7:False:5,18:6873,1542
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_2.tar.bz2:0.8951337337493896:0.08370916:0.8900000000000148
+> 0:True:5,16:6874,1543
+> 1:False:5,19:6874,1543
+> 2:False:5,17:6874,1543
+> 3:False:5,20:6874,1543
+> 4:False:5,19:6874,1543
+> 5:False:5,19:6874,1543
+> 6:False:5,19:6874,1543
+> 7:False:5,18:6874,1543
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-1_full_3.tar.bz2:0.8867762088775635:0.08283119:0.8900000000000148
+> 0:True:5,16:6874,1543
+> 1:False:5,20:6874,1543
+> 2:False:5,17:6874,1543
+> 3:False:5,20:6874,1543
+> 4:False:5,19:6874,1543
+> 5:False:5,19:6874,1543
+> 6:False:5,19:6874,1543
+> 7:False:5,18:6874,1543
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_1.tar.bz2:0.8844373226165771:0.08488269999999999:0.8799999999999955
+> 0:False:5,22:6876,1545
+> 1:True:5,18:6876,1545
+> 2:False:5,21:6876,1545
+> 3:False:5,21:6876,1545
+> 4:False:5,22:6876,1545
+> 5:False:5,20:6876,1545
+> 6:False:5,21:6876,1545
+> 7:False:5,21:6876,1545
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_2.tar.bz2:0.9049382209777832:0.08762548999999999:0.9000000000000057
+> 0:False:5,22:6875,1544
+> 1:True:5,18:6875,1544
+> 2:False:5,21:6875,1544
+> 3:False:5,22:6875,1544
+> 4:False:5,22:6875,1544
+> 5:False:5,20:6875,1544
+> 6:False:5,22:6875,1544
+> 7:False:5,21:6875,1544
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-2_full_3.tar.bz2:0.8821525573730469:0.08385034:0.879999999999967
+> 0:False:5,22:6876,1545
+> 1:True:5,18:6876,1545
+> 2:False:5,21:6876,1545
+> 3:False:5,20:6876,1545
+> 4:False:5,21:6876,1545
+> 5:False:5,20:6876,1545
+> 6:False:5,21:6876,1545
+> 7:False:5,21:6876,1545
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_1.tar.bz2:0.8791766166687012:0.08998299000000001:0.8800000000000239
+> 0:False:5,17:6874,1543
+> 1:False:5,19:6874,1543
+> 2:True:5,16:6874,1543
+> 3:False:5,19:6874,1543
+> 4:False:5,18:6874,1543
+> 5:False:5,19:6874,1543
+> 6:False:5,19:6874,1543
+> 7:False:5,19:6874,1543
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_2.tar.bz2:0.8774280548095703:0.08661809:0.8799999999999955
+> 0:False:5,17:6873,1542
+> 1:False:5,19:6873,1542
+> 2:True:5,16:6873,1542
+> 3:False:5,20:6873,1542
+> 4:False:5,19:6873,1542
+> 5:False:5,20:6873,1542
+> 6:False:5,20:6873,1542
+> 7:False:5,19:6873,1542
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-3_full_3.tar.bz2:0.8805062770843506:0.08517946000000001:0.8800000000000239
+> 0:False:5,17:6875,1544
+> 1:False:5,19:6875,1544
+> 2:True:5,16:6875,1544
+> 3:False:5,20:6875,1544
+> 4:False:5,19:6875,1544
+> 5:False:5,20:6875,1544
+> 6:False:5,20:6875,1544
+> 7:False:5,19:6875,1544
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_1.tar.bz2:0.9170207977294922:0.08349960000000001:0.9199999999999875
+> 0:False:5,22:6874,1543
+> 1:False:5,22:6874,1543
+> 2:False:5,22:6874,1543
+> 3:True:5,18:6874,1543
+> 4:False:5,19:6874,1543
+> 5:False:5,21:6874,1543
+> 6:False:5,20:6874,1543
+> 7:False:5,22:6874,1543
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_2.tar.bz2:0.8933329582214355:0.08721846999999999:0.8899999999999864
+> 0:False:5,21:6877,1546
+> 1:False:5,22:6877,1546
+> 2:False:5,22:6877,1546
+> 3:True:5,18:6877,1546
+> 4:False:5,19:6877,1546
+> 5:False:5,20:6877,1546
+> 6:False:5,19:6877,1546
+> 7:False:5,21:6877,1546
+dwr-suboptimal-old-noisy/100/dwr_noisy_p02_hyp-4_full_3.tar.bz2:0.8948421478271484:0.0850155:0.8899999999999864
+> 0:False:5,21:6876,1545
+> 1:False:5,21:6876,1545
+> 2:False:5,21:6876,1545
+> 3:True:5,18:6876,1545
+> 4:False:5,19:6876,1545
+> 5:False:5,21:6876,1545
+> 6:False:5,20:6876,1545
+> 7:False:5,21:6876,1545
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_1.tar.bz2:0.7083821296691895:0.07687240000000001:0.6999999999999886
+> 0:True:3,16:9863,1926
+> 1:False:3,19:9863,1926
+> 2:False:4,19:9863,1926
+> 3:False:3,18:9863,1926
+> 4:False:3,18:9863,1926
+> 5:False:3,17:9863,1926
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_2.tar.bz2:0.6940505504608154:0.06982970999999999:0.6899999999999977
+> 0:True:3,16:9863,1926
+> 1:False:3,19:9863,1926
+> 2:False:4,19:9863,1926
+> 3:False:3,18:9863,1926
+> 4:False:3,18:9863,1926
+> 5:False:3,17:9863,1926
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-1_full_3.tar.bz2:0.7119121551513672:0.0719198:0.710000000000008
+> 0:True:3,16:9863,1926
+> 1:False:3,19:9863,1926
+> 2:False:4,19:9863,1926
+> 3:False:3,18:9863,1926
+> 4:False:3,18:9863,1926
+> 5:False:3,17:9863,1926
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_1.tar.bz2:0.7380275726318359:0.07707720000000001:0.7399999999999807
+> 0:False:3,23:9867,1930
+> 1:False:3,22:9867,1930
+> 2:True:4,20:9867,1930
+> 3:False:3,21:9867,1930
+> 4:False:3,23:9867,1930
+> 5:False:3,22:9867,1930
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_2.tar.bz2:0.7177519798278809:0.07795450000000001:0.7100000000000364
+> 0:False:3,23:9866,1929
+> 1:False:3,22:9866,1929
+> 2:True:4,20:9866,1929
+> 3:False:3,21:9866,1929
+> 4:False:3,23:9866,1929
+> 5:False:3,22:9866,1929
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-2_full_3.tar.bz2:0.7273240089416504:0.0720656:0.7299999999999898
+> 0:False:3,23:9867,1930
+> 1:False:3,22:9867,1930
+> 2:True:4,20:9867,1930
+> 3:False:3,21:9867,1930
+> 4:False:3,23:9867,1930
+> 5:False:3,22:9867,1930
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_1.tar.bz2:0.6968972682952881:0.07625280000000001:0.700000000000017
+> 0:False:3,21:9864,1927
+> 1:True:3,18:9864,1927
+> 2:False:4,20:9864,1927
+> 3:False:3,20:9864,1927
+> 4:False:3,20:9864,1927
+> 5:False:3,21:9864,1927
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_2.tar.bz2:0.7069089412689209:0.077122:0.6999999999999886
+> 0:False:3,21:9866,1929
+> 1:True:3,18:9866,1929
+> 2:False:4,20:9866,1929
+> 3:False:3,20:9866,1929
+> 4:False:3,20:9866,1929
+> 5:False:3,21:9866,1929
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-3_full_3.tar.bz2:0.6927134990692139:0.0720904:0.6899999999999977
+> 0:False:3,21:9866,1929
+> 1:True:3,18:9866,1929
+> 2:False:4,20:9866,1929
+> 3:False:3,20:9866,1929
+> 4:False:3,19:9866,1929
+> 5:False:3,21:9866,1929
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_1.tar.bz2:0.725006103515625:0.08092189999999999:0.7300000000000182
+> 0:False:3,20:9867,1930
+> 1:False:3,20:9867,1930
+> 2:False:4,20:9867,1930
+> 3:False:3,21:9867,1930
+> 4:True:3,18:9867,1930
+> 5:False:3,19:9867,1930
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_2.tar.bz2:0.7220726013183594:0.07767304:0.7199999999999989
+> 0:False:3,20:9865,1928
+> 1:False:3,20:9865,1928
+> 2:False:4,21:9865,1928
+> 3:False:3,21:9865,1928
+> 4:True:3,18:9865,1928
+> 5:False:3,20:9865,1928
+dwr-suboptimal-old-noisy/100/dwr_noisy_p04_hyp-4_full_3.tar.bz2:0.7236940860748291:0.0807615:0.7199999999999989
+> 0:False:3,20:9867,1930
+> 1:False:3,20:9867,1930
+> 2:False:4,21:9867,1930
+> 3:False:3,21:9867,1930
+> 4:True:3,18:9867,1930
+> 5:False:3,20:9867,1930
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_1.tar.bz2:1.13063383102417:0.19901560000000001:1.1400000000000148
+> 0:True:5,52:39034,4395
+> 1:False:5,54:39034,4395
+> 2:False:5,55:39034,4395
+> 3:False:4,56:39034,4395
+> 4:False:4,52:39034,4395
+> 5:False:4,54:39034,4395
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_2.tar.bz2:1.118757963180542:0.19642759999999998:1.1100000000000136
+> 0:True:5,52:39033,4394
+> 1:False:5,54:39033,4394
+> 2:False:5,55:39033,4394
+> 3:False:4,56:39033,4394
+> 4:False:4,52:39033,4394
+> 5:False:4,54:39033,4394
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-1_full_3.tar.bz2:1.121363878250122:0.1928998:1.1199999999999761
+> 0:True:5,52:39036,4397
+> 1:True:5,52:39036,4397
+> 2:False:5,55:39036,4397
+> 3:False:4,55:39036,4397
+> 4:False:4,52:39036,4397
+> 5:False:4,54:39036,4397
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_1.tar.bz2:1.1373496055603027:0.1954496:1.1200000000000045
+> 0:False:5,53:39033,4394
+> 1:True:5,50:39033,4394
+> 2:False:5,53:39033,4394
+> 3:False:4,53:39033,4394
+> 4:False:4,53:39033,4394
+> 5:False:4,52:39033,4394
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_2.tar.bz2:1.135411262512207:0.19958099999999998:1.1299999999999955
+> 0:False:5,53:39031,4392
+> 1:True:5,50:39031,4392
+> 2:False:5,53:39031,4392
+> 3:False:4,53:39031,4392
+> 4:False:4,53:39031,4392
+> 5:False:4,52:39031,4392
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-2_full_3.tar.bz2:1.1318941116333008:0.19329200000000002:1.1399999999999864
+> 0:False:5,53:39032,4393
+> 1:True:5,50:39032,4393
+> 2:False:5,53:39032,4393
+> 3:False:4,53:39032,4393
+> 4:False:4,53:39032,4393
+> 5:False:4,53:39032,4393
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_1.tar.bz2:1.1353414058685303:0.1992891:1.1399999999999864
+> 0:False:5,44:39026,4387
+> 1:False:5,45:39026,4387
+> 2:False:5,45:39026,4387
+> 3:False:4,46:39026,4387
+> 4:True:4,42:39026,4387
+> 5:False:4,43:39026,4387
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_2.tar.bz2:1.1175587177276611:0.1925391:1.1100000000000136
+> 0:False:5,44:39027,4388
+> 1:False:5,45:39027,4388
+> 2:False:5,45:39027,4388
+> 3:False:4,46:39027,4388
+> 4:True:4,42:39027,4388
+> 5:False:4,44:39027,4388
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-3_full_3.tar.bz2:1.1230120658874512:0.20245080000000001:1.1200000000000045
+> 0:False:5,44:39028,4389
+> 1:False:5,45:39028,4389
+> 2:False:5,44:39028,4389
+> 3:False:4,45:39028,4389
+> 4:True:4,42:39028,4389
+> 5:False:4,44:39028,4389
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_1.tar.bz2:1.1117079257965088:0.1904884:1.1099999999999852
+> 0:False:5,44:39023,4384
+> 1:False:5,43:39023,4384
+> 2:False:5,42:39023,4384
+> 3:True:4,40:39023,4384
+> 4:False:4,44:39023,4384
+> 5:False:4,44:39023,4384
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_2.tar.bz2:1.1279008388519287:0.1954513:1.1200000000000045
+> 0:False:5,44:39025,4386
+> 1:False:5,43:39025,4386
+> 2:False:5,42:39025,4386
+> 3:True:4,40:39025,4386
+> 4:False:4,43:39025,4386
+> 5:False:4,43:39025,4386
+dwr-suboptimal-old-noisy/100/dwr_noisy_p05_hyp-4_full_3.tar.bz2:1.1302485466003418:0.1919672:1.120000000000033
+> 0:False:5,44:39026,4387
+> 1:False:5,43:39026,4387
+> 2:False:5,42:39026,4387
+> 3:True:4,40:39026,4387
+> 4:False:4,44:39026,4387
+> 5:False:4,44:39026,4387

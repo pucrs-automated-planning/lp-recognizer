@@ -1,240 +1,2040 @@
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_1.tar.bz2:1.030613660812378:0.0:1.0299999999999159
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_2.tar.bz2:1.050260305404663:0.0:1.0399999999999636
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_3.tar.bz2:1.0410287380218506:0.0:1.0399999999999636
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_1.tar.bz2:1.0622916221618652:0.0:1.0600000000000591
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_2.tar.bz2:1.0527465343475342:0.0:1.0499999999999545
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_3.tar.bz2:1.0658769607543945:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_1.tar.bz2:1.0325586795806885:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_2.tar.bz2:1.0405776500701904:0.0:1.0400000000000773
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_3.tar.bz2:1.065669059753418:0.0:1.0499999999999545
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_1.tar.bz2:1.0336060523986816:0.0:1.029999999999859
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_2.tar.bz2:1.028182029724121:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_3.tar.bz2:1.061220407485962:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_1.tar.bz2:0.4461710453033447:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_2.tar.bz2:0.4370689392089844:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_3.tar.bz2:0.4205451011657715:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_1.tar.bz2:0.4422008991241455:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_2.tar.bz2:0.44997572898864746:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_3.tar.bz2:0.42714715003967285:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_1.tar.bz2:0.43097686767578125:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_2.tar.bz2:0.45264267921447754:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_3.tar.bz2:0.43541669845581055:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_1.tar.bz2:0.4564650058746338:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_2.tar.bz2:0.4397153854370117:0.0:0.44000000000005457
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_3.tar.bz2:0.4482605457305908:0.0:0.4499999999999318
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_1.tar.bz2:0.9325640201568604:0.0:0.9300000000000637
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_2.tar.bz2:0.9107978343963623:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_3.tar.bz2:0.9264965057373047:0.0:0.9200000000000728
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_1.tar.bz2:0.9331989288330078:0.0:0.92999999999995
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_2.tar.bz2:0.9028422832489014:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_3.tar.bz2:0.9136471748352051:0.0:0.9100000000000819
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_1.tar.bz2:0.8960211277008057:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_2.tar.bz2:0.9211792945861816:0.0:0.9199999999999591
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_3.tar.bz2:0.8935046195983887:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_1.tar.bz2:0.8661932945251465:0.0:0.8700000000000045
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_2.tar.bz2:0.8969902992248535:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_3.tar.bz2:0.877899169921875:0.0:0.8700000000000045
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_1.tar.bz2:0.42268943786621094:0.0:0.42000000000007276
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_2.tar.bz2:0.42636632919311523:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_3.tar.bz2:0.4211139678955078:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_1.tar.bz2:0.41635632514953613:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_2.tar.bz2:0.4093296527862549:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_3.tar.bz2:0.407545804977417:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_1.tar.bz2:0.4263758659362793:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_2.tar.bz2:0.4217491149902344:0.0:0.42000000000007276
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_3.tar.bz2:0.4066591262817383:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_1.tar.bz2:0.40498852729797363:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_2.tar.bz2:0.4131307601928711:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_3.tar.bz2:0.3977532386779785:0.0:0.38999999999987267
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_1.tar.bz2:1.0307085514068604:0.0:1.0300000000000864
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_2.tar.bz2:1.0179736614227295:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_3.tar.bz2:1.049468994140625:0.0:1.0499999999999545
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_1.tar.bz2:1.009962797164917:0.0:1.0200000000000955
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_2.tar.bz2:1.0394234657287598:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_3.tar.bz2:1.0219039916992188:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_1.tar.bz2:1.011568546295166:0.0:1.0
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_2.tar.bz2:1.047839641571045:0.0:1.0400000000000773
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_3.tar.bz2:1.0689566135406494:0.0:1.0699999999999363
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_1.tar.bz2:1.0135562419891357:0.0:1.0100000000001046
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_2.tar.bz2:1.0348930358886719:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_3.tar.bz2:1.0566482543945312:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_1.tar.bz2:0.42395567893981934:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_2.tar.bz2:0.4484975337982178:0.0:0.4499999999999318
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_3.tar.bz2:0.439131498336792:0.0:0.44000000000005457
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_1.tar.bz2:0.4536271095275879:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_2.tar.bz2:0.44556593894958496:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_3.tar.bz2:0.4442152976989746:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_1.tar.bz2:0.44301891326904297:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_2.tar.bz2:0.44631385803222656:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_3.tar.bz2:0.44550132751464844:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_1.tar.bz2:0.4520604610443115:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_2.tar.bz2:0.44256138801574707:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_3.tar.bz2:0.43419313430786133:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_1.tar.bz2:0.9341208934783936:0.0:0.9300000000000637
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_2.tar.bz2:0.8929164409637451:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_3.tar.bz2:0.9158754348754883:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_1.tar.bz2:0.9195315837860107:0.0:0.9200000000000728
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_2.tar.bz2:0.9318737983703613:0.0:0.92999999999995
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_3.tar.bz2:0.9303498268127441:0.0:0.9200000000000728
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_1.tar.bz2:0.9369125366210938:0.0:0.9399999999999409
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_2.tar.bz2:0.9329047203063965:0.0:0.9300000000000637
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_3.tar.bz2:0.9261689186096191:0.0:0.9199999999999591
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_1.tar.bz2:0.9293067455291748:0.0:0.9300000000000637
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_2.tar.bz2:0.9347162246704102:0.0:0.92999999999995
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_3.tar.bz2:0.9300875663757324:0.0:0.9300000000000637
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_1.tar.bz2:0.41289401054382324:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_2.tar.bz2:0.4268455505371094:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_3.tar.bz2:0.41863107681274414:0.0:0.42000000000007276
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_1.tar.bz2:0.40257978439331055:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_2.tar.bz2:0.4053313732147217:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_3.tar.bz2:0.40965867042541504:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_1.tar.bz2:0.41732096672058105:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_2.tar.bz2:0.40776658058166504:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_3.tar.bz2:0.41249728202819824:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_1.tar.bz2:0.4071767330169678:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_2.tar.bz2:0.3924431800842285:0.0:0.38999999999998636
-easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_3.tar.bz2:0.4207794666290283:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_1.tar.bz2:1.0452539920806885:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_2.tar.bz2:1.0340490341186523:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_3.tar.bz2:1.0317447185516357:0.0:1.0300000000000864
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_1.tar.bz2:1.0476868152618408:0.0:1.0499999999999545
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_2.tar.bz2:1.0386755466461182:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_3.tar.bz2:1.0192372798919678:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_1.tar.bz2:1.0233111381530762:0.0:1.0200000000000955
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_2.tar.bz2:1.0099985599517822:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_3.tar.bz2:1.0499217510223389:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_1.tar.bz2:1.0284337997436523:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_2.tar.bz2:1.0360565185546875:0.0:1.0400000000000773
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_3.tar.bz2:1.0007383823394775:0.0:0.9900000000000091
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_1.tar.bz2:0.44878482818603516:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_2.tar.bz2:0.446199893951416:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_3.tar.bz2:0.4482076168060303:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_1.tar.bz2:0.43442511558532715:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_2.tar.bz2:0.45909833908081055:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_3.tar.bz2:0.43389081954956055:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_1.tar.bz2:0.4432201385498047:0.0:0.44000000000005457
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_2.tar.bz2:0.4394693374633789:0.0:0.44000000000005457
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_3.tar.bz2:0.43396639823913574:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_1.tar.bz2:0.42581796646118164:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_2.tar.bz2:0.4237682819366455:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_3.tar.bz2:0.435039758682251:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_1.tar.bz2:0.8843953609466553:0.0:0.8699999999998909
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_2.tar.bz2:0.9196364879608154:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_3.tar.bz2:0.891505241394043:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_1.tar.bz2:0.9020595550537109:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_2.tar.bz2:0.892768144607544:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_3.tar.bz2:0.8857419490814209:0.0:0.8800000000001091
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_1.tar.bz2:0.8913681507110596:0.0:0.8799999999999955
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_2.tar.bz2:0.8841648101806641:0.0:0.8799999999999955
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_3.tar.bz2:0.8868346214294434:0.0:0.8799999999999955
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_1.tar.bz2:0.9398558139801025:0.0:0.92999999999995
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_2.tar.bz2:0.8914227485656738:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_3.tar.bz2:0.8848068714141846:0.0:0.8799999999998818
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_1.tar.bz2:0.42406511306762695:0.0:0.42000000000007276
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_2.tar.bz2:0.39760661125183105:0.0:0.39000000000010004
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_3.tar.bz2:0.40724873542785645:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_1.tar.bz2:0.40204644203186035:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_2.tar.bz2:0.39612865447998047:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_3.tar.bz2:0.41512346267700195:0.0:0.42000000000007276
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_1.tar.bz2:0.4013385772705078:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_2.tar.bz2:0.4002871513366699:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_3.tar.bz2:0.396472692489624:0.0:0.39000000000010004
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_1.tar.bz2:0.390277624130249:0.0:0.38999999999987267
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_2.tar.bz2:0.4176614284515381:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_3.tar.bz2:0.409435510635376:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_1.tar.bz2:1.027031660079956:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_2.tar.bz2:1.0301368236541748:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_3.tar.bz2:1.0318317413330078:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_1.tar.bz2:1.0144643783569336:0.0:1.0000000000001137
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_2.tar.bz2:1.0301363468170166:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_3.tar.bz2:1.0167582035064697:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_1.tar.bz2:1.0401439666748047:0.0:1.0299999999999727
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_2.tar.bz2:1.0404953956604004:0.0:1.0300000000000864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_3.tar.bz2:1.0413672924041748:0.0:1.0399999999999636
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_1.tar.bz2:1.017174243927002:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_2.tar.bz2:1.0490789413452148:0.0:1.0499999999999545
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_3.tar.bz2:1.0226454734802246:0.0:1.0200000000000955
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_1.tar.bz2:0.4330739974975586:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_2.tar.bz2:0.4274773597717285:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_3.tar.bz2:0.4339272975921631:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_1.tar.bz2:0.4475395679473877:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_2.tar.bz2:0.44461941719055176:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_3.tar.bz2:0.4523336887359619:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_1.tar.bz2:0.4407660961151123:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_2.tar.bz2:0.44023990631103516:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_3.tar.bz2:0.42400360107421875:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_1.tar.bz2:0.4351973533630371:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_2.tar.bz2:0.44939494132995605:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_3.tar.bz2:0.4374706745147705:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_1.tar.bz2:0.8975534439086914:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_2.tar.bz2:0.8869524002075195:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_3.tar.bz2:0.9077866077423096:0.0:0.900000000000091
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_1.tar.bz2:0.9134063720703125:0.0:0.9199999999999591
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_2.tar.bz2:0.9043169021606445:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_3.tar.bz2:0.9165709018707275:0.0:0.9199999999998454
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_1.tar.bz2:0.898486852645874:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_2.tar.bz2:0.8770711421966553:0.0:0.8700000000000045
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_3.tar.bz2:0.9007444381713867:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_1.tar.bz2:0.9092137813568115:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_2.tar.bz2:0.9193215370178223:0.0:0.9200000000000728
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_3.tar.bz2:0.8987135887145996:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_1.tar.bz2:0.3982706069946289:0.0:0.3999999999998636
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_2.tar.bz2:0.41608095169067383:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_3.tar.bz2:0.41501283645629883:0.0:0.4199999999999591
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_1.tar.bz2:0.40763163566589355:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_2.tar.bz2:0.4127345085144043:0.0:0.4099999999998545
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_3.tar.bz2:0.3948392868041992:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_1.tar.bz2:0.40228796005249023:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_2.tar.bz2:0.391634464263916:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_3.tar.bz2:0.41751790046691895:0.0:0.4199999999998454
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_1.tar.bz2:0.42698001861572266:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_2.tar.bz2:0.4110095500946045:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_3.tar.bz2:0.40065979957580566:0.0:0.39999999999997726
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_1.tar.bz2:1.0148520469665527:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_2.tar.bz2:1.0160741806030273:0.0:1.009999999999991
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_3.tar.bz2:1.0402941703796387:0.0:1.0399999999999636
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_1.tar.bz2:1.0727739334106445:0.0:1.07000000000005
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_2.tar.bz2:1.0379133224487305:0.0:1.0400000000000773
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_3.tar.bz2:1.0630736351013184:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_1.tar.bz2:1.0640478134155273:0.0:1.07000000000005
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_2.tar.bz2:1.0434682369232178:0.0:1.0399999999999636
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_3.tar.bz2:1.0041272640228271:0.0:1.0
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_1.tar.bz2:1.03578519821167:0.0:1.0199999999999818
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_2.tar.bz2:1.0393247604370117:0.0:1.0400000000000773
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_3.tar.bz2:1.0597801208496094:0.0:1.0599999999999454
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_1.tar.bz2:0.4605083465576172:0.0:0.4600000000000364
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_2.tar.bz2:0.44268155097961426:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_3.tar.bz2:0.442598819732666:0.0:0.44000000000005457
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_1.tar.bz2:0.43757009506225586:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_2.tar.bz2:0.43903303146362305:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_3.tar.bz2:0.4389796257019043:0.0:0.4399999999999409
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_1.tar.bz2:0.4279007911682129:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_2.tar.bz2:0.4337313175201416:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_3.tar.bz2:0.44467926025390625:0.0:0.4500000000000455
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_1.tar.bz2:0.43851232528686523:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_2.tar.bz2:0.42651939392089844:0.0:0.43000000000006366
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_3.tar.bz2:0.4431614875793457:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_1.tar.bz2:0.9055566787719727:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_2.tar.bz2:0.9071686267852783:0.0:0.8899999999999864
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_3.tar.bz2:0.9211435317993164:0.0:0.9100000000000819
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_1.tar.bz2:0.8999958038330078:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_2.tar.bz2:0.908686637878418:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_3.tar.bz2:0.9029402732849121:0.0:0.8999999999999773
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_1.tar.bz2:0.9037256240844727:0.0:0.9100000000000819
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_2.tar.bz2:0.8968751430511475:0.0:0.8799999999999955
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_3.tar.bz2:0.9157524108886719:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_1.tar.bz2:0.9035110473632812:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_2.tar.bz2:0.924368143081665:0.0:0.9200000000000728
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_3.tar.bz2:0.9059979915618896:0.0:0.9099999999999682
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_1.tar.bz2:0.41731858253479004:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_2.tar.bz2:0.4005763530731201:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_3.tar.bz2:0.4110066890716553:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_1.tar.bz2:0.39337158203125:0.0:0.37999999999988177
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_2.tar.bz2:0.40024375915527344:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_3.tar.bz2:0.42238569259643555:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_1.tar.bz2:0.41478490829467773:0.0:0.41000000000008185
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_2.tar.bz2:0.4298980236053467:0.0:0.42999999999995
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_3.tar.bz2:0.39904308319091797:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_1.tar.bz2:0.40817928314208984:0.0:0.40999999999996817
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_2.tar.bz2:0.39379143714904785:0.0:0.40000000000009095
-easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_3.tar.bz2:0.4105715751647949:0.0:0.39999999999997726
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_1.tar.bz2:3.3102188110351562:1.1090788999999999:3.3199999999999363
+> 0:False:4,11:95904,2328,0
+> 1:True:4,10:95904,2328,0
+> 2:False:4,11:95904,2328,0
+> 3:False:4,11:95904,2328,0
+> 4:False:4,11:95904,2328,0
+> 5:False:4,11:95904,2328,0
+> 6:False:4,11:95904,2328,0
+> 7:False:4,11:95904,2328,0
+> 8:False:4,11:95904,2328,0
+> 9:False:4,11:95904,2328,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_2.tar.bz2:3.593592643737793:1.4066010000000002:3.590000000000032
+> 0:True:4,8:95905,2331,0
+> 1:False:4,9:95905,2331,0
+> 2:False:4,12:95905,2331,0
+> 3:False:4,12:95905,2331,0
+> 4:False:4,12:95905,2331,0
+> 5:False:4,12:95905,2331,0
+> 6:False:4,12:95905,2331,0
+> 7:False:4,12:95905,2331,0
+> 8:False:4,12:95905,2331,0
+> 9:False:4,12:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_10_3.tar.bz2:3.403167486190796:1.171316:3.410000000000082
+> 0:False:4,10:95904,2328,0
+> 1:True:4,9:95904,2328,0
+> 2:False:4,11:95904,2328,0
+> 3:False:4,11:95904,2328,0
+> 4:False:4,11:95904,2328,0
+> 5:False:4,11:95904,2328,0
+> 6:False:4,11:95904,2328,0
+> 7:False:4,11:95904,2328,0
+> 8:False:4,11:95904,2328,0
+> 9:False:4,11:95904,2328,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_1.tar.bz2:3.2656195163726807:1.0055816:3.259999999999991
+> 0:False:4,7:95904,2328,0
+> 1:True:4,5:95904,2328,0
+> 2:False:4,9:95904,2328,0
+> 3:False:4,9:95904,2328,0
+> 4:False:4,9:95904,2328,0
+> 5:False:4,9:95904,2328,0
+> 6:False:4,9:95904,2328,0
+> 7:False:4,9:95904,2328,0
+> 8:False:4,9:95904,2328,0
+> 9:False:4,9:95904,2328,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_2.tar.bz2:3.293184995651245:1.1390574:3.2799999999999727
+> 0:False:4,9:95904,2328,0
+> 1:True:4,8:95904,2328,0
+> 2:False:4,10:95904,2328,0
+> 3:False:4,10:95904,2328,0
+> 4:False:4,10:95904,2328,0
+> 5:False:4,10:95904,2328,0
+> 6:False:4,10:95904,2328,0
+> 7:False:4,10:95904,2328,0
+> 8:False:4,10:95904,2328,0
+> 9:False:4,10:95904,2328,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_10_3.tar.bz2:3.3713667392730713:1.156785:3.3600000000000136
+> 0:True:4,8:95904,2328,0
+> 1:True:4,8:95904,2328,0
+> 2:True:4,8:95904,2328,0
+> 3:True:4,8:95904,2328,0
+> 4:True:4,8:95904,2328,0
+> 5:True:4,8:95904,2328,0
+> 6:True:4,8:95904,2328,0
+> 7:True:4,8:95904,2328,0
+> 8:True:4,8:95904,2328,0
+> 9:True:4,8:95904,2328,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_1.tar.bz2:3.2971105575561523:1.0620269999999998:3.2999999999999545
+> 0:False:4,12:95905,2331,0
+> 1:False:4,12:95905,2331,0
+> 2:True:4,8:95905,2331,0
+> 3:False:4,9:95905,2331,0
+> 4:False:4,12:95905,2331,0
+> 5:False:4,12:95905,2331,0
+> 6:False:4,12:95905,2331,0
+> 7:False:4,12:95905,2331,0
+> 8:False:4,12:95905,2331,0
+> 9:False:4,12:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_2.tar.bz2:3.1773793697357178:0.9963188999999999:3.17999999999995
+> 0:True:4,10:95905,2331,0
+> 1:True:4,10:95905,2331,0
+> 2:True:4,10:95905,2331,0
+> 3:True:4,10:95905,2331,0
+> 4:True:4,10:95905,2331,0
+> 5:True:4,10:95905,2331,0
+> 6:True:4,10:95905,2331,0
+> 7:True:4,10:95905,2331,0
+> 8:True:4,10:95905,2331,0
+> 9:True:4,10:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_10_3.tar.bz2:3.454801321029663:1.262907:3.4500000000000455
+> 0:False:4,15:95905,2331,0
+> 1:False:4,15:95905,2331,0
+> 2:False:4,12:95905,2331,0
+> 3:True:4,11:95905,2331,0
+> 4:False:4,15:95905,2331,0
+> 5:False:4,15:95905,2331,0
+> 6:False:4,15:95905,2331,0
+> 7:False:4,15:95905,2331,0
+> 8:False:4,15:95905,2331,0
+> 9:False:4,15:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_1.tar.bz2:3.395890235900879:1.165168:3.3900000000001
+> 0:False:4,14:95905,2331,0
+> 1:False:4,14:95905,2331,0
+> 2:False:4,13:95905,2331,0
+> 3:True:4,12:95905,2331,0
+> 4:False:4,14:95905,2331,0
+> 5:False:4,14:95905,2331,0
+> 6:False:4,14:95905,2331,0
+> 7:False:4,14:95905,2331,0
+> 8:False:4,14:95905,2331,0
+> 9:False:4,14:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_2.tar.bz2:3.4575672149658203:1.2877049999999999:3.449999999999818
+> 0:False:4,18:95905,2331,0
+> 1:False:4,18:95905,2331,0
+> 2:False:4,17:95905,2331,0
+> 3:True:4,16:95905,2331,0
+> 4:False:4,18:95905,2331,0
+> 5:False:4,18:95905,2331,0
+> 6:False:4,18:95905,2331,0
+> 7:False:4,18:95905,2331,0
+> 8:False:4,18:95905,2331,0
+> 9:False:4,18:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_10_3.tar.bz2:3.193798065185547:1.0147562:3.189999999999827
+> 0:True:4,12:95905,2331,0
+> 1:True:4,12:95905,2331,0
+> 2:True:4,12:95905,2331,0
+> 3:True:4,12:95905,2331,0
+> 4:True:4,12:95905,2331,0
+> 5:True:4,12:95905,2331,0
+> 6:True:4,12:95905,2331,0
+> 7:True:4,12:95905,2331,0
+> 8:True:4,12:95905,2331,0
+> 9:True:4,12:95905,2331,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_1.tar.bz2:0.7240843772888184:0.1491267:0.7200000000000273
+> 0:True:4,8:22569,1087,0
+> 1:False:4,9:22569,1087,0
+> 2:False:4,12:22569,1087,0
+> 3:False:4,12:22569,1087,0
+> 4:False:4,12:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_2.tar.bz2:0.7574462890625:0.1609051:0.7499999999997726
+> 0:True:4,11:22569,1087,0
+> 1:True:4,11:22569,1087,0
+> 2:True:4,11:22569,1087,0
+> 3:True:4,11:22569,1087,0
+> 4:True:4,11:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_10_3.tar.bz2:0.7659223079681396:0.1787263:0.7599999999999909
+> 0:True:4,7:22569,1087,0
+> 1:False:4,8:22569,1087,0
+> 2:False:4,9:22569,1087,0
+> 3:False:4,9:22569,1087,0
+> 4:False:4,9:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_1.tar.bz2:0.7675225734710693:0.19633640000000002:0.7800000000002001
+> 0:False:4,9:22570,1090,0
+> 1:True:4,8:22570,1090,0
+> 2:False:4,12:22570,1090,0
+> 3:False:4,12:22570,1090,0
+> 4:False:4,12:22570,1090,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_2.tar.bz2:0.7392895221710205:0.1642797:0.7399999999997817
+> 0:False:4,8:22569,1087,0
+> 1:True:4,6:22569,1087,0
+> 2:False:4,10:22569,1087,0
+> 3:False:4,10:22569,1087,0
+> 4:False:4,10:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_10_3.tar.bz2:0.7259399890899658:0.1472009:0.7300000000000182
+> 0:True:4,9:22569,1087,0
+> 1:True:4,9:22569,1087,0
+> 2:True:4,9:22569,1087,0
+> 3:True:4,9:22569,1087,0
+> 4:True:4,9:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_1.tar.bz2:0.734663724899292:0.15630999999999998:0.7300000000002456
+> 0:True:4,10:22569,1087,0
+> 1:True:4,10:22569,1087,0
+> 2:True:4,10:22569,1087,0
+> 3:True:4,10:22569,1087,0
+> 4:True:4,10:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_2.tar.bz2:0.7491989135742188:0.1656952:0.75
+> 0:False:4,10:22570,1090,0
+> 1:False:4,10:22570,1090,0
+> 2:True:4,6:22570,1090,0
+> 3:False:4,9:22570,1090,0
+> 4:False:4,10:22570,1090,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_10_3.tar.bz2:0.7463769912719727:0.16902509999999998:0.75
+> 0:False:4,11:22569,1087,0
+> 1:False:4,11:22569,1087,0
+> 2:True:4,7:22569,1087,0
+> 3:False:4,9:22569,1087,0
+> 4:False:4,11:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_1.tar.bz2:0.7369353771209717:0.15829069999999998:0.7400000000000091
+> 0:True:4,9:22569,1087,0
+> 1:True:4,9:22569,1087,0
+> 2:True:4,9:22569,1087,0
+> 3:True:4,9:22569,1087,0
+> 4:True:4,9:22569,1087,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_2.tar.bz2:0.7680895328521729:0.1863957:0.7599999999997635
+> 0:True:4,10:22570,1090,0
+> 1:True:4,10:22570,1090,0
+> 2:True:4,10:22570,1090,0
+> 3:True:4,10:22570,1090,0
+> 4:True:4,10:22570,1090,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_10_3.tar.bz2:0.7579824924468994:0.1829294:0.7600000000002183
+> 0:False:4,9:22570,1090,0
+> 1:False:4,8:22570,1090,0
+> 2:False:4,8:22570,1090,0
+> 3:True:4,5:22570,1090,0
+> 4:False:4,9:22570,1090,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_1.tar.bz2:1.6824352741241455:0.4462303:1.6800000000000637
+> 0:True:4,5:27683,1223,0
+> 1:False:10,12:27683,1223,0
+> 2:False:4,7:27683,1223,0
+> 3:False:10,13:27683,1223,0
+> 4:False:9,12:27683,1223,0
+> 5:False:4,7:27683,1223,0
+> 6:False:10,13:27683,1223,0
+> 7:False:4,7:27683,1223,0
+> 8:False:4,7:27683,1223,0
+> 9:False:4,7:27683,1223,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_2.tar.bz2:1.704155445098877:0.46176180000000006:1.7100000000000364
+> 0:True:4,4:27683,1223,0
+> 1:False:10,12:27683,1223,0
+> 2:False:4,7:27683,1223,0
+> 3:False:10,13:27683,1223,0
+> 4:False:9,12:27683,1223,0
+> 5:False:4,7:27683,1223,0
+> 6:False:10,13:27683,1223,0
+> 7:False:4,7:27683,1223,0
+> 8:False:4,7:27683,1223,0
+> 9:False:4,7:27683,1223,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_10_3.tar.bz2:1.6941347122192383:0.45261120000000005:1.6900000000000546
+> 0:True:4,4:27684,1226,0
+> 1:False:10,11:27684,1226,0
+> 2:False:4,5:27684,1226,0
+> 3:False:10,11:27684,1226,0
+> 4:False:9,10:27684,1226,0
+> 5:False:4,5:27684,1226,0
+> 6:False:10,11:27684,1226,0
+> 7:False:4,5:27684,1226,0
+> 8:False:4,5:27684,1226,0
+> 9:False:4,5:27684,1226,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_1.tar.bz2:1.6673204898834229:0.424062:1.6599999999998545
+> 0:False:4,12:27685,1229,0
+> 1:True:10,11:27685,1229,0
+> 2:False:4,13:27685,1229,0
+> 3:False:10,15:27685,1229,0
+> 4:False:9,16:27685,1229,0
+> 5:False:4,13:27685,1229,0
+> 6:False:10,15:27685,1229,0
+> 7:False:4,13:27685,1229,0
+> 8:False:4,13:27685,1229,0
+> 9:False:4,13:27685,1229,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_2.tar.bz2:1.8229782581329346:0.5730761999999999:1.8199999999999363
+> 0:False:4,15:27686,1232,0
+> 1:True:10,12:27686,1232,0
+> 2:False:4,16:27686,1232,0
+> 3:False:10,18:27686,1232,0
+> 4:False:9,18:27686,1232,0
+> 5:False:4,16:27686,1232,0
+> 6:False:10,17:27686,1232,0
+> 7:False:4,16:27686,1232,0
+> 8:False:4,16:27686,1232,0
+> 9:False:4,16:27686,1232,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_10_3.tar.bz2:1.6613855361938477:0.42003850000000004:1.650000000000091
+> 0:False:4,12:27685,1229,0
+> 1:True:10,11:27685,1229,0
+> 2:False:4,12:27685,1229,0
+> 3:False:10,14:27685,1229,0
+> 4:False:9,15:27685,1229,0
+> 5:False:4,12:27685,1229,0
+> 6:False:10,14:27685,1229,0
+> 7:False:4,12:27685,1229,0
+> 8:False:4,12:27685,1229,0
+> 9:False:4,12:27685,1229,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_1.tar.bz2:1.6927590370178223:0.44969469999999995:1.6900000000000546
+> 0:False:4,8:27684,1226,0
+> 1:False:10,14:27684,1226,0
+> 2:True:4,4:27684,1226,0
+> 3:False:10,14:27684,1226,0
+> 4:False:9,13:27684,1226,0
+> 5:False:4,8:27684,1226,0
+> 6:False:10,14:27684,1226,0
+> 7:False:4,8:27684,1226,0
+> 8:False:4,8:27684,1226,0
+> 9:False:4,8:27684,1226,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_2.tar.bz2:1.6667358875274658:0.43122429999999995:1.6600000000000819
+> 0:False:4,7:27684,1226,0
+> 1:False:10,13:27684,1226,0
+> 2:False:4,7:27684,1226,0
+> 3:False:10,13:27684,1226,0
+> 4:True:9,10:27684,1226,0
+> 5:False:4,7:27684,1226,0
+> 6:False:10,13:27684,1226,0
+> 7:False:4,7:27684,1226,0
+> 8:False:4,7:27684,1226,0
+> 9:False:4,7:27684,1226,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_10_3.tar.bz2:1.6985867023468018:0.4493719:1.7000000000000455
+> 0:False:4,11:27684,1226,0
+> 1:False:10,17:27684,1226,0
+> 2:True:4,8:27684,1226,0
+> 3:False:10,17:27684,1226,0
+> 4:False:9,14:27684,1226,0
+> 5:False:4,11:27684,1226,0
+> 6:False:10,17:27684,1226,0
+> 7:False:4,11:27684,1226,0
+> 8:False:4,11:27684,1226,0
+> 9:False:4,11:27684,1226,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_1.tar.bz2:1.7330007553100586:0.49504370000000003:1.7300000000000182
+> 0:False:4,14:27684,1226,0
+> 1:False:10,16:27684,1226,0
+> 2:False:4,14:27684,1226,0
+> 3:True:10,12:27684,1226,0
+> 4:False:9,16:27684,1226,0
+> 5:False:4,14:27684,1226,0
+> 6:False:10,16:27684,1226,0
+> 7:False:4,14:27684,1226,0
+> 8:False:4,14:27684,1226,0
+> 9:False:4,14:27684,1226,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_2.tar.bz2:1.7690136432647705:0.5180612:1.7699999999999818
+> 0:False:4,15:27685,1229,1
+> 1:False:10,17:27685,1229,1
+> 2:False:4,15:27685,1229,1
+> 3:True:10,11:27685,1229,1
+> 4:False:9,18:27685,1229,1
+> 5:False:4,15:27685,1229,1
+> 6:False:10,17:27685,1229,1
+> 7:False:4,15:27685,1229,1
+> 8:False:4,15:27685,1229,1
+> 9:False:4,15:27685,1229,1
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_10_3.tar.bz2:1.8120858669281006:0.5788376999999999:1.7999999999999545
+> 0:False:4,14:27685,1229,0
+> 1:False:10,17:27685,1229,0
+> 2:False:4,14:27685,1229,0
+> 3:True:10,11:27685,1229,0
+> 4:True:9,10:27685,1229,0
+> 5:False:4,14:27685,1229,0
+> 6:False:10,17:27685,1229,0
+> 7:False:4,14:27685,1229,0
+> 8:False:4,14:27685,1229,0
+> 9:False:4,14:27685,1229,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_1.tar.bz2:0.5656800270080566:0.0924827:0.5599999999999454
+> 0:True:4,6:7293,621,0
+> 1:False:4,7:7293,621,0
+> 2:False:9,13:7293,621,0
+> 3:False:6,10:7293,621,0
+> 4:False:4,8:7293,621,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_2.tar.bz2:0.5597472190856934:0.09711059999999999:0.5700000000001637
+> 0:True:4,4:7293,621,0
+> 1:False:4,6:7293,621,0
+> 2:False:9,13:7293,621,0
+> 3:False:6,10:7293,621,0
+> 4:False:4,8:7293,621,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_10_3.tar.bz2:0.5543861389160156:0.09055210000000001:0.5499999999999545
+> 0:True:4,6:7293,621,0
+> 1:False:4,7:7293,621,0
+> 2:False:9,13:7293,621,0
+> 3:False:6,10:7293,621,0
+> 4:False:4,8:7293,621,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_1.tar.bz2:0.5519013404846191:0.08423800000000001:0.5499999999999545
+> 0:False:4,7:7294,624,0
+> 1:True:4,5:7294,624,0
+> 2:False:9,13:7294,624,0
+> 3:False:6,11:7294,624,0
+> 4:False:4,9:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_2.tar.bz2:0.5631077289581299:0.0964573:0.5699999999999363
+> 0:False:4,7:7295,627,0
+> 1:True:4,5:7295,627,0
+> 2:False:9,11:7295,627,0
+> 3:False:6,10:7295,627,0
+> 4:False:4,9:7295,627,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_10_3.tar.bz2:0.5657026767730713:0.0930004:0.5700000000001637
+> 0:False:4,7:7294,624,0
+> 1:True:4,4:7294,624,0
+> 2:False:9,13:7294,624,0
+> 3:False:6,10:7294,624,0
+> 4:False:4,8:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_1.tar.bz2:0.5541346073150635:0.0891294:0.5500000000001819
+> 0:False:4,7:7295,627,0
+> 1:False:4,7:7295,627,0
+> 2:True:9,10:7295,627,0
+> 3:False:6,9:7295,627,0
+> 4:False:4,7:7295,627,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_2.tar.bz2:0.6115567684173584:0.14716479999999998:0.599999999999909
+> 0:False:4,13:7294,624,0
+> 1:False:4,13:7294,624,0
+> 2:True:9,10:7294,624,0
+> 3:False:6,14:7294,624,0
+> 4:False:4,13:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_10_3.tar.bz2:0.6036968231201172:0.1324073:0.6100000000001273
+> 0:False:4,11:7294,624,0
+> 1:False:4,11:7294,624,0
+> 2:True:9,9:7294,624,0
+> 3:False:6,12:7294,624,0
+> 4:False:4,11:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_1.tar.bz2:0.578794002532959:0.1086447:0.5799999999999272
+> 0:False:4,10:7294,624,0
+> 1:False:4,10:7294,624,0
+> 2:True:9,11:7294,624,0
+> 3:False:6,10:7294,624,0
+> 4:False:4,10:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_2.tar.bz2:0.5980129241943359:0.12718089999999999:0.5899999999999181
+> 0:False:4,9:7295,627,0
+> 1:False:4,9:7295,627,0
+> 2:True:9,10:7295,627,0
+> 3:False:6,10:7295,627,0
+> 4:False:4,9:7295,627,0
+easy-ipc-grid-suboptimal-old-noisy/10/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_10_3.tar.bz2:0.5418915748596191:0.08761559999999999:0.5399999999999636
+> 0:False:4,11:7294,624,0
+> 1:False:4,11:7294,624,0
+> 2:False:9,14:7294,624,0
+> 3:True:6,7:7294,624,0
+> 4:False:4,11:7294,624,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_1.tar.bz2:3.1824207305908203:1.0083674:3.1700000000000728
+> 0:True:4,11:95907,2337,1
+> 1:False:4,12:95907,2337,1
+> 2:False:4,15:95907,2337,1
+> 3:False:4,15:95907,2337,1
+> 4:False:4,15:95907,2337,1
+> 5:False:4,15:95907,2337,1
+> 6:False:4,15:95907,2337,1
+> 7:False:4,15:95907,2337,1
+> 8:False:4,15:95907,2337,1
+> 9:False:4,15:95907,2337,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_2.tar.bz2:3.3838675022125244:1.185613:3.3799999999998818
+> 0:True:4,13:95908,2340,0
+> 1:False:4,14:95908,2340,0
+> 2:False:4,17:95908,2340,0
+> 3:False:4,17:95908,2340,0
+> 4:False:4,17:95908,2340,0
+> 5:False:4,17:95908,2340,0
+> 6:False:4,17:95908,2340,0
+> 7:False:4,17:95908,2340,0
+> 8:False:4,17:95908,2340,0
+> 9:False:4,17:95908,2340,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_30_3.tar.bz2:3.304960250854492:1.1236917:3.2999999999999545
+> 0:True:4,11:95908,2340,2
+> 1:False:4,12:95908,2340,2
+> 2:False:4,15:95908,2340,2
+> 3:False:4,15:95908,2340,2
+> 4:False:4,15:95908,2340,2
+> 5:False:4,15:95908,2340,2
+> 6:False:4,15:95908,2340,2
+> 7:False:4,15:95908,2340,2
+> 8:False:4,15:95908,2340,2
+> 9:False:4,15:95908,2340,2
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_1.tar.bz2:3.3625028133392334:1.1573208:3.3600000000001273
+> 0:False:4,11:95909,2343,0
+> 1:True:4,10:95909,2343,0
+> 2:False:4,12:95909,2343,0
+> 3:False:4,12:95909,2343,0
+> 4:False:4,12:95909,2343,0
+> 5:False:4,12:95909,2343,0
+> 6:False:4,12:95909,2343,1
+> 7:False:4,12:95909,2343,0
+> 8:False:4,12:95909,2343,0
+> 9:False:4,12:95909,2343,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_2.tar.bz2:3.24729585647583:1.0486729:3.240000000000009
+> 0:False:4,12:95910,2346,0
+> 1:True:4,10:95910,2346,0
+> 2:False:4,14:95910,2346,0
+> 3:False:4,14:95910,2346,0
+> 4:False:4,14:95910,2346,0
+> 5:False:4,14:95910,2346,0
+> 6:False:4,14:95910,2346,0
+> 7:False:4,14:95910,2346,0
+> 8:False:4,14:95910,2346,0
+> 9:False:4,14:95910,2346,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_30_3.tar.bz2:3.221742868423462:1.0364077:3.209999999999809
+> 0:False:4,11:95908,2340,0
+> 1:True:4,10:95908,2340,0
+> 2:False:4,13:95908,2340,0
+> 3:False:4,13:95908,2340,0
+> 4:False:4,13:95908,2340,0
+> 5:False:4,13:95908,2340,0
+> 6:False:4,13:95908,2340,0
+> 7:False:4,13:95908,2340,0
+> 8:False:4,13:95908,2340,0
+> 9:False:4,13:95908,2340,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_1.tar.bz2:3.506817579269409:1.3276299999999999:3.5
+> 0:False:4,21:95911,2349,0
+> 1:False:4,21:95911,2349,0
+> 2:True:4,17:95911,2349,0
+> 3:False:4,18:95911,2349,0
+> 4:False:4,21:95911,2349,0
+> 5:False:4,21:95911,2349,0
+> 6:False:4,21:95911,2349,0
+> 7:False:4,21:95911,2349,0
+> 8:False:4,21:95911,2349,0
+> 9:False:4,21:95911,2349,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_2.tar.bz2:3.5078113079071045:1.280601:3.4999999999997726
+> 0:False:4,20:95912,2352,1
+> 1:False:4,20:95912,2352,1
+> 2:False:4,18:95912,2352,1
+> 3:True:4,17:95912,2352,1
+> 4:False:4,20:95912,2352,1
+> 5:False:4,20:95912,2352,1
+> 6:False:4,20:95912,2352,1
+> 7:False:4,20:95912,2352,1
+> 8:False:4,19:95912,2352,1
+> 9:False:4,18:95912,2352,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_30_3.tar.bz2:3.458638906478882:1.2704010000000001:3.450000000000273
+> 0:False:4,19:95910,2346,2
+> 1:False:4,19:95910,2346,2
+> 2:False:4,17:95910,2346,2
+> 3:True:4,16:95910,2346,2
+> 4:False:4,19:95910,2346,2
+> 5:False:4,19:95910,2346,2
+> 6:False:4,19:95910,2346,2
+> 7:False:4,19:95910,2346,2
+> 8:False:4,19:95910,2346,2
+> 9:False:4,19:95910,2346,2
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_1.tar.bz2:3.163306474685669:1.0196481:3.1499999999998636
+> 0:False:4,20:95910,2346,0
+> 1:False:4,20:95910,2346,0
+> 2:False:4,18:95910,2346,0
+> 3:True:4,16:95910,2346,0
+> 4:False:4,20:95910,2346,0
+> 5:False:4,20:95910,2346,0
+> 6:False:4,20:95910,2346,0
+> 7:False:4,20:95910,2346,0
+> 8:False:4,20:95910,2346,0
+> 9:False:4,20:95910,2346,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_2.tar.bz2:3.2595949172973633:1.0759202:3.25
+> 0:False:4,19:95909,2343,1
+> 1:False:4,19:95909,2343,1
+> 2:False:4,17:95909,2343,1
+> 3:True:4,16:95909,2343,1
+> 4:False:4,19:95909,2343,1
+> 5:False:4,19:95909,2343,1
+> 6:False:4,19:95909,2343,1
+> 7:False:4,19:95909,2343,1
+> 8:False:4,19:95909,2343,1
+> 9:False:4,19:95909,2343,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_30_3.tar.bz2:3.393451452255249:1.179865:3.380000000000109
+> 0:False:4,19:95911,2349,0
+> 1:False:4,19:95911,2349,0
+> 2:False:4,18:95911,2349,0
+> 3:True:4,17:95911,2349,0
+> 4:False:4,19:95911,2349,0
+> 5:False:4,19:95911,2349,0
+> 6:False:4,19:95911,2349,0
+> 7:False:4,19:95911,2349,0
+> 8:False:4,18:95911,2349,0
+> 9:False:4,19:95911,2349,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_1.tar.bz2:0.7394514083862305:0.1500697:0.7399999999997817
+> 0:True:4,10:22572,1096,0
+> 1:False:4,11:22572,1096,0
+> 2:False:4,13:22572,1096,0
+> 3:False:4,13:22572,1096,0
+> 4:False:4,13:22572,1096,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_2.tar.bz2:0.7364585399627686:0.16940339999999998:0.7300000000000182
+> 0:True:4,11:22575,1105,0
+> 1:False:4,13:22575,1105,0
+> 2:False:4,12:22575,1105,0
+> 3:False:4,15:22575,1105,0
+> 4:False:4,15:22575,1105,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_30_3.tar.bz2:0.7444839477539062:0.16630129999999999:0.75
+> 0:True:4,12:22574,1102,1
+> 1:False:4,13:22574,1102,1
+> 2:False:4,16:22574,1102,1
+> 3:False:4,16:22574,1102,1
+> 4:False:4,16:22574,1102,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_1.tar.bz2:0.7464158535003662:0.16996409999999998:0.7400000000000091
+> 0:True:4,12:22574,1102,0
+> 1:True:4,12:22574,1102,0
+> 2:False:4,13:22574,1102,0
+> 3:False:4,13:22574,1102,0
+> 4:False:4,13:22574,1102,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_2.tar.bz2:0.7456090450286865:0.1572622:0.7400000000000091
+> 0:False:4,13:22574,1102,1
+> 1:True:4,12:22574,1102,2
+> 2:False:4,16:22574,1102,1
+> 3:False:4,16:22574,1102,1
+> 4:False:4,16:22574,1102,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_30_3.tar.bz2:0.764075756072998:0.17824199999999998:0.7699999999999818
+> 0:False:4,15:22575,1105,0
+> 1:True:4,14:22575,1105,0
+> 2:False:4,16:22575,1105,0
+> 3:False:4,16:22575,1105,0
+> 4:False:4,16:22575,1105,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_1.tar.bz2:0.736051082611084:0.1643285:0.7400000000000091
+> 0:False:4,14:22574,1102,0
+> 1:False:4,14:22574,1102,0
+> 2:True:4,10:22574,1102,0
+> 3:False:4,12:22574,1102,0
+> 4:False:4,14:22574,1102,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_2.tar.bz2:0.7529335021972656:0.1631381:0.7400000000000091
+> 0:False:4,17:22572,1096,1
+> 1:False:4,17:22572,1096,1
+> 2:True:4,13:22572,1096,1
+> 3:False:4,16:22572,1096,1
+> 4:False:4,17:22572,1096,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_30_3.tar.bz2:0.7275159358978271:0.1500422:0.7200000000000273
+> 0:False:4,16:22573,1099,0
+> 1:False:4,16:22573,1099,0
+> 2:True:4,12:22573,1099,0
+> 3:False:4,14:22573,1099,0
+> 4:False:4,16:22573,1099,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_1.tar.bz2:0.7292687892913818:0.15311170000000002:0.7200000000000273
+> 0:False:4,11:22572,1096,0
+> 1:False:4,11:22572,1096,0
+> 2:False:4,10:22572,1096,0
+> 3:True:4,7:22572,1096,0
+> 4:False:4,11:22572,1096,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_2.tar.bz2:0.7655956745147705:0.1813349:0.7600000000002183
+> 0:False:4,12:22572,1096,0
+> 1:False:4,12:22572,1096,0
+> 2:False:4,11:22572,1096,0
+> 3:True:4,8:22572,1096,0
+> 4:False:4,12:22572,1096,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_30_3.tar.bz2:0.8166897296905518:0.2302817:0.8199999999999363
+> 0:False:4,14:22572,1096,1
+> 1:False:4,14:22572,1096,1
+> 2:False:4,13:22572,1096,1
+> 3:True:4,10:22572,1096,1
+> 4:False:4,14:22572,1096,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_1.tar.bz2:1.7026104927062988:0.437301:1.7000000000000455
+> 0:True:4,5:27684,1226,1
+> 1:False:10,14:27684,1226,1
+> 2:False:4,9:27684,1226,1
+> 3:False:10,15:27684,1226,1
+> 4:False:9,14:27684,1226,1
+> 5:False:4,9:27684,1226,1
+> 6:False:10,15:27684,1226,1
+> 7:False:4,9:27684,1226,1
+> 8:False:4,9:27684,1226,1
+> 9:False:4,9:27684,1226,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_2.tar.bz2:1.6771941184997559:0.4234794:1.6900000000000546
+> 0:True:4,5:27685,1229,0
+> 1:False:10,12:27685,1229,0
+> 2:False:4,7:27685,1229,0
+> 3:False:10,13:27685,1229,0
+> 4:False:9,12:27685,1229,0
+> 5:False:4,7:27685,1229,0
+> 6:False:10,13:27685,1229,0
+> 7:False:4,7:27685,1229,0
+> 8:False:4,7:27685,1229,0
+> 9:False:4,7:27685,1229,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_30_3.tar.bz2:1.6603941917419434:0.4287437:1.6499999999998636
+> 0:True:4,6:27685,1229,0
+> 1:False:10,15:27685,1229,0
+> 2:False:4,10:27685,1229,0
+> 3:False:10,16:27685,1229,0
+> 4:False:9,15:27685,1229,0
+> 5:False:4,10:27685,1229,0
+> 6:False:10,16:27685,1229,0
+> 7:False:4,10:27685,1229,0
+> 8:False:4,10:27685,1229,0
+> 9:False:4,10:27685,1229,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_1.tar.bz2:1.915536642074585:0.6304133000000001:1.9100000000000819
+> 0:False:4,16:27690,1244,0
+> 1:True:10,14:27690,1244,0
+> 2:False:4,17:27690,1244,0
+> 3:False:10,19:27690,1244,0
+> 4:False:9,19:27690,1244,0
+> 5:False:4,17:27690,1244,0
+> 6:False:10,19:27690,1244,0
+> 7:False:4,17:27690,1244,0
+> 8:False:4,17:27690,1244,0
+> 9:False:4,17:27690,1244,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_2.tar.bz2:1.6737163066864014:0.4192954:1.6700000000000728
+> 0:False:4,17:27689,1241,0
+> 1:True:10,14:27689,1241,0
+> 2:False:4,18:27689,1241,0
+> 3:False:10,20:27689,1241,0
+> 4:False:9,20:27689,1241,0
+> 5:False:4,18:27689,1241,0
+> 6:False:10,20:27689,1241,0
+> 7:False:4,18:27689,1241,0
+> 8:False:4,18:27689,1241,0
+> 9:False:4,18:27689,1241,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_30_3.tar.bz2:1.77376389503479:0.5123106:1.7699999999999818
+> 0:False:4,17:27690,1244,0
+> 1:True:10,14:27690,1244,0
+> 2:False:4,18:27690,1244,0
+> 3:False:10,20:27690,1244,0
+> 4:False:9,20:27690,1244,0
+> 5:False:4,18:27690,1244,0
+> 6:False:10,20:27690,1244,0
+> 7:False:4,18:27690,1244,0
+> 8:False:4,18:27690,1244,0
+> 9:False:4,18:27690,1244,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_1.tar.bz2:1.7221217155456543:0.4633933:1.7200000000000273
+> 0:False:4,12:27686,1232,2
+> 1:False:10,18:27686,1232,1
+> 2:True:4,8:27686,1232,2
+> 3:False:10,18:27686,1232,1
+> 4:False:9,15:27686,1232,1
+> 5:False:4,12:27686,1232,2
+> 6:False:10,18:27686,1232,1
+> 7:False:4,12:27686,1232,2
+> 8:False:4,12:27686,1232,2
+> 9:False:4,12:27686,1232,2
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_2.tar.bz2:1.7122282981872559:0.45475730000000003:1.7200000000000273
+> 0:False:4,11:27686,1232,0
+> 1:False:10,17:27686,1232,0
+> 2:True:4,8:27686,1232,0
+> 3:False:10,17:27686,1232,0
+> 4:False:9,14:27686,1232,0
+> 5:False:4,11:27686,1232,0
+> 6:False:10,17:27686,1232,0
+> 7:False:4,11:27686,1232,0
+> 8:False:4,11:27686,1232,0
+> 9:False:4,11:27686,1232,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_30_3.tar.bz2:1.6812009811401367:0.4354182:1.6899999999998272
+> 0:False:4,12:27686,1232,1
+> 1:False:10,18:27686,1232,1
+> 2:True:4,8:27686,1232,1
+> 3:False:10,18:27686,1232,1
+> 4:False:9,15:27686,1232,1
+> 5:False:4,12:27686,1232,1
+> 6:False:10,18:27686,1232,1
+> 7:False:4,12:27686,1232,1
+> 8:False:4,12:27686,1232,1
+> 9:False:4,12:27686,1232,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_1.tar.bz2:1.7047832012176514:0.4301022:1.7000000000000455
+> 0:False:4,17:27689,1241,1
+> 1:False:10,19:27689,1241,1
+> 2:False:4,17:27689,1241,1
+> 3:True:10,13:27689,1241,1
+> 4:False:9,19:27689,1241,1
+> 5:False:4,17:27689,1241,1
+> 6:False:10,19:27689,1241,2
+> 7:False:4,17:27689,1241,1
+> 8:False:4,17:27689,1241,1
+> 9:False:4,17:27689,1241,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_2.tar.bz2:1.6563801765441895:0.413674:1.650000000000091
+> 0:False:4,17:27688,1238,0
+> 1:False:10,19:27688,1238,0
+> 2:False:4,17:27688,1238,0
+> 3:True:10,13:27688,1238,0
+> 4:False:9,19:27688,1238,0
+> 5:False:4,17:27688,1238,0
+> 6:False:10,19:27688,1238,0
+> 7:False:4,17:27688,1238,0
+> 8:False:4,17:27688,1238,0
+> 9:False:4,17:27688,1238,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_30_3.tar.bz2:1.682701826095581:0.41667820000000005:1.6800000000000637
+> 0:False:4,18:27688,1238,0
+> 1:False:10,20:27688,1238,0
+> 2:False:4,18:27688,1238,0
+> 3:True:10,14:27688,1238,0
+> 4:False:9,20:27688,1238,0
+> 5:False:4,18:27688,1238,0
+> 6:False:10,20:27688,1238,0
+> 7:False:4,18:27688,1238,0
+> 8:False:4,18:27688,1238,0
+> 9:False:4,18:27688,1238,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_1.tar.bz2:0.5661032199859619:0.1057747:0.5600000000001728
+> 0:True:4,8:7295,627,1
+> 1:False:4,10:7295,627,1
+> 2:False:9,14:7295,627,1
+> 3:False:6,13:7295,627,1
+> 4:False:4,11:7295,627,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_2.tar.bz2:0.5628514289855957:0.0963568:0.5699999999999363
+> 0:True:4,7:7295,627,0
+> 1:False:4,9:7295,627,0
+> 2:False:9,15:7295,627,0
+> 3:False:6,12:7295,627,0
+> 4:False:4,10:7295,627,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_30_3.tar.bz2:0.5602681636810303:0.09435429999999999:0.5499999999999545
+> 0:True:4,7:7294,624,1
+> 1:False:4,8:7294,624,1
+> 2:False:9,13:7294,624,1
+> 3:False:6,10:7294,624,1
+> 4:False:4,8:7294,624,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_1.tar.bz2:0.5522375106811523:0.0960101:0.5499999999999545
+> 0:False:4,10:7297,633,0
+> 1:True:4,7:7297,633,0
+> 2:False:9,15:7297,633,0
+> 3:False:6,11:7297,633,0
+> 4:False:4,11:7297,633,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_2.tar.bz2:0.5458657741546631:0.08614749999999999:0.5499999999999545
+> 0:False:4,10:7295,627,0
+> 1:True:4,9:7295,627,0
+> 2:True:9,14:7295,627,0
+> 3:False:6,12:7295,627,0
+> 4:False:4,10:7295,627,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_30_3.tar.bz2:0.5672426223754883:0.1074428:0.5699999999999363
+> 0:False:4,9:7295,627,1
+> 1:True:4,7:7295,627,1
+> 2:False:9,15:7295,627,1
+> 3:False:6,13:7295,627,1
+> 4:False:4,11:7295,627,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_1.tar.bz2:0.5658948421478271:0.1084885:0.5599999999999454
+> 0:False:4,11:7297,633,0
+> 1:False:4,11:7297,633,0
+> 2:True:9,9:7297,633,0
+> 3:False:6,13:7297,633,0
+> 4:False:4,11:7297,633,0
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_2.tar.bz2:0.5600242614746094:0.0992688:0.5499999999997272
+> 0:False:4,10:7297,633,1
+> 1:False:4,10:7297,633,1
+> 2:True:9,9:7297,633,0
+> 3:False:6,12:7297,633,1
+> 4:False:4,10:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_30_3.tar.bz2:0.589383602142334:0.1400656:0.5800000000001546
+> 0:False:4,10:7297,633,1
+> 1:False:4,10:7297,633,1
+> 2:True:9,10:7297,633,0
+> 3:False:6,15:7297,633,1
+> 4:False:4,13:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_1.tar.bz2:0.5792746543884277:0.1178644:0.5700000000001637
+> 0:False:4,13:7296,630,1
+> 1:False:4,13:7296,630,1
+> 2:False:9,14:7296,630,0
+> 3:True:6,9:7296,630,1
+> 4:False:4,13:7296,630,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_2.tar.bz2:0.5392239093780518:0.0850355:0.5399999999999636
+> 0:False:4,9:7297,633,1
+> 1:False:4,9:7297,633,1
+> 2:True:9,11:7297,633,1
+> 3:False:6,10:7297,633,1
+> 4:False:4,9:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/30/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_30_3.tar.bz2:0.558664083480835:0.1113139:0.5500000000001819
+> 0:False:4,11:7297,633,1
+> 1:False:4,11:7297,633,1
+> 2:False:9,13:7297,633,1
+> 3:True:6,9:7297,633,1
+> 4:False:4,11:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_1.tar.bz2:3.379852056503296:1.191084:3.3799999999998818
+> 0:True:4,11:95910,2346,2
+> 1:False:4,12:95910,2346,1
+> 2:False:4,15:95910,2346,1
+> 3:False:4,15:95910,2346,1
+> 4:False:4,14:95910,2346,1
+> 5:False:4,15:95910,2346,1
+> 6:False:4,15:95910,2346,2
+> 7:False:4,15:95910,2346,2
+> 8:False:4,15:95910,2346,1
+> 9:False:4,15:95910,2346,2
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_2.tar.bz2:3.385342597961426:1.2049349999999999:3.380000000000109
+> 0:True:4,12:95911,2349,1
+> 1:False:4,13:95911,2349,1
+> 2:False:4,16:95911,2349,1
+> 3:False:4,16:95911,2349,1
+> 4:False:4,16:95911,2349,1
+> 5:False:4,16:95911,2349,1
+> 6:False:4,16:95911,2349,1
+> 7:False:4,16:95911,2349,1
+> 8:False:4,16:95911,2349,1
+> 9:False:4,16:95911,2349,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_50_3.tar.bz2:3.1624069213867188:1.0094450000000001:3.160000000000082
+> 0:True:4,12:95911,2349,0
+> 1:True:4,12:95911,2349,1
+> 2:False:4,14:95911,2349,1
+> 3:False:4,14:95911,2349,1
+> 4:False:4,14:95911,2349,1
+> 5:False:4,14:95911,2349,1
+> 6:False:4,14:95911,2349,1
+> 7:False:4,14:95911,2349,1
+> 8:False:4,14:95911,2349,1
+> 9:False:4,14:95911,2349,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_1.tar.bz2:3.2504048347473145:1.0829168:3.2499999999997726
+> 0:False:4,12:95911,2349,0
+> 1:True:4,11:95911,2349,0
+> 2:False:4,15:95911,2349,0
+> 3:False:4,15:95911,2349,1
+> 4:False:4,15:95911,2349,0
+> 5:False:4,15:95911,2349,0
+> 6:False:4,15:95911,2349,0
+> 7:False:4,15:95911,2349,0
+> 8:False:4,15:95911,2349,0
+> 9:False:4,15:95911,2349,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_2.tar.bz2:3.2814016342163086:1.0520789:3.2000000000000455
+> 0:False:4,13:95911,2349,0
+> 1:True:4,11:95911,2349,0
+> 2:False:4,15:95911,2349,0
+> 3:False:4,15:95911,2349,0
+> 4:False:4,15:95911,2349,0
+> 5:False:4,15:95911,2349,0
+> 6:False:4,15:95911,2349,0
+> 7:False:4,15:95911,2349,0
+> 8:False:4,15:95911,2349,0
+> 9:False:4,15:95911,2349,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_50_3.tar.bz2:3.3032217025756836:1.1319359999999998:3.300000000000182
+> 0:False:4,13:95910,2346,2
+> 1:True:4,11:95910,2346,1
+> 2:False:4,15:95910,2346,2
+> 3:False:4,15:95910,2346,2
+> 4:False:4,15:95910,2346,2
+> 5:False:4,15:95910,2346,2
+> 6:False:4,15:95910,2346,1
+> 7:False:4,15:95910,2346,1
+> 8:False:4,15:95910,2346,1
+> 9:False:4,15:95910,2346,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_1.tar.bz2:3.271524429321289:1.1002303:3.269999999999982
+> 0:False:4,24:95914,2358,3
+> 1:False:4,24:95914,2358,3
+> 2:False:4,21:95914,2358,4
+> 3:True:4,20:95914,2358,4
+> 4:False:4,24:95914,2358,3
+> 5:False:4,24:95914,2358,3
+> 6:False:4,24:95914,2358,3
+> 7:False:4,24:95914,2358,3
+> 8:False:4,24:95914,2358,3
+> 9:False:4,24:95914,2358,3
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_2.tar.bz2:3.4297139644622803:1.254382:3.4299999999998363
+> 0:False:4,22:95917,2367,1
+> 1:False:4,22:95917,2367,1
+> 2:True:4,20:95917,2367,1
+> 3:True:4,20:95917,2367,1
+> 4:False:4,22:95917,2367,1
+> 5:False:4,22:95917,2367,1
+> 6:False:4,22:95917,2367,1
+> 7:False:4,22:95917,2367,1
+> 8:False:4,22:95917,2367,1
+> 9:False:4,22:95917,2367,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_50_3.tar.bz2:3.2273335456848145:1.0458031:3.230000000000018
+> 0:False:4,24:95917,2367,3
+> 1:False:4,24:95917,2367,3
+> 2:True:4,20:95917,2367,2
+> 3:False:4,21:95917,2367,3
+> 4:False:4,24:95917,2367,3
+> 5:False:4,24:95917,2367,3
+> 6:False:4,24:95917,2367,3
+> 7:False:4,24:95917,2367,3
+> 8:False:4,24:95917,2367,3
+> 9:False:4,24:95917,2367,3
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_1.tar.bz2:3.5140459537506104:1.300129:3.5100000000002183
+> 0:False:4,21:95917,2367,0
+> 1:False:4,21:95917,2367,0
+> 2:False:4,20:95917,2367,0
+> 3:True:4,19:95917,2367,0
+> 4:False:4,21:95917,2367,0
+> 5:False:4,21:95917,2367,0
+> 6:False:4,20:95917,2367,0
+> 7:False:4,20:95917,2367,0
+> 8:False:4,21:95917,2367,0
+> 9:False:4,21:95917,2367,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_2.tar.bz2:3.377504587173462:1.1694449999999998:3.3700000000001182
+> 0:False:4,21:95912,2352,3
+> 1:False:4,21:95912,2352,3
+> 2:False:4,19:95912,2352,3
+> 3:True:4,17:95912,2352,3
+> 4:False:4,21:95912,2352,3
+> 5:False:4,21:95912,2352,3
+> 6:False:4,21:95912,2352,3
+> 7:False:4,21:95912,2352,3
+> 8:False:4,21:95912,2352,3
+> 9:False:4,21:95912,2352,3
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_50_3.tar.bz2:3.326019287109375:1.1426119000000001:3.3200000000001637
+> 0:False:4,19:95915,2361,1
+> 1:False:4,19:95915,2361,1
+> 2:False:4,17:95915,2361,1
+> 3:True:4,16:95915,2361,1
+> 4:False:4,19:95915,2361,1
+> 5:False:4,19:95915,2361,1
+> 6:False:4,19:95915,2361,1
+> 7:False:4,19:95915,2361,1
+> 8:False:4,19:95915,2361,1
+> 9:False:4,19:95915,2361,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_1.tar.bz2:0.7198772430419922:0.1534933:0.7200000000000273
+> 0:True:4,11:22576,1108,1
+> 1:False:4,13:22576,1108,1
+> 2:False:4,15:22576,1108,1
+> 3:False:4,15:22576,1108,1
+> 4:False:4,15:22576,1108,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_2.tar.bz2:0.7657139301300049:0.17254299999999997:0.7700000000002092
+> 0:True:4,15:22577,1111,2
+> 1:False:4,17:22577,1111,2
+> 2:False:4,18:22577,1111,2
+> 3:False:4,18:22577,1111,2
+> 4:False:4,18:22577,1111,2
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_50_3.tar.bz2:0.7629780769348145:0.17886069999999998:0.7599999999999909
+> 0:True:4,13:22578,1114,0
+> 1:False:4,14:22578,1114,0
+> 2:False:4,14:22578,1114,0
+> 3:False:4,14:22578,1114,0
+> 4:False:4,14:22578,1114,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_1.tar.bz2:0.7887403964996338:0.18648050000000002:0.7999999999999545
+> 0:False:4,16:22577,1111,0
+> 1:True:4,14:22577,1111,0
+> 2:False:4,18:22577,1111,0
+> 3:False:4,18:22577,1111,0
+> 4:False:4,18:22577,1111,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_2.tar.bz2:0.7908291816711426:0.2088446:0.790000000000191
+> 0:False:4,14:22578,1114,0
+> 1:True:4,13:22578,1114,0
+> 2:False:4,16:22578,1114,0
+> 3:False:4,16:22578,1114,0
+> 4:False:4,16:22578,1114,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_50_3.tar.bz2:0.7910339832305908:0.189807:0.7799999999999727
+> 0:False:4,14:22577,1111,0
+> 1:True:4,13:22577,1111,0
+> 2:False:4,15:22577,1111,0
+> 3:False:4,15:22577,1111,0
+> 4:False:4,15:22577,1111,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_1.tar.bz2:0.7845804691314697:0.2062944:0.7899999999999636
+> 0:False:4,15:22577,1111,1
+> 1:False:4,15:22577,1111,1
+> 2:True:4,12:22577,1111,2
+> 3:False:4,13:22577,1111,2
+> 4:False:4,15:22577,1111,3
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_2.tar.bz2:0.7616860866546631:0.1843996:0.7599999999999909
+> 0:False:4,16:22575,1105,1
+> 1:False:4,16:22575,1105,1
+> 2:True:4,12:22575,1105,1
+> 3:False:4,14:22575,1105,1
+> 4:False:4,16:22575,1105,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_50_3.tar.bz2:0.8131210803985596:0.21638639999999998:0.8099999999999454
+> 0:False:4,16:22576,1108,0
+> 1:False:4,16:22576,1108,0
+> 2:True:4,12:22576,1108,0
+> 3:False:4,14:22576,1108,0
+> 4:False:4,16:22576,1108,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_1.tar.bz2:0.7448756694793701:0.16256630000000002:0.7399999999997817
+> 0:False:4,18:22574,1102,1
+> 1:False:4,18:22574,1102,1
+> 2:False:4,17:22574,1102,1
+> 3:True:4,14:22574,1102,1
+> 4:False:4,18:22574,1102,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_2.tar.bz2:0.7367842197418213:0.15910849999999999:0.7400000000000091
+> 0:False:4,17:22575,1105,0
+> 1:False:4,17:22575,1105,0
+> 2:False:4,16:22575,1105,0
+> 3:True:4,13:22575,1105,0
+> 4:False:4,17:22575,1105,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_50_3.tar.bz2:0.7408337593078613:0.16379680000000002:0.7400000000000091
+> 0:False:4,16:22575,1105,0
+> 1:False:4,16:22575,1105,0
+> 2:False:4,15:22575,1105,0
+> 3:True:4,12:22575,1105,0
+> 4:False:4,16:22575,1105,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_1.tar.bz2:1.633847713470459:0.4179363:1.6300000000001091
+> 0:True:4,4:27686,1232,0
+> 1:False:10,13:27686,1232,0
+> 2:False:4,8:27686,1232,0
+> 3:False:10,14:27686,1232,0
+> 4:False:9,13:27686,1232,0
+> 5:False:4,8:27686,1232,0
+> 6:False:10,14:27686,1232,0
+> 7:False:4,8:27686,1232,0
+> 8:False:4,8:27686,1232,0
+> 9:False:4,8:27686,1232,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_2.tar.bz2:1.6769883632659912:0.4420930999999999:1.6699999999998454
+> 0:True:4,5:27685,1229,1
+> 1:False:10,14:27685,1229,1
+> 2:False:4,9:27685,1229,1
+> 3:False:10,15:27685,1229,1
+> 4:False:9,14:27685,1229,1
+> 5:False:4,9:27685,1229,1
+> 6:False:10,15:27685,1229,1
+> 7:False:4,9:27685,1229,1
+> 8:False:4,9:27685,1229,1
+> 9:False:4,9:27685,1229,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_50_3.tar.bz2:1.6679670810699463:0.4304953:1.6700000000000728
+> 0:True:4,5:27686,1232,0
+> 1:False:10,13:27686,1232,0
+> 2:False:4,8:27686,1232,0
+> 3:False:10,14:27686,1232,0
+> 4:False:9,13:27686,1232,0
+> 5:False:4,8:27686,1232,0
+> 6:False:10,14:27686,1232,0
+> 7:False:4,8:27686,1232,0
+> 8:False:4,8:27686,1232,0
+> 9:False:4,8:27686,1232,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_1.tar.bz2:1.6709063053131104:0.4319482:1.6599999999998545
+> 0:False:4,19:27694,1256,0
+> 1:True:10,16:27694,1256,0
+> 2:False:4,20:27694,1256,0
+> 3:False:10,22:27694,1256,0
+> 4:False:9,22:27694,1256,0
+> 5:False:4,20:27694,1256,0
+> 6:False:10,22:27694,1256,0
+> 7:False:4,20:27694,1256,0
+> 8:False:4,20:27694,1256,0
+> 9:False:4,20:27694,1256,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_2.tar.bz2:1.6236062049865723:0.4091254:1.6200000000001182
+> 0:False:4,19:27692,1250,2
+> 1:True:10,16:27692,1250,2
+> 2:False:4,20:27692,1250,2
+> 3:False:10,22:27692,1250,2
+> 4:False:9,22:27692,1250,2
+> 5:False:4,20:27692,1250,2
+> 6:False:10,22:27692,1250,2
+> 7:False:4,20:27692,1250,2
+> 8:False:4,20:27692,1250,2
+> 9:False:4,20:27692,1250,2
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_50_3.tar.bz2:1.735576868057251:0.4912395:1.7399999999997817
+> 0:False:4,21:27693,1253,2
+> 1:True:10,18:27693,1253,2
+> 2:False:4,22:27693,1253,2
+> 3:False:10,24:27693,1253,2
+> 4:False:9,24:27693,1253,2
+> 5:False:4,22:27693,1253,2
+> 6:False:10,24:27693,1253,2
+> 7:False:4,22:27693,1253,2
+> 8:False:4,22:27693,1253,2
+> 9:False:4,22:27693,1253,2
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_1.tar.bz2:1.7020471096038818:0.45436160000000003:1.7000000000000455
+> 0:False:4,11:27688,1238,0
+> 1:False:10,17:27688,1238,0
+> 2:True:4,8:27688,1238,0
+> 3:False:10,17:27688,1238,0
+> 4:False:9,14:27688,1238,0
+> 5:False:4,11:27688,1238,0
+> 6:False:10,17:27688,1238,0
+> 7:False:4,11:27688,1238,0
+> 8:False:4,11:27688,1238,0
+> 9:False:4,11:27688,1238,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_2.tar.bz2:1.78635835647583:0.5739699:1.7800000000002
+> 0:False:4,14:27688,1238,1
+> 1:False:10,20:27688,1238,1
+> 2:True:4,10:27688,1238,1
+> 3:False:10,20:27688,1238,1
+> 4:False:9,17:27688,1238,1
+> 5:False:4,14:27688,1238,1
+> 6:False:10,20:27688,1238,1
+> 7:False:4,14:27688,1238,1
+> 8:False:4,14:27688,1238,1
+> 9:False:4,14:27688,1238,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_50_3.tar.bz2:1.6844091415405273:0.456133:1.6800000000000637
+> 0:False:4,15:27688,1238,1
+> 1:False:10,21:27688,1238,1
+> 2:True:4,11:27688,1238,1
+> 3:False:10,21:27688,1238,1
+> 4:False:9,18:27688,1238,1
+> 5:False:4,15:27688,1238,1
+> 6:False:10,21:27688,1238,1
+> 7:False:4,15:27688,1238,1
+> 8:False:4,15:27688,1238,1
+> 9:False:4,15:27688,1238,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_1.tar.bz2:1.731036901473999:0.5038731:1.7300000000000182
+> 0:False:4,17:27693,1253,0
+> 1:False:10,19:27693,1253,0
+> 2:False:4,17:27693,1253,0
+> 3:True:10,13:27693,1253,0
+> 4:False:9,19:27693,1253,0
+> 5:False:4,17:27693,1253,0
+> 6:False:10,19:27693,1253,0
+> 7:False:4,17:27693,1253,0
+> 8:False:4,17:27693,1253,0
+> 9:False:4,17:27693,1253,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_2.tar.bz2:1.6467347145080566:0.42232850000000005:1.650000000000091
+> 0:False:4,16:27692,1250,0
+> 1:False:10,18:27692,1250,0
+> 2:False:4,16:27692,1250,0
+> 3:True:10,13:27692,1250,0
+> 4:False:9,18:27692,1250,0
+> 5:False:4,16:27692,1250,0
+> 6:False:10,18:27692,1250,0
+> 7:False:4,16:27692,1250,0
+> 8:False:4,16:27692,1250,0
+> 9:False:4,16:27692,1250,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_50_3.tar.bz2:1.6893296241760254:0.4495545:1.6800000000000637
+> 0:False:4,16:27692,1250,0
+> 1:False:10,18:27692,1250,0
+> 2:False:4,16:27692,1250,0
+> 3:True:10,12:27692,1250,0
+> 4:False:9,18:27692,1250,0
+> 5:False:4,16:27692,1250,0
+> 6:False:10,18:27692,1250,0
+> 7:False:4,16:27692,1250,0
+> 8:False:4,16:27692,1250,0
+> 9:False:4,16:27692,1250,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_1.tar.bz2:0.5607833862304688:0.1021063:0.5499999999997272
+> 0:True:4,6:7298,636,0
+> 1:False:4,9:7298,636,0
+> 2:False:9,15:7298,636,0
+> 3:False:6,12:7298,636,0
+> 4:False:4,10:7298,636,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_2.tar.bz2:0.5715386867523193:0.12238170000000001:0.5699999999999363
+> 0:True:4,7:7298,636,0
+> 1:False:4,10:7298,636,1
+> 2:False:9,16:7298,636,1
+> 3:False:6,11:7298,636,1
+> 4:False:4,11:7298,636,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_50_3.tar.bz2:0.5483546257019043:0.0960068:0.5399999999999636
+> 0:True:4,6:7297,633,1
+> 1:False:4,8:7297,633,0
+> 2:False:9,15:7297,633,1
+> 3:False:6,12:7297,633,1
+> 4:False:4,10:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_1.tar.bz2:0.5406417846679688:0.0924088:0.5399999999999636
+> 0:False:4,11:7299,639,0
+> 1:True:4,8:7299,639,0
+> 2:False:9,16:7299,639,0
+> 3:False:6,14:7299,639,0
+> 4:False:4,12:7299,639,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_2.tar.bz2:0.5643517971038818:0.0942939:0.5700000000001637
+> 0:False:4,11:7298,636,1
+> 1:True:4,9:7298,636,2
+> 2:False:9,16:7298,636,1
+> 3:False:6,14:7298,636,1
+> 4:False:4,12:7298,636,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_50_3.tar.bz2:0.5297317504882812:0.0839049:0.5199999999999818
+> 0:False:4,11:7297,633,1
+> 1:True:4,8:7297,633,1
+> 2:False:9,16:7297,633,1
+> 3:False:6,14:7297,633,1
+> 4:False:4,12:7297,633,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_1.tar.bz2:0.5362153053283691:0.08670549999999999:0.5399999999999636
+> 0:False:4,14:7300,642,0
+> 1:False:4,14:7300,642,0
+> 2:True:9,10:7300,642,0
+> 3:False:6,15:7300,642,0
+> 4:False:4,14:7300,642,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_2.tar.bz2:0.5343759059906006:0.08493129999999999:0.5399999999999636
+> 0:False:4,15:7301,645,1
+> 1:False:4,14:7301,645,0
+> 2:True:9,11:7301,645,1
+> 3:False:6,16:7301,645,1
+> 4:False:4,14:7301,645,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_50_3.tar.bz2:0.5461907386779785:0.0883475:0.5499999999999545
+> 0:False:4,16:7300,642,0
+> 1:False:4,16:7300,642,0
+> 2:True:9,12:7300,642,0
+> 3:False:6,17:7300,642,0
+> 4:False:4,16:7300,642,0
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_1.tar.bz2:0.5717735290527344:0.0976005:0.5699999999999363
+> 0:False:4,15:7300,642,1
+> 1:False:4,16:7300,642,1
+> 2:False:9,18:7300,642,1
+> 3:True:6,12:7300,642,1
+> 4:False:4,16:7300,642,1
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_2.tar.bz2:0.5434727668762207:0.0947291:0.5299999999999727
+> 0:False:4,16:7299,639,3
+> 1:False:4,16:7299,639,3
+> 2:False:9,17:7299,639,2
+> 3:True:6,12:7299,639,3
+> 4:False:4,16:7299,639,3
+easy-ipc-grid-suboptimal-old-noisy/50/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_50_3.tar.bz2:0.5389542579650879:0.08581939999999999:0.5399999999999636
+> 0:False:4,12:7300,642,1
+> 1:False:4,12:7300,642,1
+> 2:True:9,14:7300,642,1
+> 3:True:6,11:7300,642,1
+> 4:False:4,12:7300,642,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_1.tar.bz2:3.198080062866211:1.0140518:3.2000000000000455
+> 0:True:4,14:95913,2355,2
+> 1:False:4,15:95913,2355,2
+> 2:False:4,18:95913,2355,2
+> 3:False:4,18:95913,2355,2
+> 4:False:4,18:95913,2355,2
+> 5:False:4,18:95913,2355,2
+> 6:False:4,18:95913,2355,2
+> 7:False:4,18:95913,2355,2
+> 8:False:4,18:95913,2355,2
+> 9:False:4,18:95913,2355,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_2.tar.bz2:3.344099521636963:1.175341:3.3299999999999272
+> 0:True:4,16:95913,2355,2
+> 1:False:4,17:95913,2355,2
+> 2:False:4,20:95913,2355,2
+> 3:False:4,20:95913,2355,2
+> 4:False:4,20:95913,2355,2
+> 5:False:4,20:95913,2355,2
+> 6:False:4,20:95913,2355,2
+> 7:False:4,20:95913,2355,2
+> 8:False:4,20:95913,2355,2
+> 9:False:4,20:95913,2355,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_70_3.tar.bz2:3.2123327255249023:1.0234621000000002:3.2100000000000364
+> 0:True:4,14:95912,2352,2
+> 1:False:4,15:95912,2352,2
+> 2:False:4,18:95912,2352,2
+> 3:False:4,18:95912,2352,2
+> 4:False:4,18:95912,2352,2
+> 5:False:4,18:95912,2352,2
+> 6:False:4,18:95912,2352,2
+> 7:False:4,18:95912,2352,2
+> 8:False:4,18:95912,2352,2
+> 9:False:4,18:95912,2352,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_1.tar.bz2:3.3624675273895264:1.1749399999999999:3.3599999999999
+> 0:False:4,15:95913,2355,0
+> 1:True:4,13:95913,2355,0
+> 2:False:4,17:95913,2355,0
+> 3:False:4,17:95913,2355,0
+> 4:False:4,17:95913,2355,0
+> 5:False:4,17:95913,2355,0
+> 6:False:4,17:95913,2355,0
+> 7:False:4,17:95913,2355,0
+> 8:False:4,16:95913,2355,1
+> 9:False:4,16:95913,2355,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_2.tar.bz2:3.207570791244507:1.0241063:3.2100000000000364
+> 0:False:4,15:95914,2358,3
+> 1:True:4,13:95914,2358,2
+> 2:False:4,16:95914,2358,3
+> 3:False:4,16:95914,2358,3
+> 4:False:4,16:95914,2358,3
+> 5:False:4,16:95914,2358,3
+> 6:False:4,16:95914,2358,3
+> 7:False:4,16:95914,2358,3
+> 8:False:4,16:95914,2358,3
+> 9:False:4,16:95914,2358,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_70_3.tar.bz2:3.2058968544006348:1.0159367:3.199999999999818
+> 0:False:4,14:95914,2358,2
+> 1:True:4,13:95914,2358,2
+> 2:False:4,16:95914,2358,2
+> 3:False:4,16:95914,2358,2
+> 4:False:4,16:95914,2358,2
+> 5:False:4,16:95914,2358,2
+> 6:False:4,16:95914,2358,2
+> 7:False:4,16:95914,2358,2
+> 8:False:4,16:95914,2358,2
+> 9:False:4,16:95914,2358,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_1.tar.bz2:3.244844675064087:1.0618629000000002:3.25
+> 0:False:4,28:95920,2376,2
+> 1:False:4,28:95920,2376,2
+> 2:True:4,24:95920,2376,2
+> 3:False:4,25:95920,2376,2
+> 4:False:4,28:95920,2376,2
+> 5:False:4,28:95920,2376,2
+> 6:False:4,28:95920,2376,2
+> 7:False:4,28:95920,2376,2
+> 8:False:4,28:95920,2376,2
+> 9:False:4,28:95920,2376,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_2.tar.bz2:3.456735134124756:1.274079:3.4500000000000455
+> 0:False:4,27:95922,2382,2
+> 1:False:4,27:95922,2382,2
+> 2:True:4,23:95922,2382,3
+> 3:False:4,24:95922,2382,3
+> 4:False:4,27:95922,2382,3
+> 5:False:4,27:95922,2382,3
+> 6:False:4,27:95922,2382,3
+> 7:False:4,27:95922,2382,3
+> 8:False:4,27:95922,2382,3
+> 9:False:4,27:95922,2382,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_70_3.tar.bz2:3.252537488937378:1.092257:3.25
+> 0:False:4,28:95922,2382,3
+> 1:False:4,28:95922,2382,3
+> 2:True:4,25:95922,2382,3
+> 3:True:4,25:95922,2382,3
+> 4:False:4,28:95922,2382,4
+> 5:False:4,28:95922,2382,4
+> 6:False:4,28:95922,2382,3
+> 7:False:4,26:95922,2382,3
+> 8:False:4,28:95922,2382,3
+> 9:False:4,28:95922,2382,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_1.tar.bz2:3.2600512504577637:1.0831229:3.240000000000009
+> 0:False:4,25:95919,2373,4
+> 1:False:4,25:95919,2373,4
+> 2:False:4,23:95919,2373,3
+> 3:True:4,21:95919,2373,2
+> 4:False:4,25:95919,2373,3
+> 5:False:4,25:95919,2373,3
+> 6:False:4,25:95919,2373,4
+> 7:False:4,25:95919,2373,4
+> 8:False:4,25:95919,2373,4
+> 9:False:4,25:95919,2373,4
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_2.tar.bz2:3.398848056793213:1.200562:3.3899999999998727
+> 0:False:4,25:95921,2379,4
+> 1:False:4,25:95921,2379,4
+> 2:False:4,23:95921,2379,4
+> 3:True:4,21:95921,2379,6
+> 4:False:4,25:95921,2379,5
+> 5:False:4,25:95921,2379,5
+> 6:False:4,25:95921,2379,5
+> 7:False:4,25:95921,2379,5
+> 8:False:4,25:95921,2379,3
+> 9:False:4,25:95921,2379,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_70_3.tar.bz2:3.2302122116088867:1.0472474:3.2199999999998
+> 0:False:4,25:95920,2376,2
+> 1:False:4,25:95920,2376,2
+> 2:False:4,24:95920,2376,2
+> 3:True:4,22:95920,2376,2
+> 4:False:4,25:95920,2376,2
+> 5:False:4,25:95920,2376,2
+> 6:False:4,25:95920,2376,2
+> 7:False:4,25:95920,2376,2
+> 8:False:4,25:95920,2376,2
+> 9:False:4,25:95920,2376,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_1.tar.bz2:0.7745218276977539:0.1993807:0.7799999999999727
+> 0:True:4,17:22581,1123,1
+> 1:False:4,19:22581,1123,2
+> 2:False:4,21:22581,1123,1
+> 3:False:4,21:22581,1123,1
+> 4:False:4,21:22581,1123,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_2.tar.bz2:0.7357819080352783:0.1688877:0.7300000000000182
+> 0:True:4,15:22579,1117,3
+> 1:False:4,17:22579,1117,3
+> 2:False:4,19:22579,1117,3
+> 3:False:4,19:22579,1117,3
+> 4:False:4,19:22579,1117,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_70_3.tar.bz2:0.7532482147216797:0.1752494:0.75
+> 0:True:4,16:22579,1117,3
+> 1:False:4,18:22579,1117,3
+> 2:False:4,20:22579,1117,3
+> 3:False:4,20:22579,1117,3
+> 4:False:4,20:22579,1117,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_1.tar.bz2:0.7823338508605957:0.21665569999999998:0.7799999999999727
+> 0:False:4,18:22581,1123,1
+> 1:True:4,16:22581,1123,1
+> 2:False:4,18:22581,1123,1
+> 3:False:4,20:22581,1123,0
+> 4:False:4,20:22581,1123,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_2.tar.bz2:0.7838582992553711:0.22249300000000002:0.7899999999999636
+> 0:False:4,19:22579,1117,0
+> 1:True:4,17:22579,1117,1
+> 2:False:4,21:22579,1117,1
+> 3:False:4,21:22579,1117,1
+> 4:False:4,21:22579,1117,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_70_3.tar.bz2:0.7542941570281982:0.188296:0.75
+> 0:False:4,18:22582,1126,0
+> 1:True:4,16:22582,1126,1
+> 2:False:4,18:22582,1126,0
+> 3:False:4,19:22582,1126,1
+> 4:False:4,19:22582,1126,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_1.tar.bz2:0.7266128063201904:0.15385400000000002:0.7200000000000273
+> 0:False:4,19:22578,1114,0
+> 1:False:4,19:22578,1114,0
+> 2:True:4,15:22578,1114,0
+> 3:False:4,17:22578,1114,0
+> 4:False:4,19:22578,1114,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_2.tar.bz2:0.7579648494720459:0.1844268:0.75
+> 0:False:4,19:22579,1117,0
+> 1:False:4,19:22579,1117,0
+> 2:True:4,15:22579,1117,0
+> 3:False:4,17:22579,1117,0
+> 4:False:4,19:22579,1117,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_70_3.tar.bz2:0.7689127922058105:0.2136758:0.7699999999999818
+> 0:False:4,20:22579,1117,0
+> 1:False:4,20:22579,1117,0
+> 2:True:4,17:22579,1117,1
+> 3:False:4,18:22579,1117,0
+> 4:False:4,20:22579,1117,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_1.tar.bz2:0.7328131198883057:0.16071090000000002:0.7300000000000182
+> 0:False:4,18:22579,1117,0
+> 1:False:4,18:22579,1117,0
+> 2:False:4,17:22579,1117,0
+> 3:True:4,14:22579,1117,0
+> 4:False:4,18:22579,1117,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_2.tar.bz2:0.7393059730529785:0.1644265:0.7300000000000182
+> 0:False:4,19:22579,1117,1
+> 1:False:4,19:22579,1117,1
+> 2:False:4,18:22579,1117,1
+> 3:True:4,15:22579,1117,1
+> 4:False:4,19:22579,1117,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_70_3.tar.bz2:0.7384305000305176:0.16452170000000002:0.7400000000000091
+> 0:False:4,19:22580,1120,1
+> 1:False:4,19:22580,1120,1
+> 2:False:4,18:22580,1120,1
+> 3:True:4,15:22580,1120,1
+> 4:False:4,18:22580,1120,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_1.tar.bz2:1.6941444873809814:0.45273769999999997:1.6900000000000546
+> 0:True:4,7:27687,1235,1
+> 1:False:10,16:27687,1235,1
+> 2:False:4,11:27687,1235,1
+> 3:False:10,17:27687,1235,1
+> 4:False:9,16:27687,1235,1
+> 5:False:4,11:27687,1235,1
+> 6:False:10,17:27687,1235,1
+> 7:False:4,11:27687,1235,1
+> 8:False:4,11:27687,1235,1
+> 9:False:4,11:27687,1235,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_2.tar.bz2:1.6952154636383057:0.46716460000000004:1.699999999999818
+> 0:True:4,7:27688,1238,2
+> 1:False:10,16:27688,1238,2
+> 2:False:4,11:27688,1238,2
+> 3:False:10,17:27688,1238,2
+> 4:False:9,16:27688,1238,2
+> 5:False:4,11:27688,1238,2
+> 6:False:10,17:27688,1238,2
+> 7:False:4,11:27688,1238,2
+> 8:False:4,11:27688,1238,2
+> 9:False:4,11:27688,1238,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_70_3.tar.bz2:1.6345970630645752:0.42362299999999997:1.6299999999998818
+> 0:True:4,7:27688,1238,1
+> 1:False:10,16:27688,1238,1
+> 2:False:4,11:27688,1238,1
+> 3:False:10,17:27688,1238,1
+> 4:False:9,16:27688,1238,1
+> 5:False:4,11:27688,1238,1
+> 6:False:10,17:27688,1238,1
+> 7:False:4,11:27688,1238,1
+> 8:False:4,11:27688,1238,1
+> 9:False:4,11:27688,1238,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_1.tar.bz2:1.6646978855133057:0.4319492:1.6700000000000728
+> 0:False:4,21:27696,1262,3
+> 1:True:10,18:27696,1262,3
+> 2:False:4,22:27696,1262,3
+> 3:False:10,24:27696,1262,3
+> 4:False:9,24:27696,1262,3
+> 5:False:4,22:27696,1262,3
+> 6:False:10,24:27696,1262,3
+> 7:False:4,22:27696,1262,3
+> 8:False:4,22:27696,1262,3
+> 9:False:4,22:27696,1262,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_2.tar.bz2:1.653141975402832:0.41989030000000005:1.6499999999998636
+> 0:False:4,20:27698,1268,3
+> 1:True:10,19:27698,1268,3
+> 2:False:4,21:27698,1268,3
+> 3:False:10,23:27698,1268,3
+> 4:False:9,23:27698,1268,3
+> 5:False:4,21:27698,1268,3
+> 6:False:10,23:27698,1268,3
+> 7:False:4,21:27698,1268,3
+> 8:False:4,21:27698,1268,3
+> 9:False:4,21:27698,1268,3
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_70_3.tar.bz2:1.66740083694458:0.433728:1.6700000000000728
+> 0:False:4,23:27698,1268,2
+> 1:True:10,20:27698,1268,2
+> 2:False:4,24:27698,1268,2
+> 3:False:10,26:27698,1268,2
+> 4:False:9,26:27698,1268,2
+> 5:False:4,24:27698,1268,2
+> 6:False:10,26:27698,1268,2
+> 7:False:4,24:27698,1268,2
+> 8:False:4,24:27698,1268,2
+> 9:False:4,24:27698,1268,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_1.tar.bz2:1.69710373878479:0.48052710000000004:1.6899999999998272
+> 0:False:4,14:27691,1247,1
+> 1:False:10,20:27691,1247,1
+> 2:True:4,10:27691,1247,1
+> 3:False:10,20:27691,1247,1
+> 4:False:9,17:27691,1247,1
+> 5:False:4,14:27691,1247,1
+> 6:False:10,20:27691,1247,1
+> 7:False:4,14:27691,1247,1
+> 8:False:4,14:27691,1247,1
+> 9:False:4,14:27691,1247,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_2.tar.bz2:1.682919979095459:0.4544629:1.6700000000000728
+> 0:False:4,14:27690,1244,1
+> 1:False:10,20:27690,1244,2
+> 2:True:4,11:27690,1244,1
+> 3:False:10,20:27690,1244,1
+> 4:False:9,17:27690,1244,1
+> 5:False:4,14:27690,1244,1
+> 6:False:10,20:27690,1244,1
+> 7:False:4,14:27690,1244,1
+> 8:False:4,14:27690,1244,1
+> 9:False:4,14:27690,1244,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_70_3.tar.bz2:1.708498239517212:0.4705486:1.7100000000000364
+> 0:False:4,13:27690,1244,1
+> 1:False:10,19:27690,1244,1
+> 2:True:4,9:27690,1244,1
+> 3:False:10,19:27690,1244,1
+> 4:False:9,16:27690,1244,1
+> 5:False:4,13:27690,1244,1
+> 6:False:10,19:27690,1244,1
+> 7:False:4,13:27690,1244,1
+> 8:False:4,13:27690,1244,1
+> 9:False:4,13:27690,1244,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_1.tar.bz2:1.6417896747589111:0.4153327:1.6300000000001091
+> 0:False:4,19:27695,1259,2
+> 1:False:10,21:27695,1259,2
+> 2:False:4,19:27695,1259,2
+> 3:True:10,15:27695,1259,2
+> 4:False:9,21:27695,1259,2
+> 5:False:4,19:27695,1259,2
+> 6:False:10,21:27695,1259,3
+> 7:False:4,19:27695,1259,2
+> 8:False:4,19:27695,1259,2
+> 9:False:4,19:27695,1259,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_2.tar.bz2:1.7481369972229004:0.5218990000000001:1.75
+> 0:False:4,19:27696,1262,1
+> 1:False:10,21:27696,1262,0
+> 2:False:4,19:27696,1262,1
+> 3:True:10,15:27696,1262,0
+> 4:False:9,21:27696,1262,0
+> 5:False:4,19:27696,1262,0
+> 6:False:10,21:27696,1262,1
+> 7:False:4,19:27696,1262,0
+> 8:False:4,19:27696,1262,0
+> 9:False:4,19:27696,1262,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_70_3.tar.bz2:1.7701640129089355:0.5423432:1.7699999999999818
+> 0:False:4,19:27697,1265,1
+> 1:False:10,21:27697,1265,2
+> 2:False:4,19:27697,1265,2
+> 3:True:10,15:27697,1265,2
+> 4:False:9,21:27697,1265,2
+> 5:False:4,19:27697,1265,2
+> 6:False:10,21:27697,1265,2
+> 7:False:4,19:27697,1265,1
+> 8:False:4,19:27697,1265,1
+> 9:False:4,19:27697,1265,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_1.tar.bz2:0.5491271018981934:0.0926187:0.5500000000001819
+> 0:True:4,8:7298,636,1
+> 1:False:4,11:7298,636,1
+> 2:False:9,17:7298,636,1
+> 3:False:6,14:7298,636,1
+> 4:False:4,12:7298,636,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_2.tar.bz2:0.5463414192199707:0.09479080000000001:0.540000000000191
+> 0:True:4,10:7298,636,2
+> 1:False:4,13:7298,636,2
+> 2:False:9,19:7298,636,2
+> 3:False:6,16:7298,636,2
+> 4:False:4,14:7298,636,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_70_3.tar.bz2:0.5507872104644775:0.09665679999999999:0.5599999999999454
+> 0:True:4,7:7301,645,0
+> 1:False:4,10:7301,645,0
+> 2:False:9,16:7301,645,0
+> 3:False:6,13:7301,645,0
+> 4:False:4,11:7301,645,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_1.tar.bz2:0.5572769641876221:0.0968266:0.5599999999999454
+> 0:False:4,13:7301,645,1
+> 1:True:4,10:7301,645,1
+> 2:False:9,18:7301,645,1
+> 3:False:6,16:7301,645,1
+> 4:False:4,14:7301,645,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_2.tar.bz2:0.5559945106506348:0.09925819999999999:0.5499999999999545
+> 0:False:4,13:7301,645,1
+> 1:True:4,10:7301,645,1
+> 2:False:9,18:7301,645,1
+> 3:False:6,15:7301,645,1
+> 4:False:4,14:7301,645,1
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_70_3.tar.bz2:0.5436298847198486:0.0990419:0.5399999999999636
+> 0:False:4,11:7300,642,1
+> 1:True:4,9:7300,642,1
+> 2:False:9,17:7300,642,1
+> 3:False:6,15:7300,642,0
+> 4:False:4,13:7300,642,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_1.tar.bz2:0.5405097007751465:0.08496830000000001:0.5399999999999636
+> 0:False:4,18:7303,651,2
+> 1:False:4,18:7303,651,2
+> 2:True:9,14:7303,651,2
+> 3:False:6,19:7303,651,2
+> 4:False:4,18:7303,651,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_2.tar.bz2:0.5439848899841309:0.0892842:0.5299999999999727
+> 0:False:4,16:7306,660,0
+> 1:False:4,16:7306,660,0
+> 2:True:9,12:7306,660,0
+> 3:False:6,17:7306,660,0
+> 4:False:4,15:7306,660,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_70_3.tar.bz2:0.5409185886383057:0.0911288:0.5299999999999727
+> 0:False:4,19:7304,654,2
+> 1:False:4,19:7304,654,2
+> 2:True:9,15:7304,654,2
+> 3:False:6,20:7304,654,2
+> 4:False:4,19:7304,654,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_1.tar.bz2:0.5566861629486084:0.0938918:0.5500000000001819
+> 0:False:4,16:7303,651,0
+> 1:False:4,16:7303,651,0
+> 2:False:9,18:7303,651,2
+> 3:True:6,12:7303,651,1
+> 4:False:4,16:7303,651,0
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_2.tar.bz2:0.5333480834960938:0.0810308:0.5300000000002001
+> 0:False:4,16:7303,651,2
+> 1:False:4,16:7303,651,2
+> 2:False:9,18:7303,651,1
+> 3:True:6,12:7303,651,2
+> 4:False:4,16:7303,651,2
+easy-ipc-grid-suboptimal-old-noisy/70/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_70_3.tar.bz2:0.533635139465332:0.0845731:0.5300000000002001
+> 0:False:4,18:7302,648,2
+> 1:False:4,18:7302,648,2
+> 2:False:9,20:7302,648,2
+> 3:True:6,14:7302,648,2
+> 4:False:4,18:7302,648,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_1.tar.bz2:3.164405584335327:0.9895012999999999:3.160000000000082
+> 0:True:4,16:95917,2367,2
+> 1:False:4,17:95917,2367,3
+> 2:False:4,20:95917,2367,3
+> 3:False:4,20:95917,2367,3
+> 4:False:4,20:95917,2367,3
+> 5:False:4,20:95917,2367,3
+> 6:False:4,20:95917,2367,3
+> 7:False:4,20:95917,2367,3
+> 8:False:4,20:95917,2367,3
+> 9:False:4,20:95917,2367,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_2.tar.bz2:3.183494806289673:0.9922268000000001:3.1799999999998363
+> 0:True:4,16:95917,2367,2
+> 1:False:4,17:95917,2367,2
+> 2:False:4,20:95917,2367,2
+> 3:False:4,20:95917,2367,2
+> 4:False:4,20:95917,2367,3
+> 5:False:4,20:95917,2367,3
+> 6:False:4,20:95917,2367,3
+> 7:False:4,20:95917,2367,3
+> 8:False:4,20:95917,2367,2
+> 9:False:4,20:95917,2367,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-1_full_3.tar.bz2:3.2040483951568604:0.9956432:3.2000000000000455
+> 0:True:4,16:95917,2367,2
+> 1:False:4,17:95917,2367,2
+> 2:False:4,20:95917,2367,2
+> 3:False:4,20:95917,2367,2
+> 4:False:4,20:95917,2367,3
+> 5:False:4,20:95917,2367,3
+> 6:False:4,20:95917,2367,3
+> 7:False:4,20:95917,2367,3
+> 8:False:4,20:95917,2367,2
+> 9:False:4,20:95917,2367,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_1.tar.bz2:3.263599395751953:1.0359606000000001:3.259999999999991
+> 0:False:4,19:95916,2364,3
+> 1:True:4,17:95916,2364,3
+> 2:False:4,21:95916,2364,3
+> 3:False:4,21:95916,2364,3
+> 4:False:4,21:95916,2364,4
+> 5:False:4,21:95916,2364,4
+> 6:False:4,21:95916,2364,4
+> 7:False:4,21:95916,2364,4
+> 8:False:4,21:95916,2364,3
+> 9:False:4,21:95916,2364,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_2.tar.bz2:3.1956045627593994:1.0096771:3.1900000000000546
+> 0:False:4,19:95916,2364,3
+> 1:True:4,17:95916,2364,3
+> 2:False:4,21:95916,2364,3
+> 3:False:4,21:95916,2364,3
+> 4:False:4,21:95916,2364,4
+> 5:False:4,21:95916,2364,4
+> 6:False:4,21:95916,2364,4
+> 7:False:4,21:95916,2364,4
+> 8:False:4,21:95916,2364,3
+> 9:False:4,21:95916,2364,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-2_full_3.tar.bz2:3.200909376144409:1.0137702:3.189999999999827
+> 0:False:4,19:95917,2367,4
+> 1:True:4,17:95917,2367,3
+> 2:False:4,21:95917,2367,4
+> 3:False:4,21:95917,2367,4
+> 4:False:4,21:95917,2367,4
+> 5:False:4,21:95917,2367,4
+> 6:False:4,21:95917,2367,4
+> 7:False:4,21:95917,2367,4
+> 8:False:4,21:95917,2367,4
+> 9:False:4,21:95917,2367,4
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_1.tar.bz2:3.2117292881011963:1.0331387:3.2000000000000455
+> 0:False:4,32:95927,2397,3
+> 1:False:4,32:95927,2397,3
+> 2:True:4,28:95927,2397,3
+> 3:False:4,29:95927,2397,4
+> 4:False:4,32:95927,2397,5
+> 5:False:4,32:95927,2397,5
+> 6:False:4,32:95927,2397,5
+> 7:False:4,32:95927,2397,5
+> 8:False:4,32:95927,2397,3
+> 9:False:4,32:95927,2397,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_2.tar.bz2:3.265819549560547:1.0711518:3.2499999999997726
+> 0:False:4,32:95928,2400,4
+> 1:False:4,32:95928,2400,4
+> 2:True:4,28:95928,2400,4
+> 3:False:4,29:95928,2400,4
+> 4:False:4,32:95928,2400,4
+> 5:False:4,32:95928,2400,4
+> 6:False:4,32:95928,2400,4
+> 7:False:4,32:95928,2400,5
+> 8:False:4,32:95928,2400,4
+> 9:False:4,32:95928,2400,4
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-3_full_3.tar.bz2:3.2629947662353516:1.0923064999999998:3.259999999999991
+> 0:False:4,32:95928,2400,4
+> 1:False:4,32:95928,2400,4
+> 2:True:4,28:95928,2400,5
+> 3:False:4,29:95928,2400,4
+> 4:False:4,32:95928,2400,4
+> 5:False:4,32:95928,2400,4
+> 6:False:4,32:95928,2400,4
+> 7:False:4,32:95928,2400,4
+> 8:False:4,32:95928,2400,4
+> 9:False:4,32:95928,2400,4
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_1.tar.bz2:3.180162191390991:1.0283354999999998:3.1700000000000728
+> 0:False:4,29:95926,2394,3
+> 1:False:4,27:95926,2394,3
+> 2:False:4,27:95926,2394,3
+> 3:True:4,25:95926,2394,3
+> 4:False:4,29:95926,2394,3
+> 5:False:4,29:95926,2394,3
+> 6:False:4,29:95926,2394,4
+> 7:False:4,29:95926,2394,4
+> 8:False:4,29:95926,2394,3
+> 9:False:4,29:95926,2394,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_2.tar.bz2:3.241440773010254:1.0532012000000002:3.2200000000000273
+> 0:False:4,29:95924,2388,4
+> 1:False:4,29:95924,2388,4
+> 2:False:4,27:95924,2388,4
+> 3:True:4,25:95924,2388,4
+> 4:False:4,29:95924,2388,4
+> 5:False:4,29:95924,2388,4
+> 6:False:4,29:95924,2388,4
+> 7:False:4,29:95924,2388,4
+> 8:False:4,29:95924,2388,4
+> 9:False:4,29:95924,2388,4
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-10-10_p01_hyp-4_full_3.tar.bz2:3.1639444828033447:1.019861:3.160000000000082
+> 0:False:4,29:95925,2391,4
+> 1:False:4,29:95925,2391,4
+> 2:False:4,27:95925,2391,4
+> 3:True:4,25:95925,2391,3
+> 4:False:4,29:95925,2391,4
+> 5:False:4,29:95925,2391,4
+> 6:False:4,29:95925,2391,4
+> 7:False:4,29:95925,2391,4
+> 8:False:4,29:95925,2391,3
+> 9:False:4,29:95925,2391,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_1.tar.bz2:0.7227568626403809:0.1628534:0.7300000000000182
+> 0:True:4,18:22584,1132,2
+> 1:False:4,20:22584,1132,2
+> 2:False:4,22:22584,1132,3
+> 3:False:4,22:22584,1132,3
+> 4:False:4,22:22584,1132,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_2.tar.bz2:0.734525203704834:0.16304819999999998:0.7400000000000091
+> 0:True:4,18:22583,1129,3
+> 1:False:4,20:22583,1129,3
+> 2:False:4,22:22583,1129,3
+> 3:False:4,22:22583,1129,3
+> 4:False:4,22:22583,1129,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-1_full_3.tar.bz2:0.7287302017211914:0.1621681:0.7300000000000182
+> 0:True:4,18:22585,1135,3
+> 1:False:4,20:22585,1135,3
+> 2:False:4,22:22585,1135,3
+> 3:False:4,22:22585,1135,3
+> 4:False:4,22:22585,1135,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_1.tar.bz2:0.7393784523010254:0.1568819:0.7300000000000182
+> 0:False:4,21:22583,1129,2
+> 1:True:4,19:22583,1129,2
+> 2:False:4,23:22583,1129,2
+> 3:False:4,23:22583,1129,2
+> 4:False:4,23:22583,1129,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_2.tar.bz2:0.7417733669281006:0.1621096:0.7400000000000091
+> 0:False:4,21:22583,1129,2
+> 1:True:4,19:22583,1129,2
+> 2:False:4,23:22583,1129,2
+> 3:False:4,23:22583,1129,2
+> 4:False:4,23:22583,1129,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-2_full_3.tar.bz2:0.7958872318267822:0.2107151:0.7999999999999545
+> 0:False:4,22:22585,1135,2
+> 1:True:4,20:22585,1135,2
+> 2:False:4,24:22585,1135,3
+> 3:False:4,24:22585,1135,3
+> 4:False:4,24:22585,1135,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_1.tar.bz2:0.7545790672302246:0.1570407:0.7599999999999909
+> 0:False:4,20:22583,1129,1
+> 1:False:4,20:22583,1129,1
+> 2:True:4,16:22583,1129,1
+> 3:False:4,18:22583,1129,1
+> 4:False:4,20:22583,1129,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_2.tar.bz2:0.7442290782928467:0.1718987:0.7400000000000091
+> 0:False:4,20:22586,1138,1
+> 1:False:4,20:22586,1138,1
+> 2:True:4,16:22586,1138,1
+> 3:False:4,18:22586,1138,1
+> 4:False:4,20:22586,1138,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-3_full_3.tar.bz2:0.7218141555786133:0.1549979:0.7200000000000273
+> 0:False:4,20:22582,1126,1
+> 1:False:4,20:22582,1126,1
+> 2:True:4,16:22582,1126,1
+> 3:False:4,18:22582,1126,1
+> 4:False:4,20:22582,1126,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_1.tar.bz2:0.7394304275512695:0.158053:0.7400000000000091
+> 0:False:4,20:22583,1129,1
+> 1:False:4,20:22583,1129,1
+> 2:False:4,19:22583,1129,1
+> 3:True:4,16:22583,1129,1
+> 4:False:4,20:22583,1129,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_2.tar.bz2:0.7357170581817627:0.1507762:0.7300000000000182
+> 0:False:4,20:22582,1126,2
+> 1:False:4,20:22582,1126,2
+> 2:False:4,19:22582,1126,2
+> 3:True:4,16:22582,1126,2
+> 4:False:4,20:22582,1126,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p10-5-5_p01_hyp-4_full_3.tar.bz2:0.7433159351348877:0.1537596:0.75
+> 0:False:4,20:22581,1123,1
+> 1:False:4,20:22581,1123,1
+> 2:False:4,19:22581,1123,1
+> 3:True:4,16:22581,1123,1
+> 4:False:4,20:22581,1123,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_1.tar.bz2:1.7069430351257324:0.45231049999999995:1.7100000000000364
+> 0:True:4,8:27689,1241,2
+> 1:False:10,17:27689,1241,2
+> 2:False:4,12:27689,1241,2
+> 3:False:10,18:27689,1241,2
+> 4:False:9,17:27689,1241,2
+> 5:False:4,12:27689,1241,2
+> 6:False:10,18:27689,1241,2
+> 7:False:4,12:27689,1241,2
+> 8:False:4,12:27689,1241,2
+> 9:False:4,12:27689,1241,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_2.tar.bz2:1.69401216506958:0.4403555:1.6799999999998363
+> 0:True:4,8:27689,1241,2
+> 1:False:10,16:27689,1241,2
+> 2:False:4,12:27689,1241,2
+> 3:False:10,17:27689,1241,2
+> 4:False:9,17:27689,1241,2
+> 5:False:4,12:27689,1241,2
+> 6:False:10,17:27689,1241,2
+> 7:False:4,12:27689,1241,2
+> 8:False:4,12:27689,1241,2
+> 9:False:4,12:27689,1241,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-1_full_3.tar.bz2:1.6685552597045898:0.4287173:1.6699999999998454
+> 0:True:4,8:27688,1238,2
+> 1:False:10,17:27688,1238,2
+> 2:False:4,12:27688,1238,2
+> 3:False:10,18:27688,1238,2
+> 4:False:9,17:27688,1238,2
+> 5:False:4,12:27688,1238,2
+> 6:False:10,18:27688,1238,2
+> 7:False:4,12:27688,1238,2
+> 8:False:4,12:27688,1238,2
+> 9:False:4,12:27688,1238,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_1.tar.bz2:1.6841468811035156:0.42741500000000004:1.6800000000000637
+> 0:False:4,25:27703,1283,4
+> 1:True:10,22:27703,1283,3
+> 2:False:4,26:27703,1283,3
+> 3:False:10,28:27703,1283,3
+> 4:False:9,28:27703,1283,3
+> 5:False:4,26:27703,1283,3
+> 6:False:10,28:27703,1283,4
+> 7:False:4,25:27703,1283,3
+> 8:False:4,26:27703,1283,3
+> 9:False:4,26:27703,1283,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_2.tar.bz2:1.6903553009033203:0.4430754:1.6900000000000546
+> 0:False:4,25:27703,1283,4
+> 1:True:10,22:27703,1283,3
+> 2:False:4,26:27703,1283,4
+> 3:False:10,28:27703,1283,3
+> 4:False:9,28:27703,1283,3
+> 5:False:4,26:27703,1283,4
+> 6:False:10,28:27703,1283,3
+> 7:False:4,26:27703,1283,3
+> 8:False:4,26:27703,1283,3
+> 9:False:4,26:27703,1283,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-2_full_3.tar.bz2:1.6631333827972412:0.4336668:1.6599999999998545
+> 0:False:4,25:27702,1280,4
+> 1:True:10,22:27702,1280,3
+> 2:False:4,25:27702,1280,4
+> 3:False:10,28:27702,1280,4
+> 4:False:9,28:27702,1280,4
+> 5:False:4,26:27702,1280,4
+> 6:False:10,28:27702,1280,4
+> 7:False:4,26:27702,1280,4
+> 8:False:4,26:27702,1280,4
+> 9:False:4,26:27702,1280,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_1.tar.bz2:1.6568922996520996:0.4194251:1.6600000000000819
+> 0:False:4,16:27692,1250,2
+> 1:False:10,22:27692,1250,2
+> 2:True:4,12:27692,1250,2
+> 3:False:10,22:27692,1250,2
+> 4:False:9,19:27692,1250,2
+> 5:False:4,16:27692,1250,2
+> 6:False:10,22:27692,1250,2
+> 7:False:4,16:27692,1250,2
+> 8:False:4,16:27692,1250,2
+> 9:False:4,16:27692,1250,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_2.tar.bz2:1.6869468688964844:0.4406239:1.6800000000000637
+> 0:False:4,16:27693,1253,2
+> 1:False:10,22:27693,1253,2
+> 2:True:4,12:27693,1253,2
+> 3:False:10,22:27693,1253,2
+> 4:False:9,19:27693,1253,2
+> 5:False:4,15:27693,1253,2
+> 6:False:10,22:27693,1253,2
+> 7:False:4,16:27693,1253,2
+> 8:False:4,16:27693,1253,2
+> 9:False:4,16:27693,1253,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-3_full_3.tar.bz2:1.6605992317199707:0.41683329999999996:1.6600000000000819
+> 0:False:4,16:27692,1250,2
+> 1:False:10,22:27692,1250,2
+> 2:True:4,12:27692,1250,2
+> 3:False:10,22:27692,1250,2
+> 4:False:9,19:27692,1250,2
+> 5:False:4,16:27692,1250,2
+> 6:False:10,22:27692,1250,2
+> 7:False:4,16:27692,1250,2
+> 8:False:4,16:27692,1250,2
+> 9:False:4,16:27692,1250,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_1.tar.bz2:1.6629619598388672:0.425149:1.6600000000000819
+> 0:False:4,22:27700,1274,2
+> 1:False:10,24:27700,1274,2
+> 2:False:4,22:27700,1274,2
+> 3:True:10,18:27700,1274,2
+> 4:False:9,24:27700,1274,2
+> 5:False:4,22:27700,1274,2
+> 6:False:10,24:27700,1274,2
+> 7:False:4,22:27700,1274,2
+> 8:False:4,22:27700,1274,2
+> 9:False:4,22:27700,1274,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_2.tar.bz2:1.6476373672485352:0.41962100000000013:1.6499999999998636
+> 0:False:4,22:27701,1277,2
+> 1:False:10,23:27701,1277,2
+> 2:False:4,22:27701,1277,2
+> 3:True:10,18:27701,1277,2
+> 4:False:9,24:27701,1277,2
+> 5:False:4,22:27701,1277,2
+> 6:False:10,24:27701,1277,2
+> 7:False:4,21:27701,1277,2
+> 8:False:4,22:27701,1277,2
+> 9:False:4,22:27701,1277,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-10-10_p01_hyp-4_full_3.tar.bz2:1.659675121307373:0.42824690000000004:1.6499999999998636
+> 0:False:4,22:27700,1274,2
+> 1:False:10,23:27700,1274,2
+> 2:False:4,22:27700,1274,2
+> 3:True:10,18:27700,1274,2
+> 4:False:9,24:27700,1274,1
+> 5:False:4,22:27700,1274,2
+> 6:False:10,24:27700,1274,2
+> 7:False:4,22:27700,1274,2
+> 8:False:4,22:27700,1274,2
+> 9:False:4,22:27700,1274,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_1.tar.bz2:0.5453455448150635:0.10046270000000002:0.540000000000191
+> 0:True:4,9:7302,648,1
+> 1:False:4,12:7302,648,1
+> 2:False:9,16:7302,648,1
+> 3:False:6,15:7302,648,1
+> 4:False:4,13:7302,648,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_2.tar.bz2:0.5559420585632324:0.097806:0.5499999999999545
+> 0:True:4,9:7300,642,2
+> 1:False:4,12:7300,642,2
+> 2:False:9,18:7300,642,2
+> 3:False:6,15:7300,642,2
+> 4:False:4,13:7300,642,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-1_full_3.tar.bz2:0.5587892532348633:0.1067448:0.5499999999999545
+> 0:True:4,9:7301,645,1
+> 1:False:4,12:7301,645,1
+> 2:False:9,18:7301,645,1
+> 3:False:6,14:7301,645,1
+> 4:False:4,13:7301,645,1
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_1.tar.bz2:0.5407941341400146:0.0874074:0.5499999999999545
+> 0:False:4,14:7301,645,2
+> 1:True:4,11:7301,645,2
+> 2:False:9,19:7301,645,2
+> 3:False:6,17:7301,645,2
+> 4:False:4,15:7301,645,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_2.tar.bz2:0.5359814167022705:0.08240030000000001:0.5300000000002001
+> 0:False:4,14:7302,648,2
+> 1:True:4,11:7302,648,2
+> 2:False:9,19:7302,648,2
+> 3:False:6,17:7302,648,2
+> 4:False:4,15:7302,648,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-2_full_3.tar.bz2:0.5283846855163574:0.0783374:0.5199999999999818
+> 0:False:4,14:7302,648,2
+> 1:True:4,11:7302,648,2
+> 2:False:9,19:7302,648,2
+> 3:False:6,17:7302,648,2
+> 4:False:4,15:7302,648,2
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_1.tar.bz2:0.5473649501800537:0.08654500000000001:0.540000000000191
+> 0:False:4,20:7307,663,3
+> 1:False:4,20:7307,663,3
+> 2:True:9,16:7307,663,3
+> 3:False:6,21:7307,663,3
+> 4:False:4,20:7307,663,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_2.tar.bz2:0.5461249351501465:0.09220930000000001:0.5399999999999636
+> 0:False:4,20:7307,663,3
+> 1:False:4,20:7307,663,3
+> 2:True:9,16:7307,663,3
+> 3:False:6,21:7307,663,3
+> 4:False:4,20:7307,663,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-3_full_3.tar.bz2:0.5325336456298828:0.0864932:0.5299999999999727
+> 0:False:4,20:7306,660,3
+> 1:False:4,20:7306,660,3
+> 2:True:9,16:7306,660,3
+> 3:False:6,21:7306,660,3
+> 4:False:4,20:7306,660,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_1.tar.bz2:0.5596387386322021:0.0890087:0.5499999999999545
+> 0:False:4,18:7305,657,3
+> 1:False:4,18:7305,657,3
+> 2:False:9,19:7305,657,3
+> 3:True:6,14:7305,657,3
+> 4:False:4,18:7305,657,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_2.tar.bz2:0.5519018173217773:0.09772409999999998:0.5500000000001819
+> 0:False:4,18:7305,657,2
+> 1:False:4,18:7305,657,2
+> 2:False:9,20:7305,657,3
+> 3:True:6,14:7305,657,3
+> 4:False:4,18:7305,657,3
+easy-ipc-grid-suboptimal-old-noisy/100/easy-ipc-grid_noisy_p5-5-5_p01_hyp-4_full_3.tar.bz2:0.5280249118804932:0.0858506:0.5299999999997453
+> 0:False:4,18:7305,657,3
+> 1:False:4,18:7305,657,3
+> 2:False:9,19:7305,657,3
+> 3:True:6,14:7305,657,3
+> 4:False:4,18:7305,657,3

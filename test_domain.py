@@ -70,4 +70,4 @@ if __name__ == '__main__':
     for approach in approaches.split():
         do_experiments(base_path, domain_name, observability, approach, options)
     # Get rid of the temp files
-    os.system('bash cleanup.sh')
+    #os.system('bash cleanup.sh')
