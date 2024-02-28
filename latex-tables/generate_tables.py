@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!python
 
 ##
 ## Generate .pdf tables for given methods.
