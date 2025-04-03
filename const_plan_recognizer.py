@@ -3,6 +3,7 @@
 import math
 from h_plan_recognizer import LPRecognizerHValue
 
+
 class LPRecognizerHValueC(LPRecognizerHValue):
     name = "hvaluec"
 
@@ -13,6 +14,7 @@ class LPRecognizerHValueC(LPRecognizerHValue):
 
     def get_score(self, h):
         return [h.h_c, h.obs_misses]
+
 
 class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
     name = "hvaluecu"
@@ -29,7 +31,7 @@ class LPRecognizerHValueCUncertainty(LPRecognizerHValueC):
                 print("Uncertainty below 1 [hc - obs_hits is negative!]")
                 print(self.options.exp_file)
             print("Uncertainty: {}".format(self.uncertainty_ratio))
-            
+
 
 class LPRecognizerSoftC(LPRecognizerHValue):
     name = "softc"
@@ -50,6 +52,7 @@ class LPRecognizerSoftC(LPRecognizerHValue):
             # Select multi goal
             # return h.obs_hits == self.unique_goal.obs_hits
         return False
+
 
 class LPRecognizerSoftCUncertainty(LPRecognizerSoftC):
     name = "softcu"

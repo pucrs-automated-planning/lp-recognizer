@@ -4,6 +4,7 @@ import benchmark
 
 fd_path = "../fast-downward/"
 
+
 def custom_partition(s, sep):
     i = 0
     while i < len(s):
@@ -12,6 +13,7 @@ def custom_partition(s, sep):
     if i == len(s): return (None, None, None)
     if i == 0: return (None, s[i], s[i + 1:])
     return (s[:i - 1], s[i], s[i + 1:])
+
 
 class FDCommand:
 

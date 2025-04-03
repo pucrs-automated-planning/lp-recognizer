@@ -5,6 +5,7 @@ import sys, os, subprocess, math
 from planner_interface import Hypothesis
 from options import Program_Options
 
+
 def run(cmd):
     try:
         #Python 3:
@@ -13,6 +14,7 @@ def run(cmd):
     except subprocess.CalledProcessError as err:
         print("Error: %s" % err.returncode)
         return err.returncode
+
 
 def run_planner(domain, problem, bound=None):
     args = ["../fast-downward/fast-downward.py", "--search-time-limit", "30m", "--search-memory-limit", "8G",\
@@ -28,6 +30,7 @@ def run_planner(domain, problem, bound=None):
             return float(length)
     return -1
 
+
 def load_hypotheses(opts):
     hyps = []
     instream = open('hyps.dat')
@@ -39,6 +42,7 @@ def load_hypotheses(opts):
         hyps.append(H)
     instream.close()
     return hyps
+
 
 def get_irrationality_ratio(hyp, len_ratio):
     hyp.generate_pddl_for_hyp_plan("problem.pddl")
@@ -70,6 +74,7 @@ def get_irrationality_ratio(hyp, len_ratio):
     print(length, opt_length)
     return length / opt_length
 
+
 def compute_solution(hyps):
     print(str(len(hyps)) + " goals")
     real_hyp = [hyp for hyp in hyps if hyp.is_true][0]
@@ -91,6 +96,7 @@ def compute_solution(hyps):
             solution.append(' '.join(hyp.atoms))
     return solution
 
+
 def write_file_solution(file):
     print(file)
     opts = Program_Options(['-e', file])
@@ -101,6 +107,7 @@ def write_file_solution(file):
     print('\n'.join(solution), file=outstream)
     outstream.close()
 
+
 def write_directory_solutions(folder):
     print(folder)
     for path in os.listdir(folder):
@@ -109,6 +116,7 @@ def write_directory_solutions(folder):
         elif path.endswith("tar.bz2"):
             if not os.path.exists(folder + "/" + path.replace("tar.bz2", "solution")):
                 write_file_solution(folder + "/" + path)
+
 
 if __name__ == '__main__':
     os.system('rm -rf *.pddl *.dat *.log *.soln *.csv report.txt h_result.txt results.tar.bz2')
