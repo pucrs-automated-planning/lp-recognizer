@@ -19,6 +19,8 @@ import os, sys
 import data_domain as dd
 import data_output as do
 
+MAX_HYP = 60
+
 class ObsStats:
 
 	#
@@ -27,7 +29,8 @@ class ObsStats:
 
 	def __init__(self, obs):
 		self.level = obs
-		self.points = dict()
+		self.real_hc_points = dict()
+		self.wrong_hc_points = dict()
 		self.win = [0, 0, 0]  # better, worse, draw
 		self.quads = [0, 0, 0, 0] # Q1, Q2, Q3, Q4
 		self.axis = [0, 0, 0, 0, 0] # Origin, X left, X right, Y bottom, Y right
@@ -39,13 +42,14 @@ class ObsStats:
 	def count_hvalues(self, problem, experiments):
 		for hyp in range(len(problem.hyps)):
 			hc = [m.problem_outputs[problem.name].scores[hyp][1] \
-				if hyp in m.problem_outputs[problem.name].scores else 45 \
+				if hyp in m.problem_outputs[problem.name].scores else MAX_HYP \
 				for m in experiments]
 			line = ' '.join([str(x) for x in hc])
-			if line in self.points:
-				self.points[line] += 1
+			hc_points = self.real_hc_points if hyp == 0 else self.wrong_hc_points
+			if line in hc_points:
+				hc_points[line] += 1
 			else:
-				self.points[line] = 1
+				hc_points[line] = 1
 			agr = [m.problem_outputs[problem.name].agreement for m in experiments]
 			if hc[0] > hc[1]:
 				self.win[0] += 1
@@ -73,7 +77,10 @@ class ObsStats:
 					self.axis[0] += 1
 
 	def print_points(self):
-		return '\n'.join([line + " " + str(c) for line, c in self.points.items()])
+		real_hc = '\n'.join([line + " " + str(c) for line, c in self.real_hc_points.items()])
+		wrong_hc = '\n'.join([line + " " + str(c) for line, c in self.wrong_hc_points.items()])
+		return real_hc, wrong_hc
+
 
 	def print_stats(self, methods):
 		content = methods[0] + " vs " + methods[1] + '\n'
@@ -188,7 +195,8 @@ class ObsStats:
 		return ' / '.join(["%.2f" % d for d in self.sum_axis[i*3:i*3+3]])
 
 
-def write_dat_files(all_domain_data, methods, observabilities, chart_name = None, scatter = True, stats = True, sums = True):
+def write_dat_files(all_domain_data, methods, observabilities, 
+		chart_name = None, scatter = True, stats = True, sums = True):
 	obs_stats = [ObsStats(o) for o in range(len(observabilities))]
 	for domain_data in all_domain_data.values():
 		method_outputs = [do.MethodOutput(method, domain_data, "outputs/") for method in methods]
@@ -202,12 +210,16 @@ def write_dat_files(all_domain_data, methods, observabilities, chart_name = None
 				obs_stats[o].compute_sum_points(problems, method_experiments)
 	if not chart_name:
 		chart_name = ' vs '.join(methods) 
-	header = ' '.join(["x%s" % i for i in range(len(methods))]) + " w \n"
+	header = ' '.join(["x%s" % i for i in range(len(methods))]) + " w\n"
 	for o in range(len(observabilities)):
 		if scatter:
-			content = obs_stats[o].print_points()
+			ref, nonref = obs_stats[o].print_points()
 			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-scatter-all.dat", 'w') as f:
-				f.write(header + content)
+				f.write(header + ref + '\n' + nonref)
+			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-scatter-ref.dat", 'w') as f:
+				f.write(header + ref)
+			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-scatter-nonref.dat", 'w') as f:
+				f.write(header + nonref)
 		if stats: 
 			content = obs_stats[o].print_stats(methods)
 			with open("data-charts/" + chart_name + "-" + observabilities[o] + "-stats.dat", 'w') as f:
@@ -224,7 +236,7 @@ def write_dat_files(all_domain_data, methods, observabilities, chart_name = None
 			print(observabilities[o] + "%:\t" + stats.replace(" / ", "\t"))
 
 if __name__ == '__main__':
-	observabilities = ['10', '30', '50', '70']
+	observabilities = ['10', '30', '50', '70', '100']
 	base_path = '../goal-plan-recognition-dataset/'
 
 	# Flags

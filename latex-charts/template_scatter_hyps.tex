@@ -71,27 +71,46 @@
 \begin{tikzpicture}
 \begin{axis}[
     %title={10\%},
-    width=4.75cm,height=4.75cm,
-    xmin=0,xmax=50,
-    ymin=0,ymax=50,
+    width=5.75cm,height=5.75cm,
+    xmin=0,xmax=60,
+    ymin=0,ymax=60,
     xticklabels={,,},
     yticklabels={,,},
     enlargelimits=false]
 
-\addplot [color=black, dashed] coordinates {(0, 0) (50, 50)};
+\addplot [color=black, dashed] coordinates {(0, 0) (60, 60)};
+
+% Wrong HC
 \addplot+[
-	scatter=true,
+    scatter=true,
     only marks,
-    mark=o,
+    mark=*,
     mark size=0.8pt,
     point meta=explicit,
     scatter/@pre marker code/.code={%
     \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
-    \def\markopts{fill=black, draw=black, opacity=\pgfmathresult}%
+    \def\markopts{fill=blue, draw=blue, opacity=\pgfmathresult}%
     \expandafter\scope\expandafter[\markopts]%
     },%
     scatter/@post marker code/.code={\endscope}]
-table [x index=0, y index=1, meta index=2] {scatter.dat};
+table [x index=0, y index=1, meta index=2] {scatter-nonref.dat};
+
+% Real HC
+\addplot+[
+    scatter=true,
+    only marks,
+    mark=*,
+    mark size=0.8pt,
+    point meta=explicit,
+    scatter/@pre marker code/.code={%
+    \pgfmathparse{0.5+\pgfplotspointmetatransformed/400}%
+    \def\markopts{fill=red, draw=red, opacity=\pgfmathresult}%
+    \expandafter\scope\expandafter[\markopts]%
+    },%
+    scatter/@post marker code/.code={\endscope}]
+table [x index=0, y index=1, meta index=2] {scatter-ref.dat};
+
+
 \end{axis}
 \end{tikzpicture}
 

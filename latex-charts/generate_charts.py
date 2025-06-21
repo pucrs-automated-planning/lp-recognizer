@@ -11,6 +11,11 @@ import itertools as it
 import os
 from scipy.stats import gaussian_kde
 
+# Reference goal
+#./generate_charts -full -stats -dat -pdf -lm -fl -ref [-fast]
+# Closest non-ref goal
+#./generate_charts -full -stats -dat -pdf -lm -fl [-fast]
+
 # Contains the values of all instances of all domains together, for a given obs% and the given constraint set.
 class Instances:
 
@@ -106,6 +111,9 @@ class Results:
 # Functions to draw png plots.
 class Plot:
 
+	def __init__(self, base_name = ""):
+		self.base_name = base_name
+
 	def get_name(self, x, y, obs = None):
 		title = '{} vs {}'.format(x.name, y.name)
 		file = title.replace(" ", "-")
@@ -121,16 +129,20 @@ class Plot:
 		title = "Average h-values per contraint set per obs%"
 		ax = df.plot(kind='bar', figsize=(10,4), title=title)
 		fig = ax.get_figure()
-		fig.savefig("../data-charts/mean-%s.png" % '-'.join(constraint_sets))
+		fig.savefig("/mean-%s%s.png" % (self.base_name, '-'.join(constraint_sets)))
 
-	def scatter_plot(self, x, y, obs = None):	
+	def scatter_wrong_hc(self, x, y, obs = None):	
+		self.scatter_plot('scatter-', x, y, x.wrong_hc_values, y.wrong_hc_values)
+
+	def scatter_real_h(self, x, y, obs = None):	
+		self.scatter_plot('scatter-h-', x, y, x.real_h_values, y.real_h_values)
+
+	def scatter_plot(self, name, c1, c2, x, y, obs)
 		fig, ax = plt.subplots()
-		plt.xlabel(x.name)
-		plt.ylabel(y.name)
-		title, file = self.get_name(x, y, obs)
+		plt.xlabel(c1.name)
+		plt.ylabel(c2.name)
+		title, file = self.get_name(c1, c2, obs)
 		plt.title(title)
-		x = x.wrong_hc_values
-		y = y.wrong_hc_values
 		xy = [(i, j) for i, j in zip(x, y)]
 		sizes = [xy.count(p) * 4 + 8 for p in xy]
 		max_h_value = max(max(x), max(y))
@@ -141,27 +153,7 @@ class Plot:
 		x0,x1 = ax.get_xlim()
 		y0,y1 = ax.get_ylim()
 		ax.set_aspect(abs(x1-x0)/abs(y1-y0))
-		fig.savefig('../data-charts/scatter-' + file + '.png')
-
-	def scatter_h_plot(self, x, y, obs = None):	
-		fig, ax = plt.subplots()
-		plt.xlabel(x.name)
-		plt.ylabel(y.name)
-		title, file = self.get_name(x, y, obs)
-		plt.title(title)
-		x = x.real_h_values
-		y = y.real_h_values
-		xy = [(i, j) for i, j in zip(x, y)]
-		sizes = [xy.count(p) * 4 + 8 for p in xy]
-		max_h_value = max(max(x), max(y))
-		ax.plot([0, max_h_value], [0, max_h_value], ls="--", c=".3")
-		ax.scatter(x, y, s=sizes)
-		ax.set_xlim((0,max_h_value))
-		ax.set_ylim((0,max_h_value))
-		x0,x1 = ax.get_xlim()
-		y0,y1 = ax.get_ylim()
-		ax.set_aspect(abs(x1-x0)/abs(y1-y0))
-		fig.savefig('../data-charts/scatter-h-' + file + '.png')
+		fig.savefig(name + self.base_name + file + '.png')
 
 	def agr_plot(self, i1, i2, obs = None):	
 		fig, ax = plt.subplots()
@@ -183,7 +175,7 @@ class Plot:
 		y0,y1 = ax.get_ylim()
 		ax.set_aspect(abs(x1-x0)/abs(y1-y0))
 		ax.set_title(title)
-		fig.savefig('../data-charts/agr-' + file + '.png')
+		fig.savefig('agr-' + self.base_name + file + '.png')
 
 	def plot_all(self, results, observabilities, constraint_sets):
 		# Mean h-value Plot
@@ -195,9 +187,10 @@ class Plot:
 			for p in range(len(pairs)):
 				i1 = instance[pairs[p][0]]
 				i2 = instance[pairs[p][1]]
-				self.scatter_plot(i1, i2, obs)
-				self.scatter_h_plot(i1, i2, obs)
-				self.agr_plot(i1, i2, obs)
+				#self.scatter_wrong_hc(i1, i2, obs)
+				#self.scatter_real_h(i1, i2, obs)
+				#self.agr_plot(i1, i2, obs)
+				self.scatter_color(i1, i2, obs)
 
 
 # Functions to write data files.
@@ -316,31 +309,38 @@ class Dat:
 
 
 # Writes data files and draws plots.
-def generate_charts(dat, png, pdf, stats, domains, constraint_sets, constraint_names):
+def generate_charts(dat, png, pdf, stats, domains, merge_domains, constraint_sets, constraint_names):
 	observabilities = [10, 30, 50, 70]
-	results = None
-	if dat:
-		results = Results(domains, observabilities, constraint_sets, constraint_names)
-		dat = Dat()
-		dat.write_all(results, observabilities, constraint_sets)
-	if stats:
-		if not results:
-			results = Results(domains, observabilities, constraint_sets, constraint_names)
-		dat = Dat()
-		dat.print_percentages(results, observabilities, constraint_sets)
-	if png:
-		if not results:
-			results = Results(domains, observabilities, constraint_sets, constraint_names)
-		plot = Plot()
-		plot.plot_all(results, observabilities, constraint_sets)
-	if pdf:
-		dat = Dat()
-		dat.render_all(observabilities, constraint_names)
+	def generate(name, d):
+		results = None
+		if dat:
+			results = Results(d, observabilities, constraint_sets, constraint_names)
+			dat = Dat()
+			dat.write_all(results, observabilities, constraint_sets)
+		if stats:
+			if not results:
+				results = Results(d, observabilities, constraint_sets, constraint_names)
+			dat = Dat()
+			dat.print_percentages(results, observabilities, constraint_sets)
+		if png:
+			if not results:
+				results = Results(d, observabilities, constraint_sets, constraint_names)
+			plot = Plot(name)
+			plot.plot_all(results, observabilities, constraint_sets)
+		if pdf:
+			dat = Dat()
+			dat.render_all(observabilities, constraint_names)
+	if merge_domains:
+		generate("", domains)
+	else
+		for domain in domains:
+			generate(domain, [domain])
 
 
 if __name__ == '__main__':
 	# Domains
 	fast = False
+	merge = True
 	# Constraint set
 	lm = False
 	dr = False
@@ -357,6 +357,10 @@ if __name__ == '__main__':
 			fast = True
 		elif arg == '-full':
 			fast = False
+		elif arg == '-merge':
+			merge = True
+		elif arg == '-split':
+			merge = False
 		elif arg == '-lm':
 			lm = True
 		elif arg == '-del':
@@ -399,19 +403,19 @@ if __name__ == '__main__':
 		]
 	# Create files
 	if basic:
-		generate_charts(dat, png, pdf, stats, domains,
+		generate_charts(dat, png, pdf, stats, domains, merge,
 			["delta-cl", "delta-cp", "delta-cs"],
 			["LMC", "PH", "SEQ"])
 	if lm:
-		generate_charts(dat, png, pdf, stats, domains,
+		generate_charts(dat, png, pdf, stats, domains, merge,
 			["delta-cl", "delta-o-cl1"], 
 			["LMC", "LMC+soft"])
 	if dr:
 		#domains_noisy = [d.replace("optimal", "optimal-old-noisy") for d in domains]
-		generate_charts(dat, png, pdf, stats, domains,
+		generate_charts(dat, png, pdf, stats, domains, merge,
 			["delta-o-cdt", "delta-o-cdto"],
 			["DEL+1", "DEL+2"])
 	if fl:
-		generate_charts(dat, png, pdf, stats, domains,
+		generate_charts(dat, png, pdf, stats, domains, merge,
 			["delta-cf1", "delta-o-cf17"],
 			["F1", "FOPxEIntra"])

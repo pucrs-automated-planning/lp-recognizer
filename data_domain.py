@@ -84,7 +84,7 @@ class ProblemData:
 		hyps = []
 		with open("solution.dat") as f:
 			for line in f:
-				atoms = [tok.strip().lower() for tok in re.findall("\(.*?\)", line.strip())]
+				atoms = [tok.strip().lower() for tok in re.findall(r"\(.*?\)", line.strip())]
 				hyps.append(frozenset(atoms))
 		return hyps
 

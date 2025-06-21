@@ -11,10 +11,17 @@
 # ./data_output.py "delta-cl delta-o-cl1" all [-fast]
 # For method groups:
 # ./data_output.py lmc all [-fast]
+# Second article:
+# ./data_output.py "delta-cl delta-o-cl1" optimal suboptimal
+# ./data_output.py "delta-cl-f2 delta-o-cl1-f2" optimal-old-noisy suboptimal-old-noisy
+# ./data_output.py lm2017 all
+# ./data_output.py rg2009 all
 ##
 
 import os, sys, math
 import data_domain as dd
+
+sign = lambda x: bool(x > 0) - bool(x < 0)
 
 class ProblemOutput:
 
@@ -26,9 +33,11 @@ class ProblemOutput:
 		self.name = name
 		self.scores = {}
 		self.lp_infos = {}
-		if recognizer is None:
-			return
+		if recognizer:
+			self.create(recognizer)
 
+	# Create data from new execution info
+	def create(self, recognizer):
 		# Problem data
 		self.hyp_atoms = [h.atoms for h in recognizer.hyps]
 
@@ -56,17 +65,7 @@ class ProblemOutput:
 		self.num_goals = len(recognizer.hyps)
 		self.num_solutions = len(exact_solution_set)
 
-		# Results
-		total = float(len(exact_solution_set | self.solution_set))
-		fp = float(len(self.solution_set - exact_solution_set))
-		fn = float(len(exact_solution_set - self.solution_set))
-		agr = (total - fp - fn) / total
-		self.fpr = fp / total
-		self.fnr = fn / total
-		self.agreement = agr
-		self.spread = len(self.solution_set)
-		self.accuracy = 1 if recognizer.get_real_hypothesis().index in self.solution_set else 0
-		self.perfect_agr = 1 if agr == 1 else 0
+		self.compute_metrics(exact_solution_set, recognizer.get_real_hypothesis().index)
 
 		# Hyp data
 		for h in recognizer.hyps:
@@ -102,7 +101,7 @@ class ProblemOutput:
 			self.h_value_wrong = 0
 			self.hc_value_wrong = 0
 
-
+	# Load data from previous execution
 	def load(self, problem_data, raw_problem):
 		# Problem data
 		self.hyp_atoms = problem_data.hyps
@@ -146,17 +145,7 @@ class ProblemOutput:
 				min_score = score
 				wrong_hyp = goal
 
-		# Results
-		total = float(len(exact_solution_set | self.solution_set))
-		fp = float(len(self.solution_set - exact_solution_set))
-		fn = float(len(exact_solution_set - self.solution_set))
-		agr = (total - fp - fn) / total
-		self.fpr = fp / total
-		self.fnr = fn / total
-		self.agreement = agr
-		self.spread = len(self.solution_set)
-		self.accuracy = 1 if real_hyp in self.solution_set else 0
-		self.perfect_agr = 1 if agr == 1 else 0
+		self.compute_metrics(exact_solution_set, real_hyp)
 
 		# Hyp data
 		self.scores = raw_problem.scores
@@ -188,6 +177,25 @@ class ProblemOutput:
 			self.lp_info_wrong = [0, 0]
 			self.h_value_wrong = 0
 			self.hc_value_wrong = 0
+
+	# Computa statistical data
+	def compute_metrics(self, exact_solution_set, real_hyp):
+		total = float(len(exact_solution_set | self.solution_set))
+		fp = float(len(self.solution_set - exact_solution_set))
+		fn = float(len(exact_solution_set - self.solution_set))
+		tp = float(len(exact_solution_set.intersection(self.solution_set)))
+		tn = float(len(self.scores.keys()) - tp - fn - fp)
+		agr = (total - fp - fn) / total
+		self.fpr = fp / total
+		self.fnr = fn / total
+		self.recall = tp / (tp + fn) if (tp + fn) > 0 else float('nan')
+		self.precision = tp / (tp + fp) if (tp + fp) > 0 else float('nan')
+		self.fscore = 2*tp / (2*tp + fp + fn) if (tp + fp + fn) > 0 else float('nan')
+		self.agreement = agr
+		self.spread = len(self.solution_set)
+		self.accuracy = 1 if real_hyp in self.solution_set else 0
+		self.perfect_agr = 1 if agr == 1 else 0
+
 
 	def print_content(self):
 		content = self.name + ":" + str(self.total_time) + ":" + str(self.lp_time) + ":" + str(self.fd_time) + "\n"
@@ -239,6 +247,9 @@ class ExperimentOutput:
 		sum([p.agreement for p in problems]) / n, \
 		sum([p.fpr for p in problems]) / n, \
 		sum([p.fnr for p in problems]) / n, \
+        sum([p.precision for p in problems if not math.isnan(p.precision)]) / n, \
+		sum([p.recall for p in problems if not math.isnan(p.recall)]) / n, \
+		sum([p.fscore for p in problems if not math.isnan(p.fscore)]) / n, \
 		sum([p.accuracy for p in problems]) / n, \
 		sum([p.spread for p in problems]) / n, \
 		sum([p.perfect_agr for p in problems]), \
@@ -249,12 +260,12 @@ class ExperimentOutput:
 		sum([p.lp_info_real[1] for p in problems]) / n, \
 		sum([p.h_value_real for p in problems]) / n, \
 		sum([p.hc_value_real for p in problems]) / n, \
-		sum([math.copysign(p.hc_value_real, 0) for p in problems])]
+		sum([sign(p.hc_value_real) for p in problems])]
 		for i in range(2, len(problems[0].lp_info_real)):
 			values.append(sum([p.lp_info_real[i] for p in problems]) / n) # Avg U'
-			values.append(sum([math.copysign(p.lp_info_real[i], 0) for p in problems])) # U' > 0 
-		content = "%s\t%s\t" % (len(problems), self.obs)
-		content += '\t'.join(["%2.4f" % x for x in values])
+			values.append(sum([sign(p.lp_info_real[i]) for p in problems])) # U' > 0 
+		content = str(len(problems)).rjust(5) + str(self.obs).rjust(5)
+		content += ''.join([("%4.4f" % x).rjust(10) for x in values])
 		content += '\n'
 		return content 
 
@@ -267,6 +278,9 @@ class ExperimentOutput:
 		content += str([x.hc_value_best for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.fpr for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.fnr for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.precision for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.recall for x in self.problem_outputs.values()]) + '\n'
+		content += str([x.fscore for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.agreement for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.lp_time for x in self.problem_outputs.values()]) + '\n'
 		content += str([x.h_value_wrong for x in self.problem_outputs.values()]) + '\n'
@@ -288,6 +302,7 @@ class MethodOutput:
 		if os.path.exists(filename + ".output"):
 			raw_experiment = RawExperiment(open(filename + ".output"), domain_data.observabilities)
 		else:
+			print('File not found: ' + filename + '.output')
 			raw_experiment = RawExperiment(open(filename + ".success"), domain_data.observabilities)
 			raw_experiment.switch_keys(domain_data)
 		for obs in domain_data.observabilities:
@@ -296,7 +311,13 @@ class MethodOutput:
 			self.experiments.append(experiment)
 
 	def print_table(self):
-		content = "#P\tO%\t|O|\t|G|\t|S|\tAR\tFPR\tFNR\tAcc\tSpread\tPER\tTime\tTimeLP\tTimeFD\tVars\tConsts\tH\tHC\n"
+		domain = "#P O%"
+		avg_sizes = "|O| |G| |S| "
+		metrics = "Agr FPR FNR Pre Rec F1 Acc Spread PerAgr "
+		time = "Time TimeLP TimeFD "
+		values = "Vars Consts H HC #(HC>0)"
+		content = ''.join([w.rjust(5) for w in domain.split()])
+		content += ''.join([w.rjust(10) for w in (avg_sizes + metrics + time + values).split()]) + '\n'
 		for experiment in self.experiments:
 			content += experiment.print_stats()
 		return content
@@ -419,7 +440,6 @@ if __name__ == '__main__':
 		test = True
 		sys.argv.remove('-test')
 		base_path = 'experiments/'
-
 
 	# Domains
 	domains = dd.parse_domains(sys.argv[2:], test)

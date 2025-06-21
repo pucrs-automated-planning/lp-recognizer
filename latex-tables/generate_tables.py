@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python3
 
 ##
 ## Generate .pdf tables for given methods.
@@ -11,15 +11,27 @@
 # ./generate_tables.py flowf2-sub-old-noisy -obs [-fast]
 # Generate summarized table by domain:
 # ./generate_tables.py flowf2-sub-old-noisy -dom [-fast]
+# Generate tables for new article
+# ./generate_tables.py lmc-pr -rows -pr -obs
+# ./generate_tables.py lmc-sub-pr -rows -pr -obs
+# ./generate_tables.py lmcf2-noisy-pr -rows -pr -obs
+# ./generate_tables.py lmcf2-sub-noisy-pr -rows -pr
+# ./generate_tables.py generallmc-pr -pr -obs
+# ./generate_tables.py generallmc-sub-pr -pr -obs
+# ./generate_tables.py generallmcf2-noisy-pr -pr -obs
+# ./generate_tables.py generallmcf2-sub-noisy-pr -pr -obs
 ##
 
 import sys, os
 
+# 2 = Artigo atual (LMC); 3 = Artigo atual (BL)
+# 4 = Artigo atual v2 (LMC), 5 = Artigo atual v2 (BL)
 COLS_TYPE = 0
+
 BOLD = True
 COMP = None
 AVG = 0
-NUM_VALUES = 18
+NUM_VALUES = 22
 VER = 1
 
 class DomainData:
@@ -41,7 +53,7 @@ class DomainData:
 			line = file.readline()
 			if line == '':
 				break
-			line = line.strip().split('\t')
+			line = line.strip().split()
 			self.total_problems += int(line[0])
 			values = [float(x) for x in line]
 			self.obs_data[obs][approach] = values[0:NUM_VALUES]
@@ -137,20 +149,26 @@ def convert_domain_name(domain_name):
 		domain_name_4table = domain_name_4table.replace("easy-", "")
 	return domain_name_4table
 
-
+AGR_POS = 5
+PRE_POS = 8
+REC_POS = 9
+ACC_POS = 11
+SPR_POS = 12
+TIME_POS = 14
+CONSTS_POS = 18
+HC_POS = 20
 def get_line_content(values, best_ar, best_win, num_problems = 1):
-	time = round(values[11] / num_problems, 2)
-	timelp = round(values[12] / num_problems, 2)
-	timefd = round(values[13] / num_problems, 2)
-	const = round(values[15] / num_problems, 1)
-	hc = round(values[17] / num_problems, 1)
-	accuracy = round(values[8] * 100 / num_problems, min(num_problems, 2))
-	spread = round(values[9] / num_problems, 2)
-	#per = round(values[10], 1) #int(values[10])
-	ratio = 0 if (values[9] == 0) else round(100 * values[8] / values[9], min(num_problems, 2))
-	ar = round(values[5] / num_problems, 2)
-	fpr = round(values[6] / num_problems, 2)
-	fnr = round(values[7] / num_problems, 2)
+	time = round(values[TIME_POS] / num_problems, 2)
+	timelp = round(values[TIME_POS+1] / num_problems, 2)
+	timefd = round(values[TIME_POS+2] / num_problems, 2)
+	const = round(values[CONSTS_POS] / num_problems, 1)
+	hc = round(values[HC_POS] / num_problems, 1)
+	accuracy = round(values[ACC_POS] * 100 / num_problems, min(num_problems, 2))
+	spread = round(values[SPR_POS] / num_problems, 2)
+	ar = round(values[AGR_POS] / num_problems, 2)
+	precision = round(values[PRE_POS] / num_problems, 2)
+	recall = round(values[REC_POS] / num_problems, 2)
+	ratio = 0 if (values[SPR_POS] == 0) else round(100 * values[ACC_POS] / values[SPR_POS], min(num_problems, 2))
 	if BOLD:
 		if ar == best_ar:
 			ar = "\\textbf{%s}" % ar
@@ -158,14 +176,18 @@ def get_line_content(values, best_ar, best_win, num_problems = 1):
 	if COLS_TYPE == 0:
 		content += '& {0} & {1} & {2} & {3}'.format(ar, hc, time, timelp)
 	elif COLS_TYPE == 1:
-		win = int(values[18])
+		win = int(values[NUM_VALUES])
 		if win == best_win:
 			win = "\\textbf{%s}" % win
 		content += '& {0} & {1} & {2} & {3} & {4}'.format(ar, hc, win, time, timelp)
-	elif COLS_TYPE == 2:
+	elif COLS_TYPE == 2: # Artigo atual
 		content += '& {0} & {1} & {2} & {3} & {4}'.format(ar, hc, const, time, timelp)
 	elif COLS_TYPE == 3:
 		content += '& {0} & {1}'.format(ar, time)
+	elif COLS_TYPE == 4:
+		content += '& {0} & {1} & {2} & {3} & {4} & {5}'.format(ar, precision, recall, hc, time, timelp)
+	elif COLS_TYPE == 5:
+		content += '& {0} & {1} & {2} & {3}'.format(ar, precision, recall, time)
 	return content
 
 # Average per domain, per observability
@@ -180,17 +202,19 @@ def get_avg_content(domains, observabilities, approaches, all_domain_data):
 			#len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
 			content_table += '\n\t' + ('\\\\ & ' if (obs != '10') else ' & ') + obs + '\n'
 			best_ar = max([round(domain_data.obs_data[obs][i][5], 2) for i in approaches])
-			best_win = max([int(domain_data.obs_data[obs][i][18]) for i in approaches]) if COMP else -1
+			best_win = max([int(domain_data.obs_data[obs][i][20]) for i in approaches]) if COMP else -1
 			for approach in approaches:
 				content_table += '\n\t\t% ' + approach + ' - ' + obs + '% \n'
 				print(domain_name, obs, approach)
 				if approach not in domain_data.obs_data[obs]:
-					if COLS_TYPE == 0:
+					if COLS_TYPE == 0 or COLS_TYPE == 5:
 						content_table += '\n\t\t' + ('& - ' * 4) + '\t \n'
 					elif COLS_TYPE == 1 or COLS_TYPE == 2:
 						content_table += '\n\t\t' + ('& - ' * 5) + '\t \n'
 					elif COLS_TYPE == 3:
 						content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
+					elif COLS_TYPE == 4:
+						content_table += '\n\t\t' + ('& - ' * 6) + '\t \n'
 					continue
 				content_table += get_line_content(domain_data.obs_data[obs][approach], best_ar, best_win)
 				content_table += ' \t \n'
@@ -207,17 +231,19 @@ def get_dom_avg_content(domains, approaches, all_domain_data):
 		#len_obs = str(round(domain_data.get_avg_obs(obs), 2))
 		#len_solutions = str(round(domain_data.get_avg_solutions(obs), 2))
 		best_ar = max([round(domain_data.sum_data[i][5], 2) for i in approaches])
-		best_win = max([int(domain_data.sum_data[i][18]) for i in approaches]) if COMP else -1
+		best_win = max([int(domain_data.sum_data[i][20]) for i in approaches]) if COMP else -1
 		for approach in approaches:
 			content_table += '\n\t\t% ' + approach + ' - ' + domain_name + '% \n'
 			print(domain_name, approach)
 			if approach not in domain_data.sum_data:
-				if COLS_TYPE == 0:
+				if COLS_TYPE == 0 or COLS_TYPE == 5:
 					content_table += '\n\t\t' + ('& - ' * 4) + '\t \n'
 				elif COLS_TYPE == 1 or COLS_TYPE == 2:
 					content_table += '\n\t\t' + ('& - ' * 5) + '\t \n'
 				elif COLS_TYPE == 3:
 					content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
+				elif COLS_TYPE == 4:
+					content_table += '\n\t\t' + ('& - ' * 6) + '\t \n'
 				continue
 			content_table += get_line_content(domain_data.sum_data[approach], best_ar, best_win, 5)
 			content_table += ' \t \n'
@@ -232,7 +258,7 @@ def get_obs_avg_content(observabilities, approaches, all_domain_data):
 		content_table += '\n\\multicolumn{2}{c|}{%s} ' % (obs + "\\%")
 		num_problems = len(all_domain_data.keys())
 		best_ar = max([round(average_values(all_domain_data, i, obs)[5] / num_problems, 2) for i in approaches])
-		best_win = max([int(average_values(all_domain_data, i, obs)[18]) for i in approaches]) if COMP else -1
+		best_win = max([int(average_values(all_domain_data, i, obs)[20]) for i in approaches]) if COMP else -1
 		for approach in approaches:
 			content_table += '\n\t\t% ' + approach + ' - ' + obs + '% \n'
 			content_table += get_line_content(average_values(all_domain_data, approach, obs), best_ar, best_win, num_problems)
@@ -253,8 +279,8 @@ def get_latex_content(file, domains, observabilities, approaches):
 	# Average all
 	content_avg = '\\multicolumn{2}{c|}{AVG} '
 	num_problems = len(all_domain_data.keys()) * len(observabilities)
-	best_ar = max([round(average_values(all_domain_data, i)[5] / num_problems, 2) for i in approaches])
-	best_win = max([int(average_values(all_domain_data, i)[18]) for i in approaches]) if COMP else -1
+	best_ar = max([round(average_values(all_domain_data, i)[AGR_POS] / num_problems, 2) for i in approaches])
+	best_win = max([int(average_values(all_domain_data, i)[NUM_VALUES]) for i in approaches]) if COMP else -1
 	for approach in approaches:
 		values = average_values(all_domain_data, approach)
 		content_avg += get_line_content(values, best_ar, best_win, num_problems)
@@ -264,15 +290,17 @@ def get_latex_content(file, domains, observabilities, approaches):
 	content_avg += "\\\\\n\\midrule\n\\multicolumn{2}{c|}{WIN}"
 	for approach in approaches:
 		values = average_values(all_domain_data, approach)
-		win = int(values[18])
+		win = int(values[NUM_VALUES])
 		if win == best_win:
 			win = "\\textbf{%s}" % win
-		if COLS_TYPE == 0:
+		if COLS_TYPE == 0 or COLS_TYPE == 5:
 			content_avg += '& %s & & &' % win
 		elif COLS_TYPE == 1 or COLS_TYPE == 2:
 			content_avg += '& %s & & & &' % win
 		elif COLS_TYPE == 3:
 			content_avg += '& %s &' % win
+		elif COLS_TYPE == 4:
+			content_avg += '& %s & & & & &' % win
 	return content_table, content_avg
 
 
@@ -295,6 +323,10 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 		cols = ['Agr', '$h^\\Omega$', 'Rows', 'Total', 'LP']
 	elif COLS_TYPE == 3:
 		cols = ['Agr', 'Time']
+	elif COLS_TYPE == 4:
+		cols = ['Agr', 'Pre', 'Rec', '$h^\\Omega$', 'Total', 'LP']
+	elif COLS_TYPE == 5:
+		cols = ['Agr', 'Pre', 'Rec', 'Time']
 	names = ["& \\multicolumn{%s}{c|}{%s}" % (len(cols), name) for name in names]
 	names[-1] = names[-1].replace('c|', 'c')
 	midrule = ["\\cmidrule(lr){%s-%s}" % (3 + i * len(cols), 2 + len(cols) * (i + 1)) for i in range(len(approaches))]
@@ -309,6 +341,10 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 		midrule = ["\\cmidrule(lr){%s-%s}" % (6 + i * len(cols), 7 + i * len(cols)) for i in range(len(approaches))]
 		names = "& & & & \\multicolumn{2}{c}{Time}" * len(approaches)
 		latexContent = latexContent.replace("<NAMES2>", "\\multicolumn{2}{c}{}" + names + '\\\\\n' + ' '.join(midrule))
+	elif COLS_TYPE == 4:
+		midrule = ["\\cmidrule(lr){%s-%s}" % (7 + i * len(cols), 8 + i * len(cols)) for i in range(len(approaches))]
+		names = "& & & & & \\multicolumn{2}{c}{Time}" * len(approaches)
+		latexContent = latexContent.replace("<NAMES2>", "\\multicolumn{2}{c}{}" + names + '\\\\\n' + ' '.join(midrule))
 	else:
 		latexContent = latexContent.replace("<NAMES2>", "")
 	# Write content
@@ -317,11 +353,25 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 	with open(file, 'w') as latex:
 		latex.write(latexContent)
 	os.system("pdflatex " + file)
+	start = latexContent.index("\\begin{tabular}")
+	end = latexContent.index("\\end{document}")
+	latexContent = latexContent[start:end]
+	with open(file, 'w') as latex:
+		latex.write(latexContent)
 
 
 def v1_methods(file):
 	global COMP
-	if 'basic' in file:
+	if 'general' in file:
+		#COMP = 'gen'
+		#approaches = ["delta-o-cl1dto", "delta-o-csl1", "delta-o-csdto", "rg2009", "lm_hc0"]
+		#names = ["$L^+$, $D_2^+$", "$S$, $L^+$", "$S$, $D_2^+$", "RG", "POM"]
+		approaches = ["rg2009", "lm_hc0"]
+		names = ["\\rg", "\\pom"]
+		if 'lmc' in file:
+			approaches += ['delta-o-cl1']
+			names += ['\\lmcs']
+	elif 'basic' in file:
 		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
 		names = ['L', 'P', 'S']
 	elif 'lmc' in file:
@@ -330,12 +380,22 @@ def v1_methods(file):
 			approaches = ['div-cl', 'div-o-cl', 'div-o-cl1']
 			names = ['\\lmc (div)', '\\lmcu (div)', '\\lmcs (div)']
 			COMP += 'd'
-		elif 'f2' in file:
-			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
-			names = ['\\lmc', '\\lmcu', '\\lmco', '\\lmcs']
+		elif 'lmci' in file:		
+			if 'f2' in file:
+				approaches = ['delta-cl', 'delta-i-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1', 'delta-o-cl2']
+				names = ['\\lmc', '\\lmci', '\\lmcu', '\\lmco', '\\lmcs', '\\lmch']
+			else:
+				approaches = ['delta-cl', 'delta-i-cl', 'delta-o-cl', 'delta-o-cl1', 'delta-o-cl2']
+				names = ['\\lmc', '\\lmci', '\\lmcu', '\\lmcs', '\\lmch']
 		else:
-			approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
-			names = ['\\lmc', '\\lmcu', '\\lmcs']
+			if 'f2' in file:
+				approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl3', 'delta-o-cl1']
+				names = ['\\lmc', '\\lmcu', '\\lmco', '\\lmcs']
+			else:
+				approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
+				names = ['\\lmc', '\\lmcu', '\\lmcs']
+			approaches = ['delta-cl', 'delta-o-cl1']
+			names = ['\\lmc', '\\lmcs']
 	elif 'delr' in file:
 		COMP = 'delr'
 		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
@@ -344,12 +404,6 @@ def v1_methods(file):
 		COMP = 'flow'
 		approaches = ['delta-cf1', 'delta-cf1ab', 'delta-o-cf17', 'delta-o-cf16', 'delta-cf2']
 		names = ["\\sysone", "\\mtwo", "\\intratwo", "\\intertwo", "\\systwo"]
-	elif 'general' in file:
-		#COMP = 'gen'
-		#approaches = ["delta-o-cl1dto", "delta-o-csl1", "delta-o-csdto", "rg2009", "lm_hc0"]
-		#names = ["$L^+$, $D_2^+$", "$S$, $L^+$", "$S$, $D_2^+$", "RG", "POM"]
-		approaches = ["rg2009", "lm_hc0"]
-		names = ["\\rg", "\\pom"]
 	return approaches, names
 
 def v2_methods(file):
@@ -363,6 +417,9 @@ def v2_methods(file):
 			approaches = ['div-cl', 'div-o-cl1']
 			names = ['\\lmc (div)', '\\lmcs (div)']
 			COMP += 'd'
+		elif 'lmci' in file:
+			approaches = ['delta-cl', 'delta-i-cl', 'delta-o-cl1', 'delta-o-cl2']
+			names = ['\\lmc', '\\lmci', '\\lmcs', '\\lmch']
 		else:
 			approaches = ['delta-cl','delta-o-cl1']
 			names = ['\\lmc', '\\lmcs']
@@ -407,6 +464,9 @@ if __name__ == '__main__' :
 	if '-time' in sys.argv:
 		# Include only agr and total time.
 		COLS_TYPE = 3
+	if '-pr' in sys.argv:
+		# Include precision & recall
+		COLS_TYPE += 2
 	if '-dom' in sys.argv:
 		# Average by domain.
 		AVG = 1
@@ -416,9 +476,18 @@ if __name__ == '__main__' :
 	if '-v2' in sys.argv:
 		# Table version
 		VER = 2
+	if '-fast' in sys.argv:
+		domains = [
+		'blocks-world-optimal', 
+		'depots-optimal', 
+		'driverlog-optimal', 
+		'dwr-optimal', 
+		'rovers-optimal', 
+		'sokoban-optimal'
+		]
 
 	# Data set type.
-	file = sys.argv[1] + ".tex"
+	file = sys.argv[1]
 	if 'noisy' in file:
 		domains = [name.replace("optimal", "optimal-old-noisy") for name in domains]
 	if 'sub' in file:
@@ -438,4 +507,8 @@ if __name__ == '__main__' :
 			
 	print(approaches)
 	print(domains)
+	print(COLS_TYPE)
+	if AVG > 0:
+		file += "-avg"
+	file += ".tex"
 	create_tex_files(file, domains, observabilities, approaches, names)

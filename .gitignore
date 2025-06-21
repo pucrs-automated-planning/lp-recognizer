@@ -129,9 +129,14 @@ dmypy.json
 failed.txt
 debug/observation_sanity.txt
 ._*.dat
+*.zip
 data-*/*
 results/*
 old/*
+latex-*/*.dat
+latex-*/*.pdf
 outputs/small-sokoban*
 !/*.yml
 !/.gitignore
+/*.dat
+2021/

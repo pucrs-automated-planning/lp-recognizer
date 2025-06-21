@@ -70,16 +70,19 @@ for arg in "$@"; do
 		COMP=pdf
 	elif [[ "$arg" == "-charts1" ]]; then
 		# Generate pdf charts (ref goals).
-		CHARTS=-ref
+		CHARTS=ref
 	elif [[ "$arg" == "-charts2" ]]; then
 		# Generate pdf charts (nonref goals).
-		CHARTS=-nonref
+		CHARTS=nonref
 	elif [[ "$arg" == "-charts3" ]]; then
 		# Generate pdf charts (all goals).
-		CHARTS=-all
+		CHARTS=hc
 	elif [[ "$arg" == "-charts4" ]]; then
 		# Generate pdf charts (all goals, sum scatter).
-		CHARTS=-sums
+		CHARTS=sums
+	elif [[ "$arg" == "-charts5" ]]; then
+		# Generate pdf charts (all goals, ref vs nonref).
+		CHARTS=hyps
 	fi
 done
 
@@ -207,7 +210,15 @@ if [[ "$TEST" != "-test" ]]; then
 	if [[ ! -z "$CHARTS" ]]; then
 		echo "Generating pdf charts$CHARTS..."
 		cd latex-charts
-		bash generate_all_charts.sh $CHARTS $TEST
+		if [[ "$CHARTS" == "ref" ]]; then
+			./generate_charts -full -stats -dat -pdf -lm -fl -ref $TEST
+			#./generate_charts -full -stats -dr -ref $2
+		elif [[ "$CHARTS" == "nonref" ]]; then
+			./generate_charts -full -stats -dat -pdf -lm -fl $TEST
+			#./generate_charts -full -stats -dr $2
+		else
+			bash generate_all_charts.sh $CHARTS all $TEST
+		fi
 		cd ..
 		echo "Done."
 	fi
