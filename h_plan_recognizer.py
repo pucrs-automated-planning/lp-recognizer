@@ -3,6 +3,7 @@
 from plan_recognizer import PlanRecognizer
 import time
 
+
 class LPRecognizerHValue(PlanRecognizer):
     name = "hvalue"
 
@@ -23,7 +24,7 @@ class LPRecognizerHValue(PlanRecognizer):
             for h in self.hyps:
                 if self.accept_hypothesis(h):
                     self.accepted_hypotheses.add(h)
-        else: 
+        else:
             for h in self.hyps:
                 self.accepted_hypotheses.add(h)
             print("All hypotheses failed.")
@@ -49,7 +50,7 @@ class LPRecognizerHValue(PlanRecognizer):
         for h in self.hyps:
             if not h.test_failed:
                 if not self.unique_goal or h.score < self.unique_goal.score:
-                   self.unique_goal = h
+                    self.unique_goal = h
         # Select other goals
         self.calculate_uncertainty()
         self.verify_hypotheses()
