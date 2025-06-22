@@ -18,55 +18,44 @@
 \setlength{\pdfpagewidth}{8.5in}
 \setlength{\pdfpageheight}{11in}
 \usepackage{subcaption}
+
+%% Colours for text
+\newcommand{\textblue}[1]{{\color{blue}#1}}
+\newcommand{\textgreen}[1]{{\color{green}#1}}
+\newcommand{\textgray}[1]{{\color{gray}#1}}
+\newcommand{\textred}[1]{{\color{red}#1}}
+\newcommand{\textcyan}[1]{{\color{cyan}#1}}
+
+
+
+%% Names of stuff
+\newcommand{\sasplus}{SAS\textsuperscript{+}}
 \newcommand{\timeout}{{\it Timeout}}
 \newcommand{\outofmemory}{{\it Out of Memory}}
 
-\DeclareMathOperator{\planningtask}{\Pi}
-\DeclareMathOperator{\goalconditions}{\Gamma}
-\DeclareMathOperator{\plan}{\pi}
-\DeclareMathOperator{\optimalplan}{\pi^{*}}
-\DeclareMathOperator{\plancost}{\mathit{cost}}
-\DeclareMathOperator{\occur}{\mathit{occur}}
-\providecommand\initialstate{\ensuremath{s_{0}}}
-\providecommand\goalstate{\ensuremath{s^{*}}}
-
-\providecommand\h{\ensuremath{h}}
-\providecommand\hoptimal{\ensuremath{h^{*}}}
-\providecommand\hip{\ensuremath{h}^{\textup{IP}}}
-
-\providecommand\varvalue[2]{\ensuremath{#1[#2]}}
-\providecommand\obs[1]{\ensuremath{\vec{#1}}}
-
-\providecommand\variableoccurrences{\ensuremath{\mathcal{K}}}
-\providecommand\lpvariables{\ensuremath{\mathcal{Y}}}
-\providecommand\constraints{\ensuremath{C}}
-\providecommand\uncertainty{\ensuremath{\mu}}
-
-\newcommand{\rg}{RG}
-\newcommand{\fgr}{FGR}
-\newcommand{\mirroring}{M+L}
+%% Approaches
 \newcommand{\dhc}{\ensuremath{\Gamma^{\text{LP}}}}
 \newcommand{\dhcu}{\ensuremath{\Gamma^{\uncertainty}}}
-\newcommand{\dhcf}{\ensuremath{\Gamma^{\text{\unreliability}}}}
+\newcommand{\dhcf}{\ensuremath{\Gamma^{\unreliability}}}
+
+%% Other approaches
+\newcommand{\rg}{RG}
+\newcommand{\fgr}{FGR 2015}
+\newcommand{\mirroring}{M+L 2018}
 \newcommand{\pom}{POM}
 \newcommand{\pomA}{POM-10\%}
 \newcommand{\pomB}{POM-20\%}
 \newcommand{\pomC}{POM-30\%}
 
-%% Goal Recognition
-\newcommand{\grtask}{\ensuremath{\Pi_{\goalconditions}^{\observations}}}
-\newcommand{\grsolution}{\ensuremath{\Gamma^{*}}}
-\newcommand{\observations}{\ensuremath{\Omega}}
-\newcommand{\unreliability}{\ensuremath{\epsilon}}%{\ensuremath{\mathcal{R}}}
-
 %% Constraints
 \newcommand{\seq}{\text{SEQ}}
 \newcommand{\pho}{\text{PhO}}
 \newcommand{\lmc}{\text{LMC}}
-\newcommand{\lmco}{\text{LMC\textsuperscript{imp}}}
-\newcommand{\lmcs}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{soft}}}
-\newcommand{\lmch}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{hard}}}
-\newcommand{\lmcu}{\text{LMC\rlap{\textsuperscript{imp}}\textsubscript{unified}}}
+\newcommand{\lmco}{\text{LMC\textsuperscript{\it imp}}}
+\newcommand{\lmcs}{\text{LMC\rlap{\textsuperscript{\it imp}}\textsubscript{\it soft}}}
+
+\newcommand{\lmch}{\text{LMC\rlap{\textsuperscript{\it imp}}\textsubscript{\it hard}}}
+\newcommand{\lmcu}{\text{LMC\rlap{\textsuperscript{\it imp}}\textsubscript{\it unified}}}
 \newcommand{\flow}{\text{FLOW}}
 \newcommand{\sysone}{\text{SYS\textsuperscript{1}}}
 \newcommand{\systwo}{\text{SYS\textsuperscript{2}}}
@@ -75,15 +64,33 @@
 \newcommand{\intertwo}{\text{O\textsuperscript{2}}}
 \newcommand{\dr}{\text{DEL}}
 \newcommand{\drone}{\text{DEL\textsuperscript{imp}}}
-\newcommand{\drtwo}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{2}}}
-\newcommand{\drthree}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{3}}}
-\newcommand{\drtime}{\text{DEL\rlap{\textsuperscript{imp}}\textsubscript{time}}}
+\newcommand{\drtwo}{\text{DEL\rlap{\textsuperscript{\it imp}}\textsubscript{2}}}
+\newcommand{\drthree}{\text{DEL\rlap{\textsuperscript{\it imp}}\textsubscript{3}}}
+\newcommand{\drtime}{\text{DEL\rlap{\textsuperscript{\it imp}}\textsubscript{3}}}
+
+%% Heuristics
+\newcommand{\hseq}{\ensuremath{h^{\seq}}}
+\newcommand{\hlmc}{\ensuremath{h^{\lmc}}}
+\newcommand{\hlmco}{\ensuremath{h^{\lmco}}}
+\newcommand{\hlmcs}{\ensuremath{h^{\lmcs}}}
+\newcommand{\hlmcu}{\ensuremath{h^{\lmcu}}}
+\newcommand{\hpho}{\ensuremath{h^{\pho}}}
+\newcommand{\hflow}{\ensuremath{h^{\flow}}}
+\newcommand{\hsysone}{\ensuremath{h^{\sysone}}}
+\newcommand{\hintratwo}{\ensuremath{h^{\intratwo}}}
+\newcommand{\hdr}{\ensuremath{h^{\dr}}}
+\newcommand{\hoptimal}{\ensuremath{\h^{*}}}
+\newcommand{\hplus}{\ensuremath{h^{+}}}
+\newcommand{\hip}{\h^{\textup{IP}}}
 
 %% Complying Heuristics
+\newcommand{\hooptg}{\ensuremath{h^{*}_{\observations,\goalstate}}}
 \newcommand{\hoseq}{\ensuremath{h^{\seq}_{\observations}}}
 \newcommand{\holmc}{\ensuremath{h^{\lmc}_{\observations}}}
 \newcommand{\holmco}{\ensuremath{h^{\lmco}_{\observations}}}
 \newcommand{\holmcs}{\ensuremath{h^{\lmcs}_{\observations}}}
+\newcommand{\hoptlmcsg}{\ensuremath{h^{*,\lmc_\observations}_{\observations,\goalstate}}}
+\newcommand{\holmcsg}{\ensuremath{h^{\lmc_\observations}_{\observations,\goalstate}}}
 \newcommand{\holmcu}{\ensuremath{h^{\lmcu}_{\observations}}}
 \newcommand{\hopho}{\ensuremath{h^{\pho}_{\observations}}}
 \newcommand{\hoflow}{\ensuremath{h^{\flow}_{\observations}}}
@@ -96,6 +103,115 @@
 \newcommand{\hodrone}{\ensuremath{h^{\drone}_{\observations}}}
 \newcommand{\hodrtwo}{\ensuremath{h^{\drtwo}_{\observations}}}
 \newcommand{\hodrthree}{\ensuremath{h^{\drthree}_{\observations}}}
+\newcommand{\hodrtime}{\ensuremath{h^{\drtime}_{\observations}}}
+
+%% Shortcuts
+\providecommand{\tuple}[1]{\ensuremath\langle#1\rangle}
+\providecommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\indicator}[1]{\ensuremath{\llbracket#1\rrbracket}}
+\providecommand{\integer}[1]{\ensuremath{\mathbb{I}(#1)}}
+\providecommand{\exec}[1]{\ensuremath{\llbracket{#1}\rrbracket}}
+
+%% Math sets
+\providecommand\Z{\ensuremath{\mathbb{Z}}}
+\providecommand\N{\ensuremath{\mathbb{N}}}
+\providecommand\Real{\ensuremath{\mathbb{R}}}
+
+%% Planning Constants
+\newcommand{\planningtask}{\ensuremath{\Pi}}
+\newcommand{\variables}{\ensuremath{\mathcal{V}}}
+\newcommand{\operators}{\ensuremath{\mathcal{O}}}
+\newcommand{\ncoperators}{\ensuremath{NC}}%{\mathcal{N}}
+\newcommand{\states}{\ensuremath{S}}
+\newcommand{\goalstates}{\ensuremath{\states_{*}}}
+\newcommand{\facts}{\ensuremath{\mathcal{A}}}
+\newcommand{\vertices}{\mathcal{S}}
+\newcommand{\edges}{\mathcal{T}}
+\newcommand{\weight}{\mathcal{W}}
+\newcommand{\optimalplan}{\ensuremath{\pi^{*}}}
+
+%% Planning Functions
+\providecommand{\cost}{\mathit{cost}}
+\providecommand{\plancost}{\mathit{cost}}
+\providecommand{\pre}{\mathit{pre}}
+\providecommand{\post}{\mathit{post}}
+\providecommand{\vars}{\mathit{vars}}
+\providecommand{\add}{\mathit{add}}
+\providecommand{\del}{\mathit{del}}
+\providecommand{\occur}{\mathit{occur}}
+\providecommand{\dom}[1]{\ensuremath{\emph{dom}({#1})}}
+\providecommand{\lm}[1]{\ensuremath{L({#1})}}
+
+%% Transition System
+\newcommand{\netchange}{\ensuremath{\textit{netchange}}}
+\newcommand{\transgraph}{\ensuremath{TS}}
+\newcommand{\tsin}{\ensuremath{\mathit{in}}}
+\newcommand{\tsout}{\ensuremath{\mathit{out}}}
+\newcommand{\tstrans}{\ensuremath{\mathit{trans}}}
+\newcommand{\tsain}{\ensuremath{\mathit{in}^{\alpha}}}
+\newcommand{\tsaout}{\ensuremath{\mathit{out}^{\alpha}}}
+\newcommand{\tsatrans}{\ensuremath{\mathit{trans}^{\alpha}}}
+\newcommand{\tsapmin}{\ensuremath{\mathit{in}^{\alpha^P_M}}}
+\newcommand{\tsapmout}{\ensuremath{\mathit{out}^{\alpha^P_M}}}
+\newcommand{\tsapmtrans}{\ensuremath{\mathit{trans}^{\alpha^P_M}}}
+
+%% Goal Recognition
+% \newcommand{\grtask}{\ensuremath{\Pi_{\goalconditions}^{\observations}}}
+\newcommand{\grplanningtask}{\ensuremath{\planningtask_\textup{P}}}
+\newcommand{\grtask}{\ensuremath{\planningtask_{\goalconditions}^{\observations}}}
+\newcommand{\grsolution}{\ensuremath{\Gamma^{*}}}
+\newcommand{\observations}{\ensuremath{\Omega}}
+\newcommand{\unreliability}{\ensuremath{\epsilon}}%{\ensuremath{\mathcal{R}}}
+
+%% Common Variables
+\providecommand{\h}{\ensuremath{h}}
+\providecommand{\ho}{\ensuremath{h_{\observations}}}
+\providecommand{\hnew}{\ensuremath{h^{\text{imp}}}}
+\providecommand{\honew}{\ensuremath{h_{\observations}^{\text{imp}}}}
+\providecommand{\variable}{\ensuremath{V}} % Uppercase to agree with Pommerening
+\providecommand{\value}{\ensuremath{v}}
+\providecommand{\varvalue}[2]{\ensuremath{#1[#2]}}
+\providecommand{\op}{\ensuremath{o}}
+\providecommand{\obs}[1]{\ensuremath{\vec{#1}}}
+\providecommand{\fact}{\ensuremath{f}}
+\providecommand{\plan}{\ensuremath{\pi}}
+\providecommand{\initialstate}{\ensuremath{s_{0}}}
+\providecommand{\goalstate}{\ensuremath{s^{*}}}
+\providecommand{\rgoal}{\ensuremath{\goalstate_\mathcal{R}}}
+\providecommand{\goalconditions}{\ensuremath{\Gamma}}
+
+%\newcommand{\optgrplanningtask}{\grplanningtask,}
+\newcommand{\optgrplanningtask}{}
+
+\newcommand{\hPi}[1]{\ensuremath{\h_{\optgrplanningtask #1}}}
+\newcommand{\hstarPi}[1]{\ensuremath{\hoptimal_{\optgrplanningtask #1}}}
+\newcommand{\hoPi}[2][\observations]{\ensuremath{\h_{\optgrplanningtask #2, #1}}}
+\newcommand{\hostarPi}[2][\observations]{\ensuremath{\hoptimal_{\optgrplanningtask #2, #1}}}
+\newcommand{\hoipPi}[2][\observations]{\ensuremath{\hip_{\optgrplanningtask #2, #1}}}
+\newcommand{\honewPi}[2][\observations]{\ensuremath{\hnew_{\optgrplanningtask #2, #1}}}
+
+%% LP/IP Variables
+\providecommand\Y[1]{\ensuremath{\mathsf{Y}_{#1}}}
+\providecommand\Yobs[1]{\ensuremath{\obs{\mathsf{Y}}_{#1}}}
+\providecommand\B[1]{\ensuremath{\mathsf{B}_{#1}}}
+\providecommand\varU[1]{\ensuremath{\mathsf{U}_{#1}}}
+\providecommand\varR[1]{\ensuremath{\mathsf{R}_{#1}}}
+\providecommand\varA[1]{\ensuremath{\mathsf{A}_{#1}}}
+\providecommand\varT[1]{\ensuremath{\mathsf{T}_{#1}}}
+\newcommand\lpvariables{\ensuremath{\mathcal{Y}}}
+\newcommand\constraints{\ensuremath{C}}
+\newcommand\constraintso{\ensuremath{C_{\observations}}}
+\newcommand\landmark{\ensuremath{L}}
+
+%% Network flow
+\newcommand\abstraction{\ensuremath{\alpha}}
+
+%\providecommand\variableoccurrencesk{\ensuremath{\mathcal{K}}}
+\providecommand\uncertainty{\ensuremath{\mu}}
+%\newcommand{\noisyobservations}{\ensuremath{\Omega^{N}}}
+%\newcommand{\hdeltahcu}{\ensuremath{\delta_{\textsc{hcU}}}}
+%\newcommand{\uniqueness}{$h_{\mathit{uniq}}$}
+%\newcommand{\completion}{$h_{\mathit{gc}}$}
 
 %---------------------------------------------------------------------------------------------------------------
 \begin{document}

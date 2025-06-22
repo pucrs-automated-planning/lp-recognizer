@@ -18,8 +18,8 @@
 # ./generate_tables.py lmcf2-sub-noisy-pr -rows -pr
 # ./generate_tables.py generallmc-pr -pr -obs
 # ./generate_tables.py generallmc-sub-pr -pr -obs
-# ./generate_tables.py generallmcf2-noisy-pr -pr -obs
-# ./generate_tables.py generallmcf2-sub-noisy-pr -pr -obs
+# ./generate_tables.py generallmc-f2-noisy-pr -pr -obs
+# ./generate_tables.py generallmc-f2-sub-noisy-pr -pr
 ##
 
 import sys, os
@@ -185,7 +185,7 @@ def get_line_content(values, best_ar, best_win, num_problems = 1):
 	elif COLS_TYPE == 3:
 		content += '& {0} & {1}'.format(ar, time)
 	elif COLS_TYPE == 4:
-		content += '& {0} & {1} & {2} & {3} & {4} & {5}'.format(ar, precision, recall, hc, time, timelp)
+		content += '& {0} & {1} & {2} & {3} & {4} & {5} & {6}'.format(ar, precision, recall, hc, const, time, timelp)
 	elif COLS_TYPE == 5:
 		content += '& {0} & {1} & {2} & {3}'.format(ar, precision, recall, time)
 	return content
@@ -214,7 +214,7 @@ def get_avg_content(domains, observabilities, approaches, all_domain_data):
 					elif COLS_TYPE == 3:
 						content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
 					elif COLS_TYPE == 4:
-						content_table += '\n\t\t' + ('& - ' * 6) + '\t \n'
+						content_table += '\n\t\t' + ('& - ' * 7) + '\t \n'
 					continue
 				content_table += get_line_content(domain_data.obs_data[obs][approach], best_ar, best_win)
 				content_table += ' \t \n'
@@ -243,7 +243,7 @@ def get_dom_avg_content(domains, approaches, all_domain_data):
 				elif COLS_TYPE == 3:
 					content_table += '\n\t\t' + ('& - ' * 2) + '\t \n'
 				elif COLS_TYPE == 4:
-					content_table += '\n\t\t' + ('& - ' * 6) + '\t \n'
+					content_table += '\n\t\t' + ('& - ' * 7) + '\t \n'
 				continue
 			content_table += get_line_content(domain_data.sum_data[approach], best_ar, best_win, 5)
 			content_table += ' \t \n'
@@ -300,7 +300,7 @@ def get_latex_content(file, domains, observabilities, approaches):
 		elif COLS_TYPE == 3:
 			content_avg += '& %s &' % win
 		elif COLS_TYPE == 4:
-			content_avg += '& %s & & & & &' % win
+			content_avg += '& %s & & & & & &' % win
 	return content_table, content_avg
 
 
@@ -324,7 +324,7 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 	elif COLS_TYPE == 3:
 		cols = ['Agr', 'Time']
 	elif COLS_TYPE == 4:
-		cols = ['Agr', 'Pre', 'Rec', '$h^\\Omega$', 'Total', 'LP']
+		cols = ['Agr', 'Pre', 'Rec', '$h^\\Omega$', 'Rows', 'Total', 'LP']
 	elif COLS_TYPE == 5:
 		cols = ['Agr', 'Pre', 'Rec', 'Time']
 	names = ["& \\multicolumn{%s}{c|}{%s}" % (len(cols), name) for name in names]
@@ -342,8 +342,8 @@ def create_tex_files(file, domains, observabilities, approaches, names=None):
 		names = "& & & & \\multicolumn{2}{c}{Time}" * len(approaches)
 		latexContent = latexContent.replace("<NAMES2>", "\\multicolumn{2}{c}{}" + names + '\\\\\n' + ' '.join(midrule))
 	elif COLS_TYPE == 4:
-		midrule = ["\\cmidrule(lr){%s-%s}" % (7 + i * len(cols), 8 + i * len(cols)) for i in range(len(approaches))]
-		names = "& & & & & \\multicolumn{2}{c}{Time}" * len(approaches)
+		midrule = ["\\cmidrule(lr){%s-%s}" % (8 + i * len(cols), 9 + i * len(cols)) for i in range(len(approaches))]
+		names = "& & & & & & \\multicolumn{2}{c}{Time}" * len(approaches)
 		latexContent = latexContent.replace("<NAMES2>", "\\multicolumn{2}{c}{}" + names + '\\\\\n' + ' '.join(midrule))
 	else:
 		latexContent = latexContent.replace("<NAMES2>", "")
@@ -370,7 +370,7 @@ def v1_methods(file):
 		names = ["\\rg", "\\pom"]
 		if 'lmc' in file:
 			approaches += ['delta-o-cl1']
-			names += ['\\lmcs']
+			names += ['\\holmcsg']
 	elif 'basic' in file:
 		approaches = ['delta-cl', 'delta-cp', 'delta-cs']
 		names = ['L', 'P', 'S']
@@ -395,7 +395,7 @@ def v1_methods(file):
 				approaches = ['delta-cl', 'delta-o-cl', 'delta-o-cl1']
 				names = ['\\lmc', '\\lmcu', '\\lmcs']
 			approaches = ['delta-cl', 'delta-o-cl1']
-			names = ['\\lmc', '\\lmcs']
+			names = ['\\holmc', '\\holmcsg']
 	elif 'delr' in file:
 		COMP = 'delr'
 		approaches = ['delta-o-cdt', 'delta-o-cdto', 'delta-o-cdtb5']
@@ -466,7 +466,7 @@ if __name__ == '__main__' :
 		COLS_TYPE = 3
 	if '-pr' in sys.argv:
 		# Include precision & recall
-		COLS_TYPE += 2
+		COLS_TYPE = 4 if '-rows' in sys.argv else 5
 	if '-dom' in sys.argv:
 		# Average by domain.
 		AVG = 1
