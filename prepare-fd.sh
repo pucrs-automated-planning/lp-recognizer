@@ -44,7 +44,12 @@ pushd ..
 	popd
 	# Apply lp-recognizer's changes
 	echo "Patching Fast Downward"
-	patch -s -p0 -i ${DIR}/fd-patch.diff 
+	if patch -s -p0 -i "${DIR}/fd-patch.diff"; then
+    	echo "patch applied"
+	else
+    	echo "patch failed"
+		exit 1
+	fi
 	# Build fast-downward
 	pushd $FD_ROOT/
 		./build.py release
