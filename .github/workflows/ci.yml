@@ -16,7 +16,9 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y cmake g++ git make python3 zlib1g-dev libgmp3-dev bzip2
+          sudo apt-get install -y cmake g++-9 git make python3 zlib1g-dev libgmp3-dev bzip2
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
 
       - name: Set SoPlex environment
         run: |
@@ -29,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.local/soplex
-          key: soplex-release-604-${{ runner.os }}
+          key: soplex-release-604-gcc9-${{ runner.os }}
 
       - name: Install SoPlex
         if: steps.cache-soplex.outputs.cache-hit != 'true'
@@ -40,7 +42,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/../fast-downward
-          key: fd-${{ hashFiles('fd-patch-rev', 'fd-patch.diff') }}-${{ runner.os }}
+          key: fd-${{ hashFiles('fd-patch-rev', 'fd-patch.diff') }}-gcc9-${{ runner.os }}
 
       - name: Prepare Fast Downward
         if: steps.cache-fd.outputs.cache-hit != 'true'
