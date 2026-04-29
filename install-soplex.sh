@@ -12,8 +12,7 @@
 
 die() { echo "ERROR: $*" >&2; exit 1; }
 
-# SOPLEX_GIT_TAG="${SOPLEX_GIT_TAG:-release-604}"
-SOPLEX_GIT_TAG="${SOPLEX_GIT_TAG:-release-311}"
+SOPLEX_GIT_TAG="${SOPLEX_GIT_TAG:-release-604}"
 
 if [[ -z "${soplex_DIR:-}" ]]; then
     export soplex_DIR="$HOME/.local/soplex"
