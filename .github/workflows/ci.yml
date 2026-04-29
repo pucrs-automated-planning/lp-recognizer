@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install system dependencies
         run: |
@@ -28,7 +28,7 @@ jobs:
 
       - name: Cache SoPlex
         id: cache-soplex
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.local/soplex
           key: soplex-release-604-gcc9-${{ runner.os }}
@@ -39,7 +39,7 @@ jobs:
 
       - name: Cache Fast Downward
         id: cache-fd
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ github.workspace }}/../fast-downward
           key: fd-${{ hashFiles('fd-patch-rev', 'fd-patch.diff') }}-gcc9-${{ runner.os }}
