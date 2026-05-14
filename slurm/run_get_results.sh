@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------------------
 #SBATCH --job-name=lp-recog-full
 #SBATCH --time=24:00:00
-#SBATCH --mem=32G
+#SBATCH --mem=24G
 #SBATCH --cpus-per-task=1
 #SBATCH --output=slurm/logs/%j.out
 #SBATCH --error=slurm/logs/%j.err
