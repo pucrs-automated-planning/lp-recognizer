@@ -57,9 +57,50 @@ pushd "$PARENT" > /dev/null
 popd > /dev/null
 echo "Patch applied successfully."
 
+# FindCplex.cmake only lists x86-64/x64 as bitwidth hints; add arm64 for Apple Silicon.
+# On x86-64 Linux/macOS, arm64_* paths won't exist so cmake falls through harmlessly.
+sed -i.bak 's/set(BITWIDTH_HINTS "x86-64" "x64")/set(BITWIDTH_HINTS "arm64" "x86-64" "x64")/' \
+    "${FD_ROOT}/src/search/cmake/FindCplex.cmake"
+
 echo "Building Fast Downward..."
+
+# Require at least one LP solver — the operator-counting heuristics won't work without one.
+if [[ -z "${soplex_DIR:-}" && -z "${cplex_DIR:-}" ]]; then
+    DEFAULT_SOPLEX="$HOME/.local/soplex"
+    if [[ -f "${DEFAULT_SOPLEX}/include/soplex.h" ]]; then
+        export soplex_DIR="${DEFAULT_SOPLEX}"
+        echo "soplex_DIR not set; found SoPlex at default location, using ${soplex_DIR}"
+    else
+        die "No LP solver found. Set one of the following before running this script:" \
+$'\n  export soplex_DIR=<path>   # e.g. $HOME/.local/soplex  (run install-soplex.sh first)' \
+$'\n  export cplex_DIR=<path>    # macOS: /Applications/CPLEX_Studio<ver>/cplex' \
+$'\n                             # Linux: /opt/ibm/ILOG/CPLEX_Studio<ver>/cplex'
+    fi
+fi
+
+# On macOS, prefer Homebrew GCC over Apple Clang to match the compiler used for SoPlex.
+# if [[ "$(uname -s)" == "Darwin" ]] && [[ -z "${CXX:-}" ]]; then
+#     _BREW_GXX=$(ls "$(brew --prefix gcc 2>/dev/null)/bin/g++-"* 2>/dev/null | sort -V | tail -1)
+#     if [[ -x "${_BREW_GXX:-}" ]]; then
+#         export CC="${_BREW_GXX//g++/gcc}"
+#         export CXX="${_BREW_GXX}"
+#         echo "macOS: using Homebrew GCC (${CXX})"
+#     fi
+# fi
+
+# cmake reads CMAKE_PREFIX_PATH from the environment for find_package() searches.
+# This lets build.py pass the solver locations without modifying its configure args.
+if [[ -n "${soplex_DIR:-}" ]]; then
+    export CMAKE_PREFIX_PATH="${soplex_DIR}${CMAKE_PREFIX_PATH:+:${CMAKE_PREFIX_PATH}}"
+fi
+if [[ -n "${cplex_DIR:-}" ]]; then
+    export CMAKE_PREFIX_PATH="${cplex_DIR}${CMAKE_PREFIX_PATH:+:${CMAKE_PREFIX_PATH}}"
+fi
+
 pushd "$FD_ROOT" > /dev/null
-    ./build.py release || die "Fast Downward build failed."
+    # Remove stale cmake cache so solver detection re-runs with current env vars.
+    rm -f builds/release/CMakeCache.txt
+    python3 build.py release || die "Fast Downward build failed."
 popd > /dev/null
 
 echo ""

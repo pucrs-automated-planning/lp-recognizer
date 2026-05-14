@@ -116,7 +116,10 @@ def run(cmd, timeout, memory, log=None, verbose=True):
     # signal = os.waitpid(pid, 0)[1]
 
     ## Begin Alternate Code
-    resource.setrlimit(resource.RLIMIT_AS, (memory, memory))
+    # RLIMIT_AS is unreliable on macOS (hard limit is often lower than requested),
+    # so only apply the memory cap on Linux.
+    if sys.platform != "darwin":
+        resource.setrlimit(resource.RLIMIT_AS, (memory, memory))
     resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
     signal = os.system(cmd)
 

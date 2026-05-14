@@ -5,7 +5,7 @@
 #
 # Environment variables you can set before running:
 #   soplex_DIR       - where to install SoPlex (default: $HOME/.local/soplex)
-#   SOPLEX_GIT_TAG   - soplex git tag to build (default: release-604)
+#   SOPLEX_GIT_TAG   - soplex git tag to build (default: release-710)
 #
 # On HPC clusters, make sure cmake and a C++ compiler are available first:
 #   module load cmake gcc   (or equivalent for your cluster)
@@ -47,9 +47,24 @@ if [[ ! -d "$SOPLEX_INSTALL_PREFIX" ]]; then
     export CXXFLAGS="${CXXFLAGS:-} -Wno-use-after-free"
     NPROC=$(nproc 2>/dev/null || sysctl -n hw.logicalcpu 2>/dev/null || echo 4)
 
+    # On macOS, both SoPlex and FD must use the same compiler to avoid ABI mismatches.
+    # Uncomment below (and the matching block in prepare-fd.sh) to force Homebrew GCC
+    # instead of Apple Clang if the default compiler does not work.
+    # if [[ "$(uname -s)" == "Darwin" ]] && [[ -z "${CXX:-}" ]]; then
+    #     _BREW_GXX=$(ls "$(brew --prefix gcc 2>/dev/null)/bin/g++-"* 2>/dev/null | sort -V | tail -1)
+    #     if [[ -x "${_BREW_GXX:-}" ]]; then
+    #         export CC="${_BREW_GXX//g++/gcc}"
+    #         export CXX="${_BREW_GXX}"
+    #         echo "macOS: using Homebrew GCC (${CXX})"
+    #     fi
+    # fi
+
     cmake -S "${BUILD_TMP}/soplex" -B "${BUILD_TMP}/build" \
         -DCMAKE_INSTALL_PREFIX="${SOPLEX_INSTALL_PREFIX}" \
         -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DBOOST=off \
+        -DGMP=off \
         || die "CMake configuration failed."
 
     cmake --build "${BUILD_TMP}/build" -j"${NPROC}" \
@@ -58,42 +73,27 @@ if [[ ! -d "$SOPLEX_INSTALL_PREFIX" ]]; then
     cmake --install "${BUILD_TMP}/build" \
         || die "SoPlex installation to '${SOPLEX_INSTALL_PREFIX}' failed."
 
-    echo "SoPlex installed to ${SOPLEX_INSTALL_PREFIX}"
 else
     echo "SoPlex already present at ${SOPLEX_INSTALL_PREFIX}"
 fi
 
-# Resolve the actual cmake config directory: on some platforms (RHEL/CentOS)
-# cmake installs to lib64/cmake rather than lib/cmake. CMake's find_package
-# requires soplex_DIR to point to the directory containing soplex-config.cmake.
-SOPLEX_CMAKE_DIR=""
+# Verify the cmake config was installed (lib vs lib64 varies by platform/distro).
+SOPLEX_CMAKE_FOUND=0
 for candidate in \
     "${SOPLEX_INSTALL_PREFIX}/lib/cmake/soplex" \
     "${SOPLEX_INSTALL_PREFIX}/lib64/cmake/soplex"; do
     if [[ -f "${candidate}/soplex-config.cmake" ]]; then
-        SOPLEX_CMAKE_DIR="${candidate}"
+        SOPLEX_CMAKE_FOUND=1
         break
     fi
 done
-if [[ -z "$SOPLEX_CMAKE_DIR" ]]; then
+if [[ $SOPLEX_CMAKE_FOUND -eq 0 ]]; then
     die "Could not find soplex-config.cmake under ${SOPLEX_INSTALL_PREFIX}. Installation may be incomplete."
 fi
-soplex_DIR="${SOPLEX_CMAKE_DIR}"
 
-# Persist settings to shell config files
-for RC_FILE in "${HOME}/.profile" "${HOME}/.bashrc"; do
-    if [[ -f "$RC_FILE" ]] || [[ "$RC_FILE" == "${HOME}/.profile" ]]; then
-        # Remove any prior soplex_DIR line and replace with the correct one
-        if grep -q "soplex_DIR" "$RC_FILE" 2>/dev/null; then
-            sed -i "/soplex_DIR/d" "$RC_FILE"
-            sed -i "/lpr_solver=soplex/d" "$RC_FILE"
-        fi
-        printf '\nexport soplex_DIR="%s"\nexport lpr_solver=soplex\n' "${soplex_DIR}" >> "$RC_FILE"
-        echo "  Written to $RC_FILE"
-    fi
-done
-
+# soplex_DIR is the install prefix; CMake's find_package searches lib/cmake and
+# lib64/cmake inside it automatically, so no need to point at the subdir directly.
 echo ""
-echo "To activate in the current shell:"
-echo "  export soplex_DIR=\"${soplex_DIR}\""
-echo "  export lpr_solver=soplex"
+echo "SoPlex ready at ${SOPLEX_INSTALL_PREFIX}"
+echo "Before building Fast Downward, export:"
+echo "  export soplex_DIR=\"${SOPLEX_INSTALL_PREFIX}\""

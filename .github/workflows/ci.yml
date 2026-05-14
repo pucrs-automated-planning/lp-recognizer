@@ -56,7 +56,7 @@ jobs:
 
       - name: Single instance test
         run: |
-          ./test_instance.py -r delta \
+         ./test_instance.py -r delta \
             -e experiments/small-sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2 \
             -S soplex
 
