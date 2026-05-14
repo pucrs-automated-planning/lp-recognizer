@@ -13,7 +13,20 @@
 # get_results.sh.
 
 # ---------------------------------------------------------------------------
+# Slurm directives — must appear before any executable code so that sbatch
+# reads them.  Bash ignores lines beginning with # so they are harmless when
+# the script is run directly.
+# ---------------------------------------------------------------------------
+#SBATCH --job-name=lp-recog-full
+#SBATCH --time=48:00:00
+#SBATCH --mem=16G
+#SBATCH --cpus-per-task=1
+#SBATCH --output=slurm/logs/%j.out
+#SBATCH --error=slurm/logs/%j.err
+
+# ---------------------------------------------------------------------------
 # Self-submit block: only runs when called directly, not inside a Slurm job.
+# Detects the partition via sinfo, then re-submits this script via sbatch.
 # ---------------------------------------------------------------------------
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     PARTITION=""
@@ -42,16 +55,6 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     mkdir -p "$(dirname "${BASH_SOURCE[0]}")/logs"
     exec sbatch --partition="$PARTITION" "${BASH_SOURCE[0]}" "${PASSTHROUGH[@]}"
 fi
-
-# ---------------------------------------------------------------------------
-# Slurm directives — read by sbatch when this script is submitted above.
-# ---------------------------------------------------------------------------
-#SBATCH --job-name=lp-recog-full
-#SBATCH --time=48:00:00
-#SBATCH --mem=16G
-#SBATCH --cpus-per-task=1
-#SBATCH --output=slurm/logs/%j.out
-#SBATCH --error=slurm/logs/%j.err
 
 # ---------------------------------------------------------------------------
 # Job body
