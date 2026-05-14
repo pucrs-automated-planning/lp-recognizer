@@ -59,8 +59,10 @@ fi
 # ---------------------------------------------------------------------------
 # Job body
 # ---------------------------------------------------------------------------
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="$(dirname "$SCRIPT_DIR")"
+# SLURM_SUBMIT_DIR is set by Slurm to wherever sbatch was invoked from.
+# BASH_SOURCE[0] is unusable here — Slurm copies the script to a temp path.
+REPO_DIR="$SLURM_SUBMIT_DIR"
 
 cd "$REPO_DIR/experiments"
-bash get_results.sh -rerun "$@"
+srun bash get_results.sh -rerun "$@"
+wait
