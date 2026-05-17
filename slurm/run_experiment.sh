@@ -45,7 +45,8 @@ OBS=(10 30 50 70 100)
 METHODS_BASE="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
 METHODS_NOISY="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
 
-LP_SOLVER="soplex"   # change to "cplex" if a licence is available on the cluster
+LP_SOLVER="cplex"   # change to "cplex" if a licence is available on the cluster
+# LP_SOLVER="soplex"   # change to "cplex" if a licence is available on the cluster
 
 # ---------------------------------------------------------------------------
 # Paths — derived from SLURM_SUBMIT_DIR (where sbatch was called from).
