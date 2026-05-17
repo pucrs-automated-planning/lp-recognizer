@@ -105,9 +105,7 @@ fi
 # ---------------------------------------------------------------------------
 # Working directory
 #
-# Must be a *sibling* of the repo directory so that the relative path
-# ../fast-downward/ (hardcoded in planner_interface.py) resolves correctly.
-# Each array task gets its own directory to avoid file conflicts.
+# Each array task gets its own isolated directory to avoid file conflicts.
 # ---------------------------------------------------------------------------
 WORK_DIR="$PARENT_DIR/tmp/job_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 mkdir -p "$WORK_DIR"
