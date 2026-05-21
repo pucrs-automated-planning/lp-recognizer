@@ -12,6 +12,7 @@
 #   bash slurm/submit_jobs.sh --fast               # 6 domains only  (120 tasks)
 #   bash slurm/submit_jobs.sh --method delta-cdt   # single method
 #   bash slurm/submit_jobs.sh --array 0-9          # explicit task range (for testing)
+#   bash slurm/submit_jobs.sh --force              # rerun even if output files exist
 
 set -euo pipefail
 
@@ -33,6 +34,7 @@ NOISY_METHODS=(delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2)
 SELECTED_METHODS=()
 SELECTED_DOMAINS=("${ALL_DOMAINS[@]}")
 ARRAY_OVERRIDE=""
+FORCE=""
 EXTRA_SBATCH_ARGS=()
 
 while [[ $# -gt 0 ]]; do
@@ -50,6 +52,10 @@ while [[ $# -gt 0 ]]; do
         --array)
             ARRAY_OVERRIDE="$2"
             shift 2
+            ;;
+        --force)
+            FORCE="--force"
+            shift
             ;;
         *)
             # Pass unknown args straight to sbatch (e.g. --partition, --qos)
@@ -106,5 +112,5 @@ for METHOD in "${SELECTED_METHODS[@]}"; do
         --array="$SPEC" \
         "${EXTRA_SBATCH_ARGS[@]}" \
         "$SCRIPT_DIR/run_experiment.sh" \
-        "$METHOD"
+        "$METHOD" $FORCE
 done

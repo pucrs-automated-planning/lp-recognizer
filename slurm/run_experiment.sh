@@ -55,6 +55,11 @@ if [[ -z "$METHOD" ]]; then
     exit 1
 fi
 
+FORCE=false
+if [[ "${2:-}" == "--force" ]]; then
+    FORCE=true
+fi
+
 if [[ "$METHOD" == *-f2 ]]; then
     TYPES=("${NOISY_TYPES[@]}")
 else
@@ -153,7 +158,7 @@ for EXP_FILE in "${INSTANCES[@]}"; do
     INSTANCE_NAME="$(basename "$EXP_FILE" .tar.bz2)"
     OUT_FILE="$OUT_BASE/$INSTANCE_NAME.output"
 
-    if [[ -f "$OUT_FILE" ]]; then
+    if [[ -f "$OUT_FILE" ]] && ! $FORCE; then
         echo "--- $INSTANCE_NAME  (already done, skipping)"
         continue
     fi

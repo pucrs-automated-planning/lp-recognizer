@@ -6,7 +6,7 @@
 
 A goal recognizer that uses Linear Programming Heuristics from Automated planning to compute most likely goals. If you find this research useful in your research, place cite the following paper:
 
-```
+```bibtex
 @inproceedings{Santos2021,
 author = {Lu\'{i}sa R. de A. Santos and Felipe Meneguzzi and Ramon F. Pereira and Andr\'{e} Pereira},
 title = {{An LP-Based Approach for Goal Recognition as Planning}},
@@ -69,9 +69,10 @@ It is also possible to add parameters in the heuristic name:
 3. Use IP instead of LP by adding ```-i```. Example: ```delta-i-cs``` for IP using only state equation constraints
 
 To run any experiment, just run:
+
 ```bash
 python test_instance.py -r <heuristics> -e <experiment_file>
-``` 
+```
 
 where ```<experiment_file>``` is one of the experiments in your dataset.
 For example, with the experiments we provide here, we could run Sokoban with the hard-constraints strategy as follows:
@@ -96,18 +97,71 @@ For example, to run the sokoban sample using all the heuristics, you need to run
 
 ### Running plan recognition experiments from AAAI paper
 
-In order to run all of the experiments in our paper, you need to run ```get_results.sh``` from the [experiments](experiments) folder, which will run every single domain for all approaches. 
-``` 
+In order to run all of the experiments in our paper, you need to run ```get_results.sh``` from the [experiments](experiments) folder, which will run every single domain for all approaches.
+
+```bash
 cd experiments;./get_results.sh -rerun
 ```
 
-Note that since the dataset is pretty large, this takes a very long time to finish. 
+Note that since the dataset is pretty large, this takes a very long time to finish.
+
+### Running experiments on an HPC cluster (Slurm)
+
+We provide Slurm scripts in the [slurm/](slurm/) directory. These require the [goal-plan-recognition-dataset-lp](https://github.com/pucrs-automated-planning/goal-plan-recognition-dataset-lp) repository to be cloned as a sibling of this repository (i.e. at `../goal-plan-recognition-dataset/`), which `get_datasets.sh` does automatically.
+
+#### Sequential baseline
+
+Submits a single job that runs `get_results.sh -rerun` end-to-end, equivalent to running it locally:
+
+```bash
+bash slurm/run_get_results.sh           # all 12 domains
+bash slurm/run_get_results.sh -fast     # 6-domain subset
+```
+
+The partition is detected automatically from `sinfo`. Override with `--partition <name>` if needed.
+
+#### Parallel array job
+
+Submits one Slurm array job per recognizer method. Each array has 120 tasks (12 domains × 2 dataset types × 5 observability levels), running all instances for one domain/type/observability combination per task. Results accumulate under `slurm-results/` and are safe to resume after interruption — completed instances are skipped automatically.
+
+```bash
+bash slurm/submit_jobs.sh                       # all 8 methods
+bash slurm/submit_jobs.sh --fast                # 6-domain subset
+bash slurm/submit_jobs.sh --method delta-cdt    # single method
+```
+
+Once all jobs finish, collect and regenerate tables:
+
+```bash
+bash slurm/collect_results.sh --check   # verify no missing results
+bash slurm/collect_results.sh           # merge outputs + regenerate tables
+bash slurm/collect_results.sh --latex   # also generate comparison tables and chart data
+```
+
+Tables land in `data-tables/` and `data-charts/`, identical to a local run.
+
+To rerun experiments, clean existing results first with `slurm/clean_results.sh`:
+
+```bash
+bash slurm/clean_results.sh --partial            # remove empty/truncated files (job killed mid-write)
+bash slurm/clean_results.sh --method delta-cdt   # remove all results for one method
+bash slurm/clean_results.sh --domain blocks-world-optimal  # remove all results for one domain-type
+bash slurm/clean_results.sh --all                # remove everything under slurm-results/
+```
+
+Alternatively, pass `--force` to `submit_jobs.sh` to overwrite existing results without deleting them first:
+
+```bash
+bash slurm/submit_jobs.sh --force
+bash slurm/submit_jobs.sh --force --method delta-cdt
+```
 
 ## Commit hacks (changes) to Fast Downward here
 
 We store our changes to Fast Downward in the ```fd-patch.diff``` patch file in this repository. Whenever you change Fast Downward for LP-Recognizer, ensure these changes are stored here by running:
+
 ```bash
 bash make-fd-patch.sh
 git commit -m "Storing patches to Fast Downward" fd-patch.diff fd-patch-rev.txt
 git push
-```  
+```
