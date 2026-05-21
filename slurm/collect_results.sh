@@ -44,9 +44,13 @@ DOMAINS=(
 TYPES=(optimal suboptimal optimal-old-noisy suboptimal-old-noisy)
 
 CHECK_ONLY=false
-if [[ "${1:-}" == "--check" ]]; then
-    CHECK_ONLY=true
-fi
+GEN_LATEX=false
+for arg in "$@"; do
+    case "$arg" in
+        --check) CHECK_ONLY=true ;;
+        --latex) GEN_LATEX=true ;;
+    esac
+done
 
 mkdir -p "$OUTPUTS_DIR"
 
@@ -135,3 +139,16 @@ for DOMAIN in "${DOMAINS[@]}"; do
 done
 
 echo "Done. Tables are in data-tables/ and data-charts/."
+
+if $GEN_LATEX; then
+    echo ""
+    echo "Generating comparison tables..."
+    python3 data_comparison.py delr  "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal
+    python3 data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy
+    echo "Comparison tables are in data-comparison/."
+    echo ""
+    echo "Generating chart data files..."
+    python3 data_charts.py "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" all
+    python3 data_charts.py "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" all
+    echo "Chart data files are in latex-charts/."
+fi
