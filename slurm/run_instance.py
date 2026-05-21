@@ -39,7 +39,11 @@ print(
     f"Total: {recognizer.total_time:.3f}s"
 )
 
-output = do.ProblemOutput(exp_file, recognizer)
+# Store only domain/obs/filename.tar.bz2 so data_output.py path lookups work
+# regardless of where the dataset lives on the filesystem.
+parts = exp_file.replace("\\", "/").split("/")
+problem_name = "/".join(parts[-3:])
+output = do.ProblemOutput(problem_name, recognizer)
 os.makedirs(os.path.dirname(out_file), exist_ok=True)
 with open(out_file, 'w') as f:
     f.write(output.print_content())
