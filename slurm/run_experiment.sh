@@ -106,19 +106,42 @@ if [[ ${#INSTANCES[@]} -eq 0 ]]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Working directory — isolated per task to avoid file conflicts.
+# Local scratch setup
+#
+# /tmp is on the node-local SSD (not beegfs). Copying FD and the instance
+# archives here eliminates the ~40s-per-hypothesis overhead caused by the FD
+# translator launching fresh Python processes that import from beegfs on
+# every hypothesis evaluation.
+#
+# Layout under LOCAL_DIR:
+#   fast-downward/   — local copy of FD; ../fast-downward/ from work/ resolves here
+#   instances/       — local copies of the .tar.bz2 archives for this obs level
+#   work/            — PDDL extraction directory (cleaned between instances)
+#
+# Output files are written back to beegfs (RESULTS_DIR) after each instance
+# so results survive if the job is killed mid-run.
 # ---------------------------------------------------------------------------
-WORK_DIR="$PARENT_DIR/tmp/job_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
-mkdir -p "$WORK_DIR"
-mkdir -p "$SCRIPT_DIR/logs"
+LOCAL_DIR="/tmp/lp_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
+WORK_DIR="$LOCAL_DIR/work"
+mkdir -p "$WORK_DIR" "$SCRIPT_DIR/logs"
 
-trap 'rm -rf "$WORK_DIR"' EXIT
+trap 'rm -rf "$LOCAL_DIR"' EXIT
 
 echo "================================================================"
 echo "Task $SLURM_ARRAY_TASK_ID: $DOMAIN_TYPE  obs=$OBSERVABILITY%  method=$METHOD"
 echo "Instances: ${#INSTANCES[@]}"
-echo "Work dir:  $WORK_DIR"
+echo "Local dir: $LOCAL_DIR"
 echo "================================================================"
+
+# Copy Fast Downward to local storage so translator Python imports are local.
+echo "Copying Fast Downward to local storage..."
+cp -r "$PARENT_DIR/fast-downward" "$LOCAL_DIR/fast-downward"
+
+# Copy all instance archives for this obs level in one shot.
+echo "Copying ${#INSTANCES[@]} instance archives to local storage..."
+LOCAL_INSTANCES_DIR="$LOCAL_DIR/instances"
+mkdir -p "$LOCAL_INSTANCES_DIR"
+cp "${INSTANCES[@]}" "$LOCAL_INSTANCES_DIR/"
 
 # ---------------------------------------------------------------------------
 # Run each instance for this method
@@ -135,10 +158,12 @@ for EXP_FILE in "${INSTANCES[@]}"; do
         continue
     fi
 
+    LOCAL_EXP_FILE="$LOCAL_INSTANCES_DIR/$(basename "$EXP_FILE")"
+
     echo "--- $INSTANCE_NAME"
     cd "$WORK_DIR"
     python3 "$REPO_DIR/slurm/run_instance.py" \
-        "$EXP_FILE" \
+        "$LOCAL_EXP_FILE" \
         "$METHOD" \
         "$OUT_FILE" \
         -S "$LP_SOLVER"
