@@ -171,6 +171,7 @@ for EXP_FILE in "${INSTANCES[@]}"; do
         "$LOCAL_EXP_FILE" \
         "$METHOD" \
         "$OUT_FILE" \
+        "$EXP_FILE" \
         -S "$LP_SOLVER" \
         || echo "WARNING: run_instance.py failed for $INSTANCE_NAME"
 done
