@@ -52,6 +52,8 @@ for arg in "$@"; do
     esac
 done
 
+DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
+
 mkdir -p "$OUTPUTS_DIR"
 
 MISSING=0
@@ -72,7 +74,48 @@ for DOMAIN in "${DOMAINS[@]}"; do
             ALL_PRESENT=true
 
             for OB in "${OBS[@]}"; do
+                DATASET_OB_DIR="$DATASET_DIR/$DOMAIN_TYPE/$OB"
                 OB_DIR="$RESULTS_DIR/$DOMAIN_TYPE/$METHOD/obs$OB"
+
+                # Skip obs levels that have no dataset instances.
+                mapfile -t EXPECTED < <(
+                    find "$DATASET_OB_DIR" -maxdepth 1 -name "*.tar.bz2" \
+                         2>/dev/null | sort
+                )
+                if [[ ${#EXPECTED[@]} -eq 0 ]]; then
+                    continue
+                fi
+
+                if $CHECK_ONLY; then
+                    # Per-instance cross-check: every .tar.bz2 must have a .output
+                    for src in "${EXPECTED[@]}"; do
+                        base="$(basename "$src" .tar.bz2)"
+                        out="$OB_DIR/${base}.output"
+                        if [[ ! -f "$out" ]]; then
+                            echo "MISSING output: $DOMAIN_TYPE/$METHOD/obs$OB/${base}.output"
+                            ALL_PRESENT=false
+                            (( MISSING++ )) || true
+                        elif ! grep -q "^> " "$out"; then
+                            echo "TRUNCATED:      $DOMAIN_TYPE/$METHOD/obs$OB/${base}.output"
+                            ALL_PRESENT=false
+                            (( MISSING++ )) || true
+                        fi
+                    done
+                    # Also flag output files with no matching dataset instance.
+                    if [[ -d "$OB_DIR" ]]; then
+                        mapfile -t ACTUAL < <(find "$OB_DIR" -name "*.output" | sort)
+                        for out in "${ACTUAL[@]}"; do
+                            base="$(basename "$out" .output)"
+                            src="$DATASET_OB_DIR/${base}.tar.bz2"
+                            if [[ ! -f "$src" ]]; then
+                                echo "EXTRA output:   $DOMAIN_TYPE/$METHOD/obs$OB/${base}.output"
+                                (( MISSING++ )) || true
+                            fi
+                        done
+                    fi
+                    continue
+                fi
+
                 if [[ ! -d "$OB_DIR" ]]; then
                     echo "MISSING dir:  $OB_DIR"
                     ALL_PRESENT=false
@@ -91,7 +134,7 @@ for DOMAIN in "${DOMAINS[@]}"; do
             done
 
             if $CHECK_ONLY; then
-                $ALL_PRESENT && echo "OK: $DOMAIN_TYPE / $METHOD"
+                $ALL_PRESENT && echo "OK:             $DOMAIN_TYPE / $METHOD"
                 continue
             fi
 
@@ -106,7 +149,11 @@ done
 
 if $CHECK_ONLY; then
     echo ""
-    echo "Missing output collections: $MISSING"
+    if [[ $MISSING -eq 0 ]]; then
+        echo "All instances accounted for."
+    else
+        echo "Issues found: $MISSING (missing, truncated, or extra output files)"
+    fi
     exit 0
 fi
 
