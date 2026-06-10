@@ -191,7 +191,7 @@ for DOMAIN in "${DOMAINS[@]}"; do
         done
         if $HAVE_ANY; then
             echo "  data_output.py for $DOMAIN_TYPE ..."
-            python3 data_output.py "$METHODS" "$DOMAIN_TYPE"
+            python3 data_output.py "$METHODS" "$DOMAIN_TYPE" -D "$DATASET_DIR"
         fi
     done
 done
@@ -201,12 +201,20 @@ echo "Done. Tables are in data-tables/ and data-charts/."
 if $GEN_LATEX; then
     echo ""
     echo "Generating comparison tables..."
-    python3 data_comparison.py delr  "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal
-    python3 data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy
+    # DELR methods (second paper)
+    #python3 data_comparison.py delr  "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal
+    #python3 data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy
+    # LMC methods (JAIR 2021 paper)
+    python3 data_comparison.py lmc  "$METHODS_BASE" optimal suboptimal
+    python3 data_comparison.py lmcf2 "$METHODS_NOISY" optimal-noisy suboptimal-noisy
     echo "Comparison tables are in data-comparison/."
     echo ""
     echo "Generating chart data files..."
-    python3 data_charts.py "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" all
-    python3 data_charts.py "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" all
+    # DELR methods (second paper)
+    #python3 data_charts.py "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" all
+    #python3 data_charts.py "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" all
+    # LMC methods (JAIR 2021 paper)
+    python3 data_charts.py "$METHODS_BASE" all
+    python3 data_charts.py "$METHODS_NOISY" all
     echo "Chart data files are in latex-charts/."
 fi
