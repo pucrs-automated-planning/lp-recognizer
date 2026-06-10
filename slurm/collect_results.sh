@@ -24,8 +24,13 @@ OUTPUTS_DIR="$REPO_DIR/outputs"
 OBS=(10 30 50 70 100)
 
 # Methods — mirrors get_results.sh
-METHODS_BASE="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
-METHODS_NOISY="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
+# DELR methods (second paper)
+#METHODS_BASE="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
+#METHODS_NOISY="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
+
+# LMC methods (JAIR 2021 paper)
+METHODS_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
+METHODS_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2"
 
 # DOMAINS=(
 #     blocks-world
