@@ -63,7 +63,7 @@ for arg in "$@"; do
 done
 
 # DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
-DATASET_DIR="$PARENT_DIR/metric-goal-plan-recognition-dataset/dataset"
+DATASET_DIR="$(dirname "$REPO_DIR")/metric-goal-plan-recognition-dataset/dataset"
 
 mkdir -p "$OUTPUTS_DIR"
 
