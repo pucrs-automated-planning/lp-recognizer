@@ -49,6 +49,9 @@ def print_table(base_path, domain_name, methods, observabilities):
 	for o in range(len(observabilities)):
 		score = [0] * len(method_outputs)
 		for problem_name in domain_data.data[observabilities[o]].keys():
+			if any(problem_name not in mo.experiments[o].problem_outputs for mo in method_outputs):
+				print(f"WARNING: skipping {problem_name} (missing from one or more method outputs)", file=sys.stderr)
+				continue
 			winning_methods = find_winning_methods(method_outputs, o, problem_name)
 			for i in winning_methods:
 				score[i] += 1
