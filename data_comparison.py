@@ -68,6 +68,12 @@ if __name__ == '__main__':
 		test = True
 		sys.argv.remove('-test')
 		base_path = "experiments/"
+	if '-D' in sys.argv:
+		i = sys.argv.index('-D')
+		base_path = sys.argv[i + 1]
+		if not base_path.endswith('/'):
+			base_path += '/'
+		del sys.argv[i:i + 2]
 	domains = dd.parse_domains(sys.argv[3:], test)
 	name = sys.argv[1]
 	methods = sys.argv[2].split()

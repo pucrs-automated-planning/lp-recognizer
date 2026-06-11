@@ -205,8 +205,8 @@ if $GEN_LATEX; then
     #python3 data_comparison.py delr  "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal
     #python3 data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy
     # LMC methods (JAIR 2021 paper)
-    python3 data_comparison.py lmc  "$METHODS_BASE" optimal suboptimal
-    python3 data_comparison.py lmcf2 "$METHODS_NOISY" optimal-noisy suboptimal-noisy
+    python3 data_comparison.py lmc  "$METHODS_BASE" optimal suboptimal -D "$DATASET_DIR"
+    python3 data_comparison.py lmcf2 "$METHODS_NOISY" optimal-noisy suboptimal-noisy -D "$DATASET_DIR"
     echo "Comparison tables are in data-comparison/."
     echo ""
     echo "Generating chart data files..."
