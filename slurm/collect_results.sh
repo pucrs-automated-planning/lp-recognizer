@@ -215,8 +215,13 @@ if $GEN_LATEX; then
     BASE_DTS=()
     NOISY_DTS=()
     for D in "${DOMAINS[@]}"; do
-        BASE_DTS+=("$D-optimal" "$D-suboptimal")
-        NOISY_DTS+=("$D-optimal-noisy" "$D-suboptimal-noisy")
+        for TYPE in "${TYPES[@]}"; do
+            if [[ "$TYPE" == *noisy* ]]; then
+                NOISY_DTS+=("$D-$TYPE")
+            else
+                BASE_DTS+=("$D-$TYPE")
+            fi
+        done
     done
 
     mkdir -p data-comparison data-charts latex-charts
