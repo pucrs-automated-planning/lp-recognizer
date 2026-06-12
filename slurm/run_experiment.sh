@@ -25,28 +25,36 @@
 # ---------------------------------------------------------------------------
 # Configuration — mirrors experiments/get_results.sh
 # ---------------------------------------------------------------------------
+DOMAINS=(
+    blocks-world
+    depots
+    driverlog
+    dwr
+    easy-ipc-grid
+    ferry
+    logistics
+    miconic
+    rovers
+    satellite
+    sokoban
+    zeno-travel
+)
+## Metric domains
 # DOMAINS=(
-#     blocks-world
 #     depots
 #     driverlog
-#     dwr
-#     easy-ipc-grid
-#     ferry
 #     logistics
-#     miconic
 #     rovers
 #     satellite
 #     sokoban
-#     zeno-travel
+#     zenotravel
 # )
-## Metric domains
-DOMAINS=(
-    depots  driverlog  logistics  rovers  satellite  sokoban  zenotravel
-)
 
 BASE_TYPES=(optimal suboptimal)
-NOISY_TYPES=(optimal-noisy suboptimal-noisy)
-# NOISY_TYPES=(optimal-old-noisy suboptimal-old-noisy)
+## Types for basic
+NOISY_TYPES=(optimal-old-noisy suboptimal-old-noisy)
+## Types for metric 
+# NOISY_TYPES=(optimal-noisy suboptimal-noisy)
 OBS=(10 30 50 70 100)
 
 LP_SOLVER="cplex"
@@ -79,7 +87,8 @@ SCRIPT_DIR="$REPO_DIR/slurm"
 PARENT_DIR="$(dirname "$REPO_DIR")"
 
 # DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset"
-DATASET_DIR="$PARENT_DIR/metric-goal-plan-recognition-dataset/dataset"
+DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset-lp"
+# DATASET_DIR="$PARENT_DIR/metric-goal-plan-recognition-dataset/dataset"
 RESULTS_DIR="$REPO_DIR/slurm-results"
 
 export PYTHONPATH="$REPO_DIR:${PYTHONPATH:-}"

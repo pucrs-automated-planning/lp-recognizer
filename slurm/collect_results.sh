@@ -32,26 +32,36 @@ OBS=(10 30 50 70 100)
 METHODS_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
 METHODS_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2"
 
+# Original Domains
+DOMAINS=(
+    blocks-world
+    depots
+    driverlog
+    dwr
+    easy-ipc-grid
+    ferry
+    logistics
+    miconic
+    rovers
+    satellite
+    sokoban
+    zeno-travel
+)
+## Metric domains
 # DOMAINS=(
-#     blocks-world
 #     depots
 #     driverlog
-#     dwr
-#     easy-ipc-grid
-#     ferry
 #     logistics
-#     miconic
 #     rovers
 #     satellite
 #     sokoban
-#     zeno-travel
+#     zenotravel
 # )
-## Metric domains
-DOMAINS=(
-    depots  driverlog  logistics  rovers  satellite  sokoban  zenotravel
-)
-# TYPES=(optimal suboptimal optimal-old-noisy suboptimal-old-noisy)
-TYPES=(optimal suboptimal optimal-noisy suboptimal-noisy)
+
+# Use the types below for the LP dataset
+TYPES=(optimal suboptimal optimal-old-noisy suboptimal-old-noisy)
+# Use the types below for the metric experiments
+# TYPES=(optimal suboptimal optimal-noisy suboptimal-noisy)
 
 CHECK_ONLY=false
 GEN_LATEX=false
@@ -63,7 +73,8 @@ for arg in "$@"; do
 done
 
 # DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
-DATASET_DIR="$(dirname "$REPO_DIR")/metric-goal-plan-recognition-dataset/dataset"
+DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset-lp"
+# DATASET_DIR="$(dirname "$REPO_DIR")/metric-goal-plan-recognition-dataset/dataset"
 
 mkdir -p "$OUTPUTS_DIR"
 
