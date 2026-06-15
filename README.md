@@ -78,7 +78,7 @@ where ```<experiment_file>``` is one of the experiments in your dataset.
 For example, with the experiments we provide here, we could run Sokoban with the hard-constraints strategy as follows:
 
 ```bash
-./test_instance.py -r deltac -e experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2
+./test_instance.py -r delta -e experiments/small-sokoban-optimal/10/sokoban_p01_hyp-1_10_1.tar.bz2
 ```
 
 ### Running plan recognition in a set of experiments
