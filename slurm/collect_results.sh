@@ -24,13 +24,9 @@ OUTPUTS_DIR="$REPO_DIR/outputs"
 OBS=(10 30 50 70 100)
 
 # Methods — mirrors get_results.sh
-# DELR methods (second paper)
-#METHODS_BASE="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
-#METHODS_NOISY="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
-
-# LMC methods (JAIR 2021 paper)
-METHODS_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
-METHODS_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2"
+# AAAI 2021 paper — LMC methods + JAIR paper — DELR methods
+METHODS_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1 delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
+METHODS_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2 delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
 
 # Original Domains
 DOMAINS=(
@@ -72,8 +68,17 @@ for arg in "$@"; do
     esac
 done
 
-# DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
-DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset-lp"
+# Three dataset options (all cloned as siblings of this repo):
+#   goal-plan-recognition-dataset     — pucrs-automated-planning/goal-plan-recognition-dataset-lp
+#                                       cloned under this name by get_datasets.sh; LP dataset
+#                                       with reference solution sets; use for AAAI/JAIR experiments
+#   goal-plan-recognition-dataset-lp  — same repo cloned under its own name, if you want
+#                                       to keep it alongside the original AIJ dataset
+#                                       (pucrs-automated-planning/goal-plan-recognition-dataset,
+#                                       which lacks reference solution sets)
+#   metric-goal-plan-recognition-dataset/dataset — meneguzzi-lab/metric-goal-plan-recognition-dataset
+DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
+# DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset-lp"
 # DATASET_DIR="$(dirname "$REPO_DIR")/metric-goal-plan-recognition-dataset/dataset"
 
 mkdir -p "$OUTPUTS_DIR"
@@ -227,22 +232,27 @@ if $GEN_LATEX; then
     mkdir -p data-comparison data-charts latex-charts
 
     echo ""
+    LMC_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
+    LMC_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2"
+    DELR_BASE="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
+    DELR_NOISY="delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
+
     echo "Generating comparison tables..."
-    # DELR methods (second paper)
-    #python3 data_comparison.py delr  "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" optimal suboptimal
-    #python3 data_comparison.py delrf2 "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" optimal-old-noisy suboptimal-old-noisy
-    # LMC methods (JAIR 2021 paper)
-    python3 data_comparison.py lmc   "$METHODS_BASE"  "${BASE_DTS[@]}"  -D "$DATASET_DIR"
-    python3 data_comparison.py lmcf2 "$METHODS_NOISY" "${NOISY_DTS[@]}" -D "$DATASET_DIR"
+    # AAAI 2021 paper — LMC methods
+    python3 data_comparison.py lmc   "$LMC_BASE"   "${BASE_DTS[@]}"  -D "$DATASET_DIR"
+    python3 data_comparison.py lmcf2 "$LMC_NOISY"  "${NOISY_DTS[@]}" -D "$DATASET_DIR"
+    # JAIR paper — DELR methods
+    python3 data_comparison.py delr   "$DELR_BASE"  "${BASE_DTS[@]}"  -D "$DATASET_DIR"
+    python3 data_comparison.py delrf2 "$DELR_NOISY" "${NOISY_DTS[@]}" -D "$DATASET_DIR"
     echo "Comparison tables are in data-comparison/."
 
     echo ""
     echo "Generating chart data files..."
-    # DELR methods (second paper)
-    #python3 data_charts.py "delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5" all
-    #python3 data_charts.py "delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2" all
-    # LMC methods (JAIR 2021 paper)
-    python3 data_charts.py "$METHODS_BASE"  "${BASE_DTS[@]}"  -D "$DATASET_DIR"
-    python3 data_charts.py "$METHODS_NOISY" "${NOISY_DTS[@]}" -D "$DATASET_DIR"
+    # AAAI 2021 paper — LMC methods
+    python3 data_charts.py "$LMC_BASE"   "${BASE_DTS[@]}"  -D "$DATASET_DIR"
+    python3 data_charts.py "$LMC_NOISY"  "${NOISY_DTS[@]}" -D "$DATASET_DIR"
+    # JAIR paper — DELR methods
+    python3 data_charts.py "$DELR_BASE"  "${BASE_DTS[@]}"  -D "$DATASET_DIR"
+    python3 data_charts.py "$DELR_NOISY" "${NOISY_DTS[@]}" -D "$DATASET_DIR"
     echo "Chart data files are in latex-charts/."
 fi

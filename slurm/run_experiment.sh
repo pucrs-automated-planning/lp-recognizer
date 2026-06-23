@@ -86,8 +86,17 @@ REPO_DIR="$SLURM_SUBMIT_DIR"
 SCRIPT_DIR="$REPO_DIR/slurm"
 PARENT_DIR="$(dirname "$REPO_DIR")"
 
-# DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset"
-DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset-lp"
+# Three dataset options (all cloned as siblings of this repo):
+#   goal-plan-recognition-dataset     — pucrs-automated-planning/goal-plan-recognition-dataset-lp
+#                                       cloned under this name by get_datasets.sh; LP dataset
+#                                       with reference solution sets; use for AAAI/JAIR experiments
+#   goal-plan-recognition-dataset-lp  — same repo cloned under its own name, if you want
+#                                       to keep it alongside the original AIJ dataset
+#                                       (pucrs-automated-planning/goal-plan-recognition-dataset,
+#                                       which lacks reference solution sets)
+#   metric-goal-plan-recognition-dataset/dataset — meneguzzi-lab/metric-goal-plan-recognition-dataset
+DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset"
+# DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset-lp"
 # DATASET_DIR="$PARENT_DIR/metric-goal-plan-recognition-dataset/dataset"
 RESULTS_DIR="$REPO_DIR/slurm-results"
 

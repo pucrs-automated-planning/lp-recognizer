@@ -25,13 +25,11 @@ FAST_DOMAINS=(blocks-world depots driverlog dwr rovers sokoban)
 ALL_DOMAINS=(blocks-world depots driverlog dwr easy-ipc-grid ferry
              logistics miconic rovers satellite sokoban zeno-travel)
 
-# DELR methods (second paper)
-#BASE_METHODS=(delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5)
-#NOISY_METHODS=(delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2)
-
-# LMC methods (JAIR 2021 paper)
-BASE_METHODS=(delta-cl delta-o-cl delta-o-cl3 delta-o-cl1)
-NOISY_METHODS=(delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2)
+# AAAI 2021 paper — LMC methods + JAIR paper — DELR methods
+BASE_METHODS=(delta-cl delta-o-cl delta-o-cl3 delta-o-cl1
+              delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5)
+NOISY_METHODS=(delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2
+               delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2)
 
 # ---------------------------------------------------------------------------
 # Parse arguments

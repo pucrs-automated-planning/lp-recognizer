@@ -148,7 +148,14 @@ if [[ "$TEST" == "-test" ]]; then
 	METHODS="$TEST_METHODS"
 	get_results optimal
 else
-	#METHODS="$LMC $DELR $FLOW"
+	# AAAI 2021 paper — LMC methods
+	METHODS="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1"
+	get_results optimal
+	get_results suboptimal
+	METHODS="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2"
+	get_results optimal-old-noisy
+	get_results suboptimal-old-noisy
+	# JAIR paper — DELR methods
 	METHODS="delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
 	get_results optimal
 	get_results suboptimal
