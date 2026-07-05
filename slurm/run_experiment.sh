@@ -3,12 +3,15 @@
 # Slurm array job: one task per (domain × dataset-type × observability) for
 # a single recognizer method.
 #
-# Array layout (120 tasks per method):
-#   12 domains × 2 dataset types × 5 observability levels
+# Array layout (N_domains × 2 dataset types × 5 observability levels):
+#   lp dataset     — 12 domains → 120 tasks per method
+#   metric dataset —  7 domains →  70 tasks per method
 #   Base methods  run on: optimal, suboptimal
-#   Noisy methods run on: optimal-old-noisy, suboptimal-old-noisy
+#   Noisy methods run on the dataset's noisy types (old-noisy for lp, noisy for
+#   metric — see slurm/dataset_config.sh).
 #
-# Submit via submit_jobs.sh (preferred) or directly:
+# Submit via submit_jobs.sh (preferred; it computes the correct array range for
+# the selected dataset) or directly, e.g. for the 12-domain lp dataset:
 #   sbatch --array=0-119 slurm/run_experiment.sh delta-cdt
 #
 # Adjust the #SBATCH directives and the Configuration section below to match
@@ -24,37 +27,15 @@
 
 # ---------------------------------------------------------------------------
 # Configuration — mirrors experiments/get_results.sh
+#
+# The dataset selection (DOMAINS, BASE_TYPES, NOISY_TYPES, DATASET_DIR) is
+# centralised in slurm/dataset_config.sh. Choose the dataset with the DATASET
+# environment variable (passed through to the job by submit_jobs.sh / sbatch):
+#   DATASET=lp      (default) LP dataset — AAAI/JAIR experiments
+#   DATASET=metric  metric goal/plan recognition dataset
 # ---------------------------------------------------------------------------
-DOMAINS=(
-    blocks-world
-    depots
-    driverlog
-    dwr
-    easy-ipc-grid
-    ferry
-    logistics
-    miconic
-    rovers
-    satellite
-    sokoban
-    zeno-travel
-)
-## Metric domains
-# DOMAINS=(
-#     depots
-#     driverlog
-#     logistics
-#     rovers
-#     satellite
-#     sokoban
-#     zenotravel
-# )
+source "$(dirname "${BASH_SOURCE[0]}")/dataset_config.sh" || exit 1
 
-BASE_TYPES=(optimal suboptimal)
-## Types for basic
-NOISY_TYPES=(optimal-old-noisy suboptimal-old-noisy)
-## Types for metric 
-# NOISY_TYPES=(optimal-noisy suboptimal-noisy)
 OBS=(10 30 50 70 100)
 
 LP_SOLVER="cplex"
@@ -86,18 +67,10 @@ REPO_DIR="$SLURM_SUBMIT_DIR"
 SCRIPT_DIR="$REPO_DIR/slurm"
 PARENT_DIR="$(dirname "$REPO_DIR")"
 
-# Three dataset options (all cloned as siblings of this repo):
-#   goal-plan-recognition-dataset     — pucrs-automated-planning/goal-plan-recognition-dataset-lp
-#                                       cloned under this name by get_datasets.sh; LP dataset
-#                                       with reference solution sets; use for AAAI/JAIR experiments
-#   goal-plan-recognition-dataset-lp  — same repo cloned under its own name, if you want
-#                                       to keep it alongside the original AIJ dataset
-#                                       (pucrs-automated-planning/goal-plan-recognition-dataset,
-#                                       which lacks reference solution sets)
-#   metric-goal-plan-recognition-dataset/dataset — meneguzzi-lab/metric-goal-plan-recognition-dataset
-DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset"
-# DATASET_DIR="$PARENT_DIR/goal-plan-recognition-dataset-lp"
-# DATASET_DIR="$PARENT_DIR/metric-goal-plan-recognition-dataset/dataset"
+# DATASET_DIR is set by dataset_config.sh (sourced above) based on $DATASET;
+# override it with the DATASET_DIR env var if your dataset lives outside the
+# default sibling path (e.g. the alternative goal-plan-recognition-dataset-lp
+# clone that lacks reference solution sets).
 RESULTS_DIR="$REPO_DIR/slurm-results"
 
 export PYTHONPATH="$REPO_DIR:${PYTHONPATH:-}"

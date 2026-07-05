@@ -28,36 +28,13 @@ OBS=(10 30 50 70 100)
 METHODS_BASE="delta-cl delta-o-cl delta-o-cl3 delta-o-cl1 delta-cdt delta-o-cdto delta-o-cdtb5 delta-o1-cdtb5"
 METHODS_NOISY="delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2 delta-cdt-f2 delta-o-cdto-f2 delta-o-cdtb5-f2 delta-o1-cdtb5-f2"
 
-# Original Domains
-DOMAINS=(
-    blocks-world
-    depots
-    driverlog
-    dwr
-    easy-ipc-grid
-    ferry
-    logistics
-    miconic
-    rovers
-    satellite
-    sokoban
-    zeno-travel
-)
-## Metric domains
-# DOMAINS=(
-#     depots
-#     driverlog
-#     logistics
-#     rovers
-#     satellite
-#     sokoban
-#     zenotravel
-# )
+# Dataset selection (DOMAINS, BASE_TYPES, NOISY_TYPES, DATASET_DIR) comes from
+# dataset_config.sh — the same source the run/submit scripts use. Choose the
+# dataset with the DATASET env var (lp|metric); defaults to lp.
+source "$SCRIPT_DIR/dataset_config.sh" || exit 1
 
-# Use the types below for the LP dataset
-TYPES=(optimal suboptimal optimal-old-noisy suboptimal-old-noisy)
-# Use the types below for the metric experiments
-# TYPES=(optimal suboptimal optimal-noisy suboptimal-noisy)
+# Types processed here are the base types followed by the noisy types.
+TYPES=("${BASE_TYPES[@]}" "${NOISY_TYPES[@]}")
 
 CHECK_ONLY=false
 GEN_LATEX=false
@@ -68,18 +45,10 @@ for arg in "$@"; do
     esac
 done
 
-# Three dataset options (all cloned as siblings of this repo):
-#   goal-plan-recognition-dataset     — pucrs-automated-planning/goal-plan-recognition-dataset-lp
-#                                       cloned under this name by get_datasets.sh; LP dataset
-#                                       with reference solution sets; use for AAAI/JAIR experiments
-#   goal-plan-recognition-dataset-lp  — same repo cloned under its own name, if you want
-#                                       to keep it alongside the original AIJ dataset
-#                                       (pucrs-automated-planning/goal-plan-recognition-dataset,
-#                                       which lacks reference solution sets)
-#   metric-goal-plan-recognition-dataset/dataset — meneguzzi-lab/metric-goal-plan-recognition-dataset
-DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset"
-# DATASET_DIR="$(dirname "$REPO_DIR")/goal-plan-recognition-dataset-lp"
-# DATASET_DIR="$(dirname "$REPO_DIR")/metric-goal-plan-recognition-dataset/dataset"
+# DATASET_DIR is set by dataset_config.sh (sourced above) based on $DATASET;
+# override it with the DATASET_DIR env var if your dataset lives outside the
+# default sibling path (e.g. the alternative goal-plan-recognition-dataset-lp
+# clone that lacks reference solution sets).
 
 mkdir -p "$OUTPUTS_DIR"
 

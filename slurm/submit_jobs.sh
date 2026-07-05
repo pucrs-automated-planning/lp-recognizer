@@ -18,12 +18,13 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Domains used by --fast mode (mirrors get_results.sh -fast)
-FAST_DOMAINS=(blocks-world depots driverlog dwr rovers sokoban)
+# Dataset selection (DOMAINS + FAST_DOMAINS) comes from dataset_config.sh, the
+# same source run_experiment.sh uses — so the array index math below stays in
+# sync with the domain order the job decodes. Choose with DATASET (lp|metric).
+source "$SCRIPT_DIR/dataset_config.sh" || exit 1
 
-# All domains — order must match DOMAINS in run_experiment.sh.
-ALL_DOMAINS=(blocks-world depots driverlog dwr easy-ipc-grid ferry
-             logistics miconic rovers satellite sokoban zeno-travel)
+# All domains — order must match DOMAINS in run_experiment.sh (same source).
+ALL_DOMAINS=("${DOMAINS[@]}")
 
 # AAAI 2021 paper — LMC methods + JAIR paper — DELR methods
 BASE_METHODS=(delta-cl delta-o-cl delta-o-cl3 delta-o-cl1
@@ -109,9 +110,9 @@ mkdir -p "$SCRIPT_DIR/logs"
 
 for METHOD in "${SELECTED_METHODS[@]}"; do
     SPEC="${ARRAY_OVERRIDE:-$ARRAY_SPEC}"
-    echo "Submitting lp-${METHOD}  array=${SPEC}"
+    echo "Submitting ${DATASET}-${METHOD}  array=${SPEC}"
     sbatch \
-        --job-name="lp-${METHOD}" \
+        --job-name="${DATASET}-${METHOD}" \
         --array="$SPEC" \
         "${EXTRA_SBATCH_ARGS[@]}" \
         "$SCRIPT_DIR/run_experiment.sh" \
