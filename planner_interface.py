@@ -2,7 +2,7 @@
 import sys, os, csv, time, math
 import benchmark
 
-fd_path = "../fast-downward/"
+fd_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../fast-downward") + "/"
 
 
 def custom_partition(s, sep):

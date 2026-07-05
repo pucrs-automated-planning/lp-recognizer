@@ -7,8 +7,10 @@ from plan_recognizer_factory import PlanRecognizerFactory
 from const_plan_recognizer import *
 from delta_plan_recognizer import *
 
+
 class TestPlanRecognizer(unittest.TestCase):
     SOLVER = "cplex"
+    # SOLVER = "soplex"
 
     def setUp(self):
         options = Program_Options(["-e", "experiments/example/example.tar.bz2", "-S", TestPlanRecognizer.SOLVER])
@@ -39,6 +41,8 @@ class TestPlanRecognizer(unittest.TestCase):
         self.assertEqual(recognizer.__class__, LPRecognizerDeltaHC)
         self.assertEqual(len(recognizer.options.heuristics), 4)
 
+    @unittest.skipIf(os.environ.get('lpr_solver', 'soplex') != 'cplex',
+                     "flow_constraints(systematic(2)) requires CPLEX; SoPlex returns SEARCH_UNSUPPORTED")
     def test_h_flow(self):
         print("\nTesting hvalue with flow")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))", "-S", TestPlanRecognizer.SOLVER]
@@ -49,6 +53,8 @@ class TestPlanRecognizer(unittest.TestCase):
         if recognizer.unique_goal is None:
             self.fail("All hypotheses failed.")
 
+    @unittest.skipIf(os.environ.get('lpr_solver', 'soplex') != 'cplex',
+                     "flow_constraints(systematic(2)) requires CPLEX; SoPlex returns SEARCH_UNSUPPORTED")
     def test_h_flow_obs(self):
         print("\nTesting delta with flow")
         args = ["-e", "experiments/example/example.tar.bz2", "-H", "flow_constraints(systematic(2))", "-S", TestPlanRecognizer.SOLVER]

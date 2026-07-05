@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y cmake g++-9 git make python3 zlib1g-dev libgmp3-dev bzip2
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 90
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
+
+      - name: Set SoPlex environment
+        run: |
+          echo "soplex_DIR=$HOME/.local/soplex" >> "$GITHUB_ENV"
+          echo "lpr_solver=soplex" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$HOME/.local/soplex/lib:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
+
+      - name: Cache SoPlex
+        id: cache-soplex
+        uses: actions/cache@v5
+        with:
+          path: ~/.local/soplex
+          key: soplex-release-604-gcc9-${{ runner.os }}
+
+      - name: Install SoPlex
+        if: steps.cache-soplex.outputs.cache-hit != 'true'
+        run: bash install-soplex.sh
+
+      - name: Cache Fast Downward
+        id: cache-fd
+        uses: actions/cache@v5
+        with:
+          path: ${{ github.workspace }}/../fast-downward
+          key: fd-${{ hashFiles('fd-patch-rev', 'fd-patch.diff') }}-gcc9-${{ runner.os }}
+
+      - name: Prepare Fast Downward
+        if: steps.cache-fd.outputs.cache-hit != 'true'
+        run: bash prepare-fd.sh
+
+      - name: Make scripts executable
+        run: chmod +x *.py
+
+      - name: Unit tests
+        run: ./test_units.py
+
+      - name: Single instance test
+        run: |
+         ./test_instance.py -r delta \
+            -e experiments/small-sokoban-optimal/50/sokoban_p01_hyp-1_50_1.tar.bz2 \
+            -S soplex
+
+      - name: Domain tests
+        run: |
+          ./test_domain.py "experiments/" small-sokoban-optimal \
+            "delta delta-cl delta-o-cl1" -S soplex
+
+      - name: Data analysis tests
+        run: |
+          ./data_domain.py small-sokoban-optimal -test
+          ./data_output.py "delta-cl delta-o-cl1" small-sokoban-optimal -test
+          ./data_charts.py lm small-sokoban-optimal -stats -scatter -sums -test
+          ./data_comparison.py lm "delta-cl delta-o-cl1" optimal -test

@@ -478,18 +478,29 @@ if __name__ == '__main__' :
 		VER = 2
 	if '-fast' in sys.argv:
 		domains = [
-		'blocks-world-optimal', 
-		'depots-optimal', 
-		'driverlog-optimal', 
-		'dwr-optimal', 
-		'rovers-optimal', 
+		'blocks-world-optimal',
+		'depots-optimal',
+		'driverlog-optimal',
+		'dwr-optimal',
+		'rovers-optimal',
 		'sokoban-optimal'
+		]
+	if '-metric' in sys.argv:
+		domains = [
+		'depots-optimal',
+		'driverlog-optimal',
+		'logistics-optimal',
+		'rovers-optimal',
+		'satellite-optimal',
+		'sokoban-optimal',
+		'zenotravel-optimal'
 		]
 
 	# Data set type.
 	file = sys.argv[1]
+	noisy_suffix = "old-noisy" if '-metric' not in sys.argv else "noisy"
 	if 'noisy' in file:
-		domains = [name.replace("optimal", "optimal-old-noisy") for name in domains]
+		domains = [name.replace("optimal", "optimal-" + noisy_suffix) for name in domains]
 	if 'sub' in file:
 		domains = [name.replace("optimal", "suboptimal") for name in domains]
 
