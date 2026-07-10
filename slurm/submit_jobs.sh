@@ -2,14 +2,15 @@
 #
 # Submit one Slurm array job per recognizer method.
 #
-# Each method gets its own 120-task array (12 domains × 2 types × 5 obs)
-# and a meaningful job name (e.g. lp-delta-cdt).
+# Each method gets its own array (N_domains × 2 types × 5 obs) and a job name
+# tagged with the dataset and method (e.g. lp-delta-cdt, metric-delta-cdt).
 # Base methods  run on: optimal, suboptimal
-# Noisy methods run on: optimal-old-noisy, suboptimal-old-noisy
+# Noisy methods run on the selected dataset's noisy types (see dataset_config.sh).
 #
 # Usage (from repository root):
-#   bash slurm/submit_jobs.sh                      # all 8 methods
-#   bash slurm/submit_jobs.sh --fast               # 6 domains only  (120 tasks)
+#   bash slurm/submit_jobs.sh                      # all 8 methods, lp dataset
+#   bash slurm/submit_jobs.sh --dataset metric     # all 8 methods, metric dataset
+#   bash slurm/submit_jobs.sh --fast               # fast-domain subset only
 #   bash slurm/submit_jobs.sh --method delta-cdt   # single method
 #   bash slurm/submit_jobs.sh --array 0-9          # explicit task range (for testing)
 #   bash slurm/submit_jobs.sh --force              # rerun even if output files exist
@@ -17,13 +18,6 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Domains used by --fast mode (mirrors get_results.sh -fast)
-FAST_DOMAINS=(blocks-world depots driverlog dwr rovers sokoban)
-
-# All domains — order must match DOMAINS in run_experiment.sh.
-ALL_DOMAINS=(blocks-world depots driverlog dwr easy-ipc-grid ferry
-             logistics miconic rovers satellite sokoban zeno-travel)
 
 # AAAI 2021 paper — LMC methods + JAIR paper — DELR methods
 BASE_METHODS=(delta-cl delta-o-cl delta-o-cl3 delta-o-cl1
@@ -35,18 +29,21 @@ NOISY_METHODS=(delta-cl-f2 delta-o-cl-f2 delta-o-cl3-f2 delta-o-cl1-f2
 # Parse arguments
 # ---------------------------------------------------------------------------
 SELECTED_METHODS=()
-SELECTED_DOMAINS=("${ALL_DOMAINS[@]}")
+USE_FAST=false
 ARRAY_OVERRIDE=""
 FORCE=""
 EXTRA_SBATCH_ARGS=()
+DATASET="${DATASET:-lp}"
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --fast)
-            # Compute which task indices correspond to the 6 fast domains.
-            # The full domain list order must match DOMAINS in run_experiment.sh.
-            SELECTED_DOMAINS=("${FAST_DOMAINS[@]}")
+            USE_FAST=true
             shift
+            ;;
+        --dataset)
+            DATASET="$2"
+            shift 2
             ;;
         --method)
             SELECTED_METHODS=("$2")
@@ -67,6 +64,22 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# Dataset selection (DOMAINS + FAST_DOMAINS) comes from dataset_config.sh, the
+# same source run_experiment.sh uses — so the array index math below stays in
+# sync with the domain order the job decodes. Sourced after arg parsing so
+# --dataset takes effect.
+source "$SCRIPT_DIR/dataset_config.sh" || exit 1
+
+# All domains — order must match DOMAINS in run_experiment.sh (same source).
+ALL_DOMAINS=("${DOMAINS[@]}")
+
+# Resolve the domain subset now that the dataset (and its FAST_DOMAINS) is known.
+if $USE_FAST; then
+    SELECTED_DOMAINS=("${FAST_DOMAINS[@]}")
+else
+    SELECTED_DOMAINS=("${ALL_DOMAINS[@]}")
+fi
 
 # Default to all methods if --method was not given
 if [[ ${#SELECTED_METHODS[@]} -eq 0 ]]; then
@@ -109,11 +122,11 @@ mkdir -p "$SCRIPT_DIR/logs"
 
 for METHOD in "${SELECTED_METHODS[@]}"; do
     SPEC="${ARRAY_OVERRIDE:-$ARRAY_SPEC}"
-    echo "Submitting lp-${METHOD}  array=${SPEC}"
+    echo "Submitting ${DATASET}-${METHOD}  array=${SPEC}"
     sbatch \
-        --job-name="lp-${METHOD}" \
+        --job-name="${DATASET}-${METHOD}" \
         --array="$SPEC" \
         "${EXTRA_SBATCH_ARGS[@]}" \
         "$SCRIPT_DIR/run_experiment.sh" \
-        "$METHOD" $FORCE
+        "$METHOD" $FORCE --dataset "$DATASET"
 done
