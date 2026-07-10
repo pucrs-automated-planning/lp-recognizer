@@ -13,6 +13,8 @@
 # Submit via submit_jobs.sh (preferred; it computes the correct array range for
 # the selected dataset) or directly, e.g. for the 12-domain lp dataset:
 #   sbatch --array=0-119 slurm/run_experiment.sh delta-cdt
+# or for the 7-domain metric dataset:
+#   sbatch --array=0-69 slurm/run_experiment.sh delta-cdt --dataset metric
 #
 # Adjust the #SBATCH directives and the Configuration section below to match
 # your cluster before submitting.
@@ -26,33 +28,42 @@
 #SBATCH --error=slurm/logs/%A_%a.err
 
 # ---------------------------------------------------------------------------
-# Configuration — mirrors experiments/get_results.sh
-#
-# The dataset selection (DOMAINS, BASE_TYPES, NOISY_TYPES, DATASET_DIR) is
-# centralised in slurm/dataset_config.sh. Choose the dataset with the DATASET
-# environment variable (passed through to the job by submit_jobs.sh / sbatch):
-#   DATASET=lp      (default) LP dataset — AAAI/JAIR experiments
-#   DATASET=metric  metric goal/plan recognition dataset
-# ---------------------------------------------------------------------------
-source "$(dirname "${BASH_SOURCE[0]}")/dataset_config.sh" || exit 1
-
-OBS=(10 30 50 70 100)
-
-LP_SOLVER="cplex"
-
-# ---------------------------------------------------------------------------
-# Method — passed as positional arg by submit_jobs.sh.
+# Arguments
+#   $1                 recognizer method (required; passed by submit_jobs.sh)
+#   --force            rerun instances even if an output file already exists
+#   --dataset <name>   dataset to run against (lp|metric); overrides $DATASET.
+#                      submit_jobs.sh forwards this to the job via --export.
 # ---------------------------------------------------------------------------
 METHOD="${1:-}"
 if [[ -z "$METHOD" ]]; then
     echo "ERROR: no method specified. Pass method name as first argument." >&2
     exit 1
 fi
+shift
 
 FORCE=false
-if [[ "${2:-}" == "--force" ]]; then
-    FORCE=true
-fi
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --force)   FORCE=true; shift ;;
+        --dataset) DATASET="$2"; shift 2 ;;
+        *)         echo "WARNING: ignoring unknown argument '$1'" >&2; shift ;;
+    esac
+done
+
+OBS=(10 30 50 70 100)
+
+LP_SOLVER="cplex"
+
+# ---------------------------------------------------------------------------
+# Configuration — mirrors experiments/get_results.sh
+#
+# The dataset selection (DOMAINS, BASE_TYPES, NOISY_TYPES, DATASET_DIR) is
+# centralised in slurm/dataset_config.sh. Choose the dataset with --dataset
+# (above) or the DATASET environment variable; defaults to lp:
+#   lp      LP dataset — AAAI/JAIR experiments
+#   metric  metric goal/plan recognition dataset
+# ---------------------------------------------------------------------------
+source "$(dirname "${BASH_SOURCE[0]}")/dataset_config.sh" || exit 1
 
 if [[ "$METHOD" == *-f2 ]]; then
     TYPES=("${NOISY_TYPES[@]}")
