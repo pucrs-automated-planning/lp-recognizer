@@ -9,6 +9,9 @@ def usage():
     print("-m  --max-memory <time>          Maximum allowed memory consumption (defaults to 1Gb)", file=sys.stderr)
     print("-H  --heuristics                 Fast Downward search heuristics as a comma-separated string:\nExample: -H lmcut_constraints(), pho_constraints(), state_equation_constraints()", file=sys.stderr)
     print("-r  --recognizer-name            Plan recognition name", file=sys.stderr)
+    print("-o  --h-obs                      Put observations inside the heuristic constraints.\n"
+          "Bare -o selects 1 (as a set); --h-obs=<N> selects the level explicitly:\n"
+          "0 none, 1 as a set, 2 soft observation order, 3 hard observation order", file=sys.stderr)
 class Program_Options:
 
     def __init__(self, args):
@@ -24,7 +27,7 @@ class Program_Options:
                                         "theta=",
                                         "filter=",
                                         "heuristics=",
-                                        "h-obs",
+                                        "h-obs=",
                                         "solver=",
                                         "mip"])
         except getopt.GetoptError:
@@ -106,9 +109,22 @@ class Program_Options:
                 self.heuristics = list(oparg.split(","))
                 print("LIST OF HEURISTICS: "+oparg)
                 print(self.heuristics)
-            if opcode in ('-o', '--h-obs'):
+            if opcode == '-o':
                 self.h_obs = 1
                 print("Enable observations inside heuristic constraints!")
+            if opcode == '--h-obs':
+                # The constraint generators understand four levels (see
+                # OBS_NONE..OBS_HARD_ORDER in constraint_generator.h); bare -o
+                # only ever selects 1, so the stronger ones need a value.
+                try:
+                    self.h_obs = int(oparg)
+                except ValueError:
+                    print("Observation level must be an integer", file=sys.stderr)
+                    sys.exit(1)
+                if not 0 <= self.h_obs <= 3:
+                    print("Observation level must be between 0 and 3", file=sys.stderr)
+                    sys.exit(1)
+                print("Observations inside heuristic constraints, level %d" % self.h_obs)
             if opcode in ('-S', '--solver'):
                 self.solver = oparg
                 print("Using LP solver: " + oparg)

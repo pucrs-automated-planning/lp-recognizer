@@ -1696,7 +1696,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc
 --- fast-downward-original/src/search/operator_counting/oc_single_shot_heuristic.cc	1969-12-31 21:00:00.000000000 -0300
 +++ fast-downward/src/search/operator_counting/oc_single_shot_heuristic.cc	2024-02-24 20:05:13.723572500 -0300
-@@ -0,0 +1,497 @@
+@@ -0,0 +1,501 @@
 +#include "oc_single_shot_heuristic.h"
 +
 +#include "constraint_generator.h"
@@ -1707,6 +1707,7 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +
 +#include <cmath>
 +#include <fstream>
++#include <limits>
 +#include <algorithm>
 +#include <cctype>
 +#include <locale>
@@ -1954,7 +1955,10 @@ diff -X lp-recognizer/fd-patch.ignore -ruN fast-downward-original/src/search/ope
 +int OCSingleShotHeuristic::compute_heuristic(const State &state) {
 +    // Results
 +    double result, result_c, result_s;
-+    result = result_c = result_s = 0 / 0;
++    // Integer 0 / 0 is undefined behaviour and yields 0.0 rather than NaN on
++    // at least clang and gcc, so an LP with no optimal solution reported a
++    // heuristic value of 0 and slipped past the NaN check in Hypothesis.evaluate.
++    result = result_c = result_s = std::numeric_limits<double>::quiet_NaN();
 +
 +    // Constraints
 +    double infinity = lp_h.get_infinity();

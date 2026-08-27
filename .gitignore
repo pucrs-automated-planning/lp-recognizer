@@ -141,3 +141,5 @@ outputs/small-sokoban*
 /*.dat
 2021/
 tmp
+# Plan extraction output
+plan-output/
