@@ -117,6 +117,108 @@ For example, to run the sokoban sample using all the heuristics, you need to run
 ./test_domain.py "experiments/" small-sokoban-optimal "delta deltau delta-f2"
 ```
 
+### Extracting a plan consistent with the observations
+
+The recognizers above answer *which goal*. `extract_plan.py` answers *which plan*: given a
+domain, an initial state, a **known** goal and a partial observation sequence, it returns a plan
+that is executable from the initial state, achieves the goal, and contains the observations as an
+ordered subsequence. Any plan meeting those conditions is acceptable; it need not be the plan the
+observations were drawn from. The observability percentage is never used — only `obs.dat` is read.
+
+```bash
+./extract_plan.py -e experiments/example/example.tar.bz2
+./extract_plan.py -e <experiment.tar.bz2> -o 1 --json result.json
+```
+
+The goal is read from `real_hyp.dat`; `hyps.dat` is not consulted. The result is printed as a
+JSON record and the plan is written to `<workdir>/plan.txt` in IPC format (plus
+`val_plan.txt`, the numbered form VAL requires).
+
+Run a whole domain with:
+
+```bash
+./extract_plan_domain.py ../goal-plan-recognition-dataset ferry-optimal -o 1
+```
+
+#### How it works
+
+The plan comes from the LP, not from a separate planner. The operator-counting heuristic already
+solves an LP whose observation constraints force the counts to cover the observed actions, and
+already writes those counts to `ocsingleshot_heuristic_result.dat`. `extract_plan.py` reads them
+and sequences them against the grounded SAS+ task that Fast Downward produced (`output.sas`), so
+counts and operators line up by construction.
+
+Operator-counting constraints are **necessary but not sufficient**: a count vector need not be
+sequenceable into an executable plan, the classic failure being a disconnected cycle in the
+state-equation flow. Validity therefore comes from the sequencing search in `plan_sequencer.py`,
+which searches over `(state, observation pointer, remaining budget)`. A state is a goal when the
+task goal holds *and* every observation has been consumed, so order-consistency is enforced by
+construction — nothing is added to the domain and no compilation is involved.
+
+When counts do not sequence, they are relaxed in rungs, and the rung that produced the plan is
+reported so an LP-derived plan can be told from a fallback:
+
+| rung | name | action set |
+|---|---|---|
+| 0 | `exact-counts` | operators with count > 0, applied at most `count` times |
+| 1 | `counts+1` | as rung 0, with one extra application each |
+| 2 | `support-unbounded` | operators with count > 0, no limit |
+| 3 | `all-operators` | every grounded operator; the LP only guides the search |
+
+Because `h_c` lower-bounds the cost of any observation-respecting plan, a rung-0 plan whose cost
+equals `h_c` is a certified optimal explanation; the record reports this as `certified_optimal`.
+The record also asserts `cost >= h_c`, which must hold — a cheaper plan would mean the LP or the
+sequencer is wrong.
+
+#### Results on the dataset
+
+Over 240 instances (12 domains x {optimal, suboptimal} x 5 observability levels x 2 instances),
+238 were solved, and every plan produced was VAL-valid, contained the observations in order, and
+satisfied `cost >= h_c`. The counts sequenced directly, with no relaxation, in 58% of instances,
+and the rate rises with observability:
+
+| observability | 10% | 30% | 50% | 70% | 100% |
+|---|---|---|---|---|---|
+| plan found at rung 0 | 37% | 40% | 46% | 69% | 100% |
+
+More observations tighten the LP, so its counts more often *are* a plan; at full observability the
+count vector was a valid plan in all 48 instances. The two failures were `logistics` at 10%
+observability, where rung-3 search hit the expansion limit; raising `--max-expansions` solves them.
+
+Integer counts require CPLEX — SoPlex rejects integer variables outright. With `--no-mip` the LP
+relaxation is solved instead and the counts may be fractional, which weakens rung 0 considerably.
+
+#### Choosing `h_obs`
+
+`h_obs` controls whether the observations are pushed *inside* the constraint generators or left
+only in the coverage constraint. The four levels are `OBS_NONE`, `OBS_NO_ORDER`,
+`OBS_SOFT_ORDER` and `OBS_HARD_ORDER`. The recognizer-name suffix already reached all of them
+(`delta-o2` sets `h_obs = 3`), but the `-o` command-line flag only ever set 1, so
+`test_instance.py` could not select the stronger levels. `--h-obs=<N>` now sets the level
+explicitly, and `-o` keeps its old meaning:
+
+```bash
+./test_instance.py -r delta --h-obs 3 -e <experiment.tar.bz2>
+```
+
+For plan extraction the effect is **domain-dependent and modest**, and levels above 0 can make
+the MIP infeasible (`CPLEX Error 1217: No solution exists`): observed operators are forced to be
+used, and the delete relaxation cannot always place them. `extract_plan.py` retries at level 0
+when that happens and reports which level produced the counts as `h_obs_used`. Measured over two
+full domains (156 instances each):
+
+| domain | rung 0 at `h_obs=0` | rung 0 at `h_obs=1` | instances needing the retry |
+|---|---|---|---|
+| `ferry-optimal` | 22/156 | 27/156 | 8 |
+| `blocks-world-suboptimal` | 94/156 | 94/156 | 19 |
+
+So it helps somewhat on ferry, not at all on blocks-world, and costs infeasibility on 5-12% of
+instances either way. The default is therefore `h_obs=0`, and the figures reported below were
+measured at that setting. Individual instances can shift a long way -- on
+`ferry_p00_hyp-1_50_1`, `h_obs=0` gives `h_c = 16` and needs a fallback while `h_obs=1` gives
+`h_c = 19` and sequences at rung 0 as a certified optimal explanation -- so it is worth trying
+per domain rather than assuming.
+
 ### Running paper experiments locally
 
 The full experiments from both the AAAI 2021 and JAIR papers require the dataset to be cloned as a sibling of this repository first:
@@ -210,3 +312,15 @@ bash make-fd-patch.sh
 git commit -m "Storing patches to Fast Downward" fd-patch.diff fd-patch-rev.txt
 git push
 ```
+
+### Heuristic values for unsolved LPs
+
+`OCSingleShotHeuristic::compute_heuristic` initialised its results with
+`result = result_c = result_s = 0 / 0`. That is *integer* division by zero, which is undefined
+behaviour and yields `0.0` rather than NaN on the compilers tested, so an LP with no optimal
+solution reported a heuristic value of `0` — the best possible value — instead of NaN. Both
+guards in `Hypothesis.evaluate` (`planner_interface.py`) test for `x < 0` and `x != x`, so
+neither could fire. The patch now uses `std::numeric_limits<double>::quiet_NaN()`.
+
+Fast Downward must be rebuilt for this to take effect (`bash prepare-fd.sh`, or re-apply the
+patch and run `bash rebuild-fd.sh`).
